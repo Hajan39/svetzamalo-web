@@ -1,0 +1,23 @@
+# Lowcost Traveling - robots.txt
+# https://lowcosttraveling.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lowcosttraveling.com/sitemap.xml
+
+# Disallow admin/system paths (future-proofing)
+Disallow: /api/
+Disallow: /_*
+
+# Allow all crawlers to access all content
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay for less aggressive bots
+User-agent: *
+Crawl-delay: 1
