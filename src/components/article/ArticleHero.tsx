@@ -26,33 +26,55 @@ export function ArticleHero({
 
 	return (
 		<header className="mb-12">
-			{/* Cover Image */}
-			{coverImage && (
-				<div className="relative w-full h-64 md:h-96 mb-8 rounded-xl overflow-hidden">
+			{/* Cover Image with Title */}
+			{coverImage ? (
+				<div className="relative w-full h-80 md:h-[28rem] mb-8 rounded-xl overflow-hidden">
 					<img
 						src={coverImage.src}
 						alt={coverImage.alt}
 						className="w-full h-full object-cover"
 					/>
-					<div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+					<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+					<div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+						<h1 className="text-3xl md:text-5xl font-bold text-white mb-3 leading-tight drop-shadow-lg">
+							{title}
+						</h1>
+						{(publishedAt || updatedAt) && (
+							<div className="flex items-center gap-4 text-sm text-white/80">
+								{publishedAt && (
+									<time dateTime={publishedAt}>
+										Published: {formatDate(publishedAt)}
+									</time>
+								)}
+								{updatedAt && (
+									<time dateTime={updatedAt}>
+										Updated: {formatDate(updatedAt)}
+									</time>
+								)}
+							</div>
+						)}
+					</div>
 				</div>
-			)}
-
-			<h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-				{title}
-			</h1>
-
-			{(publishedAt || updatedAt) && (
-				<div className="flex items-center gap-4 text-sm text-foreground-muted mb-6">
-					{publishedAt && (
-						<time dateTime={publishedAt}>
-							Published: {formatDate(publishedAt)}
-						</time>
+			) : (
+				<>
+					<h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
+						{title}
+					</h1>
+					{(publishedAt || updatedAt) && (
+						<div className="flex items-center gap-4 text-sm text-foreground-muted mb-6">
+							{publishedAt && (
+								<time dateTime={publishedAt}>
+									Published: {formatDate(publishedAt)}
+								</time>
+							)}
+							{updatedAt && (
+								<time dateTime={updatedAt}>
+									Updated: {formatDate(updatedAt)}
+								</time>
+							)}
+						</div>
 					)}
-					{updatedAt && (
-						<time dateTime={updatedAt}>Updated: {formatDate(updatedAt)}</time>
-					)}
-				</div>
+				</>
 			)}
 
 			<p className="text-xl text-foreground-secondary leading-relaxed">
