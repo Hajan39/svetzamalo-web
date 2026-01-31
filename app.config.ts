@@ -13,6 +13,7 @@ export default defineConfig({
       routes: [
         '/',
         '/destinations',
+        '/articles',
         '/about',
         '/articles/dominican-republic',
         '/articles/vatican',
