@@ -1,52 +1,34 @@
 import { cn } from '@/lib/utils'
 
-/**
- * Content container with max-width constraints
- * 
- * Sizes:
- * - narrow (768px): Article content, single-column layouts
- * - wide (1024px): Default, multi-column content
- * - full (1280px): Headers, footers, wide layouts
- * 
- * @example
- * // Article page - narrow for optimal reading
- * <Container size="narrow">
- *   <article>...</article>
- * </Container>
- * 
- * // Destinations grid - wide for cards
- * <Container size="wide">
- *   <div className="grid grid-cols-3">...</div>
- * </Container>
- */
-
 interface ContainerProps {
   children: React.ReactNode
-  /** Width constraint: narrow (768px), wide (1024px), full (1280px) */
-  size?: 'narrow' | 'wide' | 'full'
-  /** Additional CSS classes */
   className?: string
-  /** HTML element to render as */
-  as?: 'div' | 'section' | 'article' | 'main'
+  size?: 'narrow' | 'wide' | 'full'
 }
 
-const SIZE_CLASSES = {
-  narrow: 'container-narrow', // 768px - optimal for reading
-  wide: 'container-wide',     // 1024px - default
-  full: 'container-full',     // 1280px - full width
-} as const
+export function Container({ children, className, size = 'wide' }: ContainerProps) {
+  const sizeClasses = {
+    narrow: 'max-w-2xl',
+    wide: 'max-w-6xl',
+    full: 'max-w-full'
+  }
 
-export function Container({ 
-  children, 
-  size = 'wide', 
-  className,
-  as: Component = 'div' 
-}: ContainerProps) {
   return (
-    <Component className={cn(SIZE_CLASSES[size], className)}>
+    <div className={cn('mx-auto px-4 sm:px-6 lg:px-8', sizeClasses[size], className)}>
       {children}
-    </Component>
+    </div>
   )
 }
 
-export default Container
+// Utility containers for common use cases
+export function ContainerNarrow({ children, className }: { children: React.ReactNode, className?: string }) {
+  return <Container size="narrow" className={className}>{children}</Container>
+}
+
+export function ContainerWide({ children, className }: { children: React.ReactNode, className?: string }) {
+  return <Container size="wide" className={className}>{children}</Container>
+}
+
+export function ContainerFull({ children, className }: { children: React.ReactNode, className?: string }) {
+  return <Container size="full" className={className}>{children}</Container>
+}

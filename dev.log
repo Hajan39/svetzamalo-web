@@ -1,0 +1,202 @@
+
+> dev
+> vite dev --port 3000
+
+
+  VITE v7.3.1  ready in 2334 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: use --host to expose
+Error: Transform failed with 1 error:
+/Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/src/components/layout/Header.tsx:131:4: ERROR: Expected ")" but found "{"
+    at failureErrorWithLog (/Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/node_modules/esbuild/lib/main.js:1467:15)
+    ... 8 lines matching cause stack trace ...
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23) {
+  cause: Error: Transform failed with 1 error:
+  /Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/src/components/layout/Header.tsx:131:4: ERROR: Expected ")" but found "{"
+      at failureErrorWithLog (/Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/node_modules/esbuild/lib/main.js:1467:15)
+      at /Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/node_modules/esbuild/lib/main.js:736:50
+      at responseCallbacks.<computed> (/Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/node_modules/esbuild/lib/main.js:603:9)
+      at handleIncomingPacket (/Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/node_modules/esbuild/lib/main.js:658:12)
+      at Socket.readFromStdout (/Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/node_modules/esbuild/lib/main.js:581:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23) {
+    errors: [ [Object] ],
+    warnings: [],
+    frame: '\n' +
+      'Expected ")" but found "{"\n' +
+      '129 |      </header>\n' +
+      '130 |  \n' +
+      '131 |      {/* Search Modal */}\n' +
+      '    |      ^\n' +
+      '132 |      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />\n' +
+      '133 |    )\n',
+    loc: {
+      column: 4,
+      file: '/Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/src/components/layout/Header.tsx',
+      length: 1,
+      line: 131,
+      lineText: '    {/* Search Modal */}',
+      namespace: '',
+      suggestion: ')'
+    },
+    plugin: 'vite:esbuild',
+    id: '/Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/src/components/layout/Header.tsx',
+    pluginCode: "import { Link } from '@tanstack/react-router'\n" +
+      "import { Menu, X } from 'lucide-react'\n" +
+      "import { useState } from 'react'\n" +
+      "import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher'\n" +
+      "import { SearchModal } from '@/components/ui/SearchModal'\n" +
+      '\n' +
+      '/**\n' +
+      ' * Site header with logo and main navigation\n' +
+      ' * \n' +
+      ' * Responsibilities:\n' +
+      ' * - Site branding / logo\n' +
+      ' * - Main navigation (desktop + mobile)\n' +
+      ' * - Semantic <header> element for SEO\n' +
+      ' */\n' +
+      '\n' +
+      'interface NavItem {\n' +
+      '  label: string\n' +
+      '  href: string\n' +
+      '}\n' +
+      '\n' +
+      'const NAV_ITEMS: NavItem[] = [\n' +
+      "  { label: 'Home', href: '/' },\n" +
+      "  { label: 'Destinations', href: '/destinations' },\n" +
+      "  { label: 'About', href: '/about' },\n" +
+      ']\n' +
+      '\n' +
+      'export function Header() {\n' +
+      '  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)\n' +
+      '  const [isSearchOpen, setIsSearchOpen] = useState(false)\n' +
+      '\n' +
+      '  return (\n' +
+      '    <header \n' +
+      '      className="sticky top-0 z-40 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80"\n' +
+      '    >\n' +
+      '      <div className="container-full">\n' +
+      '        <div className="flex h-16 items-center justify-between">\n' +
+      '          {/* Logo / Site Name */}\n' +
+      '          <Link \n' +
+      '            to="/" \n' +
+      '            className="flex items-center gap-2 text-foreground hover:text-foreground transition-colors"\n' +
+      '            aria-label="Lowcost Traveling - Home"\n' +
+      '          >\n' +
+      '            {/* Logo Icon */}\n' +
+      '            <span className="text-2xl" role="img" aria-hidden="true">\n' +
+      '              ✈️\n' +
+      '            </span>\n' +
+      '            {/* Site Name */}\n' +
+      '            <span className="text-lg font-semibold tracking-tight">\n' +
+      '              Lowcost Traveling\n' +
+      '            </span>\n' +
+      '          </Link>\n' +
+      '\n' +
+      '          {/* Desktop Navigation */}\n' +
+      '          <nav \n' +
+      '            className="hidden md:flex items-center gap-1"\n' +
+      '            aria-label="Main navigation"\n' +
+      '          >\n' +
+      '            {NAV_ITEMS.map((item) => (\n' +
+      '              <Link\n' +
+      '                key={item.href}\n' +
+      '                to={item.href}\n' +
+      '                className="px-4 py-2 text-sm font-medium text-foreground-secondary hover:text-foreground hover:bg-background-secondary rounded-lg transition-colors"\n' +
+      '                activeProps={{ \n' +
+      "                  className: 'px-4 py-2 text-sm font-medium text-accent bg-accent-light rounded-lg' \n" +
+      '                }}\n' +
+      "                activeOptions={{ exact: item.href === '/' }}\n" +
+      '              >\n' +
+      '                {item.label}\n' +
+      '              </Link>\n' +
+      '            ))}\n' +
+      '          </nav>\n' +
+      '\n' +
+      '          {/* Search & Language */}\n' +
+      '          <div className="ml-4 pl-4 border-l border-border flex items-center gap-3">\n' +
+      '            <button\n' +
+      '              onClick={() => setIsSearchOpen(true)}\n' +
+      '              className="p-2 text-foreground-secondary hover:text-foreground hover:bg-background-secondary rounded-lg transition-colors"\n' +
+      '              aria-label="Search"\n' +
+      '            >\n' +
+      '              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">\n' +
+      '                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />\n' +
+      '              </svg>\n' +
+      '            </button>\n' +
+      '            <LanguageSwitcher variant="dropdown" showFlags={true} />\n' +
+      '          </div>\n' +
+      '\n' +
+      '          {/* Mobile Menu Button */}\n' +
+      '          <button\n' +
+      '            type="button"\n' +
+      '            className="md:hidden p-2 text-foreground-secondary hover:text-foreground hover:bg-background-secondary rounded-lg transition-colors"\n' +
+      '            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}\n' +
+      '            aria-expanded={isMobileMenuOpen}\n' +
+      "            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}\n" +
+      '          >\n' +
+      '            {isMobileMenuOpen ? (\n' +
+      '              <X className="h-5 w-5" aria-hidden="true" />\n' +
+      '            ) : (\n' +
+      '              <Menu className="h-5 w-5" aria-hidden="true" />\n' +
+      '            )}\n' +
+      '          </button>\n' +
+      '        </div>\n' +
+      '\n' +
+      '        {/* Mobile Navigation */}\n' +
+      '        {isMobileMenuOpen && (\n' +
+      '          <nav\n' +
+      '            className="md:hidden py-4 border-t border-border"\n' +
+      '            aria-label="Mobile navigation"\n' +
+      '          >\n' +
+      '            <ul className="flex flex-col gap-1">\n' +
+      '              {NAV_ITEMS.map((item) => (\n' +
+      '                <li key={item.href}>\n' +
+      '                  <Link\n' +
+      '                    to={item.href}\n' +
+      '                    className="block px-4 py-3 text-foreground-secondary hover:text-foreground hover:bg-background-secondary rounded-lg transition-colors"\n' +
+      '                    activeProps={{ \n' +
+      "                      className: 'block px-4 py-3 text-accent font-medium bg-accent-light rounded-lg' \n" +
+      '                    }}\n' +
+      "                    activeOptions={{ exact: item.href === '/' }}\n" +
+      '                    onClick={() => setIsMobileMenuOpen(false)}\n' +
+      '                  >\n' +
+      '                    {item.label}\n' +
+      '                  </Link>\n' +
+      '                </li>\n' +
+      '              ))}\n' +
+      '            </ul>\n' +
+      '          </nav>\n' +
+      '        )}\n' +
+      '      </div>\n' +
+      '    </header>\n' +
+      '\n' +
+      '    {/* Search Modal */}\n' +
+      '    <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />\n' +
+      '  )\n' +
+      '}\n' +
+      '\n' +
+      'export default Header\n',
+    runnerError: Error: RunnerError
+        at reviveInvokeError (file:///Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/node_modules/vite/dist/node/module-runner.js:476:64)
+        at Object.invoke (file:///Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/node_modules/vite/dist/node/module-runner.js:549:11)
+        at ModuleRunner.getModuleInformation (file:///Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/node_modules/vite/dist/node/module-runner.js:1086:7)
+        at request (file:///Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/node_modules/vite/dist/node/module-runner.js:1103:83)
+        at /Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/src/components/layout/index.ts:8:1
+        at ESModulesEvaluator.runInlinedModule (file:///Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/node_modules/vite/dist/node/module-runner.js:913:3)
+        at ModuleRunner.directRequest (file:///Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/node_modules/vite/dist/node/module-runner.js:1146:59)
+        at ModuleRunner.cachedRequest (file:///Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/node_modules/vite/dist/node/module-runner.js:1053:73)
+        at /Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/src/routes/__root.tsx:9:1
+        at ESModulesEvaluator.runInlinedModule (file:///Users/hajan/Programs/HAJAN/lowcost-traveling-web/lowcost-traveling/node_modules/vite/dist/node/module-runner.js:913:3)
+  },
+  status: 500,
+  statusText: undefined,
+  headers: undefined,
+  data: undefined,
+  body: undefined,
+  unhandled: true
+}

@@ -5,8 +5,10 @@ import {
   createRootRouteWithContext,
 } from '@tanstack/react-router'
 import { Link } from '@tanstack/react-router'
+import { useEffect } from 'react'
 
 import { Header, Footer, SkipLink } from '@/components/layout'
+import { i18n, getLocaleForIntl, useTranslation } from '@/lib/i18n'
 
 import appCss from '../styles.css?url'
 
@@ -94,6 +96,25 @@ function RootDocument({ children }: { children: React.ReactNode }) {
  * This layout wraps ALL pages in the application.
  */
 function RootLayout() {
+  // Load locale from localStorage on mount and update HTML lang attribute
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    // Load locale from localStorage (i18n manager already does this in constructor,
+    // but we ensure it's synced and update HTML lang attribute)
+    const currentLocale = i18n.getCurrentLocale()
+    const htmlLang = getLocaleForIntl(currentLocale)
+    document.documentElement.lang = htmlLang
+
+    // Subscribe to locale changes to update HTML lang attribute
+    const unsubscribe = i18n.subscribe((locale) => {
+      const htmlLang = getLocaleForIntl(locale)
+      document.documentElement.lang = htmlLang
+    })
+
+    return unsubscribe
+  }, [])
+
   return (
     <>
       {/* Accessibility: Skip to main content link */}
@@ -124,6 +145,8 @@ function RootLayout() {
  * Provides helpful navigation back to valid pages.
  */
 function NotFoundPage() {
+  const { t } = useTranslation()
+  
   return (
     <div className="container-narrow py-24 text-center">
       {/* Visual indicator */}
@@ -133,26 +156,25 @@ function NotFoundPage() {
 
       {/* Error message */}
       <h1 className="text-4xl font-bold text-foreground mb-4">
-        Page Not Found
+        {t('notFound.title')}
       </h1>
       <p className="text-xl text-foreground-secondary mb-8 max-w-md mx-auto">
-        Looks like you've wandered off the beaten path. 
-        The page you're looking for doesn't exist.
+        {t('notFound.description')}
       </p>
 
       {/* Navigation options */}
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link
           to="/"
-          className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-hover text-accent-foreground font-medium px-6 py-3 rounded-lg transition-colors"
+          className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-primary-foreground font-medium px-6 py-3 rounded-lg transition-colors"
         >
-          ← Back to Home
+          ← {t('notFound.backToHome')}
         </Link>
         <Link
           to="/destinations"
-          className="inline-flex items-center justify-center gap-2 border border-border hover:border-accent text-foreground font-medium px-6 py-3 rounded-lg transition-colors"
+          className="inline-flex items-center justify-center gap-2 border border-border hover:border-primary text-foreground font-medium px-6 py-3 rounded-lg transition-colors"
         >
-          Explore Destinations
+          {t('notFound.exploreDestinations')}
         </Link>
       </div>
     </div>

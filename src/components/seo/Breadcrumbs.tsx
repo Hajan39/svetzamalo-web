@@ -1,4 +1,5 @@
 import { Link } from '@tanstack/react-router'
+import { BreadcrumbStructuredData } from './StructuredData'
 
 interface BreadcrumbItem {
   label: string
@@ -10,28 +11,72 @@ interface BreadcrumbsProps {
 }
 
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
+  // Prepare structured data items
+  const structuredDataItems = [
+    { name: 'Home', url: '/' },
+    ...items.map(item => ({
+      name: item.label,
+      url: item.href || '',
+    }))
+  ]
+
   return (
-    <nav aria-label="Breadcrumb" className="mb-8">
-      <ol className="flex items-center gap-2 text-sm text-foreground-muted">
-        <li>
-          <Link to="/" className="hover:text-accent transition-colors">
-            Home
-          </Link>
-        </li>
-        {items.map((item) => (
-          <li key={item.label} className="flex items-center gap-2">
-            <span aria-hidden="true">/</span>
-            {item.href ? (
-              <Link to={item.href} className="hover:text-accent transition-colors">
-                {item.label}
-              </Link>
-            ) : (
-              <span className="text-foreground-secondary">{item.label}</span>
-            )}
+    <>
+      {/* Structured Data for SEO */}
+      <BreadcrumbStructuredData items={structuredDataItems} />
+
+      {/* Semantic Breadcrumb Navigation */}
+      <nav aria-label="Breadcrumb navigation" className="mb-8">
+        <ol
+          className="flex items-center gap-2 text-sm text-foreground-muted"
+          itemScope
+          itemType="https://schema.org/BreadcrumbList"
+        >
+          <li
+            itemProp="itemListElement"
+            itemScope
+            itemType="https://schema.org/ListItem"
+          >
+            <Link
+              to="/"
+              className="hover:text-primary transition-colors"
+              itemProp="item"
+            >
+              <span itemProp="name">Home</span>
+            </Link>
+            <meta itemProp="position" content="1" />
           </li>
-        ))}
-      </ol>
-    </nav>
+          {items.map((item, index) => (
+            <li
+              key={item.label}
+              className="flex items-center gap-2"
+              itemProp="itemListElement"
+              itemScope
+              itemType="https://schema.org/ListItem"
+            >
+              <span aria-hidden="true">/</span>
+              {item.href ? (
+                <Link
+                  to={item.href}
+                  className="hover:text-primary transition-colors"
+                  itemProp="item"
+                >
+                  <span itemProp="name">{item.label}</span>
+                </Link>
+              ) : (
+                <span
+                  className="text-foreground-secondary"
+                  itemProp="name"
+                >
+                  {item.label}
+                </span>
+              )}
+              <meta itemProp="position" content={(index + 2).toString()} />
+            </li>
+          ))}
+        </ol>
+      </nav>
+    </>
   )
 }
 

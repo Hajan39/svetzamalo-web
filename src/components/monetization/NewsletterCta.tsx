@@ -1,41 +1,82 @@
+import { useState } from 'react'
+
 interface NewsletterCtaProps {
-  headline?: string
+  title?: string
   description?: string
-  ctaText?: string
+  buttonText?: string
+  placeholder?: string
+  disclaimer?: string
+  className?: string
 }
 
 export function NewsletterCta({
-  headline = 'Get Travel Deals & Tips',
-  description = 'Join budget travelers. Weekly tips, no spam.',
-  ctaText = 'Subscribe',
+  title = "Stay Updated",
+  description = "Get weekly travel tips, deals, and destination guides delivered to your inbox.",
+  buttonText = "Subscribe",
+  placeholder = "Your email address",
+  disclaimer = "No spam, unsubscribe anytime.",
+  className = ""
 }: NewsletterCtaProps) {
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000))
+
+    setIsSubmitted(true)
+    setIsSubmitting(false)
+    setEmail('')
+  }
+
+  if (isSubmitted) {
+    return (
+      <div className={`text-center p-6 bg-success-light border border-success rounded-lg ${className}`}>
+        <div className="text-2xl mb-2">✅</div>
+        <h3 className="text-lg font-semibold text-success mb-2">Thanks for subscribing!</h3>
+        <p className="text-success text-sm">Check your inbox for a confirmation email.</p>
+      </div>
+    )
+  }
+
   return (
-    <aside className="border border-border rounded-lg bg-background-secondary p-6 my-8">
-      <div className="flex flex-col sm:flex-row items-center gap-4">
-        <div className="flex-1 text-center sm:text-left">
-          <h3 className="font-semibold text-foreground mb-1">
-            ✉️ {headline}
-          </h3>
-          <p className="text-sm text-foreground-muted">
-            {description}
-          </p>
-        </div>
-        <div className="flex gap-2 w-full sm:w-auto">
+    <div className={`bg-primary-light rounded-xl p-8 text-center ${className}`}>
+      <h3 className="text-2xl font-bold text-foreground mb-4">
+        {title}
+      </h3>
+      <p className="text-foreground-secondary mb-8 max-w-md mx-auto">
+        {description}
+      </p>
+
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+        <div className="flex flex-col sm:flex-row gap-3">
           <input
             type="email"
-            placeholder="Your email"
-            className="flex-1 sm:w-48 px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-accent text-sm"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder={placeholder}
+            required
+            disabled={isSubmitting}
+            className="flex-1 px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
           />
           <button
-            type="button"
-            className="bg-accent hover:bg-accent-hover text-white font-medium px-4 py-2 rounded-lg transition-colors text-sm"
+            type="submit"
+            disabled={isSubmitting || !email.trim()}
+            className="px-6 py-3 bg-primary hover:bg-primary-hover text-primary-foreground font-medium rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
           >
-            {ctaText}
+            {isSubmitting ? 'Subscribing...' : buttonText}
           </button>
         </div>
-      </div>
-    </aside>
+        {disclaimer && (
+          <p className="text-xs text-foreground-muted mt-4">
+            {disclaimer}
+          </p>
+        )}
+      </form>
+    </div>
   )
 }
-
-export default NewsletterCta

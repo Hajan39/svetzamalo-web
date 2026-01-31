@@ -31,7 +31,7 @@ export function ArticleFaq({ items }: ArticleFaqProps) {
             key={item.id}
             className="group border border-border rounded-lg bg-background"
           >
-            <summary className="cursor-pointer p-6 font-medium text-foreground hover:text-accent transition-colors list-none flex justify-between items-center">
+            <summary className="cursor-pointer p-6 font-medium text-foreground hover:text-primary transition-colors list-none flex justify-between items-center">
               {item.question}
               <span className="text-foreground-muted group-open:rotate-180 transition-transform">
                 ▼

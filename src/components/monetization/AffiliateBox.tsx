@@ -33,7 +33,7 @@ export function AffiliateBox({
   const config = typeConfig[type]
 
   return (
-    <aside className="border border-border border-l-4 border-l-accent rounded-r-lg bg-background-secondary p-6 my-8">
+    <aside className="border border-border border-l-4 border-l-primary rounded-r-lg bg-background-secondary p-6 my-8">
       <div className="flex items-start gap-4">
         <span className="text-2xl" role="img" aria-hidden="true">
           {config.icon}
@@ -49,7 +49,7 @@ export function AffiliateBox({
             href={link}
             target="_blank"
             rel="noopener noreferrer sponsored"
-            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white font-medium px-6 py-3 rounded-lg transition-colors"
+            className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-medium px-6 py-3 rounded-lg transition-colors"
           >
             {ctaText}
             <span aria-hidden="true">→</span>

@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { getArticleBySlug, getDestinationById } from '@/content'
+import { useArticleBySlug, useDestinationById } from '@/integrations/strapi'
 import { ArticleHero, ArticleSection, ArticlePlaces, ArticleFaq } from '@/components/article'
 import { AffiliateBox, LeadMagnet, NewsletterCta } from '@/components/monetization'
 import { Breadcrumbs } from '@/components/seo'
@@ -8,8 +8,25 @@ import { ArticleStructuredData, FaqStructuredData } from '@/components/seo/Struc
 const SITE_URL = 'https://lowcosttraveling.com'
 
 export const Route = createFileRoute('/articles/$slug')({
-  head: ({ params }) => {
-    const article = getArticleBySlug(params.slug)
+  loader: async ({ params, context }) => {
+    const { queryClient } = context
+    const { fetchArticleBySlug, fetchDestinationById, strapiQueryKeys } = await import('@/integrations/strapi')
+    
+    const article = await fetchArticleBySlug(params.slug)
+    if (article) {
+      // Prefetch destination if needed
+      if (article.destinationId) {
+        await queryClient.prefetchQuery({
+          queryKey: strapiQueryKeys.destinations.detail(article.destinationId),
+          queryFn: () => fetchDestinationById(article.destinationId!),
+        })
+      }
+    }
+    
+    return { article }
+  },
+  head: ({ loaderData, params }) => {
+    const article = loaderData?.article
     if (!article) {
       return {
         meta: [{ title: 'Article Not Found | Lowcost Traveling' }],
@@ -37,20 +54,46 @@ export const Route = createFileRoute('/articles/$slug')({
 
 function ArticlePage() {
   const { slug } = Route.useParams()
-  const article = getArticleBySlug(slug)
+  const { article: loaderArticle } = Route.useLoaderData()
+  
+  // Use React Query hook for reactive updates
+  const { data: article, isLoading, error } = useArticleBySlug(slug, {
+    initialData: loaderArticle || undefined,
+  })
+  
+  const { data: destination } = useDestinationById(
+    article?.destinationId || '',
+    {
+      enabled: !!article?.destinationId,
+    }
+  )
 
-  if (!article) {
+  if (isLoading) {
+    return (
+      <div className="container-narrow py-16">
+        <div className="text-center">
+          <p className="text-foreground-secondary">Loading article...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (error || !article) {
     return (
       <div className="container-narrow py-16">
         <h1 className="text-2xl font-semibold text-foreground">Article not found</h1>
         <p className="text-foreground-secondary mt-2">
           The article "{slug}" does not exist.
         </p>
+        {error && (
+          <p className="text-error mt-2 text-sm">
+            Error: {error.message}
+          </p>
+        )}
       </div>
     )
   }
 
-  const destination = getDestinationById(article.destinationId)
   const currentUrl = `https://lowcosttraveling.com/articles/${slug}`
 
   return (

@@ -301,6 +301,73 @@ Once we've created the derived store we can use it in the `App` component just l
 
 You can find out everything you need to know on how to use TanStack Store in the [TanStack Store documentation](https://tanstack.com/store/latest).
 
+# Deployment
+
+## Vercel Deployment
+
+This application is configured for deployment on Vercel. Follow these steps:
+
+### 1. Environment Variables
+
+Copy `env.example` to `.env.local` and fill in your actual values:
+
+```bash
+cp env.example .env.local
+```
+
+Required environment variables for production:
+- `VITE_SITE_URL` - Your production domain
+- `VITE_GA_TRACKING_ID` - Google Analytics tracking ID (optional)
+- `VITE_ADSENSE_CLIENT_ID` - AdSense client ID (optional)
+
+### 2. Deploy to Vercel
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Vercel will automatically detect the configuration and deploy
+
+### 3. Build Settings
+
+Vercel will use these settings automatically from `vercel.json`:
+- **Framework**: Custom (Vite)
+- **Build Command**: `npm run build`
+- **Output Directory**: `.output`
+- **Install Command**: `npm install`
+
+### 4. Domain Configuration
+
+Update your environment variables with the actual Vercel domain:
+```
+VITE_SITE_URL=https://your-app.vercel.app
+```
+
+### 5. Custom Domain (Optional)
+
+To use a custom domain:
+1. Add your domain in Vercel dashboard
+2. Update DNS records as instructed
+3. Update `VITE_SITE_URL` with your custom domain
+
+## Environment Variables Reference
+
+| Variable | Description | Required | Default |
+|----------|-------------|----------|---------|
+| `VITE_SITE_URL` | Production domain URL | Yes | - |
+| `VITE_ENABLE_ANALYTICS` | Enable/disable analytics | No | `true` |
+| `VITE_ANALYTICS_PROVIDER` | Analytics provider | No | `google-analytics` |
+| `VITE_GA_TRACKING_ID` | Google Analytics ID | No | - |
+| `VITE_ENABLE_ADS` | Enable/disable ads | No | `true` |
+| `VITE_AD_PROVIDER` | Ad provider | No | `adsense` |
+| `VITE_ADSENSE_CLIENT_ID` | AdSense client ID | No | - |
+
+## Performance Monitoring
+
+The app includes:
+- Core Web Vitals tracking
+- Bundle analysis scripts
+- Service worker for caching
+- Optimized images and fonts
+
 # Demo files
 
 Files prefixed with `demo` can be safely deleted. They are there to provide a starting point for you to play around with the features you've installed.

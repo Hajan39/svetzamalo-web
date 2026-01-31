@@ -25,7 +25,7 @@ export function ArticlePlaces({ places }: ArticlePlacesProps) {
               {place.description}
             </p>
             {place.type && (
-              <span className="inline-block mt-3 text-xs font-medium text-accent bg-accent-light px-2 py-1 rounded">
+              <span className="inline-block mt-3 text-xs font-medium text-primary bg-primary-light px-2 py-1 rounded">
                 {place.type}
               </span>
             )}

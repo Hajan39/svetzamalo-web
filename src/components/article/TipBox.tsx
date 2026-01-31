@@ -6,8 +6,8 @@ interface TipBoxProps {
 
 const variantStyles = {
   tip: {
-    border: 'border-l-4 border-l-accent',
-    bg: 'bg-accent-light',
+    border: 'border-l-4 border-l-primary',
+    bg: 'bg-primary-light',
     icon: '💡',
     defaultTitle: 'Tip',
   },

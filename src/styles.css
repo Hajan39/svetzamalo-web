@@ -23,24 +23,56 @@
   --foreground-muted: #737373;
 
   /* ─────────────────────────────────────────────────────────────
-     ACCENT - Ocean teal (travel-inspired)
+     PRIMARY - Forest Green (nature, adventure, jungles)
      ───────────────────────────────────────────────────────────── */
-  --accent: #0D9488;
-  --accent-hover: #0F766E;
-  --accent-light: #CCFBF1;
+  --primary: #52C9A2;
+  --primary-hover: #3DB88A;
+  --primary-light: #D4F4E8;
+  --primary-foreground: #FFFFFF;
+
+  /* ─────────────────────────────────────────────────────────────
+     SECONDARY - Sage Green (calm, natural destinations)
+     ───────────────────────────────────────────────────────────── */
+  --secondary: #9BC5A1;
+  --secondary-hover: #7FAF87;
+  --secondary-light: #E8F5EA;
+  --secondary-foreground: #FFFFFF;
+
+  /* ─────────────────────────────────────────────────────────────
+     ACCENT - Tropical Teal (ocean meets jungle)
+     ───────────────────────────────────────────────────────────── */
+  --accent: #4ECDC4;
+  --accent-hover: #3AB5AD;
+  --accent-light: #D4F4F2;
   --accent-foreground: #FFFFFF;
 
   /* ─────────────────────────────────────────────────────────────
-     SEMANTIC COLORS
+     SEMANTIC COLORS - Nature-inspired pastel palette
      ───────────────────────────────────────────────────────────── */
-  --success: #16A34A;
-  --success-light: #DCFCE7;
-  --warning: #CA8A04;
-  --warning-light: #FEF9C3;
-  --error: #DC2626;
-  --error-light: #FEE2E2;
-  --info: #0284C7;
-  --info-light: #E0F2FE;
+  --success: #7ED321;
+  --success-hover: #6BB81A;
+  --success-light: #E8F5D6;
+  --success-foreground: #FFFFFF;
+
+  --warning: #FFB347;
+  --warning-hover: #FF9F1C;
+  --warning-light: #FFF4E0;
+  --warning-foreground: #FFFFFF;
+
+  --error: #FF6B6B;
+  --error-hover: #FF5252;
+  --error-light: #FFE5E5;
+  --error-foreground: #FFFFFF;
+
+  --danger: var(--error);
+  --danger-hover: var(--error-hover);
+  --danger-light: var(--error-light);
+  --danger-foreground: var(--error-foreground);
+
+  --info: #6BC5A8;
+  --info-hover: #52B892;
+  --info-light: #E0F5ED;
+  --info-foreground: #FFFFFF;
 
   /* ─────────────────────────────────────────────────────────────
      BORDERS
@@ -55,14 +87,10 @@
   --card-foreground: var(--foreground);
   --popover: var(--background);
   --popover-foreground: var(--foreground);
-  --primary: var(--accent);
-  --primary-foreground: var(--accent-foreground);
-  --secondary: var(--background-secondary);
-  --secondary-foreground: var(--foreground);
   --muted: var(--background-tertiary);
   --muted-foreground: var(--foreground-muted);
-  --destructive: var(--error);
-  --destructive-foreground: #FFFFFF;
+  --destructive: var(--danger);
+  --destructive-foreground: var(--danger-foreground);
   --input: var(--border);
   --ring: var(--accent);
   --radius: 0.5rem;
@@ -98,8 +126,12 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-light: var(--secondary-light);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
@@ -109,16 +141,26 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+  --color-danger: var(--danger);
+  --color-danger-hover: var(--danger-hover);
+  --color-danger-light: var(--danger-light);
+  --color-danger-foreground: var(--danger-foreground);
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-success: var(--success);
+  --color-success-hover: var(--success-hover);
   --color-success-light: var(--success-light);
+  --color-success-foreground: var(--success-foreground);
   --color-warning: var(--warning);
+  --color-warning-hover: var(--warning-hover);
   --color-warning-light: var(--warning-light);
+  --color-warning-foreground: var(--warning-foreground);
   --color-info: var(--info);
+  --color-info-hover: var(--info-hover);
   --color-info-light: var(--info-light);
+  --color-info-foreground: var(--info-foreground);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -149,7 +191,12 @@
      TYPOGRAPHY
      ───────────────────────────────────────────────────────────── */
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-semibold tracking-tight text-foreground;
   }
 
@@ -174,7 +221,7 @@
   }
 
   a {
-    @apply text-accent hover:text-accent-hover transition-colors;
+    @apply text-primary hover:text-primary-hover transition-colors;
   }
 
   code {
@@ -222,7 +269,7 @@
 }
 
 .article-content blockquote {
-  @apply border-l-4 border-accent pl-6 italic text-foreground-muted my-6;
+  @apply border-l-4 border-primary pl-6 italic text-foreground-muted my-6;
 }
 
 /* ═══════════════════════════════════════════════════════════════

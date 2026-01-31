@@ -96,3 +96,71 @@ export function BreadcrumbStructuredData({ items }: BreadcrumbStructuredDataProp
     />
   )
 }
+
+/**
+ * Organization structured data for homepage
+ */
+export function OrganizationStructuredData() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Lowcost Traveling',
+    url: 'https://lowcost-traveling.com',
+    logo: 'https://lowcost-traveling.com/logo.png',
+    description: 'Discover budget travel destinations, practical guides, and insider tips for lowcost traveling around the world.',
+    sameAs: [
+      'https://www.facebook.com/lowcosttraveling',
+      'https://www.instagram.com/lowcosttraveling',
+      'https://www.twitter.com/lowcosttraveling',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      email: 'hello@lowcost-traveling.com',
+    },
+    foundingDate: '2024',
+    knowsAbout: [
+      'Budget Travel',
+      'Backpacking',
+      'Travel Guides',
+      'Destination Reviews',
+      'Travel Tips',
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  )
+}
+
+/**
+ * WebSite structured data for search engine optimization
+ */
+export function WebSiteStructuredData() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Lowcost Traveling',
+    url: 'https://lowcost-traveling.com',
+    description: 'Discover budget travel destinations, practical guides, and insider tips for lowcost traveling around the world.',
+    inLanguage: ['en', 'cs', 'es', 'de'],
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://lowcost-traveling.com/search?q={search_term_string}',
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  )
+}

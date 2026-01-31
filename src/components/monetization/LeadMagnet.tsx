@@ -12,7 +12,7 @@ export function LeadMagnet({
   ctaText,
 }: LeadMagnetProps) {
   return (
-    <aside className="border-2 border-accent rounded-xl bg-accent-light p-8 my-12">
+    <aside className="border-2 border-primary rounded-xl bg-primary-light p-8 my-12">
       <div className="text-center max-w-lg mx-auto">
         <span className="text-3xl mb-4 block" role="img" aria-hidden="true">
           📋
@@ -28,7 +28,7 @@ export function LeadMagnet({
           <ul className="text-left text-foreground-secondary mb-6 space-y-2">
             {benefits.map((benefit) => (
               <li key={benefit} className="flex items-center gap-2">
-                <span className="text-accent">✓</span>
+                <span className="text-primary">✓</span>
                 {benefit}
               </li>
             ))}
@@ -39,11 +39,11 @@ export function LeadMagnet({
           <input
             type="email"
             placeholder="Your email"
-            className="w-full sm:w-auto px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-accent"
+            className="w-full sm:w-auto px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           />
           <button
             type="button"
-            className="w-full sm:w-auto bg-accent hover:bg-accent-hover text-white font-medium px-6 py-3 rounded-lg transition-colors"
+            className="w-full sm:w-auto bg-primary hover:bg-primary-hover text-primary-foreground font-medium px-6 py-3 rounded-lg transition-colors"
           >
             {ctaText}
           </button>

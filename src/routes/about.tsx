@@ -1,4 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { useTranslation } from '@/lib/i18n'
 
 const SITE_URL = 'https://lowcosttraveling.com'
 
@@ -21,81 +22,75 @@ export const Route = createFileRoute('/about')({
 })
 
 function AboutPage() {
+  const { t } = useTranslation()
+  
   return (
     <div className="container-narrow py-12">
       <header className="mb-12">
         <h1 className="text-4xl font-bold text-foreground mb-6">
-          About Lowcost Traveling
+          {t('about.title')}
         </h1>
         <p className="text-xl text-foreground-secondary">
-          Helping budget travelers explore the world since 2020.
+          {t('about.subtitle')}
         </p>
       </header>
 
       <div className="prose prose-lg max-w-none">
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-foreground mb-4">
-            Our Mission
+            {t('about.missionTitle')}
           </h2>
           <p className="text-foreground-secondary leading-relaxed mb-4">
-            We believe that travel should be accessible to everyone. Our mission is to
-            provide honest, practical travel guides that help you explore amazing
-            destinations without breaking the bank.
+            {t('about.missionText1')}
           </p>
           <p className="text-foreground-secondary leading-relaxed">
-            Every guide we create is based on real experiences and thorough research.
-            We focus on what matters most: how to get there affordably, where to stay
-            on a budget, and what to see and do without overspending.
+            {t('about.missionText2')}
           </p>
         </section>
 
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-foreground mb-4">
-            What We Offer
+            {t('about.offerTitle')}
           </h2>
           <ul className="space-y-3 text-foreground-secondary">
             <li className="flex items-start gap-3">
-              <span className="text-accent">✓</span>
-              <span>In-depth destination guides with real budget breakdowns</span>
+              <span className="text-primary">✓</span>
+              <span>{t('about.offer1')}</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-accent">✓</span>
-              <span>Practical tips from experienced budget travelers</span>
+              <span className="text-primary">✓</span>
+              <span>{t('about.offer2')}</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-accent">✓</span>
-              <span>Honest recommendations without hidden agendas</span>
+              <span className="text-primary">✓</span>
+              <span>{t('about.offer3')}</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-accent">✓</span>
-              <span>Regular updates to keep information current</span>
+              <span className="text-primary">✓</span>
+              <span>{t('about.offer4')}</span>
             </li>
           </ul>
         </section>
 
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-foreground mb-4">
-            How We Make Money
+            {t('about.moneyTitle')}
           </h2>
           <p className="text-foreground-secondary leading-relaxed mb-4">
-            We're transparent about how we sustain this project. When you book flights,
-            hotels, or tours through our affiliate links, we may earn a small commission
-            at no extra cost to you.
+            {t('about.moneyText1')}
           </p>
           <p className="text-foreground-secondary leading-relaxed">
-            This helps us keep creating free content while maintaining our independence.
-            We only recommend services we'd use ourselves.
+            {t('about.moneyText2')}
           </p>
         </section>
 
         <section>
           <h2 className="text-2xl font-semibold text-foreground mb-4">
-            Get in Touch
+            {t('about.contactTitle')}
           </h2>
           <p className="text-foreground-secondary leading-relaxed">
-            Have questions, suggestions, or just want to say hello? We'd love to hear
-            from you. Reach out at{' '}
-            <a href="mailto:hello@lowcosttraveling.com" className="text-accent hover:text-accent-hover">
+            {t('about.contactText')}{' '}
+            <a href="mailto:hello@lowcosttraveling.com" className="text-primary hover:text-primary-hover">
               hello@lowcosttraveling.com
             </a>
           </p>
