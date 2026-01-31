@@ -1,81 +1,87 @@
-import type { SeoMetadata } from './seo'
-import type { ContentBlock } from './content-blocks'
-import type { MonetizationSlot } from './monetization'
+import type { ContentBlock } from "./content-blocks";
+import type { MonetizationSlot } from "./monetization";
+import type { SeoMetadata } from "./seo";
 
 /**
  * Article type classification
  */
 export type ArticleType =
-  | 'destination-guide'
-  | 'place-guide'
-  | 'practical-info'
-  | 'itinerary'
-  | 'list'
+	| "destination-guide"
+	| "place-guide"
+	| "practical-info"
+	| "itinerary"
+	| "list";
 
 /**
  * Place/location within an article
  */
 export interface Place {
-  id: string
-  name: string
-  description: string
-  latitude: number
-  longitude: number
-  type?: 'beach' | 'landmark' | 'city' | 'nature' | 'restaurant' | 'hotel'
+	id: string;
+	name: string;
+	description: string;
+	latitude: number;
+	longitude: number;
+	type?: "beach" | "landmark" | "city" | "nature" | "restaurant" | "hotel";
 }
 
 /**
  * FAQ item for structured data
  */
 export interface FaqItem {
-  id: string
-  question: string
-  answer: string
+	id: string;
+	question: string;
+	answer: string;
 }
 
 /**
  * Simple section for backward compatibility
  */
 export interface ArticleSection {
-  id: string
-  title: string
-  content: string
+	id: string;
+	title: string;
+	content: string;
 }
 
 /**
  * Main Article interface
  */
 export interface Article {
-  // Identity
-  id: string
-  slug: string
+	// Identity
+	id: string;
+	slug: string;
 
-  // Relation
-  destinationId: string
+	// Relation
+	destinationId: string;
 
-  // Classification
-  articleType: ArticleType
-  tags?: string[]
+	// Classification
+	articleType: ArticleType;
+	tags?: string[];
 
-  // Content
-  title: string
-  intro: string
-  sections: ArticleSection[]
-  contentBlocks?: ContentBlock[]
+	// Cover image
+	coverImage?: {
+		src: string;
+		alt: string;
+	};
 
-  // Places (for maps)
-  places: Place[]
+	// Content
+	title: string;
+	intro: string;
+	sections: ArticleSection[];
+	contentBlocks?: ContentBlock[];
 
-  // FAQ (for structured data)
-  faq?: FaqItem[]
+	// Places (for maps)
+	places: Place[];
 
-  // Monetization slots
-  monetization?: MonetizationSlot[]
+	// FAQ (for structured data)
+	faq?: FaqItem[];
 
-  // SEO
-  seo: SeoMetadata
+	// Monetization slots
+	monetization?: MonetizationSlot[];
 
-  // Publishing
-  publishedAt?: string
-  updatedAt?: string
+	// SEO
+	seo: SeoMetadata;
+
+	// Publishing
+	publishedAt?: string;
+	updatedAt?: string;
 }

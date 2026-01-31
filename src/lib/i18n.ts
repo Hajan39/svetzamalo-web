@@ -261,6 +261,33 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			title: "Travel Destinations",
 			description:
 				"Explore our budget travel guides for destinations around the world. Each guide includes practical tips, costs, and insider advice.",
+			all: "All",
+			continents: {
+				europe: "Europe",
+				asia: "Asia",
+				africa: "Africa",
+				caribbean: "Caribbean",
+				northAmerica: "North America",
+				southAmerica: "South America",
+				oceania: "Oceania",
+			},
+			continentDescriptions: {
+				europe:
+					"From Mediterranean beaches to Alpine peaks, Europe offers incredible diversity for budget travelers. Explore historic cities, charming villages, and world-class cuisine.",
+				asia: "Discover ancient temples, bustling markets, and pristine beaches. Asia is a paradise for budget travelers with affordable food, accommodation, and endless adventures.",
+				africa:
+					"Experience wildlife safaris, stunning landscapes, and rich cultures. Africa offers unique adventures from the Sahara to tropical rainforests.",
+				caribbean:
+					"Crystal-clear waters, white sand beaches, and vibrant culture. The Caribbean islands offer tropical paradise with options for every budget.",
+				northAmerica:
+					"From bustling cities to national parks, North America has something for everyone. Explore diverse landscapes and cultures across the continent.",
+				southAmerica:
+					"Explore the Amazon, Andes, and Patagonia. South America offers incredible natural beauty, ancient ruins, and vibrant cities.",
+				oceania:
+					"Discover the unique wildlife and stunning landscapes of Australia, New Zealand, and the Pacific islands.",
+			},
+			viewAll: "All destinations",
+			viewByContinent: "By continent",
 		},
 
 		// Articles Page
@@ -509,6 +536,33 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			title: "Cestovní destinace",
 			description:
 				"Prozkoumejte naše průvodce levným cestováním pro destinace po celém světě. Každý průvodce obsahuje praktické tipy, náklady a insider rady.",
+			all: "Vše",
+			continents: {
+				europe: "Evropa",
+				asia: "Asie",
+				africa: "Afrika",
+				caribbean: "Karibik",
+				northAmerica: "Severní Amerika",
+				southAmerica: "Jižní Amerika",
+				oceania: "Oceánie",
+			},
+			continentDescriptions: {
+				europe:
+					"Od středomořských pláží po alpské štíty – Evropa nabízí nevídanou rozmanitost pro cestovatelé s rozpočtem. Objevte historická města, malebné vesničky a světovou gastronomii.",
+				asia: "Objevte starobylé chrámy, rušné trhy a nedotčené pláže. Asie je rájem pro cestovatele s malým rozpočtem díky cenově dostupnému jídlu, ubytování a nekonečným dobrodružstvím.",
+				africa:
+					"Zažijte safari, úchvatné krajiny a bohaté kultury. Afrika nabízí jedinečná dobrodružství od Sahary po tropické deštné pralesy.",
+				caribbean:
+					"Křišťálově čistá voda, bílé písečné pláže a živá kultura. Karibské ostrovy nabízí tropický ráj s možnostmi pro každý rozpočet.",
+				northAmerica:
+					"Od rušných měst po národní parky – Severní Amerika má něco pro každého. Prozkoumejte rozmanité krajiny a kultury celého kontinentu.",
+				southAmerica:
+					"Prozkoumejte Amazonii, Andy a Patagonii. Jižní Amerika nabízí nevídanou přírodní krásu, starobylé ruiny a pulzující města.",
+				oceania:
+					"Objevte jedinečnou faunu a úchvatnou přírodu Austrálie, Nového Zélandu a tichomořských ostrovů.",
+			},
+			viewAll: "Všechny destinace",
+			viewByContinent: "Podle kontinentu",
 		},
 
 		// Articles Page
@@ -762,6 +816,33 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			title: "Destinos de viaje",
 			description:
 				"Explora nuestras guías de viaje económicas para destinos de todo el mundo. Cada guía incluye consejos prácticos, costos y recomendaciones de expertos.",
+			all: "Todos",
+			continents: {
+				europe: "Europa",
+				asia: "Asia",
+				africa: "África",
+				caribbean: "Caribe",
+				northAmerica: "Norteamérica",
+				southAmerica: "Sudamérica",
+				oceania: "Oceanía",
+			},
+			continentDescriptions: {
+				europe:
+					"Desde playas mediterráneas hasta picos alpinos, Europa ofrece una diversidad increíble para viajeros con presupuesto. Explora ciudades históricas, pueblos encantadores y gastronomía de clase mundial.",
+				asia: "Descubre templos antiguos, mercados bulliciosos y playas vírgenes. Asia es un paraíso para viajeros con presupuesto con comida, alojamiento y aventuras asequibles.",
+				africa:
+					"Experimenta safaris, paisajes impresionantes y culturas ricas. África ofrece aventuras únicas desde el Sáhara hasta las selvas tropicales.",
+				caribbean:
+					"Aguas cristalinas, playas de arena blanca y cultura vibrante. Las islas del Caribe ofrecen un paraíso tropical con opciones para cada presupuesto.",
+				northAmerica:
+					"Desde ciudades bulliciosas hasta parques nacionales, Norteamérica tiene algo para todos. Explora paisajes y culturas diversas en todo el continente.",
+				southAmerica:
+					"Explora el Amazonas, los Andes y la Patagonia. Sudamérica ofrece una belleza natural increíble, ruinas antiguas y ciudades vibrantes.",
+				oceania:
+					"Descubre la fauna única y los paisajes impresionantes de Australia, Nueva Zelanda y las islas del Pacífico.",
+			},
+			viewAll: "Todos los destinos",
+			viewByContinent: "Por continente",
 		},
 
 		// Articles Page
@@ -1011,6 +1092,33 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			title: "Reiseziele",
 			description:
 				"Erkunden Sie unsere günstigen Reiseanleitungen für Ziele auf der ganzen Welt. Jede Anleitung enthält praktische Tipps, Kosten und Insider-Ratschläge.",
+			all: "Alle",
+			continents: {
+				europe: "Europa",
+				asia: "Asien",
+				africa: "Afrika",
+				caribbean: "Karibik",
+				northAmerica: "Nordamerika",
+				southAmerica: "Südamerika",
+				oceania: "Ozeanien",
+			},
+			continentDescriptions: {
+				europe:
+					"Von Mittelmeerstränden bis zu Alpengipfeln bietet Europa unglaubliche Vielfalt für Budget-Reisende. Entdecken Sie historische Städte, charmante Dörfer und Weltklasse-Küche.",
+				asia: "Entdecken Sie alte Tempel, geschäftige Märkte und unberührte Strände. Asien ist ein Paradies für Budget-Reisende mit erschwinglichem Essen, Unterkünften und endlosen Abenteuern.",
+				africa:
+					"Erleben Sie Safaris, atemberaubende Landschaften und reiche Kulturen. Afrika bietet einzigartige Abenteuer von der Sahara bis zu tropischen Regenwäldern.",
+				caribbean:
+					"Kristallklares Wasser, weiße Sandstrände und lebendige Kultur. Die karibischen Inseln bieten tropisches Paradies mit Optionen für jedes Budget.",
+				northAmerica:
+					"Von geschäftigen Städten bis zu Nationalparks hat Nordamerika für jeden etwas. Erkunden Sie vielfältige Landschaften und Kulturen auf dem ganzen Kontinent.",
+				southAmerica:
+					"Erkunden Sie den Amazonas, die Anden und Patagonien. Südamerika bietet unglaubliche Naturschönheit, alte Ruinen und lebendige Städte.",
+				oceania:
+					"Entdecken Sie die einzigartige Tierwelt und atemberaubende Landschaften Australiens, Neuseelands und der pazifischen Inseln.",
+			},
+			viewAll: "Alle Reiseziele",
+			viewByContinent: "Nach Kontinent",
 		},
 
 		// Articles Page

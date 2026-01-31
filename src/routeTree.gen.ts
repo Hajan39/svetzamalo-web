@@ -9,17 +9,13 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as DestinationsRouteImport } from './routes/destinations'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DestinationsIndexRouteImport } from './routes/destinations.index'
 import { Route as ArticlesIndexRouteImport } from './routes/articles.index'
+import { Route as DestinationsContinentRouteImport } from './routes/destinations.$continent'
 import { Route as ArticlesSlugRouteImport } from './routes/articles.$slug'
 
-const DestinationsRoute = DestinationsRouteImport.update({
-  id: '/destinations',
-  path: '/destinations',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -30,9 +26,19 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DestinationsIndexRoute = DestinationsIndexRouteImport.update({
+  id: '/destinations/',
+  path: '/destinations/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ArticlesIndexRoute = ArticlesIndexRouteImport.update({
   id: '/articles/',
   path: '/articles/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DestinationsContinentRoute = DestinationsContinentRouteImport.update({
+  id: '/destinations/$continent',
+  path: '/destinations/$continent',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ArticlesSlugRoute = ArticlesSlugRouteImport.update({
@@ -44,56 +50,66 @@ const ArticlesSlugRoute = ArticlesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/destinations': typeof DestinationsRoute
   '/articles/$slug': typeof ArticlesSlugRoute
+  '/destinations/$continent': typeof DestinationsContinentRoute
   '/articles/': typeof ArticlesIndexRoute
+  '/destinations/': typeof DestinationsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/destinations': typeof DestinationsRoute
   '/articles/$slug': typeof ArticlesSlugRoute
+  '/destinations/$continent': typeof DestinationsContinentRoute
   '/articles': typeof ArticlesIndexRoute
+  '/destinations': typeof DestinationsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/destinations': typeof DestinationsRoute
   '/articles/$slug': typeof ArticlesSlugRoute
+  '/destinations/$continent': typeof DestinationsContinentRoute
   '/articles/': typeof ArticlesIndexRoute
+  '/destinations/': typeof DestinationsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/destinations' | '/articles/$slug' | '/articles/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/articles/$slug'
+    | '/destinations/$continent'
+    | '/articles/'
+    | '/destinations/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/destinations' | '/articles/$slug' | '/articles'
+  to:
+    | '/'
+    | '/about'
+    | '/articles/$slug'
+    | '/destinations/$continent'
+    | '/articles'
+    | '/destinations'
   id:
     | '__root__'
     | '/'
     | '/about'
-    | '/destinations'
     | '/articles/$slug'
+    | '/destinations/$continent'
     | '/articles/'
+    | '/destinations/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  DestinationsRoute: typeof DestinationsRoute
   ArticlesSlugRoute: typeof ArticlesSlugRoute
+  DestinationsContinentRoute: typeof DestinationsContinentRoute
   ArticlesIndexRoute: typeof ArticlesIndexRoute
+  DestinationsIndexRoute: typeof DestinationsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/destinations': {
-      id: '/destinations'
-      path: '/destinations'
-      fullPath: '/destinations'
-      preLoaderRoute: typeof DestinationsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -108,11 +124,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/destinations/': {
+      id: '/destinations/'
+      path: '/destinations'
+      fullPath: '/destinations/'
+      preLoaderRoute: typeof DestinationsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/articles/': {
       id: '/articles/'
       path: '/articles'
       fullPath: '/articles/'
       preLoaderRoute: typeof ArticlesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destinations/$continent': {
+      id: '/destinations/$continent'
+      path: '/destinations/$continent'
+      fullPath: '/destinations/$continent'
+      preLoaderRoute: typeof DestinationsContinentRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/articles/$slug': {
@@ -128,9 +158,10 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  DestinationsRoute: DestinationsRoute,
   ArticlesSlugRoute: ArticlesSlugRoute,
+  DestinationsContinentRoute: DestinationsContinentRoute,
   ArticlesIndexRoute: ArticlesIndexRoute,
+  DestinationsIndexRoute: DestinationsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
