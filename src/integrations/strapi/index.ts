@@ -18,6 +18,7 @@ export { transformStrapiDestination, transformStrapiArticle } from './types'
 
 // API methods
 export {
+  toContentLocale,
   fetchDestinations,
   fetchDestinationBySlug,
   fetchDestinationById,

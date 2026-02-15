@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { DestinationCard } from "@/components/destination";
-import { getDestinations } from "@/content";
+import { useDestinations } from "@/integrations/strapi";
 import { useTranslation } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
@@ -49,12 +49,12 @@ export const Route = createFileRoute("/destinations/")({
 
 function DestinationsPage() {
 	const { t } = useTranslation();
-	const destinations = getDestinations();
+	const { data: destinations = [], isLoading } = useDestinations();
 	const [viewMode, setViewMode] = useState<"all" | "byContinent">(
 		"byContinent",
 	);
 
-	// Group destinations by continent
+	// Group destinations by continent (minimal Strapi schema defaults to 'europe')
 	const destinationsByContinent = useMemo(() => {
 		const grouped: Record<string, typeof destinations> = {};
 		for (const destination of destinations) {
@@ -80,6 +80,13 @@ function DestinationsPage() {
 
 	return (
 		<div className="container-wide py-16">
+			{isLoading && (
+				<div className="text-center py-12 text-foreground-secondary">
+					Loading destinations...
+				</div>
+			)}
+			{!isLoading && (
+			<>
 			<header className="mb-12">
 				<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
 					<h1 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight">
@@ -150,6 +157,8 @@ function DestinationsPage() {
 						</section>
 					))}
 				</div>
+			)}
+			</>
 			)}
 		</div>
 	);

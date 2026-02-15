@@ -69,6 +69,12 @@ export interface Article {
 	sections: ArticleSection[];
 	contentBlocks?: ContentBlock[];
 
+	/**
+	 * Raw HTML content (e.g. from WordPress export).
+	 * When set, renders instead of sections/contentBlocks.
+	 */
+	htmlContent?: string;
+
 	// Places (for maps)
 	places: Place[];
 

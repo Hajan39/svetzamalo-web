@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
 	ArticleFaq,
 	ArticleHero,
+	ArticleHtmlContent,
 	ArticlePlaces,
 	ArticleSection,
 } from "@/components/article";
@@ -134,7 +135,7 @@ function ArticlePage() {
 							? [
 									{
 										label: destination.name,
-										href: `/destinations/${destination.slug}`,
+										href: `/destinations/guide/${destination.slug}`,
 									},
 								]
 							: []),
@@ -151,38 +152,44 @@ function ArticlePage() {
 					updatedAt={article.updatedAt}
 				/>
 
-				{/* Content Sections with Monetization */}
-				<div className="space-y-12">
-					{article.sections.map((section) => (
-						<div key={section.id}>
-							<ArticleSection section={section} />
+				{/* Content - HTML (WordPress) or structured sections */}
+				{article.htmlContent ? (
+					<div className="space-y-12">
+						<ArticleHtmlContent html={article.htmlContent} />
+					</div>
+				) : (
+					<div className="space-y-12">
+						{article.sections.map((section) => (
+							<div key={section.id}>
+								<ArticleSection section={section} />
 
-							{/* Contextual affiliate after "Getting There" section */}
-							{section.id === "getting-there" && destination && (
-								<AffiliateBox
-									type="flight"
-									headline={`Book Your Flight to ${destination.name}`}
-									description={`Find the best deals on flights. We recommend booking 2-3 months in advance for the best prices.`}
-									ctaText="Search Flights"
-									link={`https://www.skyscanner.com/transport/flights/to/${destination.slug}`}
-									partner="Skyscanner"
-								/>
-							)}
+								{/* Contextual affiliate after "Getting There" section */}
+								{section.id === "getting-there" && destination && (
+									<AffiliateBox
+										type="flight"
+										headline={`Book Your Flight to ${destination.name}`}
+										description={`Find the best deals on flights. We recommend booking 2-3 months in advance for the best prices.`}
+										ctaText="Search Flights"
+										link={`https://www.skyscanner.com/transport/flights/to/${destination.slug}`}
+										partner="Skyscanner"
+									/>
+								)}
 
-							{/* Contextual affiliate after "Where to Stay" section */}
-							{section.id === "where-to-stay" && destination && (
-								<AffiliateBox
-									type="hotel"
-									headline={`Find Accommodation in ${destination.name}`}
-									description={`Compare prices from hostels to luxury resorts. Budget: $${destination.currency.budgetPerDay.budget}/night, Mid-range: $${destination.currency.budgetPerDay.midRange}/night.`}
-									ctaText="Check Prices"
-									link={`https://www.booking.com/destination/${destination.slug}`}
-									partner="Booking.com"
-								/>
-							)}
-						</div>
-					))}
-				</div>
+								{/* Contextual affiliate after "Where to Stay" section */}
+								{section.id === "where-to-stay" && destination && (
+									<AffiliateBox
+										type="hotel"
+										headline={`Find Accommodation in ${destination.name}`}
+										description={`Compare prices from hostels to luxury resorts. Budget: $${destination.currency.budgetPerDay.budget}/night, Mid-range: $${destination.currency.budgetPerDay.midRange}/night.`}
+										ctaText="Check Prices"
+										link={`https://www.booking.com/destination/${destination.slug}`}
+										partner="Booking.com"
+									/>
+								)}
+							</div>
+						))}
+					</div>
+				)}
 
 				{/* Places */}
 				<ArticlePlaces places={article.places} />

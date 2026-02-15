@@ -9,12 +9,24 @@ const SITE_URL = "https://lowcosttraveling.com";
 export const Route = createFileRoute("/articles/")({
 	loader: async ({ context }) => {
 		const { queryClient } = context;
-		const { strapiQueryKeys } = await import("@/integrations/strapi");
+		const {
+			fetchArticleBySlug,
+			fetchArticles,
+			strapiQueryKeys,
+		} = await import("@/integrations/strapi");
 
-		await queryClient.prefetchQuery({
-			queryKey: strapiQueryKeys.articles.lists(),
-			queryFn: () => fetchArticles(),
-		});
+		const articles = await fetchArticles();
+		queryClient.setQueryData(strapiQueryKeys.articles.lists(), articles);
+
+		// Prefetch each article so client-side navigation has data in cache
+		await Promise.all(
+			articles.map((a) =>
+				queryClient.prefetchQuery({
+					queryKey: strapiQueryKeys.articles.bySlug(a.slug),
+					queryFn: () => fetchArticleBySlug(a.slug),
+				}),
+			),
+		);
 
 		return {};
 	},

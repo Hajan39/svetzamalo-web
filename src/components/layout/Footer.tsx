@@ -91,7 +91,7 @@ export function Footer() {
 			{/* Bottom Bar */}
 			<div className="border-t border-border">
 				<div className="container-wide py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-					<p className="text-xs text-foreground-muted">
+					<p className="text-xs text-foreground-muted" suppressHydrationWarning>
 						© {currentYear} Lowcost Traveling
 					</p>
 					<div className="flex gap-6">

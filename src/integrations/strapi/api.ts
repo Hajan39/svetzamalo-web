@@ -2,23 +2,11 @@
  * Strapi API Methods
  *
  * High-level API methods for fetching content from Strapi.
- * Falls back to local content data when Strapi is unavailable.
+ * Data comes exclusively from Strapi – no local fallbacks.
  */
 
-import {
-	getArticleById as getLocalArticleById,
-	getArticleBySlug as getLocalArticleBySlug,
-	getArticles as getLocalArticles,
-	getArticlesByDestination as getLocalArticlesByDestination,
-	getArticlesByTag as getLocalArticlesByTag,
-	getDestinationById as getLocalDestinationById,
-	getDestinationBySlug as getLocalDestinationBySlug,
-	getDestinations as getLocalDestinations,
-	getDestinationsByContinent as getLocalDestinationsByContinent,
-	getLatestArticles as getLocalLatestArticles,
-} from "@/content";
 import type { Article, Destination } from "@/types";
-import { type StrapiQueryParams, strapiClient } from "./client";
+import { strapiClient } from "./client";
 import {
 	type StrapiArticle,
 	type StrapiDestination,
@@ -26,28 +14,23 @@ import {
 	transformStrapiDestination,
 } from "./types";
 
-/**
- * Check if Strapi is enabled via environment variable
- */
-const isStrapiEnabled = () => {
-	const strapiUrl =
-		typeof process !== "undefined"
-			? process.env.VITE_STRAPI_URL
-			: import.meta.env?.VITE_STRAPI_URL;
-	return !!strapiUrl && strapiUrl !== "http://localhost:1337";
-};
+/** Map app locale to Strapi content locale (destinations have cs | en) */
+export function toContentLocale(appLocale: string): "cs" | "en" {
+	return appLocale === "cs" ? "cs" : "en";
+}
 
 /**
- * Fetch all destinations
- * Falls back to local content if Strapi is unavailable
+ * Fetch all destinations, optionally filtered by content locale.
  */
 export async function fetchDestinations(
-	params?: StrapiQueryParams,
+	contentLocale?: "cs" | "en",
 ): Promise<Destination[]> {
-	// Use local data if Strapi is not configured
-	if (!isStrapiEnabled()) {
-		return getLocalDestinations();
-	}
+	// contentLang: cs = Czech, en = English. Entries with null are treated as Czech (schema default).
+	const localeFilter = contentLocale === "en"
+		? { contentLang: { $eq: "en" } }
+		: contentLocale === "cs"
+			? { $or: [{ contentLang: { $eq: "cs" } }, { contentLang: { $null: true } }] }
+			: undefined;
 
 	try {
 		const response = await strapiClient.get<StrapiDestination[]>(
@@ -55,7 +38,7 @@ export async function fetchDestinations(
 			{
 				populate: "*",
 				sort: ["name:asc"],
-				...params,
+				...(localeFilter ? { filters: localeFilter } : {}),
 			},
 		);
 
@@ -64,23 +47,17 @@ export async function fetchDestinations(
 			: [response.data];
 		return destinations.map(transformStrapiDestination);
 	} catch (error) {
-		console.warn("Strapi unavailable, using local destinations:", error);
-		return getLocalDestinations();
+		console.warn("Strapi fetch destinations failed:", error);
+		return [];
 	}
 }
 
 /**
  * Fetch destination by slug
- * Falls back to local content if Strapi is unavailable
  */
 export async function fetchDestinationBySlug(
 	slug: string,
 ): Promise<Destination | null> {
-	// Use local data if Strapi is not configured
-	if (!isStrapiEnabled()) {
-		return getLocalDestinationBySlug(slug) || null;
-	}
-
 	try {
 		const response = await strapiClient.get<StrapiDestination>(
 			`/destinations`,
@@ -99,23 +76,17 @@ export async function fetchDestinationBySlug(
 
 		return transformStrapiDestination(destinations[0]);
 	} catch (error) {
-		console.warn("Strapi unavailable, using local destination:", error);
-		return getLocalDestinationBySlug(slug) || null;
+		console.warn("Strapi fetch destination by slug failed:", error);
+		return null;
 	}
 }
 
 /**
  * Fetch destination by ID
- * Falls back to local content if Strapi is unavailable
  */
 export async function fetchDestinationById(
 	id: string | number,
 ): Promise<Destination | null> {
-	// Use local data if Strapi is not configured
-	if (!isStrapiEnabled()) {
-		return getLocalDestinationById(String(id)) || null;
-	}
-
 	try {
 		const response = await strapiClient.get<StrapiDestination>(
 			`/destinations/${id}`,
@@ -126,28 +97,31 @@ export async function fetchDestinationById(
 
 		return transformStrapiDestination(response.data);
 	} catch (error) {
-		console.warn("Strapi unavailable, using local destination:", error);
-		return getLocalDestinationById(String(id)) || null;
+		console.warn("Strapi fetch destination by id failed:", error);
+		return null;
 	}
 }
 
 /**
- * Fetch destinations by continent
- * Falls back to local content if Strapi is unavailable
+ * Fetch destinations by continent, optionally filtered by content locale.
  */
 export async function fetchDestinationsByContinent(
 	continent: string,
+	contentLocale?: "cs" | "en",
 ): Promise<Destination[]> {
-	// Use local data if Strapi is not configured
-	if (!isStrapiEnabled()) {
-		return getLocalDestinationsByContinent(continent);
+	const filters: Record<string, unknown> = { continent: { $eq: continent } };
+	// contentLang: cs = Czech, en = English. Null entries are treated as Czech (schema default).
+	if (contentLocale === "en") {
+		filters.contentLang = { $eq: "en" };
+	} else if (contentLocale === "cs") {
+		filters.$or = [{ contentLang: { $eq: "cs" } }, { contentLang: { $null: true } }];
 	}
 
 	try {
 		const response = await strapiClient.get<StrapiDestination[]>(
 			"/destinations",
 			{
-				filters: { continent: { $eq: continent } },
+				filters,
 				populate: "*",
 				sort: ["name:asc"],
 			},
@@ -158,33 +132,19 @@ export async function fetchDestinationsByContinent(
 			: [response.data];
 		return destinations.map(transformStrapiDestination);
 	} catch (error) {
-		console.warn("Strapi unavailable, using local destinations:", error);
-		return getLocalDestinationsByContinent(continent);
+		console.warn("Strapi fetch destinations by continent failed:", error);
+		return [];
 	}
 }
 
 /**
  * Fetch all articles
- * Falls back to local content if Strapi is unavailable
  */
-export async function fetchArticles(
-	params?: StrapiQueryParams,
-): Promise<Article[]> {
-	// Use local data if Strapi is not configured
-	if (!isStrapiEnabled()) {
-		return getLocalArticles();
-	}
-
+export async function fetchArticles(): Promise<Article[]> {
 	try {
 		const response = await strapiClient.get<StrapiArticle[]>("/articles", {
-			populate: {
-				destination: {
-					populate: "*",
-				},
-				featuredImage: "*",
-			},
+			populate: "cover",
 			sort: ["publishedAt:desc"],
-			...params,
 		});
 
 		const articles = Array.isArray(response.data)
@@ -192,89 +152,61 @@ export async function fetchArticles(
 			: [response.data];
 		return articles.map(transformStrapiArticle);
 	} catch (error) {
-		console.warn("Strapi unavailable, using local articles:", error);
-		return getLocalArticles();
+		console.warn("Strapi fetch articles failed:", error);
+		return [];
 	}
 }
 
 /**
  * Fetch article by slug
- * Falls back to local content if Strapi is unavailable
  */
 export async function fetchArticleBySlug(
 	slug: string,
 ): Promise<Article | null> {
-	// Use local data if Strapi is not configured
-	if (!isStrapiEnabled()) {
-		return getLocalArticleBySlug(slug) || null;
-	}
-
 	try {
 		const response = await strapiClient.get<StrapiArticle>("/articles", {
 			filters: { slug: { $eq: slug } },
-			populate: {
-				destination: {
-					populate: "*",
-				},
-				featuredImage: "*",
-			},
+			populate: "cover",
 		});
 
 		const articles = Array.isArray(response.data)
 			? response.data
 			: [response.data];
 		if (articles.length === 0) {
-			return getLocalArticleBySlug(slug) || null;
+			return null;
 		}
 
 		return transformStrapiArticle(articles[0]);
 	} catch (error) {
-		console.warn("Strapi unavailable, using local article:", error);
-		return getLocalArticleBySlug(slug) || null;
+		console.warn("Strapi fetch article by slug failed:", error);
+		return null;
 	}
 }
 
 /**
  * Fetch article by ID
- * Falls back to local content if Strapi is unavailable
  */
 export async function fetchArticleById(
 	id: string | number,
 ): Promise<Article | null> {
-	// Use local data if Strapi is not configured
-	if (!isStrapiEnabled()) {
-		return getLocalArticleById(String(id)) || null;
-	}
-
 	try {
 		const response = await strapiClient.get<StrapiArticle>(`/articles/${id}`, {
-			populate: {
-				destination: {
-					populate: "*",
-				},
-				featuredImage: "*",
-			},
+			populate: "cover",
 		});
 
 		return transformStrapiArticle(response.data);
 	} catch (error) {
-		console.warn("Strapi unavailable, using local article:", error);
-		return getLocalArticleById(String(id)) || null;
+		console.warn("Strapi fetch article by id failed:", error);
+		return null;
 	}
 }
 
 /**
  * Fetch articles by destination
- * Falls back to local content if Strapi is unavailable
  */
 export async function fetchArticlesByDestination(
 	destinationId: string,
 ): Promise<Article[]> {
-	// Use local data if Strapi is not configured
-	if (!isStrapiEnabled()) {
-		return getLocalArticlesByDestination(destinationId);
-	}
-
 	try {
 		const response = await strapiClient.get<StrapiArticle[]>("/articles", {
 			filters: {
@@ -289,12 +221,7 @@ export async function fetchArticlesByDestination(
 					},
 				],
 			},
-			populate: {
-				destination: {
-					populate: "*",
-				},
-				featuredImage: "*",
-			},
+			populate: "cover",
 			sort: ["publishedAt:desc"],
 		});
 
@@ -303,21 +230,15 @@ export async function fetchArticlesByDestination(
 			: [response.data];
 		return articles.map(transformStrapiArticle);
 	} catch (error) {
-		console.warn("Strapi unavailable, using local articles:", error);
-		return getLocalArticlesByDestination(destinationId);
+		console.warn("Strapi fetch articles by destination failed:", error);
+		return [];
 	}
 }
 
 /**
  * Fetch articles by tag
- * Falls back to local content if Strapi is unavailable
  */
 export async function fetchArticlesByTag(tag: string): Promise<Article[]> {
-	// Use local data if Strapi is not configured
-	if (!isStrapiEnabled()) {
-		return getLocalArticlesByTag(tag);
-	}
-
 	try {
 		const response = await strapiClient.get<StrapiArticle[]>("/articles", {
 			filters: {
@@ -325,12 +246,7 @@ export async function fetchArticlesByTag(tag: string): Promise<Article[]> {
 					$contains: tag,
 				},
 			},
-			populate: {
-				destination: {
-					populate: "*",
-				},
-				featuredImage: "*",
-			},
+			populate: "cover",
 			sort: ["publishedAt:desc"],
 		});
 
@@ -339,29 +255,18 @@ export async function fetchArticlesByTag(tag: string): Promise<Article[]> {
 			: [response.data];
 		return articles.map(transformStrapiArticle);
 	} catch (error) {
-		console.warn("Strapi unavailable, using local articles:", error);
-		return getLocalArticlesByTag(tag);
+		console.warn("Strapi fetch articles by tag failed:", error);
+		return [];
 	}
 }
 
 /**
  * Fetch latest articles
- * Falls back to local content if Strapi is unavailable
  */
 export async function fetchLatestArticles(limit = 6): Promise<Article[]> {
-	// Use local data if Strapi is not configured
-	if (!isStrapiEnabled()) {
-		return getLocalLatestArticles(limit);
-	}
-
 	try {
 		const response = await strapiClient.get<StrapiArticle[]>("/articles", {
-			populate: {
-				destination: {
-					populate: "*",
-				},
-				featuredImage: "*",
-			},
+			populate: "cover",
 			sort: ["publishedAt:desc"],
 			pagination: {
 				limit,
@@ -373,7 +278,7 @@ export async function fetchLatestArticles(limit = 6): Promise<Article[]> {
 			: [response.data];
 		return articles.map(transformStrapiArticle);
 	} catch (error) {
-		console.warn("Strapi unavailable, using local articles:", error);
-		return getLocalLatestArticles(limit);
+		console.warn("Strapi fetch latest articles failed:", error);
+		return [];
 	}
 }

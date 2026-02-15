@@ -1189,9 +1189,11 @@ class I18nManager {
 		return () => this.listeners.delete(callback);
 	}
 
-	t(key: string, fallback?: string): string {
+	/** Translate by key. Use overrideLocale to avoid hydration mismatch (e.g. pass hook's locale state). */
+	t(key: string, fallback?: string, overrideLocale?: SupportedLocale): string {
+		const locale = overrideLocale ?? this.currentLocale;
 		const keys = key.split(".");
-		let value: any = translations[this.currentLocale];
+		let value: any = translations[locale];
 
 		for (const k of keys) {
 			value = value?.[k];
@@ -1202,7 +1204,7 @@ class I18nManager {
 		}
 
 		// Try fallback to English
-		if (this.currentLocale !== "en") {
+		if (locale !== "en") {
 			let fallbackValue: any = translations.en;
 			for (const k of keys) {
 				fallbackValue = fallbackValue?.[k];
@@ -1253,19 +1255,20 @@ export function useI18n() {
 import { useCallback, useEffect, useState } from "react";
 
 export function useTranslation() {
-	const [locale, setLocale] = useState<SupportedLocale>(
-		i18n.getCurrentLocale(),
-	);
+	// Use default locale for initial render so server and client match (avoid hydration mismatch).
+	// After mount, useEffect syncs from localStorage via subscribe.
+	const [locale, setLocale] = useState<SupportedLocale>(DEFAULT_LOCALE);
 
 	useEffect(() => {
+		setLocale(i18n.getCurrentLocale());
 		const unsubscribe = i18n.subscribe(setLocale);
 		return unsubscribe;
 	}, []);
 
-	// Include locale in dependencies so components re-render when locale changes
+	// Use hook's locale (not i18n.currentLocale) so first render is always DEFAULT_LOCALE and matches server.
 	const t = useCallback(
 		(key: string, fallback?: string) => {
-			return i18n.t(key, fallback);
+			return i18n.t(key, fallback, locale);
 		},
 		[locale],
 	);
@@ -1283,11 +1286,10 @@ export function useTranslation() {
 }
 
 export function useLocale() {
-	const [locale, setLocale] = useState<SupportedLocale>(
-		i18n.getCurrentLocale(),
-	);
+	const [locale, setLocale] = useState<SupportedLocale>(DEFAULT_LOCALE);
 
 	useEffect(() => {
+		setLocale(i18n.getCurrentLocale());
 		const unsubscribe = i18n.subscribe(setLocale);
 		return unsubscribe;
 	}, []);

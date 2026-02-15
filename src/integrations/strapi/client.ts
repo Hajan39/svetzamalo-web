@@ -47,9 +47,42 @@ class StrapiClient {
   private apiToken?: string
 
   constructor() {
-    const strapiUrl = process.env.VITE_STRAPI_URL || 'http://localhost:1337'
+    const strapiUrl =
+      (typeof import.meta !== 'undefined' && import.meta.env?.VITE_STRAPI_URL) ||
+      process.env.VITE_STRAPI_URL ||
+      'http://localhost:1337'
     this.baseUrl = `${strapiUrl}/api`
-    this.apiToken = process.env.VITE_STRAPI_API_TOKEN
+    this.apiToken =
+      (typeof import.meta !== 'undefined' && import.meta.env?.VITE_STRAPI_API_TOKEN) ||
+      process.env.VITE_STRAPI_API_TOKEN
+  }
+
+  /**
+   * Flatten nested object for Strapi qs format: { slug: { $eq: 'x' } } -> filters[slug][$eq]=x
+   */
+  private appendFlattened(
+    params: URLSearchParams,
+    prefix: string,
+    obj: Record<string, unknown>
+  ): void {
+    for (const [key, value] of Object.entries(obj)) {
+      const paramKey = `${prefix}[${key}]`
+      if (Array.isArray(value)) {
+        // Handle arrays: filters[$or][0][field][$eq]=val
+        for (let i = 0; i < value.length; i++) {
+          const itemKey = `${paramKey}[${i}]`
+          if (value[i] !== null && typeof value[i] === 'object') {
+            this.appendFlattened(params, itemKey, value[i] as Record<string, unknown>)
+          } else {
+            params.append(itemKey, String(value[i]))
+          }
+        }
+      } else if (value !== null && typeof value === 'object') {
+        this.appendFlattened(params, paramKey, value as Record<string, unknown>)
+      } else {
+        params.append(paramKey, String(value))
+      }
+    }
   }
 
   /**
@@ -69,9 +102,9 @@ class StrapiClient {
       }
     }
 
-    // Filters
+    // Filters - Strapi v5 expects flattened format (filters[slug][$eq]=x), not JSON
     if (params.filters) {
-      queryParams.append('filters', JSON.stringify(params.filters))
+      this.appendFlattened(queryParams, 'filters', params.filters as Record<string, unknown>)
     }
 
     // Sort

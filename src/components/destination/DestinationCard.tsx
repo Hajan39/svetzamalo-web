@@ -79,12 +79,11 @@ export function DestinationCard({
 	destination,
 	className = "",
 }: DestinationCardProps) {
-	const [currentTime, setCurrentTime] = useState(() =>
-		getTimeInTimezone(destination.timezone),
-	);
+	// Avoid hydration mismatch: server and client can have different time. Show placeholder until mounted.
+	const [currentTime, setCurrentTime] = useState("--:--");
 
-	// Update time every minute
 	useEffect(() => {
+		setCurrentTime(getTimeInTimezone(destination.timezone));
 		const interval = setInterval(() => {
 			setCurrentTime(getTimeInTimezone(destination.timezone));
 		}, 60000);
@@ -113,7 +112,7 @@ export function DestinationCard({
 
 	return (
 		<Link
-			to="/articles/$slug"
+			to="/destinations/guide/$slug"
 			params={{ slug: destination.slug }}
 			className={`group block relative rounded-lg overflow-hidden bg-background ${className}`}
 		>
@@ -131,7 +130,7 @@ export function DestinationCard({
 				{/* Content overlay */}
 				<div className="absolute inset-0 p-5 flex flex-col justify-end">
 					{/* Top right - Current time */}
-					<div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
+					<div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full" suppressHydrationWarning>
 						<span className="text-sm font-medium text-foreground tabular-nums">
 							{currentTime}
 						</span>
@@ -154,12 +153,12 @@ export function DestinationCard({
 
 						{/* Language + Best time to visit */}
 						<div className="flex items-center justify-between text-sm">
-							<span className="text-white/90">{destination.languages[0]}</span>
-							{destination.bestTimeToVisit && (
+							<span className="text-white/90">{destination.languages?.[0] ?? destination.name}</span>
+							{destination.bestTimeToVisit ? (
 								<span className="text-white/70">
 									{formatBestTime(destination.bestTimeToVisit)}
 								</span>
-							)}
+							) : null}
 						</div>
 					</div>
 				</div>

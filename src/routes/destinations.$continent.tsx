@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useMemo } from "react";
 import { DestinationCard } from "@/components/destination";
-import { getDestinations } from "@/content";
+import { useDestinations } from "@/integrations/strapi";
 import { useTranslation } from "@/lib/i18n";
 
 const SITE_URL = "https://lowcosttraveling.com";
@@ -53,7 +53,7 @@ export const Route = createFileRoute("/destinations/$continent")({
 function ContinentDestinationsPage() {
 	const { t } = useTranslation();
 	const { continent } = Route.useLoaderData();
-	const destinations = getDestinations();
+	const { data: destinations = [] } = useDestinations();
 
 	const filteredDestinations = useMemo(() => {
 		return destinations.filter((d) => d.continent === continent);

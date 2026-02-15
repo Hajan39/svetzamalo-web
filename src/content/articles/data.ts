@@ -8,7 +8,7 @@ export const articles: Article[] = [
 		articleType: "destination-guide",
 		tags: ["caribbean", "beaches", "budget"],
 		coverImage: {
-			src: "https://images.unsplash.com/photo-1569700981638-cd61ef29d2e3?w=1600&q=80",
+			src: "https://images.unsplash.com/photo-1741314260531-51b13ad2bc91?w=1600&q=80",
 			alt: "Dominican Republic beach with palm trees",
 		},
 		title: "Dominican Republic: Complete Travel Guide 2026",

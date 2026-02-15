@@ -59,4 +59,10 @@ export interface Destination {
 
   // SEO
   seo: SeoMetadata
+
+  /** HTML content (from Strapi intro blocks) – for destination detail page */
+  introHtml?: string
+
+  /** Content language */
+  locale?: 'cs' | 'en'
 }

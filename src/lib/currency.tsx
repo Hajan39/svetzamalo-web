@@ -3,6 +3,7 @@ import {
 	type ReactNode,
 	useCallback,
 	useContext,
+	useEffect,
 	useState,
 } from "react";
 
@@ -63,21 +64,21 @@ interface CurrencyContextValue {
 const CurrencyContext = createContext<CurrencyContextValue | null>(null);
 
 const STORAGE_KEY = "preferred-currency";
+const DEFAULT_CURRENCY = SUPPORTED_CURRENCIES[0]; // USD
 
-function getInitialCurrency(): CurrencyInfo {
-	if (typeof window !== "undefined") {
+export function CurrencyProvider({ children }: { children: ReactNode }) {
+	// Use fixed default for initial render so server and client match (avoid hydration mismatch).
+	// After mount, useEffect syncs from localStorage.
+	const [currency, setCurrencyState] =
+		useState<CurrencyInfo>(() => DEFAULT_CURRENCY);
+
+	useEffect(() => {
 		const stored = localStorage.getItem(STORAGE_KEY);
 		if (stored) {
 			const found = SUPPORTED_CURRENCIES.find((c) => c.code === stored);
-			if (found) return found;
+			if (found) setCurrencyState(found);
 		}
-	}
-	return SUPPORTED_CURRENCIES[0]; // USD
-}
-
-export function CurrencyProvider({ children }: { children: ReactNode }) {
-	const [currency, setCurrencyState] =
-		useState<CurrencyInfo>(getInitialCurrency);
+	}, []);
 
 	const setCurrency = useCallback((code: string) => {
 		const found = SUPPORTED_CURRENCIES.find((c) => c.code === code);

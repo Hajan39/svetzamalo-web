@@ -68,7 +68,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           item: destination,
           title: destination.name,
           description: `${destination.type} in ${destination.continent}`,
-          url: `/destinations/${destination.slug}`
+          url: `/destinations/guide/${destination.slug}`
         })
       }
     })

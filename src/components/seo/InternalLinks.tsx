@@ -31,7 +31,7 @@ interface ArticleToCountryLinkProps {
 export function ArticleToCountryLink({ destination, className = "text-primary hover:text-primary-hover font-medium" }: ArticleToCountryLinkProps) {
   return (
     <Link
-      to="/destinations/$slug"
+      to="/destinations/guide/$slug"
       params={{ slug: destination.slug }}
       className={className}
     >
@@ -133,7 +133,7 @@ export function RelatedDestinationLink({ destination, variant = 'card' }: Relate
   if (variant === 'inline') {
     return (
       <Link
-        to="/destinations/$slug"
+        to="/destinations/guide/$slug"
         params={{ slug: destination.slug }}
         className="text-primary hover:text-primary-hover font-medium hover:underline"
       >
@@ -144,7 +144,7 @@ export function RelatedDestinationLink({ destination, variant = 'card' }: Relate
 
   return (
     <Link
-      to="/destinations/$slug"
+      to="/destinations/guide/$slug"
       params={{ slug: destination.slug }}
       className="group block text-center p-4 border border-border rounded-lg hover:border-primary transition-colors"
     >
@@ -181,7 +181,7 @@ export function ContentNavigation({ previous, next }: ContentNavigationProps) {
       <div className="flex-1">
         {previous && (
           <Link
-            to={previous.type === 'article' ? "/articles/$slug" : "/destinations/$slug"}
+            to={previous.type === 'article' ? "/articles/$slug" : "/destinations/guide/$slug"}
             params={{ slug: previous.slug }}
             className="group flex items-center gap-3 p-4 border border-border rounded-lg hover:border-primary transition-colors"
           >
@@ -199,7 +199,7 @@ export function ContentNavigation({ previous, next }: ContentNavigationProps) {
       <div className="flex-1 text-right">
         {next && (
           <Link
-            to={next.type === 'article' ? "/articles/$slug" : "/destinations/$slug"}
+            to={next.type === 'article' ? "/articles/$slug" : "/destinations/guide/$slug"}
             params={{ slug: next.slug }}
             className="group flex items-center justify-end gap-3 p-4 border border-border rounded-lg hover:border-primary transition-colors"
           >

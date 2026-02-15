@@ -10,6 +10,7 @@ import {
   fetchDestinationBySlug,
   fetchDestinationById,
   fetchDestinationsByContinent,
+  toContentLocale,
   fetchArticles,
   fetchArticleBySlug,
   fetchArticleById,
@@ -17,6 +18,7 @@ import {
   fetchArticlesByTag,
   fetchLatestArticles,
 } from './api'
+import { useLocale } from '@/lib/i18n'
 import type { Destination, Article } from '@/types'
 
 /**
@@ -29,13 +31,15 @@ export const strapiQueryKeys = {
     lists: () => [...strapiQueryKeys.destinations.all, 'list'] as const,
     list: (filters?: unknown) =>
       [...strapiQueryKeys.destinations.lists(), filters] as const,
+    listWithLocale: (locale?: "cs" | "en") =>
+      [...strapiQueryKeys.destinations.lists(), 'locale', locale] as const,
     details: () => [...strapiQueryKeys.destinations.all, 'detail'] as const,
     detail: (id: string | number) =>
       [...strapiQueryKeys.destinations.details(), id] as const,
     bySlug: (slug: string) =>
       [...strapiQueryKeys.destinations.details(), 'slug', slug] as const,
-    byContinent: (continent: string) =>
-      [...strapiQueryKeys.destinations.lists(), 'continent', continent] as const,
+    byContinent: (continent: string, locale?: "cs" | "en") =>
+      [...strapiQueryKeys.destinations.lists(), 'continent', continent, 'locale', locale] as const,
   },
   articles: {
     all: ['strapi', 'articles'] as const,
@@ -57,7 +61,7 @@ export const strapiQueryKeys = {
 } as const
 
 /**
- * Hook to fetch all destinations
+ * Hook to fetch all destinations (filtered by current locale)
  */
 export function useDestinations(
   options?: Omit<
@@ -65,9 +69,11 @@ export function useDestinations(
     'queryKey' | 'queryFn'
   >
 ) {
+  const appLocale = useLocale()
+  const contentLocale = toContentLocale(appLocale)
   return useQuery({
-    queryKey: strapiQueryKeys.destinations.lists(),
-    queryFn: () => fetchDestinations(),
+    queryKey: strapiQueryKeys.destinations.listWithLocale(contentLocale),
+    queryFn: () => fetchDestinations(contentLocale),
     staleTime: 1000 * 60 * 5, // 5 minutes
     ...options,
   })
@@ -112,7 +118,7 @@ export function useDestinationById(
 }
 
 /**
- * Hook to fetch destinations by continent
+ * Hook to fetch destinations by continent (filtered by current locale)
  */
 export function useDestinationsByContinent(
   continent: string,
@@ -121,9 +127,11 @@ export function useDestinationsByContinent(
     'queryKey' | 'queryFn'
   >
 ) {
+  const appLocale = useLocale()
+  const contentLocale = toContentLocale(appLocale)
   return useQuery({
-    queryKey: strapiQueryKeys.destinations.byContinent(continent),
-    queryFn: () => fetchDestinationsByContinent(continent),
+    queryKey: strapiQueryKeys.destinations.byContinent(continent, contentLocale),
+    queryFn: () => fetchDestinationsByContinent(continent, contentLocale),
     enabled: !!continent,
     staleTime: 1000 * 60 * 5, // 5 minutes
     ...options,

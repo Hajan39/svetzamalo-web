@@ -11,6 +11,10 @@ const mockArticle = {
   publishedAt: '2024-01-01',
   updatedAt: '2024-01-01',
   author: 'Test Author',
+  coverImage: {
+    src: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80',
+    alt: 'Test article cover',
+  },
   seo: {
     metaTitle: 'Test Article',
     metaDescription: 'Test description',
