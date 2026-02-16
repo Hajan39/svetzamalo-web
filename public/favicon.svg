@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#52C9A2"/>
+      <stop offset="100%" stop-color="#3DB88A"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect width="512" height="512" rx="108" ry="108" fill="url(#bg)"/>
+  <!-- Subtle shine -->
+  <rect width="512" height="512" rx="108" ry="108" fill="url(#shine)"/>
+  <!-- Location pin (map marker) - travel symbol -->
+  <g transform="translate(256, 240)">
+    <!-- Pin body -->
+    <path d="M0 148 C-8 132 -100 20 -100 -40 C-100 -96 -56 -140 0 -140 C56 -140 100 -96 100 -40 C100 20 8 132 0 148 Z" fill="#ffffff"/>
+    <!-- Inner circle (represents "dot" from the mobile logo) -->
+    <circle cx="0" cy="-40" r="44" fill="url(#bg)"/>
+    <!-- Tiny airplane silhouette inside the circle -->
+    <g transform="translate(0, -40) scale(0.7)" fill="#ffffff">
+      <path d="M0-28 L6-8 L28 0 L6 4 L8 24 L0 16 L-8 24 L-6 4 L-28 0 L-6-8 Z"/>
+    </g>
+  </g>
+</svg>

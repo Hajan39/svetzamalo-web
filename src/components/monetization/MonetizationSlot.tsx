@@ -62,7 +62,7 @@ function PlaceholderSlot({ slotId, type, className }: Omit<MonetizationSlotProps
 
   return (
     <aside
-      className={`monetization-slot bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-dashed border-primary/30 rounded-lg flex items-center justify-center ${className}`}
+      className={`monetization-slot bg-linear-to-br from-primary/10 to-primary/5 border-2 border-dashed border-primary/30 rounded-lg flex items-center justify-center ${className}`}
       style={dimensions}
       aria-label={`Monetization slot: ${slotId}`}
       data-slot-id={slotId}
@@ -77,7 +77,7 @@ function PlaceholderSlot({ slotId, type, className }: Omit<MonetizationSlotProps
           Slot: {slotId}
         </div>
         <div className="text-xs text-foreground-muted mt-2">
-          {dimensions.width} × {dimensions.height}
+          {dimensions.maxWidth ?? dimensions.width} × {dimensions.height ?? dimensions.minHeight}
         </div>
       </div>
     </aside>
@@ -124,13 +124,13 @@ function AdSenseSlot({ slotId, type, className }: Omit<MonetizationSlotProps, 'f
 /**
  * Helper function to get slot dimensions based on type
  */
-function getSlotDimensions(type: MonetizationSlotType): { width?: string; height?: string; minHeight?: string } {
+function getSlotDimensions(type: MonetizationSlotType): { width?: string; maxWidth?: string; height?: string; minHeight?: string } {
   switch (type) {
     case 'banner-top':
     case 'banner-end':
       return { width: '100%', height: '90px' }
     case 'sidebar-sticky':
-      return { width: '300px', minHeight: '600px' }
+      return { width: '100%', maxWidth: '300px', minHeight: '600px' }
     case 'content-inline':
       return { width: '100%', height: '250px' }
     case 'native-article':

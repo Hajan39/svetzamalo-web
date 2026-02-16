@@ -65,8 +65,8 @@ function ContinentDestinationsPage() {
 	);
 
 	return (
-		<div className="container-wide py-16">
-			<header className="mb-12">
+		<div className="container-wide py-8 md:py-16">
+			<header className="mb-8 md:mb-12">
 				<nav className="mb-4">
 					<Link
 						to="/destinations"
@@ -75,10 +75,10 @@ function ContinentDestinationsPage() {
 						← {t("destinationsPage.title")}
 					</Link>
 				</nav>
-				<h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
+				<h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
 					{continentLabel}
 				</h1>
-				<p className="text-lg text-foreground-secondary max-w-2xl">
+				<p className="text-base md:text-lg text-foreground-secondary max-w-2xl">
 					{continentDescription}
 				</p>
 			</header>

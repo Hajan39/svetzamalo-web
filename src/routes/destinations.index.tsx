@@ -79,7 +79,7 @@ function DestinationsPage() {
 	};
 
 	return (
-		<div className="container-wide py-16">
+		<div className="container-wide py-8 md:py-16">
 			{isLoading && (
 				<div className="text-center py-12 text-foreground-secondary">
 					Loading destinations...
@@ -87,9 +87,9 @@ function DestinationsPage() {
 			)}
 			{!isLoading && (
 			<>
-			<header className="mb-12">
+			<header className="mb-8 md:mb-12">
 				<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
-					<h1 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+					<h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground tracking-tight">
 						{t("destinationsPage.title")}
 					</h1>
 					<div className="flex items-center gap-1 bg-background-secondary rounded-lg p-1">
@@ -119,7 +119,7 @@ function DestinationsPage() {
 						</button>
 					</div>
 				</div>
-				<p className="text-lg text-foreground-secondary max-w-2xl">
+				<p className="text-base md:text-lg text-foreground-secondary max-w-2xl">
 					{t("destinationsPage.description")}
 				</p>
 			</header>

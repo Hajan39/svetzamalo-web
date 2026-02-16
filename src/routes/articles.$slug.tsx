@@ -126,7 +126,7 @@ function ArticlePage() {
 			<ArticleStructuredData article={article} url={currentUrl} />
 			{article.faq && <FaqStructuredData items={article.faq} />}
 
-			<article className="container-narrow py-12">
+			<article className="container-narrow py-8 md:py-12">
 				{/* Breadcrumbs */}
 				<Breadcrumbs
 					items={[

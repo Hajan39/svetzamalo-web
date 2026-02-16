@@ -26,12 +26,12 @@ export function ArticleCard({
 			<Link
 				to="/articles/$slug"
 				params={{ slug: article.slug }}
-				className={`group block border border-border rounded-lg p-8 bg-background hover:border-foreground transition-colors ${className}`}
+				className={`group block border border-border rounded-lg p-5 sm:p-6 md:p-8 bg-background hover:border-foreground transition-colors ${className}`}
 			>
 		<span className="text-xs font-medium text-foreground-muted uppercase tracking-wide">
 			{(article.articleType || "destination-guide").replace("-", " ")}
 		</span>
-				<h3 className="text-2xl font-semibold text-foreground group-hover:text-primary transition-colors mt-2 mb-3">
+				<h3 className="text-xl sm:text-2xl font-semibold text-foreground group-hover:text-primary transition-colors mt-2 mb-3">
 					{article.title}
 				</h3>
 				<p className="text-foreground-secondary line-clamp-2 mb-4">

@@ -22,15 +22,21 @@ export interface StrapiEntity {
 
 /**
  * Strapi Destination entity
- * Minimal schema (from WordPress migration): name, slug, intro, cover
- * Full schema may include: type, continent, currency, heroImage, seo, etc.
+ * Matches Strapi schema: destination/schema.json
  */
 export interface StrapiDestination extends StrapiEntity {
   slug: string
   name: string
-  type?: 'country' | 'region' | 'city' | 'microstate'
-  parentId?: string | null
   continent?: string
+  /** Strapi v5 media field - cover image */
+  cover?: {
+    data?: {
+      url?: string
+      attributes?: { url?: string; alternativeText?: string }
+      alternativeText?: string
+    } | null
+  } | null
+  /** Legacy: heroImage from older schemas */
   heroImage?: {
     data?: {
       id: number
@@ -42,15 +48,26 @@ export interface StrapiDestination extends StrapiEntity {
       }
     } | null
   }
-  /** Strapi v5 media field - cover image */
-  cover?: {
-    data?: {
-      url?: string
-      attributes?: { url?: string; alternativeText?: string }
-      alternativeText?: string
-    } | null
-  } | null
+  /** Main content (Strapi blocks) */
+  intro?: unknown[]
+  /** Content language */
+  contentLang?: 'cs' | 'en'
+  // Travel info fields (from Strapi schema)
   flagEmoji?: string
+  timezone?: string
+  languages?: string[] | null
+  currencyCode?: string
+  currencyName?: string
+  currencySymbol?: string
+  budgetPerDayBudget?: number | null
+  budgetPerDayMidRange?: number | null
+  budgetPerDayLuxury?: number | null
+  bestTimeToVisit?: string
+  visaInfo?: string
+  destinationType?: 'country' | 'region' | 'city' | 'microstate'
+  // Legacy fields (for backwards compat with old frontend types)
+  type?: string
+  parentId?: string | null
   currency?: {
     code: string
     name: string
@@ -62,19 +79,11 @@ export interface StrapiDestination extends StrapiEntity {
       luxury: number
     }
   }
-  languages?: string[]
-  timezone?: string
-  visaInfo?: string
-  bestTimeToVisit?: string
   seo?: {
     metaTitle: string
     metaDescription: string
     keywords: string[]
   }
-  /** Main content from WordPress migration (Strapi blocks) */
-  intro?: unknown[]
-  /** Content language – renamed from 'locale' (reserved in Strapi v5) */
-  contentLang?: 'cs' | 'en'
 }
 
 /**
@@ -156,25 +165,41 @@ const DEFAULT_CURRENCY: Destination['currency'] = {
 
 /**
  * Transform Strapi destination to frontend Destination type
- * Handles minimal schema (from WordPress migration) with defaults
+ * Reads new flat fields (flagEmoji, timezone, currencyCode, ...) from Strapi schema,
+ * falls back to legacy nested objects for backwards compatibility.
  */
 export function transformStrapiDestination(
   strapiDest: StrapiDestination
 ): Destination {
   // Strapi v5: cover is returned directly (not wrapped in .data)
-  // Strapi v4: cover is in .data or .data.attributes
   const cover = strapiDest.cover?.data ?? strapiDest.cover ?? strapiDest.heroImage?.data
   const coverUrl = (cover as { url?: string; attributes?: { url?: string } })?.url
     ?? (cover as { attributes?: { url?: string } })?.attributes?.url
+
+  // Build currency from flat Strapi fields, fall back to legacy nested object
+  const currency: Destination['currency'] = strapiDest.currencyCode
+    ? {
+        code: strapiDest.currencyCode,
+        name: strapiDest.currencyName || strapiDest.currencyCode,
+        symbol: strapiDest.currencySymbol || strapiDest.currencyCode,
+        exchangeRateToUsd: 1,
+        budgetPerDay: {
+          budget: strapiDest.budgetPerDayBudget ?? 50,
+          midRange: strapiDest.budgetPerDayMidRange ?? 100,
+          luxury: strapiDest.budgetPerDayLuxury ?? 200,
+        },
+      }
+    : strapiDest.currency || DEFAULT_CURRENCY
+
   return {
     id: strapiDest.documentId || strapiDest.id.toString(),
     slug: strapiDest.slug,
     name: strapiDest.name,
-    type: (strapiDest.type as Destination['type']) || 'country',
+    type: (strapiDest.destinationType || strapiDest.type as Destination['type']) || 'country',
     parentId: strapiDest.parentId || undefined,
     continent: (strapiDest.continent as Destination['continent']) || 'europe',
     flagEmoji: strapiDest.flagEmoji,
-    currency: strapiDest.currency || DEFAULT_CURRENCY,
+    currency,
     languages: strapiDest.languages || [],
     timezone: strapiDest.timezone,
     visaInfo: strapiDest.visaInfo,
@@ -229,11 +254,14 @@ function getStrapiCoverImage(strapiArticle: StrapiArticle): Article['coverImage'
  * Transform Strapi article to frontend Article type
  */
 export function transformStrapiArticle(strapiArticle: StrapiArticle): Article {
-  // Get destination ID from relation or direct field
+  // Get destination ID from relation (Strapi v5 returns relation directly or in .data)
+  const destRel = strapiArticle.destination as { data?: StrapiDestination | null; documentId?: string; id?: number } | null | undefined
   const destinationId =
     strapiArticle.destinationId ||
-    strapiArticle.destination?.data?.documentId ||
-    strapiArticle.destination?.data?.id?.toString() ||
+    destRel?.data?.documentId ||
+    destRel?.data?.id?.toString() ||
+    destRel?.documentId ||
+    destRel?.id?.toString() ||
     ''
 
   const intro = strapiArticle.intro ?? strapiArticle.excerpt ?? ''

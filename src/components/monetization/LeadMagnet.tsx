@@ -12,15 +12,15 @@ export function LeadMagnet({
   ctaText,
 }: LeadMagnetProps) {
   return (
-    <aside className="border-2 border-primary rounded-xl bg-primary-light p-8 my-12">
+    <aside className="border-2 border-primary rounded-xl bg-primary-light p-5 sm:p-6 md:p-8 my-8 md:my-12">
       <div className="text-center max-w-lg mx-auto">
-        <span className="text-3xl mb-4 block" role="img" aria-hidden="true">
+        <span className="text-2xl sm:text-3xl mb-3 md:mb-4 block" role="img" aria-hidden="true">
           📋
         </span>
-        <h3 className="text-xl font-semibold text-foreground mb-3">
+        <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 md:mb-3">
           {title}
         </h3>
-        <p className="text-foreground-secondary mb-4">
+        <p className="text-sm sm:text-base text-foreground-secondary mb-4">
           {description}
         </p>
         

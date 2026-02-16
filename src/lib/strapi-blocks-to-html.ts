@@ -102,7 +102,7 @@ export function strapiBlocksToHtml(blocks: StrapiBlock[] | unknown): string {
 					const alt = escapeAttr(img.alternativeText ?? '')
 					const widthAttr = img.width ? ` width="${img.width}"` : ''
 					const heightAttr = img.height ? ` height="${img.height}"` : ''
-					let html = `<figure><img src="${src}" alt="${alt}"${widthAttr}${heightAttr} loading="lazy" />`
+					let html = `<figure><img src="${src}" alt="${alt}"${widthAttr}${heightAttr} loading="lazy" style="max-width:100%;height:auto" />`
 					if (b.caption) {
 						html += `<figcaption>${escapeHtml(b.caption)}</figcaption>`
 					}

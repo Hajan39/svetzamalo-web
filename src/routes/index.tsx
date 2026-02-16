@@ -40,17 +40,17 @@ function HomePage() {
 	return (
 		<div>
 			{/* Hero Section */}
-			<section className="py-20 md:py-28">
+			<section className="py-12 sm:py-16 md:py-28">
 				<div className="container-wide text-center">
-					<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
+					<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6 tracking-tight">
 						{t("homePage.heroTitle")}
 					</h1>
-					<p className="text-lg md:text-xl text-foreground-secondary max-w-2xl mx-auto mb-10">
+					<p className="text-base sm:text-lg md:text-xl text-foreground-secondary max-w-2xl mx-auto mb-8 md:mb-10">
 						{t("homePage.heroDescription")}
 					</p>
 					<Link
 						to="/destinations"
-						className="inline-flex items-center gap-2 bg-foreground hover:bg-foreground/90 text-background font-medium px-8 py-4 rounded-lg transition-colors"
+						className="inline-flex items-center gap-2 bg-foreground hover:bg-foreground/90 text-background font-medium px-6 py-3 sm:px-8 sm:py-4 rounded-lg transition-colors text-sm sm:text-base"
 					>
 						{t("homePage.exploreDestinations")}
 					</Link>
@@ -58,9 +58,9 @@ function HomePage() {
 			</section>
 
 			{/* Featured Destinations */}
-			<section className="py-16 border-t border-border">
+			<section className="py-10 md:py-16 border-t border-border">
 				<div className="container-wide">
-					<h2 className="text-2xl font-semibold text-foreground mb-8">
+					<h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-6 md:mb-8">
 						{t("homePage.featuredDestinations")}
 					</h2>
 					{destinationsLoading ? (
@@ -81,9 +81,9 @@ function HomePage() {
 			</section>
 
 			{/* Latest Articles */}
-			<section className="py-16 bg-background-secondary">
+			<section className="py-10 md:py-16 bg-background-secondary">
 				<div className="container-wide">
-					<h2 className="text-2xl font-semibold text-foreground mb-8">
+					<h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-6 md:mb-8">
 						{t("homePage.latestTravelGuides")}
 					</h2>
 					{articlesLoading ? (
@@ -116,12 +116,12 @@ function HomePage() {
 			</section>
 
 			{/* CTA Section */}
-			<section className="py-20">
+			<section className="py-12 md:py-20">
 				<div className="container-narrow text-center">
-					<h2 className="text-2xl font-semibold text-foreground mb-3">
+					<h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-3">
 						{t("homePage.readyToStart")}
 					</h2>
-					<p className="text-foreground-secondary mb-8">
+					<p className="text-sm sm:text-base text-foreground-secondary mb-6 md:mb-8">
 						{t("homePage.newsletterDescription")}
 					</p>
 					<form className="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-md mx-auto">

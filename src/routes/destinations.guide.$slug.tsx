@@ -83,7 +83,7 @@ function DestinationGuidePage() {
 		"https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=600&fit=crop";
 
 	return (
-		<article className="container-narrow py-12">
+		<article className="container-narrow py-8 md:py-12">
 			<Breadcrumbs
 				items={[
 					{ label: "Destinations", href: "/destinations" },
@@ -92,14 +92,15 @@ function DestinationGuidePage() {
 			/>
 
 			<div className="mb-8">
-				<h1 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-4">
+				<h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-4">
 					{destination.name}
 				</h1>
-				<div className="aspect-[21/9] rounded-lg overflow-hidden bg-background-secondary">
+				<div className="aspect-16/10 sm:aspect-video md:aspect-21/9 rounded-lg overflow-hidden bg-background-secondary">
 					<img
 						src={coverImage}
 						alt={destination.name}
 						className="w-full h-full object-cover"
+						loading="lazy"
 					/>
 				</div>
 			</div>

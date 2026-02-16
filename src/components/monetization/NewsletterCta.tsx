@@ -44,11 +44,11 @@ export function NewsletterCta({
   }
 
   return (
-    <div className={`bg-primary-light rounded-xl p-8 text-center ${className}`}>
-      <h3 className="text-2xl font-bold text-foreground mb-4">
+    <div className={`bg-primary-light rounded-xl p-5 sm:p-6 md:p-8 text-center ${className}`}>
+      <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 md:mb-4">
         {title}
       </h3>
-      <p className="text-foreground-secondary mb-8 max-w-md mx-auto">
+      <p className="text-sm sm:text-base text-foreground-secondary mb-6 md:mb-8 max-w-md mx-auto">
         {description}
       </p>
 

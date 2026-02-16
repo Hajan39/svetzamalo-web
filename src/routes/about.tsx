@@ -25,12 +25,12 @@ function AboutPage() {
   const { t } = useTranslation()
   
   return (
-    <div className="container-narrow py-12">
-      <header className="mb-12">
-        <h1 className="text-4xl font-bold text-foreground mb-6">
+    <div className="container-narrow py-8 md:py-12">
+      <header className="mb-8 md:mb-12">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
           {t('about.title')}
         </h1>
-        <p className="text-xl text-foreground-secondary">
+        <p className="text-base sm:text-lg md:text-xl text-foreground-secondary">
           {t('about.subtitle')}
         </p>
       </header>
