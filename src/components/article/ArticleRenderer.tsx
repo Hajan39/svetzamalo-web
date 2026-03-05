@@ -148,10 +148,10 @@ function ImageBlockRenderer({ block }: { block: ContentBlock & { type: 'image' }
  */
 function TipBlockRenderer({ block }: { block: ContentBlock & { type: 'tip' } }) {
   const styles = {
-    tip: 'border-primary/20 bg-primary-light',
-    warning: 'border-warning bg-warning-light',
-    info: 'border-info bg-info-light',
-    budget: 'border-success bg-success-light',
+    tip: 'bg-accent-light',
+    warning: 'bg-warning-light',
+    info: 'bg-info-light',
+    budget: 'bg-success-light',
   }
 
   const icons = {
@@ -162,7 +162,7 @@ function TipBlockRenderer({ block }: { block: ContentBlock & { type: 'tip' } }) 
   }
 
   return (
-    <div className={`border-l-4 p-6 my-6 rounded-r-lg ${styles[block.variant]}`}>
+    <div className={`p-6 my-6 rounded-lg ${styles[block.variant]}`}>
       <div className="flex items-start gap-3">
         <span className="text-xl flex-shrink-0" aria-hidden="true">
           {icons[block.variant]}

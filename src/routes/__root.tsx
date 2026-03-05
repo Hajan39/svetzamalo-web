@@ -36,15 +36,15 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 		meta: [
 			{ charSet: "utf-8" },
 			{ name: "viewport", content: "width=device-width, initial-scale=1" },
-			{ title: "Lowcost Traveling – Budget Travel Guides & Tips" },
+			{ title: "Svět za málo – Průvodce levným cestováním" },
 			{
 				name: "description",
 				content:
-					"Discover budget-friendly travel guides, tips, and destination insights. Plan your next adventure with Lowcost Traveling.",
+					"Praktické průvodce a tipy pro levné cestování. Objevte destinace a prozkoumejte svět za málo.",
 			},
 			// Open Graph defaults
 			{ property: "og:type", content: "website" },
-			{ property: "og:site_name", content: "Lowcost Traveling" },
+			{ property: "og:site_name", content: "Svět za málo" },
 			// Twitter Card defaults
 			{ name: "twitter:card", content: "summary_large_image" },
 		],
@@ -55,7 +55,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 			{ rel: "icon", href: "/favicon.ico", sizes: "32x32" },
 			{ rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
 			{ rel: "manifest", href: "/manifest.json" },
-			// Google Fonts - Inter
+			// Google Fonts: Bebas Neue (nadpisy), Poppins (text), Dancing Script (zvýraznění – střídmě)
 			{ rel: "preconnect", href: "https://fonts.googleapis.com" },
 			{
 				rel: "preconnect",
@@ -64,7 +64,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 			},
 			{
 				rel: "stylesheet",
-				href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
+				href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400;600&family=Outfit:wght@300;400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap",
 			},
 		],
 	}),

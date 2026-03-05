@@ -29,6 +29,8 @@ export {
   fetchArticlesByDestination,
   fetchArticlesByTag,
   fetchLatestArticles,
+  submitBookInterest,
+  createComgateBookPayment,
 } from './api'
 
 // React Query hooks

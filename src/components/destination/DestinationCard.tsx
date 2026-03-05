@@ -1,10 +1,11 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
 import type { Destination } from "@/types";
 
 interface DestinationCardProps {
 	destination: Destination;
 	className?: string;
+	/** Compact: image on top, title + excerpt below, no rounded corners */
+	variant?: "default" | "compact";
 }
 
 // Month abbreviations for compact display
@@ -29,43 +30,57 @@ function formatBestTime(bestTime: string): string {
 		.join(", ");
 }
 
-function getTimeInTimezone(timezoneStr?: string): string {
-	if (!timezoneStr) return "";
-
-	const match = timezoneStr.match(/UTC([+-]\d+)/);
-	if (!match) return "";
-
-	const offset = parseInt(match[1], 10);
-	const now = new Date();
-	const utc = now.getTime() + now.getTimezoneOffset() * 60000;
-	const targetTime = new Date(utc + offset * 3600000);
-
-	return targetTime.toLocaleTimeString("en-US", {
-		hour: "2-digit",
-		minute: "2-digit",
-		hour12: false,
-	});
-}
-
 /** Generic travel placeholder when no cover image exists */
 const FALLBACK_COVER =
 	"https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop";
 
+/** Get first paragraph as plain text from intro HTML; fallback to metaDescription */
+function getFirstParagraphIntro(html: string | undefined, fallback: string): string {
+	if (!html || !html.trim()) return fallback;
+	const firstP = html.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
+	const raw = firstP ? firstP[1] : html;
+	const text = raw.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+	return text || fallback;
+}
+
 export function DestinationCard({
 	destination,
 	className = "",
+	variant = "default",
 }: DestinationCardProps) {
-	const [currentTime, setCurrentTime] = useState("");
+	const coverImage =
+		(destination.heroImage && "url" in destination.heroImage
+			? destination.heroImage.url
+			: destination.heroImage?.src) || FALLBACK_COVER;
+	const fallbackExcerpt = destination.seo?.metaDescription ?? "";
+	const introText = getFirstParagraphIntro(destination.introHtml, fallbackExcerpt);
 
-	useEffect(() => {
-		setCurrentTime(getTimeInTimezone(destination.timezone));
-		const interval = setInterval(() => {
-			setCurrentTime(getTimeInTimezone(destination.timezone));
-		}, 60000);
-		return () => clearInterval(interval);
-	}, [destination.timezone]);
-
-	const coverImage = destination.heroImage?.url || FALLBACK_COVER;
+	if (variant === "compact") {
+		return (
+			<Link
+				to="/destinations/guide/$slug"
+				params={{ slug: destination.slug }}
+				className={`group block ${className}`}
+			>
+				<div className="aspect-4/3 overflow-hidden">
+					<img
+						src={coverImage}
+						alt={destination.name}
+						className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+						loading="lazy"
+					/>
+				</div>
+				<div className="pt-3 sm:pt-4">
+					<h3 className="text-base sm:text-lg font-semibold text-foreground mb-1 sm:mb-2">
+						{destination.name}
+					</h3>
+					<p className="text-foreground-secondary text-sm sm:text-base leading-relaxed">
+						{introText}
+					</p>
+				</div>
+			</Link>
+		);
+	}
 
 	return (
 		<Link
@@ -86,35 +101,22 @@ export function DestinationCard({
 				<div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
 
 				{/* Content overlay */}
-				<div className="absolute inset-0 p-4 sm:p-5 flex flex-col justify-end">
-					{/* Top right - Current time (only shown if timezone exists) */}
-					{currentTime && (
-						<div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/90 backdrop-blur-sm px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full" suppressHydrationWarning>
-							<span className="text-xs sm:text-sm font-medium text-foreground tabular-nums">
-								{currentTime}
-							</span>
-						</div>
-					)}
-
-					{/* Bottom content */}
+				<div className="absolute inset-0 p-2.5 sm:p-4 md:p-5 flex flex-col justify-end">
 					<div>
-						{/* Flag + Name */}
-						<div className="flex items-center gap-2 mb-1">
+						<div className="flex items-center gap-1 sm:gap-2 mb-0.5 sm:mb-1">
 							{destination.flagEmoji && (
-								<span className="text-xl sm:text-2xl">{destination.flagEmoji}</span>
+								<span className="text-base sm:text-xl md:text-2xl">{destination.flagEmoji}</span>
 							)}
-							<h3 className="text-lg sm:text-xl font-semibold text-white line-clamp-1">
+							<h3 className="text-sm sm:text-lg md:text-xl font-semibold text-white line-clamp-1">
 								{destination.name}
 							</h3>
 						</div>
 
-						{/* Continent */}
-						<p className="text-white/70 text-xs sm:text-sm capitalize mb-2 sm:mb-3">
+						<p className="text-white/70 text-[10px] sm:text-xs md:text-sm capitalize mb-1 sm:mb-2 md:mb-3">
 							{destination.continent.replace("-", " ")}
 						</p>
 
-						{/* Language + Best time to visit */}
-						<div className="flex items-center justify-between text-xs sm:text-sm">
+						<div className="flex items-center justify-between text-[10px] sm:text-xs md:text-sm">
 							{destination.languages?.length ? (
 								<span className="text-white/90">{destination.languages[0]}</span>
 							) : null}

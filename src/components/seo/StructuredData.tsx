@@ -16,11 +16,11 @@ export function ArticleStructuredData({ article, url }: ArticleStructuredDataPro
     dateModified: article.updatedAt || article.publishedAt,
     author: {
       '@type': 'Organization',
-      name: 'Lowcost Traveling',
+      name: 'Svět za málo',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Lowcost Traveling',
+      name: 'Svět za málo',
       logo: {
         '@type': 'ImageObject',
         url: '/logo.png',
@@ -104,7 +104,7 @@ export function OrganizationStructuredData() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Lowcost Traveling',
+    name: 'Svět za málo',
     url: 'https://lowcost-traveling.com',
     logo: 'https://lowcost-traveling.com/logo.png',
     description: 'Discover budget travel destinations, practical guides, and insider tips for lowcost traveling around the world.',
@@ -143,7 +143,7 @@ export function WebSiteStructuredData() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Lowcost Traveling',
+    name: 'Svět za málo',
     url: 'https://lowcost-traveling.com',
     description: 'Discover budget travel destinations, practical guides, and insider tips for lowcost traveling around the world.',
     inLanguage: ['en', 'cs', 'es', 'de'],

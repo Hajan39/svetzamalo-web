@@ -9,14 +9,22 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as BookRouteImport } from './routes/book'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DestinationsIndexRouteImport } from './routes/destinations.index'
+import { Route as BookIndexRouteImport } from './routes/book.index'
 import { Route as ArticlesIndexRouteImport } from './routes/articles.index'
 import { Route as DestinationsContinentRouteImport } from './routes/destinations.$continent'
+import { Route as BookSuccessRouteImport } from './routes/book.success'
 import { Route as ArticlesSlugRouteImport } from './routes/articles.$slug'
 import { Route as DestinationsGuideSlugRouteImport } from './routes/destinations.guide.$slug'
 
+const BookRoute = BookRouteImport.update({
+  id: '/book',
+  path: '/book',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -32,6 +40,11 @@ const DestinationsIndexRoute = DestinationsIndexRouteImport.update({
   path: '/destinations/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BookIndexRoute = BookIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BookRoute,
+} as any)
 const ArticlesIndexRoute = ArticlesIndexRouteImport.update({
   id: '/articles/',
   path: '/articles/',
@@ -41,6 +54,11 @@ const DestinationsContinentRoute = DestinationsContinentRouteImport.update({
   id: '/destinations/$continent',
   path: '/destinations/$continent',
   getParentRoute: () => rootRouteImport,
+} as any)
+const BookSuccessRoute = BookSuccessRouteImport.update({
+  id: '/success',
+  path: '/success',
+  getParentRoute: () => BookRoute,
 } as any)
 const ArticlesSlugRoute = ArticlesSlugRouteImport.update({
   id: '/articles/$slug',
@@ -56,9 +74,12 @@ const DestinationsGuideSlugRoute = DestinationsGuideSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/book': typeof BookRouteWithChildren
   '/articles/$slug': typeof ArticlesSlugRoute
+  '/book/success': typeof BookSuccessRoute
   '/destinations/$continent': typeof DestinationsContinentRoute
   '/articles/': typeof ArticlesIndexRoute
+  '/book/': typeof BookIndexRoute
   '/destinations/': typeof DestinationsIndexRoute
   '/destinations/guide/$slug': typeof DestinationsGuideSlugRoute
 }
@@ -66,8 +87,10 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/articles/$slug': typeof ArticlesSlugRoute
+  '/book/success': typeof BookSuccessRoute
   '/destinations/$continent': typeof DestinationsContinentRoute
   '/articles': typeof ArticlesIndexRoute
+  '/book': typeof BookIndexRoute
   '/destinations': typeof DestinationsIndexRoute
   '/destinations/guide/$slug': typeof DestinationsGuideSlugRoute
 }
@@ -75,9 +98,12 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/book': typeof BookRouteWithChildren
   '/articles/$slug': typeof ArticlesSlugRoute
+  '/book/success': typeof BookSuccessRoute
   '/destinations/$continent': typeof DestinationsContinentRoute
   '/articles/': typeof ArticlesIndexRoute
+  '/book/': typeof BookIndexRoute
   '/destinations/': typeof DestinationsIndexRoute
   '/destinations/guide/$slug': typeof DestinationsGuideSlugRoute
 }
@@ -86,9 +112,12 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/book'
     | '/articles/$slug'
+    | '/book/success'
     | '/destinations/$continent'
     | '/articles/'
+    | '/book/'
     | '/destinations/'
     | '/destinations/guide/$slug'
   fileRoutesByTo: FileRoutesByTo
@@ -96,17 +125,22 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/articles/$slug'
+    | '/book/success'
     | '/destinations/$continent'
     | '/articles'
+    | '/book'
     | '/destinations'
     | '/destinations/guide/$slug'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/book'
     | '/articles/$slug'
+    | '/book/success'
     | '/destinations/$continent'
     | '/articles/'
+    | '/book/'
     | '/destinations/'
     | '/destinations/guide/$slug'
   fileRoutesById: FileRoutesById
@@ -114,6 +148,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  BookRoute: typeof BookRouteWithChildren
   ArticlesSlugRoute: typeof ArticlesSlugRoute
   DestinationsContinentRoute: typeof DestinationsContinentRoute
   ArticlesIndexRoute: typeof ArticlesIndexRoute
@@ -123,6 +158,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/book': {
+      id: '/book'
+      path: '/book'
+      fullPath: '/book'
+      preLoaderRoute: typeof BookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -144,6 +186,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DestinationsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/book/': {
+      id: '/book/'
+      path: '/'
+      fullPath: '/book/'
+      preLoaderRoute: typeof BookIndexRouteImport
+      parentRoute: typeof BookRoute
+    }
     '/articles/': {
       id: '/articles/'
       path: '/articles'
@@ -157,6 +206,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/destinations/$continent'
       preLoaderRoute: typeof DestinationsContinentRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/book/success': {
+      id: '/book/success'
+      path: '/success'
+      fullPath: '/book/success'
+      preLoaderRoute: typeof BookSuccessRouteImport
+      parentRoute: typeof BookRoute
     }
     '/articles/$slug': {
       id: '/articles/$slug'
@@ -175,9 +231,22 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface BookRouteChildren {
+  BookSuccessRoute: typeof BookSuccessRoute
+  BookIndexRoute: typeof BookIndexRoute
+}
+
+const BookRouteChildren: BookRouteChildren = {
+  BookSuccessRoute: BookSuccessRoute,
+  BookIndexRoute: BookIndexRoute,
+}
+
+const BookRouteWithChildren = BookRoute._addFileChildren(BookRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  BookRoute: BookRouteWithChildren,
   ArticlesSlugRoute: ArticlesSlugRoute,
   DestinationsContinentRoute: DestinationsContinentRoute,
   ArticlesIndexRoute: ArticlesIndexRoute,

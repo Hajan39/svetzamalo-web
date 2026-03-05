@@ -4,6 +4,7 @@ import { useState } from "react";
 import { CurrencySwitcher } from "@/components/ui/CurrencySwitcher";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { SearchModal } from "@/components/ui/SearchModal";
+import { EXTERNAL_SERVICES } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
 
 /**
@@ -44,6 +45,15 @@ export function Header() {
 			href: "/articles",
 			description: t("header.navArticlesDesc"),
 		},
+		...(EXTERNAL_SERVICES.book.available
+			? [
+					{
+						label: t("header.navBook"),
+						href: "/book",
+						description: t("header.navBookDesc"),
+					},
+				]
+			: []),
 		{
 			label: t("header.navAbout"),
 			href: "/about",
@@ -69,7 +79,7 @@ export function Header() {
 	};
 
 	return (
-		<header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+		<header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-200/80">
 			<div className="container-wide">
 				<div className="flex items-center justify-between h-16 lg:h-20">
 					{/* Logo */}
@@ -79,10 +89,10 @@ export function Header() {
 						onClick={closeMobileMenu}
 					>
 						<span className="hidden sm:inline">
-							lowcost<span className="text-primary">traveling</span>
+							{t("common.siteName")}<span className="text-primary">{t("common.siteNameHighlight")}</span>
 						</span>
 						<span className="sm:hidden">
-							lowcost<span className="text-primary">.</span>
+							{t("common.siteName")}<span className="text-primary">{t("common.siteNameHighlight")}</span>
 						</span>
 					</Link>
 
@@ -130,7 +140,7 @@ export function Header() {
 
 				{/* Mobile Navigation Menu */}
 				{isMobileMenuOpen && (
-					<div className="lg:hidden border-t border-border bg-background/98 backdrop-blur-sm">
+					<div className="lg:hidden border-t border-neutral-200/80 bg-white/98 backdrop-blur-sm">
 						<nav className="container-narrow py-6 space-y-1">
 							{NAV_ITEMS.map((item) => (
 								<Link

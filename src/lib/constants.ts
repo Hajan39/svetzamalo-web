@@ -10,7 +10,7 @@
 // ============================================================================
 
 export const SITE_CONFIG = {
-    name: 'Lowcost Traveling',
+    name: 'Svět za málo',
     description: 'Your ultimate guide to budget travel and adventure',
     url: process.env.VITE_SITE_URL || 'https://lowcost-traveling.com',
     ogImage: '/images/og-default.jpg',
@@ -53,6 +53,20 @@ export const EXTERNAL_SERVICES = {
         url: process.env.VITE_STRAPI_URL || 'http://localhost:1337',
         apiToken: process.env.VITE_STRAPI_API_TOKEN,
         apiUrl: `${process.env.VITE_STRAPI_URL || 'http://localhost:1337'}/api`,
+    },
+
+    // Book (sales page + sell on site)
+    book: {
+        buyUrl: process.env.VITE_BOOK_BUY_URL || '',
+        ebookPdfUrl: process.env.VITE_EBOOK_PDF_URL || '',
+        /** Display price e.g. "299 Kč" or "€9.99" – shown next to Buy button */
+        price: process.env.VITE_BOOK_PRICE || '',
+        /**
+         * Whether to show book-related UI (nav, homepage section, full book page).
+         * Controlled explicitly via VITE_BOOK_AVAILABLE so you can prepare env vars
+         * (price, URLs, Comgate integration) without publishing the book yet.
+         */
+        available: process.env.VITE_BOOK_AVAILABLE === 'true',
     },
 
     // Content Management (legacy/future use)

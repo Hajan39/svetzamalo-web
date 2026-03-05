@@ -282,3 +282,34 @@ export async function fetchLatestArticles(limit = 6): Promise<Article[]> {
 		return [];
 	}
 }
+
+/**
+ * Submit book interest (notify when book is available) or ebook lead (free PDF).
+ * Requires Strapi API token with create permission on book-interest.
+ */
+export async function submitBookInterest(
+	email: string,
+	leadType: "book_notify" | "ebook" = "book_notify",
+): Promise<void> {
+	await strapiClient.post("/book-interests", { email, leadType });
+}
+
+/**
+ * Create Comgate payment for book purchase. Returns redirect URL to send the user to.
+ * Requires Strapi to have COMGATE_MERCHANT_ID and COMGATE_SECRET configured.
+ */
+/** Comgate create-payment returns { redirect } directly (no Strapi data wrapper). */
+export async function createComgateBookPayment(
+	email: string,
+	fullName: string,
+): Promise<string> {
+	const raw = await strapiClient.post(
+		"/book-interests/create-comgate-payment",
+		{ email: email.trim(), fullName: fullName.trim() || "Zákazník" },
+	) as unknown as { redirect?: string };
+	const redirect = raw?.redirect;
+	if (!redirect || typeof redirect !== "string") {
+		throw new Error("Payment gateway did not return redirect URL.");
+	}
+	return redirect;
+}

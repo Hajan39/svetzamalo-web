@@ -36,7 +36,7 @@ export function Footer() {
 							to="/"
 							className="inline-block text-xl font-bold text-foreground hover:text-primary transition-colors tracking-tight mb-4"
 						>
-							lowcost<span className="text-primary">traveling</span>
+							{t("common.siteName")}<span className="text-primary">{t("common.siteNameHighlight")}</span>
 						</Link>
 						<p className="text-foreground-secondary text-sm leading-relaxed max-w-sm mb-6">
 							{t("footer.description")}
@@ -92,7 +92,7 @@ export function Footer() {
 			<div className="border-t border-border">
 				<div className="container-wide py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
 					<p className="text-xs text-foreground-muted" suppressHydrationWarning>
-						© {currentYear} Lowcost Traveling
+						© {currentYear} {t("common.siteNameFull")}
 					</p>
 					<div className="flex gap-6">
 						{LEGAL_LINKS.map((link) => (

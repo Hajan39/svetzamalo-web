@@ -5,45 +5,44 @@
 
 /* ═══════════════════════════════════════════════════════════════
    LOWCOST TRAVELING - Design System
+   Barvy: teplá oranžová, tyrkysová, písek, tmavá šedá
+   Font: Avenir Next (hlavní), systémové fallbacky
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
   /* ─────────────────────────────────────────────────────────────
-     BACKGROUND - Warm neutrals for comfortable reading
+     BACKGROUND - Písek
      ───────────────────────────────────────────────────────────── */
-  --background: #FAFAF8;
-  --background-secondary: #F5F5F3;
-  --background-tertiary: #EEEEE9;
+  --background: #F8EDE3;
+  --background-secondary: #F0E4D8;
+  --background-tertiary: #E8DCCE;
 
   /* ─────────────────────────────────────────────────────────────
-     TEXT - High contrast for readability
+     TEXT - Tmavá šedá
      ───────────────────────────────────────────────────────────── */
-  --foreground: #1A1A1A;
-  --foreground-secondary: #4A4A4A;
-  --foreground-muted: #737373;
+  --foreground: #333333;
+  --foreground-secondary: #555555;
+  --foreground-muted: #777777;
 
   /* ─────────────────────────────────────────────────────────────
-     PRIMARY - Forest Green (nature, adventure, jungles)
+     PRIMARY - Teplá oranžová
      ───────────────────────────────────────────────────────────── */
-  --primary: #52C9A2;
-  --primary-hover: #3DB88A;
-  --primary-light: #D4F4E8;
+  --primary: #E67E22;
+  --primary-hover: #D35400;
+  --primary-light: #FDE5D4;
   --primary-foreground: #FFFFFF;
 
   /* ─────────────────────────────────────────────────────────────
-     SECONDARY - Sage Green (calm, natural destinations)
+     SECONDARY / ACCENT - Tyrkysová
      ───────────────────────────────────────────────────────────── */
-  --secondary: #9BC5A1;
-  --secondary-hover: #7FAF87;
-  --secondary-light: #E8F5EA;
+  --secondary: #1ABC9C;
+  --secondary-hover: #16A085;
+  --secondary-light: #D5F4EF;
   --secondary-foreground: #FFFFFF;
 
-  /* ─────────────────────────────────────────────────────────────
-     ACCENT - Tropical Teal (ocean meets jungle)
-     ───────────────────────────────────────────────────────────── */
-  --accent: #4ECDC4;
-  --accent-hover: #3AB5AD;
-  --accent-light: #D4F4F2;
+  --accent: #1ABC9C;
+  --accent-hover: #16A085;
+  --accent-light: #D5F4EF;
   --accent-foreground: #FFFFFF;
 
   /* ─────────────────────────────────────────────────────────────
@@ -75,10 +74,11 @@
   --info-foreground: #FFFFFF;
 
   /* ─────────────────────────────────────────────────────────────
-     BORDERS
+     BORDERS - bez viditelných ohraničení (transparent)
      ───────────────────────────────────────────────────────────── */
-  --border: #E5E5E0;
-  --border-strong: #D4D4CF;
+  --border: transparent;
+  --border-strong: rgba(51, 51, 51, 0.15);
+  --border-width: 0;
 
   /* ─────────────────────────────────────────────────────────────
      SHADCN COMPATIBILITY
@@ -93,13 +93,18 @@
   --destructive-foreground: var(--danger-foreground);
   --input: var(--border);
   --ring: var(--accent);
-  --radius: 0.5rem;
+  --radius: 0.375rem;
 
   /* ─────────────────────────────────────────────────────────────
-     TYPOGRAPHY
+     TYPOGRAPHY - Avenir Next (hlavní font), systémové fallbacky
+     Avenir Next je na Apple; jinde Segoe UI / system sans
      ───────────────────────────────────────────────────────────── */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans: 'Avenir Next', 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Avenir Next', 'Avenir', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-subheading: var(--font-sans);
+  --font-script: 'Dancing Script', 'Playlist Script', cursive;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-hero: var(--font-heading);
 
   /* ─────────────────────────────────────────────────────────────
      CONTENT WIDTH
@@ -115,6 +120,9 @@
    ═══════════════════════════════════════════════════════════════ */
 
 @theme inline {
+  --font-heading: var(--font-heading);
+  --font-subheading: var(--font-subheading);
+  --font-script: var(--font-script);
   --color-background: var(--background);
   --color-background-secondary: var(--background-secondary);
   --color-background-tertiary: var(--background-tertiary);
@@ -173,6 +181,7 @@
 
 @layer base {
   * {
+    border-width: var(--border-width);
     @apply border-border outline-ring/50;
   }
 
@@ -185,23 +194,31 @@
   body {
     @apply bg-background text-foreground;
     @apply leading-relaxed;
+    letter-spacing: 0.01em;
   }
 
   /* ─────────────────────────────────────────────────────────────
-     TYPOGRAPHY
+     TYPOGRAPHY - Montserrat Bold nadpisy, Playfair podnadpisy
      ───────────────────────────────────────────────────────────── */
 
   h1,
-  h2,
+  h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    @apply tracking-tight text-foreground;
+  }
+
   h3,
   h4,
   h5,
   h6 {
-    @apply font-semibold tracking-tight text-foreground;
+    font-family: var(--font-subheading);
+    font-weight: 600;
+    @apply tracking-tight text-foreground;
   }
 
   h1 {
-    @apply text-4xl md:text-5xl font-bold leading-tight;
+    @apply text-4xl md:text-5xl leading-tight;
   }
 
   h2 {
@@ -269,7 +286,8 @@
 }
 
 .article-content blockquote {
-  @apply border-l-4 border-primary pl-4 md:pl-6 italic text-foreground-muted my-4 md:my-6;
+  border-left-width: 2px;
+  @apply border-l-border-strong pl-4 md:pl-6 italic text-foreground-muted my-6 md:my-8;
 }
 
 .article-content img {
@@ -288,6 +306,11 @@
    UTILITY CLASSES
    ═══════════════════════════════════════════════════════════════ */
 
+/* Hodně bílého prostoru – větší vertikální mezery */
+.section-spacing {
+  @apply py-12 md:py-16 lg:py-20;
+}
+
 .container-narrow {
   max-width: var(--content-width-md);
   @apply mx-auto px-4 sm:px-6 lg:px-8;
@@ -301,4 +324,25 @@
 .container-full {
   max-width: var(--content-width-xl);
   @apply mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   RÁMEČEK TIP – bez okraje, pouze pozadí
+   ───────────────────────────────────────────────────────────── */
+.tip-box {
+  background: var(--accent-light);
+  @apply rounded-lg p-6 my-8;
+}
+
+.tip-box-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  @apply text-foreground text-sm uppercase tracking-wider mb-2;
+}
+
+/* Hero headline – modern display font, airy */
+.hero-headline {
+  font-family: var(--font-hero);
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }

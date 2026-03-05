@@ -59,6 +59,8 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			navDestinationsDesc: "Browse travel destinations",
 			navArticles: "Articles",
 			navArticlesDesc: "Travel tips and guides",
+			navBook: "Book",
+			navBookDesc: "Budget travel book – info & purchase",
 			navAbout: "About",
 			navAboutDesc: "Learn about our mission",
 		},
@@ -107,11 +109,14 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			back: "Back",
 			next: "Next",
 			previous: "Previous",
+			siteName: "World for ",
+			siteNameHighlight: "Less",
+			siteNameFull: "World for Less",
 		},
 
 		// SEO
 		seo: {
-			title: "Lowcost Traveling - Budget Travel Guides & Tips",
+			title: "World for Less – Budget Travel Guides & Tips",
 			description:
 				"Discover budget travel destinations, practical guides, and insider tips for lowcost traveling around the world.",
 			keywords:
@@ -213,6 +218,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 		// Home Page
 		homePage: {
 			heroTitle: "Travel More, Spend Less",
+			heroTagline: "Guides & tips for smart travelers.",
 			heroDescription:
 				"Discover budget-friendly travel guides, insider tips, and destination insights to help you explore the world without breaking the bank.",
 			exploreDestinations: "Explore Destinations",
@@ -230,11 +236,65 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			perDay: "/day",
 			bestTime: "Best",
 			readTravelGuide: "Read travel guide",
+			// New dashboard sections
+			mainHeadline: "Travel More, Spend Less",
+			mainIntro: "Practical guides and tips so you can explore the world on a budget. No fluff—just what you need to plan a great trip.",
+			whatWeBringTitle: "What you get here",
+			whatWeBring1: "Budget-friendly destination guides with real costs",
+			whatWeBring2: "Practical tips: transport, accommodation, food",
+			whatWeBring3: "Honest recommendations without the hype",
+			ebookTitle: "Free e‑book: Budget travel starter pack",
+			ebookDescription: "Get our PDF with 20+ tips for planning your first (or next) budget trip. Enter your email and we’ll send it right away.",
+			ebookPlaceholder: "Your email",
+			ebookCta: "Send me the free e‑book",
+			bookTitle: "The World for Less Handbook",
+			bookDescription: "Our full guide to planning and enjoying budget trips—destinations, saving tips, and real itineraries. Available as e‑book and paperback.",
+			bookCta: "View the book",
+			articlesTitle: "Latest guides & articles",
 		},
 
 		// About Page
+		book: {
+			title: "The Budget Travel Book",
+			subtitle: "Practical guide to traveling the world for less – tips, budgets, and inspiration.",
+			comingSoon: "The book is in preparation. We'll announce it here as soon as it's available.",
+			coverNote: "Cover coming soon",
+			descriptionTitle: "About the book",
+			description:
+				"This book brings together the best of our experience and guides: how to plan a trip on a budget, where to save money without losing the experience, and how to choose destinations that offer the most for your money. Whether you're planning your first long trip or you're a seasoned backpacker, you'll find concrete tips and real numbers.",
+			features:
+				"Real daily budgets by destination | How to find cheap flights and accommodation | When to go and what to avoid | Packing and preparation | Safety and visas in one place",
+			registerTitle: "Get notified when the book is out",
+			registerDesc: "Leave your email and we'll let you know as soon as the book is available and where to buy it.",
+			registerPlaceholder: "Your email",
+			registerButton: "Notify me",
+			registerSuccess: "Thanks! We'll email you when the book is available.",
+			registerError: "Something went wrong. Please try again later.",
+			ebookTitle: "Free e‑book: Budget travel starter",
+			ebookDesc: "Enter your email and get instant access to our PDF with practical tips for your first (or next) budget trip.",
+			ebookPlaceholder: "Your email",
+			ebookButton: "Send me the free e‑book",
+			ebookSuccess: "Thank you! Use the link below to download.",
+			ebookSuccessNoUrl: "Download link will be set up soon. We have saved your email.",
+			ebookDownloadBtn: "Download e‑book (PDF)",
+			buyTitle: "Buy the book",
+			buyNote: "Purchase the e‑book or paperback securely. After payment you'll receive the download link by email.",
+			buyPrice: "Price",
+			buyEmailPlaceholder: "Your email",
+			buyFullNamePlaceholder: "Your name",
+			buyButton: "Buy now",
+			buySubmitButton: "Go to payment",
+			buyError: "Payment could not be started. Try again or use the link below.",
+			buyAlternativeLink: "alternative link",
+			buyUrl: "#",
+			successTitle: "Thank you for your purchase",
+			successMessage: "Your payment was successful. We've sent the download link to your email.",
+			successCheckSpam: "If you don't see it, check your spam folder.",
+			successBackToBook: "Back to the book page",
+		},
+
 		about: {
-			title: "About Lowcost Traveling",
+			title: "About World for Less",
 			subtitle: "Helping budget travelers explore the world since 2020.",
 			missionTitle: "Our Mission",
 			missionText1:
@@ -335,6 +395,8 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			navDestinationsDesc: "Procházet destinace",
 			navArticles: "Články",
 			navArticlesDesc: "Cestovní tipy a průvodci",
+			navBook: "Kniha",
+			navBookDesc: "Kniha o levném cestování – info a nákup",
 			navAbout: "O nás",
 			navAboutDesc: "Zjistit více o naší misi",
 		},
@@ -382,11 +444,14 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			back: "Zpět",
 			next: "Další",
 			previous: "Předchozí",
+			siteName: "Svět za ",
+			siteNameHighlight: "málo",
+			siteNameFull: "Svět za málo",
 		},
 
 		// SEO
 		seo: {
-			title: "Lowcost Traveling - Průvodci levným cestováním",
+			title: "Svět za málo – Průvodce levným cestováním",
 			description:
 				"Objevte destinace pro levné cestování, praktické průvodce a tipy pro cestování po světě.",
 			keywords:
@@ -488,6 +553,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 		// Home Page
 		homePage: {
 			heroTitle: "Cestujte více, utrácejte méně",
+			heroTagline: "Průvodce a tipy pro chytré cestovatele.",
 			heroDescription:
 				"Objevte průvodce levným cestováním, insider tipy a poznatky o destinacích, které vám pomohou prozkoumat svět bez přílišného utrácení.",
 			exploreDestinations: "Prozkoumat destinace",
@@ -505,11 +571,64 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			perDay: "/den",
 			bestTime: "Nejlepší",
 			readTravelGuide: "Číst cestovní průvodce",
+			mainHeadline: "Cestujte více, utrácejte méně",
+			mainIntro: "Praktické průvodce a tipy, díky kterým prozkoumáte svět levně. Žádná omáčka—jen to, co potřebujete na skvělou dovolenou.",
+			whatWeBringTitle: "Co vám nabízíme",
+			whatWeBring1: "Průvodce destinacemi s reálnými náklady",
+			whatWeBring2: "Praktické tipy: doprava, ubytování, jídlo",
+			whatWeBring3: "Upřímná doporučení bez zbytečné reklamy",
+			ebookTitle: "E‑book zdarma: Začínáme s levným cestováním",
+			ebookDescription: "Stáhněte si PDF s 20+ tipy na plánování první (nebo další) levné cesty. Zadejte email a pošleme vám ho okamžitě.",
+			ebookPlaceholder: "Váš email",
+			ebookCta: "Chci e‑book zdarma",
+			bookTitle: "Průvodce Svět za málo",
+			bookDescription: "Kompletní průvodce plánováním a užíváním si levných cest—destinace, tipy na úspory a reálné itineráře. K dispozici jako e‑book i brožovaná kniha.",
+			bookCta: "Zobrazit knihu",
+			articlesTitle: "Nejnovější průvodce a články",
 		},
 
 		// About Page
+		book: {
+			title: "Kniha o levném cestování",
+			subtitle: "Praktický průvodce světem za málo – tipy, rozpočty a inspirace.",
+			comingSoon: "Kniha se připravuje. Ozveme se zde, jakmile bude k dispozici.",
+			coverNote: "Obálka bude doplněna",
+			descriptionTitle: "O knize",
+			description:
+				"Kniha shrnuje to nejlepší z našich zkušeností a průvodců: jak naplánovat cestu na rozpočet, kde ušetřit bez ztráty zážitku a jak vybírat destinace, které nabídnou nejvíc za vaše peníze. Ať plánujete první dálkovou cestu, nebo jste ostřílený backpacker, najdete v ní konkrétní tipy a reálná čísla.",
+			features:
+				"Reálné denní rozpočty podle destinací | Jak na levné letenky a ubytování | Kdy vyrazit a čemu se vyhnout | Balení a příprava | Bezpečnost a víza na jednom místě",
+			registerTitle: "Dejte vědět, až kniha vyjde",
+			registerDesc: "Nechte e-mail a my vás upozorníme, jakmile bude kniha k dispozici a kde ji koupit.",
+			registerPlaceholder: "Váš e-mail",
+			registerButton: "Upozornit mě",
+			registerSuccess: "Díky! Až bude kniha k dispozici, napíšeme vám.",
+			registerError: "Něco se pokazilo. Zkuste to prosím později.",
+			ebookTitle: "Zdarma e‑book: Začátečník levného cestování",
+			ebookDesc: "Zadejte e-mail a získejte okamžitý přístup k našemu PDF s praktickými tipy na první (nebo další) cestu na rozpočet.",
+			ebookPlaceholder: "Váš e-mail",
+			ebookButton: "Pošlete mi zdarma e‑book",
+			ebookSuccess: "Děkujeme! Ke stažení použijte odkaz níže.",
+			ebookSuccessNoUrl: "Odkaz ke stažení bude brzy doplněn. Váš e-mail jsme uložili.",
+			ebookDownloadBtn: "Stáhnout e‑book (PDF)",
+			buyTitle: "Koupit knihu",
+			buyNote: "Knihu si můžete koupit přímo zde – e‑book nebo tištěnou. Po platbě vám pošleme odkaz ke stažení na e‑mail.",
+			buyPrice: "Cena",
+			buyEmailPlaceholder: "Váš e-mail",
+			buyFullNamePlaceholder: "Jméno a příjmení",
+			buyButton: "Koupit knihu",
+			buySubmitButton: "Přejít k platbě",
+			buyError: "Platbu se nepodařilo spustit. Zkuste to znovu nebo použijte odkaz níže.",
+			buyAlternativeLink: "alternativní odkaz",
+			buyUrl: "#",
+			successTitle: "Děkujeme za nákup",
+			successMessage: "Platba proběhla v pořádku. Odkaz ke stažení knihy jsme odeslali na váš e‑mail.",
+			successCheckSpam: "Pokud e‑mail nevidíte, zkontrolujte složku nevyžádané pošty.",
+			successBackToBook: "Zpět na stránku knihy",
+		},
+
 		about: {
-			title: "O Lowcost Traveling",
+			title: "O Svět za málo",
 			subtitle: "Pomáháme levným cestovatelům prozkoumávat svět od roku 2020.",
 			missionTitle: "Naše mise",
 			missionText1:
@@ -611,6 +730,8 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			navDestinationsDesc: "Navegar destinos",
 			navArticles: "Artículos",
 			navArticlesDesc: "Consejos y guías de viaje",
+			navBook: "Libro",
+			navBookDesc: "Libro sobre viajes low cost – información y compra",
 			navAbout: "Acerca de",
 			navAboutDesc: "Conocer nuestra misión",
 		},
@@ -658,11 +779,14 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			back: "Atrás",
 			next: "Siguiente",
 			previous: "Anterior",
+			siteName: "El mundo por ",
+			siteNameHighlight: "poco",
+			siteNameFull: "El mundo por poco",
 		},
 
 		// SEO
 		seo: {
-			title: "Lowcost Traveling - Guías de viaje económicas",
+			title: "El mundo por poco – Guías de viaje económicas",
 			description:
 				"Descubre destinos de viaje económicos, guías prácticas y consejos para viajar por el mundo.",
 			keywords:
@@ -764,6 +888,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 		// Home Page
 		homePage: {
 			heroTitle: "Viaja más, gasta menos",
+			heroTagline: "Guías y consejos para viajeros inteligentes.",
 			heroDescription:
 				"Descubre guías de viaje económicas, consejos de expertos e información sobre destinos para ayudarte a explorar el mundo sin gastar demasiado.",
 			exploreDestinations: "Explorar destinos",
@@ -781,11 +906,64 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			perDay: "/día",
 			bestTime: "Mejor",
 			readTravelGuide: "Leer guía de viaje",
+			mainHeadline: "Viaja más, gasta menos",
+			mainIntro: "Guías prácticas y consejos para explorar el mundo con poco presupuesto. Sin relleno: solo lo que necesitas para planificar un gran viaje.",
+			whatWeBringTitle: "Qué encontrarás aquí",
+			whatWeBring1: "Guías de destinos con costes reales",
+			whatWeBring2: "Consejos prácticos: transporte, alojamiento, comida",
+			whatWeBring3: "Recomendaciones honestas sin publicidad",
+			ebookTitle: "E-book gratis: Iníciate en los viajes low cost",
+			ebookDescription: "Descarga nuestro PDF con más de 20 consejos para planificar tu primer (o próximo) viaje con poco presupuesto. Introduce tu email y te lo enviamos al momento.",
+			ebookPlaceholder: "Tu email",
+			ebookCta: "Quiero el e-book gratis",
+			bookTitle: "Manual El mundo por poco",
+			bookDescription: "Nuestra guía completa para planificar y disfrutar viajes low cost: destinos, trucos de ahorro e itinerarios reales. Disponible en e-book y papel.",
+			bookCta: "Ver el libro",
+			articlesTitle: "Últimas guías y artículos",
 		},
 
 		// About Page
+		book: {
+			title: "El libro de viajes con poco presupuesto",
+			subtitle: "Guía práctica para viajar por el mundo con poco – consejos, presupuestos e inspiración.",
+			comingSoon: "El libro está en preparación. Lo anunciaremos aquí cuando esté disponible.",
+			coverNote: "Portada próximamente",
+			descriptionTitle: "Sobre el libro",
+			description:
+				"Este libro reúne lo mejor de nuestra experiencia y guías: cómo planificar un viaje con poco presupuesto, dónde ahorrar sin perder experiencias y cómo elegir destinos que ofrezcan más por tu dinero. Ya sea tu primer gran viaje o eres un mochilero experimentado, encontrarás consejos concretos y cifras reales.",
+			features:
+				"Presupuestos diarios reales por destino | Cómo encontrar vuelos y alojamiento baratos | Cuándo ir y qué evitar | Equipaje y preparación | Seguridad y visados en un solo lugar",
+			registerTitle: "Avísame cuando salga el libro",
+			registerDesc: "Deja tu email y te avisaremos cuando el libro esté disponible y dónde comprarlo.",
+			registerPlaceholder: "Tu email",
+			registerButton: "Avisarme",
+			registerSuccess: "¡Gracias! Te escribiremos cuando el libro esté disponible.",
+			registerError: "Algo falló. Inténtalo más tarde.",
+			ebookTitle: "E‑book gratis: Inicio al viaje con poco presupuesto",
+			ebookDesc: "Introduce tu email y obtén acceso instantáneo a nuestro PDF con consejos prácticos para tu primer (o próximo) viaje con poco presupuesto.",
+			ebookPlaceholder: "Tu email",
+			ebookButton: "Envíame el e‑book gratis",
+			ebookSuccess: "¡Gracias! Usa el enlace de abajo para descargar.",
+			ebookSuccessNoUrl: "El enlace de descarga se configurará pronto. Hemos guardado tu email.",
+			ebookDownloadBtn: "Descargar e‑book (PDF)",
+			buyTitle: "Comprar el libro",
+			buyNote: "Compra el e‑book o el libro en papel de forma segura. Tras el pago recibirás el enlace de descarga por email.",
+			buyPrice: "Precio",
+			buyEmailPlaceholder: "Tu email",
+			buyFullNamePlaceholder: "Nombre y apellidos",
+			buyButton: "Comprar ahora",
+			buySubmitButton: "Ir al pago",
+			buyError: "No se pudo iniciar el pago. Inténtalo de nuevo o usa el enlace de abajo.",
+			buyAlternativeLink: "enlace alternativo",
+			buyUrl: "#",
+			successTitle: "Gracias por tu compra",
+			successMessage: "El pago se ha realizado correctamente. Hemos enviado el enlace de descarga a tu email.",
+			successCheckSpam: "Si no lo ves, revisa la carpeta de spam.",
+			successBackToBook: "Volver a la página del libro",
+		},
+
 		about: {
-			title: "Acerca de Lowcost Traveling",
+			title: "Acerca de El mundo por poco",
 			subtitle:
 				"Ayudando a viajeros con presupuesto limitado a explorar el mundo desde 2020.",
 			missionTitle: "Nuestra misión",
@@ -891,6 +1069,8 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			navDestinationsDesc: "Reiseziele durchsuchen",
 			navArticles: "Artikel",
 			navArticlesDesc: "Reisetipps und Anleitungen",
+			navBook: "Buch",
+			navBookDesc: "Buch über günstiges Reisen – Infos & Kauf",
 			navAbout: "Über uns",
 			navAboutDesc: "Mehr über unsere Mission erfahren",
 		},
@@ -938,11 +1118,14 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			back: "Zurück",
 			next: "Weiter",
 			previous: "Zurück",
+			siteName: "Welt für ",
+			siteNameHighlight: "wenig",
+			siteNameFull: "Welt für wenig",
 		},
 
 		// SEO
 		seo: {
-			title: "Lowcost Traveling - Günstige Reiseanleitungen",
+			title: "Welt für wenig – Günstige Reiseanleitungen",
 			description:
 				"Entdecken Sie günstige Reiseziele, praktische Anleitungen und Insider-Tipps für günstiges Reisen.",
 			keywords:
@@ -1044,6 +1227,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 		// Home Page
 		homePage: {
 			heroTitle: "Mehr reisen, weniger ausgeben",
+			heroTagline: "Reiseführer & Tipps für clevere Reisende.",
 			heroDescription:
 				"Entdecken Sie günstige Reiseanleitungen, Insider-Tipps und Zielinformationen, die Ihnen helfen, die Welt zu erkunden, ohne die Bank zu sprengen.",
 			exploreDestinations: "Reiseziele erkunden",
@@ -1061,11 +1245,64 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			perDay: "/Tag",
 			bestTime: "Beste",
 			readTravelGuide: "Reiseführer lesen",
+			mainHeadline: "Mehr reisen, weniger ausgeben",
+			mainIntro: "Praktische Reiseführer und Tipps, um die Welt mit kleinem Budget zu entdecken. Ohne Schnickschnack—nur was Sie für eine tolle Reise brauchen.",
+			whatWeBringTitle: "Was Sie hier bekommen",
+			whatWeBring1: "Budget-Reiseführer mit echten Kosten",
+			whatWeBring2: "Praktische Tipps: Transport, Unterkunft, Essen",
+			whatWeBring3: "Ehrliche Empfehlungen ohne Hype",
+			ebookTitle: "Kostenloses E-Book: Budget-Reisen für Einsteiger",
+			ebookDescription: "Hol dir unser PDF mit 20+ Tipps für deine erste (oder nächste) Budget-Reise. E-Mail eintragen, wir schicken es dir sofort.",
+			ebookPlaceholder: "Ihre E-Mail",
+			ebookCta: "Kostenloses E-Book anfordern",
+			bookTitle: "Das Welt für wenig Handbuch",
+			bookDescription: "Unser vollständiger Guide für Planung und Genuss von Budget-Reisen—Ziele, Spartipps und echte Routen. Als E-Book und Taschenbuch.",
+			bookCta: "Buch ansehen",
+			articlesTitle: "Neueste Reiseführer & Artikel",
 		},
 
 		// About Page
+		book: {
+			title: "Das Buch übers günstige Reisen",
+			subtitle: "Praktischer Leitfaden für Reisen mit wenig Budget – Tipps, Kosten und Inspiration.",
+			comingSoon: "Das Buch wird vorbereitet. Wir kündigen es hier an, sobald es verfügbar ist.",
+			coverNote: "Cover in Kürze",
+			descriptionTitle: "Über das Buch",
+			description:
+				"Dieses Buch bündelt das Beste aus unseren Erfahrungen und Guides: wie du eine Reise mit kleinem Budget planst, wo du sparst ohne Erlebnisse zu verlieren und wie du Ziele wählst, die das meiste für dein Geld bieten. Ob erste große Reise oder erfahrener Backpacker – du findest konkrete Tipps und echte Zahlen.",
+			features:
+				"Reale Tagesbudgets nach Destination | Günstige Flüge und Unterkünfte finden | Wann fahren, was vermeiden | Packen und Vorbereitung | Sicherheit und Visum an einem Ort",
+			registerTitle: "Benachrichtigung bei Erscheinen",
+			registerDesc: "Hinterlasse deine E-Mail und wir melden uns, sobald das Buch erhältlich ist und wo du es kaufen kannst.",
+			registerPlaceholder: "Deine E-Mail",
+			registerButton: "Benachrichtigen",
+			registerSuccess: "Danke! Wir mailen dir, sobald das Buch erhältlich ist.",
+			registerError: "Etwas ist schiefgelaufen. Bitte später erneut versuchen.",
+			ebookTitle: "Kostenloses E‑Book: Budget-Reise Einstieg",
+			ebookDesc: "E-Mail eintragen und sofort Zugang zu unserem PDF mit praktischen Tipps für deine erste (oder nächste) Budget-Reise.",
+			ebookPlaceholder: "Deine E-Mail",
+			ebookButton: "Kostenloses E‑Book senden",
+			ebookSuccess: "Danke! Nutze den Link unten zum Download.",
+			ebookSuccessNoUrl: "Der Download-Link wird bald eingerichtet. Wir haben deine E-Mail gespeichert.",
+			ebookDownloadBtn: "E‑Book herunterladen (PDF)",
+			buyTitle: "Buch kaufen",
+			buyNote: "E-Book oder gedrucktes Buch sicher hier kaufen. Nach der Zahlung erhältst du den Download-Link per E-Mail.",
+			buyPrice: "Preis",
+			buyEmailPlaceholder: "Deine E-Mail",
+			buyFullNamePlaceholder: "Vor- und Nachname",
+			buyButton: "Jetzt kaufen",
+			buySubmitButton: "Zur Kasse",
+			buyError: "Zahlung konnte nicht gestartet werden. Bitte erneut versuchen oder den Link unten nutzen.",
+			buyAlternativeLink: "Alternativ-Link",
+			buyUrl: "#",
+			successTitle: "Danke für deinen Kauf",
+			successMessage: "Die Zahlung war erfolgreich. Wir haben dir den Download-Link per E-Mail geschickt.",
+			successCheckSpam: "Falls du die E-Mail nicht siehst, prüfe den Spam-Ordner.",
+			successBackToBook: "Zurück zur Buchseite",
+		},
+
 		about: {
-			title: "Über Lowcost Traveling",
+			title: "Über Welt für wenig",
 			subtitle: "Hilft Budget-Reisenden seit 2020, die Welt zu erkunden.",
 			missionTitle: "Unsere Mission",
 			missionText1:
