@@ -1,11 +1,12 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { ArticleCard } from "@/components/article/ArticleCard";
-import { useLatestArticles } from "@/integrations/strapi";
-import { EXTERNAL_SERVICES } from "@/lib/constants";
+import { submitBookInterest, useLatestArticles } from "@/integrations/strapi";
+import { EXTERNAL_SERVICES, SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
 import type { Article } from "@/types";
+import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 
-const SITE_URL = "https://lowcosttraveling.com";
+const SITE_URL = SITE_CONFIG.url;
 
 /** Placeholder articles when Strapi is empty – for layout preview */
 const MOCK_ARTICLES: Article[] = [
@@ -80,6 +81,10 @@ function HomePage() {
 	const { data: articles = [], isLoading: articlesLoading } =
 		useLatestArticles(6);
 
+	// Ebook signup form state
+	const [ebookEmail, setEbookEmail] = useState("");
+	const [ebookStatus, setEbookStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
 	const HERO_IMAGE =
 		"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format&fit=crop";
 
@@ -138,19 +143,44 @@ function HomePage() {
 					<p className="text-foreground-secondary text-sm sm:text-base mb-5">
 						{t("homePage.ebookDescription")}
 					</p>
-					<form className="flex flex-col gap-3 sm:flex-row sm:max-w-md">
-						<input
-							type="email"
-							placeholder={t("homePage.ebookPlaceholder")}
-							className="w-full min-h-[48px] px-4 py-3 rounded-xl bg-white border border-[#E8E4DF] focus:outline-none focus:ring-2 focus:ring-primary/25 text-foreground placeholder:text-foreground-muted"
-						/>
-						<button
-							type="submit"
-							className="w-full min-h-[48px] sm:w-auto bg-primary hover:bg-primary-hover text-primary-foreground font-medium px-6 py-3 rounded-xl transition-colors whitespace-nowrap"
+					{ebookStatus === "success" ? (
+						<p className="text-success font-medium">{t("homePage.ebookSuccess")}</p>
+					) : (
+						<form
+							className="flex flex-col gap-3 sm:flex-row sm:max-w-md"
+							onSubmit={async (e) => {
+								e.preventDefault();
+								if (!ebookEmail.trim()) return;
+								setEbookStatus("loading");
+								try {
+									await submitBookInterest(ebookEmail.trim(), "ebook");
+									setEbookStatus("success");
+									setEbookEmail("");
+								} catch {
+									setEbookStatus("error");
+								}
+							}}
 						>
-							{t("homePage.ebookCta")}
-						</button>
-					</form>
+							<input
+								type="email"
+								required
+								value={ebookEmail}
+								onChange={(e) => setEbookEmail(e.target.value)}
+								placeholder={t("homePage.ebookPlaceholder")}
+								className="w-full min-h-[48px] px-4 py-3 rounded-xl bg-white border border-[#E8E4DF] focus:outline-none focus:ring-2 focus:ring-primary/25 text-foreground placeholder:text-foreground-muted"
+							/>
+							<button
+								type="submit"
+								disabled={ebookStatus === "loading"}
+								className="w-full min-h-[48px] sm:w-auto bg-primary hover:bg-primary-hover text-primary-foreground font-medium px-6 py-3 rounded-xl transition-colors whitespace-nowrap disabled:opacity-60"
+							>
+								{ebookStatus === "loading" ? t("common.loading") : t("homePage.ebookCta")}
+							</button>
+							{ebookStatus === "error" && (
+								<p className="text-error text-sm w-full">{t("common.errorLoading")}</p>
+							)}
+						</form>
+					)}
 				</section>
 
 				{/* 4. Book for sale – only when we have something to offer */}

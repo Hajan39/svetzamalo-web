@@ -1,37 +1,17 @@
-import { defineConfig } from '@tanstack/react-start/config'
+import { defineConfig } from "@tanstack/react-start/config";
 
 export default defineConfig({
   // Server configuration
   server: {
     // For static export on Hostinger, use static preset
     // Change to 'node-server' for Node.js hosting or 'vercel' for Vercel
-    preset: 'static',
+    preset: "static",
 
     // Pre-render all known routes for static export
     prerender: {
-      // Routes to pre-render (add all destination slugs)
-      routes: [
-        '/',
-        '/destinations',
-        '/articles',
-        '/about',
-        '/articles/dominican-republic',
-        '/articles/vatican',
-        '/articles/thailand',
-        '/articles/portugal',
-        '/articles/morocco',
-        '/articles/bali',
-        '/articles/mauricius',
-        '/articles/francie',
-        '/articles/andorra',
-        '/articles/sri-lanka',
-        '/articles/malajsie-malajsky-poloostrov',
-        '/destinations/guide/mauricius',
-        '/destinations/guide/bali',
-        '/destinations/guide/francie',
-        '/destinations/guide/vatican',
-      ],
-      // Crawl links from pre-rendered pages
+      // Seed routes – crawlLinks will discover the rest from Strapi content
+      routes: ["/", "/destinations", "/articles", "/about"],
+      // Crawl links from pre-rendered pages to discover article/destination slugs
       crawlLinks: true,
     },
   },
@@ -41,4 +21,4 @@ export default defineConfig({
     // Enable React strict mode
     strictMode: true,
   },
-})
+});

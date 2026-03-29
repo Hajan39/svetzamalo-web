@@ -1,31 +1,18 @@
 export {
   AnalyticsProvider,
-  useAnalytics,
-  useAnalyticsConsent,
   getAnalyticsConfig,
   initializeGoogleAnalytics,
   initializePlausible,
-} from './AnalyticsProvider'
-
-export { ScrollDepthTracker, useScrollDepthTracking, useElementVisibilityTracking } from './ScrollDepthTracker'
+  useAnalytics,
+  useAnalyticsConsent,
+} from "./AnalyticsProvider";
 
 export {
   ConsentBanner,
-  useConsentBanner,
   PrivacySettingsModal,
-  hasDoNotTrack,
   anonymizeIp,
   generatePrivacyId,
+  hasDoNotTrack,
   shouldEnableAnalytics,
-} from './ConsentBanner'
-
-export {
-  PerformanceTracker,
-  usePerformanceTracking,
-  measureExecutionTime,
-  measureAsyncExecutionTime,
-  RenderPerformanceTracker,
-  reportWebVitals,
-} from './PerformanceTracker'
-
-export { AnalyticsDebugger, ConditionalAnalyticsDebugger, useAnalyticsTesting } from './AnalyticsDebugger'
+  useConsentBanner,
+} from "./ConsentBanner";

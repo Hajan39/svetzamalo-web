@@ -1,7 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
-const SITE_URL = "https://lowcosttraveling.com";
+const SITE_URL = SITE_CONFIG.url;
 
 export const Route = createFileRoute("/book/success")({
 	head: () => ({

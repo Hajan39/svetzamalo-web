@@ -1,14 +1,15 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArticleHtmlContent } from "@/components/article";
-import { Breadcrumbs } from "@/components/seo";
 import { NewsletterCta } from "@/components/monetization";
+import { Breadcrumbs } from "@/components/seo";
 import {
-	useDestinationBySlug,
 	fetchDestinationBySlug,
 	strapiQueryKeys,
+	useDestinationBySlug,
 } from "@/integrations/strapi";
+import { SITE_CONFIG } from "@/lib/constants";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
-const SITE_URL = "https://lowcosttraveling.com";
+const SITE_URL = SITE_CONFIG.url;
 
 export const Route = createFileRoute("/destinations/guide/$slug")({
 	loader: async ({ params, context }) => {

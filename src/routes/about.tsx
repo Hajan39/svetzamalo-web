@@ -1,7 +1,8 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { SITE_CONFIG } from '@/lib/constants'
 import { useTranslation } from '@/lib/i18n'
+import { createFileRoute } from '@tanstack/react-router'
 
-const SITE_URL = 'https://lowcosttraveling.com'
+const SITE_URL = SITE_CONFIG.url
 
 export const Route = createFileRoute('/about')({
   head: () => ({
@@ -23,7 +24,7 @@ export const Route = createFileRoute('/about')({
 
 function AboutPage() {
   const { t } = useTranslation()
-  
+
   return (
     <div className="container-narrow py-8 md:py-12">
       <header className="mb-8 md:mb-12">
@@ -90,8 +91,8 @@ function AboutPage() {
           </h2>
           <p className="text-foreground-secondary leading-relaxed">
             {t('about.contactText')}{' '}
-            <a href="mailto:hello@lowcosttraveling.com" className="text-primary hover:text-primary-hover">
-              hello@lowcosttraveling.com
+            <a href={`mailto:${SITE_CONFIG.email}`} className="text-primary hover:text-primary-hover">
+              {SITE_CONFIG.email}
             </a>
           </p>
         </section>

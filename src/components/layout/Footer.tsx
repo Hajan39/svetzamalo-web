@@ -1,5 +1,7 @@
-import { Link } from "@tanstack/react-router";
+import { submitBookInterest } from "@/integrations/strapi";
 import { useTranslation } from "@/lib/i18n";
+import { Link } from "@tanstack/react-router";
+import { useState } from "react";
 
 /**
  * Minimal, modern footer with clean design
@@ -13,6 +15,8 @@ interface FooterLink {
 export function Footer() {
 	const { t } = useTranslation();
 	const currentYear = new Date().getFullYear();
+	const [nlEmail, setNlEmail] = useState("");
+	const [nlStatus, setNlStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
 	const MAIN_LINKS: FooterLink[] = [
 		{ label: t("footer.destinations"), href: "/destinations" },
@@ -68,22 +72,49 @@ export function Footer() {
 						<h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
 							{t("footer.newsletterTitle")}
 						</h3>
-						<form className="flex gap-2 mb-4">
-							<input
-								type="email"
-								placeholder={t("footer.newsletterPlaceholder")}
-								className="flex-1 px-4 py-2.5 text-sm bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
-							/>
-							<button
-								type="submit"
-								className="px-5 py-2.5 bg-primary hover:bg-primary-hover text-primary-foreground text-sm font-medium rounded-lg transition-colors"
+						{nlStatus === "success" ? (
+							<p className="text-success text-sm font-medium">{t("footer.newsletterSuccess")}</p>
+						) : (
+							<form
+								className="flex gap-2 mb-4"
+								onSubmit={async (e) => {
+									e.preventDefault();
+									if (!nlEmail.trim()) return;
+									setNlStatus("loading");
+									try {
+										await submitBookInterest(nlEmail.trim(), "newsletter");
+										setNlStatus("success");
+										setNlEmail("");
+									} catch {
+										setNlStatus("error");
+									}
+								}}
 							>
-								{t("footer.newsletterButton")}
-							</button>
-						</form>
-						<p className="text-xs text-foreground-muted">
-							{t("homePage.noSpam")}
-						</p>
+								<input
+									type="email"
+									required
+									value={nlEmail}
+									onChange={(e) => setNlEmail(e.target.value)}
+									placeholder={t("footer.newsletterPlaceholder")}
+									className="flex-1 px-4 py-2.5 text-sm bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
+								/>
+								<button
+									type="submit"
+									disabled={nlStatus === "loading"}
+									className="px-5 py-2.5 bg-primary hover:bg-primary-hover text-primary-foreground text-sm font-medium rounded-lg transition-colors disabled:opacity-60"
+								>
+									{nlStatus === "loading" ? "..." : t("footer.newsletterButton")}
+								</button>
+							</form>
+						)}
+						{nlStatus === "error" && (
+							<p className="text-error text-xs mt-1">{t("common.errorLoading")}</p>
+						)}
+						{nlStatus !== "success" && (
+							<p className="text-xs text-foreground-muted">
+								{t("homePage.noSpam")}
+							</p>
+						)}
 					</div>
 				</div>
 			</div>

@@ -1,13 +1,13 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import { useTranslation } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { submitBookInterest, createComgateBookPayment } from "@/integrations/strapi";
-import { EXTERNAL_SERVICES } from "@/lib/constants";
+import { createComgateBookPayment, submitBookInterest } from "@/integrations/strapi";
+import { EXTERNAL_SERVICES, SITE_CONFIG } from "@/lib/constants";
+import { useTranslation } from "@/lib/i18n";
+import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 
-const SITE_URL = "https://lowcosttraveling.com";
+const SITE_URL = SITE_CONFIG.url;
 
 export const Route = createFileRoute("/book/")({
 	head: () => ({

@@ -1,10 +1,11 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { useMemo } from "react";
 import { DestinationCard } from "@/components/destination";
 import { useDestinations } from "@/integrations/strapi";
+import { SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
+import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { useMemo } from "react";
 
-const SITE_URL = "https://lowcosttraveling.com";
+const SITE_URL = SITE_CONFIG.url;
 
 type ContinentKey =
 	| "europe"

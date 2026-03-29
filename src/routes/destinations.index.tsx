@@ -1,11 +1,12 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
 import { DestinationCard } from "@/components/destination";
 import { useDestinations } from "@/integrations/strapi";
+import { SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useMemo, useState } from "react";
 
-const SITE_URL = "https://lowcosttraveling.com";
+const SITE_URL = SITE_CONFIG.url;
 
 type ContinentKey =
 	| "europe"
@@ -86,79 +87,79 @@ function DestinationsPage() {
 				</div>
 			)}
 			{!isLoading && (
-			<>
-			<header className="mb-8 md:mb-12">
-				<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
-					<h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground tracking-tight">
-						{t("destinationsPage.title")}
-					</h1>
-					<div className="flex items-center gap-1 bg-background-secondary rounded-lg p-1">
-						<button
-							type="button"
-							onClick={() => setViewMode("all")}
-							className={cn(
-								"px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
-								viewMode === "all"
-									? "bg-background text-foreground shadow-sm"
-									: "text-foreground-secondary hover:text-foreground",
-							)}
-						>
-							{t("destinationsPage.viewAll")}
-						</button>
-						<button
-							type="button"
-							onClick={() => setViewMode("byContinent")}
-							className={cn(
-								"px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
-								viewMode === "byContinent"
-									? "bg-background text-foreground shadow-sm"
-									: "text-foreground-secondary hover:text-foreground",
-							)}
-						>
-							{t("destinationsPage.viewByContinent")}
-						</button>
-					</div>
-				</div>
-				<p className="text-base md:text-lg text-foreground-secondary max-w-2xl">
-					{t("destinationsPage.description")}
-				</p>
-			</header>
-
-			{viewMode === "all" ? (
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-					{destinations.map((destination) => (
-						<DestinationCard key={destination.id} destination={destination} />
-					))}
-				</div>
-			) : (
-				<div className="space-y-16">
-					{continentsWithDestinations.map((continent) => (
-						<section key={continent} id={continent}>
-							<Link
-								to="/destinations/$continent"
-								params={{ continent }}
-								className="group inline-block mb-6"
-							>
-								<h2 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
-									{getContinentLabel(continent)}
-									<span className="ml-2 text-foreground-secondary group-hover:text-primary transition-colors">
-										→
-									</span>
-								</h2>
-							</Link>
-							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-								{destinationsByContinent[continent].map((destination) => (
-									<DestinationCard
-										key={destination.id}
-										destination={destination}
-									/>
-								))}
+				<>
+					<header className="mb-8 md:mb-12">
+						<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+							<h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+								{t("destinationsPage.title")}
+							</h1>
+							<div className="flex items-center gap-1 bg-background-secondary rounded-lg p-1">
+								<button
+									type="button"
+									onClick={() => setViewMode("all")}
+									className={cn(
+										"px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
+										viewMode === "all"
+											? "bg-background text-foreground shadow-sm"
+											: "text-foreground-secondary hover:text-foreground",
+									)}
+								>
+									{t("destinationsPage.viewAll")}
+								</button>
+								<button
+									type="button"
+									onClick={() => setViewMode("byContinent")}
+									className={cn(
+										"px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
+										viewMode === "byContinent"
+											? "bg-background text-foreground shadow-sm"
+											: "text-foreground-secondary hover:text-foreground",
+									)}
+								>
+									{t("destinationsPage.viewByContinent")}
+								</button>
 							</div>
-						</section>
-					))}
-				</div>
-			)}
-			</>
+						</div>
+						<p className="text-base md:text-lg text-foreground-secondary max-w-2xl">
+							{t("destinationsPage.description")}
+						</p>
+					</header>
+
+					{viewMode === "all" ? (
+						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+							{destinations.map((destination) => (
+								<DestinationCard key={destination.id} destination={destination} />
+							))}
+						</div>
+					) : (
+						<div className="space-y-16">
+							{continentsWithDestinations.map((continent) => (
+								<section key={continent} id={continent}>
+									<Link
+										to="/destinations/$continent"
+										params={{ continent }}
+										className="group inline-block mb-6"
+									>
+										<h2 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+											{getContinentLabel(continent)}
+											<span className="ml-2 text-foreground-secondary group-hover:text-primary transition-colors">
+												→
+											</span>
+										</h2>
+									</Link>
+									<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+										{destinationsByContinent[continent].map((destination) => (
+											<DestinationCard
+												key={destination.id}
+												destination={destination}
+											/>
+										))}
+									</div>
+								</section>
+							))}
+						</div>
+					)}
+				</>
 			)}
 		</div>
 	);

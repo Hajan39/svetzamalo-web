@@ -1,10 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArticleCard } from "@/components/article";
-import { fetchArticles, useArticles } from "@/integrations/strapi";
+import { useArticles } from "@/integrations/strapi";
+import { SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
 import type { Article } from "@/types";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
-const SITE_URL = "https://lowcosttraveling.com";
+const SITE_URL = SITE_CONFIG.url;
 
 export const Route = createFileRoute("/articles/")({
 	loader: async ({ context }) => {

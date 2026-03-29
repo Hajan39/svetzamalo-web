@@ -1,3 +1,6 @@
+import { Footer, Header, SkipLink } from "@/components/layout";
+import { CurrencyProvider } from "@/lib/currency";
+import { getLocaleForIntl, i18n, useTranslation } from "@/lib/i18n";
 import type { QueryClient } from "@tanstack/react-query";
 import {
 	createRootRouteWithContext,
@@ -7,9 +10,6 @@ import {
 	Scripts,
 } from "@tanstack/react-router";
 import { useEffect } from "react";
-import { Footer, Header, SkipLink } from "@/components/layout";
-import { CurrencyProvider } from "@/lib/currency";
-import { getLocaleForIntl, i18n, useTranslation } from "@/lib/i18n";
 import appCss from "../styles.css?url";
 
 /**
@@ -82,7 +82,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
  */
 function RootDocument({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang="en" className="scroll-smooth">
+		<html lang="cs" className="scroll-smooth">
 			<head>
 				<HeadContent />
 			</head>
@@ -176,6 +176,12 @@ function NotFoundPage() {
 					className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-primary-foreground font-medium px-6 py-3 rounded-lg transition-colors"
 				>
 					← {t("notFound.backToHome")}
+				</Link>
+				<Link
+					to="/articles"
+					className="inline-flex items-center justify-center gap-2 border border-border hover:border-primary text-foreground font-medium px-6 py-3 rounded-lg transition-colors"
+				>
+					{t("nav.articles")}
 				</Link>
 				<Link
 					to="/destinations"

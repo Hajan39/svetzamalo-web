@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import {
 	ArticleFaq,
 	ArticleHero,
@@ -17,8 +16,10 @@ import {
 	FaqStructuredData,
 } from "@/components/seo/StructuredData";
 import { useArticleBySlug, useDestinationById } from "@/integrations/strapi";
+import { SITE_CONFIG } from "@/lib/constants";
+import { createFileRoute } from "@tanstack/react-router";
 
-const SITE_URL = "https://lowcosttraveling.com";
+const SITE_URL = SITE_CONFIG.url;
 
 export const Route = createFileRoute("/articles/$slug")({
 	loader: async ({ params, context }) => {
@@ -118,7 +119,7 @@ function ArticlePage() {
 		);
 	}
 
-	const currentUrl = `https://lowcosttraveling.com/articles/${slug}`;
+	const currentUrl = `${SITE_URL}/articles/${slug}`;
 
 	return (
 		<>
@@ -133,11 +134,11 @@ function ArticlePage() {
 						{ label: "Destinations", href: "/destinations" },
 						...(destination
 							? [
-									{
-										label: destination.name,
-										href: `/destinations/guide/${destination.slug}`,
-									},
-								]
+								{
+									label: destination.name,
+									href: `/destinations/guide/${destination.slug}`,
+								},
+							]
 							: []),
 						{ label: article.title },
 					]}
