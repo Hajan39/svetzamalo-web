@@ -1,44 +1,7 @@
-name: Deploy to Vercel
-
-on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        cache: 'npm'
-
-    - name: Install dependencies
-      run: npm ci
-
-    - name: Run linting
-      run: npm run lint
-
-    - name: Run type checking
-      run: npm run check
-
-    - name: Run tests
-      run: npm run test
-
-    - name: Build application
-      run: npm run build
-
-    - name: Deploy to Vercel
-      uses: amondnet/vercel-action@v25
-      with:
-        vercel-token: ${{ secrets.VERCEL_TOKEN }}
-        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-        vercel-args: '--prod'
+# =============================================================================
+# DEPRECATED – This project uses GitLab CI/CD, not GitHub Actions.
+# See .gitlab-ci.yml in the repository root for the active pipeline.
+# =============================================================================
+#
+# This file is kept only to avoid confusion. It has no effect since this
+# repository is hosted on GitLab (gitlab.com:hajan39/lowcost-traveling-web).
