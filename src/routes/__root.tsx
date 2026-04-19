@@ -6,7 +6,7 @@ import {
 	Outlet,
 	Scripts,
 } from "@tanstack/react-router";
-import { useEffect } from "react";
+import { useEffect, useId } from "react";
 import { Footer, Header, SkipLink } from "@/components/layout";
 import { CurrencyProvider } from "@/lib/currency";
 import { getLocaleForIntl, i18n, useTranslation } from "@/lib/i18n";
@@ -42,9 +42,21 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 				content:
 					"Praktické průvodce a tipy pro levné cestování. Objevte destinace a prozkoumejte svět za málo.",
 			},
+			{
+				name: "robots",
+				content:
+					"index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+			},
+			{
+				name: "googlebot",
+				content:
+					"index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+			},
+			{ name: "theme-color", content: "#0F6CBD" },
 			// Open Graph defaults
 			{ property: "og:type", content: "website" },
 			{ property: "og:site_name", content: "Svět za málo" },
+			{ property: "og:locale", content: "cs_CZ" },
 			// Twitter Card defaults
 			{ name: "twitter:card", content: "summary_large_image" },
 		],
@@ -55,7 +67,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 			{ rel: "icon", href: "/favicon.ico", sizes: "32x32" },
 			{ rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
 			{ rel: "manifest", href: "/manifest.json" },
-			// Google Fonts: Poppins headings, Inter body
+			// Google Fonts: Poppins headings, Inter body, Playpen Sans brand wordmark
 			{ rel: "preconnect", href: "https://fonts.googleapis.com" },
 			{
 				rel: "preconnect",
@@ -64,7 +76,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 			},
 			{
 				rel: "stylesheet",
-				href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap",
+				href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playpen+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap",
 			},
 		],
 	}),
@@ -103,6 +115,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
  * This layout wraps ALL pages in the application.
  */
 function RootLayout() {
+	const mainContentId = useId();
+
 	// Load locale from localStorage on mount and update HTML lang attribute
 	useEffect(() => {
 		if (typeof window === "undefined") return;
@@ -125,14 +139,13 @@ function RootLayout() {
 	return (
 		<CurrencyProvider>
 			{/* Accessibility: Skip to main content link */}
-			<SkipLink />
+			<SkipLink targetId={mainContentId} />
 
 			{/* Site Header */}
 			<Header />
 
 			{/* Main Content Area */}
-			{/* biome-ignore lint/correctness/useUniqueElementIds: Single instance in layout */}
-			<main id="main-content" className="flex-1">
+			<main id={mainContentId} className="flex-1">
 				<Outlet />
 			</main>
 

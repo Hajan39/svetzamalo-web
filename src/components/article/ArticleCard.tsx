@@ -1,8 +1,6 @@
 import { Link } from "@tanstack/react-router";
+import { SmartImage } from "@/components/ui/SmartImage";
 import type { Article } from "@/types";
-
-const FALLBACK_COVER =
-	"https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop";
 
 interface ArticleCardProps {
 	article: Article;
@@ -22,7 +20,7 @@ export function ArticleCard({
 				year: "numeric",
 			})
 		: "";
-	const coverSrc = article.coverImage?.src || FALLBACK_COVER;
+	const coverSrc = article.coverImage?.src;
 	const coverAlt = article.coverImage?.alt || article.title;
 
 	if (variant === "block") {
@@ -32,12 +30,13 @@ export function ArticleCard({
 				params={{ slug: article.slug }}
 				className={`group brand-card brand-card-hover block overflow-hidden ${className}`}
 			>
-				<div className="aspect-4/3 overflow-hidden rounded-t-[16px] bg-background-secondary">
-					<img
+				<div className="aspect-4/3 overflow-hidden rounded-t-2xl bg-background-secondary">
+					<SmartImage
 						src={coverSrc}
 						alt={coverAlt}
 						className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
 						loading="lazy"
+						fallbackLabel={article.title}
 					/>
 				</div>
 				<div className="px-5 pb-5 pt-4 sm:px-6 sm:pb-6">

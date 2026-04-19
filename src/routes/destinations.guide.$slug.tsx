@@ -2,11 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArticleHtmlContent } from "@/components/article";
 import { NewsletterCta } from "@/components/monetization";
 import { Breadcrumbs } from "@/components/seo";
+import { SmartImage } from "@/components/ui/SmartImage";
+import { fetchDestinationBySlug } from "@/integrations/strapi/api";
 import {
-	fetchDestinationBySlug,
 	strapiQueryKeys,
 	useDestinationBySlug,
-} from "@/integrations/strapi";
+} from "@/integrations/strapi/hooks";
 import { SITE_CONFIG } from "@/lib/constants";
 
 const SITE_URL = SITE_CONFIG.url;
@@ -26,7 +27,12 @@ export const Route = createFileRoute("/destinations/guide/$slug")({
 	head: ({ loaderData, params }) => {
 		const dest = loaderData?.destination;
 		if (!dest) {
-			return { meta: [{ title: "Destination Not Found | Lowcost Traveling" }] };
+			return {
+				meta: [
+					{ title: "Destination Not Found | Lowcost Traveling" },
+					{ name: "robots", content: "noindex,follow" },
+				],
+			};
 		}
 		const canonicalUrl = `${SITE_URL}/destinations/guide/${params.slug}`;
 		return {
@@ -83,9 +89,7 @@ function DestinationGuidePage() {
 		);
 	}
 
-	const coverImage =
-		destination.heroImage?.url ||
-		"https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=600&fit=crop";
+	const coverImage = destination.heroImage?.url;
 
 	return (
 		<article className="container-narrow py-8 md:py-12">
@@ -101,11 +105,12 @@ function DestinationGuidePage() {
 					{destination.name}
 				</h1>
 				<div className="aspect-16/10 sm:aspect-video md:aspect-21/9 rounded-lg overflow-hidden bg-background-secondary">
-					<img
+					<SmartImage
 						src={coverImage}
 						alt={destination.name}
 						className="w-full h-full object-cover"
 						loading="lazy"
+						fallbackLabel={destination.name}
 					/>
 				</div>
 			</div>

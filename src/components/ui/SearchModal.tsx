@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
-import { useArticles, useDestinations } from "@/integrations/strapi";
+import { useEffect, useRef, useState } from "react";
+import { useArticles, useDestinations } from "@/integrations/strapi/hooks";
 import type { Article, Destination } from "@/types";
 
 interface SearchResult {
@@ -19,6 +19,7 @@ interface SearchModalProps {
 export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 	const [query, setQuery] = useState("");
 	const [results, setResults] = useState<SearchResult[]>([]);
+	const searchInputRef = useRef<HTMLInputElement | null>(null);
 
 	// Load data from Strapi
 	const { data: articles = [] } = useArticles();
@@ -28,7 +29,13 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 		if (!isOpen) {
 			setQuery("");
 			setResults([]);
+			return;
 		}
+
+		// Focus the modal input when opened so search is one-step interaction.
+		requestAnimationFrame(() => {
+			searchInputRef.current?.focus();
+		});
 	}, [isOpen]);
 
 	useEffect(() => {
@@ -108,6 +115,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 							/>
 						</svg>
 						<input
+							ref={searchInputRef}
 							type="text"
 							placeholder="Search articles, destinations..."
 							value={query}
@@ -150,7 +158,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 								className="block p-4 border-b border-border last:border-b-0 hover:bg-background-secondary transition-colors"
 							>
 								<div className="flex items-start gap-3">
-									<div className="flex-shrink-0 mt-1">
+									<div className="shrink-0 mt-1">
 										{result.type === "article" ? (
 											<svg
 												className="w-5 h-5 text-primary"

@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { Menu, Search, X } from "lucide-react";
 import { useState } from "react";
 import { BrandLogo } from "@/components/layout/BrandLogo";
-import { CurrencySwitcher } from "@/components/ui/CurrencySwitcher";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { SearchModal } from "@/components/ui/SearchModal";
 import { EXTERNAL_SERVICES } from "@/lib/constants";
@@ -110,21 +109,29 @@ export function Header() {
 
 					{/* Right side actions */}
 					<div className="flex items-center gap-2 rounded-full border border-border bg-background px-2 py-1 shadow-sm">
-						{/* Currency switcher */}
-						<div className="hidden sm:block">
-							<CurrencySwitcher />
-						</div>
-
 						{/* Language switcher */}
 						<div className="hidden sm:block">
 							<LanguageSwitcher variant="dropdown" showFlags={true} />
 						</div>
 
-						{/* Search button */}
+						{/* Desktop search input trigger (focus opens modal) */}
+						<label className="hidden md:block">
+							<span className="sr-only">{t("header.search")}</span>
+							<input
+								type="search"
+								readOnly
+								onFocus={openSearch}
+								onClick={openSearch}
+								placeholder={t("header.searchPlaceholder")}
+								className="w-44 rounded-full border border-border bg-background-secondary px-3 py-1.5 text-sm text-foreground-secondary outline-none transition-colors hover:border-primary/40 focus:border-primary/60"
+							/>
+						</label>
+
+						{/* Search button (mobile + fallback) */}
 						<button
 							type="button"
 							onClick={openSearch}
-							className="rounded-full p-2 text-foreground-secondary transition-colors hover:bg-primary-light/70 hover:text-primary"
+							className="rounded-full p-2 text-foreground-secondary transition-colors hover:bg-primary-light/70 hover:text-primary md:hidden"
 							aria-label="Open search"
 						>
 							<Search className="w-5 h-5" />
@@ -169,12 +176,6 @@ export function Header() {
 
 							{/* Mobile language switcher */}
 							<div className="border-t border-border pt-4 mt-4 space-y-3">
-								<div className="px-4 flex items-center justify-between">
-									<span className="text-sm text-foreground-muted">
-										Currency
-									</span>
-									<CurrencySwitcher />
-								</div>
 								<div className="px-4 flex items-center justify-between">
 									<span className="text-sm text-foreground-muted">
 										Language

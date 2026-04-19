@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { SmartImage } from "@/components/ui/SmartImage";
 import type { Destination } from "@/types";
 
 interface DestinationCardProps {
@@ -39,10 +40,6 @@ function formatBestTime(bestTime: string): string {
 		.join(", ");
 }
 
-/** Generic travel placeholder when no cover image exists */
-const FALLBACK_COVER =
-	"https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop";
-
 /** Get first paragraph as plain text from intro HTML; fallback to metaDescription */
 function getFirstParagraphIntro(
 	html: string | undefined,
@@ -66,7 +63,7 @@ export function DestinationCard({
 	const coverImage =
 		(destination.heroImage && "url" in destination.heroImage
 			? destination.heroImage.url
-			: destination.heroImage?.src) || FALLBACK_COVER;
+			: destination.heroImage?.src) || undefined;
 	const fallbackExcerpt = destination.seo?.metaDescription ?? "";
 	const introText = getFirstParagraphIntro(
 		destination.introHtml,
@@ -81,11 +78,12 @@ export function DestinationCard({
 				className={`group block ${className}`}
 			>
 				<div className="aspect-4/3 overflow-hidden">
-					<img
+					<SmartImage
 						src={coverImage}
 						alt={destination.name}
 						className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
 						loading="lazy"
+						fallbackLabel={destination.name}
 					/>
 				</div>
 				<div className="pt-3 sm:pt-4">
@@ -108,11 +106,12 @@ export function DestinationCard({
 		>
 			{/* Cover Image */}
 			<div className="aspect-4/3 relative overflow-hidden">
-				<img
+				<SmartImage
 					src={coverImage}
 					alt={destination.name}
 					className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
 					loading="lazy"
+					fallbackLabel={destination.name}
 				/>
 
 				{/* Gradient overlay */}

@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { DestinationCard } from "@/components/destination";
-import { useDestinations } from "@/integrations/strapi";
+import { useDestinations } from "@/integrations/strapi/hooks";
 import { SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -125,7 +125,16 @@ function DestinationsPage() {
 						</p>
 					</header>
 
-					{viewMode === "all" ? (
+						{destinations.length === 0 ? (
+							<div className="rounded-xl border border-border bg-background-secondary px-6 py-12 text-center">
+								<h2 className="text-xl font-semibold text-foreground">
+									No destinations available yet
+								</h2>
+								<p className="mt-2 text-foreground-secondary">
+									Strapi is reachable, but there are no published destinations for this view yet.
+								</p>
+							</div>
+						) : viewMode === "all" ? (
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 							{destinations.map((destination) => (
 								<DestinationCard

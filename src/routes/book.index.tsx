@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import {
 	createComgateBookPayment,
 	submitBookInterest,
-} from "@/integrations/strapi";
+} from "@/integrations/strapi/api";
 import { EXTERNAL_SERVICES, SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
 

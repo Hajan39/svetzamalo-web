@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { BrandLogo } from "@/components/layout/BrandLogo";
-import { submitBookInterest } from "@/integrations/strapi";
+import { submitBookInterest } from "@/integrations/strapi/api";
 import { useTranslation } from "@/lib/i18n";
 
 /**

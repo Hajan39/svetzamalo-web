@@ -16,7 +16,15 @@ import {
 	ArticleStructuredData,
 	FaqStructuredData,
 } from "@/components/seo/StructuredData";
-import { useArticleBySlug, useDestinationById } from "@/integrations/strapi";
+import {
+	fetchArticleBySlug,
+	fetchDestinationById,
+} from "@/integrations/strapi/api";
+import {
+	strapiQueryKeys,
+	useArticleBySlug,
+	useDestinationById,
+} from "@/integrations/strapi/hooks";
 import { SITE_CONFIG } from "@/lib/constants";
 
 const SITE_URL = SITE_CONFIG.url;
@@ -24,8 +32,6 @@ const SITE_URL = SITE_CONFIG.url;
 export const Route = createFileRoute("/articles/$slug")({
 	loader: async ({ params, context }) => {
 		const { queryClient } = context;
-		const { fetchArticleBySlug, fetchDestinationById, strapiQueryKeys } =
-			await import("@/integrations/strapi");
 
 		const article = await fetchArticleBySlug(params.slug);
 		if (article) {
@@ -45,7 +51,10 @@ export const Route = createFileRoute("/articles/$slug")({
 		const article = loaderData?.article;
 		if (!article) {
 			return {
-				meta: [{ title: "Article Not Found | Lowcost Traveling" }],
+				meta: [
+					{ title: "Article Not Found | Lowcost Traveling" },
+					{ name: "robots", content: "noindex,follow" },
+				],
 			};
 		}
 		const canonicalUrl = `${SITE_URL}/articles/${params.slug}`;
@@ -116,6 +125,12 @@ function ArticlePage() {
 				{error && (
 					<p className="text-error mt-2 text-sm">Error: {error.message}</p>
 				)}
+				<a
+					href="/articles"
+					className="mt-4 inline-block text-primary hover:underline"
+				>
+					← Back to Articles
+				</a>
 			</div>
 		);
 	}

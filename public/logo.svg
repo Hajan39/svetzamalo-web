@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" role="img" aria-label="Cestuj za malo logo">
   <rect width="760" height="280" fill="#ffffff" />
-  <ellipse cx="104" cy="238" rx="52" ry="12" fill="#5EA83F" opacity="0.95" />
+  <ellipse cx="104" cy="238" rx="52" ry="12" fill="#0F6CBD" opacity="0.9" />
   <path d="M104 34C65 34 33 65.6 33 104.8C33 157.7 91.3 212 104 223.2C116.7 212 175 157.7 175 104.8C175 65.6 143 34 104 34Z" fill="#ffffff" stroke="#1F2937" stroke-width="9" stroke-linejoin="round" />
-  <path d="M77 187H131L104 219L77 187Z" fill="#8CC63E" stroke="#8CC63E" stroke-width="4" stroke-linejoin="round" />
-  <path d="M66 93C66 82.5 74.5 74 85 74H123C133.5 74 142 82.5 142 93V152H66V93Z" fill="#4F8F3A" />
-  <path d="M67 94H51C45.5 94 41 98.5 41 104V143C41 148.5 45.5 153 51 153H67V94Z" fill="#8CC63E" />
-  <path d="M157 94H141V153H157C162.5 153 167 148.5 167 143V104C167 98.5 162.5 94 157 94Z" fill="#8CC63E" />
+  <path d="M77 187H131L104 219L77 187Z" fill="#4FA8F7" stroke="#4FA8F7" stroke-width="4" stroke-linejoin="round" />
+  <path d="M66 93C66 82.5 74.5 74 85 74H123C133.5 74 142 82.5 142 93V152H66V93Z" fill="#0F6CBD" />
+  <path d="M67 94H51C45.5 94 41 98.5 41 104V143C41 148.5 45.5 153 51 153H67V94Z" fill="#4FA8F7" />
+  <path d="M157 94H141V153H157C162.5 153 167 148.5 167 143V104C167 98.5 162.5 94 157 94Z" fill="#4FA8F7" />
   <rect x="72" y="68" width="64" height="90" rx="12" fill="#ffffff" stroke="#1F2937" stroke-width="8" />
-  <path d="M84 87H124V114H84V87Z" fill="#8CC63E" />
+  <path d="M84 87H124V114H84V87Z" fill="#4FA8F7" />
   <path d="M90 121H118" stroke="#1F2937" stroke-width="8" stroke-linecap="round" />
   <path d="M104 121V138" stroke="#1F2937" stroke-width="8" stroke-linecap="round" />
   <path d="M94 53C94 46.2 98.5 40.8 104 40.8C109.5 40.8 114 46.2 114 53V68H94V53Z" fill="#ffffff" stroke="#1F2937" stroke-width="8" />
@@ -15,5 +15,5 @@
   <path d="M142 93V152" stroke="#1F2937" stroke-width="8" stroke-linecap="round" />
   <path d="M66 152H142" stroke="#1F2937" stroke-width="8" stroke-linecap="round" />
   <text x="232" y="123" fill="#1F2937" font-family="Poppins, Arial, sans-serif" font-size="78" font-weight="700" letter-spacing="-3">Cestuj</text>
-  <text x="232" y="198" fill="#5EA83F" font-family="Poppins, Arial, sans-serif" font-size="84" font-weight="700" letter-spacing="-4">za málo</text>
+  <text x="232" y="198" fill="#0F6CBD" font-family="Poppins, Arial, sans-serif" font-size="84" font-weight="700" letter-spacing="-4">za málo</text>
 </svg>

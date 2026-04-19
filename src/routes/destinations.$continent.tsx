@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useMemo } from "react";
 import { DestinationCard } from "@/components/destination";
-import { useDestinations } from "@/integrations/strapi";
+import { useDestinations } from "@/integrations/strapi/hooks";
 import { SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
 

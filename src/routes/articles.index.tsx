@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArticleCard } from "@/components/article";
-import { useArticles } from "@/integrations/strapi";
+import { fetchArticleBySlug, fetchArticles } from "@/integrations/strapi/api";
+import { strapiQueryKeys, useArticles } from "@/integrations/strapi/hooks";
 import { SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
 import type { Article } from "@/types";
@@ -10,9 +11,6 @@ const SITE_URL = SITE_CONFIG.url;
 export const Route = createFileRoute("/articles/")({
 	loader: async ({ context }) => {
 		const { queryClient } = context;
-		const { fetchArticleBySlug, fetchArticles, strapiQueryKeys } = await import(
-			"@/integrations/strapi"
-		);
 
 		const articles = await fetchArticles();
 		queryClient.setQueryData(strapiQueryKeys.articles.lists(), articles);

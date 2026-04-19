@@ -47,9 +47,6 @@ export default defineConfig(({ mode }) => {
 			"import.meta.env.VITE_STRAPI_API_TOKEN": JSON.stringify(
 				env.VITE_STRAPI_API_TOKEN || "",
 			),
-			"import.meta.env.VITE_USE_STATIC_CONTENT": JSON.stringify(
-				env.VITE_USE_STATIC_CONTENT || "",
-			),
 		},
 	};
 });

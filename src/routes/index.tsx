@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArticleCard } from "@/components/article/ArticleCard";
-import { submitBookInterest, useLatestArticles } from "@/integrations/strapi";
+import { submitBookInterest } from "@/integrations/strapi/api";
+import { useLatestArticles } from "@/integrations/strapi/hooks";
 import { EXTERNAL_SERVICES, SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
 import type { Article } from "@/types";

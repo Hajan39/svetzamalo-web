@@ -1,3 +1,5 @@
+import { SmartImage } from "@/components/ui/SmartImage";
+
 interface ArticleHeroProps {
 	title: string;
 	intro: string;
@@ -29,11 +31,12 @@ export function ArticleHero({
 			{/* Cover Image with Title */}
 			{coverImage ? (
 				<div className="relative w-full h-56 sm:h-72 md:h-112 mb-6 md:mb-8 rounded-xl overflow-hidden">
-					<img
+					<SmartImage
 						src={coverImage.src}
 						alt={coverImage.alt}
 						className="w-full h-full object-cover"
 						loading="lazy"
+						fallbackLabel={title}
 					/>
 					<div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent" />
 					<div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-10">
