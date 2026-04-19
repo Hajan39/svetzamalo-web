@@ -1,11 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArticleHtmlContent } from "@/components/article";
+import { ArticleCard, ArticleHtmlContent } from "@/components/article";
 import { EmptyState, SmartImage } from "@/components/common";
 import { NewsletterCta } from "@/components/monetization";
 import { Breadcrumbs } from "@/components/seo";
 import { fetchDestinationBySlug } from "@/integrations/strapi/api";
 import {
 	strapiQueryKeys,
+	useArticlesByDestination,
 	useDestinationBySlug,
 } from "@/integrations/strapi/hooks";
 import { SITE_CONFIG } from "@/lib/constants";
@@ -63,6 +64,7 @@ function DestinationGuidePage() {
 	} = useDestinationBySlug(slug, {
 		initialData: loaderDest || undefined,
 	});
+	const { data: relatedArticles = [] } = useArticlesByDestination(slug);
 
 	if (isLoading) {
 		return (
@@ -121,6 +123,19 @@ function DestinationGuidePage() {
 				<div className="space-y-8">
 					<ArticleHtmlContent html={destination.introHtml} />
 				</div>
+			)}
+
+			{relatedArticles.length > 0 && (
+				<section className="mt-12 md:mt-16">
+					<h2 className="mb-6 text-2xl font-bold text-foreground">
+						{t("header.navArticles")}
+					</h2>
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+						{relatedArticles.map((article) => (
+							<ArticleCard key={article.id} article={article} />
+						))}
+					</div>
+				</section>
 			)}
 
 			<div className="mt-16">
