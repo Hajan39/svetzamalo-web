@@ -1,7 +1,0 @@
-# =============================================================================
-# DEPRECATED – This project uses GitLab CI/CD, not GitHub Actions.
-# See .gitlab-ci.yml in the repository root for the active pipeline.
-# =============================================================================
-#
-# This file is kept only to avoid confusion. It has no effect since this
-# repository is hosted on GitLab (gitlab.com:hajan39/lowcost-traveling-web).

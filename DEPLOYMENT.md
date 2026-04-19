@@ -199,10 +199,10 @@ VITE_SITE_URL=http://localhost:4173 npm run dev
 
 ### Vercel Preview Deployments
 
-Every git push creates a preview deployment:
-- `main` branch → Production
-- Other branches → Preview URLs
-- Pull requests → Automatic previews
+When the GitHub repository is connected to Vercel, deployments are created automatically:
+- pushes to the production branch configured in Vercel → Production
+- pushes to other branches → Preview URLs
+- pull requests on GitHub → Automatic preview deployments
 
 ## 🚨 Troubleshooting
 

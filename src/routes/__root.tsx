@@ -11,6 +11,7 @@ import { Footer, Header, SkipLink } from "@/components/layout";
 import { CurrencyProvider } from "@/lib/currency";
 import { getLocaleForIntl, i18n, useTranslation } from "@/lib/i18n";
 import appCss from "../styles.css?url";
+import { Analytics } from "@vercel/analytics/next";
 
 /**
  * Router Context
@@ -98,7 +99,10 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			<head>
 				<HeadContent />
 			</head>
-			<body className="min-h-screen flex flex-col antialiased">{children}</body>
+			<body className="min-h-screen flex flex-col antialiased">
+				{children}
+				<Analytics />
+			</body>
 		</html>
 	);
 }
