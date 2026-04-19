@@ -21,6 +21,23 @@ export interface StrapiEntity {
 }
 
 /**
+ * Site Config – Strapi Single Type `site-config`.
+ * Served to the frontend so feature flags / book settings
+ * can be managed from the admin panel instead of env vars.
+ */
+export interface StrapiSiteConfig extends StrapiEntity {
+	siteName?: string;
+	siteDescription?: string;
+	siteEmail?: string;
+	bookAvailable?: boolean;
+	bookBuyUrl?: string;
+	bookPrice?: string;
+	ebookPdfUrl?: string;
+	enableAds?: boolean;
+	enableAnalytics?: boolean;
+}
+
+/**
  * Strapi Destination entity
  * Matches Strapi schema: destination/schema.json
  */

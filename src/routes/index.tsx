@@ -6,6 +6,7 @@ import { submitBookInterest } from "@/integrations/strapi/api";
 import { useLatestArticles } from "@/integrations/strapi/hooks";
 import { EXTERNAL_SERVICES, SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
+import { useSiteSettings } from "@/hooks/useSiteSettings";
 
 const SITE_URL = SITE_CONFIG.url;
 
@@ -40,6 +41,7 @@ const BOOK_URL = "#"; // Replace with real product/landing URL
 
 function HomePage() {
 	const { t } = useTranslation();
+	const { book } = useSiteSettings();
 	const { data: articles = [], isLoading: articlesLoading } =
 		useLatestArticles(6);
 
@@ -207,7 +209,7 @@ function HomePage() {
 				</section>
 
 				{/* 4. Book for sale – only when we have something to offer */}
-				{EXTERNAL_SERVICES.book.available && (
+				{book.available && (
 					<section className="pb-10 md:pb-14">
 						<div className="brand-card flex flex-col items-start gap-5 px-6 py-7 sm:flex-row sm:gap-6 sm:px-8 sm:py-8">
 							<div className="aspect-3/4 w-full shrink-0 overflow-hidden rounded-2xl bg-background-secondary sm:w-36">

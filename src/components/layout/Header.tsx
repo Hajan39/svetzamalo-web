@@ -4,7 +4,7 @@ import { useState } from "react";
 import { BrandLogo } from "@/components/layout/BrandLogo";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { SearchModal } from "@/components/ui/SearchModal";
-import { EXTERNAL_SERVICES } from "@/lib/constants";
+import { useSiteSettings } from "@/hooks/useSiteSettings";
 import { useTranslation } from "@/lib/i18n";
 
 /**
@@ -26,6 +26,7 @@ interface NavItem {
 
 export function Header() {
 	const { t } = useTranslation();
+	const { book } = useSiteSettings();
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [isSearchOpen, setIsSearchOpen] = useState(false);
 
@@ -45,7 +46,7 @@ export function Header() {
 			href: "/articles",
 			description: t("header.navArticlesDesc"),
 		},
-		...(EXTERNAL_SERVICES.book.available
+		...(book.available
 			? [
 					{
 						label: t("header.navBook"),

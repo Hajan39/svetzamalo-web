@@ -7,6 +7,7 @@
 import { type UseQueryOptions, useQuery } from "@tanstack/react-query";
 import { useLocale } from "@/lib/i18n";
 import type { Article, Destination } from "@/types";
+import type { StrapiSiteConfig } from "./types";
 import {
 	fetchArticleById,
 	fetchArticleBySlug,
@@ -18,6 +19,7 @@ import {
 	fetchDestinations,
 	fetchDestinationsByContinent,
 	fetchLatestArticles,
+	fetchSiteConfig,
 	toContentLocale,
 } from "./api";
 
@@ -26,6 +28,8 @@ import {
  */
 export const strapiQueryKeys = {
 	all: ["strapi"] as const,
+	siteConfig: (locale?: "cs" | "en") =>
+		["strapi", "site-config", "locale", locale] as const,
 	destinations: {
 		all: ["strapi", "destinations"] as const,
 		lists: () => [...strapiQueryKeys.destinations.all, "list"] as const,
@@ -34,10 +38,16 @@ export const strapiQueryKeys = {
 		listWithLocale: (locale?: "cs" | "en") =>
 			[...strapiQueryKeys.destinations.lists(), "locale", locale] as const,
 		details: () => [...strapiQueryKeys.destinations.all, "detail"] as const,
-		detail: (id: string | number) =>
-			[...strapiQueryKeys.destinations.details(), id] as const,
-		bySlug: (slug: string) =>
-			[...strapiQueryKeys.destinations.details(), "slug", slug] as const,
+		detail: (id: string | number, locale?: "cs" | "en") =>
+			[...strapiQueryKeys.destinations.details(), id, "locale", locale] as const,
+		bySlug: (slug: string, locale?: "cs" | "en") =>
+			[
+				...strapiQueryKeys.destinations.details(),
+				"slug",
+				slug,
+				"locale",
+				locale,
+			] as const,
 		byContinent: (continent: string, locale?: "cs" | "en") =>
 			[
 				...strapiQueryKeys.destinations.lists(),
@@ -50,23 +60,31 @@ export const strapiQueryKeys = {
 	articles: {
 		all: ["strapi", "articles"] as const,
 		lists: () => [...strapiQueryKeys.articles.all, "list"] as const,
-		list: (filters?: unknown) =>
-			[...strapiQueryKeys.articles.lists(), filters] as const,
+		list: (filters?: unknown, locale?: "cs" | "en") =>
+			[...strapiQueryKeys.articles.lists(), filters, "locale", locale] as const,
 		details: () => [...strapiQueryKeys.articles.all, "detail"] as const,
-		detail: (id: string | number) =>
-			[...strapiQueryKeys.articles.details(), id] as const,
-		bySlug: (slug: string) =>
-			[...strapiQueryKeys.articles.details(), "slug", slug] as const,
-		byDestination: (destinationId: string) =>
+		detail: (id: string | number, locale?: "cs" | "en") =>
+			[...strapiQueryKeys.articles.details(), id, "locale", locale] as const,
+		bySlug: (slug: string, locale?: "cs" | "en") =>
+			[
+				...strapiQueryKeys.articles.details(),
+				"slug",
+				slug,
+				"locale",
+				locale,
+			] as const,
+		byDestination: (destinationId: string, locale?: "cs" | "en") =>
 			[
 				...strapiQueryKeys.articles.lists(),
 				"destination",
 				destinationId,
+				"locale",
+				locale,
 			] as const,
-		byTag: (tag: string) =>
-			[...strapiQueryKeys.articles.lists(), "tag", tag] as const,
-		latest: (limit?: number) =>
-			[...strapiQueryKeys.articles.lists(), "latest", limit] as const,
+		byTag: (tag: string, locale?: "cs" | "en") =>
+			[...strapiQueryKeys.articles.lists(), "tag", tag, "locale", locale] as const,
+		latest: (limit?: number, locale?: "cs" | "en") =>
+			[...strapiQueryKeys.articles.lists(), "latest", limit, "locale", locale] as const,
 	},
 } as const;
 
@@ -96,9 +114,11 @@ export function useDestinationBySlug(
 		"queryKey" | "queryFn"
 	>,
 ) {
+	const appLocale = useLocale();
+	const contentLocale = toContentLocale(appLocale);
 	return useQuery({
-		queryKey: strapiQueryKeys.destinations.bySlug(slug),
-		queryFn: () => fetchDestinationBySlug(slug),
+		queryKey: strapiQueryKeys.destinations.bySlug(slug, contentLocale),
+		queryFn: () => fetchDestinationBySlug(slug, contentLocale),
 		enabled: !!slug,
 		staleTime: 1000 * 60 * 5, // 5 minutes
 		...options,
@@ -115,9 +135,11 @@ export function useDestinationById(
 		"queryKey" | "queryFn"
 	>,
 ) {
+	const appLocale = useLocale();
+	const contentLocale = toContentLocale(appLocale);
 	return useQuery({
-		queryKey: strapiQueryKeys.destinations.detail(id),
-		queryFn: () => fetchDestinationById(id),
+		queryKey: strapiQueryKeys.destinations.detail(id, contentLocale),
+		queryFn: () => fetchDestinationById(id, contentLocale),
 		enabled: !!id,
 		staleTime: 1000 * 60 * 5, // 5 minutes
 		...options,
@@ -151,9 +173,11 @@ export function useDestinationsByContinent(
 export function useArticles(
 	options?: Omit<UseQueryOptions<Article[], Error>, "queryKey" | "queryFn">,
 ) {
+	const appLocale = useLocale();
+	const contentLocale = toContentLocale(appLocale);
 	return useQuery({
-		queryKey: strapiQueryKeys.articles.lists(),
-		queryFn: () => fetchArticles(),
+		queryKey: strapiQueryKeys.articles.list(undefined, contentLocale),
+		queryFn: () => fetchArticles(contentLocale),
 		staleTime: 1000 * 60 * 5, // 5 minutes
 		...options,
 	});
@@ -169,9 +193,11 @@ export function useArticleBySlug(
 		"queryKey" | "queryFn"
 	>,
 ) {
+	const appLocale = useLocale();
+	const contentLocale = toContentLocale(appLocale);
 	return useQuery({
-		queryKey: strapiQueryKeys.articles.bySlug(slug),
-		queryFn: () => fetchArticleBySlug(slug),
+		queryKey: strapiQueryKeys.articles.bySlug(slug, contentLocale),
+		queryFn: () => fetchArticleBySlug(slug, contentLocale),
 		enabled: !!slug,
 		staleTime: 1000 * 60 * 5, // 5 minutes
 		...options,
@@ -188,9 +214,11 @@ export function useArticleById(
 		"queryKey" | "queryFn"
 	>,
 ) {
+	const appLocale = useLocale();
+	const contentLocale = toContentLocale(appLocale);
 	return useQuery({
-		queryKey: strapiQueryKeys.articles.detail(id),
-		queryFn: () => fetchArticleById(id),
+		queryKey: strapiQueryKeys.articles.detail(id, contentLocale),
+		queryFn: () => fetchArticleById(id, contentLocale),
 		enabled: !!id,
 		staleTime: 1000 * 60 * 5, // 5 minutes
 		...options,
@@ -204,9 +232,14 @@ export function useArticlesByDestination(
 	destinationId: string,
 	options?: Omit<UseQueryOptions<Article[], Error>, "queryKey" | "queryFn">,
 ) {
+	const appLocale = useLocale();
+	const contentLocale = toContentLocale(appLocale);
 	return useQuery({
-		queryKey: strapiQueryKeys.articles.byDestination(destinationId),
-		queryFn: () => fetchArticlesByDestination(destinationId),
+		queryKey: strapiQueryKeys.articles.byDestination(
+			destinationId,
+			contentLocale,
+		),
+		queryFn: () => fetchArticlesByDestination(destinationId, contentLocale),
 		enabled: !!destinationId,
 		staleTime: 1000 * 60 * 5, // 5 minutes
 		...options,
@@ -220,9 +253,11 @@ export function useArticlesByTag(
 	tag: string,
 	options?: Omit<UseQueryOptions<Article[], Error>, "queryKey" | "queryFn">,
 ) {
+	const appLocale = useLocale();
+	const contentLocale = toContentLocale(appLocale);
 	return useQuery({
-		queryKey: strapiQueryKeys.articles.byTag(tag),
-		queryFn: () => fetchArticlesByTag(tag),
+		queryKey: strapiQueryKeys.articles.byTag(tag, contentLocale),
+		queryFn: () => fetchArticlesByTag(tag, contentLocale),
 		enabled: !!tag,
 		staleTime: 1000 * 60 * 5, // 5 minutes
 		...options,
@@ -236,10 +271,35 @@ export function useLatestArticles(
 	limit = 6,
 	options?: Omit<UseQueryOptions<Article[], Error>, "queryKey" | "queryFn">,
 ) {
+	const appLocale = useLocale();
+	const contentLocale = toContentLocale(appLocale);
 	return useQuery({
-		queryKey: strapiQueryKeys.articles.latest(limit),
-		queryFn: () => fetchLatestArticles(limit),
+		queryKey: strapiQueryKeys.articles.latest(limit, contentLocale),
+		queryFn: () => fetchLatestArticles(limit, contentLocale),
 		staleTime: 1000 * 60 * 5, // 5 minutes
+		...options,
+	});
+}
+
+/**
+ * Hook to fetch site configuration from Strapi.
+ * Data is cached for 10 minutes and treated as non-critical
+ * (returns null on error so the app can fall back to env vars).
+ */
+export function useSiteConfig(
+	options?: Omit<
+		UseQueryOptions<StrapiSiteConfig | null, Error>,
+		"queryKey" | "queryFn"
+	>,
+) {
+	const appLocale = useLocale();
+	const contentLocale = toContentLocale(appLocale);
+	return useQuery({
+		queryKey: strapiQueryKeys.siteConfig(contentLocale),
+		queryFn: () => fetchSiteConfig(contentLocale),
+		staleTime: 1000 * 60 * 10, // 10 minutes
+		gcTime: 1000 * 60 * 30, // keep in cache 30 min
+		retry: 1,
 		...options,
 	});
 }

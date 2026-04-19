@@ -10,6 +10,7 @@ import {
 import { resendEbookEmail } from "@/integrations/ebookApi";
 import { EXTERNAL_SERVICES, SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
+import { useSiteSettings } from "@/hooks/useSiteSettings";
 
 const SITE_URL = SITE_CONFIG.url;
 
@@ -36,6 +37,7 @@ export const Route = createFileRoute("/book/")({
 
 function BookPage() {
 	const { t } = useTranslation();
+	const { book } = useSiteSettings();
 	const [email, setEmail] = useState("");
 	const [status, setStatus] = useState<
 		"idle" | "loading" | "success" | "error"
@@ -71,12 +73,11 @@ function BookPage() {
 		}
 	};
 
-	const bookAvailable = EXTERNAL_SERVICES.book.available;
-	const buyUrl =
-		EXTERNAL_SERVICES.book.buyUrl || (t("book.buyUrl") as string) || "#";
+	const bookAvailable = book.available;
+	const buyUrl = book.buyUrl || (t("book.buyUrl") as string) || "#";
 	const uid = useId();
-	const ebookPdfUrl = EXTERNAL_SERVICES.book.ebookPdfUrl || "";
-	const bookPrice = EXTERNAL_SERVICES.book.price || "";
+	const ebookPdfUrl = book.ebookPdfUrl || "";
+	const bookPrice = book.price || "";
 
 	const [buyEmail, setBuyEmail] = useState("");
 	const [buyFullName, setBuyFullName] = useState("");
@@ -372,7 +373,9 @@ function ResendEbookSection() {
 	const { t } = useTranslation();
 	const uid = useId();
 	const [email, setEmail] = useState("");
-	const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+	const [status, setStatus] = useState<
+		"idle" | "loading" | "success" | "error"
+	>("idle");
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
@@ -418,8 +421,14 @@ function ResendEbookSection() {
 								required
 							/>
 						</div>
-						<Button type="submit" disabled={status === "loading"} variant="outline">
-							{status === "loading" ? t("common.loading") : t("ebook.resendBtn")}
+						<Button
+							type="submit"
+							disabled={status === "loading"}
+							variant="outline"
+						>
+							{status === "loading"
+								? t("common.loading")
+								: t("ebook.resendBtn")}
 						</Button>
 					</form>
 				)}

@@ -10,6 +10,7 @@ import { strapiClient } from "./client";
 import {
 	type StrapiArticle,
 	type StrapiDestination,
+	type StrapiSiteConfig,
 	transformStrapiArticle,
 	transformStrapiDestination,
 } from "./types";
@@ -25,26 +26,13 @@ export function toContentLocale(appLocale: string): "cs" | "en" {
 export async function fetchDestinations(
 	contentLocale?: "cs" | "en",
 ): Promise<Destination[]> {
-	// contentLang: cs = Czech, en = English. Entries with null are treated as Czech (schema default).
-	const localeFilter =
-		contentLocale === "en"
-			? { contentLang: { $eq: "en" } }
-			: contentLocale === "cs"
-				? {
-						$or: [
-							{ contentLang: { $eq: "cs" } },
-							{ contentLang: { $null: true } },
-						],
-					}
-				: undefined;
-
 	try {
 		const response = await strapiClient.get<StrapiDestination[]>(
-			"/destinations",
+			"/countries/public",
 			{
 				populate: "*",
 				sort: ["name:asc"],
-				...(localeFilter ? { filters: localeFilter } : {}),
+				...(contentLocale ? { locale: contentLocale } : {}),
 			},
 		);
 
@@ -63,13 +51,15 @@ export async function fetchDestinations(
  */
 export async function fetchDestinationBySlug(
 	slug: string,
+	contentLocale?: "cs" | "en",
 ): Promise<Destination | null> {
 	try {
 		const response = await strapiClient.get<StrapiDestination>(
-			`/destinations`,
+			`/countries/public`,
 			{
 				filters: { slug: { $eq: slug } },
 				populate: "*",
+				...(contentLocale ? { locale: contentLocale } : {}),
 			},
 		);
 
@@ -92,12 +82,14 @@ export async function fetchDestinationBySlug(
  */
 export async function fetchDestinationById(
 	id: string | number,
+	contentLocale?: "cs" | "en",
 ): Promise<Destination | null> {
 	try {
 		const response = await strapiClient.get<StrapiDestination>(
-			`/destinations/${id}`,
+			`/countries/public/${id}`,
 			{
 				populate: "*",
+				...(contentLocale ? { locale: contentLocale } : {}),
 			},
 		);
 
@@ -116,23 +108,15 @@ export async function fetchDestinationsByContinent(
 	contentLocale?: "cs" | "en",
 ): Promise<Destination[]> {
 	const filters: Record<string, unknown> = { continent: { $eq: continent } };
-	// contentLang: cs = Czech, en = English. Null entries are treated as Czech (schema default).
-	if (contentLocale === "en") {
-		filters.contentLang = { $eq: "en" };
-	} else if (contentLocale === "cs") {
-		filters.$or = [
-			{ contentLang: { $eq: "cs" } },
-			{ contentLang: { $null: true } },
-		];
-	}
 
 	try {
 		const response = await strapiClient.get<StrapiDestination[]>(
-			"/destinations",
+			"/countries/public",
 			{
 				filters,
 				populate: "*",
 				sort: ["name:asc"],
+				...(contentLocale ? { locale: contentLocale } : {}),
 			},
 		);
 
@@ -149,11 +133,14 @@ export async function fetchDestinationsByContinent(
 /**
  * Fetch all articles
  */
-export async function fetchArticles(): Promise<Article[]> {
+export async function fetchArticles(
+	contentLocale?: "cs" | "en",
+): Promise<Article[]> {
 	try {
-		const response = await strapiClient.get<StrapiArticle[]>("/articles", {
+		const response = await strapiClient.get<StrapiArticle[]>("/articles/public", {
 			populate: ["cover", "country"],
 			sort: ["publishedAt:desc"],
+			...(contentLocale ? { locale: contentLocale } : {}),
 		});
 
 		const articles = Array.isArray(response.data)
@@ -171,11 +158,13 @@ export async function fetchArticles(): Promise<Article[]> {
  */
 export async function fetchArticleBySlug(
 	slug: string,
+	contentLocale?: "cs" | "en",
 ): Promise<Article | null> {
 	try {
-		const response = await strapiClient.get<StrapiArticle>("/articles", {
+		const response = await strapiClient.get<StrapiArticle>("/articles/public", {
 			filters: { slug: { $eq: slug } },
 			populate: ["cover", "country"],
+			...(contentLocale ? { locale: contentLocale } : {}),
 		});
 
 		const articles = Array.isArray(response.data)
@@ -197,11 +186,16 @@ export async function fetchArticleBySlug(
  */
 export async function fetchArticleById(
 	id: string | number,
+	contentLocale?: "cs" | "en",
 ): Promise<Article | null> {
 	try {
-		const response = await strapiClient.get<StrapiArticle>(`/articles/${id}`, {
-			populate: ["cover", "country"],
-		});
+		const response = await strapiClient.get<StrapiArticle>(
+			`/articles/public/${id}`,
+			{
+				populate: ["cover", "country"],
+				...(contentLocale ? { locale: contentLocale } : {}),
+			},
+		);
 
 		return transformStrapiArticle(response.data);
 	} catch (error) {
@@ -215,9 +209,10 @@ export async function fetchArticleById(
  */
 export async function fetchArticlesByDestination(
 	destinationId: string,
+	contentLocale?: "cs" | "en",
 ): Promise<Article[]> {
 	try {
-		const response = await strapiClient.get<StrapiArticle[]>("/articles", {
+		const response = await strapiClient.get<StrapiArticle[]>("/articles/public", {
 			filters: {
 				$or: [
 					{
@@ -247,6 +242,7 @@ export async function fetchArticlesByDestination(
 			},
 			populate: ["cover", "country"],
 			sort: ["publishedAt:desc"],
+			...(contentLocale ? { locale: contentLocale } : {}),
 		});
 
 		const articles = Array.isArray(response.data)
@@ -262,9 +258,12 @@ export async function fetchArticlesByDestination(
 /**
  * Fetch articles by tag
  */
-export async function fetchArticlesByTag(tag: string): Promise<Article[]> {
+export async function fetchArticlesByTag(
+	tag: string,
+	contentLocale?: "cs" | "en",
+): Promise<Article[]> {
 	try {
-		const response = await strapiClient.get<StrapiArticle[]>("/articles", {
+		const response = await strapiClient.get<StrapiArticle[]>("/articles/public", {
 			filters: {
 				tags: {
 					$contains: tag,
@@ -272,6 +271,7 @@ export async function fetchArticlesByTag(tag: string): Promise<Article[]> {
 			},
 			populate: ["cover", "country"],
 			sort: ["publishedAt:desc"],
+			...(contentLocale ? { locale: contentLocale } : {}),
 		});
 
 		const articles = Array.isArray(response.data)
@@ -287,14 +287,18 @@ export async function fetchArticlesByTag(tag: string): Promise<Article[]> {
 /**
  * Fetch latest articles
  */
-export async function fetchLatestArticles(limit = 6): Promise<Article[]> {
+export async function fetchLatestArticles(
+	limit = 6,
+	contentLocale?: "cs" | "en",
+): Promise<Article[]> {
 	try {
-		const response = await strapiClient.get<StrapiArticle[]>("/articles", {
+		const response = await strapiClient.get<StrapiArticle[]>("/articles/public", {
 			populate: ["cover", "country"],
 			sort: ["publishedAt:desc"],
 			pagination: {
 				limit,
 			},
+			...(contentLocale ? { locale: contentLocale } : {}),
 		});
 
 		const articles = Array.isArray(response.data)
@@ -336,4 +340,23 @@ export async function createComgateBookPayment(
 		throw new Error("Payment gateway did not return redirect URL.");
 	}
 	return redirect;
+}
+
+/**
+ * Fetch site configuration from Strapi Single Type.
+ * Returns null when Strapi is unreachable so the FE can fall back to env vars.
+ */
+export async function fetchSiteConfig(
+	contentLocale?: "cs" | "en",
+): Promise<StrapiSiteConfig | null> {
+	try {
+		const response =
+			await strapiClient.get<StrapiSiteConfig>("/site-config/public", {
+				...(contentLocale ? { locale: contentLocale } : {}),
+			});
+		return response.data ?? null;
+	} catch (error) {
+		console.warn("Strapi fetch site-config failed, using env fallbacks:", error);
+		return null;
+	}
 }

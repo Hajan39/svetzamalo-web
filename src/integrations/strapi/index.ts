@@ -17,6 +17,7 @@ export {
 	fetchDestinations,
 	fetchDestinationsByContinent,
 	fetchLatestArticles,
+	fetchSiteConfig,
 	submitBookInterest,
 	toContentLocale,
 } from "./api";
@@ -36,11 +37,13 @@ export {
 	useDestinations,
 	useDestinationsByContinent,
 	useLatestArticles,
+	useSiteConfig,
 } from "./hooks";
 // Types
 export type {
 	StrapiArticle,
 	StrapiDestination,
 	StrapiEntity,
+	StrapiSiteConfig,
 } from "./types";
 export { transformStrapiArticle, transformStrapiDestination } from "./types";
