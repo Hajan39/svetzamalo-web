@@ -1,49 +1,46 @@
 /**
  * Strapi Integration
- * 
+ *
  * Main export file for Strapi integration
  */
 
-// Client
-export { strapiClient } from './client'
-export type { StrapiResponse, StrapiError, StrapiQueryParams } from './client'
-
-// Types
-export type {
-  StrapiEntity,
-  StrapiDestination,
-  StrapiArticle,
-} from './types'
-export { transformStrapiDestination, transformStrapiArticle } from './types'
-
 // API methods
 export {
-  toContentLocale,
-  fetchDestinations,
-  fetchDestinationBySlug,
-  fetchDestinationById,
-  fetchDestinationsByContinent,
-  fetchArticles,
-  fetchArticleBySlug,
-  fetchArticleById,
-  fetchArticlesByDestination,
-  fetchArticlesByTag,
-  fetchLatestArticles,
-  submitBookInterest,
-  createComgateBookPayment,
-} from './api'
-
+	createComgateBookPayment,
+	fetchArticleById,
+	fetchArticleBySlug,
+	fetchArticles,
+	fetchArticlesByDestination,
+	fetchArticlesByTag,
+	fetchDestinationById,
+	fetchDestinationBySlug,
+	fetchDestinations,
+	fetchDestinationsByContinent,
+	fetchLatestArticles,
+	submitBookInterest,
+	toContentLocale,
+} from "./api";
+export type { StrapiError, StrapiQueryParams, StrapiResponse } from "./client";
+// Client
+export { strapiClient } from "./client";
 // React Query hooks
 export {
-  strapiQueryKeys,
-  useDestinations,
-  useDestinationBySlug,
-  useDestinationById,
-  useDestinationsByContinent,
-  useArticles,
-  useArticleBySlug,
-  useArticleById,
-  useArticlesByDestination,
-  useArticlesByTag,
-  useLatestArticles,
-} from './hooks'
+	strapiQueryKeys,
+	useArticleById,
+	useArticleBySlug,
+	useArticles,
+	useArticlesByDestination,
+	useArticlesByTag,
+	useDestinationById,
+	useDestinationBySlug,
+	useDestinations,
+	useDestinationsByContinent,
+	useLatestArticles,
+} from "./hooks";
+// Types
+export type {
+	StrapiArticle,
+	StrapiDestination,
+	StrapiEntity,
+} from "./types";
+export { transformStrapiArticle, transformStrapiDestination } from "./types";

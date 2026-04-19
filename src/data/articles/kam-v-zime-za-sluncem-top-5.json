@@ -1,401 +1,395 @@
 {
-  "title": "Kam v zimě za sluncem: Top 5 destinací",
-  "slug": "kam-v-zime-za-sluncem-top-5",
-  "excerpt": "Šedá obloha, vítr a teploty pod nulou. Kdo říká, že musíte zimu trpět? Tady je 5 destinací, kam utéct za sluncem, aniž byste museli brát hypotéku. Od Kanárů ...",
-  "articleType": "list",
-  "contentLang": "cs",
-  "tags": [
-    "zima",
-    "slunce",
-    "top 5",
-    "teplé destinace",
-    "budget"
-  ],
-  "publish": true,
-  "readingTime": 4,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Šedá obloha, vítr a teploty pod nulou. Kdo říká, že musíte zimu trpět? Tady je 5 destinací, kam utéct za sluncem, aniž byste museli brát hypotéku. Od Kanárů po tropickou Asii."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "1. Španělsko – Fuerteventura"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Fuerteventura je jedním z Kanárských ostrovů. Jak už název napovídá (Fuerte – silný, ventura – vítr), čeká vás zde větrné počasí a to až příliš větrné v některých oblastech."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "💰 Budget: od 1035 Kč/den (střední: 2070 Kč/den)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "📅 Nejlepší doba: říjen až duben"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "🛂 Víza: EU citizens: free movement"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-spanelsko-fuerteventura",
-          "children": [
-            {
-              "type": "text",
-              "text": "Celý průvodce: Španělsko – Fuerteventura"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "2. Španělsko – Gran Canaria"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Tento krásný, převážně hornatý a poměrně suchý ostrov je součástí Kanárského souostroví nacházejícího se v Atlantském oceánu západně od jihu Maroka."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "💰 Budget: od 1035 Kč/den (střední: 2070 Kč/den)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "📅 Nejlepší doba: říjen až duben"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "🛂 Víza: EU citizens: free movement"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-spanelsko-gran-canaria",
-          "children": [
-            {
-              "type": "text",
-              "text": "Celý průvodce: Španělsko – Gran Canaria"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "3. Vietnam"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Vysoké hory a hustá džungle, rýžová políčka a chudí lidé žijící si svůj prostý život."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "💰 Budget: od 460 Kč/den (střední: 1035 Kč/den)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "📅 Nejlepší doba: únor až duben, říjen až prosinec"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "🛂 Víza: Czech citizens: e-visa or visa on arrival"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-vietnam",
-          "children": [
-            {
-              "type": "text",
-              "text": "Celý průvodce: Vietnam"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "4. Dominikánská republika"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Země plná kokosových palem, krásných pláží s průzračnou vodou Karibského moře, vysokých hor, přírody a dobré nálady, ale také turistů, dotěrných prodejců a odpadků."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "💰 Budget: od 805 Kč/den (střední: 1840 Kč/den)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "📅 Nejlepší doba: prosinec až duben"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "🛂 Víza: Czech citizens: tourist card on arrival"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-dominikanska-republika",
-          "children": [
-            {
-              "type": "text",
-              "text": "Celý průvodce: Dominikánská republika"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "5. Srí Lanka"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Dle místních perla Indického oceánu."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "💰 Budget: od 460 Kč/den (střední: 1150 Kč/den)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "📅 Nejlepší doba: prosinec až březen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "🛂 Víza: Czech citizens: e-visa required"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-sri-lanka",
-          "children": [
-            {
-              "type": "text",
-              "text": "Celý průvodce: Srí Lanka"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "✈️ Kam dál?"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Každá z těchto destinací má svůj kompletní průvodce s praktickými tipy na dopravu, jídlo a ubytování. Klikni na destinaci, která tě zaujala, a zjisti víc."
-        }
-      ]
-    }
-  ]
+	"title": "Kam v zimě za sluncem: Top 5 destinací",
+	"slug": "kam-v-zime-za-sluncem-top-5",
+	"excerpt": "Šedá obloha, vítr a teploty pod nulou. Kdo říká, že musíte zimu trpět? Tady je 5 destinací, kam utéct za sluncem, aniž byste museli brát hypotéku. Od Kanárů ...",
+	"articleType": "list",
+	"contentLang": "cs",
+	"tags": ["zima", "slunce", "top 5", "teplé destinace", "budget"],
+	"publish": true,
+	"readingTime": 4,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Šedá obloha, vítr a teploty pod nulou. Kdo říká, že musíte zimu trpět? Tady je 5 destinací, kam utéct za sluncem, aniž byste museli brát hypotéku. Od Kanárů po tropickou Asii."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "1. Španělsko – Fuerteventura"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Fuerteventura je jedním z Kanárských ostrovů. Jak už název napovídá (Fuerte – silný, ventura – vítr), čeká vás zde větrné počasí a to až příliš větrné v některých oblastech."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "💰 Budget: od 1035 Kč/den (střední: 2070 Kč/den)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "📅 Nejlepší doba: říjen až duben"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "🛂 Víza: EU citizens: free movement"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-spanelsko-fuerteventura",
+					"children": [
+						{
+							"type": "text",
+							"text": "Celý průvodce: Španělsko – Fuerteventura"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "2. Španělsko – Gran Canaria"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Tento krásný, převážně hornatý a poměrně suchý ostrov je součástí Kanárského souostroví nacházejícího se v Atlantském oceánu západně od jihu Maroka."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "💰 Budget: od 1035 Kč/den (střední: 2070 Kč/den)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "📅 Nejlepší doba: říjen až duben"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "🛂 Víza: EU citizens: free movement"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-spanelsko-gran-canaria",
+					"children": [
+						{
+							"type": "text",
+							"text": "Celý průvodce: Španělsko – Gran Canaria"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "3. Vietnam"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Vysoké hory a hustá džungle, rýžová políčka a chudí lidé žijící si svůj prostý život."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "💰 Budget: od 460 Kč/den (střední: 1035 Kč/den)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "📅 Nejlepší doba: únor až duben, říjen až prosinec"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "🛂 Víza: Czech citizens: e-visa or visa on arrival"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-vietnam",
+					"children": [
+						{
+							"type": "text",
+							"text": "Celý průvodce: Vietnam"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "4. Dominikánská republika"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Země plná kokosových palem, krásných pláží s průzračnou vodou Karibského moře, vysokých hor, přírody a dobré nálady, ale také turistů, dotěrných prodejců a odpadků."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "💰 Budget: od 805 Kč/den (střední: 1840 Kč/den)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "📅 Nejlepší doba: prosinec až duben"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "🛂 Víza: Czech citizens: tourist card on arrival"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-dominikanska-republika",
+					"children": [
+						{
+							"type": "text",
+							"text": "Celý průvodce: Dominikánská republika"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "5. Srí Lanka"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Dle místních perla Indického oceánu."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "💰 Budget: od 460 Kč/den (střední: 1150 Kč/den)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "📅 Nejlepší doba: prosinec až březen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "🛂 Víza: Czech citizens: e-visa required"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-sri-lanka",
+					"children": [
+						{
+							"type": "text",
+							"text": "Celý průvodce: Srí Lanka"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "✈️ Kam dál?"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Každá z těchto destinací má svůj kompletní průvodce s praktickými tipy na dopravu, jídlo a ubytování. Klikni na destinaci, která tě zaujala, a zjisti víc."
+				}
+			]
+		}
+	]
 }

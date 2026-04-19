@@ -1,801 +1,797 @@
 {
-  "id": 901,
-  "documentId": "b3t5avi1rpe0lhimwrzavt2v",
-  "name": "Andorra",
-  "slug": "andorra",
-  "intro": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Andorra je horský ministát nacházející se v Pyrenejích na hranicích mezi Francií a Španělskem. Do Andorry lidé jezdí zejména kvůli krásným horám. Nachází se zde velké množství turistických cest pro letní turistiku a zároveň i několik lyžařských areálů pro zimní vyžití. V Andoře se mluví hlavně španělsky, dále pak francouzsky a domluvit se lze i s trochou snahy anglicky. Platí se zde eurem. Pokud jste milovníci krásné přírody a hor, strávit zde můžete i týden."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180927_112314-1024x768.jpg",
-        "alternativeText": "Andorra jako na dlani",
-        "url": "/uploads/20180927_112314_1024x768_7ab1dfd659.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180927_112314-1024x768.jpg",
-            "hash": "thumbnail_20180927_112314_1024x768_7ab1dfd659",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 10.12,
-            "sizeInBytes": 10124,
-            "url": "/uploads/thumbnail_20180927_112314_1024x768_7ab1dfd659.jpg"
-          },
-          "small": {
-            "name": "small_20180927_112314-1024x768.jpg",
-            "hash": "small_20180927_112314_1024x768_7ab1dfd659",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 56.79,
-            "sizeInBytes": 56794,
-            "url": "/uploads/small_20180927_112314_1024x768_7ab1dfd659.jpg"
-          },
-          "medium": {
-            "name": "medium_20180927_112314-1024x768.jpg",
-            "hash": "medium_20180927_112314_1024x768_7ab1dfd659",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 127.29,
-            "sizeInBytes": 127292,
-            "url": "/uploads/medium_20180927_112314_1024x768_7ab1dfd659.jpg"
-          },
-          "large": {
-            "name": "large_20180927_112314-1024x768.jpg",
-            "hash": "large_20180927_112314_1024x768_7ab1dfd659",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 219.28,
-            "sizeInBytes": 219275,
-            "url": "/uploads/large_20180927_112314_1024x768_7ab1dfd659.jpg"
-          }
-        },
-        "hash": "20180927_112314_1024x768_7ab1dfd659",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 235.9,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:02:43.680Z",
-        "updatedAt": "2026-02-17T13:02:43.680Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Doprava"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Do Andorry je ideální dojet autem. Pokud putujete autem po Francii, či míříte do Španělska, určitě se zde zastavte. Při příjezdu z Francie do Andorry máte 2 varianty cesty: placeným tunelem po rovině, nebo přes pohoří – asi 15-20 minut stoupání plné zatáček a jakmile se přehoupnete přes horizont ve výšce 2400 m.n.m., čeká vás zase to stejné klesání – tato cesta je na rozdíl od tunelu zdarma a nabízí nádherné výhledy."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Menší nevýhodou putování po Andoře autem je placené parkování ve větších městech. Systém je dobře promyšlený a zdarma se parkovat nedá. Mimo města a v horách to ale není problém."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Pokud jste v Andorře bez auta, existuje zde možnost dopravy pomocí místních autobusů."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Ceny"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Andorra je oproti sousední Francii výrazně levnější. Litr benzínu vás může vyjít až o 50 centů levněji, takže s dotankováním plné nádrže rozhodně počkejte až do Andorry. Cena jídla v restauracích je také i o polovinu levnější než ve Francii. Při příjezdu do země uvidíte jako první přecpané benzínky a mnoho obchodů podobných duty free obchodům na letištích. Zvlášť o víkendu může být příjezd do Andorry komplikovanější, jelikož se sem vydává spousta francouzských rodin na levné nákupy, pro levný benzín a také alkohol, který je zde levnější než v ČR. Může tak očekávat dlouhé kolony vedoucí do Andorry. Do této země vede z francouzské strany pouze jedna cesta, není tedy možné kolony nijak objet a pomalému popojíždění směrem do kopce se tedy nevyhnete."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Místa k navštívení"
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Města"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Hlavním lákadlem jsou hory. Za navštívení ale stojí i hlavní město"
-        },
-        {
-          "type": "text",
-          "text": "Andorra la Vella",
-          "url": "https://goo.gl/maps/C5RT6RuQNZXmxJm38",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ",",
-          "url": "https://goo.gl/maps/C5RT6RuQNZXmxJm38"
-        },
-        {
-          "type": "text",
-          "text": "kde můžete počítat s trochou chaosu a placeným parkováním (pouze prvních 30 minut zdarma). Navštívit můžete i přilehlé městečko"
-        },
-        {
-          "type": "text",
-          "text": "Les Escaldes",
-          "url": "https://goo.gl/maps/X2H9JtSjyLv19ZBp7",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ", které je proslulé svými termálními prameny a nachází se zde i aquapark. Dále jsou pak hezké vesničky v horách s tradiční architekturou a kostelíkem. Příkladem může být třeba"
-        },
-        {
-          "type": "text",
-          "text": "Canillo",
-          "url": "https://goo.gl/maps/vbKm9wb8JYWByLaf6",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ", nebo"
-        },
-        {
-          "type": "text",
-          "text": "La Cortinada",
-          "url": "https://goo.gl/maps/UsGGFTxUqFSqAqRRA"
-        },
-        {
-          "type": "text",
-          "text": ".",
-          "bold": true
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180926_151743-1024x768.jpg",
-        "alternativeText": "Pohled na hlavní město - Andorra la Vella",
-        "url": "/uploads/20180926_151743_1024x768_d36cb0225e.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180926_151743-1024x768.jpg",
-            "hash": "thumbnail_20180926_151743_1024x768_d36cb0225e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 7.98,
-            "sizeInBytes": 7984,
-            "url": "/uploads/thumbnail_20180926_151743_1024x768_d36cb0225e.jpg"
-          },
-          "small": {
-            "name": "small_20180926_151743-1024x768.jpg",
-            "hash": "small_20180926_151743_1024x768_d36cb0225e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 37.05,
-            "sizeInBytes": 37045,
-            "url": "/uploads/small_20180926_151743_1024x768_d36cb0225e.jpg"
-          },
-          "medium": {
-            "name": "medium_20180926_151743-1024x768.jpg",
-            "hash": "medium_20180926_151743_1024x768_d36cb0225e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 77.19,
-            "sizeInBytes": 77190,
-            "url": "/uploads/medium_20180926_151743_1024x768_d36cb0225e.jpg"
-          },
-          "large": {
-            "name": "large_20180926_151743-1024x768.jpg",
-            "hash": "large_20180926_151743_1024x768_d36cb0225e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 126.91,
-            "sizeInBytes": 126913,
-            "url": "/uploads/large_20180926_151743_1024x768_d36cb0225e.jpg"
-          }
-        },
-        "hash": "20180926_151743_1024x768_d36cb0225e",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 132.46,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:02:44.164Z",
-        "updatedAt": "2026-02-17T13:02:44.164Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180930_091752-768x1024.jpg",
-        "alternativeText": "Jeden z tradičních a velice starých horských kostelíků",
-        "url": "/uploads/20180930_091752_768x1024_1a3d5da7ff.jpg",
-        "width": 768,
-        "height": 1024,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180930_091752-768x1024.jpg",
-            "hash": "thumbnail_20180930_091752_768x1024_1a3d5da7ff",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 117,
-            "height": 156,
-            "size": 4.72,
-            "sizeInBytes": 4719,
-            "url": "/uploads/thumbnail_20180930_091752_768x1024_1a3d5da7ff.jpg"
-          },
-          "small": {
-            "name": "small_20180930_091752-768x1024.jpg",
-            "hash": "small_20180930_091752_768x1024_1a3d5da7ff",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 375,
-            "height": 500,
-            "size": 42.64,
-            "sizeInBytes": 42642,
-            "url": "/uploads/small_20180930_091752_768x1024_1a3d5da7ff.jpg"
-          },
-          "medium": {
-            "name": "medium_20180930_091752-768x1024.jpg",
-            "hash": "medium_20180930_091752_768x1024_1a3d5da7ff",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 563,
-            "height": 750,
-            "size": 93.6,
-            "sizeInBytes": 93597,
-            "url": "/uploads/medium_20180930_091752_768x1024_1a3d5da7ff.jpg"
-          },
-          "large": {
-            "name": "large_20180930_091752-768x1024.jpg",
-            "hash": "large_20180930_091752_768x1024_1a3d5da7ff",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 1000,
-            "size": 157.39,
-            "sizeInBytes": 157386,
-            "url": "/uploads/large_20180930_091752_768x1024_1a3d5da7ff.jpg"
-          }
-        },
-        "hash": "20180930_091752_768x1024_1a3d5da7ff",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 167.59,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:02:44.934Z",
-        "updatedAt": "2026-02-17T13:02:44.934Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Hory"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Nádherný, a zároveň náročný je výlet na nejvyšší horu Andorry –"
-        },
-        {
-          "type": "text",
-          "text": "Pic de Coma Pedrosa",
-          "url": "https://goo.gl/maps/U8DLBsQqGw7ssDx97"
-        },
-        {
-          "type": "text",
-          "text": "2946 m n. m.",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "Výchozím bodem je"
-        },
-        {
-          "type": "text",
-          "text": "Arsinal",
-          "url": "https://goo.gl/maps/qJxqGAUHwu2bpRkX9",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ". Trasa nahoru má asi 8 km s převýšením přes 1500m. Cesta je náročná a zdlouhavá, nechte si na to dostatek času. Je vhodné vyrazit opravdu brzy ráno. Pokud se dostanete až pod vrchol, naskytne se vám pohled na nádherně čisté horské jezero. Z toho místa vás už čeká jen závěrečné stoupání, které vám dá zabrat. Poslední kilometr se může zdát nekonečný, někteří lidé výstup v těchto místech dokonce vzdávají. To je ale škoda! Na vrcholu se vám otevře jedinečný výhled na vrcholky Pyrenejí, kam až oko dohlédne. Lze dokonce pozorovat nejvyšší zasněžený vrchol tohoto pohoří – Pico de Aneto (3404m n.m.)."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Zpět je teoreticky možné vyrazit ještě jednou trasou, která je asi o 2 km kratší. Převýšení je na této trase samozřejmě stejné, tudíž je trasa velmi příkrá. Nejlepší je tedy jít zpět stejnou cestou. Trasa je dobře značená a není třeba žádné speciální vybavení. Pokud se na výstup příliš necítíte, je možné trasu rozdělit do dvou dnů. Pod vrcholem, i v průběhu cesty je možné stanovat, nebo se za poplatek ubytovat v horské chatě cestou."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Dalším hezkým a oblíbeným místem jsou tři jezera"
-        },
-        {
-          "type": "text",
-          "text": "Tristaina (Estany de Més Amunt, del Mig, Primer)",
-          "url": "https://goo.gl/maps/QEAZauRiyZJUSGyD8",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "sem se dostanete autem do velké nadmořské výšky (2200m n.m.) jedinou silnicí z El Serratu a pěšky pokračujete k jezerům do výšky (2400m n.m.). Výstup není náročný, pokud ale zatoužíte po větší fyzické aktivitě, vydejte se až na hraniční horu"
-        },
-        {
-          "type": "text",
-          "text": "Pic de Tristaina (2878m n.m.)",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ". Výstup není příliš dlouhý, zato velmi příkrý až horolezecký, opět ale nepotřebujete žádné speciální vybavení."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180928_163705-1024x768.jpg",
-        "alternativeText": "Pohled z nejvyšší hory Andorry",
-        "url": "/uploads/20180928_163705_1024x768_5f6c9b18cd.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180928_163705-1024x768.jpg",
-            "hash": "thumbnail_20180928_163705_1024x768_5f6c9b18cd",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 6.37,
-            "sizeInBytes": 6368,
-            "url": "/uploads/thumbnail_20180928_163705_1024x768_5f6c9b18cd.jpg"
-          },
-          "small": {
-            "name": "small_20180928_163705-1024x768.jpg",
-            "hash": "small_20180928_163705_1024x768_5f6c9b18cd",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 30.52,
-            "sizeInBytes": 30520,
-            "url": "/uploads/small_20180928_163705_1024x768_5f6c9b18cd.jpg"
-          },
-          "medium": {
-            "name": "medium_20180928_163705-1024x768.jpg",
-            "hash": "medium_20180928_163705_1024x768_5f6c9b18cd",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 65.11,
-            "sizeInBytes": 65105,
-            "url": "/uploads/medium_20180928_163705_1024x768_5f6c9b18cd.jpg"
-          },
-          "large": {
-            "name": "large_20180928_163705-1024x768.jpg",
-            "hash": "large_20180928_163705_1024x768_5f6c9b18cd",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 109.1,
-            "sizeInBytes": 109096,
-            "url": "/uploads/large_20180928_163705_1024x768_5f6c9b18cd.jpg"
-          }
-        },
-        "hash": "20180928_163705_1024x768_5f6c9b18cd",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 115.69,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:02:45.285Z",
-        "updatedAt": "2026-02-17T13:02:45.285Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180929_122210-1024x768.jpg",
-        "alternativeText": "Trek kolem jezer Tristaina",
-        "url": "/uploads/20180929_122210_1024x768_ad60d92389.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180929_122210-1024x768.jpg",
-            "hash": "thumbnail_20180929_122210_1024x768_ad60d92389",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 7.35,
-            "sizeInBytes": 7353,
-            "url": "/uploads/thumbnail_20180929_122210_1024x768_ad60d92389.jpg"
-          },
-          "small": {
-            "name": "small_20180929_122210-1024x768.jpg",
-            "hash": "small_20180929_122210_1024x768_ad60d92389",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 37.05,
-            "sizeInBytes": 37052,
-            "url": "/uploads/small_20180929_122210_1024x768_ad60d92389.jpg"
-          },
-          "medium": {
-            "name": "medium_20180929_122210-1024x768.jpg",
-            "hash": "medium_20180929_122210_1024x768_ad60d92389",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 82.12,
-            "sizeInBytes": 82116,
-            "url": "/uploads/medium_20180929_122210_1024x768_ad60d92389.jpg"
-          },
-          "large": {
-            "name": "large_20180929_122210-1024x768.jpg",
-            "hash": "large_20180929_122210_1024x768_ad60d92389",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 141.12,
-            "sizeInBytes": 141117,
-            "url": "/uploads/large_20180929_122210_1024x768_ad60d92389.jpg"
-          }
-        },
-        "hash": "20180929_122210_1024x768_ad60d92389",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 150.07,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:02:45.750Z",
-        "updatedAt": "2026-02-17T13:02:45.750Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180927_174616-1024x768.jpg",
-        "alternativeText": "V Andoře můžete vylézt téměř na každý kopec, kterých je zde nespočet. Pic de Palomer 2072 m n.m.",
-        "url": "/uploads/20180927_174616_1024x768_49681fc630.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180927_174616-1024x768.jpg",
-            "hash": "thumbnail_20180927_174616_1024x768_49681fc630",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 8.19,
-            "sizeInBytes": 8185,
-            "url": "/uploads/thumbnail_20180927_174616_1024x768_49681fc630.jpg"
-          },
-          "small": {
-            "name": "small_20180927_174616-1024x768.jpg",
-            "hash": "small_20180927_174616_1024x768_49681fc630",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 42.59,
-            "sizeInBytes": 42592,
-            "url": "/uploads/small_20180927_174616_1024x768_49681fc630.jpg"
-          },
-          "medium": {
-            "name": "medium_20180927_174616-1024x768.jpg",
-            "hash": "medium_20180927_174616_1024x768_49681fc630",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 93.36,
-            "sizeInBytes": 93361,
-            "url": "/uploads/medium_20180927_174616_1024x768_49681fc630.jpg"
-          },
-          "large": {
-            "name": "large_20180927_174616-1024x768.jpg",
-            "hash": "large_20180927_174616_1024x768_49681fc630",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 158,
-            "sizeInBytes": 157999,
-            "url": "/uploads/large_20180927_174616_1024x768_49681fc630.jpg"
-          }
-        },
-        "hash": "20180927_174616_1024x768_49681fc630",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 168.54,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:02:46.371Z",
-        "updatedAt": "2026-02-17T13:02:46.371Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Dále stojí za zmínku"
-        },
-        {
-          "type": "text",
-          "text": "údolí řeky Madriu",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ", které je považováno za dědictví UNESCO."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Zároveň tudy vede slavný trek"
-        },
-        {
-          "type": "text",
-          "text": "GR11",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ", který spojuje Atlantik se Středozemním mořem a vede tedy skrz celé Pyreneje."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Pokud máte rádi hory, výhledy z nejvyšších vrcholků, horská města a lyžování, pak Andorra je právě to, co hledáte."
-        }
-      ]
-    }
-  ],
-  "createdAt": "2026-02-17T13:02:47.001Z",
-  "updatedAt": "2026-02-17T13:02:47.001Z",
-  "publishedAt": "2026-02-17T13:02:47.005Z",
-  "continent": "europe",
-  "contentLang": "cs",
-  "flagEmoji": "🇦🇩",
-  "timezone": "CET (UTC+1)",
-  "languages": [
-    "Catalan",
-    "Spanish",
-    "French"
-  ],
-  "currencyCode": "EUR",
-  "currencyName": "Euro",
-  "currencySymbol": "€",
-  "budgetPerDayBudget": 50,
-  "budgetPerDayMidRange": 100,
-  "budgetPerDayLuxury": 220,
-  "bestTimeToVisit": "December to April (ski), June to September (hiking)",
-  "visaInfo": "EU citizens: free movement",
-  "destinationType": "microstate",
-  "cover": {
-    "id": 8445,
-    "documentId": "ed7ynde0h86krm8b25zlhcxv",
-    "name": "cover-1771333366652-1udien.jpg",
-    "alternativeText": "Andorra",
-    "caption": null,
-    "width": 1020,
-    "height": 765,
-    "formats": {
-      "thumbnail": {
-        "name": "thumbnail_cover-1771333366652-1udien.jpg",
-        "hash": "thumbnail_cover_1771333366652_1udien_4d48e4ca51",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "path": null,
-        "width": 208,
-        "height": 156,
-        "size": 11.03,
-        "sizeInBytes": 11027,
-        "url": "/uploads/thumbnail_cover_1771333366652_1udien_4d48e4ca51.jpg"
-      },
-      "small": {
-        "name": "small_cover-1771333366652-1udien.jpg",
-        "hash": "small_cover_1771333366652_1udien_4d48e4ca51",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "path": null,
-        "width": 500,
-        "height": 375,
-        "size": 63.07,
-        "sizeInBytes": 63066,
-        "url": "/uploads/small_cover_1771333366652_1udien_4d48e4ca51.jpg"
-      },
-      "medium": {
-        "name": "medium_cover-1771333366652-1udien.jpg",
-        "hash": "medium_cover_1771333366652_1udien_4d48e4ca51",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "path": null,
-        "width": 750,
-        "height": 563,
-        "size": 141.97,
-        "sizeInBytes": 141965,
-        "url": "/uploads/medium_cover_1771333366652_1udien_4d48e4ca51.jpg"
-      },
-      "large": {
-        "name": "large_cover-1771333366652-1udien.jpg",
-        "hash": "large_cover_1771333366652_1udien_4d48e4ca51",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "path": null,
-        "width": 1000,
-        "height": 750,
-        "size": 243.43,
-        "sizeInBytes": 243428,
-        "url": "/uploads/large_cover_1771333366652_1udien_4d48e4ca51.jpg"
-      }
-    },
-    "hash": "cover_1771333366652_1udien_4d48e4ca51",
-    "ext": ".jpg",
-    "mime": "image/jpeg",
-    "size": 262.87,
-    "url": "/uploads/cover_1771333366652_1udien_4d48e4ca51.jpg",
-    "previewUrl": null,
-    "provider": "local",
-    "provider_metadata": null,
-    "createdAt": "2026-02-17T13:02:46.980Z",
-    "updatedAt": "2026-02-17T13:02:46.980Z",
-    "publishedAt": "2026-02-17T13:02:46.980Z"
-  }
+	"id": 901,
+	"documentId": "b3t5avi1rpe0lhimwrzavt2v",
+	"name": "Andorra",
+	"slug": "andorra",
+	"intro": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Andorra je horský ministát nacházející se v Pyrenejích na hranicích mezi Francií a Španělskem. Do Andorry lidé jezdí zejména kvůli krásným horám. Nachází se zde velké množství turistických cest pro letní turistiku a zároveň i několik lyžařských areálů pro zimní vyžití. V Andoře se mluví hlavně španělsky, dále pak francouzsky a domluvit se lze i s trochou snahy anglicky. Platí se zde eurem. Pokud jste milovníci krásné přírody a hor, strávit zde můžete i týden."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180927_112314-1024x768.jpg",
+				"alternativeText": "Andorra jako na dlani",
+				"url": "/uploads/20180927_112314_1024x768_7ab1dfd659.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180927_112314-1024x768.jpg",
+						"hash": "thumbnail_20180927_112314_1024x768_7ab1dfd659",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 10.12,
+						"sizeInBytes": 10124,
+						"url": "/uploads/thumbnail_20180927_112314_1024x768_7ab1dfd659.jpg"
+					},
+					"small": {
+						"name": "small_20180927_112314-1024x768.jpg",
+						"hash": "small_20180927_112314_1024x768_7ab1dfd659",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 56.79,
+						"sizeInBytes": 56794,
+						"url": "/uploads/small_20180927_112314_1024x768_7ab1dfd659.jpg"
+					},
+					"medium": {
+						"name": "medium_20180927_112314-1024x768.jpg",
+						"hash": "medium_20180927_112314_1024x768_7ab1dfd659",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 127.29,
+						"sizeInBytes": 127292,
+						"url": "/uploads/medium_20180927_112314_1024x768_7ab1dfd659.jpg"
+					},
+					"large": {
+						"name": "large_20180927_112314-1024x768.jpg",
+						"hash": "large_20180927_112314_1024x768_7ab1dfd659",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 219.28,
+						"sizeInBytes": 219275,
+						"url": "/uploads/large_20180927_112314_1024x768_7ab1dfd659.jpg"
+					}
+				},
+				"hash": "20180927_112314_1024x768_7ab1dfd659",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 235.9,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:02:43.680Z",
+				"updatedAt": "2026-02-17T13:02:43.680Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Doprava"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Do Andorry je ideální dojet autem. Pokud putujete autem po Francii, či míříte do Španělska, určitě se zde zastavte. Při příjezdu z Francie do Andorry máte 2 varianty cesty: placeným tunelem po rovině, nebo přes pohoří – asi 15-20 minut stoupání plné zatáček a jakmile se přehoupnete přes horizont ve výšce 2400 m.n.m., čeká vás zase to stejné klesání – tato cesta je na rozdíl od tunelu zdarma a nabízí nádherné výhledy."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Menší nevýhodou putování po Andoře autem je placené parkování ve větších městech. Systém je dobře promyšlený a zdarma se parkovat nedá. Mimo města a v horách to ale není problém."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Pokud jste v Andorře bez auta, existuje zde možnost dopravy pomocí místních autobusů."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Ceny"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Andorra je oproti sousední Francii výrazně levnější. Litr benzínu vás může vyjít až o 50 centů levněji, takže s dotankováním plné nádrže rozhodně počkejte až do Andorry. Cena jídla v restauracích je také i o polovinu levnější než ve Francii. Při příjezdu do země uvidíte jako první přecpané benzínky a mnoho obchodů podobných duty free obchodům na letištích. Zvlášť o víkendu může být příjezd do Andorry komplikovanější, jelikož se sem vydává spousta francouzských rodin na levné nákupy, pro levný benzín a také alkohol, který je zde levnější než v ČR. Může tak očekávat dlouhé kolony vedoucí do Andorry. Do této země vede z francouzské strany pouze jedna cesta, není tedy možné kolony nijak objet a pomalému popojíždění směrem do kopce se tedy nevyhnete."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Místa k navštívení"
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Města"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Hlavním lákadlem jsou hory. Za navštívení ale stojí i hlavní město"
+				},
+				{
+					"type": "text",
+					"text": "Andorra la Vella",
+					"url": "https://goo.gl/maps/C5RT6RuQNZXmxJm38",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ",",
+					"url": "https://goo.gl/maps/C5RT6RuQNZXmxJm38"
+				},
+				{
+					"type": "text",
+					"text": "kde můžete počítat s trochou chaosu a placeným parkováním (pouze prvních 30 minut zdarma). Navštívit můžete i přilehlé městečko"
+				},
+				{
+					"type": "text",
+					"text": "Les Escaldes",
+					"url": "https://goo.gl/maps/X2H9JtSjyLv19ZBp7",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ", které je proslulé svými termálními prameny a nachází se zde i aquapark. Dále jsou pak hezké vesničky v horách s tradiční architekturou a kostelíkem. Příkladem může být třeba"
+				},
+				{
+					"type": "text",
+					"text": "Canillo",
+					"url": "https://goo.gl/maps/vbKm9wb8JYWByLaf6",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ", nebo"
+				},
+				{
+					"type": "text",
+					"text": "La Cortinada",
+					"url": "https://goo.gl/maps/UsGGFTxUqFSqAqRRA"
+				},
+				{
+					"type": "text",
+					"text": ".",
+					"bold": true
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180926_151743-1024x768.jpg",
+				"alternativeText": "Pohled na hlavní město - Andorra la Vella",
+				"url": "/uploads/20180926_151743_1024x768_d36cb0225e.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180926_151743-1024x768.jpg",
+						"hash": "thumbnail_20180926_151743_1024x768_d36cb0225e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 7.98,
+						"sizeInBytes": 7984,
+						"url": "/uploads/thumbnail_20180926_151743_1024x768_d36cb0225e.jpg"
+					},
+					"small": {
+						"name": "small_20180926_151743-1024x768.jpg",
+						"hash": "small_20180926_151743_1024x768_d36cb0225e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 37.05,
+						"sizeInBytes": 37045,
+						"url": "/uploads/small_20180926_151743_1024x768_d36cb0225e.jpg"
+					},
+					"medium": {
+						"name": "medium_20180926_151743-1024x768.jpg",
+						"hash": "medium_20180926_151743_1024x768_d36cb0225e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 77.19,
+						"sizeInBytes": 77190,
+						"url": "/uploads/medium_20180926_151743_1024x768_d36cb0225e.jpg"
+					},
+					"large": {
+						"name": "large_20180926_151743-1024x768.jpg",
+						"hash": "large_20180926_151743_1024x768_d36cb0225e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 126.91,
+						"sizeInBytes": 126913,
+						"url": "/uploads/large_20180926_151743_1024x768_d36cb0225e.jpg"
+					}
+				},
+				"hash": "20180926_151743_1024x768_d36cb0225e",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 132.46,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:02:44.164Z",
+				"updatedAt": "2026-02-17T13:02:44.164Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180930_091752-768x1024.jpg",
+				"alternativeText": "Jeden z tradičních a velice starých horských kostelíků",
+				"url": "/uploads/20180930_091752_768x1024_1a3d5da7ff.jpg",
+				"width": 768,
+				"height": 1024,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180930_091752-768x1024.jpg",
+						"hash": "thumbnail_20180930_091752_768x1024_1a3d5da7ff",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 117,
+						"height": 156,
+						"size": 4.72,
+						"sizeInBytes": 4719,
+						"url": "/uploads/thumbnail_20180930_091752_768x1024_1a3d5da7ff.jpg"
+					},
+					"small": {
+						"name": "small_20180930_091752-768x1024.jpg",
+						"hash": "small_20180930_091752_768x1024_1a3d5da7ff",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 375,
+						"height": 500,
+						"size": 42.64,
+						"sizeInBytes": 42642,
+						"url": "/uploads/small_20180930_091752_768x1024_1a3d5da7ff.jpg"
+					},
+					"medium": {
+						"name": "medium_20180930_091752-768x1024.jpg",
+						"hash": "medium_20180930_091752_768x1024_1a3d5da7ff",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 563,
+						"height": 750,
+						"size": 93.6,
+						"sizeInBytes": 93597,
+						"url": "/uploads/medium_20180930_091752_768x1024_1a3d5da7ff.jpg"
+					},
+					"large": {
+						"name": "large_20180930_091752-768x1024.jpg",
+						"hash": "large_20180930_091752_768x1024_1a3d5da7ff",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 1000,
+						"size": 157.39,
+						"sizeInBytes": 157386,
+						"url": "/uploads/large_20180930_091752_768x1024_1a3d5da7ff.jpg"
+					}
+				},
+				"hash": "20180930_091752_768x1024_1a3d5da7ff",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 167.59,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:02:44.934Z",
+				"updatedAt": "2026-02-17T13:02:44.934Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Hory"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Nádherný, a zároveň náročný je výlet na nejvyšší horu Andorry –"
+				},
+				{
+					"type": "text",
+					"text": "Pic de Coma Pedrosa",
+					"url": "https://goo.gl/maps/U8DLBsQqGw7ssDx97"
+				},
+				{
+					"type": "text",
+					"text": "2946 m n. m.",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "Výchozím bodem je"
+				},
+				{
+					"type": "text",
+					"text": "Arsinal",
+					"url": "https://goo.gl/maps/qJxqGAUHwu2bpRkX9",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ". Trasa nahoru má asi 8 km s převýšením přes 1500m. Cesta je náročná a zdlouhavá, nechte si na to dostatek času. Je vhodné vyrazit opravdu brzy ráno. Pokud se dostanete až pod vrchol, naskytne se vám pohled na nádherně čisté horské jezero. Z toho místa vás už čeká jen závěrečné stoupání, které vám dá zabrat. Poslední kilometr se může zdát nekonečný, někteří lidé výstup v těchto místech dokonce vzdávají. To je ale škoda! Na vrcholu se vám otevře jedinečný výhled na vrcholky Pyrenejí, kam až oko dohlédne. Lze dokonce pozorovat nejvyšší zasněžený vrchol tohoto pohoří – Pico de Aneto (3404m n.m.)."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Zpět je teoreticky možné vyrazit ještě jednou trasou, která je asi o 2 km kratší. Převýšení je na této trase samozřejmě stejné, tudíž je trasa velmi příkrá. Nejlepší je tedy jít zpět stejnou cestou. Trasa je dobře značená a není třeba žádné speciální vybavení. Pokud se na výstup příliš necítíte, je možné trasu rozdělit do dvou dnů. Pod vrcholem, i v průběhu cesty je možné stanovat, nebo se za poplatek ubytovat v horské chatě cestou."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Dalším hezkým a oblíbeným místem jsou tři jezera"
+				},
+				{
+					"type": "text",
+					"text": "Tristaina (Estany de Més Amunt, del Mig, Primer)",
+					"url": "https://goo.gl/maps/QEAZauRiyZJUSGyD8",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "sem se dostanete autem do velké nadmořské výšky (2200m n.m.) jedinou silnicí z El Serratu a pěšky pokračujete k jezerům do výšky (2400m n.m.). Výstup není náročný, pokud ale zatoužíte po větší fyzické aktivitě, vydejte se až na hraniční horu"
+				},
+				{
+					"type": "text",
+					"text": "Pic de Tristaina (2878m n.m.)",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ". Výstup není příliš dlouhý, zato velmi příkrý až horolezecký, opět ale nepotřebujete žádné speciální vybavení."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180928_163705-1024x768.jpg",
+				"alternativeText": "Pohled z nejvyšší hory Andorry",
+				"url": "/uploads/20180928_163705_1024x768_5f6c9b18cd.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180928_163705-1024x768.jpg",
+						"hash": "thumbnail_20180928_163705_1024x768_5f6c9b18cd",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 6.37,
+						"sizeInBytes": 6368,
+						"url": "/uploads/thumbnail_20180928_163705_1024x768_5f6c9b18cd.jpg"
+					},
+					"small": {
+						"name": "small_20180928_163705-1024x768.jpg",
+						"hash": "small_20180928_163705_1024x768_5f6c9b18cd",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 30.52,
+						"sizeInBytes": 30520,
+						"url": "/uploads/small_20180928_163705_1024x768_5f6c9b18cd.jpg"
+					},
+					"medium": {
+						"name": "medium_20180928_163705-1024x768.jpg",
+						"hash": "medium_20180928_163705_1024x768_5f6c9b18cd",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 65.11,
+						"sizeInBytes": 65105,
+						"url": "/uploads/medium_20180928_163705_1024x768_5f6c9b18cd.jpg"
+					},
+					"large": {
+						"name": "large_20180928_163705-1024x768.jpg",
+						"hash": "large_20180928_163705_1024x768_5f6c9b18cd",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 109.1,
+						"sizeInBytes": 109096,
+						"url": "/uploads/large_20180928_163705_1024x768_5f6c9b18cd.jpg"
+					}
+				},
+				"hash": "20180928_163705_1024x768_5f6c9b18cd",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 115.69,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:02:45.285Z",
+				"updatedAt": "2026-02-17T13:02:45.285Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180929_122210-1024x768.jpg",
+				"alternativeText": "Trek kolem jezer Tristaina",
+				"url": "/uploads/20180929_122210_1024x768_ad60d92389.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180929_122210-1024x768.jpg",
+						"hash": "thumbnail_20180929_122210_1024x768_ad60d92389",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 7.35,
+						"sizeInBytes": 7353,
+						"url": "/uploads/thumbnail_20180929_122210_1024x768_ad60d92389.jpg"
+					},
+					"small": {
+						"name": "small_20180929_122210-1024x768.jpg",
+						"hash": "small_20180929_122210_1024x768_ad60d92389",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 37.05,
+						"sizeInBytes": 37052,
+						"url": "/uploads/small_20180929_122210_1024x768_ad60d92389.jpg"
+					},
+					"medium": {
+						"name": "medium_20180929_122210-1024x768.jpg",
+						"hash": "medium_20180929_122210_1024x768_ad60d92389",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 82.12,
+						"sizeInBytes": 82116,
+						"url": "/uploads/medium_20180929_122210_1024x768_ad60d92389.jpg"
+					},
+					"large": {
+						"name": "large_20180929_122210-1024x768.jpg",
+						"hash": "large_20180929_122210_1024x768_ad60d92389",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 141.12,
+						"sizeInBytes": 141117,
+						"url": "/uploads/large_20180929_122210_1024x768_ad60d92389.jpg"
+					}
+				},
+				"hash": "20180929_122210_1024x768_ad60d92389",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 150.07,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:02:45.750Z",
+				"updatedAt": "2026-02-17T13:02:45.750Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180927_174616-1024x768.jpg",
+				"alternativeText": "V Andoře můžete vylézt téměř na každý kopec, kterých je zde nespočet. Pic de Palomer 2072 m n.m.",
+				"url": "/uploads/20180927_174616_1024x768_49681fc630.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180927_174616-1024x768.jpg",
+						"hash": "thumbnail_20180927_174616_1024x768_49681fc630",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 8.19,
+						"sizeInBytes": 8185,
+						"url": "/uploads/thumbnail_20180927_174616_1024x768_49681fc630.jpg"
+					},
+					"small": {
+						"name": "small_20180927_174616-1024x768.jpg",
+						"hash": "small_20180927_174616_1024x768_49681fc630",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 42.59,
+						"sizeInBytes": 42592,
+						"url": "/uploads/small_20180927_174616_1024x768_49681fc630.jpg"
+					},
+					"medium": {
+						"name": "medium_20180927_174616-1024x768.jpg",
+						"hash": "medium_20180927_174616_1024x768_49681fc630",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 93.36,
+						"sizeInBytes": 93361,
+						"url": "/uploads/medium_20180927_174616_1024x768_49681fc630.jpg"
+					},
+					"large": {
+						"name": "large_20180927_174616-1024x768.jpg",
+						"hash": "large_20180927_174616_1024x768_49681fc630",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 158,
+						"sizeInBytes": 157999,
+						"url": "/uploads/large_20180927_174616_1024x768_49681fc630.jpg"
+					}
+				},
+				"hash": "20180927_174616_1024x768_49681fc630",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 168.54,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:02:46.371Z",
+				"updatedAt": "2026-02-17T13:02:46.371Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Dále stojí za zmínku"
+				},
+				{
+					"type": "text",
+					"text": "údolí řeky Madriu",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ", které je považováno za dědictví UNESCO."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Zároveň tudy vede slavný trek"
+				},
+				{
+					"type": "text",
+					"text": "GR11",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ", který spojuje Atlantik se Středozemním mořem a vede tedy skrz celé Pyreneje."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Pokud máte rádi hory, výhledy z nejvyšších vrcholků, horská města a lyžování, pak Andorra je právě to, co hledáte."
+				}
+			]
+		}
+	],
+	"createdAt": "2026-02-17T13:02:47.001Z",
+	"updatedAt": "2026-02-17T13:02:47.001Z",
+	"publishedAt": "2026-02-17T13:02:47.005Z",
+	"continent": "europe",
+	"contentLang": "cs",
+	"flagEmoji": "🇦🇩",
+	"timezone": "CET (UTC+1)",
+	"languages": ["Catalan", "Spanish", "French"],
+	"currencyCode": "EUR",
+	"currencyName": "Euro",
+	"currencySymbol": "€",
+	"budgetPerDayBudget": 50,
+	"budgetPerDayMidRange": 100,
+	"budgetPerDayLuxury": 220,
+	"bestTimeToVisit": "December to April (ski), June to September (hiking)",
+	"visaInfo": "EU citizens: free movement",
+	"destinationType": "microstate",
+	"cover": {
+		"id": 8445,
+		"documentId": "ed7ynde0h86krm8b25zlhcxv",
+		"name": "cover-1771333366652-1udien.jpg",
+		"alternativeText": "Andorra",
+		"caption": null,
+		"width": 1020,
+		"height": 765,
+		"formats": {
+			"thumbnail": {
+				"name": "thumbnail_cover-1771333366652-1udien.jpg",
+				"hash": "thumbnail_cover_1771333366652_1udien_4d48e4ca51",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"path": null,
+				"width": 208,
+				"height": 156,
+				"size": 11.03,
+				"sizeInBytes": 11027,
+				"url": "/uploads/thumbnail_cover_1771333366652_1udien_4d48e4ca51.jpg"
+			},
+			"small": {
+				"name": "small_cover-1771333366652-1udien.jpg",
+				"hash": "small_cover_1771333366652_1udien_4d48e4ca51",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"path": null,
+				"width": 500,
+				"height": 375,
+				"size": 63.07,
+				"sizeInBytes": 63066,
+				"url": "/uploads/small_cover_1771333366652_1udien_4d48e4ca51.jpg"
+			},
+			"medium": {
+				"name": "medium_cover-1771333366652-1udien.jpg",
+				"hash": "medium_cover_1771333366652_1udien_4d48e4ca51",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"path": null,
+				"width": 750,
+				"height": 563,
+				"size": 141.97,
+				"sizeInBytes": 141965,
+				"url": "/uploads/medium_cover_1771333366652_1udien_4d48e4ca51.jpg"
+			},
+			"large": {
+				"name": "large_cover-1771333366652-1udien.jpg",
+				"hash": "large_cover_1771333366652_1udien_4d48e4ca51",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"path": null,
+				"width": 1000,
+				"height": 750,
+				"size": 243.43,
+				"sizeInBytes": 243428,
+				"url": "/uploads/large_cover_1771333366652_1udien_4d48e4ca51.jpg"
+			}
+		},
+		"hash": "cover_1771333366652_1udien_4d48e4ca51",
+		"ext": ".jpg",
+		"mime": "image/jpeg",
+		"size": 262.87,
+		"url": "/uploads/cover_1771333366652_1udien_4d48e4ca51.jpg",
+		"previewUrl": null,
+		"provider": "local",
+		"provider_metadata": null,
+		"createdAt": "2026-02-17T13:02:46.980Z",
+		"updatedAt": "2026-02-17T13:02:46.980Z",
+		"publishedAt": "2026-02-17T13:02:46.980Z"
+	}
 }

@@ -1,3 +1,4 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArticleHtmlContent } from "@/components/article";
 import { NewsletterCta } from "@/components/monetization";
 import { Breadcrumbs } from "@/components/seo";
@@ -7,7 +8,6 @@ import {
 	useDestinationBySlug,
 } from "@/integrations/strapi";
 import { SITE_CONFIG } from "@/lib/constants";
-import { createFileRoute, Link } from "@tanstack/react-router";
 
 const SITE_URL = SITE_CONFIG.url;
 
@@ -48,7 +48,11 @@ export const Route = createFileRoute("/destinations/guide/$slug")({
 function DestinationGuidePage() {
 	const { slug } = Route.useParams();
 	const { destination: loaderDest } = Route.useLoaderData();
-	const { data: destination, isLoading, error } = useDestinationBySlug(slug, {
+	const {
+		data: destination,
+		isLoading,
+		error,
+	} = useDestinationBySlug(slug, {
 		initialData: loaderDest || undefined,
 	});
 

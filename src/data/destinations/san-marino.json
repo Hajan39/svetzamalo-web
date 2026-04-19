@@ -1,742 +1,740 @@
 {
-  "id": 877,
-  "documentId": "payrb68qpewnlgxjyz2ivjlo",
-  "name": "San Marino",
-  "slug": "san-marino",
-  "intro": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "San Marino je kouzelným ministátem s centrem tyčícím se na kopci v severní Itálii kousek od turistického letoviska Rimini. Návštěva San Marina může být jednodenním výletem, nebo pouhou zastávkou na vaší cestě. Je to místo které rozhodně stojí za vidění. Ze starobylých hradeb se vám naskytne krásný výhled na italské pobřeží a do vnitrozemí."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Doprava"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Do San Marina je nejlepší dojet autem, nebo autobusem během cest po severní Itálii. Po San Marinu se nejlépe dopravíte pěšky, autobusem, nebo autem. Centrum San Marina je opravdu malé a to hlavní lze vidět během procházky za pár hodin."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Pokud přijedete autem, můžete ho zaparkovat na některém z parkovišť pod pevností. Parkoviště jsou ale bohužel placená. Z parkoviště pak k pevnosti vystoupáte jednoduše pěšky po schodech, nebo vyjedete (za poplatek) lanovkou. Výstup není nijak dlouhý a pěšky tedy zvládnutelný."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Co navštívit"
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20170629_142851-1024x768.jpg",
-        "alternativeText": "Jedna z věží pevnosti, San Marino.",
-        "url": "/uploads/20170629_142851_1024x768_5170647bd9.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20170629_142851-1024x768.jpg",
-            "hash": "thumbnail_20170629_142851_1024x768_5170647bd9",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 7.97,
-            "sizeInBytes": 7974,
-            "url": "/uploads/thumbnail_20170629_142851_1024x768_5170647bd9.jpg"
-          },
-          "small": {
-            "name": "small_20170629_142851-1024x768.jpg",
-            "hash": "small_20170629_142851_1024x768_5170647bd9",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 37.55,
-            "sizeInBytes": 37553,
-            "url": "/uploads/small_20170629_142851_1024x768_5170647bd9.jpg"
-          },
-          "medium": {
-            "name": "medium_20170629_142851-1024x768.jpg",
-            "hash": "medium_20170629_142851_1024x768_5170647bd9",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 77.09,
-            "sizeInBytes": 77089,
-            "url": "/uploads/medium_20170629_142851_1024x768_5170647bd9.jpg"
-          },
-          "large": {
-            "name": "large_20170629_142851-1024x768.jpg",
-            "hash": "large_20170629_142851_1024x768_5170647bd9",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 124.62,
-            "sizeInBytes": 124621,
-            "url": "/uploads/large_20170629_142851_1024x768_5170647bd9.jpg"
-          }
-        },
-        "hash": "20170629_142851_1024x768_5170647bd9",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 131.41,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:59:40.231Z",
-        "updatedAt": "2026-02-17T12:59:40.231Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Hlavní dominantou státu, kam míří většina turistů, je kamenná pevnost na vysoké skále. Skála s názvem"
-        },
-        {
-          "type": "text",
-          "text": "Monte Titano",
-          "url": "http://Jedna z věží pevnosti, San Marino.",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "je zároveň se svými 756 metry nad mořem nejvyšší horou v zemi. Na jejích třech vrcholcích naleznete starobylé tři sanmarinské pevnosti. Nejstarší z nich –"
-        },
-        {
-          "type": "text",
-          "text": "La Guaita",
-          "url": "https://goo.gl/maps/K1ktCZxqgcvwzJAL7",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "pochází již z 10. století a sloužila hlavně k obraně San Marina."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20170629_131337-768x1024.jpg",
-        "alternativeText": "Uličky pevnosti, San Marino.",
-        "url": "/uploads/20170629_131337_768x1024_6bd480d3a3.jpg",
-        "width": 768,
-        "height": 1024,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20170629_131337-768x1024.jpg",
-            "hash": "thumbnail_20170629_131337_768x1024_6bd480d3a3",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 117,
-            "height": 156,
-            "size": 5.62,
-            "sizeInBytes": 5622,
-            "url": "/uploads/thumbnail_20170629_131337_768x1024_6bd480d3a3.jpg"
-          },
-          "small": {
-            "name": "small_20170629_131337-768x1024.jpg",
-            "hash": "small_20170629_131337_768x1024_6bd480d3a3",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 375,
-            "height": 500,
-            "size": 43.03,
-            "sizeInBytes": 43030,
-            "url": "/uploads/small_20170629_131337_768x1024_6bd480d3a3.jpg"
-          },
-          "medium": {
-            "name": "medium_20170629_131337-768x1024.jpg",
-            "hash": "medium_20170629_131337_768x1024_6bd480d3a3",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 563,
-            "height": 750,
-            "size": 88.22,
-            "sizeInBytes": 88224,
-            "url": "/uploads/medium_20170629_131337_768x1024_6bd480d3a3.jpg"
-          },
-          "large": {
-            "name": "large_20170629_131337-768x1024.jpg",
-            "hash": "large_20170629_131337_768x1024_6bd480d3a3",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 1000,
-            "size": 143.03,
-            "sizeInBytes": 143025,
-            "url": "/uploads/large_20170629_131337_768x1024_6bd480d3a3.jpg"
-          }
-        },
-        "hash": "20170629_131337_768x1024_6bd480d3a3",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 151.6,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:59:41.002Z",
-        "updatedAt": "2026-02-17T12:59:41.002Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20170629_135411-1024x768.jpg",
-        "alternativeText": "Starobylá pevnost, San Marino.",
-        "url": "/uploads/20170629_135411_1024x768_8b70cea356.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20170629_135411-1024x768.jpg",
-            "hash": "thumbnail_20170629_135411_1024x768_8b70cea356",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 8.85,
-            "sizeInBytes": 8846,
-            "url": "/uploads/thumbnail_20170629_135411_1024x768_8b70cea356.jpg"
-          },
-          "small": {
-            "name": "small_20170629_135411-1024x768.jpg",
-            "hash": "small_20170629_135411_1024x768_8b70cea356",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 44.74,
-            "sizeInBytes": 44744,
-            "url": "/uploads/small_20170629_135411_1024x768_8b70cea356.jpg"
-          },
-          "medium": {
-            "name": "medium_20170629_135411-1024x768.jpg",
-            "hash": "medium_20170629_135411_1024x768_8b70cea356",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 96.03,
-            "sizeInBytes": 96030,
-            "url": "/uploads/medium_20170629_135411_1024x768_8b70cea356.jpg"
-          },
-          "large": {
-            "name": "large_20170629_135411-1024x768.jpg",
-            "hash": "large_20170629_135411_1024x768_8b70cea356",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 160.29,
-            "sizeInBytes": 160288,
-            "url": "/uploads/large_20170629_135411_1024x768_8b70cea356.jpg"
-          }
-        },
-        "hash": "20170629_135411_1024x768_8b70cea356",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 171.12,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:59:41.487Z",
-        "updatedAt": "2026-02-17T12:59:41.487Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Dále zde naleznete hlavní náměstí –"
-        },
-        {
-          "type": "text",
-          "text": "Piazza della Liberta",
-          "url": "https://goo.gl/maps/SA31ekedfALFTDgk6",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ". Zde sídlí vláda a také tu můžete pozorovat střídání čestné stráže. Zbytek pevnosti je tvořen kamennými romantickými uličkami, obchůdky se suvenýry a kavárnami, nebo restauracemi. Hned na několika místech se vám zde otevře dechberoucí výhled do okolí a na italské pobřeží. Také zde naleznete slavnou"
-        },
-        {
-          "type": "text",
-          "text": "Baziliku San Marino",
-          "url": "https://goo.gl/maps/mDuaNcM6yaKKV4HQ7",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ", která je nejvýznamnější náboženskou památkou v zemi. Vstup do pevnosti i baziliky je volný."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20170629_150730-1024x768.jpg",
-        "alternativeText": "Hlavní náměstí - Piazza della Liberta, San Marino.",
-        "url": "/uploads/20170629_150730_1024x768_be449c1bcf.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20170629_150730-1024x768.jpg",
-            "hash": "thumbnail_20170629_150730_1024x768_be449c1bcf",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 9.94,
-            "sizeInBytes": 9943,
-            "url": "/uploads/thumbnail_20170629_150730_1024x768_be449c1bcf.jpg"
-          },
-          "small": {
-            "name": "small_20170629_150730-1024x768.jpg",
-            "hash": "small_20170629_150730_1024x768_be449c1bcf",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 43.95,
-            "sizeInBytes": 43947,
-            "url": "/uploads/small_20170629_150730_1024x768_be449c1bcf.jpg"
-          },
-          "medium": {
-            "name": "medium_20170629_150730-1024x768.jpg",
-            "hash": "medium_20170629_150730_1024x768_be449c1bcf",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 84.73,
-            "sizeInBytes": 84725,
-            "url": "/uploads/medium_20170629_150730_1024x768_be449c1bcf.jpg"
-          },
-          "large": {
-            "name": "large_20170629_150730-1024x768.jpg",
-            "hash": "large_20170629_150730_1024x768_be449c1bcf",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 131.04,
-            "sizeInBytes": 131044,
-            "url": "/uploads/large_20170629_150730_1024x768_be449c1bcf.jpg"
-          }
-        },
-        "hash": "20170629_150730_1024x768_be449c1bcf",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 136.5,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:59:42.310Z",
-        "updatedAt": "2026-02-17T12:59:42.310Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20170629_131545-1024x768.jpg",
-        "alternativeText": "Bazilika San Marino.",
-        "url": "/uploads/20170629_131545_1024x768_dd5e088d5c.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20170629_131545-1024x768.jpg",
-            "hash": "thumbnail_20170629_131545_1024x768_dd5e088d5c",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 7.71,
-            "sizeInBytes": 7711,
-            "url": "/uploads/thumbnail_20170629_131545_1024x768_dd5e088d5c.jpg"
-          },
-          "small": {
-            "name": "small_20170629_131545-1024x768.jpg",
-            "hash": "small_20170629_131545_1024x768_dd5e088d5c",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 34.68,
-            "sizeInBytes": 34681,
-            "url": "/uploads/small_20170629_131545_1024x768_dd5e088d5c.jpg"
-          },
-          "large": {
-            "name": "large_20170629_131545-1024x768.jpg",
-            "hash": "large_20170629_131545_1024x768_dd5e088d5c",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 115.45,
-            "sizeInBytes": 115451,
-            "url": "/uploads/large_20170629_131545_1024x768_dd5e088d5c.jpg"
-          },
-          "medium": {
-            "name": "medium_20170629_131545-1024x768.jpg",
-            "hash": "medium_20170629_131545_1024x768_dd5e088d5c",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 70.49,
-            "sizeInBytes": 70487,
-            "url": "/uploads/medium_20170629_131545_1024x768_dd5e088d5c.jpg"
-          }
-        },
-        "hash": "20170629_131545_1024x768_dd5e088d5c",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 121.67,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:59:42.800Z",
-        "updatedAt": "2026-02-17T12:59:42.800Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "V San Marinu můžete dále navštívit Muzeum starých aut, Muzeum voskových figurín, Muzeum mučení, nebo Národní muzeum. Také můžete zavítat do romantického a poklidného městečka"
-        },
-        {
-          "type": "text",
-          "text": "Faetano",
-          "url": "https://goo.gl/maps/UYF3u1VNVA33SoTt6",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ", univerzitního městečka"
-        },
-        {
-          "type": "text",
-          "text": "Montegiardino",
-          "url": "https://goo.gl/maps/8mrMLrCYjDJQyj489",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "s jedinou univerzitou v zemi, nebo navštívit místní parky (San Marino nature park)."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20170629_124617-1024x768.jpg",
-        "alternativeText": "Lanovka vedoucí na vrchol pevnosti, San Marino.",
-        "url": "/uploads/20170629_124617_1024x768_dbb84bb32e.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20170629_124617-1024x768.jpg",
-            "hash": "thumbnail_20170629_124617_1024x768_dbb84bb32e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 8.11,
-            "sizeInBytes": 8105,
-            "url": "/uploads/thumbnail_20170629_124617_1024x768_dbb84bb32e.jpg"
-          },
-          "small": {
-            "name": "small_20170629_124617-1024x768.jpg",
-            "hash": "small_20170629_124617_1024x768_dbb84bb32e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 39.23,
-            "sizeInBytes": 39226,
-            "url": "/uploads/small_20170629_124617_1024x768_dbb84bb32e.jpg"
-          },
-          "medium": {
-            "name": "medium_20170629_124617-1024x768.jpg",
-            "hash": "medium_20170629_124617_1024x768_dbb84bb32e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 81.88,
-            "sizeInBytes": 81876,
-            "url": "/uploads/medium_20170629_124617_1024x768_dbb84bb32e.jpg"
-          },
-          "large": {
-            "name": "large_20170629_124617-1024x768.jpg",
-            "hash": "large_20170629_124617_1024x768_dbb84bb32e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 133.92,
-            "sizeInBytes": 133919,
-            "url": "/uploads/large_20170629_124617_1024x768_dbb84bb32e.jpg"
-          }
-        },
-        "hash": "20170629_124617_1024x768_dbb84bb32e",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 141.87,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:59:43.482Z",
-        "updatedAt": "2026-02-17T12:59:43.482Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "IMG_20170629_132040-1024x768.jpg",
-        "alternativeText": "Výhled z pevnosti na italské pobřeží, San Marino.",
-        "url": "/uploads/IMG_20170629_132040_1024x768_a065a92b09.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_IMG_20170629_132040-1024x768.jpg",
-            "hash": "thumbnail_IMG_20170629_132040_1024x768_a065a92b09",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 8.55,
-            "sizeInBytes": 8548,
-            "url": "/uploads/thumbnail_IMG_20170629_132040_1024x768_a065a92b09.jpg"
-          },
-          "small": {
-            "name": "small_IMG_20170629_132040-1024x768.jpg",
-            "hash": "small_IMG_20170629_132040_1024x768_a065a92b09",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 43.77,
-            "sizeInBytes": 43769,
-            "url": "/uploads/small_IMG_20170629_132040_1024x768_a065a92b09.jpg"
-          },
-          "medium": {
-            "name": "medium_IMG_20170629_132040-1024x768.jpg",
-            "hash": "medium_IMG_20170629_132040_1024x768_a065a92b09",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 91.85,
-            "sizeInBytes": 91847,
-            "url": "/uploads/medium_IMG_20170629_132040_1024x768_a065a92b09.jpg"
-          },
-          "large": {
-            "name": "large_IMG_20170629_132040-1024x768.jpg",
-            "hash": "large_IMG_20170629_132040_1024x768_a065a92b09",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 149.98,
-            "sizeInBytes": 149979,
-            "url": "/uploads/large_IMG_20170629_132040_1024x768_a065a92b09.jpg"
-          }
-        },
-        "hash": "IMG_20170629_132040_1024x768_a065a92b09",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 159.62,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:59:43.940Z",
-        "updatedAt": "2026-02-17T12:59:43.940Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    }
-  ],
-  "createdAt": "2026-02-17T12:59:44.676Z",
-  "updatedAt": "2026-02-17T12:59:44.676Z",
-  "publishedAt": "2026-02-17T12:59:44.681Z",
-  "continent": "europe",
-  "contentLang": "cs",
-  "flagEmoji": "🇸🇲",
-  "timezone": "CET (UTC+1)",
-  "languages": [
-    "Italian"
-  ],
-  "currencyCode": "EUR",
-  "currencyName": "Euro",
-  "currencySymbol": "€",
-  "budgetPerDayBudget": 50,
-  "budgetPerDayMidRange": 100,
-  "budgetPerDayLuxury": 220,
-  "bestTimeToVisit": "April to June, September to October",
-  "visaInfo": "EU citizens: no visa needed",
-  "destinationType": "microstate",
-  "cover": {
-    "id": 8035,
-    "documentId": "zj1o14w6o299cdzqxd3r64wm",
-    "name": "cover-1771333184183-8qxp6m.jpg",
-    "alternativeText": "San Marino",
-    "caption": null,
-    "width": 1020,
-    "height": 765,
-    "formats": {
-      "thumbnail": {
-        "name": "thumbnail_cover-1771333184183-8qxp6m.jpg",
-        "hash": "thumbnail_cover_1771333184183_8qxp6m_c416389ce1",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "path": null,
-        "width": 208,
-        "height": 156,
-        "size": 6.06,
-        "sizeInBytes": 6059,
-        "url": "/uploads/thumbnail_cover_1771333184183_8qxp6m_c416389ce1.jpg"
-      },
-      "medium": {
-        "name": "medium_cover-1771333184183-8qxp6m.jpg",
-        "hash": "medium_cover_1771333184183_8qxp6m_c416389ce1",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "path": null,
-        "width": 750,
-        "height": 563,
-        "size": 63.5,
-        "sizeInBytes": 63501,
-        "url": "/uploads/medium_cover_1771333184183_8qxp6m_c416389ce1.jpg"
-      },
-      "small": {
-        "name": "small_cover-1771333184183-8qxp6m.jpg",
-        "hash": "small_cover_1771333184183_8qxp6m_c416389ce1",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "path": null,
-        "width": 500,
-        "height": 375,
-        "size": 29.94,
-        "sizeInBytes": 29943,
-        "url": "/uploads/small_cover_1771333184183_8qxp6m_c416389ce1.jpg"
-      },
-      "large": {
-        "name": "large_cover-1771333184183-8qxp6m.jpg",
-        "hash": "large_cover_1771333184183_8qxp6m_c416389ce1",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "path": null,
-        "width": 1000,
-        "height": 750,
-        "size": 104.27,
-        "sizeInBytes": 104274,
-        "url": "/uploads/large_cover_1771333184183_8qxp6m_c416389ce1.jpg"
-      }
-    },
-    "hash": "cover_1771333184183_8qxp6m_c416389ce1",
-    "ext": ".jpg",
-    "mime": "image/jpeg",
-    "size": 111.1,
-    "url": "/uploads/cover_1771333184183_8qxp6m_c416389ce1.jpg",
-    "previewUrl": null,
-    "provider": "local",
-    "provider_metadata": null,
-    "createdAt": "2026-02-17T12:59:44.438Z",
-    "updatedAt": "2026-02-17T12:59:44.438Z",
-    "publishedAt": "2026-02-17T12:59:44.438Z"
-  }
+	"id": 877,
+	"documentId": "payrb68qpewnlgxjyz2ivjlo",
+	"name": "San Marino",
+	"slug": "san-marino",
+	"intro": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "San Marino je kouzelným ministátem s centrem tyčícím se na kopci v severní Itálii kousek od turistického letoviska Rimini. Návštěva San Marina může být jednodenním výletem, nebo pouhou zastávkou na vaší cestě. Je to místo které rozhodně stojí za vidění. Ze starobylých hradeb se vám naskytne krásný výhled na italské pobřeží a do vnitrozemí."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Doprava"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Do San Marina je nejlepší dojet autem, nebo autobusem během cest po severní Itálii. Po San Marinu se nejlépe dopravíte pěšky, autobusem, nebo autem. Centrum San Marina je opravdu malé a to hlavní lze vidět během procházky za pár hodin."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Pokud přijedete autem, můžete ho zaparkovat na některém z parkovišť pod pevností. Parkoviště jsou ale bohužel placená. Z parkoviště pak k pevnosti vystoupáte jednoduše pěšky po schodech, nebo vyjedete (za poplatek) lanovkou. Výstup není nijak dlouhý a pěšky tedy zvládnutelný."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Co navštívit"
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20170629_142851-1024x768.jpg",
+				"alternativeText": "Jedna z věží pevnosti, San Marino.",
+				"url": "/uploads/20170629_142851_1024x768_5170647bd9.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20170629_142851-1024x768.jpg",
+						"hash": "thumbnail_20170629_142851_1024x768_5170647bd9",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 7.97,
+						"sizeInBytes": 7974,
+						"url": "/uploads/thumbnail_20170629_142851_1024x768_5170647bd9.jpg"
+					},
+					"small": {
+						"name": "small_20170629_142851-1024x768.jpg",
+						"hash": "small_20170629_142851_1024x768_5170647bd9",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 37.55,
+						"sizeInBytes": 37553,
+						"url": "/uploads/small_20170629_142851_1024x768_5170647bd9.jpg"
+					},
+					"medium": {
+						"name": "medium_20170629_142851-1024x768.jpg",
+						"hash": "medium_20170629_142851_1024x768_5170647bd9",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 77.09,
+						"sizeInBytes": 77089,
+						"url": "/uploads/medium_20170629_142851_1024x768_5170647bd9.jpg"
+					},
+					"large": {
+						"name": "large_20170629_142851-1024x768.jpg",
+						"hash": "large_20170629_142851_1024x768_5170647bd9",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 124.62,
+						"sizeInBytes": 124621,
+						"url": "/uploads/large_20170629_142851_1024x768_5170647bd9.jpg"
+					}
+				},
+				"hash": "20170629_142851_1024x768_5170647bd9",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 131.41,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:59:40.231Z",
+				"updatedAt": "2026-02-17T12:59:40.231Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Hlavní dominantou státu, kam míří většina turistů, je kamenná pevnost na vysoké skále. Skála s názvem"
+				},
+				{
+					"type": "text",
+					"text": "Monte Titano",
+					"url": "http://Jedna z věží pevnosti, San Marino.",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "je zároveň se svými 756 metry nad mořem nejvyšší horou v zemi. Na jejích třech vrcholcích naleznete starobylé tři sanmarinské pevnosti. Nejstarší z nich –"
+				},
+				{
+					"type": "text",
+					"text": "La Guaita",
+					"url": "https://goo.gl/maps/K1ktCZxqgcvwzJAL7",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "pochází již z 10. století a sloužila hlavně k obraně San Marina."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20170629_131337-768x1024.jpg",
+				"alternativeText": "Uličky pevnosti, San Marino.",
+				"url": "/uploads/20170629_131337_768x1024_6bd480d3a3.jpg",
+				"width": 768,
+				"height": 1024,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20170629_131337-768x1024.jpg",
+						"hash": "thumbnail_20170629_131337_768x1024_6bd480d3a3",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 117,
+						"height": 156,
+						"size": 5.62,
+						"sizeInBytes": 5622,
+						"url": "/uploads/thumbnail_20170629_131337_768x1024_6bd480d3a3.jpg"
+					},
+					"small": {
+						"name": "small_20170629_131337-768x1024.jpg",
+						"hash": "small_20170629_131337_768x1024_6bd480d3a3",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 375,
+						"height": 500,
+						"size": 43.03,
+						"sizeInBytes": 43030,
+						"url": "/uploads/small_20170629_131337_768x1024_6bd480d3a3.jpg"
+					},
+					"medium": {
+						"name": "medium_20170629_131337-768x1024.jpg",
+						"hash": "medium_20170629_131337_768x1024_6bd480d3a3",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 563,
+						"height": 750,
+						"size": 88.22,
+						"sizeInBytes": 88224,
+						"url": "/uploads/medium_20170629_131337_768x1024_6bd480d3a3.jpg"
+					},
+					"large": {
+						"name": "large_20170629_131337-768x1024.jpg",
+						"hash": "large_20170629_131337_768x1024_6bd480d3a3",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 1000,
+						"size": 143.03,
+						"sizeInBytes": 143025,
+						"url": "/uploads/large_20170629_131337_768x1024_6bd480d3a3.jpg"
+					}
+				},
+				"hash": "20170629_131337_768x1024_6bd480d3a3",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 151.6,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:59:41.002Z",
+				"updatedAt": "2026-02-17T12:59:41.002Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20170629_135411-1024x768.jpg",
+				"alternativeText": "Starobylá pevnost, San Marino.",
+				"url": "/uploads/20170629_135411_1024x768_8b70cea356.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20170629_135411-1024x768.jpg",
+						"hash": "thumbnail_20170629_135411_1024x768_8b70cea356",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 8.85,
+						"sizeInBytes": 8846,
+						"url": "/uploads/thumbnail_20170629_135411_1024x768_8b70cea356.jpg"
+					},
+					"small": {
+						"name": "small_20170629_135411-1024x768.jpg",
+						"hash": "small_20170629_135411_1024x768_8b70cea356",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 44.74,
+						"sizeInBytes": 44744,
+						"url": "/uploads/small_20170629_135411_1024x768_8b70cea356.jpg"
+					},
+					"medium": {
+						"name": "medium_20170629_135411-1024x768.jpg",
+						"hash": "medium_20170629_135411_1024x768_8b70cea356",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 96.03,
+						"sizeInBytes": 96030,
+						"url": "/uploads/medium_20170629_135411_1024x768_8b70cea356.jpg"
+					},
+					"large": {
+						"name": "large_20170629_135411-1024x768.jpg",
+						"hash": "large_20170629_135411_1024x768_8b70cea356",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 160.29,
+						"sizeInBytes": 160288,
+						"url": "/uploads/large_20170629_135411_1024x768_8b70cea356.jpg"
+					}
+				},
+				"hash": "20170629_135411_1024x768_8b70cea356",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 171.12,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:59:41.487Z",
+				"updatedAt": "2026-02-17T12:59:41.487Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Dále zde naleznete hlavní náměstí –"
+				},
+				{
+					"type": "text",
+					"text": "Piazza della Liberta",
+					"url": "https://goo.gl/maps/SA31ekedfALFTDgk6",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ". Zde sídlí vláda a také tu můžete pozorovat střídání čestné stráže. Zbytek pevnosti je tvořen kamennými romantickými uličkami, obchůdky se suvenýry a kavárnami, nebo restauracemi. Hned na několika místech se vám zde otevře dechberoucí výhled do okolí a na italské pobřeží. Také zde naleznete slavnou"
+				},
+				{
+					"type": "text",
+					"text": "Baziliku San Marino",
+					"url": "https://goo.gl/maps/mDuaNcM6yaKKV4HQ7",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ", která je nejvýznamnější náboženskou památkou v zemi. Vstup do pevnosti i baziliky je volný."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20170629_150730-1024x768.jpg",
+				"alternativeText": "Hlavní náměstí - Piazza della Liberta, San Marino.",
+				"url": "/uploads/20170629_150730_1024x768_be449c1bcf.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20170629_150730-1024x768.jpg",
+						"hash": "thumbnail_20170629_150730_1024x768_be449c1bcf",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 9.94,
+						"sizeInBytes": 9943,
+						"url": "/uploads/thumbnail_20170629_150730_1024x768_be449c1bcf.jpg"
+					},
+					"small": {
+						"name": "small_20170629_150730-1024x768.jpg",
+						"hash": "small_20170629_150730_1024x768_be449c1bcf",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 43.95,
+						"sizeInBytes": 43947,
+						"url": "/uploads/small_20170629_150730_1024x768_be449c1bcf.jpg"
+					},
+					"medium": {
+						"name": "medium_20170629_150730-1024x768.jpg",
+						"hash": "medium_20170629_150730_1024x768_be449c1bcf",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 84.73,
+						"sizeInBytes": 84725,
+						"url": "/uploads/medium_20170629_150730_1024x768_be449c1bcf.jpg"
+					},
+					"large": {
+						"name": "large_20170629_150730-1024x768.jpg",
+						"hash": "large_20170629_150730_1024x768_be449c1bcf",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 131.04,
+						"sizeInBytes": 131044,
+						"url": "/uploads/large_20170629_150730_1024x768_be449c1bcf.jpg"
+					}
+				},
+				"hash": "20170629_150730_1024x768_be449c1bcf",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 136.5,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:59:42.310Z",
+				"updatedAt": "2026-02-17T12:59:42.310Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20170629_131545-1024x768.jpg",
+				"alternativeText": "Bazilika San Marino.",
+				"url": "/uploads/20170629_131545_1024x768_dd5e088d5c.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20170629_131545-1024x768.jpg",
+						"hash": "thumbnail_20170629_131545_1024x768_dd5e088d5c",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 7.71,
+						"sizeInBytes": 7711,
+						"url": "/uploads/thumbnail_20170629_131545_1024x768_dd5e088d5c.jpg"
+					},
+					"small": {
+						"name": "small_20170629_131545-1024x768.jpg",
+						"hash": "small_20170629_131545_1024x768_dd5e088d5c",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 34.68,
+						"sizeInBytes": 34681,
+						"url": "/uploads/small_20170629_131545_1024x768_dd5e088d5c.jpg"
+					},
+					"large": {
+						"name": "large_20170629_131545-1024x768.jpg",
+						"hash": "large_20170629_131545_1024x768_dd5e088d5c",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 115.45,
+						"sizeInBytes": 115451,
+						"url": "/uploads/large_20170629_131545_1024x768_dd5e088d5c.jpg"
+					},
+					"medium": {
+						"name": "medium_20170629_131545-1024x768.jpg",
+						"hash": "medium_20170629_131545_1024x768_dd5e088d5c",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 70.49,
+						"sizeInBytes": 70487,
+						"url": "/uploads/medium_20170629_131545_1024x768_dd5e088d5c.jpg"
+					}
+				},
+				"hash": "20170629_131545_1024x768_dd5e088d5c",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 121.67,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:59:42.800Z",
+				"updatedAt": "2026-02-17T12:59:42.800Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "V San Marinu můžete dále navštívit Muzeum starých aut, Muzeum voskových figurín, Muzeum mučení, nebo Národní muzeum. Také můžete zavítat do romantického a poklidného městečka"
+				},
+				{
+					"type": "text",
+					"text": "Faetano",
+					"url": "https://goo.gl/maps/UYF3u1VNVA33SoTt6",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ", univerzitního městečka"
+				},
+				{
+					"type": "text",
+					"text": "Montegiardino",
+					"url": "https://goo.gl/maps/8mrMLrCYjDJQyj489",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "s jedinou univerzitou v zemi, nebo navštívit místní parky (San Marino nature park)."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20170629_124617-1024x768.jpg",
+				"alternativeText": "Lanovka vedoucí na vrchol pevnosti, San Marino.",
+				"url": "/uploads/20170629_124617_1024x768_dbb84bb32e.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20170629_124617-1024x768.jpg",
+						"hash": "thumbnail_20170629_124617_1024x768_dbb84bb32e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 8.11,
+						"sizeInBytes": 8105,
+						"url": "/uploads/thumbnail_20170629_124617_1024x768_dbb84bb32e.jpg"
+					},
+					"small": {
+						"name": "small_20170629_124617-1024x768.jpg",
+						"hash": "small_20170629_124617_1024x768_dbb84bb32e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 39.23,
+						"sizeInBytes": 39226,
+						"url": "/uploads/small_20170629_124617_1024x768_dbb84bb32e.jpg"
+					},
+					"medium": {
+						"name": "medium_20170629_124617-1024x768.jpg",
+						"hash": "medium_20170629_124617_1024x768_dbb84bb32e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 81.88,
+						"sizeInBytes": 81876,
+						"url": "/uploads/medium_20170629_124617_1024x768_dbb84bb32e.jpg"
+					},
+					"large": {
+						"name": "large_20170629_124617-1024x768.jpg",
+						"hash": "large_20170629_124617_1024x768_dbb84bb32e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 133.92,
+						"sizeInBytes": 133919,
+						"url": "/uploads/large_20170629_124617_1024x768_dbb84bb32e.jpg"
+					}
+				},
+				"hash": "20170629_124617_1024x768_dbb84bb32e",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 141.87,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:59:43.482Z",
+				"updatedAt": "2026-02-17T12:59:43.482Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "IMG_20170629_132040-1024x768.jpg",
+				"alternativeText": "Výhled z pevnosti na italské pobřeží, San Marino.",
+				"url": "/uploads/IMG_20170629_132040_1024x768_a065a92b09.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_IMG_20170629_132040-1024x768.jpg",
+						"hash": "thumbnail_IMG_20170629_132040_1024x768_a065a92b09",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 8.55,
+						"sizeInBytes": 8548,
+						"url": "/uploads/thumbnail_IMG_20170629_132040_1024x768_a065a92b09.jpg"
+					},
+					"small": {
+						"name": "small_IMG_20170629_132040-1024x768.jpg",
+						"hash": "small_IMG_20170629_132040_1024x768_a065a92b09",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 43.77,
+						"sizeInBytes": 43769,
+						"url": "/uploads/small_IMG_20170629_132040_1024x768_a065a92b09.jpg"
+					},
+					"medium": {
+						"name": "medium_IMG_20170629_132040-1024x768.jpg",
+						"hash": "medium_IMG_20170629_132040_1024x768_a065a92b09",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 91.85,
+						"sizeInBytes": 91847,
+						"url": "/uploads/medium_IMG_20170629_132040_1024x768_a065a92b09.jpg"
+					},
+					"large": {
+						"name": "large_IMG_20170629_132040-1024x768.jpg",
+						"hash": "large_IMG_20170629_132040_1024x768_a065a92b09",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 149.98,
+						"sizeInBytes": 149979,
+						"url": "/uploads/large_IMG_20170629_132040_1024x768_a065a92b09.jpg"
+					}
+				},
+				"hash": "IMG_20170629_132040_1024x768_a065a92b09",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 159.62,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:59:43.940Z",
+				"updatedAt": "2026-02-17T12:59:43.940Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		}
+	],
+	"createdAt": "2026-02-17T12:59:44.676Z",
+	"updatedAt": "2026-02-17T12:59:44.676Z",
+	"publishedAt": "2026-02-17T12:59:44.681Z",
+	"continent": "europe",
+	"contentLang": "cs",
+	"flagEmoji": "🇸🇲",
+	"timezone": "CET (UTC+1)",
+	"languages": ["Italian"],
+	"currencyCode": "EUR",
+	"currencyName": "Euro",
+	"currencySymbol": "€",
+	"budgetPerDayBudget": 50,
+	"budgetPerDayMidRange": 100,
+	"budgetPerDayLuxury": 220,
+	"bestTimeToVisit": "April to June, September to October",
+	"visaInfo": "EU citizens: no visa needed",
+	"destinationType": "microstate",
+	"cover": {
+		"id": 8035,
+		"documentId": "zj1o14w6o299cdzqxd3r64wm",
+		"name": "cover-1771333184183-8qxp6m.jpg",
+		"alternativeText": "San Marino",
+		"caption": null,
+		"width": 1020,
+		"height": 765,
+		"formats": {
+			"thumbnail": {
+				"name": "thumbnail_cover-1771333184183-8qxp6m.jpg",
+				"hash": "thumbnail_cover_1771333184183_8qxp6m_c416389ce1",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"path": null,
+				"width": 208,
+				"height": 156,
+				"size": 6.06,
+				"sizeInBytes": 6059,
+				"url": "/uploads/thumbnail_cover_1771333184183_8qxp6m_c416389ce1.jpg"
+			},
+			"medium": {
+				"name": "medium_cover-1771333184183-8qxp6m.jpg",
+				"hash": "medium_cover_1771333184183_8qxp6m_c416389ce1",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"path": null,
+				"width": 750,
+				"height": 563,
+				"size": 63.5,
+				"sizeInBytes": 63501,
+				"url": "/uploads/medium_cover_1771333184183_8qxp6m_c416389ce1.jpg"
+			},
+			"small": {
+				"name": "small_cover-1771333184183-8qxp6m.jpg",
+				"hash": "small_cover_1771333184183_8qxp6m_c416389ce1",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"path": null,
+				"width": 500,
+				"height": 375,
+				"size": 29.94,
+				"sizeInBytes": 29943,
+				"url": "/uploads/small_cover_1771333184183_8qxp6m_c416389ce1.jpg"
+			},
+			"large": {
+				"name": "large_cover-1771333184183-8qxp6m.jpg",
+				"hash": "large_cover_1771333184183_8qxp6m_c416389ce1",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"path": null,
+				"width": 1000,
+				"height": 750,
+				"size": 104.27,
+				"sizeInBytes": 104274,
+				"url": "/uploads/large_cover_1771333184183_8qxp6m_c416389ce1.jpg"
+			}
+		},
+		"hash": "cover_1771333184183_8qxp6m_c416389ce1",
+		"ext": ".jpg",
+		"mime": "image/jpeg",
+		"size": 111.1,
+		"url": "/uploads/cover_1771333184183_8qxp6m_c416389ce1.jpg",
+		"previewUrl": null,
+		"provider": "local",
+		"provider_metadata": null,
+		"createdAt": "2026-02-17T12:59:44.438Z",
+		"updatedAt": "2026-02-17T12:59:44.438Z",
+		"publishedAt": "2026-02-17T12:59:44.438Z"
+	}
 }

@@ -30,9 +30,9 @@ export function ArticleCard({
 			<Link
 				to="/articles/$slug"
 				params={{ slug: article.slug }}
-				className={`group block ${className}`}
+				className={`group brand-card brand-card-hover block overflow-hidden ${className}`}
 			>
-				<div className="aspect-4/3 overflow-hidden">
+				<div className="aspect-4/3 overflow-hidden rounded-t-[16px] bg-background-secondary">
 					<img
 						src={coverSrc}
 						alt={coverAlt}
@@ -40,16 +40,19 @@ export function ArticleCard({
 						loading="lazy"
 					/>
 				</div>
-				<div className="pt-3 sm:pt-4">
-					<span className="text-xs font-medium text-foreground-muted uppercase tracking-wide">
+				<div className="px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+					<span className="inline-flex rounded-full bg-primary-light px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">
 						{(article.articleType || "destination-guide").replace("-", " ")}
 					</span>
-					<h3 className="text-base sm:text-lg font-semibold text-foreground mb-1 sm:mb-2 mt-0.5">
+					<h3 className="mt-3 text-base font-semibold text-foreground sm:text-lg">
 						{article.title}
 					</h3>
-					<p className="text-foreground-secondary text-sm sm:text-base leading-relaxed">
+					<p className="mt-2 text-sm leading-relaxed text-foreground-secondary sm:text-base">
 						{article.intro}
 					</p>
+					<span className="mt-4 inline-flex text-sm font-semibold text-primary">
+						Read article
+					</span>
 				</div>
 			</Link>
 		);
@@ -60,18 +63,18 @@ export function ArticleCard({
 			<Link
 				to="/articles/$slug"
 				params={{ slug: article.slug }}
-				className={`group block border border-border rounded-lg p-5 sm:p-6 md:p-8 bg-background hover:border-foreground transition-colors ${className}`}
+				className={`group brand-card brand-card-hover block p-5 sm:p-6 md:p-8 ${className}`}
 			>
-		<span className="text-xs font-medium text-foreground-muted uppercase tracking-wide">
-			{(article.articleType || "destination-guide").replace("-", " ")}
-		</span>
-				<h3 className="text-xl sm:text-2xl font-semibold text-foreground group-hover:text-primary transition-colors mt-2 mb-3">
+				<span className="inline-flex rounded-full bg-primary-light px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">
+					{(article.articleType || "destination-guide").replace("-", " ")}
+				</span>
+				<h3 className="mt-4 text-xl font-semibold text-foreground transition-colors group-hover:text-primary sm:text-2xl">
 					{article.title}
 				</h3>
-				<p className="text-foreground-secondary line-clamp-2 mb-4">
+				<p className="mb-5 mt-3 line-clamp-2 text-foreground-secondary">
 					{article.intro}
 				</p>
-				<span className="text-primary font-medium">Read article →</span>
+				<span className="text-sm font-semibold text-primary">Read article</span>
 			</Link>
 		);
 	}
@@ -81,14 +84,17 @@ export function ArticleCard({
 			<Link
 				to="/articles/$slug"
 				params={{ slug: article.slug }}
-				className={`group block border border-border rounded-lg p-5 bg-background hover:border-foreground transition-colors ${className}`}
+				className={`group brand-card brand-card-hover block p-5 ${className}`}
 			>
-				<h4 className="font-semibold text-foreground group-hover:text-primary transition-colors mb-1">
+				<h4 className="mb-1 font-semibold text-foreground transition-colors group-hover:text-primary">
 					{article.title}
 				</h4>
-				<span className="text-sm text-foreground-muted" suppressHydrationWarning>
-				{formattedDate}
-			</span>
+				<span
+					className="text-sm text-foreground-muted"
+					suppressHydrationWarning
+				>
+					{formattedDate}
+				</span>
 			</Link>
 		);
 	}
@@ -98,18 +104,22 @@ export function ArticleCard({
 		<Link
 			to="/articles/$slug"
 			params={{ slug: article.slug }}
-			className={`group block border border-border rounded-lg p-6 bg-background hover:border-foreground transition-colors ${className}`}
+			className={`group brand-card brand-card-hover block p-6 ${className}`}
 		>
-			<span className="text-xs font-medium text-foreground-muted uppercase tracking-wide">
+			<span className="inline-flex rounded-full bg-primary-light px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">
 				{(article.articleType || "destination-guide").replace("-", " ")}
 			</span>
-			<h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mt-2 mb-2">
+			<h3 className="mt-4 text-lg font-semibold text-foreground transition-colors group-hover:text-primary">
 				{article.title}
 			</h3>
-			<p className="text-foreground-secondary text-sm line-clamp-2 mb-3">
+			<p className="mb-4 mt-2 text-sm line-clamp-2 text-foreground-secondary">
 				{article.intro}
 			</p>
-			<time className="text-xs text-foreground-muted" dateTime={article.publishedAt} suppressHydrationWarning>
+			<time
+				className="text-xs text-foreground-muted"
+				dateTime={article.publishedAt}
+				suppressHydrationWarning
+			>
 				{formattedDate}
 			</time>
 		</Link>

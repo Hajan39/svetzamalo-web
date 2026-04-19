@@ -1,57 +1,54 @@
-import { render, screen, fireEvent } from '@testing-library/react'
-import { describe, it, expect, vi } from 'vitest'
-import { LanguageSwitcher } from './LanguageSwitcher'
+import { fireEvent, render, screen } from "@testing-library/react";
+import { describe, expect, it } from "vitest";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
-// Mock window.location
-const mockReplace = vi.fn()
-delete (window as any).location
-window.location = { ...window.location, replace: mockReplace }
+describe("LanguageSwitcher", () => {
+	it("renders language options", () => {
+		render(<LanguageSwitcher />);
 
-describe('LanguageSwitcher', () => {
-  it('renders language options', () => {
-    render(<LanguageSwitcher />)
+		// Default locale is "cs" — flag shown in toggle button area
+		const button = screen.getByRole("button", { name: /switch language/i });
+		expect(button).toBeInTheDocument();
+	});
 
-    expect(screen.getByText('🇺🇸')).toBeInTheDocument()
-    expect(screen.getByText('🇨🇿')).toBeInTheDocument()
-    expect(screen.getByText('🇪🇸')).toBeInTheDocument()
-    expect(screen.getByText('🇩🇪')).toBeInTheDocument()
-  })
+	it("shows dropdown when clicked", () => {
+		render(<LanguageSwitcher />);
 
-  it('shows dropdown when clicked', () => {
-    render(<LanguageSwitcher />)
+		const button = screen.getByRole("button", { name: /switch language/i });
+		fireEvent.click(button);
 
-    const button = screen.getByRole('button', { name: /switch language/i })
-    fireEvent.click(button)
+		// Only cs and en are supported locales
+		expect(screen.getByText("Čeština")).toBeInTheDocument();
+		expect(screen.getByText("English")).toBeInTheDocument();
+	});
 
-    expect(screen.getByText('English')).toBeInTheDocument()
-    expect(screen.getByText('Čeština')).toBeInTheDocument()
-    expect(screen.getByText('Español')).toBeInTheDocument()
-    expect(screen.getByText('Deutsch')).toBeInTheDocument()
-  })
+	it("changes language when option is selected", () => {
+		render(<LanguageSwitcher />);
 
-  it('changes language when option is selected', () => {
-    render(<LanguageSwitcher />)
+		const button = screen.getByRole("button", { name: /switch language/i });
+		fireEvent.click(button);
 
-    const button = screen.getByRole('button', { name: /switch language/i })
-    fireEvent.click(button)
+		const englishOption = screen.getByText("English");
+		fireEvent.click(englishOption);
 
-    const czechOption = screen.getByText('Čeština')
-    fireEvent.click(czechOption)
+		// i18n.setLocale saves to localStorage (no window.replace)
+		expect(localStorage.getItem("locale")).toBe("en");
+	});
 
-    expect(mockReplace).toHaveBeenCalledWith('/cs/')
-  })
+	it("closes dropdown when clicking outside", () => {
+		render(<LanguageSwitcher />);
 
-  it('closes dropdown when clicking outside', () => {
-    render(<LanguageSwitcher />)
+		const button = screen.getByRole("button", { name: /switch language/i });
+		fireEvent.click(button);
 
-    const button = screen.getByRole('button', { name: /switch language/i })
-    fireEvent.click(button)
+		expect(screen.getByText("English")).toBeInTheDocument();
 
-    expect(screen.getByText('English')).toBeInTheDocument()
+		// Click the backdrop button to close
+		const backdrop = screen.getByRole("button", {
+			name: /close language selector/i,
+		});
+		fireEvent.click(backdrop);
 
-    // Click outside (backdrop)
-    fireEvent.click(document.body)
-
-    expect(screen.queryByText('English')).not.toBeInTheDocument()
-  })
-})
+		expect(screen.queryByText("English")).not.toBeInTheDocument();
+	});
+});

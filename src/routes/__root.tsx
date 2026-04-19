@@ -1,6 +1,3 @@
-import { Footer, Header, SkipLink } from "@/components/layout";
-import { CurrencyProvider } from "@/lib/currency";
-import { getLocaleForIntl, i18n, useTranslation } from "@/lib/i18n";
 import type { QueryClient } from "@tanstack/react-query";
 import {
 	createRootRouteWithContext,
@@ -10,6 +7,9 @@ import {
 	Scripts,
 } from "@tanstack/react-router";
 import { useEffect } from "react";
+import { Footer, Header, SkipLink } from "@/components/layout";
+import { CurrencyProvider } from "@/lib/currency";
+import { getLocaleForIntl, i18n, useTranslation } from "@/lib/i18n";
 import appCss from "../styles.css?url";
 
 /**
@@ -55,7 +55,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 			{ rel: "icon", href: "/favicon.ico", sizes: "32x32" },
 			{ rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
 			{ rel: "manifest", href: "/manifest.json" },
-			// Google Fonts: Bebas Neue (nadpisy), Poppins (text), Dancing Script (zvýraznění – střídmě)
+			// Google Fonts: Poppins headings, Inter body
 			{ rel: "preconnect", href: "https://fonts.googleapis.com" },
 			{
 				rel: "preconnect",
@@ -64,7 +64,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 			},
 			{
 				rel: "stylesheet",
-				href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400;600&family=Outfit:wght@300;400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap",
+				href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap",
 			},
 		],
 	}),

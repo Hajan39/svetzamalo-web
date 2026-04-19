@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { useAnalyticsConsent } from "./AnalyticsProvider";
+import { useEffect, useId, useState } from "react";
 import { useTranslation } from "@/lib/i18n";
+import { useAnalyticsConsent } from "./AnalyticsProvider";
 
 /**
  * GDPR Consent Banner Component
@@ -34,6 +34,9 @@ export function ConsentBanner({
 		useAnalyticsConsent();
 	const { t } = useTranslation();
 	const [isVisible, setIsVisible] = useState(false);
+	const uid = useId();
+	const titleId = `${uid}-title`;
+	const descId = `${uid}-desc`;
 
 	// Check if banner should be shown
 	useEffect(() => {
@@ -97,8 +100,8 @@ export function ConsentBanner({
 		<div
 			className={bannerClasses}
 			role="dialog"
-			aria-labelledby="consent-title"
-			aria-describedby="consent-description"
+			aria-labelledby={titleId}
+			aria-describedby={descId}
 			data-testid="consent-banner"
 		>
 			<div className="container-narrow">
@@ -106,13 +109,13 @@ export function ConsentBanner({
 					{/* Content */}
 					<div className="flex-1 min-w-0">
 						<h2
-							id="consent-title"
+							id={titleId}
 							className="text-lg font-semibold text-foreground mb-2"
 						>
 							{t("consent.title")}
 						</h2>
 						<p
-							id="consent-description"
+							id={descId}
 							className="text-sm text-foreground-secondary leading-relaxed"
 						>
 							{t("consent.description")}
@@ -128,6 +131,7 @@ export function ConsentBanner({
 					{/* Actions */}
 					<div className="flex flex-col sm:flex-row gap-2 shrink-0">
 						<button
+							type="button"
 							onClick={handleAccept}
 							className="px-6 py-2 bg-primary hover:bg-primary-hover text-primary-foreground font-medium rounded-lg transition-colors text-sm"
 							data-testid="consent-accept"
@@ -135,6 +139,7 @@ export function ConsentBanner({
 							{t("consent.accept")}
 						</button>
 						<button
+							type="button"
 							onClick={handleDeny}
 							className="px-6 py-2 border border-border hover:border-primary text-foreground hover:text-primary font-medium rounded-lg transition-colors text-sm"
 							data-testid="consent-deny"
@@ -142,6 +147,7 @@ export function ConsentBanner({
 							{t("consent.decline")}
 						</button>
 						<button
+							type="button"
 							onClick={handleDismiss}
 							className="px-4 py-2 text-foreground-muted hover:text-foreground text-sm underline"
 							data-testid="consent-dismiss"
@@ -171,6 +177,7 @@ export function ConsentBanner({
 							{t("consent.cookiePolicy")}
 						</a>
 						<button
+							type="button"
 							onClick={() => {
 								// Open privacy settings modal (future implementation)
 								console.log("[ConsentBanner] Open privacy settings");

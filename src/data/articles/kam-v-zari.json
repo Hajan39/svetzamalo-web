@@ -1,396 +1,391 @@
 {
-  "title": "Kam v zari? 5 destinaci, ktere stoji za to",
-  "slug": "kam-v-zari",
-  "excerpt": "Hledas, kam vyrazit v zari? Tady je 5 overených destinaci s realnym rozpoctem.",
-  "articleType": "list",
-  "contentLang": "cs",
-  "tags": [
-    "zari",
-    "kam jet",
-    "destinace",
-    "tipy"
-  ],
-  "destinationSlug": null,
-  "publish": true,
-  "readingTime": 4,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Planujes cestu v zari? Super volba. Tady je 5 destinaci, kde si to v zari uzijs naplno - od plazi po hory, od Asie po Evropu. Vse overene, zadne kecy."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "1. 🇻🇳 Vietnam"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Sever v podzimnich barvach"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Nejlepsi obdobi: February to April, October to December"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Budget na den: od 20 USD"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Viza: Czech citizens: e-visa or visa on arrival"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-vietnam",
-          "children": [
-            {
-              "type": "text",
-              "text": "Prectisi cely pruvodce: Vietnam"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "2. 🇩🇪 Berlín"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Podletni klid, nizsi ceny"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Nejlepsi obdobi: May to September"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Budget na den: od 50 USD"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Viza: EU citizens: free movement"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-berlin",
-          "children": [
-            {
-              "type": "text",
-              "text": "Prectisi cely pruvodce: Berlín"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "3. 🇮🇹 Řím"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Mene turistu, stale teplo"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Nejlepsi obdobi: April to June, September to October"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Budget na den: od 60 USD"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Viza: EU citizens: free movement"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-rim",
-          "children": [
-            {
-              "type": "text",
-              "text": "Prectisi cely pruvodce: Řím"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "4. 🇫🇷 Paříž"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Poletni Pariz, nizsi ceny"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Nejlepsi obdobi: April to June, September to October"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Budget na den: od 70 USD"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Viza: EU citizens: free movement"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-pariz",
-          "children": [
-            {
-              "type": "text",
-              "text": "Prectisi cely pruvodce: Paříž"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "5. 🇲🇾 Malajsie &#8211; Malajský poloostrov"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Suche obdobi, idealni na Langkawi"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Nejlepsi obdobi: March to October"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Budget na den: od 25 USD"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Viza: Czech citizens: visa-free 90 days"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-malajsie-malajsky-poloostrov",
-          "children": [
-            {
-              "type": "text",
-              "text": "Prectisi cely pruvodce: Malajsie &#8211; Malajský poloostrov"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Jak vybrat?"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Zalezi, co hledas. Chces plaze? Mrkni na ostrovy. Chces kulturu a historii? Evropska mesta budou lepsi volba. A hlavne - cim driv zacnes hledat letenky, tim lip."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "link",
-          "url": "/articles/kolik-stoji-den-srovnani",
-          "children": [
-            {
-              "type": "text",
-              "text": "Srovnani cen: kolik stoji den v ruznych destinacich"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"title": "Kam v zari? 5 destinaci, ktere stoji za to",
+	"slug": "kam-v-zari",
+	"excerpt": "Hledas, kam vyrazit v zari? Tady je 5 overených destinaci s realnym rozpoctem.",
+	"articleType": "list",
+	"contentLang": "cs",
+	"tags": ["zari", "kam jet", "destinace", "tipy"],
+	"destinationSlug": null,
+	"publish": true,
+	"readingTime": 4,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Planujes cestu v zari? Super volba. Tady je 5 destinaci, kde si to v zari uzijs naplno - od plazi po hory, od Asie po Evropu. Vse overene, zadne kecy."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "1. 🇻🇳 Vietnam"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Sever v podzimnich barvach"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Nejlepsi obdobi: February to April, October to December"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Budget na den: od 20 USD"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Viza: Czech citizens: e-visa or visa on arrival"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-vietnam",
+					"children": [
+						{
+							"type": "text",
+							"text": "Prectisi cely pruvodce: Vietnam"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "2. 🇩🇪 Berlín"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Podletni klid, nizsi ceny"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Nejlepsi obdobi: May to September"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Budget na den: od 50 USD"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Viza: EU citizens: free movement"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-berlin",
+					"children": [
+						{
+							"type": "text",
+							"text": "Prectisi cely pruvodce: Berlín"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "3. 🇮🇹 Řím"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Mene turistu, stale teplo"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Nejlepsi obdobi: April to June, September to October"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Budget na den: od 60 USD"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Viza: EU citizens: free movement"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-rim",
+					"children": [
+						{
+							"type": "text",
+							"text": "Prectisi cely pruvodce: Řím"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "4. 🇫🇷 Paříž"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Poletni Pariz, nizsi ceny"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Nejlepsi obdobi: April to June, September to October"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Budget na den: od 70 USD"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Viza: EU citizens: free movement"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-pariz",
+					"children": [
+						{
+							"type": "text",
+							"text": "Prectisi cely pruvodce: Paříž"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "5. 🇲🇾 Malajsie &#8211; Malajský poloostrov"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Suche obdobi, idealni na Langkawi"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Nejlepsi obdobi: March to October"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Budget na den: od 25 USD"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Viza: Czech citizens: visa-free 90 days"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-malajsie-malajsky-poloostrov",
+					"children": [
+						{
+							"type": "text",
+							"text": "Prectisi cely pruvodce: Malajsie &#8211; Malajský poloostrov"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Jak vybrat?"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Zalezi, co hledas. Chces plaze? Mrkni na ostrovy. Chces kulturu a historii? Evropska mesta budou lepsi volba. A hlavne - cim driv zacnes hledat letenky, tim lip."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "link",
+					"url": "/articles/kolik-stoji-den-srovnani",
+					"children": [
+						{
+							"type": "text",
+							"text": "Srovnani cen: kolik stoji den v ruznych destinacich"
+						}
+					]
+				}
+			]
+		}
+	]
 }

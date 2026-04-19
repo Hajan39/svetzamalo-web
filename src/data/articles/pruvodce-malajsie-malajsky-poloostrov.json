@@ -1,92 +1,87 @@
 {
-  "title": "Malajsie – Malajský poloostrov – praktický průvodce pro cestovatele",
-  "slug": "pruvodce-malajsie-malajsky-poloostrov",
-  "excerpt": "Pokud se těšíte na typický asijský chaos, zmatek a špínu, budete zklamáni. Malajsie je oproti ostatním státům jihovýchodní Asie relativně civilizovaná. Klasické pouliční jídlo, hezké pláže, prales a…",
-  "articleType": "destination-guide",
-  "contentLang": "cs",
-  "tags": [
-    "Asie",
-    "Malajsie – Malajský poloostrov",
-    "cestování",
-    "budget"
-  ],
-  "destinationSlug": "malajsie-malajsky-poloostrov",
-  "publish": false,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Pokud se těšíte na typický asijský chaos, zmatek a špínu, budete zklamáni. Malajsie je oproti ostatním státům jihovýchodní Asie relativně civilizovaná. Klasické pouliční jídlo, hezké pláže, prales a čajové plantáže vás ale určitě nezklamou."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Kdy jet"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Nejlepší doba pro návštěvu: březen až říjen."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Jazyk a komunikace"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Místní jazyky: malajština, angličtina. S angličtinou se v turistických oblastech domluvíte."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobný průvodce"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
-        },
-        {
-          "type": "text",
-          "text": "kompletním průvodci – Malajsie – Malajský poloostrov",
-          "url": "/destinations/guide/malajsie-malajsky-poloostrov"
-        },
-        {
-          "type": "text",
-          "text": "."
-        }
-      ]
-    }
-  ]
+	"title": "Malajsie – Malajský poloostrov – praktický průvodce pro cestovatele",
+	"slug": "pruvodce-malajsie-malajsky-poloostrov",
+	"excerpt": "Pokud se těšíte na typický asijský chaos, zmatek a špínu, budete zklamáni. Malajsie je oproti ostatním státům jihovýchodní Asie relativně civilizovaná. Klasické pouliční jídlo, hezké pláže, prales a…",
+	"articleType": "destination-guide",
+	"contentLang": "cs",
+	"tags": ["Asie", "Malajsie – Malajský poloostrov", "cestování", "budget"],
+	"destinationSlug": "malajsie-malajsky-poloostrov",
+	"publish": false,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Pokud se těšíte na typický asijský chaos, zmatek a špínu, budete zklamáni. Malajsie je oproti ostatním státům jihovýchodní Asie relativně civilizovaná. Klasické pouliční jídlo, hezké pláže, prales a čajové plantáže vás ale určitě nezklamou."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Kdy jet"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Nejlepší doba pro návštěvu: březen až říjen."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Jazyk a komunikace"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Místní jazyky: malajština, angličtina. S angličtinou se v turistických oblastech domluvíte."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobný průvodce"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+				},
+				{
+					"type": "text",
+					"text": "kompletním průvodci – Malajsie – Malajský poloostrov",
+					"url": "/destinations/guide/malajsie-malajsky-poloostrov"
+				},
+				{
+					"type": "text",
+					"text": "."
+				}
+			]
+		}
+	]
 }

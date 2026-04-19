@@ -1,92 +1,87 @@
 {
-  "title": "Stockholm – praktický průvodce pro cestovatele",
-  "slug": "pruvodce-stockholm",
-  "excerpt": "Stockholm je poklidným přírodním městem. I přes to, že se jedná o hlavní město, působí Stockholm spíš jako přímořské městečko, nebo vesnice (v některých částech). Stockholm bývá přezdíván také jako…",
-  "articleType": "destination-guide",
-  "contentLang": "cs",
-  "tags": [
-    "Evropa",
-    "Stockholm",
-    "cestování",
-    "budget"
-  ],
-  "destinationSlug": "stockholm",
-  "publish": false,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Stockholm je poklidným přírodním městem. I přes to, že se jedná o hlavní město, působí Stockholm spíš jako přímořské městečko, nebo vesnice (v některých částech). Stockholm bývá přezdíván také jako Benátky severu díky svým kanálům a ostrůvkům mezi nimi."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Kdy jet"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Nejlepší doba pro návštěvu: květen až září."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Jazyk a komunikace"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Místní jazyky: Swedish."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobný průvodce"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
-        },
-        {
-          "type": "text",
-          "text": "kompletním průvodci – Stockholm",
-          "url": "/destinations/guide/stockholm"
-        },
-        {
-          "type": "text",
-          "text": "."
-        }
-      ]
-    }
-  ]
+	"title": "Stockholm – praktický průvodce pro cestovatele",
+	"slug": "pruvodce-stockholm",
+	"excerpt": "Stockholm je poklidným přírodním městem. I přes to, že se jedná o hlavní město, působí Stockholm spíš jako přímořské městečko, nebo vesnice (v některých částech). Stockholm bývá přezdíván také jako…",
+	"articleType": "destination-guide",
+	"contentLang": "cs",
+	"tags": ["Evropa", "Stockholm", "cestování", "budget"],
+	"destinationSlug": "stockholm",
+	"publish": false,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Stockholm je poklidným přírodním městem. I přes to, že se jedná o hlavní město, působí Stockholm spíš jako přímořské městečko, nebo vesnice (v některých částech). Stockholm bývá přezdíván také jako Benátky severu díky svým kanálům a ostrůvkům mezi nimi."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Kdy jet"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Nejlepší doba pro návštěvu: květen až září."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Jazyk a komunikace"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Místní jazyky: Swedish."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobný průvodce"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+				},
+				{
+					"type": "text",
+					"text": "kompletním průvodci – Stockholm",
+					"url": "/destinations/guide/stockholm"
+				},
+				{
+					"type": "text",
+					"text": "."
+				}
+			]
+		}
+	]
 }

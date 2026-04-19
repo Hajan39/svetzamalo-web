@@ -1,18 +1,18 @@
 export {
-  AnalyticsProvider,
-  getAnalyticsConfig,
-  initializeGoogleAnalytics,
-  initializePlausible,
-  useAnalytics,
-  useAnalyticsConsent,
+	AnalyticsProvider,
+	getAnalyticsConfig,
+	initializeGoogleAnalytics,
+	initializePlausible,
+	useAnalytics,
+	useAnalyticsConsent,
 } from "./AnalyticsProvider";
 
 export {
-  ConsentBanner,
-  PrivacySettingsModal,
-  anonymizeIp,
-  generatePrivacyId,
-  hasDoNotTrack,
-  shouldEnableAnalytics,
-  useConsentBanner,
+	anonymizeIp,
+	ConsentBanner,
+	generatePrivacyId,
+	hasDoNotTrack,
+	PrivacySettingsModal,
+	shouldEnableAnalytics,
+	useConsentBanner,
 } from "./ConsentBanner";

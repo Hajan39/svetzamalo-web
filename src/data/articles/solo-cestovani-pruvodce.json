@@ -1,379 +1,373 @@
 {
-  "title": "Solo cestovani: kompletni pruvodce pro odhodlane samotare",
-  "slug": "solo-cestovani-pruvodce",
-  "excerpt": "Cestovat sam? Zni to desive, ale je to jedna z nejlepsich zkusenosti. Tady je vse, co potrebujete vedet.",
-  "articleType": "practical-info",
-  "contentLang": "cs",
-  "tags": [
-    "solo cestovani",
-    "sam/sama",
-    "bezpecnost",
-    "tipy",
-    "zacatecnici"
-  ],
-  "publish": true,
-  "readingTime": 5,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Cestovat sam? Zni to desive, ale je to jedna z nejlepsich zkusenosti, co muzete zazit. Zadne kompromisy, zadne cekani na nikoho, uplna svoboda. Tady je vse, co potrebujete vedet."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Proc cestovat sam/sama"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Uplna svoboda - jedete kam chcete, kdy chcete. Zadne hlasovani o restauraci."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Poznate vic lidi - solo cestovatel je pristupnejsi. V hostelech navazete kontakty behem minut."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Osobni rust - naucite se resit problemy, orientovat se, komunikovat v cizim jazyce."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Rychlejsi rozhodovani - neni na koho cekat. Chcete zustat den navic? Zustante."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Kam poprve sam/sama"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Ne vsechny destinace jsou idealni na prvni solo cestu. Tady jsou ty nejbezpecnejsi a nejpristupnejsi:"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "-> "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/vietnam",
-          "children": [
-            {
-              "type": "text",
-              "text": "Vietnam"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " - Super levny, bezpecny, skvele jidlo, velka backpackerska komunita."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "-> "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/bali",
-          "children": [
-            {
-              "type": "text",
-              "text": "Bali"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " - Spousta solo cestovatelu, snadna orientace, levne."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "-> "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/slovinsko",
-          "children": [
-            {
-              "type": "text",
-              "text": "Slovinsko"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " - Kompaktni, bezpecne, krasna priroda. Zvladnete za 5 dni."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "-> "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/sri-lanka",
-          "children": [
-            {
-              "type": "text",
-              "text": "Sri Lanka"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " - Prijemni lide, vlaky jako z filmu, cajove plantaze."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Bezpecnost na solo ceste"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Sdylejte svuj itinerar s nekym doma - a aktualizujte ho."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Kopie dokladu v cloudu (Google Drive, iCloud)."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Lokalni SIM karta = jistota navigace a komunikace."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Nebojte se hostelů - sdilene pokoje = noví pratele.Soukrome v hostelu taky existuji."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Prvni noc vzdy zarezervujte predem. Zbytek klidne na miste."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Duverujte svemu instinktu - kdyz se neco nezda, odejdete."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Solo cestovani pro zeny"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Jihovychodni Asie je obecne velmi bezpecna pro solo cestovatelky."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Vyhybejte se osamelymm mistem po setmeni."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "V hostelech si vybirejte pokoje jen pro zeny (female dorm)."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Pamatujte: tisice zen cestuji solo kazdy den. Neni to nic neobvykleho."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Precti si taky"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "-> "
-        },
-        {
-          "type": "link",
-          "url": "/articles/top-5-prvni-dalkova-cesta",
-          "children": [
-            {
-              "type": "text",
-              "text": "Poprve daleko? 5 idealnich destinaci"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "-> "
-        },
-        {
-          "type": "link",
-          "url": "/articles/prvni-dalkova-cesta-checklist",
-          "children": [
-            {
-              "type": "text",
-              "text": "Prvni dalkova cesta: checklist"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "-> "
-        },
-        {
-          "type": "link",
-          "url": "/articles/chyby-ktere-stoji-penize",
-          "children": [
-            {
-              "type": "text",
-              "text": "8 chyb, ktere stoji penize"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"title": "Solo cestovani: kompletni pruvodce pro odhodlane samotare",
+	"slug": "solo-cestovani-pruvodce",
+	"excerpt": "Cestovat sam? Zni to desive, ale je to jedna z nejlepsich zkusenosti. Tady je vse, co potrebujete vedet.",
+	"articleType": "practical-info",
+	"contentLang": "cs",
+	"tags": ["solo cestovani", "sam/sama", "bezpecnost", "tipy", "zacatecnici"],
+	"publish": true,
+	"readingTime": 5,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Cestovat sam? Zni to desive, ale je to jedna z nejlepsich zkusenosti, co muzete zazit. Zadne kompromisy, zadne cekani na nikoho, uplna svoboda. Tady je vse, co potrebujete vedet."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Proc cestovat sam/sama"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Uplna svoboda - jedete kam chcete, kdy chcete. Zadne hlasovani o restauraci."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Poznate vic lidi - solo cestovatel je pristupnejsi. V hostelech navazete kontakty behem minut."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Osobni rust - naucite se resit problemy, orientovat se, komunikovat v cizim jazyce."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Rychlejsi rozhodovani - neni na koho cekat. Chcete zustat den navic? Zustante."
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Kam poprve sam/sama"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Ne vsechny destinace jsou idealni na prvni solo cestu. Tady jsou ty nejbezpecnejsi a nejpristupnejsi:"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "-> "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/vietnam",
+					"children": [
+						{
+							"type": "text",
+							"text": "Vietnam"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " - Super levny, bezpecny, skvele jidlo, velka backpackerska komunita."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "-> "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/bali",
+					"children": [
+						{
+							"type": "text",
+							"text": "Bali"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " - Spousta solo cestovatelu, snadna orientace, levne."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "-> "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/slovinsko",
+					"children": [
+						{
+							"type": "text",
+							"text": "Slovinsko"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " - Kompaktni, bezpecne, krasna priroda. Zvladnete za 5 dni."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "-> "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/sri-lanka",
+					"children": [
+						{
+							"type": "text",
+							"text": "Sri Lanka"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " - Prijemni lide, vlaky jako z filmu, cajove plantaze."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Bezpecnost na solo ceste"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Sdylejte svuj itinerar s nekym doma - a aktualizujte ho."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Kopie dokladu v cloudu (Google Drive, iCloud)."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Lokalni SIM karta = jistota navigace a komunikace."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Nebojte se hostelů - sdilene pokoje = noví pratele.Soukrome v hostelu taky existuji."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Prvni noc vzdy zarezervujte predem. Zbytek klidne na miste."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Duverujte svemu instinktu - kdyz se neco nezda, odejdete."
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Solo cestovani pro zeny"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Jihovychodni Asie je obecne velmi bezpecna pro solo cestovatelky."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Vyhybejte se osamelymm mistem po setmeni."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "V hostelech si vybirejte pokoje jen pro zeny (female dorm)."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Pamatujte: tisice zen cestuji solo kazdy den. Neni to nic neobvykleho."
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Precti si taky"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "-> "
+				},
+				{
+					"type": "link",
+					"url": "/articles/top-5-prvni-dalkova-cesta",
+					"children": [
+						{
+							"type": "text",
+							"text": "Poprve daleko? 5 idealnich destinaci"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "-> "
+				},
+				{
+					"type": "link",
+					"url": "/articles/prvni-dalkova-cesta-checklist",
+					"children": [
+						{
+							"type": "text",
+							"text": "Prvni dalkova cesta: checklist"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "-> "
+				},
+				{
+					"type": "link",
+					"url": "/articles/chyby-ktere-stoji-penize",
+					"children": [
+						{
+							"type": "text",
+							"text": "8 chyb, ktere stoji penize"
+						}
+					]
+				}
+			]
+		}
+	]
 }

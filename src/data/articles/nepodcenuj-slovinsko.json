@@ -1,175 +1,169 @@
 {
-  "title": "5 veci, ktere nepodcenuj ve Slovinsku",
-  "slug": "nepodcenuj-slovinsko",
-  "excerpt": "Jedete do destinace Slovinsko? Tady je 5 veci, co lide nejcasteji podceni.",
-  "articleType": "practical-info",
-  "contentLang": "cs",
-  "tags": [
-    "Slovinsko",
-    "tipy",
-    "varovani",
-    "nepodcenuj",
-    "prakticke info"
-  ],
-  "destinationSlug": "slovinsko",
-  "publish": true,
-  "readingTime": 3,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Jedete do destinace Slovinsko a chcete se vyhnout neprijemnym prekvapenim? Tady je 5 veci, ktere lide nejcasteji podceni - a jak se na ne pripravit."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Parkovani u Bledu je drama"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Parkoviste u jezera Bled se zaplni brzo rano. Parkujte dale a dojidte pesky."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Hory se nemaji podcenovat"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "I Julske Alpy zabiji. Pocasi se meni rychle, vezme si vrstvu nav a destedni bundu."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Slovinsko neni tak levne"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Ceny jsou srovnatelne s Ceskom, nektere veci i drazsi. Neni to Balkan."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Vintgar je krasny, ale plny lidi"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Soutesca Vintgar je top atrakce. Prijedte brzy rano nebo pozde odpoledne."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Dalnice potrebuji znamku"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "E-vinetka je povinna. Bez ni riskujete pokutu 300+ EUR."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Pripraveni?"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "-> "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-slovinsko",
-          "children": [
-            {
-              "type": "text",
-              "text": "Kompletni pruvodce: Slovinsko"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " - vse co potrebujete vedet."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "-> "
-        },
-        {
-          "type": "link",
-          "url": "/articles/chyby-ktere-stoji-penize",
-          "children": [
-            {
-              "type": "text",
-              "text": "8 chyb, ktere stoji penize"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"title": "5 veci, ktere nepodcenuj ve Slovinsku",
+	"slug": "nepodcenuj-slovinsko",
+	"excerpt": "Jedete do destinace Slovinsko? Tady je 5 veci, co lide nejcasteji podceni.",
+	"articleType": "practical-info",
+	"contentLang": "cs",
+	"tags": ["Slovinsko", "tipy", "varovani", "nepodcenuj", "prakticke info"],
+	"destinationSlug": "slovinsko",
+	"publish": true,
+	"readingTime": 3,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Jedete do destinace Slovinsko a chcete se vyhnout neprijemnym prekvapenim? Tady je 5 veci, ktere lide nejcasteji podceni - a jak se na ne pripravit."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Parkovani u Bledu je drama"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Parkoviste u jezera Bled se zaplni brzo rano. Parkujte dale a dojidte pesky."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Hory se nemaji podcenovat"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "I Julske Alpy zabiji. Pocasi se meni rychle, vezme si vrstvu nav a destedni bundu."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Slovinsko neni tak levne"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Ceny jsou srovnatelne s Ceskom, nektere veci i drazsi. Neni to Balkan."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Vintgar je krasny, ale plny lidi"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Soutesca Vintgar je top atrakce. Prijedte brzy rano nebo pozde odpoledne."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Dalnice potrebuji znamku"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "E-vinetka je povinna. Bez ni riskujete pokutu 300+ EUR."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Pripraveni?"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "-> "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-slovinsko",
+					"children": [
+						{
+							"type": "text",
+							"text": "Kompletni pruvodce: Slovinsko"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " - vse co potrebujete vedet."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "-> "
+				},
+				{
+					"type": "link",
+					"url": "/articles/chyby-ktere-stoji-penize",
+					"children": [
+						{
+							"type": "text",
+							"text": "8 chyb, ktere stoji penize"
+						}
+					]
+				}
+			]
+		}
+	]
 }

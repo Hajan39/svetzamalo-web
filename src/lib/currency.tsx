@@ -69,8 +69,9 @@ const DEFAULT_CURRENCY = SUPPORTED_CURRENCIES[0]; // USD
 export function CurrencyProvider({ children }: { children: ReactNode }) {
 	// Use fixed default for initial render so server and client match (avoid hydration mismatch).
 	// After mount, useEffect syncs from localStorage.
-	const [currency, setCurrencyState] =
-		useState<CurrencyInfo>(() => DEFAULT_CURRENCY);
+	const [currency, setCurrencyState] = useState<CurrencyInfo>(
+		() => DEFAULT_CURRENCY,
+	);
 
 	useEffect(() => {
 		const stored = localStorage.getItem(STORAGE_KEY);

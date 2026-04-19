@@ -1,92 +1,87 @@
 {
-  "title": "Srí Lanka – praktický průvodce pro cestovatele",
-  "slug": "pruvodce-sri-lanka",
-  "excerpt": "Dle místních perla Indického oceánu. To je asi na posouzení každého zvlášť, jakkoli nádherná se Srí Lanka může zdát, nelze opomenout i její stinné stránky, které trochu narušují celkový dojem…",
-  "articleType": "destination-guide",
-  "contentLang": "cs",
-  "tags": [
-    "Asie",
-    "Srí Lanka",
-    "cestování",
-    "budget"
-  ],
-  "destinationSlug": "sri-lanka",
-  "publish": false,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Dle místních perla Indického oceánu. To je asi na posouzení každého zvlášť, jakkoli nádherná se Srí Lanka může zdát, nelze opomenout i její stinné stránky, které trochu narušují celkový dojem ostrova."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Kdy jet"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Nejlepší doba pro návštěvu: December to March."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Jazyk a komunikace"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Místní jazyky: sinhálština, tamilština, angličtina. S angličtinou se v turistických oblastech domluvíte."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobný průvodce"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
-        },
-        {
-          "type": "text",
-          "text": "kompletním průvodci – Srí Lanka",
-          "url": "/destinations/guide/sri-lanka"
-        },
-        {
-          "type": "text",
-          "text": "."
-        }
-      ]
-    }
-  ]
+	"title": "Srí Lanka – praktický průvodce pro cestovatele",
+	"slug": "pruvodce-sri-lanka",
+	"excerpt": "Dle místních perla Indického oceánu. To je asi na posouzení každého zvlášť, jakkoli nádherná se Srí Lanka může zdát, nelze opomenout i její stinné stránky, které trochu narušují celkový dojem…",
+	"articleType": "destination-guide",
+	"contentLang": "cs",
+	"tags": ["Asie", "Srí Lanka", "cestování", "budget"],
+	"destinationSlug": "sri-lanka",
+	"publish": false,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Dle místních perla Indického oceánu. To je asi na posouzení každého zvlášť, jakkoli nádherná se Srí Lanka může zdát, nelze opomenout i její stinné stránky, které trochu narušují celkový dojem ostrova."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Kdy jet"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Nejlepší doba pro návštěvu: December to March."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Jazyk a komunikace"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Místní jazyky: sinhálština, tamilština, angličtina. S angličtinou se v turistických oblastech domluvíte."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobný průvodce"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+				},
+				{
+					"type": "text",
+					"text": "kompletním průvodci – Srí Lanka",
+					"url": "/destinations/guide/sri-lanka"
+				},
+				{
+					"type": "text",
+					"text": "."
+				}
+			]
+		}
+	]
 }

@@ -1,216 +1,210 @@
 {
-  "title": "Galapágy: stojí to za ty peníze?",
-  "slug": "galapagy-v-kostce",
-  "excerpt": "Galapágy jsou jako malý ještě neobjevený kus přírodního ráje.",
-  "articleType": "other",
-  "contentLang": "cs",
-  "tags": [
-    "Jižní Amerika",
-    "Galapágy",
-    "cestování",
-    "budget",
-    "v kostce"
-  ],
-  "destinationSlug": "galapagy",
-  "publish": true,
-  "readingTime": 2,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Galapágy jsou jako malý ještě neobjevený kus přírodního ráje. Jako byste se vrátili do dob, kdy planetu obývala pouze zvířata a náramně se jim dařilo."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🎯 To nejdůležitější v bodech"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Počítejte s denním budgetem kolem 1840 Kč – není to nejlevnější, ale za ty peníze dostanete hodně."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Víza nepotřebujete – stačí pas a jdete na to."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Nejlepší doba k návštěvě: červen až prosinec (cooler, wildlife)."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Místo je to opravdu unikátní a pro milovníky přírody úplným rájem na zemi."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Název Galapágy znamená v překladu želví ostrovy a poukazuje tedy na unikátní výskyt želv sloních."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Jakožto majitel jiného než ekvádorského pasu, nemáte nárok na levné letenky."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "📋 Praktické info"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Měna: americký dolar (USD)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Jazyky: španělština"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Časové pásmo: GALT (UTC-6)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Střední budget: ~3450 Kč/den"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "📖 Chceš vědět víc?"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Přečti si "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-galapagy",
-          "children": [
-            {
-              "type": "text",
-              "text": "kompletní průvodce – Galapágy"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " – najdeš tam detaily o dopravě, jídle, ubytování a konkrétních místech."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🗺️ Mohlo by tě zajímat"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/ekvador",
-          "children": [
-            {
-              "type": "text",
-              "text": "Ekvádor"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " – budget ~575 Kč/den"
-        }
-      ]
-    }
-  ]
+	"title": "Galapágy: stojí to za ty peníze?",
+	"slug": "galapagy-v-kostce",
+	"excerpt": "Galapágy jsou jako malý ještě neobjevený kus přírodního ráje.",
+	"articleType": "other",
+	"contentLang": "cs",
+	"tags": ["Jižní Amerika", "Galapágy", "cestování", "budget", "v kostce"],
+	"destinationSlug": "galapagy",
+	"publish": true,
+	"readingTime": 2,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Galapágy jsou jako malý ještě neobjevený kus přírodního ráje. Jako byste se vrátili do dob, kdy planetu obývala pouze zvířata a náramně se jim dařilo."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🎯 To nejdůležitější v bodech"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Počítejte s denním budgetem kolem 1840 Kč – není to nejlevnější, ale za ty peníze dostanete hodně."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Víza nepotřebujete – stačí pas a jdete na to."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Nejlepší doba k návštěvě: červen až prosinec (cooler, wildlife)."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Místo je to opravdu unikátní a pro milovníky přírody úplným rájem na zemi."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Název Galapágy znamená v překladu želví ostrovy a poukazuje tedy na unikátní výskyt želv sloních."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Jakožto majitel jiného než ekvádorského pasu, nemáte nárok na levné letenky."
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "📋 Praktické info"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Měna: americký dolar (USD)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Jazyky: španělština"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Časové pásmo: GALT (UTC-6)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Střední budget: ~3450 Kč/den"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "📖 Chceš vědět víc?"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Přečti si "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-galapagy",
+					"children": [
+						{
+							"type": "text",
+							"text": "kompletní průvodce – Galapágy"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " – najdeš tam detaily o dopravě, jídle, ubytování a konkrétních místech."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🗺️ Mohlo by tě zajímat"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/ekvador",
+					"children": [
+						{
+							"type": "text",
+							"text": "Ekvádor"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " – budget ~575 Kč/den"
+				}
+			]
+		}
+	]
 }

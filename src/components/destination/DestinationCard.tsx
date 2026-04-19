@@ -10,9 +10,18 @@ interface DestinationCardProps {
 
 // Month abbreviations for compact display
 const MONTH_ABBREV: Record<string, string> = {
-	January: "Jan", February: "Feb", March: "Mar", April: "Apr",
-	May: "May", June: "Jun", July: "Jul", August: "Aug",
-	September: "Sep", October: "Oct", November: "Nov", December: "Dec",
+	January: "Jan",
+	February: "Feb",
+	March: "Mar",
+	April: "Apr",
+	May: "May",
+	June: "Jun",
+	July: "Jul",
+	August: "Aug",
+	September: "Sep",
+	October: "Oct",
+	November: "Nov",
+	December: "Dec",
 };
 
 function formatBestTime(bestTime: string): string {
@@ -35,11 +44,17 @@ const FALLBACK_COVER =
 	"https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop";
 
 /** Get first paragraph as plain text from intro HTML; fallback to metaDescription */
-function getFirstParagraphIntro(html: string | undefined, fallback: string): string {
+function getFirstParagraphIntro(
+	html: string | undefined,
+	fallback: string,
+): string {
 	if (!html || !html.trim()) return fallback;
 	const firstP = html.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
 	const raw = firstP ? firstP[1] : html;
-	const text = raw.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+	const text = raw
+		.replace(/<[^>]+>/g, " ")
+		.replace(/\s+/g, " ")
+		.trim();
 	return text || fallback;
 }
 
@@ -53,7 +68,10 @@ export function DestinationCard({
 			? destination.heroImage.url
 			: destination.heroImage?.src) || FALLBACK_COVER;
 	const fallbackExcerpt = destination.seo?.metaDescription ?? "";
-	const introText = getFirstParagraphIntro(destination.introHtml, fallbackExcerpt);
+	const introText = getFirstParagraphIntro(
+		destination.introHtml,
+		fallbackExcerpt,
+	);
 
 	if (variant === "compact") {
 		return (
@@ -105,7 +123,9 @@ export function DestinationCard({
 					<div>
 						<div className="flex items-center gap-1 sm:gap-2 mb-0.5 sm:mb-1">
 							{destination.flagEmoji && (
-								<span className="text-base sm:text-xl md:text-2xl">{destination.flagEmoji}</span>
+								<span className="text-base sm:text-xl md:text-2xl">
+									{destination.flagEmoji}
+								</span>
 							)}
 							<h3 className="text-sm sm:text-lg md:text-xl font-semibold text-white line-clamp-1">
 								{destination.name}
@@ -118,7 +138,9 @@ export function DestinationCard({
 
 						<div className="flex items-center justify-between text-[10px] sm:text-xs md:text-sm">
 							{destination.languages?.length ? (
-								<span className="text-white/90">{destination.languages[0]}</span>
+								<span className="text-white/90">
+									{destination.languages[0]}
+								</span>
 							) : null}
 							{destination.bestTimeToVisit ? (
 								<span className="text-white/70 hidden sm:inline">

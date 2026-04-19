@@ -1,92 +1,87 @@
 {
-  "title": "Oslo – praktický průvodce pro cestovatele",
-  "slug": "pruvodce-oslo",
-  "excerpt": "Norské Oslo nepatří k těm nejnavštěvovanějším místům v zemi, pokud sem ale přiletíte, můžete zde den, nebo dva klidně strávit. A nebo si prohlídku Osla spojit s návštěvou hor a jezer dál od města.…",
-  "articleType": "destination-guide",
-  "contentLang": "cs",
-  "tags": [
-    "Evropa",
-    "Oslo",
-    "cestování",
-    "budget"
-  ],
-  "destinationSlug": "oslo",
-  "publish": false,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Norské Oslo nepatří k těm nejnavštěvovanějším místům v zemi, pokud sem ale přiletíte, můžete zde den, nebo dva klidně strávit. A nebo si prohlídku Osla spojit s návštěvou hor a jezer dál od města. Toto evropské hlavní město patří mezi ta klidná a čistá přímořská města s pohodovou atmosférou."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Kdy jet"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Nejlepší doba pro návštěvu: květen až září."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Jazyk a komunikace"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Místní jazyky: norština."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobný průvodce"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
-        },
-        {
-          "type": "text",
-          "text": "kompletním průvodci – Oslo",
-          "url": "/destinations/guide/oslo"
-        },
-        {
-          "type": "text",
-          "text": "."
-        }
-      ]
-    }
-  ]
+	"title": "Oslo – praktický průvodce pro cestovatele",
+	"slug": "pruvodce-oslo",
+	"excerpt": "Norské Oslo nepatří k těm nejnavštěvovanějším místům v zemi, pokud sem ale přiletíte, můžete zde den, nebo dva klidně strávit. A nebo si prohlídku Osla spojit s návštěvou hor a jezer dál od města.…",
+	"articleType": "destination-guide",
+	"contentLang": "cs",
+	"tags": ["Evropa", "Oslo", "cestování", "budget"],
+	"destinationSlug": "oslo",
+	"publish": false,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Norské Oslo nepatří k těm nejnavštěvovanějším místům v zemi, pokud sem ale přiletíte, můžete zde den, nebo dva klidně strávit. A nebo si prohlídku Osla spojit s návštěvou hor a jezer dál od města. Toto evropské hlavní město patří mezi ta klidná a čistá přímořská města s pohodovou atmosférou."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Kdy jet"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Nejlepší doba pro návštěvu: květen až září."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Jazyk a komunikace"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Místní jazyky: norština."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobný průvodce"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+				},
+				{
+					"type": "text",
+					"text": "kompletním průvodci – Oslo",
+					"url": "/destinations/guide/oslo"
+				},
+				{
+					"type": "text",
+					"text": "."
+				}
+			]
+		}
+	]
 }

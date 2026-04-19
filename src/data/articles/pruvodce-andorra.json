@@ -1,92 +1,87 @@
 {
-  "title": "Andorra – praktický průvodce pro cestovatele",
-  "slug": "pruvodce-andorra",
-  "excerpt": "Andorra je horský ministát nacházející se v Pyrenejích na hranicích mezi Francií a Španělskem. Do Andorry lidé jezdí zejména kvůli krásným horám. Nachází se zde velké množství turistických cest pro…",
-  "articleType": "destination-guide",
-  "contentLang": "cs",
-  "tags": [
-    "Evropa",
-    "Andorra",
-    "cestování",
-    "budget"
-  ],
-  "destinationSlug": "andorra",
-  "publish": false,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Andorra je horský ministát nacházející se v Pyrenejích na hranicích mezi Francií a Španělskem. Do Andorry lidé jezdí zejména kvůli krásným horám. Nachází se zde velké množství turistických cest pro letní turistiku a zároveň i několik lyžařských areálů pro zimní vyžití."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Kdy jet"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Nejlepší doba pro návštěvu: prosinec až duben (lyžování), červen až září (turistika)."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Jazyk a komunikace"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Místní jazyky: katalánština, španělština, francouzština. Základy španělštiny se hodí, angličtina funguje v turistických zónách."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobný průvodce"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
-        },
-        {
-          "type": "text",
-          "text": "kompletním průvodci – Andorra",
-          "url": "/destinations/guide/andorra"
-        },
-        {
-          "type": "text",
-          "text": "."
-        }
-      ]
-    }
-  ]
+	"title": "Andorra – praktický průvodce pro cestovatele",
+	"slug": "pruvodce-andorra",
+	"excerpt": "Andorra je horský ministát nacházející se v Pyrenejích na hranicích mezi Francií a Španělskem. Do Andorry lidé jezdí zejména kvůli krásným horám. Nachází se zde velké množství turistických cest pro…",
+	"articleType": "destination-guide",
+	"contentLang": "cs",
+	"tags": ["Evropa", "Andorra", "cestování", "budget"],
+	"destinationSlug": "andorra",
+	"publish": false,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Andorra je horský ministát nacházející se v Pyrenejích na hranicích mezi Francií a Španělskem. Do Andorry lidé jezdí zejména kvůli krásným horám. Nachází se zde velké množství turistických cest pro letní turistiku a zároveň i několik lyžařských areálů pro zimní vyžití."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Kdy jet"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Nejlepší doba pro návštěvu: prosinec až duben (lyžování), červen až září (turistika)."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Jazyk a komunikace"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Místní jazyky: katalánština, španělština, francouzština. Základy španělštiny se hodí, angličtina funguje v turistických zónách."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobný průvodce"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+				},
+				{
+					"type": "text",
+					"text": "kompletním průvodci – Andorra",
+					"url": "/destinations/guide/andorra"
+				},
+				{
+					"type": "text",
+					"text": "."
+				}
+			]
+		}
+	]
 }

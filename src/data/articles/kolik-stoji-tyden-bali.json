@@ -1,316 +1,310 @@
 {
-  "title": "Kolik stoji tyden v destinaci Bali? Realny rozpocet",
-  "slug": "kolik-stoji-tyden-bali",
-  "excerpt": "Planujes tyden v destinaci Bali? Budget od 4025 Kc, stredni trida od 8855 Kc. Tady jsou realna cisla.",
-  "articleType": "practical-info",
-  "contentLang": "cs",
-  "tags": [
-    "Bali",
-    "rozpocet",
-    "ceny",
-    "kolik stoji",
-    "tyden"
-  ],
-  "destinationSlug": "bali",
-  "publish": true,
-  "readingTime": 3,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Planujes tyden v destinaci Bali a chces vedet, kolik to bude stat? Tady je realny rozpocet - od backpackera az po stredni tridu. Zadne marketingove kecy, proste cisla."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Denni rozpocet v cislech"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Budget (hostel, street food, MHD): ~575 Kc/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Stredni trida (hotel, restaurace, taxi): ~1265 Kc/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Luxus (resort, fine dining): ~3450 Kc/den"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Tyden na budgetu: ~4 025 Kc"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Ubytovani: ~1407 Kc/tyden (hostel, guesthouse)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Jidlo: ~1204 Kc/tyden (street food, lokalni podniky)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Doprava: ~805 Kc/tyden (MHD, skutr, sdilene taxi)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Aktivity a vstupy: ~602 Kc/tyden"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Tyden ve stredni tride: ~8 855 Kc"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Ubytovani: ~3542 Kc/tyden (3* hotel, Airbnb)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Jidlo: ~2212 Kc/tyden (restaurace, obcas street food)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Doprava: ~1771 Kc/tyden (taxi, pronajem skutru/auta)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Aktivity a vstupy: ~1323 Kc/tyden"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Jak usetrit"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Street food je tvuj nejlepsi pritel - nejen levnejsi, ale casto i lepsi nez restaurace."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Hostely s kuchyni = snidane a vecere za zlomek ceny restaurace."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Mimo hlavni sezonu jsou ceny ubytovani i o 30-50 % nizsi."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Lokalni doprava (autobusy, vlaky) je vzdy levnejsi nez turisticke transfery."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Na spoustě míst naleznete tzv. fotokoutky, kde se za poplatek můžete vyfotit v proutěném hnízdě, nebo vajíčku přivázaném na stromě."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Populární jsou fotky na velkých houpačkách, kde se jakoby vznášíte nad rýžovými terasami v červených, nebo bílých šatech, které vám na focení zapůjčí."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Co je v cene navic"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Do celkovych nakladu pocitej jeste letenku (tu porovnej na Google Flights nebo Kiwi.com) a cestovni pojisteni (~500 Kc/tyden). Vizum byva bud zdarma, nebo stoji par stovek."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Chces vedet vic?"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Prectisi "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-bali",
-          "children": [
-            {
-              "type": "text",
-              "text": "kompletni pruvodce - Bali"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " - najdes tam konkretni tipy na jidlo, ubytovani a dopravu."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "-> "
-        },
-        {
-          "type": "link",
-          "url": "/articles/kolik-stoji-den-srovnani",
-          "children": [
-            {
-              "type": "text",
-              "text": "Kolik stoji den: srovnani vsech destinaci"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"title": "Kolik stoji tyden v destinaci Bali? Realny rozpocet",
+	"slug": "kolik-stoji-tyden-bali",
+	"excerpt": "Planujes tyden v destinaci Bali? Budget od 4025 Kc, stredni trida od 8855 Kc. Tady jsou realna cisla.",
+	"articleType": "practical-info",
+	"contentLang": "cs",
+	"tags": ["Bali", "rozpocet", "ceny", "kolik stoji", "tyden"],
+	"destinationSlug": "bali",
+	"publish": true,
+	"readingTime": 3,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Planujes tyden v destinaci Bali a chces vedet, kolik to bude stat? Tady je realny rozpocet - od backpackera az po stredni tridu. Zadne marketingove kecy, proste cisla."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Denni rozpocet v cislech"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Budget (hostel, street food, MHD): ~575 Kc/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Stredni trida (hotel, restaurace, taxi): ~1265 Kc/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Luxus (resort, fine dining): ~3450 Kc/den"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Tyden na budgetu: ~4 025 Kc"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Ubytovani: ~1407 Kc/tyden (hostel, guesthouse)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Jidlo: ~1204 Kc/tyden (street food, lokalni podniky)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Doprava: ~805 Kc/tyden (MHD, skutr, sdilene taxi)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Aktivity a vstupy: ~602 Kc/tyden"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Tyden ve stredni tride: ~8 855 Kc"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Ubytovani: ~3542 Kc/tyden (3* hotel, Airbnb)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Jidlo: ~2212 Kc/tyden (restaurace, obcas street food)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Doprava: ~1771 Kc/tyden (taxi, pronajem skutru/auta)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Aktivity a vstupy: ~1323 Kc/tyden"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Jak usetrit"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Street food je tvuj nejlepsi pritel - nejen levnejsi, ale casto i lepsi nez restaurace."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Hostely s kuchyni = snidane a vecere za zlomek ceny restaurace."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Mimo hlavni sezonu jsou ceny ubytovani i o 30-50 % nizsi."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Lokalni doprava (autobusy, vlaky) je vzdy levnejsi nez turisticke transfery."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Na spoustě míst naleznete tzv. fotokoutky, kde se za poplatek můžete vyfotit v proutěném hnízdě, nebo vajíčku přivázaném na stromě."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Populární jsou fotky na velkých houpačkách, kde se jakoby vznášíte nad rýžovými terasami v červených, nebo bílých šatech, které vám na focení zapůjčí."
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Co je v cene navic"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Do celkovych nakladu pocitej jeste letenku (tu porovnej na Google Flights nebo Kiwi.com) a cestovni pojisteni (~500 Kc/tyden). Vizum byva bud zdarma, nebo stoji par stovek."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Chces vedet vic?"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Prectisi "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-bali",
+					"children": [
+						{
+							"type": "text",
+							"text": "kompletni pruvodce - Bali"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " - najdes tam konkretni tipy na jidlo, ubytovani a dopravu."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "-> "
+				},
+				{
+					"type": "link",
+					"url": "/articles/kolik-stoji-den-srovnani",
+					"children": [
+						{
+							"type": "text",
+							"text": "Kolik stoji den: srovnani vsech destinaci"
+						}
+					]
+				}
+			]
+		}
+	]
 }

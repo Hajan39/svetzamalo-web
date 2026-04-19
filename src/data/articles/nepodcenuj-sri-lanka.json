@@ -1,213 +1,207 @@
 {
-  "title": "7 veci, ktere nepodcenuj na Sri Lance",
-  "slug": "nepodcenuj-sri-lanka",
-  "excerpt": "Jedete do destinace Srí Lanka? Tady je 7 veci, co lide nejcasteji podceni.",
-  "articleType": "practical-info",
-  "contentLang": "cs",
-  "tags": [
-    "Srí Lanka",
-    "tipy",
-    "varovani",
-    "nepodcenuj",
-    "prakticke info"
-  ],
-  "destinationSlug": "sri-lanka",
-  "publish": true,
-  "readingTime": 3,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Jedete do destinace Srí Lanka a chcete se vyhnout neprijemnym prekvapenim? Tady je 7 veci, ktere lide nejcasteji podceni - a jak se na ne pripravit."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Vlaky jsou zazitek, ale jezdí dlouho"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Slavna vlaková tra skrze cajove plantaze je nadherna, ale jede 7 hodin. Rezervujte si mista."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Tuk-tuky vsude"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Hlavni dopravni prostredek. Dohodnete cenu predembez app by cena mohla bet dvojnasobna."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Monzunove obdobi zalezy na pobrezii"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Jihozapad: kveten-zari dest. Severovychod: rijen-leden dest. Planuijte podle toho."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Kari k snidani"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Ano, kari se jí i rano. A je to vyborne. Zvyknete si."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Klasterni pravidla"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "V chrameech sundejte boty a pokryjte ramena a kolena. Bile obleceni je vhodne."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Pijaky na plazich"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Divoke pijaky na nekterych jiznich plazich (mirissa, unawatuna) - pozor na kradeze."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Zvírata na silnicich"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Sloni, opice, velmi a psi na silnicich. Jezdte opatrne, hlavne v noci."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Pripraveni?"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "-> "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-sri-lanka",
-          "children": [
-            {
-              "type": "text",
-              "text": "Kompletni pruvodce: Srí Lanka"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " - vse co potrebujete vedet."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "-> "
-        },
-        {
-          "type": "link",
-          "url": "/articles/chyby-ktere-stoji-penize",
-          "children": [
-            {
-              "type": "text",
-              "text": "8 chyb, ktere stoji penize"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"title": "7 veci, ktere nepodcenuj na Sri Lance",
+	"slug": "nepodcenuj-sri-lanka",
+	"excerpt": "Jedete do destinace Srí Lanka? Tady je 7 veci, co lide nejcasteji podceni.",
+	"articleType": "practical-info",
+	"contentLang": "cs",
+	"tags": ["Srí Lanka", "tipy", "varovani", "nepodcenuj", "prakticke info"],
+	"destinationSlug": "sri-lanka",
+	"publish": true,
+	"readingTime": 3,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Jedete do destinace Srí Lanka a chcete se vyhnout neprijemnym prekvapenim? Tady je 7 veci, ktere lide nejcasteji podceni - a jak se na ne pripravit."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Vlaky jsou zazitek, ale jezdí dlouho"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Slavna vlaková tra skrze cajove plantaze je nadherna, ale jede 7 hodin. Rezervujte si mista."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Tuk-tuky vsude"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Hlavni dopravni prostredek. Dohodnete cenu predembez app by cena mohla bet dvojnasobna."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Monzunove obdobi zalezy na pobrezii"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Jihozapad: kveten-zari dest. Severovychod: rijen-leden dest. Planuijte podle toho."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Kari k snidani"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Ano, kari se jí i rano. A je to vyborne. Zvyknete si."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Klasterni pravidla"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "V chrameech sundejte boty a pokryjte ramena a kolena. Bile obleceni je vhodne."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Pijaky na plazich"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Divoke pijaky na nekterych jiznich plazich (mirissa, unawatuna) - pozor na kradeze."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Zvírata na silnicich"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Sloni, opice, velmi a psi na silnicich. Jezdte opatrne, hlavne v noci."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Pripraveni?"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "-> "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-sri-lanka",
+					"children": [
+						{
+							"type": "text",
+							"text": "Kompletni pruvodce: Srí Lanka"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " - vse co potrebujete vedet."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "-> "
+				},
+				{
+					"type": "link",
+					"url": "/articles/chyby-ktere-stoji-penize",
+					"children": [
+						{
+							"type": "text",
+							"text": "8 chyb, ktere stoji penize"
+						}
+					]
+				}
+			]
+		}
+	]
 }

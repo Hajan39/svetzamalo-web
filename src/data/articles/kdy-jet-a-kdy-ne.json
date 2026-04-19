@@ -1,750 +1,744 @@
 {
-  "title": "Kdy jet a kdy ne: kompletní přehled destinací podle sezón",
-  "slug": "kdy-jet-a-kdy-ne",
-  "excerpt": "Načasování je všechno. Tady je přehled, kdy se do které destinace vyplatí jet - a kdy raději ne.",
-  "articleType": "practical-info",
-  "contentLang": "cs",
-  "tags": [
-    "kdy jet",
-    "sezóna",
-    "počasí",
-    "praktické info",
-    "plánování"
-  ],
-  "publish": true,
-  "readingTime": 5,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Načasování je všechno. Jet do Thajska v monsunech? Na Fuerteventuru v květnu? Do Říma v srpnu? Může to být peklo. Tady je přehled, kdy se do které destinace vyplatí jet - a kdy raději ne."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "❄️ → ☀️ V zimě za sluncem (prosinec - březen)"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Utéct z české zimy? Tyhle destinace jsou ideální v našich zimních měsících."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Britské Panenské Ostrovy",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - prosinec až duben"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Dominikána jih (Santo Domingo, Boca Chica)",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - prosinec až duben"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Dominikána jihovýchod (Bayahibe, Dominicus a Saona)",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - prosinec až duben"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Dominikána jihozápad (Barahona, Enriquillo, Pedernales)",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - prosinec až duben"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Dominikána sever (Cabarete, Sosua, Puerto Plata)",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - prosinec až duben"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Dominikána střed (Jarabacoa a Constanza)",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - prosinec až duben"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Dominikána východ (Punta Cana, Samana, Las Galeras, Las Terenas, Lagoons)",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - prosinec až duben"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Dominikánská republika",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - prosinec až duben"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Mauricius",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - květen až prosinec"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Portoriko",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - prosinec až duben"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Singapur",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - únor až duben"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Srí Lanka",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - prosinec až březen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Vietnam",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - únor až duben, říjen až prosinec"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "☀️ Léto v Evropě i dál (červen - září)"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Klasická letní sezóna. Ty nejhezčí měsíce pro tyto destinace."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Berlín",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - květen až září"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Francie",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - duben až červen, září až říjen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Itálie sever",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - duben až červen, září až říjen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Lucemburk",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - květen až září"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Monaco",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - duben až červen, září až říjen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Oslo",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - květen až září"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Paříž",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - duben až červen, září až říjen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Řím",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - duben až červen, září až říjen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "San Marino",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - duben až červen, září až říjen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Slovinsko",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - květen až září"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Stockholm",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - květen až září"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Vatikán",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - březen až květen, září až listopad"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🌤️ Mimo sezónu = nejlepší ceny (duben - květen, říjen - listopad)"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Přechodná období mají své kouzlo: menší davy, nižší ceny, stále příjemné počasí."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Bali",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - duben až říjen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Gili Trawangan, Gili Meno a Gili Air",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - duben až říjen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Jižní Thajsko",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - listopad až březen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Lombok",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - duben až říjen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Malajsie – Malajský poloostrov",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - březen až říjen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Nusa Penida",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - duben až říjen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Samoa",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - květen až říjen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Španělsko – Fuerteventura",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - říjen až duben"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Španělsko – Gran Canaria",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - říjen až duben"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Švýcarsko",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - duben až říjen"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🌍 Celoročně nebo flexibilně"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Tyhle destinace fungují prakticky kdykoliv."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Andorra",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - prosinec až duben (lyžování), červen až září (turistika)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Ekvádor",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - červen až září (dry), prosinec až leden (coast)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Galapágy",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - červen až prosinec (cooler, wildlife)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "💡 3 tipy na timing"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "ordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Mimo sezónu = levnější letenky i ubytování, ale ověřte počasí."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "V hlavní sezóně bookujte dopředu - populární místa se zaplní i měsíce předem."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Sledujte monsunová období v Asii - neznamená to deště celý den, ale odpoledne může pořádně lít."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "✈️ Přečti si taky"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/articles/kam-v-zime-za-sluncem-top-5",
-          "children": [
-            {
-              "type": "text",
-              "text": "Kam v zimě za sluncem: Top 5"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/articles/kolik-stoji-den-srovnani",
-          "children": [
-            {
-              "type": "text",
-              "text": "Kolik stojí den cestování?"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"title": "Kdy jet a kdy ne: kompletní přehled destinací podle sezón",
+	"slug": "kdy-jet-a-kdy-ne",
+	"excerpt": "Načasování je všechno. Tady je přehled, kdy se do které destinace vyplatí jet - a kdy raději ne.",
+	"articleType": "practical-info",
+	"contentLang": "cs",
+	"tags": ["kdy jet", "sezóna", "počasí", "praktické info", "plánování"],
+	"publish": true,
+	"readingTime": 5,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Načasování je všechno. Jet do Thajska v monsunech? Na Fuerteventuru v květnu? Do Říma v srpnu? Může to být peklo. Tady je přehled, kdy se do které destinace vyplatí jet - a kdy raději ne."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "❄️ → ☀️ V zimě za sluncem (prosinec - březen)"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Utéct z české zimy? Tyhle destinace jsou ideální v našich zimních měsících."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Britské Panenské Ostrovy",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - prosinec až duben"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Dominikána jih (Santo Domingo, Boca Chica)",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - prosinec až duben"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Dominikána jihovýchod (Bayahibe, Dominicus a Saona)",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - prosinec až duben"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Dominikána jihozápad (Barahona, Enriquillo, Pedernales)",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - prosinec až duben"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Dominikána sever (Cabarete, Sosua, Puerto Plata)",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - prosinec až duben"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Dominikána střed (Jarabacoa a Constanza)",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - prosinec až duben"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Dominikána východ (Punta Cana, Samana, Las Galeras, Las Terenas, Lagoons)",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - prosinec až duben"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Dominikánská republika",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - prosinec až duben"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Mauricius",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - květen až prosinec"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Portoriko",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - prosinec až duben"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Singapur",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - únor až duben"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Srí Lanka",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - prosinec až březen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Vietnam",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - únor až duben, říjen až prosinec"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "☀️ Léto v Evropě i dál (červen - září)"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Klasická letní sezóna. Ty nejhezčí měsíce pro tyto destinace."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Berlín",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - květen až září"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Francie",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - duben až červen, září až říjen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Itálie sever",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - duben až červen, září až říjen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Lucemburk",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - květen až září"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Monaco",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - duben až červen, září až říjen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Oslo",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - květen až září"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Paříž",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - duben až červen, září až říjen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Řím",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - duben až červen, září až říjen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "San Marino",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - duben až červen, září až říjen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Slovinsko",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - květen až září"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Stockholm",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - květen až září"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Vatikán",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - březen až květen, září až listopad"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🌤️ Mimo sezónu = nejlepší ceny (duben - květen, říjen - listopad)"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Přechodná období mají své kouzlo: menší davy, nižší ceny, stále příjemné počasí."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Bali",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - duben až říjen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Gili Trawangan, Gili Meno a Gili Air",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - duben až říjen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Jižní Thajsko",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - listopad až březen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Lombok",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - duben až říjen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Malajsie – Malajský poloostrov",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - březen až říjen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Nusa Penida",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - duben až říjen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Samoa",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - květen až říjen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Španělsko – Fuerteventura",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - říjen až duben"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Španělsko – Gran Canaria",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - říjen až duben"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Švýcarsko",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - duben až říjen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🌍 Celoročně nebo flexibilně"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Tyhle destinace fungují prakticky kdykoliv."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Andorra",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - prosinec až duben (lyžování), červen až září (turistika)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Ekvádor",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - červen až září (dry), prosinec až leden (coast)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Galapágy",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - červen až prosinec (cooler, wildlife)"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "💡 3 tipy na timing"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "ordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Mimo sezónu = levnější letenky i ubytování, ale ověřte počasí."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "V hlavní sezóně bookujte dopředu - populární místa se zaplní i měsíce předem."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Sledujte monsunová období v Asii - neznamená to deště celý den, ale odpoledne může pořádně lít."
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "✈️ Přečti si taky"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/articles/kam-v-zime-za-sluncem-top-5",
+					"children": [
+						{
+							"type": "text",
+							"text": "Kam v zimě za sluncem: Top 5"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/articles/kolik-stoji-den-srovnani",
+					"children": [
+						{
+							"type": "text",
+							"text": "Kolik stojí den cestování?"
+						}
+					]
+				}
+			]
+		}
+	]
 }

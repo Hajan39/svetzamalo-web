@@ -1,40 +1,38 @@
 // SEO types
-export type { Image, SeoMetadata } from './seo'
-
-// Content block types
-export type {
-  ContentBlock,
-  HeadingBlock,
-  TextBlock,
-  ImageBlock,
-  TipBlock,
-  ListBlock,
-  MonetizationPlaceholder,
-} from './content-blocks'
-
-// Monetization types
-export type {
-  MonetizationType,
-  AffiliatePartner,
-  AffiliateConfig,
-  LeadMagnetConfig,
-  NewsletterConfig,
-  MonetizationSlot,
-} from './monetization'
-
-// Destination types
-export type {
-  Continent,
-  DestinationType,
-  Currency,
-  Destination,
-} from './destination'
 
 // Article types
 export type {
-  ArticleType,
-  Place,
-  FaqItem,
-  ArticleSection,
-  Article,
-} from './article'
+	Article,
+	ArticleSection,
+	ArticleType,
+	FaqItem,
+	Place,
+} from "./article";
+
+// Content block types
+export type {
+	ContentBlock,
+	HeadingBlock,
+	ImageBlock,
+	ListBlock,
+	MonetizationPlaceholder,
+	TextBlock,
+	TipBlock,
+} from "./content-blocks";
+// Destination types
+export type {
+	Continent,
+	Currency,
+	Destination,
+	DestinationType,
+} from "./destination";
+// Monetization types
+export type {
+	AffiliateConfig,
+	AffiliatePartner,
+	LeadMagnetConfig,
+	MonetizationSlot,
+	MonetizationType,
+	NewsletterConfig,
+} from "./monetization";
+export type { Image, SeoMetadata } from "./seo";

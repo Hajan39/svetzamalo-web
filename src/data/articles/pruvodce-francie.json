@@ -1,92 +1,87 @@
 {
-  "title": "Francie – praktický průvodce pro cestovatele",
-  "slug": "pruvodce-francie",
-  "excerpt": "Krásným a snadným státem na procestování, je Francie. Tato země má opravdu co nabídnout nádherná a romantická města plná starých budov a útulných uliček, azurové moře, divoká příroda a vysoké hory v…",
-  "articleType": "destination-guide",
-  "contentLang": "cs",
-  "tags": [
-    "Evropa",
-    "Francie",
-    "cestování",
-    "budget"
-  ],
-  "destinationSlug": "francie",
-  "publish": false,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Krásným a snadným státem na procestování, je Francie. Tato země má opravdu co nabídnout nádherná a romantická města plná starých budov a útulných uliček, azurové moře, divoká příroda a vysoké hory v Alpách, letní lyžařská střediska, proslulé hlavní město a světově známá kuchyně. I přes to, že Francie nepatří mezi levné evropské státy, dovolená zde nemusí být drahou záležitostí."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Kdy jet"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Nejlepší doba pro návštěvu: duben až červen, září až říjen."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Jazyk a komunikace"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Místní jazyky: francouzština. Znalost základů francouzštiny je výhodou."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobný průvodce"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
-        },
-        {
-          "type": "text",
-          "text": "kompletním průvodci – Francie",
-          "url": "/destinations/guide/francie"
-        },
-        {
-          "type": "text",
-          "text": "."
-        }
-      ]
-    }
-  ]
+	"title": "Francie – praktický průvodce pro cestovatele",
+	"slug": "pruvodce-francie",
+	"excerpt": "Krásným a snadným státem na procestování, je Francie. Tato země má opravdu co nabídnout nádherná a romantická města plná starých budov a útulných uliček, azurové moře, divoká příroda a vysoké hory v…",
+	"articleType": "destination-guide",
+	"contentLang": "cs",
+	"tags": ["Evropa", "Francie", "cestování", "budget"],
+	"destinationSlug": "francie",
+	"publish": false,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Krásným a snadným státem na procestování, je Francie. Tato země má opravdu co nabídnout nádherná a romantická města plná starých budov a útulných uliček, azurové moře, divoká příroda a vysoké hory v Alpách, letní lyžařská střediska, proslulé hlavní město a světově známá kuchyně. I přes to, že Francie nepatří mezi levné evropské státy, dovolená zde nemusí být drahou záležitostí."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Kdy jet"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Nejlepší doba pro návštěvu: duben až červen, září až říjen."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Jazyk a komunikace"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Místní jazyky: francouzština. Znalost základů francouzštiny je výhodou."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobný průvodce"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+				},
+				{
+					"type": "text",
+					"text": "kompletním průvodci – Francie",
+					"url": "/destinations/guide/francie"
+				},
+				{
+					"type": "text",
+					"text": "."
+				}
+			]
+		}
+	]
 }

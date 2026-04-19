@@ -7,7 +7,7 @@
     "build": "vite build",
     "build:static": "vite build",
     "preview": "vite preview",
-    "test": "vitest run",
+    "test": "vitest run --config vitest.config.ts",
     "format": "biome format",
     "lint": "biome lint",
     "check": "biome check"
@@ -42,10 +42,14 @@
   "devDependencies": {
     "@biomejs/biome": "2.2.4",
     "@tanstack/devtools-vite": "^0.3.11",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "^22.10.2",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.0.4",
+    "jsdom": "^27.0.1",
     "typescript": "^5.7.2",
     "vite": "^7.1.7",
     "vitest": "^4.0.4"

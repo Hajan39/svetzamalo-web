@@ -48,6 +48,7 @@ export function CurrencySwitcher({
 				{SUPPORTED_CURRENCIES.slice(0, 4).map((curr) => (
 					<button
 						key={curr.code}
+						type="button"
 						onClick={() => setCurrency(curr.code)}
 						className={`px-2 py-1 text-xs font-medium rounded transition-colors ${
 							currency.code === curr.code
@@ -65,8 +66,9 @@ export function CurrencySwitcher({
 	return (
 		<div ref={dropdownRef} className="relative">
 			<button
+				type="button"
 				onClick={() => setIsOpen(!isOpen)}
-				className="flex items-center gap-1.5 px-3 py-2 text-sm text-foreground-secondary hover:text-foreground rounded-lg hover:bg-background-secondary transition-colors"
+				className="flex items-center gap-1.5 rounded-full px-3 py-2 text-sm text-foreground-secondary transition-colors hover:bg-background-secondary hover:text-foreground"
 				aria-expanded={isOpen}
 				aria-haspopup="listbox"
 			>
@@ -77,7 +79,9 @@ export function CurrencySwitcher({
 					fill="none"
 					stroke="currentColor"
 					viewBox="0 0 24 24"
+					aria-hidden="true"
 				>
+					<title>Toggle currency selector</title>
 					<path
 						strokeLinecap="round"
 						strokeLinejoin="round"
@@ -88,15 +92,16 @@ export function CurrencySwitcher({
 			</button>
 
 			{isOpen && (
-				<div className="absolute right-0 mt-2 w-48 bg-background border border-border rounded-lg shadow-lg py-1 z-50">
+				<div className="absolute right-0 z-50 mt-2 w-48 rounded-2xl border border-border bg-background py-1 shadow-lg">
 					{SUPPORTED_CURRENCIES.map((curr) => (
 						<button
 							key={curr.code}
+							type="button"
 							onClick={() => {
 								setCurrency(curr.code);
 								setIsOpen(false);
 							}}
-							className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm text-left transition-colors ${
+							className={`w-full flex items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors ${
 								currency.code === curr.code
 									? "bg-primary-light text-primary"
 									: "text-foreground-secondary hover:bg-background-secondary hover:text-foreground"

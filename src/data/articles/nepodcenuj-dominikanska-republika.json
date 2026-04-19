@@ -1,194 +1,194 @@
 {
-  "title": "6 veci, ktere nepodcenuj v Dominikanske republice",
-  "slug": "nepodcenuj-dominikanska-republika",
-  "excerpt": "Jedete do destinace Dominikánská republika? Tady je 6 veci, co lide nejcasteji podceni.",
-  "articleType": "practical-info",
-  "contentLang": "cs",
-  "tags": [
-    "Dominikánská republika",
-    "tipy",
-    "varovani",
-    "nepodcenuj",
-    "prakticke info"
-  ],
-  "destinationSlug": "dominikanska-republika",
-  "publish": true,
-  "readingTime": 3,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Jedete do destinace Dominikánská republika a chcete se vyhnout neprijemnym prekvapenim? Tady je 6 veci, ktere lide nejcasteji podceni - a jak se na ne pripravit."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Bezpecnost v nocich hodinach"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Nektere ctvrti nejsou bezpecne po setmeni. Drzzte se turistickych zon a pouzivejte taxi."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Pitna voda pouze balena"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Vodu z kohoutku nepijte. I v hotelech si overujte, ze led je z filtrovanevody."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Kolektivni taxi (guagua)"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Lokalni minibusy jsou super levne, ale nacpane. Zazitek sam o sobe."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Koralove utesy a proudy"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Morske proudy mohou byt silne. Plavejte jen na strezanych plazich."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Hurikanova sezona"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Cerven az listopad = riziko hurikanu. Pojisteni je nutnost."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Spropitne je ocekavano"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "V restauracich 10-15 %. U pruvodcu, ridichu a v hotelech take."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Pripraveni?"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "-> "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-dominikanska-republika",
-          "children": [
-            {
-              "type": "text",
-              "text": "Kompletni pruvodce: Dominikánská republika"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " - vse co potrebujete vedet."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "-> "
-        },
-        {
-          "type": "link",
-          "url": "/articles/chyby-ktere-stoji-penize",
-          "children": [
-            {
-              "type": "text",
-              "text": "8 chyb, ktere stoji penize"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"title": "6 veci, ktere nepodcenuj v Dominikanske republice",
+	"slug": "nepodcenuj-dominikanska-republika",
+	"excerpt": "Jedete do destinace Dominikánská republika? Tady je 6 veci, co lide nejcasteji podceni.",
+	"articleType": "practical-info",
+	"contentLang": "cs",
+	"tags": [
+		"Dominikánská republika",
+		"tipy",
+		"varovani",
+		"nepodcenuj",
+		"prakticke info"
+	],
+	"destinationSlug": "dominikanska-republika",
+	"publish": true,
+	"readingTime": 3,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Jedete do destinace Dominikánská republika a chcete se vyhnout neprijemnym prekvapenim? Tady je 6 veci, ktere lide nejcasteji podceni - a jak se na ne pripravit."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Bezpecnost v nocich hodinach"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Nektere ctvrti nejsou bezpecne po setmeni. Drzzte se turistickych zon a pouzivejte taxi."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Pitna voda pouze balena"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Vodu z kohoutku nepijte. I v hotelech si overujte, ze led je z filtrovanevody."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Kolektivni taxi (guagua)"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Lokalni minibusy jsou super levne, ale nacpane. Zazitek sam o sobe."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Koralove utesy a proudy"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Morske proudy mohou byt silne. Plavejte jen na strezanych plazich."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Hurikanova sezona"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Cerven az listopad = riziko hurikanu. Pojisteni je nutnost."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Spropitne je ocekavano"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "V restauracich 10-15 %. U pruvodcu, ridichu a v hotelech take."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Pripraveni?"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "-> "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-dominikanska-republika",
+					"children": [
+						{
+							"type": "text",
+							"text": "Kompletni pruvodce: Dominikánská republika"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " - vse co potrebujete vedet."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "-> "
+				},
+				{
+					"type": "link",
+					"url": "/articles/chyby-ktere-stoji-penize",
+					"children": [
+						{
+							"type": "text",
+							"text": "8 chyb, ktere stoji penize"
+						}
+					]
+				}
+			]
+		}
+	]
 }

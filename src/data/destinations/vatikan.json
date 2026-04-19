@@ -1,914 +1,911 @@
 {
-  "id": 907,
-  "documentId": "nw2cexfvkkworjzxlc0nkvd5",
-  "name": "Vatikán",
-  "slug": "vatikan",
-  "intro": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Při návštěvě"
-        },
-        {
-          "type": "text",
-          "text": "Říma",
-          "url": "https://lowcost-traveling.com/rim/"
-        },
-        {
-          "type": "text",
-          "text": "asi nelze vynechat Vatikán. Jedná se o nejmenší stát na světě, který i přesto stojí za návštěvu. Ve Vatikánu nalezneme světoznámou"
-        },
-        {
-          "type": "text",
-          "text": "baziliku svatého Petra",
-          "url": "https://goo.gl/maps/r2XQTa41ACXYjiz66",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "a náměstí svatého Petra, což je jediné volně přístupné místo. Dále se zde nachází Vatikánské zahrady a Vatikánská muzea. Délka návštěvy se odvíjí od toho, co chce zde člověk navštívit. Letmá návštěva se dá stihnout za odpoledne, důkladnější prohlídka všech částí může zabrat třeba 2 dny."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Doprava"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Vatikán je natolik malý (0,44 km²), že není třeba, ani možnost se na jeho území dopravovat městskou hromadnou dopravou. Do Vatikánu se z centra Říma dostanete pěšky (kousek od Andělského hradu), nebo městskou hromadnou dopravou. Nedaleko Vatikánu je stanice metra"
-        },
-        {
-          "type": "text",
-          "text": "Ottaviano",
-          "url": "https://goo.gl/maps/tH9Z7PR5j3BCxBS59",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "a tramvaje a autobusu"
-        },
-        {
-          "type": "text",
-          "text": "Risorgimento",
-          "url": "https://goo.gl/maps/p6F6wMA3devjC3eQ8",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Co navštívit"
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Bazilika svatého Petra",
-          "url": "https://goo.gl/maps/Vw4YCTRXkEsLryuE7"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Jedná se o největší baziliku na světě a zároveň tak hlavní turistickou památkou, za kterou se sem sjíždějí turisté z celého světa. Do baziliky je vstup zdarma, je ale nutné počítat i s několikahodinovými frontami. Před vstupem do baziliky je jedna dlouhá fronta na kontrolu věcí (rámy jako na letišti), poté následuje fronta druhá, kde kontrolují vhodné oblečení (sukně/kraťasy musí být pod kolena, výstřih a ramena musí být zahaleny)."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Otevírací doba",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "je poněkud nejistá. Za normálního provozu bazilika otevírá v 7. Pokud se tam dostavíte kolem sedmé, máte velkou šanci na krátkou frontu. Otevírací doba je ovšem regulována papežskými audiencemi, či dalšími náboženskými akcemi."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Během audiencí, jsou bazilika a někdy i náměstí úplně uzavřené, je vhodné se o programu informovat dopředu. V těchto situacích budí Vatikán dojem naprostého zmatku a neorgnizovanosti. Na náměstí jsou k odchytnutí příslušníci švýcarské gardy, kteří udržují ve Vatikánu pořádek a pomáhají s organizací náboženských akcí. Nikdo ovšem pořádně neví, co se děje a každý přichází s jinou informací. Z tohoto důvodu nenechávejte návštěvu Vatikánu na poslední den dovolené, mohlo by se stát, že se tam nepodíváte."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Kromě samotné baziliky, je také jedinečným zážitkem navštívit její 136m vysokou kopuli."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180421_092339-1024x768.jpg",
-        "alternativeText": "Bazilika svatého Petra, Vatikán.",
-        "url": "/uploads/20180421_092339_1024x768_ba0a1e6e43.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180421_092339-1024x768.jpg",
-            "hash": "thumbnail_20180421_092339_1024x768_ba0a1e6e43",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 6.01,
-            "sizeInBytes": 6012,
-            "url": "/uploads/thumbnail_20180421_092339_1024x768_ba0a1e6e43.jpg"
-          },
-          "medium": {
-            "name": "medium_20180421_092339-1024x768.jpg",
-            "hash": "medium_20180421_092339_1024x768_ba0a1e6e43",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 63.55,
-            "sizeInBytes": 63548,
-            "url": "/uploads/medium_20180421_092339_1024x768_ba0a1e6e43.jpg"
-          },
-          "small": {
-            "name": "small_20180421_092339-1024x768.jpg",
-            "hash": "small_20180421_092339_1024x768_ba0a1e6e43",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 29.85,
-            "sizeInBytes": 29848,
-            "url": "/uploads/small_20180421_092339_1024x768_ba0a1e6e43.jpg"
-          },
-          "large": {
-            "name": "large_20180421_092339-1024x768.jpg",
-            "hash": "large_20180421_092339_1024x768_ba0a1e6e43",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 107.3,
-            "sizeInBytes": 107296,
-            "url": "/uploads/large_20180421_092339_1024x768_ba0a1e6e43.jpg"
-          }
-        },
-        "hash": "20180421_092339_1024x768_ba0a1e6e43",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 115.29,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:03:29.680Z",
-        "updatedAt": "2026-02-17T13:03:29.680Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "children": [
-        {
-          "type": "text",
-          "text": "Vyhlídková kopule baziliky"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Vstupenky se kupují hned u baziliky (musíte tedy nejprve projít bezpečnostní kontrolou), kde se samozřejmě stojí opět fronta. Máte 2 možnosti: vstupenka pěšky (více jak 500 schodů) za 8 euro, nebo výtahem za 10 euro, který vás ovšem nedoveze ani do půli cesty a zbytek stejně musíte po schodech. Před vstupem jsou cedule, že vstup na kopuli je pouze pro osoby, kteří netrpí dechovými, či srdečními problémy. Vstupenky"
-        },
-        {
-          "type": "text",
-          "text": "nelze platit kartou!",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "Pouze hotově a neuznávají se zde žádné studentské, důchodcovské, ani jiné slevy."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Výstup není nijak drastický, po určité části se dostanete na střechu baziliky, kde je možné si odpočinout, a poté dovnitř do kopule, kde můžete pozorovat dění v bazilice shora. Kopuli zevnitř lze projít po obvodu jen do poloviny. Dále se pokračuje schodištěm v plášti kopule (je relativně úzké a stěny zkosené) až k cílovému vrcholu, kde se dostanete ven na vyhlídku až nad kopuli a můžete se projít po obvodu, v zamřížovaném prostoru. Opět očekávejte davy lidí. Výhled je ovšem úchvatný. Můžete vidět celé Svatopetrské náměstí, Vatikánské zahrady, budovy Vatikánských muzeí a v podstatě celý Řím."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Při sestupu z kopule se dostanete znovu na střechu baziliky, kde jsou WC zdarma, pítko s pitnou vodou a malý bufet. Není problém si zde sednout na zem/střechu a po všech těch vystátých frontách se občerstvit. Dále budete pokračovat po schodech opět dolů a dostanete se přímo do baziliky."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180422_144418-1024x768.jpg",
-        "alternativeText": "Pohled ze střechy baziliky na vyhlídkovou kopuli.",
-        "url": "/uploads/20180422_144418_1024x768_670f9b24c4.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180422_144418-1024x768.jpg",
-            "hash": "thumbnail_20180422_144418_1024x768_670f9b24c4",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 6.51,
-            "sizeInBytes": 6509,
-            "url": "/uploads/thumbnail_20180422_144418_1024x768_670f9b24c4.jpg"
-          },
-          "small": {
-            "name": "small_20180422_144418-1024x768.jpg",
-            "hash": "small_20180422_144418_1024x768_670f9b24c4",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 29.38,
-            "sizeInBytes": 29382,
-            "url": "/uploads/small_20180422_144418_1024x768_670f9b24c4.jpg"
-          },
-          "medium": {
-            "name": "medium_20180422_144418-1024x768.jpg",
-            "hash": "medium_20180422_144418_1024x768_670f9b24c4",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 59.9,
-            "sizeInBytes": 59896,
-            "url": "/uploads/medium_20180422_144418_1024x768_670f9b24c4.jpg"
-          },
-          "large": {
-            "name": "large_20180422_144418-1024x768.jpg",
-            "hash": "large_20180422_144418_1024x768_670f9b24c4",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 97.59,
-            "sizeInBytes": 97591,
-            "url": "/uploads/large_20180422_144418_1024x768_670f9b24c4.jpg"
-          }
-        },
-        "hash": "20180422_144418_1024x768_670f9b24c4",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 102.23,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:03:30.278Z",
-        "updatedAt": "2026-02-17T13:03:30.278Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180422_144323-1024x768.jpg",
-        "alternativeText": "Pohled ze střechy baziliky.",
-        "url": "/uploads/20180422_144323_1024x768_6d4cab0aed.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180422_144323-1024x768.jpg",
-            "hash": "thumbnail_20180422_144323_1024x768_6d4cab0aed",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 6.64,
-            "sizeInBytes": 6635,
-            "url": "/uploads/thumbnail_20180422_144323_1024x768_6d4cab0aed.jpg"
-          },
-          "small": {
-            "name": "small_20180422_144323-1024x768.jpg",
-            "hash": "small_20180422_144323_1024x768_6d4cab0aed",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 32.25,
-            "sizeInBytes": 32254,
-            "url": "/uploads/small_20180422_144323_1024x768_6d4cab0aed.jpg"
-          },
-          "large": {
-            "name": "large_20180422_144323-1024x768.jpg",
-            "hash": "large_20180422_144323_1024x768_6d4cab0aed",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 115.91,
-            "sizeInBytes": 115914,
-            "url": "/uploads/large_20180422_144323_1024x768_6d4cab0aed.jpg"
-          },
-          "medium": {
-            "name": "medium_20180422_144323-1024x768.jpg",
-            "hash": "medium_20180422_144323_1024x768_6d4cab0aed",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 68.72,
-            "sizeInBytes": 68721,
-            "url": "/uploads/medium_20180422_144323_1024x768_6d4cab0aed.jpg"
-          }
-        },
-        "hash": "20180422_144323_1024x768_6d4cab0aed",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 123.6,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:03:30.672Z",
-        "updatedAt": "2026-02-17T13:03:30.672Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180422_140326-1024x768.jpg",
-        "alternativeText": "Pohled z vyhlídkové kopule na náměstí před bazilikou okolní Řím.",
-        "url": "/uploads/20180422_140326_1024x768_73df34726c.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180422_140326-1024x768.jpg",
-            "hash": "thumbnail_20180422_140326_1024x768_73df34726c",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 9.56,
-            "sizeInBytes": 9564,
-            "url": "/uploads/thumbnail_20180422_140326_1024x768_73df34726c.jpg"
-          },
-          "small": {
-            "name": "small_20180422_140326-1024x768.jpg",
-            "hash": "small_20180422_140326_1024x768_73df34726c",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 50.52,
-            "sizeInBytes": 50520,
-            "url": "/uploads/small_20180422_140326_1024x768_73df34726c.jpg"
-          },
-          "medium": {
-            "name": "medium_20180422_140326-1024x768.jpg",
-            "hash": "medium_20180422_140326_1024x768_73df34726c",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 108.58,
-            "sizeInBytes": 108577,
-            "url": "/uploads/medium_20180422_140326_1024x768_73df34726c.jpg"
-          },
-          "large": {
-            "name": "large_20180422_140326-1024x768.jpg",
-            "hash": "large_20180422_140326_1024x768_73df34726c",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 182.94,
-            "sizeInBytes": 182944,
-            "url": "/uploads/large_20180422_140326_1024x768_73df34726c.jpg"
-          }
-        },
-        "hash": "20180422_140326_1024x768_73df34726c",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 195.67,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:03:31.411Z",
-        "updatedAt": "2026-02-17T13:03:31.411Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 4,
-      "children": [
-        {
-          "type": "text",
-          "text": "Bazilika"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Za povšimnutí hned u vchodu stojí velká bronzová Brána smrti (Porta della Morte), která je používána pro přinášení rakví s mrtvými těly papežů do baziliky. Vpravo od vchodu v první kapli stojí slavná Michelangelova Pieta. Z důvodu bezpečnosti je tato socha kryta sklem. Uprostřed baziliky se nachází obrovský papežský oltář, který je umístěn nad hrobem svatého Petra. Baldachýn nad oltářem je vyroben z bronzu, který byl odcizen z kopule Pantheonu, což je v Římě relativně častý způsob zisku materiálu. Dále je zde k vidění nesčetné množství soch, maleb, obrazů, oltářů."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Zajímavá je i velká mramorová deska nacházející se ve vchodu do sakristie, na které jsou vytesána jména všech papežů od počátku i s daty jejich úmrtí. Za prohlídku stojí samozřejmě i náměstí. Na náměstí naleznete 2 fontány a uprostřed tyčící se egyptský obelisk, který často slouží k odpočinku turistů. Náměstí je lemováno kolonádou s mohutnými sloupy, ta je zdobená sochami, kterých se zde nachází 140. Mimo jiné jsou zde toalety zdarma, bohužel většinou s frontou. Opět zde naleznete pítko s pitnou vodou."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180422_153453-1024x768.jpg",
-        "alternativeText": " Michelangelova Pieta uvnitř baziliky svatého Petra.",
-        "url": "/uploads/20180422_153453_1024x768_1672eee886.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180422_153453-1024x768.jpg",
-            "hash": "thumbnail_20180422_153453_1024x768_1672eee886",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 6.26,
-            "sizeInBytes": 6256,
-            "url": "/uploads/thumbnail_20180422_153453_1024x768_1672eee886.jpg"
-          },
-          "medium": {
-            "name": "medium_20180422_153453-1024x768.jpg",
-            "hash": "medium_20180422_153453_1024x768_1672eee886",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 50.82,
-            "sizeInBytes": 50823,
-            "url": "/uploads/medium_20180422_153453_1024x768_1672eee886.jpg"
-          },
-          "small": {
-            "name": "small_20180422_153453-1024x768.jpg",
-            "hash": "small_20180422_153453_1024x768_1672eee886",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 26.48,
-            "sizeInBytes": 26479,
-            "url": "/uploads/small_20180422_153453_1024x768_1672eee886.jpg"
-          },
-          "large": {
-            "name": "large_20180422_153453-1024x768.jpg",
-            "hash": "large_20180422_153453_1024x768_1672eee886",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 78.44,
-            "sizeInBytes": 78438,
-            "url": "/uploads/large_20180422_153453_1024x768_1672eee886.jpg"
-          }
-        },
-        "hash": "20180422_153453_1024x768_1672eee886",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 81.79,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:03:31.754Z",
-        "updatedAt": "2026-02-17T13:03:31.754Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180422_153101-1024x768.jpg",
-        "alternativeText": "Uvnitř baziliky svatého Petra.",
-        "url": "/uploads/20180422_153101_1024x768_73bfd28445.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180422_153101-1024x768.jpg",
-            "hash": "thumbnail_20180422_153101_1024x768_73bfd28445",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 8.24,
-            "sizeInBytes": 8237,
-            "url": "/uploads/thumbnail_20180422_153101_1024x768_73bfd28445.jpg"
-          },
-          "small": {
-            "name": "small_20180422_153101-1024x768.jpg",
-            "hash": "small_20180422_153101_1024x768_73bfd28445",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 39.01,
-            "sizeInBytes": 39008,
-            "url": "/uploads/small_20180422_153101_1024x768_73bfd28445.jpg"
-          },
-          "medium": {
-            "name": "medium_20180422_153101-1024x768.jpg",
-            "hash": "medium_20180422_153101_1024x768_73bfd28445",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 79.53,
-            "sizeInBytes": 79533,
-            "url": "/uploads/medium_20180422_153101_1024x768_73bfd28445.jpg"
-          },
-          "large": {
-            "name": "large_20180422_153101-1024x768.jpg",
-            "hash": "large_20180422_153101_1024x768_73bfd28445",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 127.57,
-            "sizeInBytes": 127573,
-            "url": "/uploads/large_20180422_153101_1024x768_73bfd28445.jpg"
-          }
-        },
-        "hash": "20180422_153101_1024x768_73bfd28445",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 134.08,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:03:32.121Z",
-        "updatedAt": "2026-02-17T13:03:32.121Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Vatikánská muzea",
-          "url": "https://goo.gl/maps/2RKyE6Q95uUpEqZF9"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Ve Vatikánu se nachází rozsáhlý komplex muzeí, kde papežové po staletí shromažďují cenná umělecká díla. V dnešní době se jedná o jednu z největších uměleckých sbírek na světě. Je zde prý tolik exponátů, že kdyby vám prohlídka každého z nich zabrala 1 minutu, celková prohlídka muzeí by trvala 12 let. Ve Vatikánském paláci se nachází 8 muzeí, 5 galérií, Apoštolská knihovna, apartmány Borgiů, Raffaelovy síně a slavná Sixtinská kaple. V této soukromé papežské kapli se konají konkláve kardinálů při volbě nového papeže."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Sixtinská kaple je známá díky nádherným freskám od Michelangela. Ve Vatikánských muzeích naleznete například rozsáhlou sbírku soch, etruskou expozici, egyptskou expozici a další. Do Vatikánských muzeí i do Sixtinské kaple je jednotné vstupné. Pozor, každou neděli je tento komplex zavřený. Výjimku tvoří pouze poslední neděle v měsíci, kdy je otevřeno a vstupné je zdarma. Otevírací doba je ovšem v tento den zkrácená."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180422_141120-1024x768.jpg",
-        "alternativeText": "Pohled na vatikánské zahrady z kopule baziliky.",
-        "url": "/uploads/20180422_141120_1024x768_6b68e71241.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180422_141120-1024x768.jpg",
-            "hash": "thumbnail_20180422_141120_1024x768_6b68e71241",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 9.64,
-            "sizeInBytes": 9642,
-            "url": "/uploads/thumbnail_20180422_141120_1024x768_6b68e71241.jpg"
-          },
-          "small": {
-            "name": "small_20180422_141120-1024x768.jpg",
-            "hash": "small_20180422_141120_1024x768_6b68e71241",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 50.5,
-            "sizeInBytes": 50502,
-            "url": "/uploads/small_20180422_141120_1024x768_6b68e71241.jpg"
-          },
-          "medium": {
-            "name": "medium_20180422_141120-1024x768.jpg",
-            "hash": "medium_20180422_141120_1024x768_6b68e71241",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 109.08,
-            "sizeInBytes": 109082,
-            "url": "/uploads/medium_20180422_141120_1024x768_6b68e71241.jpg"
-          },
-          "large": {
-            "name": "large_20180422_141120-1024x768.jpg",
-            "hash": "large_20180422_141120_1024x768_6b68e71241",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 185.28,
-            "sizeInBytes": 185284,
-            "url": "/uploads/large_20180422_141120_1024x768_6b68e71241.jpg"
-          }
-        },
-        "hash": "20180422_141120_1024x768_6b68e71241",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 198.73,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:03:33.152Z",
-        "updatedAt": "2026-02-17T13:03:33.152Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180422_140911-1024x768.jpg",
-        "alternativeText": "Pohled na vatikánská muzea z kopule baziliky.",
-        "url": "/uploads/20180422_140911_1024x768_737dd27ea3.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180422_140911-1024x768.jpg",
-            "hash": "thumbnail_20180422_140911_1024x768_737dd27ea3",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 10.59,
-            "sizeInBytes": 10586,
-            "url": "/uploads/thumbnail_20180422_140911_1024x768_737dd27ea3.jpg"
-          },
-          "small": {
-            "name": "small_20180422_140911-1024x768.jpg",
-            "hash": "small_20180422_140911_1024x768_737dd27ea3",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 56.05,
-            "sizeInBytes": 56052,
-            "url": "/uploads/small_20180422_140911_1024x768_737dd27ea3.jpg"
-          },
-          "medium": {
-            "name": "medium_20180422_140911-1024x768.jpg",
-            "hash": "medium_20180422_140911_1024x768_737dd27ea3",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 121.19,
-            "sizeInBytes": 121191,
-            "url": "/uploads/medium_20180422_140911_1024x768_737dd27ea3.jpg"
-          },
-          "large": {
-            "name": "large_20180422_140911-1024x768.jpg",
-            "hash": "large_20180422_140911_1024x768_737dd27ea3",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 204.37,
-            "sizeInBytes": 204372,
-            "url": "/uploads/large_20180422_140911_1024x768_737dd27ea3.jpg"
-          }
-        },
-        "hash": "20180422_140911_1024x768_737dd27ea3",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 218.67,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:03:33.801Z",
-        "updatedAt": "2026-02-17T13:03:33.801Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    }
-  ],
-  "createdAt": "2026-02-17T13:03:34.358Z",
-  "updatedAt": "2026-02-17T13:03:34.358Z",
-  "publishedAt": "2026-02-17T13:03:34.362Z",
-  "continent": "europe",
-  "contentLang": "cs",
-  "flagEmoji": "🇻🇦",
-  "timezone": "CET (UTC+1)",
-  "languages": [
-    "Italian",
-    "Latin"
-  ],
-  "currencyCode": "EUR",
-  "currencyName": "Euro",
-  "currencySymbol": "€",
-  "budgetPerDayBudget": 60,
-  "budgetPerDayMidRange": 120,
-  "budgetPerDayLuxury": 300,
-  "bestTimeToVisit": "March to May, September to November",
-  "visaInfo": "EU citizens: no visa needed",
-  "destinationType": "microstate",
-  "cover": {
-    "id": 8533,
-    "documentId": "mgp3mx8216vkxr2l4n2eqyyo",
-    "name": "cover-1771333414077-sqpaku.jpg",
-    "alternativeText": "Vatikán",
-    "caption": null,
-    "width": 1008,
-    "height": 756,
-    "formats": {
-      "thumbnail": {
-        "name": "thumbnail_cover-1771333414077-sqpaku.jpg",
-        "hash": "thumbnail_cover_1771333414077_sqpaku_429631483b",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "path": null,
-        "width": 208,
-        "height": 156,
-        "size": 10.04,
-        "sizeInBytes": 10037,
-        "url": "/uploads/thumbnail_cover_1771333414077_sqpaku_429631483b.jpg"
-      },
-      "small": {
-        "name": "small_cover-1771333414077-sqpaku.jpg",
-        "hash": "small_cover_1771333414077_sqpaku_429631483b",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "path": null,
-        "width": 500,
-        "height": 375,
-        "size": 54.56,
-        "sizeInBytes": 54555,
-        "url": "/uploads/small_cover_1771333414077_sqpaku_429631483b.jpg"
-      },
-      "medium": {
-        "name": "medium_cover-1771333414077-sqpaku.jpg",
-        "hash": "medium_cover_1771333414077_sqpaku_429631483b",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "path": null,
-        "width": 750,
-        "height": 563,
-        "size": 121.97,
-        "sizeInBytes": 121972,
-        "url": "/uploads/medium_cover_1771333414077_sqpaku_429631483b.jpg"
-      },
-      "large": {
-        "name": "large_cover-1771333414077-sqpaku.jpg",
-        "hash": "large_cover_1771333414077_sqpaku_429631483b",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "path": null,
-        "width": 1000,
-        "height": 750,
-        "size": 210.52,
-        "sizeInBytes": 210523,
-        "url": "/uploads/large_cover_1771333414077_sqpaku_429631483b.jpg"
-      }
-    },
-    "hash": "cover_1771333414077_sqpaku_429631483b",
-    "ext": ".jpg",
-    "mime": "image/jpeg",
-    "size": 214.35,
-    "url": "/uploads/cover_1771333414077_sqpaku_429631483b.jpg",
-    "previewUrl": null,
-    "provider": "local",
-    "provider_metadata": null,
-    "createdAt": "2026-02-17T13:03:34.336Z",
-    "updatedAt": "2026-02-17T13:03:34.336Z",
-    "publishedAt": "2026-02-17T13:03:34.337Z"
-  }
+	"id": 907,
+	"documentId": "nw2cexfvkkworjzxlc0nkvd5",
+	"name": "Vatikán",
+	"slug": "vatikan",
+	"intro": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Při návštěvě"
+				},
+				{
+					"type": "text",
+					"text": "Říma",
+					"url": "https://lowcost-traveling.com/rim/"
+				},
+				{
+					"type": "text",
+					"text": "asi nelze vynechat Vatikán. Jedná se o nejmenší stát na světě, který i přesto stojí za návštěvu. Ve Vatikánu nalezneme světoznámou"
+				},
+				{
+					"type": "text",
+					"text": "baziliku svatého Petra",
+					"url": "https://goo.gl/maps/r2XQTa41ACXYjiz66",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "a náměstí svatého Petra, což je jediné volně přístupné místo. Dále se zde nachází Vatikánské zahrady a Vatikánská muzea. Délka návštěvy se odvíjí od toho, co chce zde člověk navštívit. Letmá návštěva se dá stihnout za odpoledne, důkladnější prohlídka všech částí může zabrat třeba 2 dny."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Doprava"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Vatikán je natolik malý (0,44 km²), že není třeba, ani možnost se na jeho území dopravovat městskou hromadnou dopravou. Do Vatikánu se z centra Říma dostanete pěšky (kousek od Andělského hradu), nebo městskou hromadnou dopravou. Nedaleko Vatikánu je stanice metra"
+				},
+				{
+					"type": "text",
+					"text": "Ottaviano",
+					"url": "https://goo.gl/maps/tH9Z7PR5j3BCxBS59",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "a tramvaje a autobusu"
+				},
+				{
+					"type": "text",
+					"text": "Risorgimento",
+					"url": "https://goo.gl/maps/p6F6wMA3devjC3eQ8",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Co navštívit"
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Bazilika svatého Petra",
+					"url": "https://goo.gl/maps/Vw4YCTRXkEsLryuE7"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Jedná se o největší baziliku na světě a zároveň tak hlavní turistickou památkou, za kterou se sem sjíždějí turisté z celého světa. Do baziliky je vstup zdarma, je ale nutné počítat i s několikahodinovými frontami. Před vstupem do baziliky je jedna dlouhá fronta na kontrolu věcí (rámy jako na letišti), poté následuje fronta druhá, kde kontrolují vhodné oblečení (sukně/kraťasy musí být pod kolena, výstřih a ramena musí být zahaleny)."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Otevírací doba",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "je poněkud nejistá. Za normálního provozu bazilika otevírá v 7. Pokud se tam dostavíte kolem sedmé, máte velkou šanci na krátkou frontu. Otevírací doba je ovšem regulována papežskými audiencemi, či dalšími náboženskými akcemi."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Během audiencí, jsou bazilika a někdy i náměstí úplně uzavřené, je vhodné se o programu informovat dopředu. V těchto situacích budí Vatikán dojem naprostého zmatku a neorgnizovanosti. Na náměstí jsou k odchytnutí příslušníci švýcarské gardy, kteří udržují ve Vatikánu pořádek a pomáhají s organizací náboženských akcí. Nikdo ovšem pořádně neví, co se děje a každý přichází s jinou informací. Z tohoto důvodu nenechávejte návštěvu Vatikánu na poslední den dovolené, mohlo by se stát, že se tam nepodíváte."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Kromě samotné baziliky, je také jedinečným zážitkem navštívit její 136m vysokou kopuli."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180421_092339-1024x768.jpg",
+				"alternativeText": "Bazilika svatého Petra, Vatikán.",
+				"url": "/uploads/20180421_092339_1024x768_ba0a1e6e43.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180421_092339-1024x768.jpg",
+						"hash": "thumbnail_20180421_092339_1024x768_ba0a1e6e43",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 6.01,
+						"sizeInBytes": 6012,
+						"url": "/uploads/thumbnail_20180421_092339_1024x768_ba0a1e6e43.jpg"
+					},
+					"medium": {
+						"name": "medium_20180421_092339-1024x768.jpg",
+						"hash": "medium_20180421_092339_1024x768_ba0a1e6e43",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 63.55,
+						"sizeInBytes": 63548,
+						"url": "/uploads/medium_20180421_092339_1024x768_ba0a1e6e43.jpg"
+					},
+					"small": {
+						"name": "small_20180421_092339-1024x768.jpg",
+						"hash": "small_20180421_092339_1024x768_ba0a1e6e43",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 29.85,
+						"sizeInBytes": 29848,
+						"url": "/uploads/small_20180421_092339_1024x768_ba0a1e6e43.jpg"
+					},
+					"large": {
+						"name": "large_20180421_092339-1024x768.jpg",
+						"hash": "large_20180421_092339_1024x768_ba0a1e6e43",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 107.3,
+						"sizeInBytes": 107296,
+						"url": "/uploads/large_20180421_092339_1024x768_ba0a1e6e43.jpg"
+					}
+				},
+				"hash": "20180421_092339_1024x768_ba0a1e6e43",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 115.29,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:03:29.680Z",
+				"updatedAt": "2026-02-17T13:03:29.680Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"children": [
+				{
+					"type": "text",
+					"text": "Vyhlídková kopule baziliky"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Vstupenky se kupují hned u baziliky (musíte tedy nejprve projít bezpečnostní kontrolou), kde se samozřejmě stojí opět fronta. Máte 2 možnosti: vstupenka pěšky (více jak 500 schodů) za 8 euro, nebo výtahem za 10 euro, který vás ovšem nedoveze ani do půli cesty a zbytek stejně musíte po schodech. Před vstupem jsou cedule, že vstup na kopuli je pouze pro osoby, kteří netrpí dechovými, či srdečními problémy. Vstupenky"
+				},
+				{
+					"type": "text",
+					"text": "nelze platit kartou!",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "Pouze hotově a neuznávají se zde žádné studentské, důchodcovské, ani jiné slevy."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Výstup není nijak drastický, po určité části se dostanete na střechu baziliky, kde je možné si odpočinout, a poté dovnitř do kopule, kde můžete pozorovat dění v bazilice shora. Kopuli zevnitř lze projít po obvodu jen do poloviny. Dále se pokračuje schodištěm v plášti kopule (je relativně úzké a stěny zkosené) až k cílovému vrcholu, kde se dostanete ven na vyhlídku až nad kopuli a můžete se projít po obvodu, v zamřížovaném prostoru. Opět očekávejte davy lidí. Výhled je ovšem úchvatný. Můžete vidět celé Svatopetrské náměstí, Vatikánské zahrady, budovy Vatikánských muzeí a v podstatě celý Řím."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Při sestupu z kopule se dostanete znovu na střechu baziliky, kde jsou WC zdarma, pítko s pitnou vodou a malý bufet. Není problém si zde sednout na zem/střechu a po všech těch vystátých frontách se občerstvit. Dále budete pokračovat po schodech opět dolů a dostanete se přímo do baziliky."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180422_144418-1024x768.jpg",
+				"alternativeText": "Pohled ze střechy baziliky na vyhlídkovou kopuli.",
+				"url": "/uploads/20180422_144418_1024x768_670f9b24c4.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180422_144418-1024x768.jpg",
+						"hash": "thumbnail_20180422_144418_1024x768_670f9b24c4",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 6.51,
+						"sizeInBytes": 6509,
+						"url": "/uploads/thumbnail_20180422_144418_1024x768_670f9b24c4.jpg"
+					},
+					"small": {
+						"name": "small_20180422_144418-1024x768.jpg",
+						"hash": "small_20180422_144418_1024x768_670f9b24c4",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 29.38,
+						"sizeInBytes": 29382,
+						"url": "/uploads/small_20180422_144418_1024x768_670f9b24c4.jpg"
+					},
+					"medium": {
+						"name": "medium_20180422_144418-1024x768.jpg",
+						"hash": "medium_20180422_144418_1024x768_670f9b24c4",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 59.9,
+						"sizeInBytes": 59896,
+						"url": "/uploads/medium_20180422_144418_1024x768_670f9b24c4.jpg"
+					},
+					"large": {
+						"name": "large_20180422_144418-1024x768.jpg",
+						"hash": "large_20180422_144418_1024x768_670f9b24c4",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 97.59,
+						"sizeInBytes": 97591,
+						"url": "/uploads/large_20180422_144418_1024x768_670f9b24c4.jpg"
+					}
+				},
+				"hash": "20180422_144418_1024x768_670f9b24c4",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 102.23,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:03:30.278Z",
+				"updatedAt": "2026-02-17T13:03:30.278Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180422_144323-1024x768.jpg",
+				"alternativeText": "Pohled ze střechy baziliky.",
+				"url": "/uploads/20180422_144323_1024x768_6d4cab0aed.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180422_144323-1024x768.jpg",
+						"hash": "thumbnail_20180422_144323_1024x768_6d4cab0aed",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 6.64,
+						"sizeInBytes": 6635,
+						"url": "/uploads/thumbnail_20180422_144323_1024x768_6d4cab0aed.jpg"
+					},
+					"small": {
+						"name": "small_20180422_144323-1024x768.jpg",
+						"hash": "small_20180422_144323_1024x768_6d4cab0aed",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 32.25,
+						"sizeInBytes": 32254,
+						"url": "/uploads/small_20180422_144323_1024x768_6d4cab0aed.jpg"
+					},
+					"large": {
+						"name": "large_20180422_144323-1024x768.jpg",
+						"hash": "large_20180422_144323_1024x768_6d4cab0aed",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 115.91,
+						"sizeInBytes": 115914,
+						"url": "/uploads/large_20180422_144323_1024x768_6d4cab0aed.jpg"
+					},
+					"medium": {
+						"name": "medium_20180422_144323-1024x768.jpg",
+						"hash": "medium_20180422_144323_1024x768_6d4cab0aed",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 68.72,
+						"sizeInBytes": 68721,
+						"url": "/uploads/medium_20180422_144323_1024x768_6d4cab0aed.jpg"
+					}
+				},
+				"hash": "20180422_144323_1024x768_6d4cab0aed",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 123.6,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:03:30.672Z",
+				"updatedAt": "2026-02-17T13:03:30.672Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180422_140326-1024x768.jpg",
+				"alternativeText": "Pohled z vyhlídkové kopule na náměstí před bazilikou okolní Řím.",
+				"url": "/uploads/20180422_140326_1024x768_73df34726c.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180422_140326-1024x768.jpg",
+						"hash": "thumbnail_20180422_140326_1024x768_73df34726c",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 9.56,
+						"sizeInBytes": 9564,
+						"url": "/uploads/thumbnail_20180422_140326_1024x768_73df34726c.jpg"
+					},
+					"small": {
+						"name": "small_20180422_140326-1024x768.jpg",
+						"hash": "small_20180422_140326_1024x768_73df34726c",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 50.52,
+						"sizeInBytes": 50520,
+						"url": "/uploads/small_20180422_140326_1024x768_73df34726c.jpg"
+					},
+					"medium": {
+						"name": "medium_20180422_140326-1024x768.jpg",
+						"hash": "medium_20180422_140326_1024x768_73df34726c",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 108.58,
+						"sizeInBytes": 108577,
+						"url": "/uploads/medium_20180422_140326_1024x768_73df34726c.jpg"
+					},
+					"large": {
+						"name": "large_20180422_140326-1024x768.jpg",
+						"hash": "large_20180422_140326_1024x768_73df34726c",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 182.94,
+						"sizeInBytes": 182944,
+						"url": "/uploads/large_20180422_140326_1024x768_73df34726c.jpg"
+					}
+				},
+				"hash": "20180422_140326_1024x768_73df34726c",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 195.67,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:03:31.411Z",
+				"updatedAt": "2026-02-17T13:03:31.411Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 4,
+			"children": [
+				{
+					"type": "text",
+					"text": "Bazilika"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Za povšimnutí hned u vchodu stojí velká bronzová Brána smrti (Porta della Morte), která je používána pro přinášení rakví s mrtvými těly papežů do baziliky. Vpravo od vchodu v první kapli stojí slavná Michelangelova Pieta. Z důvodu bezpečnosti je tato socha kryta sklem. Uprostřed baziliky se nachází obrovský papežský oltář, který je umístěn nad hrobem svatého Petra. Baldachýn nad oltářem je vyroben z bronzu, který byl odcizen z kopule Pantheonu, což je v Římě relativně častý způsob zisku materiálu. Dále je zde k vidění nesčetné množství soch, maleb, obrazů, oltářů."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Zajímavá je i velká mramorová deska nacházející se ve vchodu do sakristie, na které jsou vytesána jména všech papežů od počátku i s daty jejich úmrtí. Za prohlídku stojí samozřejmě i náměstí. Na náměstí naleznete 2 fontány a uprostřed tyčící se egyptský obelisk, který často slouží k odpočinku turistů. Náměstí je lemováno kolonádou s mohutnými sloupy, ta je zdobená sochami, kterých se zde nachází 140. Mimo jiné jsou zde toalety zdarma, bohužel většinou s frontou. Opět zde naleznete pítko s pitnou vodou."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180422_153453-1024x768.jpg",
+				"alternativeText": " Michelangelova Pieta uvnitř baziliky svatého Petra.",
+				"url": "/uploads/20180422_153453_1024x768_1672eee886.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180422_153453-1024x768.jpg",
+						"hash": "thumbnail_20180422_153453_1024x768_1672eee886",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 6.26,
+						"sizeInBytes": 6256,
+						"url": "/uploads/thumbnail_20180422_153453_1024x768_1672eee886.jpg"
+					},
+					"medium": {
+						"name": "medium_20180422_153453-1024x768.jpg",
+						"hash": "medium_20180422_153453_1024x768_1672eee886",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 50.82,
+						"sizeInBytes": 50823,
+						"url": "/uploads/medium_20180422_153453_1024x768_1672eee886.jpg"
+					},
+					"small": {
+						"name": "small_20180422_153453-1024x768.jpg",
+						"hash": "small_20180422_153453_1024x768_1672eee886",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 26.48,
+						"sizeInBytes": 26479,
+						"url": "/uploads/small_20180422_153453_1024x768_1672eee886.jpg"
+					},
+					"large": {
+						"name": "large_20180422_153453-1024x768.jpg",
+						"hash": "large_20180422_153453_1024x768_1672eee886",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 78.44,
+						"sizeInBytes": 78438,
+						"url": "/uploads/large_20180422_153453_1024x768_1672eee886.jpg"
+					}
+				},
+				"hash": "20180422_153453_1024x768_1672eee886",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 81.79,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:03:31.754Z",
+				"updatedAt": "2026-02-17T13:03:31.754Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180422_153101-1024x768.jpg",
+				"alternativeText": "Uvnitř baziliky svatého Petra.",
+				"url": "/uploads/20180422_153101_1024x768_73bfd28445.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180422_153101-1024x768.jpg",
+						"hash": "thumbnail_20180422_153101_1024x768_73bfd28445",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 8.24,
+						"sizeInBytes": 8237,
+						"url": "/uploads/thumbnail_20180422_153101_1024x768_73bfd28445.jpg"
+					},
+					"small": {
+						"name": "small_20180422_153101-1024x768.jpg",
+						"hash": "small_20180422_153101_1024x768_73bfd28445",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 39.01,
+						"sizeInBytes": 39008,
+						"url": "/uploads/small_20180422_153101_1024x768_73bfd28445.jpg"
+					},
+					"medium": {
+						"name": "medium_20180422_153101-1024x768.jpg",
+						"hash": "medium_20180422_153101_1024x768_73bfd28445",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 79.53,
+						"sizeInBytes": 79533,
+						"url": "/uploads/medium_20180422_153101_1024x768_73bfd28445.jpg"
+					},
+					"large": {
+						"name": "large_20180422_153101-1024x768.jpg",
+						"hash": "large_20180422_153101_1024x768_73bfd28445",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 127.57,
+						"sizeInBytes": 127573,
+						"url": "/uploads/large_20180422_153101_1024x768_73bfd28445.jpg"
+					}
+				},
+				"hash": "20180422_153101_1024x768_73bfd28445",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 134.08,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:03:32.121Z",
+				"updatedAt": "2026-02-17T13:03:32.121Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Vatikánská muzea",
+					"url": "https://goo.gl/maps/2RKyE6Q95uUpEqZF9"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Ve Vatikánu se nachází rozsáhlý komplex muzeí, kde papežové po staletí shromažďují cenná umělecká díla. V dnešní době se jedná o jednu z největších uměleckých sbírek na světě. Je zde prý tolik exponátů, že kdyby vám prohlídka každého z nich zabrala 1 minutu, celková prohlídka muzeí by trvala 12 let. Ve Vatikánském paláci se nachází 8 muzeí, 5 galérií, Apoštolská knihovna, apartmány Borgiů, Raffaelovy síně a slavná Sixtinská kaple. V této soukromé papežské kapli se konají konkláve kardinálů při volbě nového papeže."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Sixtinská kaple je známá díky nádherným freskám od Michelangela. Ve Vatikánských muzeích naleznete například rozsáhlou sbírku soch, etruskou expozici, egyptskou expozici a další. Do Vatikánských muzeí i do Sixtinské kaple je jednotné vstupné. Pozor, každou neděli je tento komplex zavřený. Výjimku tvoří pouze poslední neděle v měsíci, kdy je otevřeno a vstupné je zdarma. Otevírací doba je ovšem v tento den zkrácená."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180422_141120-1024x768.jpg",
+				"alternativeText": "Pohled na vatikánské zahrady z kopule baziliky.",
+				"url": "/uploads/20180422_141120_1024x768_6b68e71241.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180422_141120-1024x768.jpg",
+						"hash": "thumbnail_20180422_141120_1024x768_6b68e71241",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 9.64,
+						"sizeInBytes": 9642,
+						"url": "/uploads/thumbnail_20180422_141120_1024x768_6b68e71241.jpg"
+					},
+					"small": {
+						"name": "small_20180422_141120-1024x768.jpg",
+						"hash": "small_20180422_141120_1024x768_6b68e71241",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 50.5,
+						"sizeInBytes": 50502,
+						"url": "/uploads/small_20180422_141120_1024x768_6b68e71241.jpg"
+					},
+					"medium": {
+						"name": "medium_20180422_141120-1024x768.jpg",
+						"hash": "medium_20180422_141120_1024x768_6b68e71241",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 109.08,
+						"sizeInBytes": 109082,
+						"url": "/uploads/medium_20180422_141120_1024x768_6b68e71241.jpg"
+					},
+					"large": {
+						"name": "large_20180422_141120-1024x768.jpg",
+						"hash": "large_20180422_141120_1024x768_6b68e71241",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 185.28,
+						"sizeInBytes": 185284,
+						"url": "/uploads/large_20180422_141120_1024x768_6b68e71241.jpg"
+					}
+				},
+				"hash": "20180422_141120_1024x768_6b68e71241",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 198.73,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:03:33.152Z",
+				"updatedAt": "2026-02-17T13:03:33.152Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180422_140911-1024x768.jpg",
+				"alternativeText": "Pohled na vatikánská muzea z kopule baziliky.",
+				"url": "/uploads/20180422_140911_1024x768_737dd27ea3.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180422_140911-1024x768.jpg",
+						"hash": "thumbnail_20180422_140911_1024x768_737dd27ea3",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 10.59,
+						"sizeInBytes": 10586,
+						"url": "/uploads/thumbnail_20180422_140911_1024x768_737dd27ea3.jpg"
+					},
+					"small": {
+						"name": "small_20180422_140911-1024x768.jpg",
+						"hash": "small_20180422_140911_1024x768_737dd27ea3",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 56.05,
+						"sizeInBytes": 56052,
+						"url": "/uploads/small_20180422_140911_1024x768_737dd27ea3.jpg"
+					},
+					"medium": {
+						"name": "medium_20180422_140911-1024x768.jpg",
+						"hash": "medium_20180422_140911_1024x768_737dd27ea3",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 121.19,
+						"sizeInBytes": 121191,
+						"url": "/uploads/medium_20180422_140911_1024x768_737dd27ea3.jpg"
+					},
+					"large": {
+						"name": "large_20180422_140911-1024x768.jpg",
+						"hash": "large_20180422_140911_1024x768_737dd27ea3",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 204.37,
+						"sizeInBytes": 204372,
+						"url": "/uploads/large_20180422_140911_1024x768_737dd27ea3.jpg"
+					}
+				},
+				"hash": "20180422_140911_1024x768_737dd27ea3",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 218.67,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:03:33.801Z",
+				"updatedAt": "2026-02-17T13:03:33.801Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		}
+	],
+	"createdAt": "2026-02-17T13:03:34.358Z",
+	"updatedAt": "2026-02-17T13:03:34.358Z",
+	"publishedAt": "2026-02-17T13:03:34.362Z",
+	"continent": "europe",
+	"contentLang": "cs",
+	"flagEmoji": "🇻🇦",
+	"timezone": "CET (UTC+1)",
+	"languages": ["Italian", "Latin"],
+	"currencyCode": "EUR",
+	"currencyName": "Euro",
+	"currencySymbol": "€",
+	"budgetPerDayBudget": 60,
+	"budgetPerDayMidRange": 120,
+	"budgetPerDayLuxury": 300,
+	"bestTimeToVisit": "March to May, September to November",
+	"visaInfo": "EU citizens: no visa needed",
+	"destinationType": "microstate",
+	"cover": {
+		"id": 8533,
+		"documentId": "mgp3mx8216vkxr2l4n2eqyyo",
+		"name": "cover-1771333414077-sqpaku.jpg",
+		"alternativeText": "Vatikán",
+		"caption": null,
+		"width": 1008,
+		"height": 756,
+		"formats": {
+			"thumbnail": {
+				"name": "thumbnail_cover-1771333414077-sqpaku.jpg",
+				"hash": "thumbnail_cover_1771333414077_sqpaku_429631483b",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"path": null,
+				"width": 208,
+				"height": 156,
+				"size": 10.04,
+				"sizeInBytes": 10037,
+				"url": "/uploads/thumbnail_cover_1771333414077_sqpaku_429631483b.jpg"
+			},
+			"small": {
+				"name": "small_cover-1771333414077-sqpaku.jpg",
+				"hash": "small_cover_1771333414077_sqpaku_429631483b",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"path": null,
+				"width": 500,
+				"height": 375,
+				"size": 54.56,
+				"sizeInBytes": 54555,
+				"url": "/uploads/small_cover_1771333414077_sqpaku_429631483b.jpg"
+			},
+			"medium": {
+				"name": "medium_cover-1771333414077-sqpaku.jpg",
+				"hash": "medium_cover_1771333414077_sqpaku_429631483b",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"path": null,
+				"width": 750,
+				"height": 563,
+				"size": 121.97,
+				"sizeInBytes": 121972,
+				"url": "/uploads/medium_cover_1771333414077_sqpaku_429631483b.jpg"
+			},
+			"large": {
+				"name": "large_cover-1771333414077-sqpaku.jpg",
+				"hash": "large_cover_1771333414077_sqpaku_429631483b",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"path": null,
+				"width": 1000,
+				"height": 750,
+				"size": 210.52,
+				"sizeInBytes": 210523,
+				"url": "/uploads/large_cover_1771333414077_sqpaku_429631483b.jpg"
+			}
+		},
+		"hash": "cover_1771333414077_sqpaku_429631483b",
+		"ext": ".jpg",
+		"mime": "image/jpeg",
+		"size": 214.35,
+		"url": "/uploads/cover_1771333414077_sqpaku_429631483b.jpg",
+		"previewUrl": null,
+		"provider": "local",
+		"provider_metadata": null,
+		"createdAt": "2026-02-17T13:03:34.336Z",
+		"updatedAt": "2026-02-17T13:03:34.336Z",
+		"publishedAt": "2026-02-17T13:03:34.337Z"
+	}
 }

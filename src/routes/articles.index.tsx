@@ -1,20 +1,18 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArticleCard } from "@/components/article";
 import { useArticles } from "@/integrations/strapi";
 import { SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
 import type { Article } from "@/types";
-import { createFileRoute, Link } from "@tanstack/react-router";
 
 const SITE_URL = SITE_CONFIG.url;
 
 export const Route = createFileRoute("/articles/")({
 	loader: async ({ context }) => {
 		const { queryClient } = context;
-		const {
-			fetchArticleBySlug,
-			fetchArticles,
-			strapiQueryKeys,
-		} = await import("@/integrations/strapi");
+		const { fetchArticleBySlug, fetchArticles, strapiQueryKeys } = await import(
+			"@/integrations/strapi"
+		);
 
 		const articles = await fetchArticles();
 		queryClient.setQueryData(strapiQueryKeys.articles.lists(), articles);
@@ -56,7 +54,7 @@ function ArticlesPage() {
 	const { data: articles = [], isLoading, error } = useArticles();
 
 	// Group articles by type
-	const articlesByType = articles.reduce<Record<string, Article[]>>(
+	const _articlesByType = articles.reduce<Record<string, Article[]>>(
 		(acc, article) => {
 			const type = article.articleType || "other";
 			if (!acc[type]) {
@@ -68,7 +66,7 @@ function ArticlesPage() {
 		{},
 	);
 
-	const typeLabels: Record<string, string> = {
+	const _typeLabels: Record<string, string> = {
 		"destination-guide": t("articles.typeDestinationGuide"),
 		"place-guide": t("articles.typePlaceGuide"),
 		"practical-info": t("articles.typePracticalInfo"),

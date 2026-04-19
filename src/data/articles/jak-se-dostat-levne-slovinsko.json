@@ -1,190 +1,190 @@
 {
-  "title": "Jak se dostat levne do destinace Slovinsko 🇸🇮 z Ceska",
-  "slug": "jak-se-dostat-levne-slovinsko",
-  "excerpt": "Jak levne doletět do destinace Slovinsko? Letenky, prestupy, doprava po zemi a tipy na nejlevnejsi terminy.",
-  "articleType": "practical-info",
-  "contentLang": "cs",
-  "tags": [
-    "Slovinsko",
-    "letenky",
-    "doprava",
-    "levne cestovani",
-    "jak se dostat"
-  ],
-  "destinationSlug": "slovinsko",
-  "publish": true,
-  "readingTime": 4,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Slovinsko je od nas co by kamenem dohodil. Autem 5 hodin, letadlem hodina. Idealni na vikendovy vylet i na delsi cestu."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Autem z Prahy"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "580 km, 5-6 hodin. Dialnicni znamka pro Slovinsko ~35 EUR/tyden. Benzin cca 1,5 EUR/l. Parkovani v Lublani: P+R za 3 EUR/den."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Letadlem"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Wizz Air lita Praha-Lublan sezonlne. Cena: 500-1500 Kc jednosmerná. Alternativa: let do Terstu (Itálie) nebo Klagenfurtu (Rakousko) a pak autem."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Autobusem (FlixBus)"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Praha-Lublan od 500 Kc, cesta 7-8 hodin. Nocni spoj = usetris za noc ubytka."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Po Slovinsku"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Auto je idealni - Slovinsko je male a dobre se projizdi.Autobusy existuji, ale na Bled a Bohinj jsou pomale."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Kdy jsou nejlevnejsi letenky?"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Autem s kamarady je nejlevnejsi: 4 lidi x 4000 Kc nafta = 1000 Kc na osobu zpetne!"
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Dalsí tipy"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Hledej letenky v anonymnim okne prohlizece"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Nastav si upozorneni na Google Flights nebo Skyscanner"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Flexibility s daty = vetsi uspora"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Kombinace dvou jednosmernych letenek byva levnejsi nez zpetna"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-slovinsko",
-          "children": [
-            {
-              "type": "text",
-              "text": "Prectisi cely pruvodce: Slovinsko"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"title": "Jak se dostat levne do destinace Slovinsko 🇸🇮 z Ceska",
+	"slug": "jak-se-dostat-levne-slovinsko",
+	"excerpt": "Jak levne doletět do destinace Slovinsko? Letenky, prestupy, doprava po zemi a tipy na nejlevnejsi terminy.",
+	"articleType": "practical-info",
+	"contentLang": "cs",
+	"tags": [
+		"Slovinsko",
+		"letenky",
+		"doprava",
+		"levne cestovani",
+		"jak se dostat"
+	],
+	"destinationSlug": "slovinsko",
+	"publish": true,
+	"readingTime": 4,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Slovinsko je od nas co by kamenem dohodil. Autem 5 hodin, letadlem hodina. Idealni na vikendovy vylet i na delsi cestu."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Autem z Prahy"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "580 km, 5-6 hodin. Dialnicni znamka pro Slovinsko ~35 EUR/tyden. Benzin cca 1,5 EUR/l. Parkovani v Lublani: P+R za 3 EUR/den."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Letadlem"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Wizz Air lita Praha-Lublan sezonlne. Cena: 500-1500 Kc jednosmerná. Alternativa: let do Terstu (Itálie) nebo Klagenfurtu (Rakousko) a pak autem."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Autobusem (FlixBus)"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Praha-Lublan od 500 Kc, cesta 7-8 hodin. Nocni spoj = usetris za noc ubytka."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Po Slovinsku"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Auto je idealni - Slovinsko je male a dobre se projizdi.Autobusy existuji, ale na Bled a Bohinj jsou pomale."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Kdy jsou nejlevnejsi letenky?"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Autem s kamarady je nejlevnejsi: 4 lidi x 4000 Kc nafta = 1000 Kc na osobu zpetne!"
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Dalsí tipy"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Hledej letenky v anonymnim okne prohlizece"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Nastav si upozorneni na Google Flights nebo Skyscanner"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Flexibility s daty = vetsi uspora"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Kombinace dvou jednosmernych letenek byva levnejsi nez zpetna"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-slovinsko",
+					"children": [
+						{
+							"type": "text",
+							"text": "Prectisi cely pruvodce: Slovinsko"
+						}
+					]
+				}
+			]
+		}
+	]
 }

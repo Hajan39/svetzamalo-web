@@ -1,92 +1,87 @@
 {
-  "title": "Monaco – praktický průvodce pro cestovatele",
-  "slug": "pruvodce-monaco",
-  "excerpt": "Monaco je zemí přepychu a luxusu. V přístavech kotví ty nejdražší jachty, v ulicích se prohání Ferrari a Lamborginy a levné obchody byste zde hledali těžko. Navštívit Monaco je opravdu netradiční…",
-  "articleType": "destination-guide",
-  "contentLang": "cs",
-  "tags": [
-    "Evropa",
-    "Monaco",
-    "cestování",
-    "budget"
-  ],
-  "destinationSlug": "monaco",
-  "publish": false,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Monaco je zemí přepychu a luxusu. V přístavech kotví ty nejdražší jachty, v ulicích se prohání Ferrari a Lamborginy a levné obchody byste zde hledali těžko. Navštívit Monaco je opravdu netradiční zážitek."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Kdy jet"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Nejlepší doba pro návštěvu: duben až červen, září až říjen."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Jazyk a komunikace"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Místní jazyky: francouzština. Znalost základů francouzštiny je výhodou."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobný průvodce"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
-        },
-        {
-          "type": "text",
-          "text": "kompletním průvodci – Monaco",
-          "url": "/destinations/guide/monaco"
-        },
-        {
-          "type": "text",
-          "text": "."
-        }
-      ]
-    }
-  ]
+	"title": "Monaco – praktický průvodce pro cestovatele",
+	"slug": "pruvodce-monaco",
+	"excerpt": "Monaco je zemí přepychu a luxusu. V přístavech kotví ty nejdražší jachty, v ulicích se prohání Ferrari a Lamborginy a levné obchody byste zde hledali těžko. Navštívit Monaco je opravdu netradiční…",
+	"articleType": "destination-guide",
+	"contentLang": "cs",
+	"tags": ["Evropa", "Monaco", "cestování", "budget"],
+	"destinationSlug": "monaco",
+	"publish": false,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Monaco je zemí přepychu a luxusu. V přístavech kotví ty nejdražší jachty, v ulicích se prohání Ferrari a Lamborginy a levné obchody byste zde hledali těžko. Navštívit Monaco je opravdu netradiční zážitek."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Kdy jet"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Nejlepší doba pro návštěvu: duben až červen, září až říjen."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Jazyk a komunikace"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Místní jazyky: francouzština. Znalost základů francouzštiny je výhodou."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobný průvodce"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+				},
+				{
+					"type": "text",
+					"text": "kompletním průvodci – Monaco",
+					"url": "/destinations/guide/monaco"
+				},
+				{
+					"type": "text",
+					"text": "."
+				}
+			]
+		}
+	]
 }

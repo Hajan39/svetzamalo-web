@@ -1,739 +1,733 @@
 {
-  "title": "Kolik stojí den cestování? Srovnání 38 destinací",
-  "slug": "kolik-stoji-den-srovnani",
-  "excerpt": "Kolik vlastně stojí jeden den cestování? Porovnáváme denní náklady od nejlevnějších asijských rájů po drahé evropské metropole.",
-  "articleType": "practical-info",
-  "contentLang": "cs",
-  "tags": [
-    "ceny",
-    "srovnání",
-    "budget",
-    "náklady",
-    "praktické info"
-  ],
-  "publish": true,
-  "readingTime": 6,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Kolik vlastně stojí jeden den cestování? Porovnali jsme denní náklady v desítkách destinací - od nejlevnějších asijských rájů po drahé evropské metropole. Částky jsou orientační a počítají s rozpočtovým stylem cestování (hostely, street food, veřejná doprava)."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🟢 Super levné (pod 700 Kč/den)"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Tady se dá přežít za směšné peníze. Jídlo na ulici, levné hostely, lokální doprava - a přesto plnohodnotný cestovatelský zážitek."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Srí Lanka",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 460 Kč/den, střední: 1150 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Vietnam",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 460 Kč/den, střední: 1035 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Bali",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 575 Kč/den, střední: 1265 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Ekvádor",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 575 Kč/den, střední: 1265 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Jižní Thajsko",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 575 Kč/den, střední: 1380 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Lombok",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 575 Kč/den, střední: 1265 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Malajsie – Malajský poloostrov",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 575 Kč/den, střední: 1150 Kč/den"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🟡 Příznivé (700-1 300 Kč/den)"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Stále velmi rozumné. S trochou plánování tu utratíte méně než za víkend v Praze."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Gili Trawangan, Gili Meno a Gili Air",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 690 Kč/den, střední: 1380 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Nusa Penida",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 690 Kč/den, střední: 1380 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Dominikána jih (Santo Domingo, Boca Chica)",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 805 Kč/den, střední: 1840 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Dominikána jihovýchod (Bayahibe, Dominicus a Saona)",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 805 Kč/den, střední: 1840 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Dominikána jihozápad (Barahona, Enriquillo, Pedernales)",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 805 Kč/den, střední: 1840 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Dominikána sever (Cabarete, Sosua, Puerto Plata)",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 805 Kč/den, střední: 1840 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Dominikána střed (Jarabacoa a Constanza)",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 805 Kč/den, střední: 1840 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Dominikána východ (Punta Cana, Samana, Las Galeras, Las Terenas, Lagoons)",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 805 Kč/den, střední: 1840 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Dominikánská republika",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 805 Kč/den, střední: 1840 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Samoa",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 920 Kč/den, střední: 1840 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Slovinsko",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 920 Kč/den, střední: 1840 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Portoriko",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1035 Kč/den, střední: 2070 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Španělsko – Fuerteventura",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1035 Kč/den, střední: 2070 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Španělsko – Gran Canaria",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1035 Kč/den, střední: 2070 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Andorra",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1150 Kč/den, střední: 2300 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Berlín",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1150 Kč/den, střední: 2300 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Itálie sever",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1150 Kč/den, střední: 2530 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Mauricius",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1150 Kč/den, střední: 2300 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "San Marino",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1150 Kč/den, střední: 2300 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Singapur",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1150 Kč/den, střední: 2300 Kč/den"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🟠 Střední (1 300-1 800 Kč/den)"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Nepřijdete na mizinu, ale šetřit budete muset víc. Vyplatí se vařit nebo hledat lokální podniky."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Francie",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1265 Kč/den, střední: 2530 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Řím",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1380 Kč/den, střední: 2760 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Vatikán",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1380 Kč/den, střední: 2760 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Lucemburk",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1610 Kč/den, střední: 3220 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Paříž",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1610 Kč/den, střední: 3220 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Stockholm",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1610 Kč/den, střední: 2990 Kč/den"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🔴 Dražší (nad 1 800 Kč/den)"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Tady budete muset víc přemýšlet. Ale i drahé destinace mají své triky - couchsurfing, vaření, free walking tours."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Galapágy",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1840 Kč/den, střední: 3450 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Oslo",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1840 Kč/den, střední: 3450 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Švýcarsko",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 1840 Kč/den, střední: 3450 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Britské Panenské Ostrovy",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 2760 Kč/den, střední: 5060 Kč/den"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Monaco",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " - budget: 2760 Kč/den, střední: 5750 Kč/den"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "💡 Jak ušetřit kdekoliv"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "ordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Jezte tam, kde jedí místní - ne u turistických atrakcí."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Hostely s kuchyní = snídaně a večeře za zlomek ceny."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Veřejná doprava místo taxi - v Asii i Evropě je to obrovský rozdíl."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Cestujte mimo hlavní sezónu - nižší ceny ubytování i letenek."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Vyhněte se směnárnám na letištích - kurz je vždycky horší."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "📊 Chceš porovnat konkrétní destinace?"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Klikni na libovolnou destinaci a zjisti přesně, co kolik stojí - jídlo, ubytování, doprava, vstupy."
-        }
-      ]
-    }
-  ]
+	"title": "Kolik stojí den cestování? Srovnání 38 destinací",
+	"slug": "kolik-stoji-den-srovnani",
+	"excerpt": "Kolik vlastně stojí jeden den cestování? Porovnáváme denní náklady od nejlevnějších asijských rájů po drahé evropské metropole.",
+	"articleType": "practical-info",
+	"contentLang": "cs",
+	"tags": ["ceny", "srovnání", "budget", "náklady", "praktické info"],
+	"publish": true,
+	"readingTime": 6,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Kolik vlastně stojí jeden den cestování? Porovnali jsme denní náklady v desítkách destinací - od nejlevnějších asijských rájů po drahé evropské metropole. Částky jsou orientační a počítají s rozpočtovým stylem cestování (hostely, street food, veřejná doprava)."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🟢 Super levné (pod 700 Kč/den)"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Tady se dá přežít za směšné peníze. Jídlo na ulici, levné hostely, lokální doprava - a přesto plnohodnotný cestovatelský zážitek."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Srí Lanka",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 460 Kč/den, střední: 1150 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Vietnam",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 460 Kč/den, střední: 1035 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Bali",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 575 Kč/den, střední: 1265 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Ekvádor",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 575 Kč/den, střední: 1265 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Jižní Thajsko",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 575 Kč/den, střední: 1380 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Lombok",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 575 Kč/den, střední: 1265 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Malajsie – Malajský poloostrov",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 575 Kč/den, střední: 1150 Kč/den"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🟡 Příznivé (700-1 300 Kč/den)"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Stále velmi rozumné. S trochou plánování tu utratíte méně než za víkend v Praze."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Gili Trawangan, Gili Meno a Gili Air",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 690 Kč/den, střední: 1380 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Nusa Penida",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 690 Kč/den, střední: 1380 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Dominikána jih (Santo Domingo, Boca Chica)",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 805 Kč/den, střední: 1840 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Dominikána jihovýchod (Bayahibe, Dominicus a Saona)",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 805 Kč/den, střední: 1840 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Dominikána jihozápad (Barahona, Enriquillo, Pedernales)",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 805 Kč/den, střední: 1840 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Dominikána sever (Cabarete, Sosua, Puerto Plata)",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 805 Kč/den, střední: 1840 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Dominikána střed (Jarabacoa a Constanza)",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 805 Kč/den, střední: 1840 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Dominikána východ (Punta Cana, Samana, Las Galeras, Las Terenas, Lagoons)",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 805 Kč/den, střední: 1840 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Dominikánská republika",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 805 Kč/den, střední: 1840 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Samoa",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 920 Kč/den, střední: 1840 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Slovinsko",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 920 Kč/den, střední: 1840 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Portoriko",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1035 Kč/den, střední: 2070 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Španělsko – Fuerteventura",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1035 Kč/den, střední: 2070 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Španělsko – Gran Canaria",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1035 Kč/den, střední: 2070 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Andorra",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1150 Kč/den, střední: 2300 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Berlín",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1150 Kč/den, střední: 2300 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Itálie sever",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1150 Kč/den, střední: 2530 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Mauricius",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1150 Kč/den, střední: 2300 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "San Marino",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1150 Kč/den, střední: 2300 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Singapur",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1150 Kč/den, střední: 2300 Kč/den"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🟠 Střední (1 300-1 800 Kč/den)"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Nepřijdete na mizinu, ale šetřit budete muset víc. Vyplatí se vařit nebo hledat lokální podniky."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Francie",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1265 Kč/den, střední: 2530 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Řím",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1380 Kč/den, střední: 2760 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Vatikán",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1380 Kč/den, střední: 2760 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Lucemburk",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1610 Kč/den, střední: 3220 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Paříž",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1610 Kč/den, střední: 3220 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Stockholm",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1610 Kč/den, střední: 2990 Kč/den"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🔴 Dražší (nad 1 800 Kč/den)"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Tady budete muset víc přemýšlet. Ale i drahé destinace mají své triky - couchsurfing, vaření, free walking tours."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Galapágy",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1840 Kč/den, střední: 3450 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Oslo",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1840 Kč/den, střední: 3450 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Švýcarsko",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 1840 Kč/den, střední: 3450 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Britské Panenské Ostrovy",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 2760 Kč/den, střední: 5060 Kč/den"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Monaco",
+							"bold": true
+						},
+						{
+							"type": "text",
+							"text": " - budget: 2760 Kč/den, střední: 5750 Kč/den"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "💡 Jak ušetřit kdekoliv"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "ordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Jezte tam, kde jedí místní - ne u turistických atrakcí."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Hostely s kuchyní = snídaně a večeře za zlomek ceny."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Veřejná doprava místo taxi - v Asii i Evropě je to obrovský rozdíl."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Cestujte mimo hlavní sezónu - nižší ceny ubytování i letenek."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Vyhněte se směnárnám na letištích - kurz je vždycky horší."
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "📊 Chceš porovnat konkrétní destinace?"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Klikni na libovolnou destinaci a zjisti přesně, co kolik stojí - jídlo, ubytování, doprava, vstupy."
+				}
+			]
+		}
+	]
 }

@@ -1,786 +1,784 @@
 {
-  "id": 899,
-  "documentId": "di909ni09t38mqihfvukl5hq",
-  "name": "Monaco",
-  "slug": "monaco",
-  "intro": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Monaco je zemí přepychu a luxusu. V přístavech kotví ty nejdražší jachty, v ulicích se prohání Ferrari a Lamborginy a levné obchody byste zde hledali těžko. Navštívit Monaco je opravdu netradiční zážitek. Země má i spoustu turistických atrakcí jako jsou hezké městské pláže – ovšem přelidněné, parky, památky, muzea. K navštívení tohoto ministátu vám postačí i jedno odpoledne, nebo zde můžete strávit třeba několik dní."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Doprava"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Pokud budete autem putovat po jižním pobřeží Francie, Monaco je ideální zastávkou na vaší cestě. Silniční doprava je zde relativně hustá a parkování je placené, takže se vyplatí auto zaparkovat někde ve Francii, nebo Itálii a do Monaca prostě dojít pěšky."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Pokud budete například v nedalekém letovisku Nice bez auta, můžete se sem dostat autobusem. Zámožnější návštěvníci přiletí letadlem do Nice a odtud vrtulníkem přímo do Monaca."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Po městě se lze dopravovat městskými autobusy, nebo jednoduše pěšky, vzdálenosti jsou malé a stále je co pozorovat."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Místa k navštívení"
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Tête de Chien",
-          "url": "https://goo.gl/maps/sh3LNgSY6HBJSAYU7",
-          "bold": true
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Krásná vyhlídka na celé Monaco a pokračující francouzské pobřeží. Naleznete ji na příkré skále přímo za městem. Je velice oblíbená ve dne i v noci, kdy lze pozorovat nasvětlená města. Monaco zde máte jako na dlani a zároveň je na druhé straně skály vidět pobřeží s nedalekým Nice."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Dostanete se sem buď autem přes Francii (vyhlídka se nachází ve Francii), nebo sem vede z Monaca pěší stezka s poměrně velkým stoupáním."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Místo je vhodné i na spaní v autě, či v karavanu. Můžete zde pohodlně uvařit, popíjet víno s výhledem na pobřeží a následně strávit i několik nocí. Večer zde bude možná trochu rušno, jelikož je tato vyhlídka velice oblíbená a místní i cestovatelé zde tráví večery."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180909_191151-1024x556.jpg",
-        "alternativeText": "Pohled z vyhlídky Tête de Chien na Monaco.",
-        "url": "/uploads/20180909_191151_1024x556_124b4b15db.jpg",
-        "width": 1024,
-        "height": 556,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180909_191151-1024x556.jpg",
-            "hash": "thumbnail_20180909_191151_1024x556_124b4b15db",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 245,
-            "height": 133,
-            "size": 7.36,
-            "sizeInBytes": 7363,
-            "url": "/uploads/thumbnail_20180909_191151_1024x556_124b4b15db.jpg"
-          },
-          "medium": {
-            "name": "medium_20180909_191151-1024x556.jpg",
-            "hash": "medium_20180909_191151_1024x556_124b4b15db",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 407,
-            "size": 56.18,
-            "sizeInBytes": 56181,
-            "url": "/uploads/medium_20180909_191151_1024x556_124b4b15db.jpg"
-          },
-          "small": {
-            "name": "small_20180909_191151-1024x556.jpg",
-            "hash": "small_20180909_191151_1024x556_124b4b15db",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 271,
-            "size": 26.56,
-            "sizeInBytes": 26561,
-            "url": "/uploads/small_20180909_191151_1024x556_124b4b15db.jpg"
-          },
-          "large": {
-            "name": "large_20180909_191151-1024x556.jpg",
-            "hash": "large_20180909_191151_1024x556_124b4b15db",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 543,
-            "size": 94.7,
-            "sizeInBytes": 94704,
-            "url": "/uploads/large_20180909_191151_1024x556_124b4b15db.jpg"
-          }
-        },
-        "hash": "20180909_191151_1024x556_124b4b15db",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 101.6,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:02:39.388Z",
-        "updatedAt": "2026-02-17T13:02:39.388Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180909_195459-EFFECTS-1024x768.jpg",
-        "alternativeText": "Nocleh v autě na vyhlídce Tête de Chien.",
-        "url": "/uploads/20180909_195459_EFFECTS_1024x768_e98ff57aaf.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180909_195459-EFFECTS-1024x768.jpg",
-            "hash": "thumbnail_20180909_195459_EFFECTS_1024x768_e98ff57aaf",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 7.42,
-            "sizeInBytes": 7418,
-            "url": "/uploads/thumbnail_20180909_195459_EFFECTS_1024x768_e98ff57aaf.jpg"
-          },
-          "medium": {
-            "name": "medium_20180909_195459-EFFECTS-1024x768.jpg",
-            "hash": "medium_20180909_195459_EFFECTS_1024x768_e98ff57aaf",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 79.03,
-            "sizeInBytes": 79029,
-            "url": "/uploads/medium_20180909_195459_EFFECTS_1024x768_e98ff57aaf.jpg"
-          },
-          "small": {
-            "name": "small_20180909_195459-EFFECTS-1024x768.jpg",
-            "hash": "small_20180909_195459_EFFECTS_1024x768_e98ff57aaf",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 36.64,
-            "sizeInBytes": 36637,
-            "url": "/uploads/small_20180909_195459_EFFECTS_1024x768_e98ff57aaf.jpg"
-          },
-          "large": {
-            "name": "large_20180909_195459-EFFECTS-1024x768.jpg",
-            "hash": "large_20180909_195459_EFFECTS_1024x768_e98ff57aaf",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 131.53,
-            "sizeInBytes": 131530,
-            "url": "/uploads/large_20180909_195459_EFFECTS_1024x768_e98ff57aaf.jpg"
-          }
-        },
-        "hash": "20180909_195459_EFFECTS_1024x768_e98ff57aaf",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 140.27,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:02:39.994Z",
-        "updatedAt": "2026-02-17T13:02:39.994Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Palais princier de Monaco",
-          "url": "https://goo.gl/maps/RfTrBsx4UB8mNfts8"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Je jednou z hlavních atrakcí této země je právě královský palác. Jedná se o sídlo hlavy státu. Palác lze po zaplacení vstupného navštívit v době, kdy zde není přítomen vládce. Oblíbené je zde i střídání stráží, které začíná každý den pět minut před polednem a trvá 10 minut. Před palácem se nachází náměstí a za projití stojí i celý poloostrov na útesu, kde se palác nachází. Je zde hezký výhled na město. Najdete zde mořské akvárium, hezké zahrady s výhledem na moře, hojně navštěvovanou katedrálu Notre Dame, nebo pláž v podobě velkého betonového mola."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180909_113636-1024x768.jpg",
-        "alternativeText": "Královský palác s vyhlídkou Tête de Chien v pozadí, Monaco",
-        "url": "/uploads/20180909_113636_1024x768_9d50e944d8.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180909_113636-1024x768.jpg",
-            "hash": "thumbnail_20180909_113636_1024x768_9d50e944d8",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 7.62,
-            "sizeInBytes": 7616,
-            "url": "/uploads/thumbnail_20180909_113636_1024x768_9d50e944d8.jpg"
-          },
-          "small": {
-            "name": "small_20180909_113636-1024x768.jpg",
-            "hash": "small_20180909_113636_1024x768_9d50e944d8",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 36.53,
-            "sizeInBytes": 36529,
-            "url": "/uploads/small_20180909_113636_1024x768_9d50e944d8.jpg"
-          },
-          "medium": {
-            "name": "medium_20180909_113636-1024x768.jpg",
-            "hash": "medium_20180909_113636_1024x768_9d50e944d8",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 76.81,
-            "sizeInBytes": 76809,
-            "url": "/uploads/medium_20180909_113636_1024x768_9d50e944d8.jpg"
-          },
-          "large": {
-            "name": "large_20180909_113636-1024x768.jpg",
-            "hash": "large_20180909_113636_1024x768_9d50e944d8",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 127.85,
-            "sizeInBytes": 127849,
-            "url": "/uploads/large_20180909_113636_1024x768_9d50e944d8.jpg"
-          }
-        },
-        "hash": "20180909_113636_1024x768_9d50e944d8",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 135.41,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:02:40.385Z",
-        "updatedAt": "2026-02-17T13:02:40.385Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Casino",
-          "url": "https://goo.gl/maps/1FbBugXvse9FwkUXA",
-          "bold": true
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Za zhruba 10 euro se můžete podívat dovnitř slavného Casina ve čtvrti Monte Carlo. Do vstupní haly se ovšem dostanete i bez placení vstupného, po bezpečnostní kontrole."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180909_151430-1024x768.jpg",
-        "alternativeText": "Casino Monte Carlo",
-        "url": "/uploads/20180909_151430_1024x768_a08a0c43dd.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180909_151430-1024x768.jpg",
-            "hash": "thumbnail_20180909_151430_1024x768_a08a0c43dd",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 7.77,
-            "sizeInBytes": 7767,
-            "url": "/uploads/thumbnail_20180909_151430_1024x768_a08a0c43dd.jpg"
-          },
-          "small": {
-            "name": "small_20180909_151430-1024x768.jpg",
-            "hash": "small_20180909_151430_1024x768_a08a0c43dd",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 36.77,
-            "sizeInBytes": 36767,
-            "url": "/uploads/small_20180909_151430_1024x768_a08a0c43dd.jpg"
-          },
-          "large": {
-            "name": "large_20180909_151430-1024x768.jpg",
-            "hash": "large_20180909_151430_1024x768_a08a0c43dd",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 129.36,
-            "sizeInBytes": 129358,
-            "url": "/uploads/large_20180909_151430_1024x768_a08a0c43dd.jpg"
-          },
-          "medium": {
-            "name": "medium_20180909_151430-1024x768.jpg",
-            "hash": "medium_20180909_151430_1024x768_a08a0c43dd",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 77.49,
-            "sizeInBytes": 77488,
-            "url": "/uploads/medium_20180909_151430_1024x768_a08a0c43dd.jpg"
-          }
-        },
-        "hash": "20180909_151430_1024x768_a08a0c43dd",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 137.69,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:02:40.727Z",
-        "updatedAt": "2026-02-17T13:02:40.727Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Larvotto beach",
-          "url": "https://goo.gl/maps/Aq3YPhCpPrtbfW3S7",
-          "bold": true
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Relativně velká kamínková pláž. Stejně jako ostatní monacké pláže je hojně navštěvovaná a patří mezi nejoblíbenější. Naleznete zde i obchody, stánky se zmrzlinou a toalety, také je zde sprcha na pláži stejně jako na většině pláží."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Přístav Monte Carlo",
-          "url": "https://goo.gl/maps/HizP4HUXYBM3Gaj57",
-          "bold": true
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Procházka kolem přístavů v Monacu také stojí za to. Nejslavnější je přístav Monte Carlo, který se nachází pod, již zmiňovaným, poloostrovem s královským palácem (odkud je i hezký výhled přímo na přístav). Kotví zde ty nejluxusnější jachty a je opravdu na co se dívat."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180909_142434-1024x768.jpg",
-        "alternativeText": "Luxusní auta v Monacu potkáte velice často.",
-        "url": "/uploads/20180909_142434_1024x768_4316df98ff.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180909_142434-1024x768.jpg",
-            "hash": "thumbnail_20180909_142434_1024x768_4316df98ff",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 8.39,
-            "sizeInBytes": 8390,
-            "url": "/uploads/thumbnail_20180909_142434_1024x768_4316df98ff.jpg"
-          },
-          "small": {
-            "name": "small_20180909_142434-1024x768.jpg",
-            "hash": "small_20180909_142434_1024x768_4316df98ff",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 45.37,
-            "sizeInBytes": 45370,
-            "url": "/uploads/small_20180909_142434_1024x768_4316df98ff.jpg"
-          },
-          "medium": {
-            "name": "medium_20180909_142434-1024x768.jpg",
-            "hash": "medium_20180909_142434_1024x768_4316df98ff",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 102.72,
-            "sizeInBytes": 102723,
-            "url": "/uploads/medium_20180909_142434_1024x768_4316df98ff.jpg"
-          },
-          "large": {
-            "name": "large_20180909_142434-1024x768.jpg",
-            "hash": "large_20180909_142434_1024x768_4316df98ff",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 177.71,
-            "sizeInBytes": 177707,
-            "url": "/uploads/large_20180909_142434_1024x768_4316df98ff.jpg"
-          }
-        },
-        "hash": "20180909_142434_1024x768_4316df98ff",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 190.07,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:02:41.143Z",
-        "updatedAt": "2026-02-17T13:02:41.143Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180909_112517-1024x768.jpg",
-        "alternativeText": "Pohled na Monaco z poloostrovu.",
-        "url": "/uploads/20180909_112517_1024x768_dc23fe1aba.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180909_112517-1024x768.jpg",
-            "hash": "thumbnail_20180909_112517_1024x768_dc23fe1aba",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 11.31,
-            "sizeInBytes": 11309,
-            "url": "/uploads/thumbnail_20180909_112517_1024x768_dc23fe1aba.jpg"
-          },
-          "small": {
-            "name": "small_20180909_112517-1024x768.jpg",
-            "hash": "small_20180909_112517_1024x768_dc23fe1aba",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 60.48,
-            "sizeInBytes": 60477,
-            "url": "/uploads/small_20180909_112517_1024x768_dc23fe1aba.jpg"
-          },
-          "medium": {
-            "name": "medium_20180909_112517-1024x768.jpg",
-            "hash": "medium_20180909_112517_1024x768_dc23fe1aba",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 130.09,
-            "sizeInBytes": 130094,
-            "url": "/uploads/medium_20180909_112517_1024x768_dc23fe1aba.jpg"
-          },
-          "large": {
-            "name": "large_20180909_112517-1024x768.jpg",
-            "hash": "large_20180909_112517_1024x768_dc23fe1aba",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 218.22,
-            "sizeInBytes": 218224,
-            "url": "/uploads/large_20180909_112517_1024x768_dc23fe1aba.jpg"
-          }
-        },
-        "hash": "20180909_112517_1024x768_dc23fe1aba",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 233.73,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:02:41.846Z",
-        "updatedAt": "2026-02-17T13:02:41.846Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20180909_124903-1024x768.jpg",
-        "alternativeText": "Mořské akvárium, Monaco",
-        "url": "/uploads/20180909_124903_1024x768_ff033e3443.jpg",
-        "width": 1024,
-        "height": 768,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20180909_124903-1024x768.jpg",
-            "hash": "thumbnail_20180909_124903_1024x768_ff033e3443",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 6.71,
-            "sizeInBytes": 6709,
-            "url": "/uploads/thumbnail_20180909_124903_1024x768_ff033e3443.jpg"
-          },
-          "small": {
-            "name": "small_20180909_124903-1024x768.jpg",
-            "hash": "small_20180909_124903_1024x768_ff033e3443",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 34.35,
-            "sizeInBytes": 34355,
-            "url": "/uploads/small_20180909_124903_1024x768_ff033e3443.jpg"
-          },
-          "large": {
-            "name": "large_20180909_124903-1024x768.jpg",
-            "hash": "large_20180909_124903_1024x768_ff033e3443",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 127.78,
-            "sizeInBytes": 127781,
-            "url": "/uploads/large_20180909_124903_1024x768_ff033e3443.jpg"
-          },
-          "medium": {
-            "name": "medium_20180909_124903-1024x768.jpg",
-            "hash": "medium_20180909_124903_1024x768_ff033e3443",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 75.26,
-            "sizeInBytes": 75262,
-            "url": "/uploads/medium_20180909_124903_1024x768_ff033e3443.jpg"
-          }
-        },
-        "hash": "20180909_124903_1024x768_ff033e3443",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 135.95,
-        "provider": "local",
-        "createdAt": "2026-02-17T13:02:42.632Z",
-        "updatedAt": "2026-02-17T13:02:42.632Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    }
-  ],
-  "createdAt": "2026-02-17T13:02:43.143Z",
-  "updatedAt": "2026-02-17T13:02:43.143Z",
-  "publishedAt": "2026-02-17T13:02:43.146Z",
-  "continent": "europe",
-  "contentLang": "cs",
-  "flagEmoji": "🇲🇨",
-  "timezone": "CET (UTC+1)",
-  "languages": [
-    "French"
-  ],
-  "currencyCode": "EUR",
-  "currencyName": "Euro",
-  "currencySymbol": "€",
-  "budgetPerDayBudget": 120,
-  "budgetPerDayMidRange": 250,
-  "budgetPerDayLuxury": 500,
-  "bestTimeToVisit": "April to June, September to October",
-  "visaInfo": "EU citizens: free movement",
-  "destinationType": "microstate",
-  "cover": {
-    "id": 8438,
-    "documentId": "kvgvthr05fm68jvs2tk469v2",
-    "name": "cover-1771333362968-htclwg.jpg",
-    "alternativeText": "Monaco",
-    "caption": null,
-    "width": 1020,
-    "height": 765,
-    "formats": {
-      "thumbnail": {
-        "name": "thumbnail_cover-1771333362968-htclwg.jpg",
-        "hash": "thumbnail_cover_1771333362968_htclwg_6000ce2729",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "path": null,
-        "width": 208,
-        "height": 156,
-        "size": 10.35,
-        "sizeInBytes": 10348,
-        "url": "/uploads/thumbnail_cover_1771333362968_htclwg_6000ce2729.jpg"
-      },
-      "small": {
-        "name": "small_cover-1771333362968-htclwg.jpg",
-        "hash": "small_cover_1771333362968_htclwg_6000ce2729",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "path": null,
-        "width": 500,
-        "height": 375,
-        "size": 49.94,
-        "sizeInBytes": 49937,
-        "url": "/uploads/small_cover_1771333362968_htclwg_6000ce2729.jpg"
-      },
-      "medium": {
-        "name": "medium_cover-1771333362968-htclwg.jpg",
-        "hash": "medium_cover_1771333362968_htclwg_6000ce2729",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "path": null,
-        "width": 750,
-        "height": 563,
-        "size": 102.1,
-        "sizeInBytes": 102103,
-        "url": "/uploads/medium_cover_1771333362968_htclwg_6000ce2729.jpg"
-      },
-      "large": {
-        "name": "large_cover-1771333362968-htclwg.jpg",
-        "hash": "large_cover_1771333362968_htclwg_6000ce2729",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "path": null,
-        "width": 1000,
-        "height": 750,
-        "size": 165.43,
-        "sizeInBytes": 165433,
-        "url": "/uploads/large_cover_1771333362968_htclwg_6000ce2729.jpg"
-      }
-    },
-    "hash": "cover_1771333362968_htclwg_6000ce2729",
-    "ext": ".jpg",
-    "mime": "image/jpeg",
-    "size": 176.52,
-    "url": "/uploads/cover_1771333362968_htclwg_6000ce2729.jpg",
-    "previewUrl": null,
-    "provider": "local",
-    "provider_metadata": null,
-    "createdAt": "2026-02-17T13:02:43.124Z",
-    "updatedAt": "2026-02-17T13:02:43.124Z",
-    "publishedAt": "2026-02-17T13:02:43.125Z"
-  }
+	"id": 899,
+	"documentId": "di909ni09t38mqihfvukl5hq",
+	"name": "Monaco",
+	"slug": "monaco",
+	"intro": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Monaco je zemí přepychu a luxusu. V přístavech kotví ty nejdražší jachty, v ulicích se prohání Ferrari a Lamborginy a levné obchody byste zde hledali těžko. Navštívit Monaco je opravdu netradiční zážitek. Země má i spoustu turistických atrakcí jako jsou hezké městské pláže – ovšem přelidněné, parky, památky, muzea. K navštívení tohoto ministátu vám postačí i jedno odpoledne, nebo zde můžete strávit třeba několik dní."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Doprava"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Pokud budete autem putovat po jižním pobřeží Francie, Monaco je ideální zastávkou na vaší cestě. Silniční doprava je zde relativně hustá a parkování je placené, takže se vyplatí auto zaparkovat někde ve Francii, nebo Itálii a do Monaca prostě dojít pěšky."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Pokud budete například v nedalekém letovisku Nice bez auta, můžete se sem dostat autobusem. Zámožnější návštěvníci přiletí letadlem do Nice a odtud vrtulníkem přímo do Monaca."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Po městě se lze dopravovat městskými autobusy, nebo jednoduše pěšky, vzdálenosti jsou malé a stále je co pozorovat."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Místa k navštívení"
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Tête de Chien",
+					"url": "https://goo.gl/maps/sh3LNgSY6HBJSAYU7",
+					"bold": true
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Krásná vyhlídka na celé Monaco a pokračující francouzské pobřeží. Naleznete ji na příkré skále přímo za městem. Je velice oblíbená ve dne i v noci, kdy lze pozorovat nasvětlená města. Monaco zde máte jako na dlani a zároveň je na druhé straně skály vidět pobřeží s nedalekým Nice."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Dostanete se sem buď autem přes Francii (vyhlídka se nachází ve Francii), nebo sem vede z Monaca pěší stezka s poměrně velkým stoupáním."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Místo je vhodné i na spaní v autě, či v karavanu. Můžete zde pohodlně uvařit, popíjet víno s výhledem na pobřeží a následně strávit i několik nocí. Večer zde bude možná trochu rušno, jelikož je tato vyhlídka velice oblíbená a místní i cestovatelé zde tráví večery."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180909_191151-1024x556.jpg",
+				"alternativeText": "Pohled z vyhlídky Tête de Chien na Monaco.",
+				"url": "/uploads/20180909_191151_1024x556_124b4b15db.jpg",
+				"width": 1024,
+				"height": 556,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180909_191151-1024x556.jpg",
+						"hash": "thumbnail_20180909_191151_1024x556_124b4b15db",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 245,
+						"height": 133,
+						"size": 7.36,
+						"sizeInBytes": 7363,
+						"url": "/uploads/thumbnail_20180909_191151_1024x556_124b4b15db.jpg"
+					},
+					"medium": {
+						"name": "medium_20180909_191151-1024x556.jpg",
+						"hash": "medium_20180909_191151_1024x556_124b4b15db",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 407,
+						"size": 56.18,
+						"sizeInBytes": 56181,
+						"url": "/uploads/medium_20180909_191151_1024x556_124b4b15db.jpg"
+					},
+					"small": {
+						"name": "small_20180909_191151-1024x556.jpg",
+						"hash": "small_20180909_191151_1024x556_124b4b15db",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 271,
+						"size": 26.56,
+						"sizeInBytes": 26561,
+						"url": "/uploads/small_20180909_191151_1024x556_124b4b15db.jpg"
+					},
+					"large": {
+						"name": "large_20180909_191151-1024x556.jpg",
+						"hash": "large_20180909_191151_1024x556_124b4b15db",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 543,
+						"size": 94.7,
+						"sizeInBytes": 94704,
+						"url": "/uploads/large_20180909_191151_1024x556_124b4b15db.jpg"
+					}
+				},
+				"hash": "20180909_191151_1024x556_124b4b15db",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 101.6,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:02:39.388Z",
+				"updatedAt": "2026-02-17T13:02:39.388Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180909_195459-EFFECTS-1024x768.jpg",
+				"alternativeText": "Nocleh v autě na vyhlídce Tête de Chien.",
+				"url": "/uploads/20180909_195459_EFFECTS_1024x768_e98ff57aaf.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180909_195459-EFFECTS-1024x768.jpg",
+						"hash": "thumbnail_20180909_195459_EFFECTS_1024x768_e98ff57aaf",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 7.42,
+						"sizeInBytes": 7418,
+						"url": "/uploads/thumbnail_20180909_195459_EFFECTS_1024x768_e98ff57aaf.jpg"
+					},
+					"medium": {
+						"name": "medium_20180909_195459-EFFECTS-1024x768.jpg",
+						"hash": "medium_20180909_195459_EFFECTS_1024x768_e98ff57aaf",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 79.03,
+						"sizeInBytes": 79029,
+						"url": "/uploads/medium_20180909_195459_EFFECTS_1024x768_e98ff57aaf.jpg"
+					},
+					"small": {
+						"name": "small_20180909_195459-EFFECTS-1024x768.jpg",
+						"hash": "small_20180909_195459_EFFECTS_1024x768_e98ff57aaf",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 36.64,
+						"sizeInBytes": 36637,
+						"url": "/uploads/small_20180909_195459_EFFECTS_1024x768_e98ff57aaf.jpg"
+					},
+					"large": {
+						"name": "large_20180909_195459-EFFECTS-1024x768.jpg",
+						"hash": "large_20180909_195459_EFFECTS_1024x768_e98ff57aaf",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 131.53,
+						"sizeInBytes": 131530,
+						"url": "/uploads/large_20180909_195459_EFFECTS_1024x768_e98ff57aaf.jpg"
+					}
+				},
+				"hash": "20180909_195459_EFFECTS_1024x768_e98ff57aaf",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 140.27,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:02:39.994Z",
+				"updatedAt": "2026-02-17T13:02:39.994Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Palais princier de Monaco",
+					"url": "https://goo.gl/maps/RfTrBsx4UB8mNfts8"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Je jednou z hlavních atrakcí této země je právě královský palác. Jedná se o sídlo hlavy státu. Palác lze po zaplacení vstupného navštívit v době, kdy zde není přítomen vládce. Oblíbené je zde i střídání stráží, které začíná každý den pět minut před polednem a trvá 10 minut. Před palácem se nachází náměstí a za projití stojí i celý poloostrov na útesu, kde se palác nachází. Je zde hezký výhled na město. Najdete zde mořské akvárium, hezké zahrady s výhledem na moře, hojně navštěvovanou katedrálu Notre Dame, nebo pláž v podobě velkého betonového mola."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180909_113636-1024x768.jpg",
+				"alternativeText": "Královský palác s vyhlídkou Tête de Chien v pozadí, Monaco",
+				"url": "/uploads/20180909_113636_1024x768_9d50e944d8.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180909_113636-1024x768.jpg",
+						"hash": "thumbnail_20180909_113636_1024x768_9d50e944d8",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 7.62,
+						"sizeInBytes": 7616,
+						"url": "/uploads/thumbnail_20180909_113636_1024x768_9d50e944d8.jpg"
+					},
+					"small": {
+						"name": "small_20180909_113636-1024x768.jpg",
+						"hash": "small_20180909_113636_1024x768_9d50e944d8",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 36.53,
+						"sizeInBytes": 36529,
+						"url": "/uploads/small_20180909_113636_1024x768_9d50e944d8.jpg"
+					},
+					"medium": {
+						"name": "medium_20180909_113636-1024x768.jpg",
+						"hash": "medium_20180909_113636_1024x768_9d50e944d8",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 76.81,
+						"sizeInBytes": 76809,
+						"url": "/uploads/medium_20180909_113636_1024x768_9d50e944d8.jpg"
+					},
+					"large": {
+						"name": "large_20180909_113636-1024x768.jpg",
+						"hash": "large_20180909_113636_1024x768_9d50e944d8",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 127.85,
+						"sizeInBytes": 127849,
+						"url": "/uploads/large_20180909_113636_1024x768_9d50e944d8.jpg"
+					}
+				},
+				"hash": "20180909_113636_1024x768_9d50e944d8",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 135.41,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:02:40.385Z",
+				"updatedAt": "2026-02-17T13:02:40.385Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Casino",
+					"url": "https://goo.gl/maps/1FbBugXvse9FwkUXA",
+					"bold": true
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Za zhruba 10 euro se můžete podívat dovnitř slavného Casina ve čtvrti Monte Carlo. Do vstupní haly se ovšem dostanete i bez placení vstupného, po bezpečnostní kontrole."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180909_151430-1024x768.jpg",
+				"alternativeText": "Casino Monte Carlo",
+				"url": "/uploads/20180909_151430_1024x768_a08a0c43dd.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180909_151430-1024x768.jpg",
+						"hash": "thumbnail_20180909_151430_1024x768_a08a0c43dd",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 7.77,
+						"sizeInBytes": 7767,
+						"url": "/uploads/thumbnail_20180909_151430_1024x768_a08a0c43dd.jpg"
+					},
+					"small": {
+						"name": "small_20180909_151430-1024x768.jpg",
+						"hash": "small_20180909_151430_1024x768_a08a0c43dd",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 36.77,
+						"sizeInBytes": 36767,
+						"url": "/uploads/small_20180909_151430_1024x768_a08a0c43dd.jpg"
+					},
+					"large": {
+						"name": "large_20180909_151430-1024x768.jpg",
+						"hash": "large_20180909_151430_1024x768_a08a0c43dd",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 129.36,
+						"sizeInBytes": 129358,
+						"url": "/uploads/large_20180909_151430_1024x768_a08a0c43dd.jpg"
+					},
+					"medium": {
+						"name": "medium_20180909_151430-1024x768.jpg",
+						"hash": "medium_20180909_151430_1024x768_a08a0c43dd",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 77.49,
+						"sizeInBytes": 77488,
+						"url": "/uploads/medium_20180909_151430_1024x768_a08a0c43dd.jpg"
+					}
+				},
+				"hash": "20180909_151430_1024x768_a08a0c43dd",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 137.69,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:02:40.727Z",
+				"updatedAt": "2026-02-17T13:02:40.727Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Larvotto beach",
+					"url": "https://goo.gl/maps/Aq3YPhCpPrtbfW3S7",
+					"bold": true
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Relativně velká kamínková pláž. Stejně jako ostatní monacké pláže je hojně navštěvovaná a patří mezi nejoblíbenější. Naleznete zde i obchody, stánky se zmrzlinou a toalety, také je zde sprcha na pláži stejně jako na většině pláží."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Přístav Monte Carlo",
+					"url": "https://goo.gl/maps/HizP4HUXYBM3Gaj57",
+					"bold": true
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Procházka kolem přístavů v Monacu také stojí za to. Nejslavnější je přístav Monte Carlo, který se nachází pod, již zmiňovaným, poloostrovem s královským palácem (odkud je i hezký výhled přímo na přístav). Kotví zde ty nejluxusnější jachty a je opravdu na co se dívat."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180909_142434-1024x768.jpg",
+				"alternativeText": "Luxusní auta v Monacu potkáte velice často.",
+				"url": "/uploads/20180909_142434_1024x768_4316df98ff.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180909_142434-1024x768.jpg",
+						"hash": "thumbnail_20180909_142434_1024x768_4316df98ff",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 8.39,
+						"sizeInBytes": 8390,
+						"url": "/uploads/thumbnail_20180909_142434_1024x768_4316df98ff.jpg"
+					},
+					"small": {
+						"name": "small_20180909_142434-1024x768.jpg",
+						"hash": "small_20180909_142434_1024x768_4316df98ff",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 45.37,
+						"sizeInBytes": 45370,
+						"url": "/uploads/small_20180909_142434_1024x768_4316df98ff.jpg"
+					},
+					"medium": {
+						"name": "medium_20180909_142434-1024x768.jpg",
+						"hash": "medium_20180909_142434_1024x768_4316df98ff",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 102.72,
+						"sizeInBytes": 102723,
+						"url": "/uploads/medium_20180909_142434_1024x768_4316df98ff.jpg"
+					},
+					"large": {
+						"name": "large_20180909_142434-1024x768.jpg",
+						"hash": "large_20180909_142434_1024x768_4316df98ff",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 177.71,
+						"sizeInBytes": 177707,
+						"url": "/uploads/large_20180909_142434_1024x768_4316df98ff.jpg"
+					}
+				},
+				"hash": "20180909_142434_1024x768_4316df98ff",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 190.07,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:02:41.143Z",
+				"updatedAt": "2026-02-17T13:02:41.143Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180909_112517-1024x768.jpg",
+				"alternativeText": "Pohled na Monaco z poloostrovu.",
+				"url": "/uploads/20180909_112517_1024x768_dc23fe1aba.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180909_112517-1024x768.jpg",
+						"hash": "thumbnail_20180909_112517_1024x768_dc23fe1aba",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 11.31,
+						"sizeInBytes": 11309,
+						"url": "/uploads/thumbnail_20180909_112517_1024x768_dc23fe1aba.jpg"
+					},
+					"small": {
+						"name": "small_20180909_112517-1024x768.jpg",
+						"hash": "small_20180909_112517_1024x768_dc23fe1aba",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 60.48,
+						"sizeInBytes": 60477,
+						"url": "/uploads/small_20180909_112517_1024x768_dc23fe1aba.jpg"
+					},
+					"medium": {
+						"name": "medium_20180909_112517-1024x768.jpg",
+						"hash": "medium_20180909_112517_1024x768_dc23fe1aba",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 130.09,
+						"sizeInBytes": 130094,
+						"url": "/uploads/medium_20180909_112517_1024x768_dc23fe1aba.jpg"
+					},
+					"large": {
+						"name": "large_20180909_112517-1024x768.jpg",
+						"hash": "large_20180909_112517_1024x768_dc23fe1aba",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 218.22,
+						"sizeInBytes": 218224,
+						"url": "/uploads/large_20180909_112517_1024x768_dc23fe1aba.jpg"
+					}
+				},
+				"hash": "20180909_112517_1024x768_dc23fe1aba",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 233.73,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:02:41.846Z",
+				"updatedAt": "2026-02-17T13:02:41.846Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20180909_124903-1024x768.jpg",
+				"alternativeText": "Mořské akvárium, Monaco",
+				"url": "/uploads/20180909_124903_1024x768_ff033e3443.jpg",
+				"width": 1024,
+				"height": 768,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20180909_124903-1024x768.jpg",
+						"hash": "thumbnail_20180909_124903_1024x768_ff033e3443",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 6.71,
+						"sizeInBytes": 6709,
+						"url": "/uploads/thumbnail_20180909_124903_1024x768_ff033e3443.jpg"
+					},
+					"small": {
+						"name": "small_20180909_124903-1024x768.jpg",
+						"hash": "small_20180909_124903_1024x768_ff033e3443",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 34.35,
+						"sizeInBytes": 34355,
+						"url": "/uploads/small_20180909_124903_1024x768_ff033e3443.jpg"
+					},
+					"large": {
+						"name": "large_20180909_124903-1024x768.jpg",
+						"hash": "large_20180909_124903_1024x768_ff033e3443",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 127.78,
+						"sizeInBytes": 127781,
+						"url": "/uploads/large_20180909_124903_1024x768_ff033e3443.jpg"
+					},
+					"medium": {
+						"name": "medium_20180909_124903-1024x768.jpg",
+						"hash": "medium_20180909_124903_1024x768_ff033e3443",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 75.26,
+						"sizeInBytes": 75262,
+						"url": "/uploads/medium_20180909_124903_1024x768_ff033e3443.jpg"
+					}
+				},
+				"hash": "20180909_124903_1024x768_ff033e3443",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 135.95,
+				"provider": "local",
+				"createdAt": "2026-02-17T13:02:42.632Z",
+				"updatedAt": "2026-02-17T13:02:42.632Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		}
+	],
+	"createdAt": "2026-02-17T13:02:43.143Z",
+	"updatedAt": "2026-02-17T13:02:43.143Z",
+	"publishedAt": "2026-02-17T13:02:43.146Z",
+	"continent": "europe",
+	"contentLang": "cs",
+	"flagEmoji": "🇲🇨",
+	"timezone": "CET (UTC+1)",
+	"languages": ["French"],
+	"currencyCode": "EUR",
+	"currencyName": "Euro",
+	"currencySymbol": "€",
+	"budgetPerDayBudget": 120,
+	"budgetPerDayMidRange": 250,
+	"budgetPerDayLuxury": 500,
+	"bestTimeToVisit": "April to June, September to October",
+	"visaInfo": "EU citizens: free movement",
+	"destinationType": "microstate",
+	"cover": {
+		"id": 8438,
+		"documentId": "kvgvthr05fm68jvs2tk469v2",
+		"name": "cover-1771333362968-htclwg.jpg",
+		"alternativeText": "Monaco",
+		"caption": null,
+		"width": 1020,
+		"height": 765,
+		"formats": {
+			"thumbnail": {
+				"name": "thumbnail_cover-1771333362968-htclwg.jpg",
+				"hash": "thumbnail_cover_1771333362968_htclwg_6000ce2729",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"path": null,
+				"width": 208,
+				"height": 156,
+				"size": 10.35,
+				"sizeInBytes": 10348,
+				"url": "/uploads/thumbnail_cover_1771333362968_htclwg_6000ce2729.jpg"
+			},
+			"small": {
+				"name": "small_cover-1771333362968-htclwg.jpg",
+				"hash": "small_cover_1771333362968_htclwg_6000ce2729",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"path": null,
+				"width": 500,
+				"height": 375,
+				"size": 49.94,
+				"sizeInBytes": 49937,
+				"url": "/uploads/small_cover_1771333362968_htclwg_6000ce2729.jpg"
+			},
+			"medium": {
+				"name": "medium_cover-1771333362968-htclwg.jpg",
+				"hash": "medium_cover_1771333362968_htclwg_6000ce2729",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"path": null,
+				"width": 750,
+				"height": 563,
+				"size": 102.1,
+				"sizeInBytes": 102103,
+				"url": "/uploads/medium_cover_1771333362968_htclwg_6000ce2729.jpg"
+			},
+			"large": {
+				"name": "large_cover-1771333362968-htclwg.jpg",
+				"hash": "large_cover_1771333362968_htclwg_6000ce2729",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"path": null,
+				"width": 1000,
+				"height": 750,
+				"size": 165.43,
+				"sizeInBytes": 165433,
+				"url": "/uploads/large_cover_1771333362968_htclwg_6000ce2729.jpg"
+			}
+		},
+		"hash": "cover_1771333362968_htclwg_6000ce2729",
+		"ext": ".jpg",
+		"mime": "image/jpeg",
+		"size": 176.52,
+		"url": "/uploads/cover_1771333362968_htclwg_6000ce2729.jpg",
+		"previewUrl": null,
+		"provider": "local",
+		"provider_metadata": null,
+		"createdAt": "2026-02-17T13:02:43.124Z",
+		"updatedAt": "2026-02-17T13:02:43.124Z",
+		"publishedAt": "2026-02-17T13:02:43.125Z"
+	}
 }

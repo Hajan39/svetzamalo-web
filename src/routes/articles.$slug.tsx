@@ -1,3 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
 import {
 	ArticleFaq,
 	ArticleHero,
@@ -17,7 +18,6 @@ import {
 } from "@/components/seo/StructuredData";
 import { useArticleBySlug, useDestinationById } from "@/integrations/strapi";
 import { SITE_CONFIG } from "@/lib/constants";
-import { createFileRoute } from "@tanstack/react-router";
 
 const SITE_URL = SITE_CONFIG.url;
 
@@ -33,6 +33,7 @@ export const Route = createFileRoute("/articles/$slug")({
 			if (article.destinationId) {
 				await queryClient.prefetchQuery({
 					queryKey: strapiQueryKeys.destinations.detail(article.destinationId),
+					// biome-ignore lint/style/noNonNullAssertion: destinationId checked above
 					queryFn: () => fetchDestinationById(article.destinationId!),
 				});
 			}
@@ -134,11 +135,11 @@ function ArticlePage() {
 						{ label: "Destinations", href: "/destinations" },
 						...(destination
 							? [
-								{
-									label: destination.name,
-									href: `/destinations/guide/${destination.slug}`,
-								},
-							]
+									{
+										label: destination.name,
+										href: `/destinations/guide/${destination.slug}`,
+									},
+								]
 							: []),
 						{ label: article.title },
 					]}

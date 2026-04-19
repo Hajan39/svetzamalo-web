@@ -1,213 +1,207 @@
 {
-  "title": "7 veci, ktere nepodcenuj ve Vietnamu",
-  "slug": "nepodcenuj-vietnam",
-  "excerpt": "Jedete do destinace Vietnam? Tady je 7 veci, co lide nejcasteji podceni.",
-  "articleType": "practical-info",
-  "contentLang": "cs",
-  "tags": [
-    "Vietnam",
-    "tipy",
-    "varovani",
-    "nepodcenuj",
-    "prakticke info"
-  ],
-  "destinationSlug": "vietnam",
-  "publish": true,
-  "readingTime": 3,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Jedete do destinace Vietnam a chcete se vyhnout neprijemnym prekvapenim? Tady je 7 veci, ktere lide nejcasteji podceni - a jak se na ne pripravit."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Doprava je adrenalin"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Tisice motorek, zadna pravidla. Prechazeni silnice = zavrete oci a jdete pomalu. Nestavejte se uprostred."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Smlouvani je sport"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Prvni cena je vzdy 3-5x vyssi. Smlouvejte o vsem krome jidla. S usmevem, ale durazne."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Jidlo na ulici je nejlepsi"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Plastikove zidlicky, nizke stolky, cerstve nudle za 20 Kc. Nebojte se - mistni to jedi taky."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Nocni autobusy jsou legrace"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Spacaky-autobusy jsou levne a jedou pres noc. Ale klimatizace byva na maximum a televize nekdy jede cely noc na plne pecky."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Prujmy jsou soucasti dobrodruztvi"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Vezme si dost Imodia a budte pripraveni. Po 2-3 dnech si zaludek zvykne."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Pho se jí i k snidani"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Horka polevka s nudlemi rano? Ve Vietnamu naprosto normalni - a je to skvele."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "! Z jihu na sever je daleko"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Vietnam je dlouhy 1650 km. Neplanuejte za tyden obihnout vsechno. Vyb si jednu oblast."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Pripraveni?"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "-> "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-vietnam",
-          "children": [
-            {
-              "type": "text",
-              "text": "Kompletni pruvodce: Vietnam"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " - vse co potrebujete vedet."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "-> "
-        },
-        {
-          "type": "link",
-          "url": "/articles/chyby-ktere-stoji-penize",
-          "children": [
-            {
-              "type": "text",
-              "text": "8 chyb, ktere stoji penize"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"title": "7 veci, ktere nepodcenuj ve Vietnamu",
+	"slug": "nepodcenuj-vietnam",
+	"excerpt": "Jedete do destinace Vietnam? Tady je 7 veci, co lide nejcasteji podceni.",
+	"articleType": "practical-info",
+	"contentLang": "cs",
+	"tags": ["Vietnam", "tipy", "varovani", "nepodcenuj", "prakticke info"],
+	"destinationSlug": "vietnam",
+	"publish": true,
+	"readingTime": 3,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Jedete do destinace Vietnam a chcete se vyhnout neprijemnym prekvapenim? Tady je 7 veci, ktere lide nejcasteji podceni - a jak se na ne pripravit."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Doprava je adrenalin"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Tisice motorek, zadna pravidla. Prechazeni silnice = zavrete oci a jdete pomalu. Nestavejte se uprostred."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Smlouvani je sport"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Prvni cena je vzdy 3-5x vyssi. Smlouvejte o vsem krome jidla. S usmevem, ale durazne."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Jidlo na ulici je nejlepsi"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Plastikove zidlicky, nizke stolky, cerstve nudle za 20 Kc. Nebojte se - mistni to jedi taky."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Nocni autobusy jsou legrace"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Spacaky-autobusy jsou levne a jedou pres noc. Ale klimatizace byva na maximum a televize nekdy jede cely noc na plne pecky."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Prujmy jsou soucasti dobrodruztvi"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Vezme si dost Imodia a budte pripraveni. Po 2-3 dnech si zaludek zvykne."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Pho se jí i k snidani"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Horka polevka s nudlemi rano? Ve Vietnamu naprosto normalni - a je to skvele."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "! Z jihu na sever je daleko"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Vietnam je dlouhy 1650 km. Neplanuejte za tyden obihnout vsechno. Vyb si jednu oblast."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Pripraveni?"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "-> "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-vietnam",
+					"children": [
+						{
+							"type": "text",
+							"text": "Kompletni pruvodce: Vietnam"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " - vse co potrebujete vedet."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "-> "
+				},
+				{
+					"type": "link",
+					"url": "/articles/chyby-ktere-stoji-penize",
+					"children": [
+						{
+							"type": "text",
+							"text": "8 chyb, ktere stoji penize"
+						}
+					]
+				}
+			]
+		}
+	]
 }

@@ -1,11 +1,14 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { useId, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { createComgateBookPayment, submitBookInterest } from "@/integrations/strapi";
+import {
+	createComgateBookPayment,
+	submitBookInterest,
+} from "@/integrations/strapi";
 import { EXTERNAL_SERVICES, SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
-import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
 
 const SITE_URL = SITE_CONFIG.url;
 
@@ -18,7 +21,10 @@ export const Route = createFileRoute("/book/")({
 				content:
 					"Kniha o levném cestování – praktické tipy, rozpočty a inspirace. Informace o vydání, registrace a nákup.",
 			},
-			{ property: "og:title", content: "Kniha o levném cestování | Svět za málo" },
+			{
+				property: "og:title",
+				content: "Kniha o levném cestování | Svět za málo",
+			},
 			{ property: "og:type", content: "website" },
 			{ property: "og:url", content: `${SITE_URL}/book` },
 		],
@@ -30,9 +36,13 @@ export const Route = createFileRoute("/book/")({
 function BookPage() {
 	const { t } = useTranslation();
 	const [email, setEmail] = useState("");
-	const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+	const [status, setStatus] = useState<
+		"idle" | "loading" | "success" | "error"
+	>("idle");
 	const [emailEbook, setEmailEbook] = useState("");
-	const [statusEbook, setStatusEbook] = useState<"idle" | "loading" | "success" | "error">("idle");
+	const [statusEbook, setStatusEbook] = useState<
+		"idle" | "loading" | "success" | "error"
+	>("idle");
 
 	const handleRegister = async (e: React.FormEvent) => {
 		e.preventDefault();
@@ -61,13 +71,17 @@ function BookPage() {
 	};
 
 	const bookAvailable = EXTERNAL_SERVICES.book.available;
-	const buyUrl = EXTERNAL_SERVICES.book.buyUrl || (t("book.buyUrl") as string) || "#";
+	const buyUrl =
+		EXTERNAL_SERVICES.book.buyUrl || (t("book.buyUrl") as string) || "#";
+	const uid = useId();
 	const ebookPdfUrl = EXTERNAL_SERVICES.book.ebookPdfUrl || "";
 	const bookPrice = EXTERNAL_SERVICES.book.price || "";
 
 	const [buyEmail, setBuyEmail] = useState("");
 	const [buyFullName, setBuyFullName] = useState("");
-	const [buyStatus, setBuyStatus] = useState<"idle" | "loading" | "error">("idle");
+	const [buyStatus, setBuyStatus] = useState<"idle" | "loading" | "error">(
+		"idle",
+	);
 	const [buyErrorMessage, setBuyErrorMessage] = useState("");
 
 	const handleBuySubmit = async (e: React.FormEvent) => {
@@ -76,11 +90,16 @@ function BookPage() {
 		setBuyStatus("loading");
 		setBuyErrorMessage("");
 		try {
-			const redirectUrl = await createComgateBookPayment(buyEmail.trim(), buyFullName.trim());
+			const redirectUrl = await createComgateBookPayment(
+				buyEmail.trim(),
+				buyFullName.trim(),
+			);
 			window.location.href = redirectUrl;
 		} catch (err) {
 			setBuyStatus("error");
-			setBuyErrorMessage(err instanceof Error ? err.message : (t("book.buyError") as string));
+			setBuyErrorMessage(
+				err instanceof Error ? err.message : (t("book.buyError") as string),
+			);
 		}
 	};
 
@@ -143,8 +162,11 @@ function BookPage() {
 					</section>
 
 					<ul className="space-y-2">
-						{(t("book.features") as string).split("|").map((feature, i) => (
-							<li key={i} className="flex items-start gap-3 text-foreground-secondary">
+						{(t("book.features") as string).split("|").map((feature) => (
+							<li
+								key={feature}
+								className="flex items-start gap-3 text-foreground-secondary"
+							>
 								<span className="text-primary mt-0.5">✓</span>
 								<span>{feature.trim()}</span>
 							</li>
@@ -161,25 +183,41 @@ function BookPage() {
 						</p>
 						{statusEbook === "success" ? (
 							<div className="space-y-3">
-								<p className="text-success font-medium">{t("book.ebookSuccess")}</p>
+								<p className="text-success font-medium">
+									{t("book.ebookSuccess")}
+								</p>
 								{ebookPdfUrl ? (
-									<Button asChild size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground">
-										<a href={ebookPdfUrl} target="_blank" rel="noopener noreferrer" download>
+									<Button
+										asChild
+										size="lg"
+										className="bg-primary hover:bg-primary-hover text-primary-foreground"
+									>
+										<a
+											href={ebookPdfUrl}
+											target="_blank"
+											rel="noopener noreferrer"
+											download
+										>
 											{t("book.ebookDownloadBtn")}
 										</a>
 									</Button>
 								) : (
-									<p className="text-sm text-foreground-muted">{t("book.ebookSuccessNoUrl")}</p>
+									<p className="text-sm text-foreground-muted">
+										{t("book.ebookSuccessNoUrl")}
+									</p>
 								)}
 							</div>
 						) : (
-							<form onSubmit={handleEbookSubmit} className="flex flex-col sm:flex-row gap-3">
+							<form
+								onSubmit={handleEbookSubmit}
+								className="flex flex-col sm:flex-row gap-3"
+							>
 								<div className="flex-1">
-									<Label htmlFor="ebook-email" className="sr-only">
+									<Label htmlFor={`${uid}-ebook-email`} className="sr-only">
 										{t("book.ebookPlaceholder")}
 									</Label>
 									<Input
-										id="ebook-email"
+										id={`${uid}-ebook-email`}
 										type="email"
 										placeholder={t("book.ebookPlaceholder")}
 										value={emailEbook}
@@ -190,12 +228,16 @@ function BookPage() {
 									/>
 								</div>
 								<Button type="submit" disabled={statusEbook === "loading"}>
-									{statusEbook === "loading" ? t("common.loading") : t("book.ebookButton")}
+									{statusEbook === "loading"
+										? t("common.loading")
+										: t("book.ebookButton")}
 								</Button>
 							</form>
 						)}
 						{statusEbook === "error" && (
-							<p className="mt-2 text-sm text-error">{t("book.registerError")}</p>
+							<p className="mt-2 text-sm text-error">
+								{t("book.registerError")}
+							</p>
 						)}
 					</section>
 
@@ -208,15 +250,20 @@ function BookPage() {
 							{t("book.registerDesc")}
 						</p>
 						{status === "success" ? (
-							<p className="text-success font-medium">{t("book.registerSuccess")}</p>
+							<p className="text-success font-medium">
+								{t("book.registerSuccess")}
+							</p>
 						) : (
-							<form onSubmit={handleRegister} className="flex flex-col sm:flex-row gap-3">
+							<form
+								onSubmit={handleRegister}
+								className="flex flex-col sm:flex-row gap-3"
+							>
 								<div className="flex-1">
-									<Label htmlFor="book-email" className="sr-only">
+									<Label htmlFor={`${uid}-book-email`} className="sr-only">
 										{t("book.registerPlaceholder")}
 									</Label>
 									<Input
-										id="book-email"
+										id={`${uid}-book-email`}
 										type="email"
 										placeholder={t("book.registerPlaceholder")}
 										value={email}
@@ -227,12 +274,16 @@ function BookPage() {
 									/>
 								</div>
 								<Button type="submit" disabled={status === "loading"}>
-									{status === "loading" ? t("common.loading") : t("book.registerButton")}
+									{status === "loading"
+										? t("common.loading")
+										: t("book.registerButton")}
 								</Button>
 							</form>
 						)}
 						{status === "error" && (
-							<p className="mt-2 text-sm text-error">{t("book.registerError")}</p>
+							<p className="mt-2 text-sm text-error">
+								{t("book.registerError")}
+							</p>
 						)}
 					</section>
 
@@ -251,11 +302,11 @@ function BookPage() {
 						)}
 						<form onSubmit={handleBuySubmit} className="flex flex-col gap-3">
 							<div>
-								<Label htmlFor="buy-email" className="sr-only">
+								<Label htmlFor={`${uid}-buy-email`} className="sr-only">
 									{t("book.buyEmailPlaceholder")}
 								</Label>
 								<Input
-									id="buy-email"
+									id={`${uid}-buy-email`}
 									type="email"
 									placeholder={t("book.buyEmailPlaceholder")}
 									value={buyEmail}
@@ -266,11 +317,11 @@ function BookPage() {
 								/>
 							</div>
 							<div>
-								<Label htmlFor="buy-fullname" className="sr-only">
+								<Label htmlFor={`${uid}-buy-fullname`} className="sr-only">
 									{t("book.buyFullNamePlaceholder")}
 								</Label>
 								<Input
-									id="buy-fullname"
+									id={`${uid}-buy-fullname`}
 									type="text"
 									placeholder={t("book.buyFullNamePlaceholder")}
 									value={buyFullName}
@@ -285,15 +336,24 @@ function BookPage() {
 								disabled={buyStatus === "loading"}
 								className="bg-secondary hover:bg-secondary-hover text-secondary-foreground"
 							>
-								{buyStatus === "loading" ? t("common.loading") : t("book.buySubmitButton")}
+								{buyStatus === "loading"
+									? t("common.loading")
+									: t("book.buySubmitButton")}
 							</Button>
 						</form>
 						{buyStatus === "error" && (
-							<p className="mt-3 text-sm text-error">{buyErrorMessage || t("book.buyError")}</p>
+							<p className="mt-3 text-sm text-error">
+								{buyErrorMessage || t("book.buyError")}
+							</p>
 						)}
 						{buyStatus === "error" && buyUrl && buyUrl !== "#" && (
 							<p className="mt-2 text-sm text-foreground-muted">
-								<a href={buyUrl} target="_blank" rel="noopener noreferrer" className="underline">
+								<a
+									href={buyUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="underline"
+								>
 									{t("book.buyButton")} ({t("book.buyAlternativeLink")})
 								</a>
 							</p>

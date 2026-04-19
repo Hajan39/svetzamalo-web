@@ -1,7 +1,8 @@
-import { submitBookInterest } from "@/integrations/strapi";
-import { useTranslation } from "@/lib/i18n";
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { BrandLogo } from "@/components/layout/BrandLogo";
+import { submitBookInterest } from "@/integrations/strapi";
+import { useTranslation } from "@/lib/i18n";
 
 /**
  * Minimal, modern footer with clean design
@@ -16,7 +17,9 @@ export function Footer() {
 	const { t } = useTranslation();
 	const currentYear = new Date().getFullYear();
 	const [nlEmail, setNlEmail] = useState("");
-	const [nlStatus, setNlStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+	const [nlStatus, setNlStatus] = useState<
+		"idle" | "loading" | "success" | "error"
+	>("idle");
 
 	const MAIN_LINKS: FooterLink[] = [
 		{ label: t("footer.destinations"), href: "/destinations" },
@@ -36,11 +39,8 @@ export function Footer() {
 				<div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
 					{/* Brand */}
 					<div className="lg:col-span-5">
-						<Link
-							to="/"
-							className="inline-block text-xl font-bold text-foreground hover:text-primary transition-colors tracking-tight mb-4"
-						>
-							{t("common.siteName")}<span className="text-primary">{t("common.siteNameHighlight")}</span>
+						<Link to="/" className="inline-flex hover:no-underline mb-4">
+							<BrandLogo markClassName="h-12 w-10" />
 						</Link>
 						<p className="text-foreground-secondary text-sm leading-relaxed max-w-sm mb-6">
 							{t("footer.description")}
@@ -73,7 +73,9 @@ export function Footer() {
 							{t("footer.newsletterTitle")}
 						</h3>
 						{nlStatus === "success" ? (
-							<p className="text-success text-sm font-medium">{t("footer.newsletterSuccess")}</p>
+							<p className="text-success text-sm font-medium">
+								{t("footer.newsletterSuccess")}
+							</p>
 						) : (
 							<form
 								className="flex gap-2 mb-4"
@@ -103,12 +105,16 @@ export function Footer() {
 									disabled={nlStatus === "loading"}
 									className="px-5 py-2.5 bg-primary hover:bg-primary-hover text-primary-foreground text-sm font-medium rounded-lg transition-colors disabled:opacity-60"
 								>
-									{nlStatus === "loading" ? "..." : t("footer.newsletterButton")}
+									{nlStatus === "loading"
+										? "..."
+										: t("footer.newsletterButton")}
 								</button>
 							</form>
 						)}
 						{nlStatus === "error" && (
-							<p className="text-error text-xs mt-1">{t("common.errorLoading")}</p>
+							<p className="text-error text-xs mt-1">
+								{t("common.errorLoading")}
+							</p>
 						)}
 						{nlStatus !== "success" && (
 							<p className="text-xs text-foreground-muted">

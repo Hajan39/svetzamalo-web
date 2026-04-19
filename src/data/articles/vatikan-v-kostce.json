@@ -1,263 +1,256 @@
 {
-  "title": "Vatikán v kostce: co vědět před cestou",
-  "slug": "vatikan-v-kostce",
-  "excerpt": "Při návštěvě Říma asi nelze vynechat Vatikán.",
-  "articleType": "other",
-  "contentLang": "cs",
-  "tags": [
-    "Evropa",
-    "Vatikán",
-    "cestování",
-    "budget",
-    "v kostce",
-    "ministát"
-  ],
-  "destinationSlug": "vatikan",
-  "publish": true,
-  "readingTime": 2,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Při návštěvě Říma asi nelze vynechat Vatikán. Jedná se o nejmenší stát na světě, který i přesto stojí za návštěvu."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🎯 To nejdůležitější v bodech"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Počítejte s denním budgetem kolem 1380 Kč – není to nejlevnější, ale za ty peníze dostanete hodně."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Vízová povinnost: EU citizens: no visa needed"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Nejlepší doba k návštěvě: březen až květen, září až listopad."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Kromě samotné baziliky, je také jedinečným zážitkem navštívit její 136m vysokou kopuli."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Do Vatikánu se z centra Říma dostanete pěšky (kousek od Andělského hradu), nebo městskou hromadnou dopravou."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Vyhlídková kopule baziliky Vstupenky se kupují hned u baziliky (musíte tedy nejprve projít bezpečnostní kontrolou), kde se samozřejmě stojí opět fronta."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "📋 Praktické info"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Měna: euro (EUR)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Jazyky: italština, Latin"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Časové pásmo: CET (UTC+1)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Střední budget: ~2760 Kč/den"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "📖 Chceš vědět víc?"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Přečti si "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-vatikan",
-          "children": [
-            {
-              "type": "text",
-              "text": "kompletní průvodce – Vatikán"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " – najdeš tam detaily o dopravě, jídle, ubytování a konkrétních místech."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🗺️ Mohlo by tě zajímat"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/berlin",
-          "children": [
-            {
-              "type": "text",
-              "text": "Berlín"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " – budget ~1150 Kč/den"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/francie",
-          "children": [
-            {
-              "type": "text",
-              "text": "Francie"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " – budget ~1265 Kč/den"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/italie-sever",
-          "children": [
-            {
-              "type": "text",
-              "text": "Itálie sever"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " – budget ~1150 Kč/den"
-        }
-      ]
-    }
-  ]
+	"title": "Vatikán v kostce: co vědět před cestou",
+	"slug": "vatikan-v-kostce",
+	"excerpt": "Při návštěvě Říma asi nelze vynechat Vatikán.",
+	"articleType": "other",
+	"contentLang": "cs",
+	"tags": ["Evropa", "Vatikán", "cestování", "budget", "v kostce", "ministát"],
+	"destinationSlug": "vatikan",
+	"publish": true,
+	"readingTime": 2,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Při návštěvě Říma asi nelze vynechat Vatikán. Jedná se o nejmenší stát na světě, který i přesto stojí za návštěvu."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🎯 To nejdůležitější v bodech"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Počítejte s denním budgetem kolem 1380 Kč – není to nejlevnější, ale za ty peníze dostanete hodně."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Vízová povinnost: EU citizens: no visa needed"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Nejlepší doba k návštěvě: březen až květen, září až listopad."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Kromě samotné baziliky, je také jedinečným zážitkem navštívit její 136m vysokou kopuli."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Do Vatikánu se z centra Říma dostanete pěšky (kousek od Andělského hradu), nebo městskou hromadnou dopravou."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Vyhlídková kopule baziliky Vstupenky se kupují hned u baziliky (musíte tedy nejprve projít bezpečnostní kontrolou), kde se samozřejmě stojí opět fronta."
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "📋 Praktické info"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Měna: euro (EUR)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Jazyky: italština, Latin"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Časové pásmo: CET (UTC+1)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Střední budget: ~2760 Kč/den"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "📖 Chceš vědět víc?"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Přečti si "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-vatikan",
+					"children": [
+						{
+							"type": "text",
+							"text": "kompletní průvodce – Vatikán"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " – najdeš tam detaily o dopravě, jídle, ubytování a konkrétních místech."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🗺️ Mohlo by tě zajímat"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/berlin",
+					"children": [
+						{
+							"type": "text",
+							"text": "Berlín"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " – budget ~1150 Kč/den"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/francie",
+					"children": [
+						{
+							"type": "text",
+							"text": "Francie"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " – budget ~1265 Kč/den"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/italie-sever",
+					"children": [
+						{
+							"type": "text",
+							"text": "Itálie sever"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " – budget ~1150 Kč/den"
+				}
+			]
+		}
+	]
 }

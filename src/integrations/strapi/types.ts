@@ -4,8 +4,8 @@
  * Type definitions for Strapi content types matching the frontend types
  */
 
-import type { Destination, Article } from "@/types";
 import { strapiBlocksToHtml } from "@/lib/strapi-blocks-to-html";
+import type { Article, Destination } from "@/types";
 
 /**
  * Strapi entity with common fields

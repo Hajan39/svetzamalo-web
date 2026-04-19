@@ -41,7 +41,10 @@ export function ArticleHero({
 							{title}
 						</h1>
 						{(publishedAt || updatedAt) && (
-							<div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-white/80" suppressHydrationWarning>
+							<div
+								className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-white/80"
+								suppressHydrationWarning
+							>
 								{publishedAt && (
 									<time dateTime={publishedAt}>
 										Published: {formatDate(publishedAt)}
@@ -62,7 +65,10 @@ export function ArticleHero({
 						{title}
 					</h1>
 					{(publishedAt || updatedAt) && (
-						<div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-foreground-muted mb-4 md:mb-6" suppressHydrationWarning>
+						<div
+							className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-foreground-muted mb-4 md:mb-6"
+							suppressHydrationWarning
+						>
 							{publishedAt && (
 								<time dateTime={publishedAt}>
 									Published: {formatDate(publishedAt)}

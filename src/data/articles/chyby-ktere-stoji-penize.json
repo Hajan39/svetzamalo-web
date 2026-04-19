@@ -1,297 +1,291 @@
 {
-  "title": "8 chyb, které stojí peníze (a jak se jim vyhnout)",
-  "slug": "chyby-ktere-stoji-penize",
-  "excerpt": "Směna na letišti, taxi za trojnásobek, jídlo v turistické zóně. Tady jsou nejčastější chyby, které cestovatelé dělají - a jak ušetřit tisíce.",
-  "articleType": "practical-info",
-  "contentLang": "cs",
-  "tags": [
-    "tipy",
-    "chyby",
-    "ušetřit",
-    "praktické info",
-    "cestování"
-  ],
-  "publish": true,
-  "readingTime": 5,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Každý cestovatel dělá chyby. Rozdíl je v tom, jestli vás to stojí 200 nebo 20 000 Kč. Tady jsou nejčastější finanční chyby, které vidíme u lidí, co jedou poprvé někam dál. A jak se jim vyhnout."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🔥 Směna peněz na letišti"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Směnárny na letištích mají nejhorší kurzy - rozdíl může být 10-15 %. Vybírejte raději z bankomatů lokální měnu. Pozor na 'dynamic currency conversion' - vždy plaťte v místní měně, ne v korunách."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🔥 Předražené taxi z letiště"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Klasika: vylezete z letadla, sednete do prvního taxi a zaplatíte 3x víc než místní. V Asii používejte Grab nebo GoJek, v Evropě Bolt nebo veřejnou dopravu. Na Bali se dá z letiště do Kuty dojít pěšky."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🔥 Špatné cestovní pojištění (nebo žádné)"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Jeden den v nemocnici na Bali stojí 12 000 Kč. Operace v USA? Raději se neptejte. Kvalitní cestovní pojištění na měsíc stojí pár stovek - to je nejlepší investice celé cesty."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🔥 Jídlo v turistických zónách"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Restaurace u pláže nebo na hlavním náměstí = dvojnásobné ceny. Stačí zajít 2 ulice od turistické trasy a jíte za lokální ceny. Ve Vietnamu je nejlepší jídlo na plastových židličkách na chodníku."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🔥 Booking celé cesty z Česka"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Některé ubytování je na místě výrazně levnější než online. Zejména v Asii se vyplatí zarezervovat jen první noc a zbytek řešit na místě. V hlavní sezóně ale předem bookovat musíte - jinak neseženete nic."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🔥 Přeplacené 'zážitkové' výlety"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Organizované výlety s průvodcem bývají 5-10x dražší než totéž na vlastní pěst. Vodopády v Indonésii, chrámy v Thajsku, národní parky ve Vietnamu - většinu míst zvládnete sami na skútru nebo veřejnou dopravou."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🔥 Jeden kufr místo batohu"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Kufr na kolečkách po prasklém chodníku v Danangu? Hodně štěstí. Batoh 40-50 l je pro většinu cest ideální. Vejde se do kabiny letadla, naložíte ho na skútr a nemusíte řešit ztracená zavazadla."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🔥 Nevyužití lokálních SIM karet"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Roaming stojí majlant. Lokální SIM s daty na měsíc vás v Asii vyjde na 100-200 Kč. V Evropě máte EU roaming, ale mimo EU si vždy kupte lokální SIM - mít data je základ orientace a bezpečnosti."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "📋 Checklist: před odjezdem"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Cestovní pojištění - zkontrolujte krytí a spoluúčast."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Zkopírujte si pas a uložte do cloudu."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Informujte banku o cestě - ať vám nezablokují kartu."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Stáhněte si offline mapy (Maps.me nebo Google Maps)."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Zjistěte kurz a nejlepší způsob placení v dané zemi."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Zabalte lékárničku - základní léky, repelent, opalovací krém."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "✈️ Mohlo by tě zajímat"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/articles/kolik-stoji-den-srovnani",
-          "children": [
-            {
-              "type": "text",
-              "text": "Kolik stojí den cestování? Srovnání destinací"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/articles/viza-prehled-pro-cechy",
-          "children": [
-            {
-              "type": "text",
-              "text": "Pro Čechy: víza a praktický přehled"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"title": "8 chyb, které stojí peníze (a jak se jim vyhnout)",
+	"slug": "chyby-ktere-stoji-penize",
+	"excerpt": "Směna na letišti, taxi za trojnásobek, jídlo v turistické zóně. Tady jsou nejčastější chyby, které cestovatelé dělají - a jak ušetřit tisíce.",
+	"articleType": "practical-info",
+	"contentLang": "cs",
+	"tags": ["tipy", "chyby", "ušetřit", "praktické info", "cestování"],
+	"publish": true,
+	"readingTime": 5,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Každý cestovatel dělá chyby. Rozdíl je v tom, jestli vás to stojí 200 nebo 20 000 Kč. Tady jsou nejčastější finanční chyby, které vidíme u lidí, co jedou poprvé někam dál. A jak se jim vyhnout."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🔥 Směna peněz na letišti"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Směnárny na letištích mají nejhorší kurzy - rozdíl může být 10-15 %. Vybírejte raději z bankomatů lokální měnu. Pozor na 'dynamic currency conversion' - vždy plaťte v místní měně, ne v korunách."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🔥 Předražené taxi z letiště"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Klasika: vylezete z letadla, sednete do prvního taxi a zaplatíte 3x víc než místní. V Asii používejte Grab nebo GoJek, v Evropě Bolt nebo veřejnou dopravu. Na Bali se dá z letiště do Kuty dojít pěšky."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🔥 Špatné cestovní pojištění (nebo žádné)"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Jeden den v nemocnici na Bali stojí 12 000 Kč. Operace v USA? Raději se neptejte. Kvalitní cestovní pojištění na měsíc stojí pár stovek - to je nejlepší investice celé cesty."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🔥 Jídlo v turistických zónách"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Restaurace u pláže nebo na hlavním náměstí = dvojnásobné ceny. Stačí zajít 2 ulice od turistické trasy a jíte za lokální ceny. Ve Vietnamu je nejlepší jídlo na plastových židličkách na chodníku."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🔥 Booking celé cesty z Česka"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Některé ubytování je na místě výrazně levnější než online. Zejména v Asii se vyplatí zarezervovat jen první noc a zbytek řešit na místě. V hlavní sezóně ale předem bookovat musíte - jinak neseženete nic."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🔥 Přeplacené 'zážitkové' výlety"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Organizované výlety s průvodcem bývají 5-10x dražší než totéž na vlastní pěst. Vodopády v Indonésii, chrámy v Thajsku, národní parky ve Vietnamu - většinu míst zvládnete sami na skútru nebo veřejnou dopravou."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🔥 Jeden kufr místo batohu"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Kufr na kolečkách po prasklém chodníku v Danangu? Hodně štěstí. Batoh 40-50 l je pro většinu cest ideální. Vejde se do kabiny letadla, naložíte ho na skútr a nemusíte řešit ztracená zavazadla."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🔥 Nevyužití lokálních SIM karet"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Roaming stojí majlant. Lokální SIM s daty na měsíc vás v Asii vyjde na 100-200 Kč. V Evropě máte EU roaming, ale mimo EU si vždy kupte lokální SIM - mít data je základ orientace a bezpečnosti."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "📋 Checklist: před odjezdem"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Cestovní pojištění - zkontrolujte krytí a spoluúčast."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Zkopírujte si pas a uložte do cloudu."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Informujte banku o cestě - ať vám nezablokují kartu."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Stáhněte si offline mapy (Maps.me nebo Google Maps)."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Zjistěte kurz a nejlepší způsob placení v dané zemi."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Zabalte lékárničku - základní léky, repelent, opalovací krém."
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "✈️ Mohlo by tě zajímat"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/articles/kolik-stoji-den-srovnani",
+					"children": [
+						{
+							"type": "text",
+							"text": "Kolik stojí den cestování? Srovnání destinací"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/articles/viza-prehled-pro-cechy",
+					"children": [
+						{
+							"type": "text",
+							"text": "Pro Čechy: víza a praktický přehled"
+						}
+					]
+				}
+			]
+		}
+	]
 }

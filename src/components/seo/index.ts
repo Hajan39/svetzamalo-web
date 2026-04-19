@@ -1,2 +1,6 @@
-export { ArticleStructuredData, FaqStructuredData, BreadcrumbStructuredData } from './StructuredData'
-export { Breadcrumbs } from './Breadcrumbs'
+export { Breadcrumbs } from "./Breadcrumbs";
+export {
+	ArticleStructuredData,
+	BreadcrumbStructuredData,
+	FaqStructuredData,
+} from "./StructuredData";

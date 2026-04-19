@@ -1,92 +1,87 @@
 {
-  "title": "Lucemburk – praktický průvodce pro cestovatele",
-  "slug": "pruvodce-lucemburk",
-  "excerpt": "Lucemburk je hlavním městem Lucemburského velkovévodství, což je ministát hraničící s Belgií, Německem a Francií. Návštěvu Lucemburku můžete pojmout jako příjemnou odpolední zastávku při cestě z/na…",
-  "articleType": "destination-guide",
-  "contentLang": "cs",
-  "tags": [
-    "Evropa",
-    "Lucemburk",
-    "cestování",
-    "budget"
-  ],
-  "destinationSlug": "lucemburk",
-  "publish": false,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Lucemburk je hlavním městem Lucemburského velkovévodství, což je ministát hraničící s Belgií, Německem a Francií. Návštěvu Lucemburku můžete pojmout jako příjemnou odpolední zastávku při cestě z/na dovolenou. Ať už se tedy vracíte třeba z Francie, nebo Belgie, můžete navštívit cestou toto hlavní město."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Kdy jet"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Nejlepší doba pro návštěvu: květen až září."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Jazyk a komunikace"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Místní jazyky: lucemburština, francouzština, němčina. Znalost základů francouzštiny je výhodou."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobný průvodce"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
-        },
-        {
-          "type": "text",
-          "text": "kompletním průvodci – Lucemburk",
-          "url": "/destinations/guide/lucemburk"
-        },
-        {
-          "type": "text",
-          "text": "."
-        }
-      ]
-    }
-  ]
+	"title": "Lucemburk – praktický průvodce pro cestovatele",
+	"slug": "pruvodce-lucemburk",
+	"excerpt": "Lucemburk je hlavním městem Lucemburského velkovévodství, což je ministát hraničící s Belgií, Německem a Francií. Návštěvu Lucemburku můžete pojmout jako příjemnou odpolední zastávku při cestě z/na…",
+	"articleType": "destination-guide",
+	"contentLang": "cs",
+	"tags": ["Evropa", "Lucemburk", "cestování", "budget"],
+	"destinationSlug": "lucemburk",
+	"publish": false,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Lucemburk je hlavním městem Lucemburského velkovévodství, což je ministát hraničící s Belgií, Německem a Francií. Návštěvu Lucemburku můžete pojmout jako příjemnou odpolední zastávku při cestě z/na dovolenou. Ať už se tedy vracíte třeba z Francie, nebo Belgie, můžete navštívit cestou toto hlavní město."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Kdy jet"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Nejlepší doba pro návštěvu: květen až září."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Jazyk a komunikace"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Místní jazyky: lucemburština, francouzština, němčina. Znalost základů francouzštiny je výhodou."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobný průvodce"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+				},
+				{
+					"type": "text",
+					"text": "kompletním průvodci – Lucemburk",
+					"url": "/destinations/guide/lucemburk"
+				},
+				{
+					"type": "text",
+					"text": "."
+				}
+			]
+		}
+	]
 }

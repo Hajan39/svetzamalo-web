@@ -1,253 +1,247 @@
 {
-  "title": "Slovinsko: co vědět, než vyrazíte",
-  "slug": "slovinsko-v-kostce",
-  "excerpt": "Krásná země která má rozhodně co nabídnout.",
-  "articleType": "other",
-  "contentLang": "cs",
-  "tags": [
-    "Evropa",
-    "Slovinsko",
-    "cestování",
-    "budget",
-    "v kostce"
-  ],
-  "destinationSlug": "slovinsko",
-  "publish": true,
-  "readingTime": 2,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Krásná země která má rozhodně co nabídnout. Najdete zde vysoké hory, a krásné horské scenérie, vodopády, křišťálově čistá ledovcová jezera, krápníkové jeskyně, moře a přímořská letoviska a v neposlední řadě hezká města."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🎯 To nejdůležitější v bodech"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "S budgetem kolem 920 Kč na den se tu dá docela pohodlně přežít."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Víza nepotřebujete – stačí pas a jdete na to."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Nejlepší doba k návštěvě: květen až září."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Na dovolenou do Slovinska míří lidé z celé Evropy a tomu náležitě odpovídají i ceny."
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Ve Slovinsku je zakázáno spát v autě, dodávce, či karavanu, nebo v přírodě, mimo oficiální kempy, což opět navýší cenu dovolené."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "📋 Praktické info"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Měna: euro (EUR)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Jazyky: slovinština"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Časové pásmo: CET (UTC+1)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Střední budget: ~1840 Kč/den"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "📖 Chceš vědět víc?"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Přečti si "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-slovinsko",
-          "children": [
-            {
-              "type": "text",
-              "text": "kompletní průvodce – Slovinsko"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " – najdeš tam detaily o dopravě, jídle, ubytování a konkrétních místech."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "🗺️ Mohlo by tě zajímat"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/andorra",
-          "children": [
-            {
-              "type": "text",
-              "text": "Andorra"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " – budget ~1150 Kč/den"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/berlin",
-          "children": [
-            {
-              "type": "text",
-              "text": "Berlín"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " – budget ~1150 Kč/den"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/italie-sever",
-          "children": [
-            {
-              "type": "text",
-              "text": "Itálie sever"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " – budget ~1150 Kč/den"
-        }
-      ]
-    }
-  ]
+	"title": "Slovinsko: co vědět, než vyrazíte",
+	"slug": "slovinsko-v-kostce",
+	"excerpt": "Krásná země která má rozhodně co nabídnout.",
+	"articleType": "other",
+	"contentLang": "cs",
+	"tags": ["Evropa", "Slovinsko", "cestování", "budget", "v kostce"],
+	"destinationSlug": "slovinsko",
+	"publish": true,
+	"readingTime": 2,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Krásná země která má rozhodně co nabídnout. Najdete zde vysoké hory, a krásné horské scenérie, vodopády, křišťálově čistá ledovcová jezera, krápníkové jeskyně, moře a přímořská letoviska a v neposlední řadě hezká města."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🎯 To nejdůležitější v bodech"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "S budgetem kolem 920 Kč na den se tu dá docela pohodlně přežít."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Víza nepotřebujete – stačí pas a jdete na to."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Nejlepší doba k návštěvě: květen až září."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Na dovolenou do Slovinska míří lidé z celé Evropy a tomu náležitě odpovídají i ceny."
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Ve Slovinsku je zakázáno spát v autě, dodávce, či karavanu, nebo v přírodě, mimo oficiální kempy, což opět navýší cenu dovolené."
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "📋 Praktické info"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Měna: euro (EUR)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Jazyky: slovinština"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Časové pásmo: CET (UTC+1)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Střední budget: ~1840 Kč/den"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "📖 Chceš vědět víc?"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Přečti si "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-slovinsko",
+					"children": [
+						{
+							"type": "text",
+							"text": "kompletní průvodce – Slovinsko"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " – najdeš tam detaily o dopravě, jídle, ubytování a konkrétních místech."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "🗺️ Mohlo by tě zajímat"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/andorra",
+					"children": [
+						{
+							"type": "text",
+							"text": "Andorra"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " – budget ~1150 Kč/den"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/berlin",
+					"children": [
+						{
+							"type": "text",
+							"text": "Berlín"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " – budget ~1150 Kč/den"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/italie-sever",
+					"children": [
+						{
+							"type": "text",
+							"text": "Itálie sever"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"text": " – budget ~1150 Kč/den"
+				}
+			]
+		}
+	]
 }

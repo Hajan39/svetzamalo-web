@@ -1,279 +1,273 @@
 {
-  "title": "Vikend v destinaci Slovinsko 🇸🇮: plan na 3 dny za malo penez",
-  "slug": "vikend-v-slovinsko",
-  "excerpt": "3 dny v destinaci Slovinsko - den po dni plan, co videt, kde jist a kolik to stoji.",
-  "articleType": "itinerary",
-  "contentLang": "cs",
-  "tags": [
-    "Slovinsko",
-    "vikend",
-    "plan cesty",
-    "levne cestovani",
-    "3 dny"
-  ],
-  "destinationSlug": "slovinsko",
-  "publish": true,
-  "readingTime": 4,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Slovinsko je od nas kousek a nabizi tolik krasy, ze vikend proste nestaci. Ale jako ochutnávka je perfektni - zvlast pokud se zameri na Bled a Lublan."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Patek: Lublan"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Prijezd do Lublane (5h autem z Prahy nebo 1h letem)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Prochazka centrem: Trojity most, Presernovo namesti"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Lublanski hrad - vyhledy na mesto a Julske Alpy"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Vecere na brehu Lublance - spousta restauraci s venkovnim sezenim"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Sobota: Bled a okoli"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Rano: cesta na Bled (45 min autem)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Procházka kolem Bledského jezera (6 km, cca 2h)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Lodka na ustrev (Pletna) - navstiva kostelika"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Bledsky hrad - vyhledy na jezero"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Bledsky kremovy rez (kremsnita) - povinnost!"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Odpoledne: Vintgar - soutěska s tyrkysovou vodou (20 min od Bledu)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Nedele: Bohinj nebo cesta domu"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Bohinjske jezero - klidnejsi alternativa k Bledu"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Vodopad Savica (kratky hike, krasny vodopad)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Nebo: Postojna jeskyne (smer domu, 1h z Lublane)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Cesta domu pres Alpy - uzivej si vyhledy"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Kolik to stoji?"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Pocitej s 3000-5000 Kc na vikend (bez dopravy). Hostel 500-900 Kc/noc, jidlo 300-500 Kc/den."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Tipy na zaver"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Letenky hledej 2-3 mesice predem, sleduj akce u Wizz Air a Ryanair"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Ubytko pres Booking.com nebo Hostelworld - cim driv, tim levneji"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Vezmi si jen prirucni zavazadlo - usetris za check-in"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-slovinsko",
-          "children": [
-            {
-              "type": "text",
-              "text": "Prectisi cely pruvodce: Slovinsko"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"title": "Vikend v destinaci Slovinsko 🇸🇮: plan na 3 dny za malo penez",
+	"slug": "vikend-v-slovinsko",
+	"excerpt": "3 dny v destinaci Slovinsko - den po dni plan, co videt, kde jist a kolik to stoji.",
+	"articleType": "itinerary",
+	"contentLang": "cs",
+	"tags": ["Slovinsko", "vikend", "plan cesty", "levne cestovani", "3 dny"],
+	"destinationSlug": "slovinsko",
+	"publish": true,
+	"readingTime": 4,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Slovinsko je od nas kousek a nabizi tolik krasy, ze vikend proste nestaci. Ale jako ochutnávka je perfektni - zvlast pokud se zameri na Bled a Lublan."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Patek: Lublan"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Prijezd do Lublane (5h autem z Prahy nebo 1h letem)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Prochazka centrem: Trojity most, Presernovo namesti"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Lublanski hrad - vyhledy na mesto a Julske Alpy"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Vecere na brehu Lublance - spousta restauraci s venkovnim sezenim"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Sobota: Bled a okoli"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Rano: cesta na Bled (45 min autem)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Procházka kolem Bledského jezera (6 km, cca 2h)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Lodka na ustrev (Pletna) - navstiva kostelika"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Bledsky hrad - vyhledy na jezero"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Bledsky kremovy rez (kremsnita) - povinnost!"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Odpoledne: Vintgar - soutěska s tyrkysovou vodou (20 min od Bledu)"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Nedele: Bohinj nebo cesta domu"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Bohinjske jezero - klidnejsi alternativa k Bledu"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Vodopad Savica (kratky hike, krasny vodopad)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Nebo: Postojna jeskyne (smer domu, 1h z Lublane)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Cesta domu pres Alpy - uzivej si vyhledy"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Kolik to stoji?"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Pocitej s 3000-5000 Kc na vikend (bez dopravy). Hostel 500-900 Kc/noc, jidlo 300-500 Kc/den."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Tipy na zaver"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Letenky hledej 2-3 mesice predem, sleduj akce u Wizz Air a Ryanair"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Ubytko pres Booking.com nebo Hostelworld - cim driv, tim levneji"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Vezmi si jen prirucni zavazadlo - usetris za check-in"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-slovinsko",
+					"children": [
+						{
+							"type": "text",
+							"text": "Prectisi cely pruvodce: Slovinsko"
+						}
+					]
+				}
+			]
+		}
+	]
 }

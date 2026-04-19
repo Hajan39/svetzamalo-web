@@ -4,8 +4,8 @@
  */
 export function stripWordPressBlockComments(html: string): string {
 	return html
-		.split('\n')
+		.split("\n")
 		.filter((line) => !line.trim().match(/^<!-- \/?wp:/))
-		.join('\n')
+		.join("\n")
 		.trim();
 }

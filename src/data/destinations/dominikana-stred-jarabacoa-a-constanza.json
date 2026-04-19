@@ -1,2800 +1,2798 @@
 {
-  "id": 855,
-  "documentId": "zrma5rvr6zoeenqrys7ky22x",
-  "name": "Dominikána střed (Jarabacoa a Constanza)",
-  "slug": "dominikana-stred-jarabacoa-a-constanza",
-  "intro": [
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Střed",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "ostrova",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "\n"
-        },
-        {
-          "type": "text",
-          "text": "(Jarabacoa a Constanza)",
-          "italic": true,
-          "bold": true
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Chcete-li si odpočinout od pláží a lidí a také se možná trochu zchladit, vyražte do hor. Horské pásmo Cordillera central nacházející se ve středu ostrova nabízí širokou škálu horských treků, krásné výhledy, vysoké nadmořské výšky a jedinečné vodopády. Nachází se zde také nejvyšší hora celého ostrova, ale i celého Karibiku –"
-        },
-        {
-          "type": "text",
-          "text": "Pico Duarte",
-          "url": "https://maps.app.goo.gl/NtMFWLVmyY9F7xzW9",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "se svou výškou 3098 m."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2094.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2094_c4c2a3bb85.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2094.jpg",
-            "hash": "thumbnail_img_2094_c4c2a3bb85",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 10.42,
-            "sizeInBytes": 10415,
-            "url": "/uploads/thumbnail_img_2094_c4c2a3bb85.jpg"
-          },
-          "small": {
-            "name": "small_img_2094.jpg",
-            "hash": "small_img_2094_c4c2a3bb85",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 52.53,
-            "sizeInBytes": 52526,
-            "url": "/uploads/small_img_2094_c4c2a3bb85.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2094.jpg",
-            "hash": "medium_img_2094_c4c2a3bb85",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 111.43,
-            "sizeInBytes": 111428,
-            "url": "/uploads/medium_img_2094_c4c2a3bb85.jpg"
-          },
-          "large": {
-            "name": "large_img_2094.jpg",
-            "hash": "large_img_2094_c4c2a3bb85",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 183.58,
-            "sizeInBytes": 183581,
-            "url": "/uploads/large_img_2094_c4c2a3bb85.jpg"
-          }
-        },
-        "hash": "img_2094_c4c2a3bb85",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 195.1,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:43.322Z",
-        "updatedAt": "2026-02-17T12:56:43.322Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Tropická zeleň se zde pomalu mění v borovicové lesy plné mechu, kapradí a lišejníků. Až si skoro začnete připadat jako byste tropický ostrov opustili a ocitli se úplně někde jinde. Třeba v Pyrenejích, nebo Alpách. Zároveň ale potkáváte domorodé chudé zemědělské vesničky, kde místní pracují na polích a to vás opět přesouvá někam jinam, možná do severního Vietnamu. Oblast je to pestrá a pozoruhodná. Navštívit zde můžete hned několik národních parků, kde nic než čistou přírodu, ticho a čistý svěží vzduch nenaleznete. Po návštěvě místních měst je to jako balzám na duši."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2048.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2048_0d44205a74.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2048.jpg",
-            "hash": "thumbnail_img_2048_0d44205a74",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 10.14,
-            "sizeInBytes": 10142,
-            "url": "/uploads/thumbnail_img_2048_0d44205a74.jpg"
-          },
-          "small": {
-            "name": "small_img_2048.jpg",
-            "hash": "small_img_2048_0d44205a74",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 51.78,
-            "sizeInBytes": 51784,
-            "url": "/uploads/small_img_2048_0d44205a74.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2048.jpg",
-            "hash": "medium_img_2048_0d44205a74",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 108.08,
-            "sizeInBytes": 108076,
-            "url": "/uploads/medium_img_2048_0d44205a74.jpg"
-          },
-          "large": {
-            "name": "large_img_2048.jpg",
-            "hash": "large_img_2048_0d44205a74",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 175.81,
-            "sizeInBytes": 175805,
-            "url": "/uploads/large_img_2048_0d44205a74.jpg"
-          }
-        },
-        "hash": "img_2048_0d44205a74",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 186.77,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:43.745Z",
-        "updatedAt": "2026-02-17T12:56:43.745Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Do hor se nejsnáze dostanete ze Santo Dominga, nebo z Puerto Plata autobusem Caribe Tour, který vás zaveze buď do městečka Jarabacoa, nebo do menší Constanzy. Zde se snadno ubytujete a můžete podnikat výlety do okolí. Také zde nakoupíte levné jídlo z pouličních jidelen, nebo v supermarketu. Zajít si můžete dokonce i do restaurace."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Jarabacoa",
-          "url": "https://maps.app.goo.gl/8JaxYEwaSFp7R26HA"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Jarabacoa je z těchto dvou měst tím větším, nacházejícím se v nižší nadmořské výšce (500 m.n.m). Zde snadněji naleznete vše co potřebujete, ubytování je zde obecně levnější než v Constanze a jídlo také. Můžete si zde také půjčit auto, nebo motorku. Přímo ve městě je k vidění jen menší park a deštníková ulice. Zajímavé je ale nedaleké okolí kam se můžete vydat na výlety. Navštívit zde můžete třeba vodopád"
-        },
-        {
-          "type": "text",
-          "text": "Salto de Baiguate",
-          "url": "https://maps.app.goo.gl/8xzSk8zg8tBRJrae9",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ", který ovšem na koupání (kvůli špinavé vodě) příliš vhodný není, nebo hezčí a hůř dostupnější vodopád"
-        },
-        {
-          "type": "text",
-          "text": "Salto de Jimenoa Dos",
-          "url": "https://maps.google.com/?cid=8676701622527687429&entry=gps",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ". Pro vstup k tomuto vodopádu budete muset zaplatit vstupné 50 DOP (možná po vás budou chít 100 DOP – to si ale nemusíte nechat líbit) k čemuž dostanete vodu a dále vás čeká strmý sestup dolů k vodopádu. Ten je opravdu úžasný a také vhodný ke koupání. Voda je sice studená, ale čistá."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_1983.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_1983_82001a0138.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_1983.jpg",
-            "hash": "thumbnail_img_1983_82001a0138",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 11.68,
-            "sizeInBytes": 11681,
-            "url": "/uploads/thumbnail_img_1983_82001a0138.jpg"
-          },
-          "small": {
-            "name": "small_img_1983.jpg",
-            "hash": "small_img_1983_82001a0138",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 52.13,
-            "sizeInBytes": 52128,
-            "url": "/uploads/small_img_1983_82001a0138.jpg"
-          },
-          "medium": {
-            "name": "medium_img_1983.jpg",
-            "hash": "medium_img_1983_82001a0138",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 103.2,
-            "sizeInBytes": 103204,
-            "url": "/uploads/medium_img_1983_82001a0138.jpg"
-          },
-          "large": {
-            "name": "large_img_1983.jpg",
-            "hash": "large_img_1983_82001a0138",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 164.67,
-            "sizeInBytes": 164666,
-            "url": "/uploads/large_img_1983_82001a0138.jpg"
-          }
-        },
-        "hash": "img_1983_82001a0138",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 173.31,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:44.058Z",
-        "updatedAt": "2026-02-17T12:56:44.058Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_1943.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_1943_825cf4b576.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_1943.jpg",
-            "hash": "thumbnail_img_1943_825cf4b576",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 11.04,
-            "sizeInBytes": 11035,
-            "url": "/uploads/thumbnail_img_1943_825cf4b576.jpg"
-          },
-          "small": {
-            "name": "small_img_1943.jpg",
-            "hash": "small_img_1943_825cf4b576",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 62.26,
-            "sizeInBytes": 62255,
-            "url": "/uploads/small_img_1943_825cf4b576.jpg"
-          },
-          "medium": {
-            "name": "medium_img_1943.jpg",
-            "hash": "medium_img_1943_825cf4b576",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 137.59,
-            "sizeInBytes": 137588,
-            "url": "/uploads/medium_img_1943_825cf4b576.jpg"
-          },
-          "large": {
-            "name": "large_img_1943.jpg",
-            "hash": "large_img_1943_825cf4b576",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 234.62,
-            "sizeInBytes": 234624,
-            "url": "/uploads/large_img_1943_825cf4b576.jpg"
-          }
-        },
-        "hash": "img_1943_825cf4b576",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 251.43,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:44.454Z",
-        "updatedAt": "2026-02-17T12:56:44.454Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_1974.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_1974_aaf2b2a771.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_1974.jpg",
-            "hash": "thumbnail_img_1974_aaf2b2a771",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 11.24,
-            "sizeInBytes": 11235,
-            "url": "/uploads/thumbnail_img_1974_aaf2b2a771.jpg"
-          },
-          "small": {
-            "name": "small_img_1974.jpg",
-            "hash": "small_img_1974_aaf2b2a771",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 60.03,
-            "sizeInBytes": 60028,
-            "url": "/uploads/small_img_1974_aaf2b2a771.jpg"
-          },
-          "medium": {
-            "name": "medium_img_1974.jpg",
-            "hash": "medium_img_1974_aaf2b2a771",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 130.59,
-            "sizeInBytes": 130587,
-            "url": "/uploads/medium_img_1974_aaf2b2a771.jpg"
-          },
-          "large": {
-            "name": "large_img_1974.jpg",
-            "hash": "large_img_1974_aaf2b2a771",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 218.57,
-            "sizeInBytes": 218565,
-            "url": "/uploads/large_img_1974_aaf2b2a771.jpg"
-          }
-        },
-        "hash": "img_1974_aaf2b2a771",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 232.75,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:44.856Z",
-        "updatedAt": "2026-02-17T12:56:44.856Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Asi 600 metrů po proudu řeky se nachází druhý vodopád"
-        },
-        {
-          "type": "text",
-          "text": "Salto de Jimenoa Uno",
-          "url": "https://maps.app.goo.gl/eVaxwNQpeyhuPjWS7",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ". K tomuto vodopádu se dostanete ale úplně jinou přístupovou cestou ze silnice směrem na La Vega. Cesta mezi oběma nedalekými vodopády tedy měří cca 18 km po silnici. V lednu 2022 byl tento druhý vodopád uzavřený a je tedy vhodné ověřit, zda je aktuálně už otevřený. Pokud přeci jen dorazíte a bude zavřeno můžete se i tak vykoupat alespoň v řece Jimenoa kousek dál po proudu. Zpět do města se dostanete hezkou pěšinou mezi poli a loukami, kterou naleznete pokud řeku přebrodíte. Tato cesta vede podél řeky a je mnohem kratší než cesta po příjezdové silnici."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20220115_135033_original.jpg",
-        "alternativeText": "",
-        "url": "/uploads/20220115_135033_original_ce46c6c19e.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20220115_135033_original.jpg",
-            "hash": "thumbnail_20220115_135033_original_ce46c6c19e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 8.73,
-            "sizeInBytes": 8734,
-            "url": "/uploads/thumbnail_20220115_135033_original_ce46c6c19e.jpg"
-          },
-          "small": {
-            "name": "small_20220115_135033_original.jpg",
-            "hash": "small_20220115_135033_original_ce46c6c19e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 48.78,
-            "sizeInBytes": 48782,
-            "url": "/uploads/small_20220115_135033_original_ce46c6c19e.jpg"
-          },
-          "medium": {
-            "name": "medium_20220115_135033_original.jpg",
-            "hash": "medium_20220115_135033_original_ce46c6c19e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 107.93,
-            "sizeInBytes": 107933,
-            "url": "/uploads/medium_20220115_135033_original_ce46c6c19e.jpg"
-          },
-          "large": {
-            "name": "large_20220115_135033_original.jpg",
-            "hash": "large_20220115_135033_original_ce46c6c19e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 182.65,
-            "sizeInBytes": 182649,
-            "url": "/uploads/large_20220115_135033_original_ce46c6c19e.jpg"
-          }
-        },
-        "hash": "20220115_135033_original_ce46c6c19e",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 195.29,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:45.251Z",
-        "updatedAt": "2026-02-17T12:56:45.251Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20220115_143258_original.jpg",
-        "alternativeText": "",
-        "url": "/uploads/20220115_143258_original_0335e1015a.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20220115_143258_original.jpg",
-            "hash": "thumbnail_20220115_143258_original_0335e1015a",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 12.25,
-            "sizeInBytes": 12250,
-            "url": "/uploads/thumbnail_20220115_143258_original_0335e1015a.jpg"
-          },
-          "medium": {
-            "name": "medium_20220115_143258_original.jpg",
-            "hash": "medium_20220115_143258_original_0335e1015a",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 140.31,
-            "sizeInBytes": 140306,
-            "url": "/uploads/medium_20220115_143258_original_0335e1015a.jpg"
-          },
-          "small": {
-            "name": "small_20220115_143258_original.jpg",
-            "hash": "small_20220115_143258_original_0335e1015a",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 66.07,
-            "sizeInBytes": 66069,
-            "url": "/uploads/small_20220115_143258_original_0335e1015a.jpg"
-          },
-          "large": {
-            "name": "large_20220115_143258_original.jpg",
-            "hash": "large_20220115_143258_original_0335e1015a",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 232,
-            "sizeInBytes": 231996,
-            "url": "/uploads/large_20220115_143258_original_0335e1015a.jpg"
-          }
-        },
-        "hash": "20220115_143258_original_0335e1015a",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 247.8,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:45.654Z",
-        "updatedAt": "2026-02-17T12:56:45.654Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_1953.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_1953_a93ab6bb5f.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_1953.jpg",
-            "hash": "thumbnail_img_1953_a93ab6bb5f",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 11.06,
-            "sizeInBytes": 11055,
-            "url": "/uploads/thumbnail_img_1953_a93ab6bb5f.jpg"
-          },
-          "small": {
-            "name": "small_img_1953.jpg",
-            "hash": "small_img_1953_a93ab6bb5f",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 60.62,
-            "sizeInBytes": 60622,
-            "url": "/uploads/small_img_1953_a93ab6bb5f.jpg"
-          },
-          "medium": {
-            "name": "medium_img_1953.jpg",
-            "hash": "medium_img_1953_a93ab6bb5f",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 131.84,
-            "sizeInBytes": 131835,
-            "url": "/uploads/medium_img_1953_a93ab6bb5f.jpg"
-          },
-          "large": {
-            "name": "large_img_1953.jpg",
-            "hash": "large_img_1953_a93ab6bb5f",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 222.62,
-            "sizeInBytes": 222622,
-            "url": "/uploads/large_img_1953_a93ab6bb5f.jpg"
-          }
-        },
-        "hash": "img_1953_a93ab6bb5f",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 238.68,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:46.108Z",
-        "updatedAt": "2026-02-17T12:56:46.108Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Dalším hezkým místem k navštívení je hora"
-        },
-        {
-          "type": "text",
-          "text": "El Mogote 1525 m.n.m",
-          "url": "https://maps.app.goo.gl/o7zYw4atgsRtdDT47",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "nedaleko města. Hora je volně přístupná, výstup je strmý, ale ne dlouhý (4 km). Návštěvu je vhodné plánovat na dny bez deště, protože z jílu v horní části treku se při dešti stává strmá skluzavka. Na vrcholu naleznete starou železnou rozhlednu z níž se vám naskytne krásný panoramatický pohled do okolí a mimo to i na nedaleké Pico Duarte. Také zde stojí menší domek, v kterém žije již 22 let starší muž. Velmi rád se s vami dá do řeči, ale mluví pouze španělsky. Má tu i svého koně a několik slepic."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_1987.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_1987_e2a208b937.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_1987.jpg",
-            "hash": "thumbnail_img_1987_e2a208b937",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 8.1,
-            "sizeInBytes": 8097,
-            "url": "/uploads/thumbnail_img_1987_e2a208b937.jpg"
-          },
-          "small": {
-            "name": "small_img_1987.jpg",
-            "hash": "small_img_1987_e2a208b937",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 42.66,
-            "sizeInBytes": 42657,
-            "url": "/uploads/small_img_1987_e2a208b937.jpg"
-          },
-          "medium": {
-            "name": "medium_img_1987.jpg",
-            "hash": "medium_img_1987_e2a208b937",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 91.73,
-            "sizeInBytes": 91732,
-            "url": "/uploads/medium_img_1987_e2a208b937.jpg"
-          },
-          "large": {
-            "name": "large_img_1987.jpg",
-            "hash": "large_img_1987_e2a208b937",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 152.06,
-            "sizeInBytes": 152056,
-            "url": "/uploads/large_img_1987_e2a208b937.jpg"
-          }
-        },
-        "hash": "img_1987_e2a208b937",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 161.83,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:46.449Z",
-        "updatedAt": "2026-02-17T12:56:46.449Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_1993.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_1993_3e6762164e.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_1993.jpg",
-            "hash": "thumbnail_img_1993_3e6762164e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 6.61,
-            "sizeInBytes": 6610,
-            "url": "/uploads/thumbnail_img_1993_3e6762164e.jpg"
-          },
-          "small": {
-            "name": "small_img_1993.jpg",
-            "hash": "small_img_1993_3e6762164e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 35.28,
-            "sizeInBytes": 35283,
-            "url": "/uploads/small_img_1993_3e6762164e.jpg"
-          },
-          "medium": {
-            "name": "medium_img_1993.jpg",
-            "hash": "medium_img_1993_3e6762164e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 77.71,
-            "sizeInBytes": 77710,
-            "url": "/uploads/medium_img_1993_3e6762164e.jpg"
-          },
-          "large": {
-            "name": "large_img_1993.jpg",
-            "hash": "large_img_1993_3e6762164e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 131.31,
-            "sizeInBytes": 131306,
-            "url": "/uploads/large_img_1993_3e6762164e.jpg"
-          }
-        },
-        "hash": "img_1993_3e6762164e",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 141.4,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:46.746Z",
-        "updatedAt": "2026-02-17T12:56:46.746Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_1995.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_1995_60298ceec7.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_1995.jpg",
-            "hash": "thumbnail_img_1995_60298ceec7",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 8.18,
-            "sizeInBytes": 8183,
-            "url": "/uploads/thumbnail_img_1995_60298ceec7.jpg"
-          },
-          "small": {
-            "name": "small_img_1995.jpg",
-            "hash": "small_img_1995_60298ceec7",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 49.99,
-            "sizeInBytes": 49988,
-            "url": "/uploads/small_img_1995_60298ceec7.jpg"
-          },
-          "medium": {
-            "name": "medium_img_1995.jpg",
-            "hash": "medium_img_1995_60298ceec7",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 114.53,
-            "sizeInBytes": 114529,
-            "url": "/uploads/medium_img_1995_60298ceec7.jpg"
-          },
-          "large": {
-            "name": "large_img_1995.jpg",
-            "hash": "large_img_1995_60298ceec7",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 202.09,
-            "sizeInBytes": 202090,
-            "url": "/uploads/large_img_1995_60298ceec7.jpg"
-          }
-        },
-        "hash": "img_1995_60298ceec7",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 179,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:47.052Z",
-        "updatedAt": "2026-02-17T12:56:47.052Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Všechna tato místa můžete v Jarabacoa navštívit buď autem, levněji mototaxi, nebo pěšky. Vše lze pěšky z města absolvovat, jen to bude déle trvat. Na zpáteční cestě vás třeba sveze některý ze zemědělců na korbě svého auta, kde pojedete společně se sklizní."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Z Jarabacoa se také můžete vydat na nejvyšší horu ostrova"
-        },
-        {
-          "type": "text",
-          "text": "Pico Duarte",
-          "url": "https://maps.app.goo.gl/NtMFWLVmyY9F7xzW9",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ". Výstup trvá 2-4 dny v závislosti na trase, kterou zvolíte. Bohužel se na trasu nemůžete vydat sami, ale musíte jít s průvodcem. Cena takového výstupu se pohybuje kolem 200-350$ za osobu. Pokud se vydáte sami až k branám národního parku, můžete si výstup domluvit sami přímo na místě a dostat se i na částku 150$ za osobu. Jídlo a vybavení na přespání by mělo být v ceně  zahrnuté. Také vstup do národního parku Parque Nacional José Armando Bermúdez by měla cena už zahrnovat. Zároveň je v ceně zahrnuta na každého turistu jedna mula, která jde s vámi pro případ, že cestu nezvládnete a budete se potřebovat svézt. Výstup si také snadno domluvíte ve městě, kde vám s tím může pomoci třeba recepční. Nezapomeňte, že v horách klesají teploty až k nule a zejména v zimních měsících může dokonce mrznout. Je třeba se na výstup vybavit vhodným oblečením."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2032.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2032_2e97a79ffa.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2032.jpg",
-            "hash": "thumbnail_img_2032_2e97a79ffa",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 8.3,
-            "sizeInBytes": 8302,
-            "url": "/uploads/thumbnail_img_2032_2e97a79ffa.jpg"
-          },
-          "small": {
-            "name": "small_img_2032.jpg",
-            "hash": "small_img_2032_2e97a79ffa",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 45.48,
-            "sizeInBytes": 45477,
-            "url": "/uploads/small_img_2032_2e97a79ffa.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2032.jpg",
-            "hash": "medium_img_2032_2e97a79ffa",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 100.15,
-            "sizeInBytes": 100150,
-            "url": "/uploads/medium_img_2032_2e97a79ffa.jpg"
-          },
-          "large": {
-            "name": "large_img_2032.jpg",
-            "hash": "large_img_2032_2e97a79ffa",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 168.52,
-            "sizeInBytes": 168520,
-            "url": "/uploads/large_img_2032_2e97a79ffa.jpg"
-          }
-        },
-        "hash": "img_2032_2e97a79ffa",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 180.28,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:47.388Z",
-        "updatedAt": "2026-02-17T12:56:47.388Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Budete-li mít auto k dispozici, můžete se zajet podívat na kávové plantáže do"
-        },
-        {
-          "type": "text",
-          "text": "Spirit Mountain",
-          "url": "https://maps.app.goo.gl/AqvjEPCrSZH83sBZ6",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "v horách za vesnicí Manabao. Pojedete stále dál po silnici až silnice téměř zmizí ale to už uvidíte ukazatele. Uvidíte zde kávové plantáže, proces zpracování kávy, ochutnáte místní kávu a můžete se také podívat k vodopádu, nebo se zde dokonce ubytovat. Jednotlivá místa v rámci areálu jsou od sebe docela vzdálená a je tedy velmi vhodné přijet terénním autem, které zvládne vyjet prašnou cestu s dírami. Vstup je zpoplatněn. Pokud nemáte příliš času, nebo terénní auto, můžete zaparkovat dole u řeky a k začátku areálu (500m) se vydat pěšky. Zde uvidíte rostoucí kávu, sušírnu kávových zrn a několik mandarinek."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2042.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2042_91becd2c33.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2042.jpg",
-            "hash": "thumbnail_img_2042_91becd2c33",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 12.38,
-            "sizeInBytes": 12379,
-            "url": "/uploads/thumbnail_img_2042_91becd2c33.jpg"
-          },
-          "small": {
-            "name": "small_img_2042.jpg",
-            "hash": "small_img_2042_91becd2c33",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 52.57,
-            "sizeInBytes": 52570,
-            "url": "/uploads/small_img_2042_91becd2c33.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2042.jpg",
-            "hash": "medium_img_2042_91becd2c33",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 98.53,
-            "sizeInBytes": 98530,
-            "url": "/uploads/medium_img_2042_91becd2c33.jpg"
-          },
-          "large": {
-            "name": "large_img_2042.jpg",
-            "hash": "large_img_2042_91becd2c33",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 151.33,
-            "sizeInBytes": 151334,
-            "url": "/uploads/large_img_2042_91becd2c33.jpg"
-          }
-        },
-        "hash": "img_2042_91becd2c33",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 157.53,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:47.703Z",
-        "updatedAt": "2026-02-17T12:56:47.703Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2038.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2038_73a902c4cc.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2038.jpg",
-            "hash": "thumbnail_img_2038_73a902c4cc",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 11.15,
-            "sizeInBytes": 11153,
-            "url": "/uploads/thumbnail_img_2038_73a902c4cc.jpg"
-          },
-          "small": {
-            "name": "small_img_2038.jpg",
-            "hash": "small_img_2038_73a902c4cc",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 59.9,
-            "sizeInBytes": 59904,
-            "url": "/uploads/small_img_2038_73a902c4cc.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2038.jpg",
-            "hash": "medium_img_2038_73a902c4cc",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 130.64,
-            "sizeInBytes": 130641,
-            "url": "/uploads/medium_img_2038_73a902c4cc.jpg"
-          },
-          "large": {
-            "name": "large_img_2038.jpg",
-            "hash": "large_img_2038_73a902c4cc",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 220.55,
-            "sizeInBytes": 220547,
-            "url": "/uploads/large_img_2038_73a902c4cc.jpg"
-          }
-        },
-        "hash": "img_2038_73a902c4cc",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 235.54,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:48.094Z",
-        "updatedAt": "2026-02-17T12:56:48.094Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2046.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2046_812ff11d87.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2046.jpg",
-            "hash": "thumbnail_img_2046_812ff11d87",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 14.13,
-            "sizeInBytes": 14129,
-            "url": "/uploads/thumbnail_img_2046_812ff11d87.jpg"
-          },
-          "small": {
-            "name": "small_img_2046.jpg",
-            "hash": "small_img_2046_812ff11d87",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 74.86,
-            "sizeInBytes": 74856,
-            "url": "/uploads/small_img_2046_812ff11d87.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2046.jpg",
-            "hash": "medium_img_2046_812ff11d87",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 154.23,
-            "sizeInBytes": 154230,
-            "url": "/uploads/medium_img_2046_812ff11d87.jpg"
-          },
-          "large": {
-            "name": "large_img_2046.jpg",
-            "hash": "large_img_2046_812ff11d87",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 249.03,
-            "sizeInBytes": 249033,
-            "url": "/uploads/large_img_2046_812ff11d87.jpg"
-          }
-        },
-        "hash": "img_2046_812ff11d87",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 264.06,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:48.486Z",
-        "updatedAt": "2026-02-17T12:56:48.486Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Cestou zpět do města se můžete vykoupat u vodopádu"
-        },
-        {
-          "type": "text",
-          "text": "Salto Cachorro",
-          "url": "https://maps.app.goo.gl/VZFoQJXpcUxfy4vB6",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ", nebo v řece Rio Yaque del Norte v"
-        },
-        {
-          "type": "text",
-          "text": "Balneario el bambu",
-          "url": "https://maps.app.goo.gl/HoXVC5GBwBRRsWHBA",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ", kde naleznete také několik restaurací, lávku přes řeku a nejspíš také plno místních."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2068.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2068_22c324023a.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2068.jpg",
-            "hash": "thumbnail_img_2068_22c324023a",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 13.22,
-            "sizeInBytes": 13216,
-            "url": "/uploads/thumbnail_img_2068_22c324023a.jpg"
-          },
-          "small": {
-            "name": "small_img_2068.jpg",
-            "hash": "small_img_2068_22c324023a",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 71.78,
-            "sizeInBytes": 71777,
-            "url": "/uploads/small_img_2068_22c324023a.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2068.jpg",
-            "hash": "medium_img_2068_22c324023a",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 156.25,
-            "sizeInBytes": 156250,
-            "url": "/uploads/medium_img_2068_22c324023a.jpg"
-          },
-          "large": {
-            "name": "large_img_2068.jpg",
-            "hash": "large_img_2068_22c324023a",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 261.84,
-            "sizeInBytes": 261840,
-            "url": "/uploads/large_img_2068_22c324023a.jpg"
-          }
-        },
-        "hash": "img_2068_22c324023a",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 279.84,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:49.004Z",
-        "updatedAt": "2026-02-17T12:56:49.004Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Constanza",
-          "url": "https://maps.app.goo.gl/DwhuhNNF34HfqJeR8"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Constanza je horské městečko v nadmořské výšce 1200 m. Teploty zde očekávejte tedy nižší než v Jarabacoa a to zejména v noci. Do Jarabacoa dojede málo turistů, do Constanzy ještě méně a proto je Constanza ještě o něco autentičtější. V okolí města vás čeká krásná hornatá příroda, kopce s panoramatickými výhledy, tradiční zemědělské vesnice a čistá příroda."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20220117_104554_original.jpg",
-        "alternativeText": "",
-        "url": "/uploads/20220117_104554_original_e0e9734d45.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20220117_104554_original.jpg",
-            "hash": "thumbnail_20220117_104554_original_e0e9734d45",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 8.64,
-            "sizeInBytes": 8638,
-            "url": "/uploads/thumbnail_20220117_104554_original_e0e9734d45.jpg"
-          },
-          "small": {
-            "name": "small_20220117_104554_original.jpg",
-            "hash": "small_20220117_104554_original_e0e9734d45",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 45.33,
-            "sizeInBytes": 45334,
-            "url": "/uploads/small_20220117_104554_original_e0e9734d45.jpg"
-          },
-          "medium": {
-            "name": "medium_20220117_104554_original.jpg",
-            "hash": "medium_20220117_104554_original_e0e9734d45",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 96.92,
-            "sizeInBytes": 96924,
-            "url": "/uploads/medium_20220117_104554_original_e0e9734d45.jpg"
-          },
-          "large": {
-            "name": "large_20220117_104554_original.jpg",
-            "hash": "large_20220117_104554_original_e0e9734d45",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 160.97,
-            "sizeInBytes": 160966,
-            "url": "/uploads/large_20220117_104554_original_e0e9734d45.jpg"
-          }
-        },
-        "hash": "20220117_104554_original_e0e9734d45",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 173.46,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:49.391Z",
-        "updatedAt": "2026-02-17T12:56:49.391Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Constanza je od Jarabcoa vzdálená cca 44 km. Horská cesta spojující obě města je naštěstí asfaltová. Do Constanzy se dostanete buď autobusem ze Santo Dominga, nebo pomocí taxi z Jarabacoa a nebo ideálně v pronajatém autě, které využijete i na výlety kolem Constanzy. Už cestou z Jarabacoa můžete zastavit na několika hezkých vyhlídkách, celá cesta je v podstatě vyhlídková."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Krásný pohled na město a okolní hory se vám naskytne z"
-        },
-        {
-          "type": "text",
-          "text": "Monumento Dovino Niño",
-          "url": "https://maps.app.goo.gl/VZPkZavPMDK4CGxd6",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ". Náboženské místo s vyhlídkovou terasou tyčící se přímo nad městem vám nabídne úžasný výhled. Až nahoru lze dojet autem. Přes cestu je ale závora, protože je místo zpoplatněno a má své otevírací hodiny."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2160.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2160_7324d33915.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2160.jpg",
-            "hash": "thumbnail_img_2160_7324d33915",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 8.81,
-            "sizeInBytes": 8812,
-            "url": "/uploads/thumbnail_img_2160_7324d33915.jpg"
-          },
-          "small": {
-            "name": "small_img_2160.jpg",
-            "hash": "small_img_2160_7324d33915",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 40.45,
-            "sizeInBytes": 40446,
-            "url": "/uploads/small_img_2160_7324d33915.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2160.jpg",
-            "hash": "medium_img_2160_7324d33915",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 81.2,
-            "sizeInBytes": 81197,
-            "url": "/uploads/medium_img_2160_7324d33915.jpg"
-          },
-          "large": {
-            "name": "large_img_2160.jpg",
-            "hash": "large_img_2160_7324d33915",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 129.6,
-            "sizeInBytes": 129601,
-            "url": "/uploads/large_img_2160_7324d33915.jpg"
-          }
-        },
-        "hash": "img_2160_7324d33915",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 136.78,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:49.701Z",
-        "updatedAt": "2026-02-17T12:56:49.701Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2159.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2159_1c0192700c.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2159.jpg",
-            "hash": "thumbnail_img_2159_1c0192700c",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 10.16,
-            "sizeInBytes": 10157,
-            "url": "/uploads/thumbnail_img_2159_1c0192700c.jpg"
-          },
-          "small": {
-            "name": "small_img_2159.jpg",
-            "hash": "small_img_2159_1c0192700c",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 50.8,
-            "sizeInBytes": 50800,
-            "url": "/uploads/small_img_2159_1c0192700c.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2159.jpg",
-            "hash": "medium_img_2159_1c0192700c",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 106.63,
-            "sizeInBytes": 106625,
-            "url": "/uploads/medium_img_2159_1c0192700c.jpg"
-          },
-          "large": {
-            "name": "large_img_2159.jpg",
-            "hash": "large_img_2159_1c0192700c",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 175.32,
-            "sizeInBytes": 175321,
-            "url": "/uploads/large_img_2159_1c0192700c.jpg"
-          }
-        },
-        "hash": "img_2159_1c0192700c",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 186.34,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:50.017Z",
-        "updatedAt": "2026-02-17T12:56:50.017Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2081.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2081_2ae3e518d6.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2081.jpg",
-            "hash": "thumbnail_img_2081_2ae3e518d6",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 7.31,
-            "sizeInBytes": 7305,
-            "url": "/uploads/thumbnail_img_2081_2ae3e518d6.jpg"
-          },
-          "small": {
-            "name": "small_img_2081.jpg",
-            "hash": "small_img_2081_2ae3e518d6",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 36.84,
-            "sizeInBytes": 36842,
-            "url": "/uploads/small_img_2081_2ae3e518d6.jpg"
-          },
-          "large": {
-            "name": "large_img_2081.jpg",
-            "hash": "large_img_2081_2ae3e518d6",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 128.11,
-            "sizeInBytes": 128109,
-            "url": "/uploads/large_img_2081_2ae3e518d6.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2081.jpg",
-            "hash": "medium_img_2081_2ae3e518d6",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 77.95,
-            "sizeInBytes": 77951,
-            "url": "/uploads/medium_img_2081_2ae3e518d6.jpg"
-          }
-        },
-        "hash": "img_2081_2ae3e518d6",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 134.21,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:50.322Z",
-        "updatedAt": "2026-02-17T12:56:50.322Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Salto de Aguas Blancas",
-          "url": "https://maps.google.com/?cid=10044651361965860096&entry=gps"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Dalším výletem z Constanzy může být cesta k vodopádu"
-        },
-        {
-          "type": "text",
-          "text": "Salto de Aguas Blancas",
-          "url": "https://maps.app.goo.gl/kxfjiXw3mHcZTDov7",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": ". Tento vodopád je se svými 83 metry nejvyšším vodopádem Karibiku a se svou nadmořskou výškou 1750 m nejvýše položeným vodopádem Dominikány. Voda je zde čistá a ledově svěží. Vodopád má několik pater, které můžete navštívit. Po pěšinách se dostanete na 3 různé vyhlídkové plošiny. Cesta k vodopádu je zdlouhavá, dobrodružná a samozřejmě prašná. Cesta z Constanzy je dlouhá 16 kilometrů, ale už po 4 kilometrech končí asfalt a vás čeká kodrcání se po vesnické polňačce. Poslední 2 km je lepší dojít pěšky, pokud není auto dostatečně terénní. Celá cesta k vodopádu je ale nesmírně zajímavá, protože vede chudou zemědělskou oblastí a vy tak můžete pozorovat prostý život místních vesničanů v horách. Oblast je to krásná, domorodá, tichá a téměř bez turistů."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2136.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2136_98bf990eb7.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2136.jpg",
-            "hash": "thumbnail_img_2136_98bf990eb7",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 12.04,
-            "sizeInBytes": 12043,
-            "url": "/uploads/thumbnail_img_2136_98bf990eb7.jpg"
-          },
-          "small": {
-            "name": "small_img_2136.jpg",
-            "hash": "small_img_2136_98bf990eb7",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 67.55,
-            "sizeInBytes": 67550,
-            "url": "/uploads/small_img_2136_98bf990eb7.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2136.jpg",
-            "hash": "medium_img_2136_98bf990eb7",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 146.29,
-            "sizeInBytes": 146285,
-            "url": "/uploads/medium_img_2136_98bf990eb7.jpg"
-          },
-          "large": {
-            "name": "large_img_2136.jpg",
-            "hash": "large_img_2136_98bf990eb7",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 245.86,
-            "sizeInBytes": 245858,
-            "url": "/uploads/large_img_2136_98bf990eb7.jpg"
-          }
-        },
-        "hash": "img_2136_98bf990eb7",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 261.83,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:50.805Z",
-        "updatedAt": "2026-02-17T12:56:50.805Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2134.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2134_ba9e2ebcfe.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2134.jpg",
-            "hash": "thumbnail_img_2134_ba9e2ebcfe",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 9.86,
-            "sizeInBytes": 9864,
-            "url": "/uploads/thumbnail_img_2134_ba9e2ebcfe.jpg"
-          },
-          "small": {
-            "name": "small_img_2134.jpg",
-            "hash": "small_img_2134_ba9e2ebcfe",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 49.67,
-            "sizeInBytes": 49674,
-            "url": "/uploads/small_img_2134_ba9e2ebcfe.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2134.jpg",
-            "hash": "medium_img_2134_ba9e2ebcfe",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 105.2,
-            "sizeInBytes": 105199,
-            "url": "/uploads/medium_img_2134_ba9e2ebcfe.jpg"
-          },
-          "large": {
-            "name": "large_img_2134.jpg",
-            "hash": "large_img_2134_ba9e2ebcfe",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 173.75,
-            "sizeInBytes": 173749,
-            "url": "/uploads/large_img_2134_ba9e2ebcfe.jpg"
-          }
-        },
-        "hash": "img_2134_ba9e2ebcfe",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 184.27,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:51.302Z",
-        "updatedAt": "2026-02-17T12:56:51.302Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2115.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2115_4c29a23093.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2115.jpg",
-            "hash": "thumbnail_img_2115_4c29a23093",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 11.89,
-            "sizeInBytes": 11885,
-            "url": "/uploads/thumbnail_img_2115_4c29a23093.jpg"
-          },
-          "small": {
-            "name": "small_img_2115.jpg",
-            "hash": "small_img_2115_4c29a23093",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 64.5,
-            "sizeInBytes": 64499,
-            "url": "/uploads/small_img_2115_4c29a23093.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2115.jpg",
-            "hash": "medium_img_2115_4c29a23093",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 139.29,
-            "sizeInBytes": 139288,
-            "url": "/uploads/medium_img_2115_4c29a23093.jpg"
-          },
-          "large": {
-            "name": "large_img_2115.jpg",
-            "hash": "large_img_2115_4c29a23093",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 233.26,
-            "sizeInBytes": 233258,
-            "url": "/uploads/large_img_2115_4c29a23093.jpg"
-          }
-        },
-        "hash": "img_2115_4c29a23093",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 248.93,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:51.702Z",
-        "updatedAt": "2026-02-17T12:56:51.702Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "Parque Nacional Valle Nuevo",
-          "url": "https://maps.app.goo.gl/bMbsLfmk3L4JNCxx5"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Budete-li po této silnici vedoucí vesnicí El Convento pokračovat dál, dostanete se až k branám národního parku",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "Parque Nacional Valle Nuevo.",
-          "url": "https://maps.app.goo.gl/bMbsLfmk3L4JNCxx5",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "K parku se vydejte určitě touto cestou vedoucí téměř kolem vodopádu. Na mapě je ještě jedna cesta, která je o několik kilometrů kratší a zpočátku vypadá jako asfaltová, ale velmi rychle se mění ve velmi terénní lesní cestu. Zde je to s autem opravdu komplikované a ve finále časově náročnější. K rozdvojení cest dochází zhruba 4 km za Constanzou, zde je třeba jet vlevo a odbočit z asfaltové cesty na cestu prašnou."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2154.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2154_180abc8671.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2154.jpg",
-            "hash": "thumbnail_img_2154_180abc8671",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 9.78,
-            "sizeInBytes": 9780,
-            "url": "/uploads/thumbnail_img_2154_180abc8671.jpg"
-          },
-          "small": {
-            "name": "small_img_2154.jpg",
-            "hash": "small_img_2154_180abc8671",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 51.59,
-            "sizeInBytes": 51588,
-            "url": "/uploads/small_img_2154_180abc8671.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2154.jpg",
-            "hash": "medium_img_2154_180abc8671",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 109.4,
-            "sizeInBytes": 109400,
-            "url": "/uploads/medium_img_2154_180abc8671.jpg"
-          },
-          "large": {
-            "name": "large_img_2154.jpg",
-            "hash": "large_img_2154_180abc8671",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 180.9,
-            "sizeInBytes": 180898,
-            "url": "/uploads/large_img_2154_180abc8671.jpg"
-          }
-        },
-        "hash": "img_2154_180abc8671",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 193,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:52.024Z",
-        "updatedAt": "2026-02-17T12:56:52.024Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2152.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2152_f0de0ee870.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2152.jpg",
-            "hash": "thumbnail_img_2152_f0de0ee870",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 12.9,
-            "sizeInBytes": 12895,
-            "url": "/uploads/thumbnail_img_2152_f0de0ee870.jpg"
-          },
-          "small": {
-            "name": "small_img_2152.jpg",
-            "hash": "small_img_2152_f0de0ee870",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 67.87,
-            "sizeInBytes": 67869,
-            "url": "/uploads/small_img_2152_f0de0ee870.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2152.jpg",
-            "hash": "medium_img_2152_f0de0ee870",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 143.67,
-            "sizeInBytes": 143667,
-            "url": "/uploads/medium_img_2152_f0de0ee870.jpg"
-          },
-          "large": {
-            "name": "large_img_2152.jpg",
-            "hash": "large_img_2152_f0de0ee870",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 238.24,
-            "sizeInBytes": 238242,
-            "url": "/uploads/large_img_2152_f0de0ee870.jpg"
-          }
-        },
-        "hash": "img_2152_f0de0ee870",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 253.76,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:52.516Z",
-        "updatedAt": "2026-02-17T12:56:52.516Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2120.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2120_04108d1355.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2120.jpg",
-            "hash": "thumbnail_img_2120_04108d1355",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 11.31,
-            "sizeInBytes": 11310,
-            "url": "/uploads/thumbnail_img_2120_04108d1355.jpg"
-          },
-          "small": {
-            "name": "small_img_2120.jpg",
-            "hash": "small_img_2120_04108d1355",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 56.06,
-            "sizeInBytes": 56062,
-            "url": "/uploads/small_img_2120_04108d1355.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2120.jpg",
-            "hash": "medium_img_2120_04108d1355",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 117.48,
-            "sizeInBytes": 117483,
-            "url": "/uploads/medium_img_2120_04108d1355.jpg"
-          },
-          "large": {
-            "name": "large_img_2120.jpg",
-            "hash": "large_img_2120_04108d1355",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 192.97,
-            "sizeInBytes": 192968,
-            "url": "/uploads/large_img_2120_04108d1355.jpg"
-          }
-        },
-        "hash": "img_2120_04108d1355",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 204.6,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:52.919Z",
-        "updatedAt": "2026-02-17T12:56:52.919Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "K návštěvě národního parku je také třeba auto, nebo alespoň horské kolo. Pěšky můžete jít také, ale budete potřebovat více dní. Při vstupu do parku musíte zaplatit poplatek 150 DOP na osobu. Hned u vstupu do parku je tabule s kreslenou mapou parku se zajímavými místy. Zdaleka ne všechna místa, která jsou na mapě existují i ve skutečnosti, někdy je velmi těžké tato místa najít, protože google mapy jich většinu neukazují a v parku nejsou žádné ukazatele. Parkem prochází hlavní prašná cesta v relativně dobrém stavu, která je dlouhá 43 km."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20220118_153357_original.jpg",
-        "alternativeText": "",
-        "url": "/uploads/20220118_153357_original_453ce30263.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20220118_153357_original.jpg",
-            "hash": "thumbnail_20220118_153357_original_453ce30263",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 8.96,
-            "sizeInBytes": 8964,
-            "url": "/uploads/thumbnail_20220118_153357_original_453ce30263.jpg"
-          },
-          "small": {
-            "name": "small_20220118_153357_original.jpg",
-            "hash": "small_20220118_153357_original_453ce30263",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 45.47,
-            "sizeInBytes": 45465,
-            "url": "/uploads/small_20220118_153357_original_453ce30263.jpg"
-          },
-          "large": {
-            "name": "large_20220118_153357_original.jpg",
-            "hash": "large_20220118_153357_original_453ce30263",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 159.02,
-            "sizeInBytes": 159017,
-            "url": "/uploads/large_20220118_153357_original_453ce30263.jpg"
-          },
-          "medium": {
-            "name": "medium_20220118_153357_original.jpg",
-            "hash": "medium_20220118_153357_original_453ce30263",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 96.48,
-            "sizeInBytes": 96475,
-            "url": "/uploads/medium_20220118_153357_original_453ce30263.jpg"
-          }
-        },
-        "hash": "20220118_153357_original_453ce30263",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 168.92,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:53.244Z",
-        "updatedAt": "2026-02-17T12:56:53.244Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2182.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2182_14ad553dc7.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2182.jpg",
-            "hash": "thumbnail_img_2182_14ad553dc7",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 7.4,
-            "sizeInBytes": 7403,
-            "url": "/uploads/thumbnail_img_2182_14ad553dc7.jpg"
-          },
-          "small": {
-            "name": "small_img_2182.jpg",
-            "hash": "small_img_2182_14ad553dc7",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 41.04,
-            "sizeInBytes": 41040,
-            "url": "/uploads/small_img_2182_14ad553dc7.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2182.jpg",
-            "hash": "medium_img_2182_14ad553dc7",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 92.11,
-            "sizeInBytes": 92109,
-            "url": "/uploads/medium_img_2182_14ad553dc7.jpg"
-          },
-          "large": {
-            "name": "large_img_2182.jpg",
-            "hash": "large_img_2182_14ad553dc7",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 157.83,
-            "sizeInBytes": 157830,
-            "url": "/uploads/large_img_2182_14ad553dc7.jpg"
-          }
-        },
-        "hash": "img_2182_14ad553dc7",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 168.11,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:53.747Z",
-        "updatedAt": "2026-02-17T12:56:53.747Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2204.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2204_a4d446598e.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2204.jpg",
-            "hash": "thumbnail_img_2204_a4d446598e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 7.03,
-            "sizeInBytes": 7033,
-            "url": "/uploads/thumbnail_img_2204_a4d446598e.jpg"
-          },
-          "small": {
-            "name": "small_img_2204.jpg",
-            "hash": "small_img_2204_a4d446598e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 35.81,
-            "sizeInBytes": 35806,
-            "url": "/uploads/small_img_2204_a4d446598e.jpg"
-          },
-          "large": {
-            "name": "large_img_2204.jpg",
-            "hash": "large_img_2204_a4d446598e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 123.79,
-            "sizeInBytes": 123789,
-            "url": "/uploads/large_img_2204_a4d446598e.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2204.jpg",
-            "hash": "medium_img_2204_a4d446598e",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 75.36,
-            "sizeInBytes": 75364,
-            "url": "/uploads/medium_img_2204_a4d446598e.jpg"
-          }
-        },
-        "hash": "img_2204_a4d446598e",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 130.85,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:54.148Z",
-        "updatedAt": "2026-02-17T12:56:54.148Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Většina návštěvníků ale jede hlavně k monumentu"
-        },
-        {
-          "type": "text",
-          "text": "Las Pyramides de Valle Nuevo,",
-          "url": "https://maps.app.goo.gl/US3VceKrNGW3CL927",
-          "bold": true
-        },
-        {
-          "type": "text",
-          "text": "který značí geografický střed Dominikánské republiky. Tato cesta je dlouhá 25 km od začátku parku. Cestou můžete navštívit malý kostelík, vylézt na nějaký z okolních kopců a užít si výhled do okolí, nebo se projít horskou přírodou. Z hlavní cesty odbočuje plno pěších cest, ale není známo kam vedou. Mapa je v tomto případě bohužel prázdná. V parku je také možné kempovat. Jsou zde vyznačená místa k tomu určená. Na horu Alto Bandera, která jako jedna z mála na mapě značená je, se pravděpodobně nedostanete. Cesta tam sice vede, ale jedná se o vojenský prostor a ke vstupu na horu je třeba zvláštní povolení, o které musíte žádat v Santo Domingu. Celý park se nachází v poměrně vysoké nadmořské výšce a tomu odpovídají i teploty a flora. Pohybovat se bude většinou ve výšce 2000 – 2500 m.n.m. Horská krajina spíš připomíná evropské lesy a teploty teplejší podzimní dny. Takže mikiny a dlouhé kalhoty mohou být i přes den užitečné. V celém parku téměř nenajdete známky civilizace (kromě vojenské základny). Nečekejte žádné stánky, žádné prodejce, žádné restaurace, nic. Jídlo a pití na celý den si vezměte s sebou. Jen na začátku parku je vila nabízející ubytování v horských chatách. To je vše."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2181.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2181_478fa8f8bb.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2181.jpg",
-            "hash": "thumbnail_img_2181_478fa8f8bb",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 10.29,
-            "sizeInBytes": 10293,
-            "url": "/uploads/thumbnail_img_2181_478fa8f8bb.jpg"
-          },
-          "small": {
-            "name": "small_img_2181.jpg",
-            "hash": "small_img_2181_478fa8f8bb",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 56.53,
-            "sizeInBytes": 56531,
-            "url": "/uploads/small_img_2181_478fa8f8bb.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2181.jpg",
-            "hash": "medium_img_2181_478fa8f8bb",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 126.09,
-            "sizeInBytes": 126094,
-            "url": "/uploads/medium_img_2181_478fa8f8bb.jpg"
-          },
-          "large": {
-            "name": "large_img_2181.jpg",
-            "hash": "large_img_2181_478fa8f8bb",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 216.15,
-            "sizeInBytes": 216149,
-            "url": "/uploads/large_img_2181_478fa8f8bb.jpg"
-          }
-        },
-        "hash": "img_2181_478fa8f8bb",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 232.04,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:54.627Z",
-        "updatedAt": "2026-02-17T12:56:54.627Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20220118_142522_original.jpg",
-        "alternativeText": "",
-        "url": "/uploads/20220118_142522_original_14376183c7.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20220118_142522_original.jpg",
-            "hash": "thumbnail_20220118_142522_original_14376183c7",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 8.13,
-            "sizeInBytes": 8134,
-            "url": "/uploads/thumbnail_20220118_142522_original_14376183c7.jpg"
-          },
-          "small": {
-            "name": "small_20220118_142522_original.jpg",
-            "hash": "small_20220118_142522_original_14376183c7",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 39.93,
-            "sizeInBytes": 39929,
-            "url": "/uploads/small_20220118_142522_original_14376183c7.jpg"
-          },
-          "medium": {
-            "name": "medium_20220118_142522_original.jpg",
-            "hash": "medium_20220118_142522_original_14376183c7",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 82.88,
-            "sizeInBytes": 82882,
-            "url": "/uploads/medium_20220118_142522_original_14376183c7.jpg"
-          },
-          "large": {
-            "name": "large_20220118_142522_original.jpg",
-            "hash": "large_20220118_142522_original_14376183c7",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 135.16,
-            "sizeInBytes": 135161,
-            "url": "/uploads/large_20220118_142522_original_14376183c7.jpg"
-          }
-        },
-        "hash": "20220118_142522_original_14376183c7",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 142.94,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:55.056Z",
-        "updatedAt": "2026-02-17T12:56:55.056Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "img_2192.jpg",
-        "alternativeText": "",
-        "url": "/uploads/img_2192_3e4604b6c9.jpg",
-        "width": 1020,
-        "height": 765,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_img_2192.jpg",
-            "hash": "thumbnail_img_2192_3e4604b6c9",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 208,
-            "height": 156,
-            "size": 8.23,
-            "sizeInBytes": 8234,
-            "url": "/uploads/thumbnail_img_2192_3e4604b6c9.jpg"
-          },
-          "small": {
-            "name": "small_img_2192.jpg",
-            "hash": "small_img_2192_3e4604b6c9",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 500,
-            "height": 375,
-            "size": 43.44,
-            "sizeInBytes": 43438,
-            "url": "/uploads/small_img_2192_3e4604b6c9.jpg"
-          },
-          "medium": {
-            "name": "medium_img_2192.jpg",
-            "hash": "medium_img_2192_3e4604b6c9",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 563,
-            "size": 95.61,
-            "sizeInBytes": 95612,
-            "url": "/uploads/medium_img_2192_3e4604b6c9.jpg"
-          },
-          "large": {
-            "name": "large_img_2192.jpg",
-            "hash": "large_img_2192_3e4604b6c9",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 1000,
-            "height": 750,
-            "size": 162.41,
-            "sizeInBytes": 162414,
-            "url": "/uploads/large_img_2192_3e4604b6c9.jpg"
-          }
-        },
-        "hash": "img_2192_3e4604b6c9",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 173.8,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:55.459Z",
-        "updatedAt": "2026-02-17T12:56:55.459Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Také natankujte dostatek paliva, protože mimo Constanzu už žádné benzínky nejsou a spotřeba v kopcích na nezpevněných cestách rapidně stoupá."
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "image": {
-        "name": "20220118_091510_original.jpg",
-        "alternativeText": "",
-        "url": "/uploads/20220118_091510_original_ad37b287ac.jpg",
-        "width": 765,
-        "height": 1020,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_20220118_091510_original.jpg",
-            "hash": "thumbnail_20220118_091510_original_ad37b287ac",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 117,
-            "height": 156,
-            "size": 5.4,
-            "sizeInBytes": 5398,
-            "url": "/uploads/thumbnail_20220118_091510_original_ad37b287ac.jpg"
-          },
-          "small": {
-            "name": "small_20220118_091510_original.jpg",
-            "hash": "small_20220118_091510_original_ad37b287ac",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 375,
-            "height": 500,
-            "size": 45.27,
-            "sizeInBytes": 45272,
-            "url": "/uploads/small_20220118_091510_original_ad37b287ac.jpg"
-          },
-          "medium": {
-            "name": "medium_20220118_091510_original.jpg",
-            "hash": "medium_20220118_091510_original_ad37b287ac",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 563,
-            "height": 750,
-            "size": 99.89,
-            "sizeInBytes": 99893,
-            "url": "/uploads/medium_20220118_091510_original_ad37b287ac.jpg"
-          },
-          "large": {
-            "name": "large_20220118_091510_original.jpg",
-            "hash": "large_20220118_091510_original_ad37b287ac",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "path": null,
-            "width": 750,
-            "height": 1000,
-            "size": 171.03,
-            "sizeInBytes": 171029,
-            "url": "/uploads/large_20220118_091510_original_ad37b287ac.jpg"
-          }
-        },
-        "hash": "20220118_091510_original_ad37b287ac",
-        "ext": ".jpg",
-        "mime": "image/jpeg",
-        "size": 183.08,
-        "provider": "local",
-        "createdAt": "2026-02-17T12:56:55.934Z",
-        "updatedAt": "2026-02-17T12:56:55.934Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
-    }
-  ],
-  "createdAt": "2026-02-17T12:56:55.964Z",
-  "updatedAt": "2026-02-17T12:56:55.964Z",
-  "publishedAt": "2026-02-17T12:56:55.969Z",
-  "continent": "caribbean",
-  "contentLang": "cs",
-  "flagEmoji": "🇩🇴",
-  "timezone": "AST (UTC-4)",
-  "languages": [
-    "Spanish"
-  ],
-  "currencyCode": "DOP",
-  "currencyName": "Dominican Peso",
-  "currencySymbol": "RD$",
-  "budgetPerDayBudget": 35,
-  "budgetPerDayMidRange": 80,
-  "budgetPerDayLuxury": 200,
-  "bestTimeToVisit": "December to April",
-  "visaInfo": "Czech citizens: tourist card on arrival",
-  "destinationType": "region",
-  "cover": null
+	"id": 855,
+	"documentId": "zrma5rvr6zoeenqrys7ky22x",
+	"name": "Dominikána střed (Jarabacoa a Constanza)",
+	"slug": "dominikana-stred-jarabacoa-a-constanza",
+	"intro": [
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Střed",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "ostrova",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "\n"
+				},
+				{
+					"type": "text",
+					"text": "(Jarabacoa a Constanza)",
+					"italic": true,
+					"bold": true
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Chcete-li si odpočinout od pláží a lidí a také se možná trochu zchladit, vyražte do hor. Horské pásmo Cordillera central nacházející se ve středu ostrova nabízí širokou škálu horských treků, krásné výhledy, vysoké nadmořské výšky a jedinečné vodopády. Nachází se zde také nejvyšší hora celého ostrova, ale i celého Karibiku –"
+				},
+				{
+					"type": "text",
+					"text": "Pico Duarte",
+					"url": "https://maps.app.goo.gl/NtMFWLVmyY9F7xzW9",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "se svou výškou 3098 m."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2094.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2094_c4c2a3bb85.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2094.jpg",
+						"hash": "thumbnail_img_2094_c4c2a3bb85",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 10.42,
+						"sizeInBytes": 10415,
+						"url": "/uploads/thumbnail_img_2094_c4c2a3bb85.jpg"
+					},
+					"small": {
+						"name": "small_img_2094.jpg",
+						"hash": "small_img_2094_c4c2a3bb85",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 52.53,
+						"sizeInBytes": 52526,
+						"url": "/uploads/small_img_2094_c4c2a3bb85.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2094.jpg",
+						"hash": "medium_img_2094_c4c2a3bb85",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 111.43,
+						"sizeInBytes": 111428,
+						"url": "/uploads/medium_img_2094_c4c2a3bb85.jpg"
+					},
+					"large": {
+						"name": "large_img_2094.jpg",
+						"hash": "large_img_2094_c4c2a3bb85",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 183.58,
+						"sizeInBytes": 183581,
+						"url": "/uploads/large_img_2094_c4c2a3bb85.jpg"
+					}
+				},
+				"hash": "img_2094_c4c2a3bb85",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 195.1,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:43.322Z",
+				"updatedAt": "2026-02-17T12:56:43.322Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Tropická zeleň se zde pomalu mění v borovicové lesy plné mechu, kapradí a lišejníků. Až si skoro začnete připadat jako byste tropický ostrov opustili a ocitli se úplně někde jinde. Třeba v Pyrenejích, nebo Alpách. Zároveň ale potkáváte domorodé chudé zemědělské vesničky, kde místní pracují na polích a to vás opět přesouvá někam jinam, možná do severního Vietnamu. Oblast je to pestrá a pozoruhodná. Navštívit zde můžete hned několik národních parků, kde nic než čistou přírodu, ticho a čistý svěží vzduch nenaleznete. Po návštěvě místních měst je to jako balzám na duši."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2048.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2048_0d44205a74.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2048.jpg",
+						"hash": "thumbnail_img_2048_0d44205a74",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 10.14,
+						"sizeInBytes": 10142,
+						"url": "/uploads/thumbnail_img_2048_0d44205a74.jpg"
+					},
+					"small": {
+						"name": "small_img_2048.jpg",
+						"hash": "small_img_2048_0d44205a74",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 51.78,
+						"sizeInBytes": 51784,
+						"url": "/uploads/small_img_2048_0d44205a74.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2048.jpg",
+						"hash": "medium_img_2048_0d44205a74",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 108.08,
+						"sizeInBytes": 108076,
+						"url": "/uploads/medium_img_2048_0d44205a74.jpg"
+					},
+					"large": {
+						"name": "large_img_2048.jpg",
+						"hash": "large_img_2048_0d44205a74",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 175.81,
+						"sizeInBytes": 175805,
+						"url": "/uploads/large_img_2048_0d44205a74.jpg"
+					}
+				},
+				"hash": "img_2048_0d44205a74",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 186.77,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:43.745Z",
+				"updatedAt": "2026-02-17T12:56:43.745Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Do hor se nejsnáze dostanete ze Santo Dominga, nebo z Puerto Plata autobusem Caribe Tour, který vás zaveze buď do městečka Jarabacoa, nebo do menší Constanzy. Zde se snadno ubytujete a můžete podnikat výlety do okolí. Také zde nakoupíte levné jídlo z pouličních jidelen, nebo v supermarketu. Zajít si můžete dokonce i do restaurace."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Jarabacoa",
+					"url": "https://maps.app.goo.gl/8JaxYEwaSFp7R26HA"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Jarabacoa je z těchto dvou měst tím větším, nacházejícím se v nižší nadmořské výšce (500 m.n.m). Zde snadněji naleznete vše co potřebujete, ubytování je zde obecně levnější než v Constanze a jídlo také. Můžete si zde také půjčit auto, nebo motorku. Přímo ve městě je k vidění jen menší park a deštníková ulice. Zajímavé je ale nedaleké okolí kam se můžete vydat na výlety. Navštívit zde můžete třeba vodopád"
+				},
+				{
+					"type": "text",
+					"text": "Salto de Baiguate",
+					"url": "https://maps.app.goo.gl/8xzSk8zg8tBRJrae9",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ", který ovšem na koupání (kvůli špinavé vodě) příliš vhodný není, nebo hezčí a hůř dostupnější vodopád"
+				},
+				{
+					"type": "text",
+					"text": "Salto de Jimenoa Dos",
+					"url": "https://maps.google.com/?cid=8676701622527687429&entry=gps",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ". Pro vstup k tomuto vodopádu budete muset zaplatit vstupné 50 DOP (možná po vás budou chít 100 DOP – to si ale nemusíte nechat líbit) k čemuž dostanete vodu a dále vás čeká strmý sestup dolů k vodopádu. Ten je opravdu úžasný a také vhodný ke koupání. Voda je sice studená, ale čistá."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_1983.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_1983_82001a0138.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_1983.jpg",
+						"hash": "thumbnail_img_1983_82001a0138",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 11.68,
+						"sizeInBytes": 11681,
+						"url": "/uploads/thumbnail_img_1983_82001a0138.jpg"
+					},
+					"small": {
+						"name": "small_img_1983.jpg",
+						"hash": "small_img_1983_82001a0138",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 52.13,
+						"sizeInBytes": 52128,
+						"url": "/uploads/small_img_1983_82001a0138.jpg"
+					},
+					"medium": {
+						"name": "medium_img_1983.jpg",
+						"hash": "medium_img_1983_82001a0138",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 103.2,
+						"sizeInBytes": 103204,
+						"url": "/uploads/medium_img_1983_82001a0138.jpg"
+					},
+					"large": {
+						"name": "large_img_1983.jpg",
+						"hash": "large_img_1983_82001a0138",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 164.67,
+						"sizeInBytes": 164666,
+						"url": "/uploads/large_img_1983_82001a0138.jpg"
+					}
+				},
+				"hash": "img_1983_82001a0138",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 173.31,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:44.058Z",
+				"updatedAt": "2026-02-17T12:56:44.058Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_1943.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_1943_825cf4b576.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_1943.jpg",
+						"hash": "thumbnail_img_1943_825cf4b576",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 11.04,
+						"sizeInBytes": 11035,
+						"url": "/uploads/thumbnail_img_1943_825cf4b576.jpg"
+					},
+					"small": {
+						"name": "small_img_1943.jpg",
+						"hash": "small_img_1943_825cf4b576",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 62.26,
+						"sizeInBytes": 62255,
+						"url": "/uploads/small_img_1943_825cf4b576.jpg"
+					},
+					"medium": {
+						"name": "medium_img_1943.jpg",
+						"hash": "medium_img_1943_825cf4b576",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 137.59,
+						"sizeInBytes": 137588,
+						"url": "/uploads/medium_img_1943_825cf4b576.jpg"
+					},
+					"large": {
+						"name": "large_img_1943.jpg",
+						"hash": "large_img_1943_825cf4b576",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 234.62,
+						"sizeInBytes": 234624,
+						"url": "/uploads/large_img_1943_825cf4b576.jpg"
+					}
+				},
+				"hash": "img_1943_825cf4b576",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 251.43,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:44.454Z",
+				"updatedAt": "2026-02-17T12:56:44.454Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_1974.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_1974_aaf2b2a771.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_1974.jpg",
+						"hash": "thumbnail_img_1974_aaf2b2a771",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 11.24,
+						"sizeInBytes": 11235,
+						"url": "/uploads/thumbnail_img_1974_aaf2b2a771.jpg"
+					},
+					"small": {
+						"name": "small_img_1974.jpg",
+						"hash": "small_img_1974_aaf2b2a771",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 60.03,
+						"sizeInBytes": 60028,
+						"url": "/uploads/small_img_1974_aaf2b2a771.jpg"
+					},
+					"medium": {
+						"name": "medium_img_1974.jpg",
+						"hash": "medium_img_1974_aaf2b2a771",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 130.59,
+						"sizeInBytes": 130587,
+						"url": "/uploads/medium_img_1974_aaf2b2a771.jpg"
+					},
+					"large": {
+						"name": "large_img_1974.jpg",
+						"hash": "large_img_1974_aaf2b2a771",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 218.57,
+						"sizeInBytes": 218565,
+						"url": "/uploads/large_img_1974_aaf2b2a771.jpg"
+					}
+				},
+				"hash": "img_1974_aaf2b2a771",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 232.75,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:44.856Z",
+				"updatedAt": "2026-02-17T12:56:44.856Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Asi 600 metrů po proudu řeky se nachází druhý vodopád"
+				},
+				{
+					"type": "text",
+					"text": "Salto de Jimenoa Uno",
+					"url": "https://maps.app.goo.gl/eVaxwNQpeyhuPjWS7",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ". K tomuto vodopádu se dostanete ale úplně jinou přístupovou cestou ze silnice směrem na La Vega. Cesta mezi oběma nedalekými vodopády tedy měří cca 18 km po silnici. V lednu 2022 byl tento druhý vodopád uzavřený a je tedy vhodné ověřit, zda je aktuálně už otevřený. Pokud přeci jen dorazíte a bude zavřeno můžete se i tak vykoupat alespoň v řece Jimenoa kousek dál po proudu. Zpět do města se dostanete hezkou pěšinou mezi poli a loukami, kterou naleznete pokud řeku přebrodíte. Tato cesta vede podél řeky a je mnohem kratší než cesta po příjezdové silnici."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20220115_135033_original.jpg",
+				"alternativeText": "",
+				"url": "/uploads/20220115_135033_original_ce46c6c19e.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20220115_135033_original.jpg",
+						"hash": "thumbnail_20220115_135033_original_ce46c6c19e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 8.73,
+						"sizeInBytes": 8734,
+						"url": "/uploads/thumbnail_20220115_135033_original_ce46c6c19e.jpg"
+					},
+					"small": {
+						"name": "small_20220115_135033_original.jpg",
+						"hash": "small_20220115_135033_original_ce46c6c19e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 48.78,
+						"sizeInBytes": 48782,
+						"url": "/uploads/small_20220115_135033_original_ce46c6c19e.jpg"
+					},
+					"medium": {
+						"name": "medium_20220115_135033_original.jpg",
+						"hash": "medium_20220115_135033_original_ce46c6c19e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 107.93,
+						"sizeInBytes": 107933,
+						"url": "/uploads/medium_20220115_135033_original_ce46c6c19e.jpg"
+					},
+					"large": {
+						"name": "large_20220115_135033_original.jpg",
+						"hash": "large_20220115_135033_original_ce46c6c19e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 182.65,
+						"sizeInBytes": 182649,
+						"url": "/uploads/large_20220115_135033_original_ce46c6c19e.jpg"
+					}
+				},
+				"hash": "20220115_135033_original_ce46c6c19e",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 195.29,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:45.251Z",
+				"updatedAt": "2026-02-17T12:56:45.251Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20220115_143258_original.jpg",
+				"alternativeText": "",
+				"url": "/uploads/20220115_143258_original_0335e1015a.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20220115_143258_original.jpg",
+						"hash": "thumbnail_20220115_143258_original_0335e1015a",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 12.25,
+						"sizeInBytes": 12250,
+						"url": "/uploads/thumbnail_20220115_143258_original_0335e1015a.jpg"
+					},
+					"medium": {
+						"name": "medium_20220115_143258_original.jpg",
+						"hash": "medium_20220115_143258_original_0335e1015a",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 140.31,
+						"sizeInBytes": 140306,
+						"url": "/uploads/medium_20220115_143258_original_0335e1015a.jpg"
+					},
+					"small": {
+						"name": "small_20220115_143258_original.jpg",
+						"hash": "small_20220115_143258_original_0335e1015a",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 66.07,
+						"sizeInBytes": 66069,
+						"url": "/uploads/small_20220115_143258_original_0335e1015a.jpg"
+					},
+					"large": {
+						"name": "large_20220115_143258_original.jpg",
+						"hash": "large_20220115_143258_original_0335e1015a",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 232,
+						"sizeInBytes": 231996,
+						"url": "/uploads/large_20220115_143258_original_0335e1015a.jpg"
+					}
+				},
+				"hash": "20220115_143258_original_0335e1015a",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 247.8,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:45.654Z",
+				"updatedAt": "2026-02-17T12:56:45.654Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_1953.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_1953_a93ab6bb5f.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_1953.jpg",
+						"hash": "thumbnail_img_1953_a93ab6bb5f",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 11.06,
+						"sizeInBytes": 11055,
+						"url": "/uploads/thumbnail_img_1953_a93ab6bb5f.jpg"
+					},
+					"small": {
+						"name": "small_img_1953.jpg",
+						"hash": "small_img_1953_a93ab6bb5f",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 60.62,
+						"sizeInBytes": 60622,
+						"url": "/uploads/small_img_1953_a93ab6bb5f.jpg"
+					},
+					"medium": {
+						"name": "medium_img_1953.jpg",
+						"hash": "medium_img_1953_a93ab6bb5f",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 131.84,
+						"sizeInBytes": 131835,
+						"url": "/uploads/medium_img_1953_a93ab6bb5f.jpg"
+					},
+					"large": {
+						"name": "large_img_1953.jpg",
+						"hash": "large_img_1953_a93ab6bb5f",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 222.62,
+						"sizeInBytes": 222622,
+						"url": "/uploads/large_img_1953_a93ab6bb5f.jpg"
+					}
+				},
+				"hash": "img_1953_a93ab6bb5f",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 238.68,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:46.108Z",
+				"updatedAt": "2026-02-17T12:56:46.108Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Dalším hezkým místem k navštívení je hora"
+				},
+				{
+					"type": "text",
+					"text": "El Mogote 1525 m.n.m",
+					"url": "https://maps.app.goo.gl/o7zYw4atgsRtdDT47",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "nedaleko města. Hora je volně přístupná, výstup je strmý, ale ne dlouhý (4 km). Návštěvu je vhodné plánovat na dny bez deště, protože z jílu v horní části treku se při dešti stává strmá skluzavka. Na vrcholu naleznete starou železnou rozhlednu z níž se vám naskytne krásný panoramatický pohled do okolí a mimo to i na nedaleké Pico Duarte. Také zde stojí menší domek, v kterém žije již 22 let starší muž. Velmi rád se s vami dá do řeči, ale mluví pouze španělsky. Má tu i svého koně a několik slepic."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_1987.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_1987_e2a208b937.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_1987.jpg",
+						"hash": "thumbnail_img_1987_e2a208b937",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 8.1,
+						"sizeInBytes": 8097,
+						"url": "/uploads/thumbnail_img_1987_e2a208b937.jpg"
+					},
+					"small": {
+						"name": "small_img_1987.jpg",
+						"hash": "small_img_1987_e2a208b937",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 42.66,
+						"sizeInBytes": 42657,
+						"url": "/uploads/small_img_1987_e2a208b937.jpg"
+					},
+					"medium": {
+						"name": "medium_img_1987.jpg",
+						"hash": "medium_img_1987_e2a208b937",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 91.73,
+						"sizeInBytes": 91732,
+						"url": "/uploads/medium_img_1987_e2a208b937.jpg"
+					},
+					"large": {
+						"name": "large_img_1987.jpg",
+						"hash": "large_img_1987_e2a208b937",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 152.06,
+						"sizeInBytes": 152056,
+						"url": "/uploads/large_img_1987_e2a208b937.jpg"
+					}
+				},
+				"hash": "img_1987_e2a208b937",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 161.83,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:46.449Z",
+				"updatedAt": "2026-02-17T12:56:46.449Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_1993.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_1993_3e6762164e.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_1993.jpg",
+						"hash": "thumbnail_img_1993_3e6762164e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 6.61,
+						"sizeInBytes": 6610,
+						"url": "/uploads/thumbnail_img_1993_3e6762164e.jpg"
+					},
+					"small": {
+						"name": "small_img_1993.jpg",
+						"hash": "small_img_1993_3e6762164e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 35.28,
+						"sizeInBytes": 35283,
+						"url": "/uploads/small_img_1993_3e6762164e.jpg"
+					},
+					"medium": {
+						"name": "medium_img_1993.jpg",
+						"hash": "medium_img_1993_3e6762164e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 77.71,
+						"sizeInBytes": 77710,
+						"url": "/uploads/medium_img_1993_3e6762164e.jpg"
+					},
+					"large": {
+						"name": "large_img_1993.jpg",
+						"hash": "large_img_1993_3e6762164e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 131.31,
+						"sizeInBytes": 131306,
+						"url": "/uploads/large_img_1993_3e6762164e.jpg"
+					}
+				},
+				"hash": "img_1993_3e6762164e",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 141.4,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:46.746Z",
+				"updatedAt": "2026-02-17T12:56:46.746Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_1995.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_1995_60298ceec7.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_1995.jpg",
+						"hash": "thumbnail_img_1995_60298ceec7",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 8.18,
+						"sizeInBytes": 8183,
+						"url": "/uploads/thumbnail_img_1995_60298ceec7.jpg"
+					},
+					"small": {
+						"name": "small_img_1995.jpg",
+						"hash": "small_img_1995_60298ceec7",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 49.99,
+						"sizeInBytes": 49988,
+						"url": "/uploads/small_img_1995_60298ceec7.jpg"
+					},
+					"medium": {
+						"name": "medium_img_1995.jpg",
+						"hash": "medium_img_1995_60298ceec7",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 114.53,
+						"sizeInBytes": 114529,
+						"url": "/uploads/medium_img_1995_60298ceec7.jpg"
+					},
+					"large": {
+						"name": "large_img_1995.jpg",
+						"hash": "large_img_1995_60298ceec7",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 202.09,
+						"sizeInBytes": 202090,
+						"url": "/uploads/large_img_1995_60298ceec7.jpg"
+					}
+				},
+				"hash": "img_1995_60298ceec7",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 179,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:47.052Z",
+				"updatedAt": "2026-02-17T12:56:47.052Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Všechna tato místa můžete v Jarabacoa navštívit buď autem, levněji mototaxi, nebo pěšky. Vše lze pěšky z města absolvovat, jen to bude déle trvat. Na zpáteční cestě vás třeba sveze některý ze zemědělců na korbě svého auta, kde pojedete společně se sklizní."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Z Jarabacoa se také můžete vydat na nejvyšší horu ostrova"
+				},
+				{
+					"type": "text",
+					"text": "Pico Duarte",
+					"url": "https://maps.app.goo.gl/NtMFWLVmyY9F7xzW9",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ". Výstup trvá 2-4 dny v závislosti na trase, kterou zvolíte. Bohužel se na trasu nemůžete vydat sami, ale musíte jít s průvodcem. Cena takového výstupu se pohybuje kolem 200-350$ za osobu. Pokud se vydáte sami až k branám národního parku, můžete si výstup domluvit sami přímo na místě a dostat se i na částku 150$ za osobu. Jídlo a vybavení na přespání by mělo být v ceně  zahrnuté. Také vstup do národního parku Parque Nacional José Armando Bermúdez by měla cena už zahrnovat. Zároveň je v ceně zahrnuta na každého turistu jedna mula, která jde s vámi pro případ, že cestu nezvládnete a budete se potřebovat svézt. Výstup si také snadno domluvíte ve městě, kde vám s tím může pomoci třeba recepční. Nezapomeňte, že v horách klesají teploty až k nule a zejména v zimních měsících může dokonce mrznout. Je třeba se na výstup vybavit vhodným oblečením."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2032.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2032_2e97a79ffa.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2032.jpg",
+						"hash": "thumbnail_img_2032_2e97a79ffa",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 8.3,
+						"sizeInBytes": 8302,
+						"url": "/uploads/thumbnail_img_2032_2e97a79ffa.jpg"
+					},
+					"small": {
+						"name": "small_img_2032.jpg",
+						"hash": "small_img_2032_2e97a79ffa",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 45.48,
+						"sizeInBytes": 45477,
+						"url": "/uploads/small_img_2032_2e97a79ffa.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2032.jpg",
+						"hash": "medium_img_2032_2e97a79ffa",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 100.15,
+						"sizeInBytes": 100150,
+						"url": "/uploads/medium_img_2032_2e97a79ffa.jpg"
+					},
+					"large": {
+						"name": "large_img_2032.jpg",
+						"hash": "large_img_2032_2e97a79ffa",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 168.52,
+						"sizeInBytes": 168520,
+						"url": "/uploads/large_img_2032_2e97a79ffa.jpg"
+					}
+				},
+				"hash": "img_2032_2e97a79ffa",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 180.28,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:47.388Z",
+				"updatedAt": "2026-02-17T12:56:47.388Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Budete-li mít auto k dispozici, můžete se zajet podívat na kávové plantáže do"
+				},
+				{
+					"type": "text",
+					"text": "Spirit Mountain",
+					"url": "https://maps.app.goo.gl/AqvjEPCrSZH83sBZ6",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "v horách za vesnicí Manabao. Pojedete stále dál po silnici až silnice téměř zmizí ale to už uvidíte ukazatele. Uvidíte zde kávové plantáže, proces zpracování kávy, ochutnáte místní kávu a můžete se také podívat k vodopádu, nebo se zde dokonce ubytovat. Jednotlivá místa v rámci areálu jsou od sebe docela vzdálená a je tedy velmi vhodné přijet terénním autem, které zvládne vyjet prašnou cestu s dírami. Vstup je zpoplatněn. Pokud nemáte příliš času, nebo terénní auto, můžete zaparkovat dole u řeky a k začátku areálu (500m) se vydat pěšky. Zde uvidíte rostoucí kávu, sušírnu kávových zrn a několik mandarinek."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2042.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2042_91becd2c33.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2042.jpg",
+						"hash": "thumbnail_img_2042_91becd2c33",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 12.38,
+						"sizeInBytes": 12379,
+						"url": "/uploads/thumbnail_img_2042_91becd2c33.jpg"
+					},
+					"small": {
+						"name": "small_img_2042.jpg",
+						"hash": "small_img_2042_91becd2c33",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 52.57,
+						"sizeInBytes": 52570,
+						"url": "/uploads/small_img_2042_91becd2c33.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2042.jpg",
+						"hash": "medium_img_2042_91becd2c33",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 98.53,
+						"sizeInBytes": 98530,
+						"url": "/uploads/medium_img_2042_91becd2c33.jpg"
+					},
+					"large": {
+						"name": "large_img_2042.jpg",
+						"hash": "large_img_2042_91becd2c33",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 151.33,
+						"sizeInBytes": 151334,
+						"url": "/uploads/large_img_2042_91becd2c33.jpg"
+					}
+				},
+				"hash": "img_2042_91becd2c33",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 157.53,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:47.703Z",
+				"updatedAt": "2026-02-17T12:56:47.703Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2038.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2038_73a902c4cc.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2038.jpg",
+						"hash": "thumbnail_img_2038_73a902c4cc",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 11.15,
+						"sizeInBytes": 11153,
+						"url": "/uploads/thumbnail_img_2038_73a902c4cc.jpg"
+					},
+					"small": {
+						"name": "small_img_2038.jpg",
+						"hash": "small_img_2038_73a902c4cc",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 59.9,
+						"sizeInBytes": 59904,
+						"url": "/uploads/small_img_2038_73a902c4cc.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2038.jpg",
+						"hash": "medium_img_2038_73a902c4cc",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 130.64,
+						"sizeInBytes": 130641,
+						"url": "/uploads/medium_img_2038_73a902c4cc.jpg"
+					},
+					"large": {
+						"name": "large_img_2038.jpg",
+						"hash": "large_img_2038_73a902c4cc",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 220.55,
+						"sizeInBytes": 220547,
+						"url": "/uploads/large_img_2038_73a902c4cc.jpg"
+					}
+				},
+				"hash": "img_2038_73a902c4cc",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 235.54,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:48.094Z",
+				"updatedAt": "2026-02-17T12:56:48.094Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2046.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2046_812ff11d87.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2046.jpg",
+						"hash": "thumbnail_img_2046_812ff11d87",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 14.13,
+						"sizeInBytes": 14129,
+						"url": "/uploads/thumbnail_img_2046_812ff11d87.jpg"
+					},
+					"small": {
+						"name": "small_img_2046.jpg",
+						"hash": "small_img_2046_812ff11d87",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 74.86,
+						"sizeInBytes": 74856,
+						"url": "/uploads/small_img_2046_812ff11d87.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2046.jpg",
+						"hash": "medium_img_2046_812ff11d87",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 154.23,
+						"sizeInBytes": 154230,
+						"url": "/uploads/medium_img_2046_812ff11d87.jpg"
+					},
+					"large": {
+						"name": "large_img_2046.jpg",
+						"hash": "large_img_2046_812ff11d87",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 249.03,
+						"sizeInBytes": 249033,
+						"url": "/uploads/large_img_2046_812ff11d87.jpg"
+					}
+				},
+				"hash": "img_2046_812ff11d87",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 264.06,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:48.486Z",
+				"updatedAt": "2026-02-17T12:56:48.486Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Cestou zpět do města se můžete vykoupat u vodopádu"
+				},
+				{
+					"type": "text",
+					"text": "Salto Cachorro",
+					"url": "https://maps.app.goo.gl/VZFoQJXpcUxfy4vB6",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ", nebo v řece Rio Yaque del Norte v"
+				},
+				{
+					"type": "text",
+					"text": "Balneario el bambu",
+					"url": "https://maps.app.goo.gl/HoXVC5GBwBRRsWHBA",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ", kde naleznete také několik restaurací, lávku přes řeku a nejspíš také plno místních."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2068.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2068_22c324023a.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2068.jpg",
+						"hash": "thumbnail_img_2068_22c324023a",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 13.22,
+						"sizeInBytes": 13216,
+						"url": "/uploads/thumbnail_img_2068_22c324023a.jpg"
+					},
+					"small": {
+						"name": "small_img_2068.jpg",
+						"hash": "small_img_2068_22c324023a",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 71.78,
+						"sizeInBytes": 71777,
+						"url": "/uploads/small_img_2068_22c324023a.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2068.jpg",
+						"hash": "medium_img_2068_22c324023a",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 156.25,
+						"sizeInBytes": 156250,
+						"url": "/uploads/medium_img_2068_22c324023a.jpg"
+					},
+					"large": {
+						"name": "large_img_2068.jpg",
+						"hash": "large_img_2068_22c324023a",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 261.84,
+						"sizeInBytes": 261840,
+						"url": "/uploads/large_img_2068_22c324023a.jpg"
+					}
+				},
+				"hash": "img_2068_22c324023a",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 279.84,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:49.004Z",
+				"updatedAt": "2026-02-17T12:56:49.004Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Constanza",
+					"url": "https://maps.app.goo.gl/DwhuhNNF34HfqJeR8"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Constanza je horské městečko v nadmořské výšce 1200 m. Teploty zde očekávejte tedy nižší než v Jarabacoa a to zejména v noci. Do Jarabacoa dojede málo turistů, do Constanzy ještě méně a proto je Constanza ještě o něco autentičtější. V okolí města vás čeká krásná hornatá příroda, kopce s panoramatickými výhledy, tradiční zemědělské vesnice a čistá příroda."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20220117_104554_original.jpg",
+				"alternativeText": "",
+				"url": "/uploads/20220117_104554_original_e0e9734d45.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20220117_104554_original.jpg",
+						"hash": "thumbnail_20220117_104554_original_e0e9734d45",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 8.64,
+						"sizeInBytes": 8638,
+						"url": "/uploads/thumbnail_20220117_104554_original_e0e9734d45.jpg"
+					},
+					"small": {
+						"name": "small_20220117_104554_original.jpg",
+						"hash": "small_20220117_104554_original_e0e9734d45",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 45.33,
+						"sizeInBytes": 45334,
+						"url": "/uploads/small_20220117_104554_original_e0e9734d45.jpg"
+					},
+					"medium": {
+						"name": "medium_20220117_104554_original.jpg",
+						"hash": "medium_20220117_104554_original_e0e9734d45",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 96.92,
+						"sizeInBytes": 96924,
+						"url": "/uploads/medium_20220117_104554_original_e0e9734d45.jpg"
+					},
+					"large": {
+						"name": "large_20220117_104554_original.jpg",
+						"hash": "large_20220117_104554_original_e0e9734d45",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 160.97,
+						"sizeInBytes": 160966,
+						"url": "/uploads/large_20220117_104554_original_e0e9734d45.jpg"
+					}
+				},
+				"hash": "20220117_104554_original_e0e9734d45",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 173.46,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:49.391Z",
+				"updatedAt": "2026-02-17T12:56:49.391Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Constanza je od Jarabcoa vzdálená cca 44 km. Horská cesta spojující obě města je naštěstí asfaltová. Do Constanzy se dostanete buď autobusem ze Santo Dominga, nebo pomocí taxi z Jarabacoa a nebo ideálně v pronajatém autě, které využijete i na výlety kolem Constanzy. Už cestou z Jarabacoa můžete zastavit na několika hezkých vyhlídkách, celá cesta je v podstatě vyhlídková."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Krásný pohled na město a okolní hory se vám naskytne z"
+				},
+				{
+					"type": "text",
+					"text": "Monumento Dovino Niño",
+					"url": "https://maps.app.goo.gl/VZPkZavPMDK4CGxd6",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ". Náboženské místo s vyhlídkovou terasou tyčící se přímo nad městem vám nabídne úžasný výhled. Až nahoru lze dojet autem. Přes cestu je ale závora, protože je místo zpoplatněno a má své otevírací hodiny."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2160.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2160_7324d33915.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2160.jpg",
+						"hash": "thumbnail_img_2160_7324d33915",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 8.81,
+						"sizeInBytes": 8812,
+						"url": "/uploads/thumbnail_img_2160_7324d33915.jpg"
+					},
+					"small": {
+						"name": "small_img_2160.jpg",
+						"hash": "small_img_2160_7324d33915",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 40.45,
+						"sizeInBytes": 40446,
+						"url": "/uploads/small_img_2160_7324d33915.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2160.jpg",
+						"hash": "medium_img_2160_7324d33915",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 81.2,
+						"sizeInBytes": 81197,
+						"url": "/uploads/medium_img_2160_7324d33915.jpg"
+					},
+					"large": {
+						"name": "large_img_2160.jpg",
+						"hash": "large_img_2160_7324d33915",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 129.6,
+						"sizeInBytes": 129601,
+						"url": "/uploads/large_img_2160_7324d33915.jpg"
+					}
+				},
+				"hash": "img_2160_7324d33915",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 136.78,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:49.701Z",
+				"updatedAt": "2026-02-17T12:56:49.701Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2159.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2159_1c0192700c.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2159.jpg",
+						"hash": "thumbnail_img_2159_1c0192700c",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 10.16,
+						"sizeInBytes": 10157,
+						"url": "/uploads/thumbnail_img_2159_1c0192700c.jpg"
+					},
+					"small": {
+						"name": "small_img_2159.jpg",
+						"hash": "small_img_2159_1c0192700c",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 50.8,
+						"sizeInBytes": 50800,
+						"url": "/uploads/small_img_2159_1c0192700c.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2159.jpg",
+						"hash": "medium_img_2159_1c0192700c",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 106.63,
+						"sizeInBytes": 106625,
+						"url": "/uploads/medium_img_2159_1c0192700c.jpg"
+					},
+					"large": {
+						"name": "large_img_2159.jpg",
+						"hash": "large_img_2159_1c0192700c",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 175.32,
+						"sizeInBytes": 175321,
+						"url": "/uploads/large_img_2159_1c0192700c.jpg"
+					}
+				},
+				"hash": "img_2159_1c0192700c",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 186.34,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:50.017Z",
+				"updatedAt": "2026-02-17T12:56:50.017Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2081.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2081_2ae3e518d6.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2081.jpg",
+						"hash": "thumbnail_img_2081_2ae3e518d6",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 7.31,
+						"sizeInBytes": 7305,
+						"url": "/uploads/thumbnail_img_2081_2ae3e518d6.jpg"
+					},
+					"small": {
+						"name": "small_img_2081.jpg",
+						"hash": "small_img_2081_2ae3e518d6",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 36.84,
+						"sizeInBytes": 36842,
+						"url": "/uploads/small_img_2081_2ae3e518d6.jpg"
+					},
+					"large": {
+						"name": "large_img_2081.jpg",
+						"hash": "large_img_2081_2ae3e518d6",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 128.11,
+						"sizeInBytes": 128109,
+						"url": "/uploads/large_img_2081_2ae3e518d6.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2081.jpg",
+						"hash": "medium_img_2081_2ae3e518d6",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 77.95,
+						"sizeInBytes": 77951,
+						"url": "/uploads/medium_img_2081_2ae3e518d6.jpg"
+					}
+				},
+				"hash": "img_2081_2ae3e518d6",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 134.21,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:50.322Z",
+				"updatedAt": "2026-02-17T12:56:50.322Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Salto de Aguas Blancas",
+					"url": "https://maps.google.com/?cid=10044651361965860096&entry=gps"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Dalším výletem z Constanzy může být cesta k vodopádu"
+				},
+				{
+					"type": "text",
+					"text": "Salto de Aguas Blancas",
+					"url": "https://maps.app.goo.gl/kxfjiXw3mHcZTDov7",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": ". Tento vodopád je se svými 83 metry nejvyšším vodopádem Karibiku a se svou nadmořskou výškou 1750 m nejvýše položeným vodopádem Dominikány. Voda je zde čistá a ledově svěží. Vodopád má několik pater, které můžete navštívit. Po pěšinách se dostanete na 3 různé vyhlídkové plošiny. Cesta k vodopádu je zdlouhavá, dobrodružná a samozřejmě prašná. Cesta z Constanzy je dlouhá 16 kilometrů, ale už po 4 kilometrech končí asfalt a vás čeká kodrcání se po vesnické polňačce. Poslední 2 km je lepší dojít pěšky, pokud není auto dostatečně terénní. Celá cesta k vodopádu je ale nesmírně zajímavá, protože vede chudou zemědělskou oblastí a vy tak můžete pozorovat prostý život místních vesničanů v horách. Oblast je to krásná, domorodá, tichá a téměř bez turistů."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2136.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2136_98bf990eb7.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2136.jpg",
+						"hash": "thumbnail_img_2136_98bf990eb7",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 12.04,
+						"sizeInBytes": 12043,
+						"url": "/uploads/thumbnail_img_2136_98bf990eb7.jpg"
+					},
+					"small": {
+						"name": "small_img_2136.jpg",
+						"hash": "small_img_2136_98bf990eb7",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 67.55,
+						"sizeInBytes": 67550,
+						"url": "/uploads/small_img_2136_98bf990eb7.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2136.jpg",
+						"hash": "medium_img_2136_98bf990eb7",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 146.29,
+						"sizeInBytes": 146285,
+						"url": "/uploads/medium_img_2136_98bf990eb7.jpg"
+					},
+					"large": {
+						"name": "large_img_2136.jpg",
+						"hash": "large_img_2136_98bf990eb7",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 245.86,
+						"sizeInBytes": 245858,
+						"url": "/uploads/large_img_2136_98bf990eb7.jpg"
+					}
+				},
+				"hash": "img_2136_98bf990eb7",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 261.83,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:50.805Z",
+				"updatedAt": "2026-02-17T12:56:50.805Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2134.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2134_ba9e2ebcfe.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2134.jpg",
+						"hash": "thumbnail_img_2134_ba9e2ebcfe",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 9.86,
+						"sizeInBytes": 9864,
+						"url": "/uploads/thumbnail_img_2134_ba9e2ebcfe.jpg"
+					},
+					"small": {
+						"name": "small_img_2134.jpg",
+						"hash": "small_img_2134_ba9e2ebcfe",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 49.67,
+						"sizeInBytes": 49674,
+						"url": "/uploads/small_img_2134_ba9e2ebcfe.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2134.jpg",
+						"hash": "medium_img_2134_ba9e2ebcfe",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 105.2,
+						"sizeInBytes": 105199,
+						"url": "/uploads/medium_img_2134_ba9e2ebcfe.jpg"
+					},
+					"large": {
+						"name": "large_img_2134.jpg",
+						"hash": "large_img_2134_ba9e2ebcfe",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 173.75,
+						"sizeInBytes": 173749,
+						"url": "/uploads/large_img_2134_ba9e2ebcfe.jpg"
+					}
+				},
+				"hash": "img_2134_ba9e2ebcfe",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 184.27,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:51.302Z",
+				"updatedAt": "2026-02-17T12:56:51.302Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2115.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2115_4c29a23093.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2115.jpg",
+						"hash": "thumbnail_img_2115_4c29a23093",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 11.89,
+						"sizeInBytes": 11885,
+						"url": "/uploads/thumbnail_img_2115_4c29a23093.jpg"
+					},
+					"small": {
+						"name": "small_img_2115.jpg",
+						"hash": "small_img_2115_4c29a23093",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 64.5,
+						"sizeInBytes": 64499,
+						"url": "/uploads/small_img_2115_4c29a23093.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2115.jpg",
+						"hash": "medium_img_2115_4c29a23093",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 139.29,
+						"sizeInBytes": 139288,
+						"url": "/uploads/medium_img_2115_4c29a23093.jpg"
+					},
+					"large": {
+						"name": "large_img_2115.jpg",
+						"hash": "large_img_2115_4c29a23093",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 233.26,
+						"sizeInBytes": 233258,
+						"url": "/uploads/large_img_2115_4c29a23093.jpg"
+					}
+				},
+				"hash": "img_2115_4c29a23093",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 248.93,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:51.702Z",
+				"updatedAt": "2026-02-17T12:56:51.702Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "Parque Nacional Valle Nuevo",
+					"url": "https://maps.app.goo.gl/bMbsLfmk3L4JNCxx5"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Budete-li po této silnici vedoucí vesnicí El Convento pokračovat dál, dostanete se až k branám národního parku",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "Parque Nacional Valle Nuevo.",
+					"url": "https://maps.app.goo.gl/bMbsLfmk3L4JNCxx5",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "K parku se vydejte určitě touto cestou vedoucí téměř kolem vodopádu. Na mapě je ještě jedna cesta, která je o několik kilometrů kratší a zpočátku vypadá jako asfaltová, ale velmi rychle se mění ve velmi terénní lesní cestu. Zde je to s autem opravdu komplikované a ve finále časově náročnější. K rozdvojení cest dochází zhruba 4 km za Constanzou, zde je třeba jet vlevo a odbočit z asfaltové cesty na cestu prašnou."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2154.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2154_180abc8671.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2154.jpg",
+						"hash": "thumbnail_img_2154_180abc8671",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 9.78,
+						"sizeInBytes": 9780,
+						"url": "/uploads/thumbnail_img_2154_180abc8671.jpg"
+					},
+					"small": {
+						"name": "small_img_2154.jpg",
+						"hash": "small_img_2154_180abc8671",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 51.59,
+						"sizeInBytes": 51588,
+						"url": "/uploads/small_img_2154_180abc8671.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2154.jpg",
+						"hash": "medium_img_2154_180abc8671",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 109.4,
+						"sizeInBytes": 109400,
+						"url": "/uploads/medium_img_2154_180abc8671.jpg"
+					},
+					"large": {
+						"name": "large_img_2154.jpg",
+						"hash": "large_img_2154_180abc8671",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 180.9,
+						"sizeInBytes": 180898,
+						"url": "/uploads/large_img_2154_180abc8671.jpg"
+					}
+				},
+				"hash": "img_2154_180abc8671",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 193,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:52.024Z",
+				"updatedAt": "2026-02-17T12:56:52.024Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2152.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2152_f0de0ee870.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2152.jpg",
+						"hash": "thumbnail_img_2152_f0de0ee870",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 12.9,
+						"sizeInBytes": 12895,
+						"url": "/uploads/thumbnail_img_2152_f0de0ee870.jpg"
+					},
+					"small": {
+						"name": "small_img_2152.jpg",
+						"hash": "small_img_2152_f0de0ee870",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 67.87,
+						"sizeInBytes": 67869,
+						"url": "/uploads/small_img_2152_f0de0ee870.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2152.jpg",
+						"hash": "medium_img_2152_f0de0ee870",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 143.67,
+						"sizeInBytes": 143667,
+						"url": "/uploads/medium_img_2152_f0de0ee870.jpg"
+					},
+					"large": {
+						"name": "large_img_2152.jpg",
+						"hash": "large_img_2152_f0de0ee870",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 238.24,
+						"sizeInBytes": 238242,
+						"url": "/uploads/large_img_2152_f0de0ee870.jpg"
+					}
+				},
+				"hash": "img_2152_f0de0ee870",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 253.76,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:52.516Z",
+				"updatedAt": "2026-02-17T12:56:52.516Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2120.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2120_04108d1355.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2120.jpg",
+						"hash": "thumbnail_img_2120_04108d1355",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 11.31,
+						"sizeInBytes": 11310,
+						"url": "/uploads/thumbnail_img_2120_04108d1355.jpg"
+					},
+					"small": {
+						"name": "small_img_2120.jpg",
+						"hash": "small_img_2120_04108d1355",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 56.06,
+						"sizeInBytes": 56062,
+						"url": "/uploads/small_img_2120_04108d1355.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2120.jpg",
+						"hash": "medium_img_2120_04108d1355",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 117.48,
+						"sizeInBytes": 117483,
+						"url": "/uploads/medium_img_2120_04108d1355.jpg"
+					},
+					"large": {
+						"name": "large_img_2120.jpg",
+						"hash": "large_img_2120_04108d1355",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 192.97,
+						"sizeInBytes": 192968,
+						"url": "/uploads/large_img_2120_04108d1355.jpg"
+					}
+				},
+				"hash": "img_2120_04108d1355",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 204.6,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:52.919Z",
+				"updatedAt": "2026-02-17T12:56:52.919Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "K návštěvě národního parku je také třeba auto, nebo alespoň horské kolo. Pěšky můžete jít také, ale budete potřebovat více dní. Při vstupu do parku musíte zaplatit poplatek 150 DOP na osobu. Hned u vstupu do parku je tabule s kreslenou mapou parku se zajímavými místy. Zdaleka ne všechna místa, která jsou na mapě existují i ve skutečnosti, někdy je velmi těžké tato místa najít, protože google mapy jich většinu neukazují a v parku nejsou žádné ukazatele. Parkem prochází hlavní prašná cesta v relativně dobrém stavu, která je dlouhá 43 km."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20220118_153357_original.jpg",
+				"alternativeText": "",
+				"url": "/uploads/20220118_153357_original_453ce30263.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20220118_153357_original.jpg",
+						"hash": "thumbnail_20220118_153357_original_453ce30263",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 8.96,
+						"sizeInBytes": 8964,
+						"url": "/uploads/thumbnail_20220118_153357_original_453ce30263.jpg"
+					},
+					"small": {
+						"name": "small_20220118_153357_original.jpg",
+						"hash": "small_20220118_153357_original_453ce30263",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 45.47,
+						"sizeInBytes": 45465,
+						"url": "/uploads/small_20220118_153357_original_453ce30263.jpg"
+					},
+					"large": {
+						"name": "large_20220118_153357_original.jpg",
+						"hash": "large_20220118_153357_original_453ce30263",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 159.02,
+						"sizeInBytes": 159017,
+						"url": "/uploads/large_20220118_153357_original_453ce30263.jpg"
+					},
+					"medium": {
+						"name": "medium_20220118_153357_original.jpg",
+						"hash": "medium_20220118_153357_original_453ce30263",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 96.48,
+						"sizeInBytes": 96475,
+						"url": "/uploads/medium_20220118_153357_original_453ce30263.jpg"
+					}
+				},
+				"hash": "20220118_153357_original_453ce30263",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 168.92,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:53.244Z",
+				"updatedAt": "2026-02-17T12:56:53.244Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2182.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2182_14ad553dc7.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2182.jpg",
+						"hash": "thumbnail_img_2182_14ad553dc7",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 7.4,
+						"sizeInBytes": 7403,
+						"url": "/uploads/thumbnail_img_2182_14ad553dc7.jpg"
+					},
+					"small": {
+						"name": "small_img_2182.jpg",
+						"hash": "small_img_2182_14ad553dc7",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 41.04,
+						"sizeInBytes": 41040,
+						"url": "/uploads/small_img_2182_14ad553dc7.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2182.jpg",
+						"hash": "medium_img_2182_14ad553dc7",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 92.11,
+						"sizeInBytes": 92109,
+						"url": "/uploads/medium_img_2182_14ad553dc7.jpg"
+					},
+					"large": {
+						"name": "large_img_2182.jpg",
+						"hash": "large_img_2182_14ad553dc7",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 157.83,
+						"sizeInBytes": 157830,
+						"url": "/uploads/large_img_2182_14ad553dc7.jpg"
+					}
+				},
+				"hash": "img_2182_14ad553dc7",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 168.11,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:53.747Z",
+				"updatedAt": "2026-02-17T12:56:53.747Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2204.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2204_a4d446598e.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2204.jpg",
+						"hash": "thumbnail_img_2204_a4d446598e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 7.03,
+						"sizeInBytes": 7033,
+						"url": "/uploads/thumbnail_img_2204_a4d446598e.jpg"
+					},
+					"small": {
+						"name": "small_img_2204.jpg",
+						"hash": "small_img_2204_a4d446598e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 35.81,
+						"sizeInBytes": 35806,
+						"url": "/uploads/small_img_2204_a4d446598e.jpg"
+					},
+					"large": {
+						"name": "large_img_2204.jpg",
+						"hash": "large_img_2204_a4d446598e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 123.79,
+						"sizeInBytes": 123789,
+						"url": "/uploads/large_img_2204_a4d446598e.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2204.jpg",
+						"hash": "medium_img_2204_a4d446598e",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 75.36,
+						"sizeInBytes": 75364,
+						"url": "/uploads/medium_img_2204_a4d446598e.jpg"
+					}
+				},
+				"hash": "img_2204_a4d446598e",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 130.85,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:54.148Z",
+				"updatedAt": "2026-02-17T12:56:54.148Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Většina návštěvníků ale jede hlavně k monumentu"
+				},
+				{
+					"type": "text",
+					"text": "Las Pyramides de Valle Nuevo,",
+					"url": "https://maps.app.goo.gl/US3VceKrNGW3CL927",
+					"bold": true
+				},
+				{
+					"type": "text",
+					"text": "který značí geografický střed Dominikánské republiky. Tato cesta je dlouhá 25 km od začátku parku. Cestou můžete navštívit malý kostelík, vylézt na nějaký z okolních kopců a užít si výhled do okolí, nebo se projít horskou přírodou. Z hlavní cesty odbočuje plno pěších cest, ale není známo kam vedou. Mapa je v tomto případě bohužel prázdná. V parku je také možné kempovat. Jsou zde vyznačená místa k tomu určená. Na horu Alto Bandera, která jako jedna z mála na mapě značená je, se pravděpodobně nedostanete. Cesta tam sice vede, ale jedná se o vojenský prostor a ke vstupu na horu je třeba zvláštní povolení, o které musíte žádat v Santo Domingu. Celý park se nachází v poměrně vysoké nadmořské výšce a tomu odpovídají i teploty a flora. Pohybovat se bude většinou ve výšce 2000 – 2500 m.n.m. Horská krajina spíš připomíná evropské lesy a teploty teplejší podzimní dny. Takže mikiny a dlouhé kalhoty mohou být i přes den užitečné. V celém parku téměř nenajdete známky civilizace (kromě vojenské základny). Nečekejte žádné stánky, žádné prodejce, žádné restaurace, nic. Jídlo a pití na celý den si vezměte s sebou. Jen na začátku parku je vila nabízející ubytování v horských chatách. To je vše."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2181.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2181_478fa8f8bb.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2181.jpg",
+						"hash": "thumbnail_img_2181_478fa8f8bb",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 10.29,
+						"sizeInBytes": 10293,
+						"url": "/uploads/thumbnail_img_2181_478fa8f8bb.jpg"
+					},
+					"small": {
+						"name": "small_img_2181.jpg",
+						"hash": "small_img_2181_478fa8f8bb",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 56.53,
+						"sizeInBytes": 56531,
+						"url": "/uploads/small_img_2181_478fa8f8bb.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2181.jpg",
+						"hash": "medium_img_2181_478fa8f8bb",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 126.09,
+						"sizeInBytes": 126094,
+						"url": "/uploads/medium_img_2181_478fa8f8bb.jpg"
+					},
+					"large": {
+						"name": "large_img_2181.jpg",
+						"hash": "large_img_2181_478fa8f8bb",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 216.15,
+						"sizeInBytes": 216149,
+						"url": "/uploads/large_img_2181_478fa8f8bb.jpg"
+					}
+				},
+				"hash": "img_2181_478fa8f8bb",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 232.04,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:54.627Z",
+				"updatedAt": "2026-02-17T12:56:54.627Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20220118_142522_original.jpg",
+				"alternativeText": "",
+				"url": "/uploads/20220118_142522_original_14376183c7.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20220118_142522_original.jpg",
+						"hash": "thumbnail_20220118_142522_original_14376183c7",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 8.13,
+						"sizeInBytes": 8134,
+						"url": "/uploads/thumbnail_20220118_142522_original_14376183c7.jpg"
+					},
+					"small": {
+						"name": "small_20220118_142522_original.jpg",
+						"hash": "small_20220118_142522_original_14376183c7",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 39.93,
+						"sizeInBytes": 39929,
+						"url": "/uploads/small_20220118_142522_original_14376183c7.jpg"
+					},
+					"medium": {
+						"name": "medium_20220118_142522_original.jpg",
+						"hash": "medium_20220118_142522_original_14376183c7",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 82.88,
+						"sizeInBytes": 82882,
+						"url": "/uploads/medium_20220118_142522_original_14376183c7.jpg"
+					},
+					"large": {
+						"name": "large_20220118_142522_original.jpg",
+						"hash": "large_20220118_142522_original_14376183c7",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 135.16,
+						"sizeInBytes": 135161,
+						"url": "/uploads/large_20220118_142522_original_14376183c7.jpg"
+					}
+				},
+				"hash": "20220118_142522_original_14376183c7",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 142.94,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:55.056Z",
+				"updatedAt": "2026-02-17T12:56:55.056Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "img_2192.jpg",
+				"alternativeText": "",
+				"url": "/uploads/img_2192_3e4604b6c9.jpg",
+				"width": 1020,
+				"height": 765,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_img_2192.jpg",
+						"hash": "thumbnail_img_2192_3e4604b6c9",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 208,
+						"height": 156,
+						"size": 8.23,
+						"sizeInBytes": 8234,
+						"url": "/uploads/thumbnail_img_2192_3e4604b6c9.jpg"
+					},
+					"small": {
+						"name": "small_img_2192.jpg",
+						"hash": "small_img_2192_3e4604b6c9",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 500,
+						"height": 375,
+						"size": 43.44,
+						"sizeInBytes": 43438,
+						"url": "/uploads/small_img_2192_3e4604b6c9.jpg"
+					},
+					"medium": {
+						"name": "medium_img_2192.jpg",
+						"hash": "medium_img_2192_3e4604b6c9",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 563,
+						"size": 95.61,
+						"sizeInBytes": 95612,
+						"url": "/uploads/medium_img_2192_3e4604b6c9.jpg"
+					},
+					"large": {
+						"name": "large_img_2192.jpg",
+						"hash": "large_img_2192_3e4604b6c9",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 1000,
+						"height": 750,
+						"size": 162.41,
+						"sizeInBytes": 162414,
+						"url": "/uploads/large_img_2192_3e4604b6c9.jpg"
+					}
+				},
+				"hash": "img_2192_3e4604b6c9",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 173.8,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:55.459Z",
+				"updatedAt": "2026-02-17T12:56:55.459Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Také natankujte dostatek paliva, protože mimo Constanzu už žádné benzínky nejsou a spotřeba v kopcích na nezpevněných cestách rapidně stoupá."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"image": {
+				"name": "20220118_091510_original.jpg",
+				"alternativeText": "",
+				"url": "/uploads/20220118_091510_original_ad37b287ac.jpg",
+				"width": 765,
+				"height": 1020,
+				"formats": {
+					"thumbnail": {
+						"name": "thumbnail_20220118_091510_original.jpg",
+						"hash": "thumbnail_20220118_091510_original_ad37b287ac",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 117,
+						"height": 156,
+						"size": 5.4,
+						"sizeInBytes": 5398,
+						"url": "/uploads/thumbnail_20220118_091510_original_ad37b287ac.jpg"
+					},
+					"small": {
+						"name": "small_20220118_091510_original.jpg",
+						"hash": "small_20220118_091510_original_ad37b287ac",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 375,
+						"height": 500,
+						"size": 45.27,
+						"sizeInBytes": 45272,
+						"url": "/uploads/small_20220118_091510_original_ad37b287ac.jpg"
+					},
+					"medium": {
+						"name": "medium_20220118_091510_original.jpg",
+						"hash": "medium_20220118_091510_original_ad37b287ac",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 563,
+						"height": 750,
+						"size": 99.89,
+						"sizeInBytes": 99893,
+						"url": "/uploads/medium_20220118_091510_original_ad37b287ac.jpg"
+					},
+					"large": {
+						"name": "large_20220118_091510_original.jpg",
+						"hash": "large_20220118_091510_original_ad37b287ac",
+						"ext": ".jpg",
+						"mime": "image/jpeg",
+						"path": null,
+						"width": 750,
+						"height": 1000,
+						"size": 171.03,
+						"sizeInBytes": 171029,
+						"url": "/uploads/large_20220118_091510_original_ad37b287ac.jpg"
+					}
+				},
+				"hash": "20220118_091510_original_ad37b287ac",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"size": 183.08,
+				"provider": "local",
+				"createdAt": "2026-02-17T12:56:55.934Z",
+				"updatedAt": "2026-02-17T12:56:55.934Z"
+			},
+			"children": [
+				{
+					"type": "text",
+					"text": ""
+				}
+			]
+		}
+	],
+	"createdAt": "2026-02-17T12:56:55.964Z",
+	"updatedAt": "2026-02-17T12:56:55.964Z",
+	"publishedAt": "2026-02-17T12:56:55.969Z",
+	"continent": "caribbean",
+	"contentLang": "cs",
+	"flagEmoji": "🇩🇴",
+	"timezone": "AST (UTC-4)",
+	"languages": ["Spanish"],
+	"currencyCode": "DOP",
+	"currencyName": "Dominican Peso",
+	"currencySymbol": "RD$",
+	"budgetPerDayBudget": 35,
+	"budgetPerDayMidRange": 80,
+	"budgetPerDayLuxury": 200,
+	"bestTimeToVisit": "December to April",
+	"visaInfo": "Czech citizens: tourist card on arrival",
+	"destinationType": "region",
+	"cover": null
 }

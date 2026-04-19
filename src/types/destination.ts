@@ -1,68 +1,68 @@
-import type { SeoMetadata, Image } from './seo'
+import type { Image, SeoMetadata } from "./seo";
 
 /**
  * Continent classification
  */
 export type Continent =
-  | 'europe'
-  | 'asia'
-  | 'north-america'
-  | 'south-america'
-  | 'africa'
-  | 'oceania'
-  | 'caribbean'
+	| "europe"
+	| "asia"
+	| "north-america"
+	| "south-america"
+	| "africa"
+	| "oceania"
+	| "caribbean";
 
 /**
  * Destination type classification
  */
-export type DestinationType = 'country' | 'region' | 'city' | 'microstate'
+export type DestinationType = "country" | "region" | "city" | "microstate";
 
 /**
  * Currency and budget information
  */
 export interface Currency {
-  code: string
-  name: string
-  symbol: string
-  exchangeRateToUsd: number
-  budgetPerDay: {
-    budget: number
-    midRange: number
-    luxury: number
-  }
+	code: string;
+	name: string;
+	symbol: string;
+	exchangeRateToUsd: number;
+	budgetPerDay: {
+		budget: number;
+		midRange: number;
+		luxury: number;
+	};
 }
 
 /**
  * Destination (Country/Region/City)
  */
 export interface Destination {
-  // Identity
-  id: string
-  slug: string
-  name: string
+	// Identity
+	id: string;
+	slug: string;
+	name: string;
 
-  // Classification
-  type: DestinationType
-  parentId?: string
-  continent: Continent
+	// Classification
+	type: DestinationType;
+	parentId?: string;
+	continent: Continent;
 
-  // Display
-  heroImage?: Image
-  flagEmoji?: string
+	// Display
+	heroImage?: Image;
+	flagEmoji?: string;
 
-  // Practical info
-  currency: Currency
-  languages: string[]
-  timezone?: string
-  visaInfo?: string
-  bestTimeToVisit?: string
+	// Practical info
+	currency: Currency;
+	languages: string[];
+	timezone?: string;
+	visaInfo?: string;
+	bestTimeToVisit?: string;
 
-  // SEO
-  seo: SeoMetadata
+	// SEO
+	seo: SeoMetadata;
 
-  /** HTML content (from Strapi intro blocks) – for destination detail page */
-  introHtml?: string
+	/** HTML content (from Strapi intro blocks) – for destination detail page */
+	introHtml?: string;
 
-  /** Content language */
-  locale?: 'cs' | 'en'
+	/** Content language */
+	locale?: "cs" | "en";
 }

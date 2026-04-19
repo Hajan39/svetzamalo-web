@@ -1,92 +1,87 @@
 {
-  "title": "Slovinsko – praktický průvodce pro cestovatele",
-  "slug": "pruvodce-slovinsko",
-  "excerpt": "Krásná země která má rozhodně co nabídnout. Najdete zde vysoké hory, a krásné horské scenérie, vodopády, křišťálově čistá ledovcová jezera, krápníkové jeskyně, moře a přímořská letoviska a v…",
-  "articleType": "destination-guide",
-  "contentLang": "cs",
-  "tags": [
-    "Evropa",
-    "Slovinsko",
-    "cestování",
-    "budget"
-  ],
-  "destinationSlug": "slovinsko",
-  "publish": false,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Krásná země která má rozhodně co nabídnout. Najdete zde vysoké hory, a krásné horské scenérie, vodopády, křišťálově čistá ledovcová jezera, krápníkové jeskyně, moře a přímořská letoviska a v neposlední řadě hezká města. Co navštívit Ve Slovinsku se nudit nebudete."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Kdy jet"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Nejlepší doba pro návštěvu: květen až září."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Jazyk a komunikace"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Místní jazyky: slovinština."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobný průvodce"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
-        },
-        {
-          "type": "text",
-          "text": "kompletním průvodci – Slovinsko",
-          "url": "/destinations/guide/slovinsko"
-        },
-        {
-          "type": "text",
-          "text": "."
-        }
-      ]
-    }
-  ]
+	"title": "Slovinsko – praktický průvodce pro cestovatele",
+	"slug": "pruvodce-slovinsko",
+	"excerpt": "Krásná země která má rozhodně co nabídnout. Najdete zde vysoké hory, a krásné horské scenérie, vodopády, křišťálově čistá ledovcová jezera, krápníkové jeskyně, moře a přímořská letoviska a v…",
+	"articleType": "destination-guide",
+	"contentLang": "cs",
+	"tags": ["Evropa", "Slovinsko", "cestování", "budget"],
+	"destinationSlug": "slovinsko",
+	"publish": false,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Krásná země která má rozhodně co nabídnout. Najdete zde vysoké hory, a krásné horské scenérie, vodopády, křišťálově čistá ledovcová jezera, krápníkové jeskyně, moře a přímořská letoviska a v neposlední řadě hezká města. Co navštívit Ve Slovinsku se nudit nebudete."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Kdy jet"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Nejlepší doba pro návštěvu: květen až září."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Jazyk a komunikace"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Místní jazyky: slovinština."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobný průvodce"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+				},
+				{
+					"type": "text",
+					"text": "kompletním průvodci – Slovinsko",
+					"url": "/destinations/guide/slovinsko"
+				},
+				{
+					"type": "text",
+					"text": "."
+				}
+			]
+		}
+	]
 }

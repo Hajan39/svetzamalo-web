@@ -1,92 +1,92 @@
 {
-  "title": "Dominikána jih (Santo Domingo, Boca Chica) – praktický průvodce pro cestovatele",
-  "slug": "pruvodce-dominikana-jih-santo-domingo-boca-chica",
-  "excerpt": "Santo Domingo Santo domingo je hlavním městem Dominikánské republiky. Z cestovatelského hlediska je to město velmi zajímavé. Pro rekreanty nejspíš ztráta času, nebohé vhodné jen jako jednodenní výlet…",
-  "articleType": "destination-guide",
-  "contentLang": "cs",
-  "tags": [
-    "Karibik",
-    "Dominikána jih (Santo Domingo, Boca Chica)",
-    "cestování",
-    "budget"
-  ],
-  "destinationSlug": "dominikana-jih-santo-domingo-boca-chica",
-  "publish": false,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Santo Domingo Santo domingo je hlavním městem Dominikánské republiky. Z cestovatelského hlediska je to město velmi zajímavé. Pro rekreanty nejspíš ztráta času, nebohé vhodné jen jako jednodenní výlet do starého centra."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Kdy jet"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Nejlepší doba pro návštěvu: prosinec až duben."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Jazyk a komunikace"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Místní jazyky: španělština. Základy španělštiny se hodí, angličtina funguje v turistických zónách."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobný průvodce"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
-        },
-        {
-          "type": "text",
-          "text": "kompletním průvodci – Dominikána jih (Santo Domingo, Boca Chica)",
-          "url": "/destinations/guide/dominikana-jih-santo-domingo-boca-chica"
-        },
-        {
-          "type": "text",
-          "text": "."
-        }
-      ]
-    }
-  ]
+	"title": "Dominikána jih (Santo Domingo, Boca Chica) – praktický průvodce pro cestovatele",
+	"slug": "pruvodce-dominikana-jih-santo-domingo-boca-chica",
+	"excerpt": "Santo Domingo Santo domingo je hlavním městem Dominikánské republiky. Z cestovatelského hlediska je to město velmi zajímavé. Pro rekreanty nejspíš ztráta času, nebohé vhodné jen jako jednodenní výlet…",
+	"articleType": "destination-guide",
+	"contentLang": "cs",
+	"tags": [
+		"Karibik",
+		"Dominikána jih (Santo Domingo, Boca Chica)",
+		"cestování",
+		"budget"
+	],
+	"destinationSlug": "dominikana-jih-santo-domingo-boca-chica",
+	"publish": false,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Santo Domingo Santo domingo je hlavním městem Dominikánské republiky. Z cestovatelského hlediska je to město velmi zajímavé. Pro rekreanty nejspíš ztráta času, nebohé vhodné jen jako jednodenní výlet do starého centra."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Kdy jet"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Nejlepší doba pro návštěvu: prosinec až duben."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Jazyk a komunikace"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Místní jazyky: španělština. Základy španělštiny se hodí, angličtina funguje v turistických zónách."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobný průvodce"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+				},
+				{
+					"type": "text",
+					"text": "kompletním průvodci – Dominikána jih (Santo Domingo, Boca Chica)",
+					"url": "/destinations/guide/dominikana-jih-santo-domingo-boca-chica"
+				},
+				{
+					"type": "text",
+					"text": "."
+				}
+			]
+		}
+	]
 }

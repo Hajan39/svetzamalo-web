@@ -1,251 +1,246 @@
 {
-  "title": "Kam na jarni prazdniny? 4 tipy na cesty misto lyzi",
-  "slug": "kam-na-jarni-prazdniny",
-  "excerpt": "Jarni prazdniny jinak - 4 destinace kam vyrazit misto lyzi. Slunce, more a nizke ceny.",
-  "articleType": "list",
-  "contentLang": "cs",
-  "tags": [
-    "jarni prazdniny",
-    "kam jet",
-    "jaro",
-    "tipy"
-  ],
-  "destinationSlug": null,
-  "publish": true,
-  "readingTime": 3,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Jarni prazdniny nemuseji byt jen lyze v Krkonosich. Za podobny budget se da vyrazit do tepla, k mori, nebo aspon do zajimaveho mesta. Tady je inspirace."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "1. 🇪🇸 Španělsko &#8211; Fuerteventura"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Letiste z Prahy (4h), teplota 22 C, vetrem osehane plaze. Idealni na aktivni dovolenou."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Denni budget: od 45 USD"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-spanelsko-fuerteventura",
-          "children": [
-            {
-              "type": "text",
-              "text": "Prectisi cely pruvodce: Španělsko &#8211; Fuerteventura"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "2. 🇮🇹 Řím"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "V breznu/dubnu je Rim krasny - kvetouci zahrady, malo turistu, 18 C. Lety od 1500 Kc zpetne."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Denni budget: od 60 USD"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-rim",
-          "children": [
-            {
-              "type": "text",
-              "text": "Prectisi cely pruvodce: Řím"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "3. 🇸🇮 Slovinsko"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "5h autem, jaro klape na dvere, Lublan je krasna a Bled je prazdny. Idealni na road trip."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Denni budget: od 40 USD"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-slovinsko",
-          "children": [
-            {
-              "type": "text",
-              "text": "Prectisi cely pruvodce: Slovinsko"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "4. 🇲🇺 Mauricius"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Konec leto na jizni polokouli, pred monzunem. Plaze, snorhlovani, ceny mimo sezonu."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Denni budget: od 50 USD"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-mauricius",
-          "children": [
-            {
-              "type": "text",
-              "text": "Prectisi cely pruvodce: Mauricius"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "Jak usetrit na jarnich prazdninach"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Rezrvuj 4-6 tydnu predem"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Letis s prirucnim zavazadlem = usporis 500-1500 Kc"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Ubytko pres Booking - filtruj 'Free cancellation' pro jistotu"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "Mimo skolni prazdniny je vsude levneji - pokud muzes, posun o tyden"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"title": "Kam na jarni prazdniny? 4 tipy na cesty misto lyzi",
+	"slug": "kam-na-jarni-prazdniny",
+	"excerpt": "Jarni prazdniny jinak - 4 destinace kam vyrazit misto lyzi. Slunce, more a nizke ceny.",
+	"articleType": "list",
+	"contentLang": "cs",
+	"tags": ["jarni prazdniny", "kam jet", "jaro", "tipy"],
+	"destinationSlug": null,
+	"publish": true,
+	"readingTime": 3,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Jarni prazdniny nemuseji byt jen lyze v Krkonosich. Za podobny budget se da vyrazit do tepla, k mori, nebo aspon do zajimaveho mesta. Tady je inspirace."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "1. 🇪🇸 Španělsko &#8211; Fuerteventura"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Letiste z Prahy (4h), teplota 22 C, vetrem osehane plaze. Idealni na aktivni dovolenou."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Denni budget: od 45 USD"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-spanelsko-fuerteventura",
+					"children": [
+						{
+							"type": "text",
+							"text": "Prectisi cely pruvodce: Španělsko &#8211; Fuerteventura"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "2. 🇮🇹 Řím"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "V breznu/dubnu je Rim krasny - kvetouci zahrady, malo turistu, 18 C. Lety od 1500 Kc zpetne."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Denni budget: od 60 USD"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-rim",
+					"children": [
+						{
+							"type": "text",
+							"text": "Prectisi cely pruvodce: Řím"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "3. 🇸🇮 Slovinsko"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "5h autem, jaro klape na dvere, Lublan je krasna a Bled je prazdny. Idealni na road trip."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Denni budget: od 40 USD"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-slovinsko",
+					"children": [
+						{
+							"type": "text",
+							"text": "Prectisi cely pruvodce: Slovinsko"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "4. 🇲🇺 Mauricius"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Konec leto na jizni polokouli, pred monzunem. Plaze, snorhlovani, ceny mimo sezonu."
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Denni budget: od 50 USD"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-mauricius",
+					"children": [
+						{
+							"type": "text",
+							"text": "Prectisi cely pruvodce: Mauricius"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "Jak usetrit na jarnich prazdninach"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Rezrvuj 4-6 tydnu predem"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Letis s prirucnim zavazadlem = usporis 500-1500 Kc"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Ubytko pres Booking - filtruj 'Free cancellation' pro jistotu"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "Mimo skolni prazdniny je vsude levneji - pokud muzes, posun o tyden"
+						}
+					]
+				}
+			]
+		}
+	]
 }

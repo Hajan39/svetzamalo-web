@@ -1,401 +1,395 @@
 {
-  "title": "5 evropských měst, kde se dá přežít za málo",
-  "slug": "top-5-evropskych-mest",
-  "excerpt": "Města v Evropě bývají drahá, ale ne všechna. A i ta dražší mají triky, jak ušetřit. Tady je 5 měst, kam se vyplatí jet - a kde nemusíte jíst jen rohlíky ze s...",
-  "articleType": "list",
-  "contentLang": "cs",
-  "tags": [
-    "Evropa",
-    "města",
-    "top 5",
-    "budget",
-    "městské výlety"
-  ],
-  "publish": true,
-  "readingTime": 4,
-  "content": [
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Města v Evropě bývají drahá, ale ne všechna. A i ta dražší mají triky, jak ušetřit. Tady je 5 měst, kam se vyplatí jet - a kde nemusíte jíst jen rohlíky ze sáčku."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "1. Berlín"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Částečně moderní a zároveň historické hlavní město Německa natolik prosáklé nedávnou hrůznou dobou. Většina berlínských památek a zajímavostí upozorňuje právě na dění 20. století."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "💰 Budget: od 1150 Kč/den (střední: 2300 Kč/den)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "📅 Nejlepší doba: květen až září"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "🛂 Víza: EU citizens: free movement"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-berlin",
-          "children": [
-            {
-              "type": "text",
-              "text": "Celý průvodce: Berlín"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "2. Řím"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Řím patří mezi nejvíce navštěvovaná města na světě. Není se čemu divit."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "💰 Budget: od 1380 Kč/den (střední: 2760 Kč/den)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "📅 Nejlepší doba: duben až červen, září až říjen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "🛂 Víza: EU citizens: free movement"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-rim",
-          "children": [
-            {
-              "type": "text",
-              "text": "Celý průvodce: Řím"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "3. Stockholm"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Stockholm je poklidným přírodním městem. I přes to, že se jedná o hlavní město, působí Stockholm spíš jako přímořské městečko, nebo vesnice (v některých částech)."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "💰 Budget: od 1610 Kč/den (střední: 2990 Kč/den)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "📅 Nejlepší doba: květen až září"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "🛂 Víza: EU citizens: free movement"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-stockholm",
-          "children": [
-            {
-              "type": "text",
-              "text": "Celý průvodce: Stockholm"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "4. Paříž"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Jedna z nejromantičtějších destinací, které si můžete vybrat na dovolenou s partnerem/partnerkou. Hlavní město Francie ."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "💰 Budget: od 1610 Kč/den (střední: 3220 Kč/den)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "📅 Nejlepší doba: duben až červen, září až říjen"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "🛂 Víza: EU citizens: free movement"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-pariz",
-          "children": [
-            {
-              "type": "text",
-              "text": "Celý průvodce: Paříž"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "children": [
-        {
-          "type": "text",
-          "text": "5. Oslo"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Norské Oslo nepatří k těm nejnavštěvovanějším místům v zemi, pokud sem ale přiletíte, můžete zde den, nebo dva klidně strávit."
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "format": "unordered",
-      "children": [
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "💰 Budget: od 1840 Kč/den (střední: 3450 Kč/den)"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "📅 Nejlepší doba: květen až září"
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "children": [
-            {
-              "type": "text",
-              "text": "🛂 Víza: EU citizens: free movement"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "→ "
-        },
-        {
-          "type": "link",
-          "url": "/destinations/guide/pruvodce-oslo",
-          "children": [
-            {
-              "type": "text",
-              "text": "Celý průvodce: Oslo"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "text": "✈️ Kam dál?"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "text": "Každá z těchto destinací má svůj kompletní průvodce s praktickými tipy na dopravu, jídlo a ubytování. Klikni na destinaci, která tě zaujala, a zjisti víc."
-        }
-      ]
-    }
-  ]
+	"title": "5 evropských měst, kde se dá přežít za málo",
+	"slug": "top-5-evropskych-mest",
+	"excerpt": "Města v Evropě bývají drahá, ale ne všechna. A i ta dražší mají triky, jak ušetřit. Tady je 5 měst, kam se vyplatí jet - a kde nemusíte jíst jen rohlíky ze s...",
+	"articleType": "list",
+	"contentLang": "cs",
+	"tags": ["Evropa", "města", "top 5", "budget", "městské výlety"],
+	"publish": true,
+	"readingTime": 4,
+	"content": [
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Města v Evropě bývají drahá, ale ne všechna. A i ta dražší mají triky, jak ušetřit. Tady je 5 měst, kam se vyplatí jet - a kde nemusíte jíst jen rohlíky ze sáčku."
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "1. Berlín"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Částečně moderní a zároveň historické hlavní město Německa natolik prosáklé nedávnou hrůznou dobou. Většina berlínských památek a zajímavostí upozorňuje právě na dění 20. století."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "💰 Budget: od 1150 Kč/den (střední: 2300 Kč/den)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "📅 Nejlepší doba: květen až září"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "🛂 Víza: EU citizens: free movement"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-berlin",
+					"children": [
+						{
+							"type": "text",
+							"text": "Celý průvodce: Berlín"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "2. Řím"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Řím patří mezi nejvíce navštěvovaná města na světě. Není se čemu divit."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "💰 Budget: od 1380 Kč/den (střední: 2760 Kč/den)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "📅 Nejlepší doba: duben až červen, září až říjen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "🛂 Víza: EU citizens: free movement"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-rim",
+					"children": [
+						{
+							"type": "text",
+							"text": "Celý průvodce: Řím"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "3. Stockholm"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Stockholm je poklidným přírodním městem. I přes to, že se jedná o hlavní město, působí Stockholm spíš jako přímořské městečko, nebo vesnice (v některých částech)."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "💰 Budget: od 1610 Kč/den (střední: 2990 Kč/den)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "📅 Nejlepší doba: květen až září"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "🛂 Víza: EU citizens: free movement"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-stockholm",
+					"children": [
+						{
+							"type": "text",
+							"text": "Celý průvodce: Stockholm"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "4. Paříž"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Jedna z nejromantičtějších destinací, které si můžete vybrat na dovolenou s partnerem/partnerkou. Hlavní město Francie ."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "💰 Budget: od 1610 Kč/den (střední: 3220 Kč/den)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "📅 Nejlepší doba: duben až červen, září až říjen"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "🛂 Víza: EU citizens: free movement"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-pariz",
+					"children": [
+						{
+							"type": "text",
+							"text": "Celý průvodce: Paříž"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 3,
+			"children": [
+				{
+					"type": "text",
+					"text": "5. Oslo"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Norské Oslo nepatří k těm nejnavštěvovanějším místům v zemi, pokud sem ale přiletíte, můžete zde den, nebo dva klidně strávit."
+				}
+			]
+		},
+		{
+			"type": "list",
+			"format": "unordered",
+			"children": [
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "💰 Budget: od 1840 Kč/den (střední: 3450 Kč/den)"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "📅 Nejlepší doba: květen až září"
+						}
+					]
+				},
+				{
+					"type": "list-item",
+					"children": [
+						{
+							"type": "text",
+							"text": "🛂 Víza: EU citizens: free movement"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "→ "
+				},
+				{
+					"type": "link",
+					"url": "/destinations/guide/pruvodce-oslo",
+					"children": [
+						{
+							"type": "text",
+							"text": "Celý průvodce: Oslo"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "heading",
+			"level": 2,
+			"children": [
+				{
+					"type": "text",
+					"text": "✈️ Kam dál?"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"children": [
+				{
+					"type": "text",
+					"text": "Každá z těchto destinací má svůj kompletní průvodce s praktickými tipy na dopravu, jídlo a ubytování. Klikni na destinaci, která tě zaujala, a zjisti víc."
+				}
+			]
+		}
+	]
 }
