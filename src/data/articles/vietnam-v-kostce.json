@@ -1,0 +1,262 @@
+{
+  "title": "Vietnam v kostce: levná exotika na dosah",
+  "slug": "vietnam-v-kostce",
+  "excerpt": "Vysoké hory a hustá džungle, rýžová políčka a chudí lidé žijící si svůj prostý život.",
+  "articleType": "other",
+  "contentLang": "cs",
+  "tags": [
+    "Asie",
+    "Vietnam",
+    "cestování",
+    "budget",
+    "v kostce"
+  ],
+  "destinationSlug": "vietnam",
+  "publish": true,
+  "readingTime": 2,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Vysoké hory a hustá džungle, rýžová políčka a chudí lidé žijící si svůj prostý život. Starobylá města, buddhistické chrámy, ale i všudypřítomné motorky i moderní velkoměsta, luxusní vozy a mohutné moderní stavby."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "🎯 To nejdůležitější v bodech"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Denní budget kolem 460 Kč – jídlo, ubytko, doprava. Dá se tu žít za směšné peníze."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Víza na letišti – žádné předem vyřizování."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nejlepší doba k návštěvě: únor až duben, říjen až prosinec."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Byl by tedy holý nesmysl ubytovat se jen na jednom místě (například v Danangu u pláže)."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Na návštěvu této země si vyčleňte ideálně alespoň 3 týdny, Vietnam je veliký a vzdálenosti mezi zajímavými místy nemalé."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "I cestovatel začátečník může bez problémů objevovat krásy této země jelikož je zde bezpečno (až na silniční provoz), velice levno a snadno se zde lze přepravovat."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "📋 Praktické info"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Měna: vietnamský dong (VND)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Jazyky: vietnamština"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Časové pásmo: ICT (UTC+7)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Střední budget: ~1035 Kč/den"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "📖 Chceš vědět víc?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Přečti si "
+        },
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-vietnam",
+          "children": [
+            {
+              "type": "text",
+              "text": "kompletní průvodce – Vietnam"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " – najdeš tam detaily o dopravě, jídle, ubytování a konkrétních místech."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "🗺️ Mohlo by tě zajímat"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "→ "
+        },
+        {
+          "type": "link",
+          "url": "/destinations/bali",
+          "children": [
+            {
+              "type": "text",
+              "text": "Bali"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " – budget ~575 Kč/den"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "→ "
+        },
+        {
+          "type": "link",
+          "url": "/destinations/gili-trawangan-gili-meno-a-gili-air",
+          "children": [
+            {
+              "type": "text",
+              "text": "Gili Trawangan, Gili Meno a Gili Air"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " – budget ~690 Kč/den"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "→ "
+        },
+        {
+          "type": "link",
+          "url": "/destinations/jizni-thajsko",
+          "children": [
+            {
+              "type": "text",
+              "text": "Jižní Thajsko"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " – budget ~575 Kč/den"
+        }
+      ]
+    }
+  ]
+}

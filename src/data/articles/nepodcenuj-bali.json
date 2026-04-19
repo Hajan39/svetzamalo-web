@@ -1,0 +1,213 @@
+{
+  "title": "7 veci, ktere nepodcenuj na Bali",
+  "slug": "nepodcenuj-bali",
+  "excerpt": "Jedete do destinace Bali? Tady je 7 veci, co lide nejcasteji podceni.",
+  "articleType": "practical-info",
+  "contentLang": "cs",
+  "tags": [
+    "Bali",
+    "tipy",
+    "varovani",
+    "nepodcenuj",
+    "prakticke info"
+  ],
+  "destinationSlug": "bali",
+  "publish": true,
+  "readingTime": 3,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Jedete do destinace Bali a chcete se vyhnout neprijemnym prekvapenim? Tady je 7 veci, ktere lide nejcasteji podceni - a jak se na ne pripravit."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "! Doprava je chaos"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Bez skutru jste ztraceni. Ridite vlevo, pozor na psy a diry v silnici. V Kuteradsi pouzijte Grab."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "! Opice kradou vse"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "V Opici lese v Ubudu - zadne jidlo, zadne leskle predmety. Opice jsou rychlejsi nez vy."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "! Voda z kohoutku = prujmovka"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Pijte jen balenou vodu. I zuby si cistete balenou vodou, hlavne prvni dny."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "! Chramy vyzaduji sarung"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Bez tradiciho satku kolem pasu vas dovnitr nepusti. Nekte ho pujci, jinde si ho musite koupit."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "! Turisticke ceny vs. lokalni ceny"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Cena pro turistu byva 2-5x vyssi. Smlouvejte. Pouzivejte Grab misto taxi na ulici."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "! Slunce pali jinak"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Rovnik = silny UV index. Opalovaci krem SPF 50 je nutnost, i kdyz je zatazeno."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "! Padaky na plazich"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Vsude vam budou neco nabizet - masaze, suveniry, vylet. Naucte se rikat 'no, thank you' s usmevem."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Pripraveni?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "-> "
+        },
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-bali",
+          "children": [
+            {
+              "type": "text",
+              "text": "Kompletni pruvodce: Bali"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " - vse co potrebujete vedet."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "-> "
+        },
+        {
+          "type": "link",
+          "url": "/articles/chyby-ktere-stoji-penize",
+          "children": [
+            {
+              "type": "text",
+              "text": "8 chyb, ktere stoji penize"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

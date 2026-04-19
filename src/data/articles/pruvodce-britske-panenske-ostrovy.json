@@ -1,0 +1,92 @@
+{
+  "title": "Britské Panenské Ostrovy – praktický průvodce pro cestovatele",
+  "slug": "pruvodce-britske-panenske-ostrovy",
+  "excerpt": "Britské Panenské ostrovy jsou takovým malým zapomenutým tropickým rájem Karibiku. Souostroví více než 50 menších ostrovů hornaté povahy přináší tu pravou relaxaci v klidu a v přírodě. Nenaleznete zde…",
+  "articleType": "destination-guide",
+  "contentLang": "cs",
+  "tags": [
+    "Karibik",
+    "Britské Panenské Ostrovy",
+    "cestování",
+    "budget"
+  ],
+  "destinationSlug": "britske-panenske-ostrovy",
+  "publish": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Britské Panenské ostrovy jsou takovým malým zapomenutým tropickým rájem Karibiku. Souostroví více než 50 menších ostrovů hornaté povahy přináší tu pravou relaxaci v klidu a v přírodě. Nenaleznete zde velké hotely, přeplněné pláže, ani davy turistů."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Kdy jet"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nejlepší doba pro návštěvu: prosinec až duben."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Jazyk a komunikace"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Místní jazyky: angličtina. S angličtinou se v turistických oblastech domluvíte."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobný průvodce"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+        },
+        {
+          "type": "text",
+          "text": "kompletním průvodci – Britské Panenské Ostrovy",
+          "url": "/destinations/guide/britske-panenske-ostrovy"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

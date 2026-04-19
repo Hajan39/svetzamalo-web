@@ -1,0 +1,3319 @@
+{
+  "id": 925,
+  "documentId": "akseqo09j0mbmk75wtioiopr",
+  "name": "Singapore",
+  "slug": "singapore",
+  "intro": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Singapore is a small state in Southeast Asia located on the Malay Peninsula. However, in comparison to other Southeast Asian countries, it is clean, civilized, and modern. It is known primarily for its laws and strict rules. As a result, Singapore is very safe and ranks among the cleanest Asian cities/states. In addition to the luxurious and modern city center with skyscrapers, you can also find traditional neighborhoods, amusement parks, countless tourist attractions, beaches, and even jungles."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "General Information"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "The majority of Singapore’s territory is occupied by its capital city – Singapore. Only 5% of the original tropical rainforest remains, but there is still some nature left to explore in Singapore. However, most tourists come here for the city center and amusement parks."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0766-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0766_1020x765_2733a1e207.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0766-1020x765.jpg",
+            "hash": "thumbnail_img_0766_1020x765_2733a1e207",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 10.49,
+            "sizeInBytes": 10486,
+            "url": "/uploads/thumbnail_img_0766_1020x765_2733a1e207.jpg"
+          },
+          "small": {
+            "name": "small_img_0766-1020x765.jpg",
+            "hash": "small_img_0766_1020x765_2733a1e207",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 55.02,
+            "sizeInBytes": 55023,
+            "url": "/uploads/small_img_0766_1020x765_2733a1e207.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0766-1020x765.jpg",
+            "hash": "medium_img_0766_1020x765_2733a1e207",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 116.15,
+            "sizeInBytes": 116151,
+            "url": "/uploads/medium_img_0766_1020x765_2733a1e207.jpg"
+          },
+          "large": {
+            "name": "large_img_0766-1020x765.jpg",
+            "hash": "large_img_0766_1020x765_2733a1e207",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 192.92,
+            "sizeInBytes": 192919,
+            "url": "/uploads/large_img_0766_1020x765_2733a1e207.jpg"
+          }
+        },
+        "hash": "img_0766_1020x765_2733a1e207",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 170.6,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:46.324Z",
+        "updatedAt": "2026-02-17T12:53:46.324Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "As Singapore is a significant transportation hub, many tourists visit the country during a layover and extend their stay for a few days. The country can be easily explored in 2-5 days, making it an ideal short stop on a longer journey."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "In Singapore, you will encounter various cultures intertwining. People from different Asian corners such as India, China, Thailand, or Malaysia live here. The main languages spoken are English, Malay, Tamil, and Chinese. Signs you come across are usually in all of these languages. In the city, you will also find neighborhoods that authentically transport you to a specific country, such as Little India or Chinatown."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0610-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0610_1020x765_03b4319754.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0610-1020x765.jpg",
+            "hash": "thumbnail_img_0610_1020x765_03b4319754",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 11.67,
+            "sizeInBytes": 11672,
+            "url": "/uploads/thumbnail_img_0610_1020x765_03b4319754.jpg"
+          },
+          "small": {
+            "name": "small_img_0610-1020x765.jpg",
+            "hash": "small_img_0610_1020x765_03b4319754",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 55.15,
+            "sizeInBytes": 55149,
+            "url": "/uploads/small_img_0610_1020x765_03b4319754.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0610-1020x765.jpg",
+            "hash": "medium_img_0610_1020x765_03b4319754",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 108.94,
+            "sizeInBytes": 108937,
+            "url": "/uploads/medium_img_0610_1020x765_03b4319754.jpg"
+          },
+          "large": {
+            "name": "large_img_0610-1020x765.jpg",
+            "hash": "large_img_0610_1020x765_03b4319754",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 172.73,
+            "sizeInBytes": 172732,
+            "url": "/uploads/large_img_0610_1020x765_03b4319754.jpg"
+          }
+        },
+        "hash": "img_0610_1020x765_03b4319754",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 182.32,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:46.622Z",
+        "updatedAt": "2026-02-17T12:53:46.622Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Singapore is a safe country. Thanks to its strict laws and regulations, it is not as chaotic and dirty as most cities in Southeast Asia. One famous example is the chewing gum law, which prohibits the sale, import, and chewing of gum in public. This measure aims to prevent gum from sticking to the sidewalks and avoids complicated cleaning processes. Therefore, be cautious not to bring any gum into the country, even if it’s forgotten in your backpack. Other actions prohibited include jaywalking and walking on escalators. There are surveillance cameras everywhere, and the city is constantly monitored. Singapore still has the death penalty as a possible punishment, although it is not applied for jaywalking."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0669-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0669_1020x765_fd6566da42.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0669-1020x765.jpg",
+            "hash": "thumbnail_img_0669_1020x765_fd6566da42",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 7.45,
+            "sizeInBytes": 7447,
+            "url": "/uploads/thumbnail_img_0669_1020x765_fd6566da42.jpg"
+          },
+          "small": {
+            "name": "small_img_0669-1020x765.jpg",
+            "hash": "small_img_0669_1020x765_fd6566da42",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 37.17,
+            "sizeInBytes": 37174,
+            "url": "/uploads/small_img_0669_1020x765_fd6566da42.jpg"
+          },
+          "large": {
+            "name": "large_img_0669-1020x765.jpg",
+            "hash": "large_img_0669_1020x765_fd6566da42",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 129.72,
+            "sizeInBytes": 129719,
+            "url": "/uploads/large_img_0669_1020x765_fd6566da42.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0669-1020x765.jpg",
+            "hash": "medium_img_0669_1020x765_fd6566da42",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 78.18,
+            "sizeInBytes": 78177,
+            "url": "/uploads/medium_img_0669_1020x765_fd6566da42.jpg"
+          }
+        },
+        "hash": "img_0669_1020x765_fd6566da42",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 110.76,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:47.045Z",
+        "updatedAt": "2026-02-17T12:53:47.045Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Currency"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "The currency used is the Singapore dollar, but if you’re not buying street food, you don’t need cash. You can conveniently pay with a card. In general, Singapore is an expensive country, especially when compared to neighboring countries."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0613-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0613_1020x765_fd5b3c043a.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0613-1020x765.jpg",
+            "hash": "thumbnail_img_0613_1020x765_fd5b3c043a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.89,
+            "sizeInBytes": 9892,
+            "url": "/uploads/thumbnail_img_0613_1020x765_fd5b3c043a.jpg"
+          },
+          "small": {
+            "name": "small_img_0613-1020x765.jpg",
+            "hash": "small_img_0613_1020x765_fd5b3c043a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 49.44,
+            "sizeInBytes": 49444,
+            "url": "/uploads/small_img_0613_1020x765_fd5b3c043a.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0613-1020x765.jpg",
+            "hash": "medium_img_0613_1020x765_fd5b3c043a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 105.48,
+            "sizeInBytes": 105476,
+            "url": "/uploads/medium_img_0613_1020x765_fd5b3c043a.jpg"
+          },
+          "large": {
+            "name": "large_img_0613-1020x765.jpg",
+            "hash": "large_img_0613_1020x765_fd5b3c043a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 174.71,
+            "sizeInBytes": 174713,
+            "url": "/uploads/large_img_0613_1020x765_fd5b3c043a.jpg"
+          }
+        },
+        "hash": "img_0613_1020x765_fd5b3c043a",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 152.44,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:47.337Z",
+        "updatedAt": "2026-02-17T12:53:47.337Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "The most expensive item will likely be accommodation. Cheap accommodation is usually found in mixed dormitories for six to twelve people or in capsule hotels, where you are assigned your own capsule to sleep in, along with a locker. If you have a choice, it’s better to opt for a capsule as it guarantees more privacy and better sleep. Even so, these cheapest forms of accommodation can still be quite expensive (around 1000 CZK per night for two people). A more comfortable and significantly more expensive option is a private room. Book your accommodation well in advance."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Eating at restaurants can also be relatively expensive. The cheapest option is to eat on the street in Chinatown or Little India. Here, you can taste traditional Chinese or Indian cuisine at reasonable prices. Another affordable option is local food courts, where you can dine cheaply with the locals. You can even find them on the map under the name „Hawker center.“ These food courts offer typical Asian street food-style cuisine."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0646-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0646_1020x765_c001a5c25f.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0646-1020x765.jpg",
+            "hash": "thumbnail_img_0646_1020x765_c001a5c25f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.78,
+            "sizeInBytes": 9782,
+            "url": "/uploads/thumbnail_img_0646_1020x765_c001a5c25f.jpg"
+          },
+          "small": {
+            "name": "small_img_0646-1020x765.jpg",
+            "hash": "small_img_0646_1020x765_c001a5c25f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 42.34,
+            "sizeInBytes": 42341,
+            "url": "/uploads/small_img_0646_1020x765_c001a5c25f.jpg"
+          },
+          "large": {
+            "name": "large_img_0646-1020x765.jpg",
+            "hash": "large_img_0646_1020x765_c001a5c25f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 129.8,
+            "sizeInBytes": 129799,
+            "url": "/uploads/large_img_0646_1020x765_c001a5c25f.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0646-1020x765.jpg",
+            "hash": "medium_img_0646_1020x765_c001a5c25f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 82.58,
+            "sizeInBytes": 82581,
+            "url": "/uploads/medium_img_0646_1020x765_c001a5c25f.jpg"
+          }
+        },
+        "hash": "img_0646_1020x765_c001a5c25f",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 136.45,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:47.654Z",
+        "updatedAt": "2026-02-17T12:53:47.654Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Transportation"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Transportation in Singapore is mainly done through the local metro (MRT) or buses. The metro system runs all the way to the airport, allowing you to reach the city center or any other part of the city easily. When entering the metro, you need to pass through fare gates, which allow you to enter after paying the fare. You can pay using a special metro card, which you need to purchase and load with money, or you can use a regular payment card. Each passenger must have their own card, and you cannot use one card to pay for two tickets. To enter the metro, simply tap the card, phone, or any device with your stored payment card on the card reader at the entrance gate. At your destination station, you need to repeat the process and tap the same payment card at the exit gates. The fare amount depends on the distance traveled and will be deducted from your account afterward."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "If needed, you can also use buses for transportation, but for that, you require a specific local card, which you can obtain at metro stations or the airport."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Both cards have a maximum daily limit, after reaching which you can travel unlimitedly for free."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Traditional taxis are also available. You can use services like Uber or Grab, which tend to be the cheapest options. You can also hail a taxi directly from the street."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Places to visit"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "One advantage is that many interesting places in Singapore can be visited for free. The main attractions include the iconic Gardens by the Bay and the nearby Marina Bay Sands hotel. Additionally, there is Sentosa Island with its numerous tourist attractions, beaches, and Universal Studios. It’s also worth visiting the nature reserve at MacRitchie Reservoir, which features the TreeTop Walk suspension bridge, or Bukit Timah, the highest hill in Singapore at 165 meters. Allocate some time for exploring the airport as well, as it is one of the most interesting in the world."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0734-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0734_1020x765_1cd9a134e9.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0734-1020x765.jpg",
+            "hash": "thumbnail_img_0734_1020x765_1cd9a134e9",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 11.16,
+            "sizeInBytes": 11159,
+            "url": "/uploads/thumbnail_img_0734_1020x765_1cd9a134e9.jpg"
+          },
+          "small": {
+            "name": "small_img_0734-1020x765.jpg",
+            "hash": "small_img_0734_1020x765_1cd9a134e9",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 63.17,
+            "sizeInBytes": 63172,
+            "url": "/uploads/small_img_0734_1020x765_1cd9a134e9.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0734-1020x765.jpg",
+            "hash": "medium_img_0734_1020x765_1cd9a134e9",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 134.27,
+            "sizeInBytes": 134269,
+            "url": "/uploads/medium_img_0734_1020x765_1cd9a134e9.jpg"
+          },
+          "large": {
+            "name": "large_img_0734-1020x765.jpg",
+            "hash": "large_img_0734_1020x765_1cd9a134e9",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 222.42,
+            "sizeInBytes": 222423,
+            "url": "/uploads/large_img_0734_1020x765_1cd9a134e9.jpg"
+          }
+        },
+        "hash": "img_0734_1020x765_1cd9a134e9",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 198.63,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:48.059Z",
+        "updatedAt": "2026-02-17T12:53:48.059Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Gardens by the Bay",
+          "url": "https://goo.gl/maps/4wTogiT94S2dBWtv6"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "The most popular tourist destination in the city center is undoubtedly Gardens by the Bay. It is a beautifully landscaped garden dominated by massive artificial trees covered in tropical plants. At night, the trees are illuminated and change colors. If you visit the gardens after sunset, you can enjoy a light and music show. Entry to the gardens and the trees is free. However, you will need to pay if you decide to walk on the Skywalk, a walkway in the artificial tree canopies."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0800-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0800_1020x765_5512662092.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0800-1020x765.jpg",
+            "hash": "thumbnail_img_0800_1020x765_5512662092",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.63,
+            "sizeInBytes": 8633,
+            "url": "/uploads/thumbnail_img_0800_1020x765_5512662092.jpg"
+          },
+          "small": {
+            "name": "small_img_0800-1020x765.jpg",
+            "hash": "small_img_0800_1020x765_5512662092",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 41.08,
+            "sizeInBytes": 41076,
+            "url": "/uploads/small_img_0800_1020x765_5512662092.jpg"
+          },
+          "large": {
+            "name": "large_img_0800-1020x765.jpg",
+            "hash": "large_img_0800_1020x765_5512662092",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 128.72,
+            "sizeInBytes": 128723,
+            "url": "/uploads/large_img_0800_1020x765_5512662092.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0800-1020x765.jpg",
+            "hash": "medium_img_0800_1020x765_5512662092",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 81.78,
+            "sizeInBytes": 81780,
+            "url": "/uploads/medium_img_0800_1020x765_5512662092.jpg"
+          }
+        },
+        "hash": "img_0800_1020x765_5512662092",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 135.57,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:48.352Z",
+        "updatedAt": "2026-02-17T12:53:48.352Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Within the garden, you will also find an educational trail with interesting information. There are two conservatories, Cloud Forest and Flower Dome, which require an admission fee. In the Cloud Forest, you will see a misty forest and one of the world’s tallest indoor waterfalls, while the Flower Dome showcases various plants from dry and cold climates (such as Southern Europe or California)."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0693-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0693_1020x765_1f79834493.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0693-1020x765.jpg",
+            "hash": "thumbnail_img_0693_1020x765_1f79834493",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 10.25,
+            "sizeInBytes": 10246,
+            "url": "/uploads/thumbnail_img_0693_1020x765_1f79834493.jpg"
+          },
+          "small": {
+            "name": "small_img_0693-1020x765.jpg",
+            "hash": "small_img_0693_1020x765_1f79834493",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 51.18,
+            "sizeInBytes": 51175,
+            "url": "/uploads/small_img_0693_1020x765_1f79834493.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0693-1020x765.jpg",
+            "hash": "medium_img_0693_1020x765_1f79834493",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 107.29,
+            "sizeInBytes": 107291,
+            "url": "/uploads/medium_img_0693_1020x765_1f79834493.jpg"
+          },
+          "large": {
+            "name": "large_img_0693-1020x765.jpg",
+            "hash": "large_img_0693_1020x765_1f79834493",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 178.01,
+            "sizeInBytes": 178010,
+            "url": "/uploads/large_img_0693_1020x765_1f79834493.jpg"
+          }
+        },
+        "hash": "img_0693_1020x765_1f79834493",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 155.79,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:48.691Z",
+        "updatedAt": "2026-02-17T12:53:48.691Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "The main entrance to the entire Gardens by the Bay is located at Marina Bay Sands hotel, where the metro station is also situated."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0719-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0719_1020x765_02a7d209c7.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0719-1020x765.jpg",
+            "hash": "thumbnail_img_0719_1020x765_02a7d209c7",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 7.23,
+            "sizeInBytes": 7234,
+            "url": "/uploads/thumbnail_img_0719_1020x765_02a7d209c7.jpg"
+          },
+          "small": {
+            "name": "small_img_0719-1020x765.jpg",
+            "hash": "small_img_0719_1020x765_02a7d209c7",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 35.23,
+            "sizeInBytes": 35228,
+            "url": "/uploads/small_img_0719_1020x765_02a7d209c7.jpg"
+          },
+          "large": {
+            "name": "large_img_0719-1020x765.jpg",
+            "hash": "large_img_0719_1020x765_02a7d209c7",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 116.44,
+            "sizeInBytes": 116440,
+            "url": "/uploads/large_img_0719_1020x765_02a7d209c7.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0719-1020x765.jpg",
+            "hash": "medium_img_0719_1020x765_02a7d209c7",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 72.89,
+            "sizeInBytes": 72889,
+            "url": "/uploads/medium_img_0719_1020x765_02a7d209c7.jpg"
+          }
+        },
+        "hash": "img_0719_1020x765_02a7d209c7",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 102.08,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:48.984Z",
+        "updatedAt": "2026-02-17T12:53:48.984Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Marina Bay Sands",
+          "url": "https://goo.gl/maps/prHyA4dJJVPk7vKF6"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Another iconic place is the unique five-star Marina Bay Sands hotel. The hotel consists of three towers with a massive ship-like structure resting on top of them. The height of the hotel reaches 200 meters. On the bow of the ship, there is an observation deck for tourists and a restaurant where you can enjoy a magnificent view of the entire city and its surroundings. It is recommended to arrive before sunset and wait to witness the city in daylight, watch the sunset, and then admire the illuminated night view of the city. If you stay a little longer, you can observe the water and light show at the bay promenade from the top. Reservation is required for the restaurant. There is a significant entrance fee to access the observation deck, located at the southern end of the hotel. The entrance is from the outside, and expect to wait in line. An elevator will take you up."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0723-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0723_1020x765_85b2fe81b2.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0723-1020x765.jpg",
+            "hash": "thumbnail_img_0723_1020x765_85b2fe81b2",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 7.85,
+            "sizeInBytes": 7853,
+            "url": "/uploads/thumbnail_img_0723_1020x765_85b2fe81b2.jpg"
+          },
+          "small": {
+            "name": "small_img_0723-1020x765.jpg",
+            "hash": "small_img_0723_1020x765_85b2fe81b2",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 36.94,
+            "sizeInBytes": 36941,
+            "url": "/uploads/small_img_0723_1020x765_85b2fe81b2.jpg"
+          },
+          "large": {
+            "name": "large_img_0723-1020x765.jpg",
+            "hash": "large_img_0723_1020x765_85b2fe81b2",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 121.63,
+            "sizeInBytes": 121628,
+            "url": "/uploads/large_img_0723_1020x765_85b2fe81b2.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0723-1020x765.jpg",
+            "hash": "medium_img_0723_1020x765_85b2fe81b2",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 75.03,
+            "sizeInBytes": 75029,
+            "url": "/uploads/medium_img_0723_1020x765_85b2fe81b2.jpg"
+          }
+        },
+        "hash": "img_0723_1020x765_85b2fe81b2",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 107.07,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:49.267Z",
+        "updatedAt": "2026-02-17T12:53:49.267Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0685-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0685_1020x765_93cbba8294.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0685-1020x765.jpg",
+            "hash": "thumbnail_img_0685_1020x765_93cbba8294",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.51,
+            "sizeInBytes": 8507,
+            "url": "/uploads/thumbnail_img_0685_1020x765_93cbba8294.jpg"
+          },
+          "small": {
+            "name": "small_img_0685-1020x765.jpg",
+            "hash": "small_img_0685_1020x765_93cbba8294",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 40.87,
+            "sizeInBytes": 40870,
+            "url": "/uploads/small_img_0685_1020x765_93cbba8294.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0685-1020x765.jpg",
+            "hash": "medium_img_0685_1020x765_93cbba8294",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 86.53,
+            "sizeInBytes": 86531,
+            "url": "/uploads/medium_img_0685_1020x765_93cbba8294.jpg"
+          },
+          "large": {
+            "name": "large_img_0685-1020x765.jpg",
+            "hash": "large_img_0685_1020x765_93cbba8294",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 143.54,
+            "sizeInBytes": 143536,
+            "url": "/uploads/large_img_0685_1020x765_93cbba8294.jpg"
+          }
+        },
+        "hash": "img_0685_1020x765_93cbba8294",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 124.72,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:49.543Z",
+        "updatedAt": "2026-02-17T12:53:49.543Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0697-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0697_1020x765_b66e90e044.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0697-1020x765.jpg",
+            "hash": "thumbnail_img_0697_1020x765_b66e90e044",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.1,
+            "sizeInBytes": 8100,
+            "url": "/uploads/thumbnail_img_0697_1020x765_b66e90e044.jpg"
+          },
+          "small": {
+            "name": "small_img_0697-1020x765.jpg",
+            "hash": "small_img_0697_1020x765_b66e90e044",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 39.52,
+            "sizeInBytes": 39515,
+            "url": "/uploads/small_img_0697_1020x765_b66e90e044.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0697-1020x765.jpg",
+            "hash": "medium_img_0697_1020x765_b66e90e044",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 83.35,
+            "sizeInBytes": 83349,
+            "url": "/uploads/medium_img_0697_1020x765_b66e90e044.jpg"
+          },
+          "large": {
+            "name": "large_img_0697-1020x765.jpg",
+            "hash": "large_img_0697_1020x765_b66e90e044",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 137.06,
+            "sizeInBytes": 137058,
+            "url": "/uploads/large_img_0697_1020x765_b66e90e044.jpg"
+          }
+        },
+        "hash": "img_0697_1020x765_b66e90e044",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 119.39,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:49.851Z",
+        "updatedAt": "2026-02-17T12:53:49.851Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Of course, it is possible to stay at the hotel at a considerable cost. On the ground floor, you can visit restaurants or go shopping. The hotel guests have access to a luxurious rooftop pool with a view of the city, which is separate from the tourist observation deck."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0813-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0813_1020x765_343ec7fafb.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0813-1020x765.jpg",
+            "hash": "thumbnail_img_0813_1020x765_343ec7fafb",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 6.41,
+            "sizeInBytes": 6405,
+            "url": "/uploads/thumbnail_img_0813_1020x765_343ec7fafb.jpg"
+          },
+          "small": {
+            "name": "small_img_0813-1020x765.jpg",
+            "hash": "small_img_0813_1020x765_343ec7fafb",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 31.65,
+            "sizeInBytes": 31651,
+            "url": "/uploads/small_img_0813_1020x765_343ec7fafb.jpg"
+          },
+          "large": {
+            "name": "large_img_0813-1020x765.jpg",
+            "hash": "large_img_0813_1020x765_343ec7fafb",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 108.09,
+            "sizeInBytes": 108094,
+            "url": "/uploads/large_img_0813_1020x765_343ec7fafb.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0813-1020x765.jpg",
+            "hash": "medium_img_0813_1020x765_343ec7fafb",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 65.84,
+            "sizeInBytes": 65839,
+            "url": "/uploads/medium_img_0813_1020x765_343ec7fafb.jpg"
+          }
+        },
+        "hash": "img_0813_1020x765_343ec7fafb",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 93.02,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:50.134Z",
+        "updatedAt": "2026-02-17T12:53:50.134Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0717-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0717_1020x765_ebd6f28440.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0717-1020x765.jpg",
+            "hash": "thumbnail_img_0717_1020x765_ebd6f28440",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.67,
+            "sizeInBytes": 8673,
+            "url": "/uploads/thumbnail_img_0717_1020x765_ebd6f28440.jpg"
+          },
+          "small": {
+            "name": "small_img_0717-1020x765.jpg",
+            "hash": "small_img_0717_1020x765_ebd6f28440",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 43.93,
+            "sizeInBytes": 43932,
+            "url": "/uploads/small_img_0717_1020x765_ebd6f28440.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0717-1020x765.jpg",
+            "hash": "medium_img_0717_1020x765_ebd6f28440",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 91.74,
+            "sizeInBytes": 91737,
+            "url": "/uploads/medium_img_0717_1020x765_ebd6f28440.jpg"
+          },
+          "large": {
+            "name": "large_img_0717-1020x765.jpg",
+            "hash": "large_img_0717_1020x765_ebd6f28440",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 150.6,
+            "sizeInBytes": 150600,
+            "url": "/uploads/large_img_0717_1020x765_ebd6f28440.jpg"
+          }
+        },
+        "hash": "img_0717_1020x765_ebd6f28440",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 130.59,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:50.438Z",
+        "updatedAt": "2026-02-17T12:53:50.438Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0715-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0715_1020x765_2929cee4a6.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0715-1020x765.jpg",
+            "hash": "thumbnail_img_0715_1020x765_2929cee4a6",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.69,
+            "sizeInBytes": 9692,
+            "url": "/uploads/thumbnail_img_0715_1020x765_2929cee4a6.jpg"
+          },
+          "small": {
+            "name": "small_img_0715-1020x765.jpg",
+            "hash": "small_img_0715_1020x765_2929cee4a6",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 45,
+            "sizeInBytes": 44996,
+            "url": "/uploads/small_img_0715_1020x765_2929cee4a6.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0715-1020x765.jpg",
+            "hash": "medium_img_0715_1020x765_2929cee4a6",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 89.12,
+            "sizeInBytes": 89120,
+            "url": "/uploads/medium_img_0715_1020x765_2929cee4a6.jpg"
+          },
+          "large": {
+            "name": "large_img_0715-1020x765.jpg",
+            "hash": "large_img_0715_1020x765_2929cee4a6",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 141.89,
+            "sizeInBytes": 141889,
+            "url": "/uploads/large_img_0715_1020x765_2929cee4a6.jpg"
+          }
+        },
+        "hash": "img_0715_1020x765_2929cee4a6",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 123.9,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:50.738Z",
+        "updatedAt": "2026-02-17T12:53:50.738Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Chinatown",
+          "url": "https://goo.gl/maps/QHQBszhaC281D4iv5"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "The Chinatown district represents a small piece of Chinese culture right in Singapore."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0746-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0746_1020x765_aa9b419da3.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0746-1020x765.jpg",
+            "hash": "thumbnail_img_0746_1020x765_aa9b419da3",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.86,
+            "sizeInBytes": 9857,
+            "url": "/uploads/thumbnail_img_0746_1020x765_aa9b419da3.jpg"
+          },
+          "small": {
+            "name": "small_img_0746-1020x765.jpg",
+            "hash": "small_img_0746_1020x765_aa9b419da3",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 44.95,
+            "sizeInBytes": 44948,
+            "url": "/uploads/small_img_0746_1020x765_aa9b419da3.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0746-1020x765.jpg",
+            "hash": "medium_img_0746_1020x765_aa9b419da3",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 91.5,
+            "sizeInBytes": 91496,
+            "url": "/uploads/medium_img_0746_1020x765_aa9b419da3.jpg"
+          },
+          "large": {
+            "name": "large_img_0746-1020x765.jpg",
+            "hash": "large_img_0746_1020x765_aa9b419da3",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 149.59,
+            "sizeInBytes": 149592,
+            "url": "/uploads/large_img_0746_1020x765_aa9b419da3.jpg"
+          }
+        },
+        "hash": "img_0746_1020x765_aa9b419da3",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 157.86,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:51.070Z",
+        "updatedAt": "2026-02-17T12:53:51.070Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "The streets are decorated with Chinese ornaments, and you can visit a Chinese restaurant with a menu written in Chinese characters. You can also explore Chinese Buddhist temples, and you will encounter many Chinese people in the area."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "The most interesting temple is the Thian Hock Keng Temple, where you can see the Buddha Tooth Relic. Admission is free. Just like in any Buddhist temple, you need to cover your legs and shoulders. They provide free shawls for covering at the entrance. Then they will guide you to the elevator, which will take you to the fourth floor where the tooth relic is located. Admission is free."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0737-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0737_1020x765_83bf0a2da8.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0737-1020x765.jpg",
+            "hash": "thumbnail_img_0737_1020x765_83bf0a2da8",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 11.65,
+            "sizeInBytes": 11654,
+            "url": "/uploads/thumbnail_img_0737_1020x765_83bf0a2da8.jpg"
+          },
+          "small": {
+            "name": "small_img_0737-1020x765.jpg",
+            "hash": "small_img_0737_1020x765_83bf0a2da8",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 59.89,
+            "sizeInBytes": 59886,
+            "url": "/uploads/small_img_0737_1020x765_83bf0a2da8.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0737-1020x765.jpg",
+            "hash": "medium_img_0737_1020x765_83bf0a2da8",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 125.88,
+            "sizeInBytes": 125878,
+            "url": "/uploads/medium_img_0737_1020x765_83bf0a2da8.jpg"
+          },
+          "large": {
+            "name": "large_img_0737-1020x765.jpg",
+            "hash": "large_img_0737_1020x765_83bf0a2da8",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 209.55,
+            "sizeInBytes": 209545,
+            "url": "/uploads/large_img_0737_1020x765_83bf0a2da8.jpg"
+          }
+        },
+        "hash": "img_0737_1020x765_83bf0a2da8",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 186.06,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:51.403Z",
+        "updatedAt": "2026-02-17T12:53:51.403Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0739-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0739_1020x765_01761265d5.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0739-1020x765.jpg",
+            "hash": "thumbnail_img_0739_1020x765_01761265d5",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 13.54,
+            "sizeInBytes": 13540,
+            "url": "/uploads/thumbnail_img_0739_1020x765_01761265d5.jpg"
+          },
+          "small": {
+            "name": "small_img_0739-1020x765.jpg",
+            "hash": "small_img_0739_1020x765_01761265d5",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 66.98,
+            "sizeInBytes": 66976,
+            "url": "/uploads/small_img_0739_1020x765_01761265d5.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0739-1020x765.jpg",
+            "hash": "medium_img_0739_1020x765_01761265d5",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 134.35,
+            "sizeInBytes": 134350,
+            "url": "/uploads/medium_img_0739_1020x765_01761265d5.jpg"
+          },
+          "large": {
+            "name": "large_img_0739-1020x765.jpg",
+            "hash": "large_img_0739_1020x765_01761265d5",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 212.69,
+            "sizeInBytes": 212693,
+            "url": "/uploads/large_img_0739_1020x765_01761265d5.jpg"
+          }
+        },
+        "hash": "img_0739_1020x765_01761265d5",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 223.81,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:51.767Z",
+        "updatedAt": "2026-02-17T12:53:51.767Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0738-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0738_1020x765_64505ff020.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0738-1020x765.jpg",
+            "hash": "thumbnail_img_0738_1020x765_64505ff020",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.34,
+            "sizeInBytes": 9335,
+            "url": "/uploads/thumbnail_img_0738_1020x765_64505ff020.jpg"
+          },
+          "small": {
+            "name": "small_img_0738-1020x765.jpg",
+            "hash": "small_img_0738_1020x765_64505ff020",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 55.46,
+            "sizeInBytes": 55455,
+            "url": "/uploads/small_img_0738_1020x765_64505ff020.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0738-1020x765.jpg",
+            "hash": "medium_img_0738_1020x765_64505ff020",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 120.07,
+            "sizeInBytes": 120066,
+            "url": "/uploads/medium_img_0738_1020x765_64505ff020.jpg"
+          },
+          "large": {
+            "name": "large_img_0738-1020x765.jpg",
+            "hash": "large_img_0738_1020x765_64505ff020",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 200.21,
+            "sizeInBytes": 200209,
+            "url": "/uploads/large_img_0738_1020x765_64505ff020.jpg"
+          }
+        },
+        "hash": "img_0738_1020x765_64505ff020",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 174.46,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:52.089Z",
+        "updatedAt": "2026-02-17T12:53:52.089Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Little India",
+          "url": "https://goo.gl/maps/utS6Qwe9JjWHfw8CA"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "You can find a piece of authentic India in the Indian district – Little India."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0638-1-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0638_1_1020x765_1239dec821.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0638-1-1020x765.jpg",
+            "hash": "thumbnail_img_0638_1_1020x765_1239dec821",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.12,
+            "sizeInBytes": 9122,
+            "url": "/uploads/thumbnail_img_0638_1_1020x765_1239dec821.jpg"
+          },
+          "small": {
+            "name": "small_img_0638-1-1020x765.jpg",
+            "hash": "small_img_0638_1_1020x765_1239dec821",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 40.62,
+            "sizeInBytes": 40617,
+            "url": "/uploads/small_img_0638_1_1020x765_1239dec821.jpg"
+          },
+          "large": {
+            "name": "large_img_0638-1-1020x765.jpg",
+            "hash": "large_img_0638_1_1020x765_1239dec821",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 128.75,
+            "sizeInBytes": 128752,
+            "url": "/uploads/large_img_0638_1_1020x765_1239dec821.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0638-1-1020x765.jpg",
+            "hash": "medium_img_0638_1_1020x765_1239dec821",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 80.73,
+            "sizeInBytes": 80731,
+            "url": "/uploads/medium_img_0638_1_1020x765_1239dec821.jpg"
+          }
+        },
+        "hash": "img_0638_1_1020x765_1239dec821",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 135.98,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:52.371Z",
+        "updatedAt": "2026-02-17T12:53:52.371Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0639-765x1020.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0639_765x1020_a18f0d4953.jpg",
+        "width": 765,
+        "height": 1020,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0639-765x1020.jpg",
+            "hash": "thumbnail_img_0639_765x1020_a18f0d4953",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 6.13,
+            "sizeInBytes": 6131,
+            "url": "/uploads/thumbnail_img_0639_765x1020_a18f0d4953.jpg"
+          },
+          "small": {
+            "name": "small_img_0639-765x1020.jpg",
+            "hash": "small_img_0639_765x1020_a18f0d4953",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 50.5,
+            "sizeInBytes": 50502,
+            "url": "/uploads/small_img_0639_765x1020_a18f0d4953.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0639-765x1020.jpg",
+            "hash": "medium_img_0639_765x1020_a18f0d4953",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 107.38,
+            "sizeInBytes": 107381,
+            "url": "/uploads/medium_img_0639_765x1020_a18f0d4953.jpg"
+          },
+          "large": {
+            "name": "large_img_0639-765x1020.jpg",
+            "hash": "large_img_0639_765x1020_a18f0d4953",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 179.2,
+            "sizeInBytes": 179200,
+            "url": "/uploads/large_img_0639_765x1020_a18f0d4953.jpg"
+          }
+        },
+        "hash": "img_0639_765x1020_a18f0d4953",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 157.53,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:52.685Z",
+        "updatedAt": "2026-02-17T12:53:52.685Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Here, you can taste Indian food (such as the very spicy biryani), shop for Indian goods, traditional saris, and jewelry, or visit the Hindu temple Sri Veeramakaliamman Temple. As you wander through the streets, you’ll encounter the traditional scents of Indian incense sticks, see Indian women in saris, and come across stalls selling traditional Indian items like figurines, incense sticks, and colorful artificial flower garlands."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0642-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0642_1020x765_25aa6b4ca4.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0642-1020x765.jpg",
+            "hash": "thumbnail_img_0642_1020x765_25aa6b4ca4",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 12.46,
+            "sizeInBytes": 12463,
+            "url": "/uploads/thumbnail_img_0642_1020x765_25aa6b4ca4.jpg"
+          },
+          "small": {
+            "name": "small_img_0642-1020x765.jpg",
+            "hash": "small_img_0642_1020x765_25aa6b4ca4",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 59.37,
+            "sizeInBytes": 59365,
+            "url": "/uploads/small_img_0642_1020x765_25aa6b4ca4.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0642-1020x765.jpg",
+            "hash": "medium_img_0642_1020x765_25aa6b4ca4",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 120.25,
+            "sizeInBytes": 120245,
+            "url": "/uploads/medium_img_0642_1020x765_25aa6b4ca4.jpg"
+          },
+          "large": {
+            "name": "large_img_0642-1020x765.jpg",
+            "hash": "large_img_0642_1020x765_25aa6b4ca4",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 192.6,
+            "sizeInBytes": 192602,
+            "url": "/uploads/large_img_0642_1020x765_25aa6b4ca4.jpg"
+          }
+        },
+        "hash": "img_0642_1020x765_25aa6b4ca4",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 203.71,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:53.028Z",
+        "updatedAt": "2026-02-17T12:53:53.028Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0641-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0641_1020x765_6a45cd3654.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0641-1020x765.jpg",
+            "hash": "thumbnail_img_0641_1020x765_6a45cd3654",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.95,
+            "sizeInBytes": 9949,
+            "url": "/uploads/thumbnail_img_0641_1020x765_6a45cd3654.jpg"
+          },
+          "small": {
+            "name": "small_img_0641-1020x765.jpg",
+            "hash": "small_img_0641_1020x765_6a45cd3654",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 45.05,
+            "sizeInBytes": 45052,
+            "url": "/uploads/small_img_0641_1020x765_6a45cd3654.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0641-1020x765.jpg",
+            "hash": "medium_img_0641_1020x765_6a45cd3654",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 90.78,
+            "sizeInBytes": 90780,
+            "url": "/uploads/medium_img_0641_1020x765_6a45cd3654.jpg"
+          },
+          "large": {
+            "name": "large_img_0641-1020x765.jpg",
+            "hash": "large_img_0641_1020x765_6a45cd3654",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 146.48,
+            "sizeInBytes": 146484,
+            "url": "/uploads/large_img_0641_1020x765_6a45cd3654.jpg"
+          }
+        },
+        "hash": "img_0641_1020x765_6a45cd3654",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 153.91,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:53.376Z",
+        "updatedAt": "2026-02-17T12:53:53.376Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0643-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0643_1020x765_8a859cca54.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0643-1020x765.jpg",
+            "hash": "thumbnail_img_0643_1020x765_8a859cca54",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 12.18,
+            "sizeInBytes": 12179,
+            "url": "/uploads/thumbnail_img_0643_1020x765_8a859cca54.jpg"
+          },
+          "small": {
+            "name": "small_img_0643-1020x765.jpg",
+            "hash": "small_img_0643_1020x765_8a859cca54",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 56.24,
+            "sizeInBytes": 56238,
+            "url": "/uploads/small_img_0643_1020x765_8a859cca54.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0643-1020x765.jpg",
+            "hash": "medium_img_0643_1020x765_8a859cca54",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 111.95,
+            "sizeInBytes": 111951,
+            "url": "/uploads/medium_img_0643_1020x765_8a859cca54.jpg"
+          },
+          "large": {
+            "name": "large_img_0643-1020x765.jpg",
+            "hash": "large_img_0643_1020x765_8a859cca54",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 178.01,
+            "sizeInBytes": 178009,
+            "url": "/uploads/large_img_0643_1020x765_8a859cca54.jpg"
+          }
+        },
+        "hash": "img_0643_1020x765_8a859cca54",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 187.76,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:53.689Z",
+        "updatedAt": "2026-02-17T12:53:53.689Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "TreeTop walk",
+          "url": "https://goo.gl/maps/4nWzQSkL3rVWLdf77"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "A short distance from the city towards the north, yet still accessible by the metro, lies the Central Catchment Nature Reserve. The main attraction of this area is the TreeTop Walk, a walkway through the treetop canopy. Admission to the treetop walk is free, but be aware of the direction you approach from, as the walkway is one-way. The surrounding area offers trails through the tropical rainforest, where you may encounter cheeky monkeys or small wild boars. You can also visit a lookout tower in the midst of the jungle, which is freely accessible. To reach this part of the reserve, take a short walk from the Upper Thomson MRT station. After a few dozen meters on the road, you will reach the park entrance. Follow the marked paths until you reach the TreeTop Walk. The park is bustling with activity, and you can easily spend a whole day exploring its trails and attractions."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0630.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0630_2e2bdaa822.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0630.jpg",
+            "hash": "thumbnail_img_0630_2e2bdaa822",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 11.38,
+            "sizeInBytes": 11376,
+            "url": "/uploads/thumbnail_img_0630_2e2bdaa822.jpg"
+          },
+          "small": {
+            "name": "small_img_0630.jpg",
+            "hash": "small_img_0630_2e2bdaa822",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 62.61,
+            "sizeInBytes": 62610,
+            "url": "/uploads/small_img_0630_2e2bdaa822.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0630.jpg",
+            "hash": "medium_img_0630_2e2bdaa822",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 136.25,
+            "sizeInBytes": 136245,
+            "url": "/uploads/medium_img_0630_2e2bdaa822.jpg"
+          },
+          "large": {
+            "name": "large_img_0630.jpg",
+            "hash": "large_img_0630_2e2bdaa822",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 232.59,
+            "sizeInBytes": 232585,
+            "url": "/uploads/large_img_0630_2e2bdaa822.jpg"
+          }
+        },
+        "hash": "img_0630_2e2bdaa822",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 204.7,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:04:22.673Z",
+        "updatedAt": "2026-02-17T13:04:22.673Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0637.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0637_91ef814db0.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0637.jpg",
+            "hash": "thumbnail_img_0637_91ef814db0",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 13.95,
+            "sizeInBytes": 13952,
+            "url": "/uploads/thumbnail_img_0637_91ef814db0.jpg"
+          },
+          "small": {
+            "name": "small_img_0637.jpg",
+            "hash": "small_img_0637_91ef814db0",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 71.92,
+            "sizeInBytes": 71919,
+            "url": "/uploads/small_img_0637_91ef814db0.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0637.jpg",
+            "hash": "medium_img_0637_91ef814db0",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 147.56,
+            "sizeInBytes": 147559,
+            "url": "/uploads/medium_img_0637_91ef814db0.jpg"
+          },
+          "large": {
+            "name": "large_img_0637.jpg",
+            "hash": "large_img_0637_91ef814db0",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 240.56,
+            "sizeInBytes": 240557,
+            "url": "/uploads/large_img_0637_91ef814db0.jpg"
+          }
+        },
+        "hash": "img_0637_91ef814db0",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 212.34,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:04:23.242Z",
+        "updatedAt": "2026-02-17T13:04:23.242Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0635-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0635_1020x765_470f209822.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0635-1020x765.jpg",
+            "hash": "thumbnail_img_0635_1020x765_470f209822",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.75,
+            "sizeInBytes": 8746,
+            "url": "/uploads/thumbnail_img_0635_1020x765_470f209822.jpg"
+          },
+          "small": {
+            "name": "small_img_0635-1020x765.jpg",
+            "hash": "small_img_0635_1020x765_470f209822",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 50.19,
+            "sizeInBytes": 50192,
+            "url": "/uploads/small_img_0635_1020x765_470f209822.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0635-1020x765.jpg",
+            "hash": "medium_img_0635_1020x765_470f209822",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 111.38,
+            "sizeInBytes": 111380,
+            "url": "/uploads/medium_img_0635_1020x765_470f209822.jpg"
+          },
+          "large": {
+            "name": "large_img_0635-1020x765.jpg",
+            "hash": "large_img_0635_1020x765_470f209822",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 191.88,
+            "sizeInBytes": 191877,
+            "url": "/uploads/large_img_0635_1020x765_470f209822.jpg"
+          }
+        },
+        "hash": "img_0635_1020x765_470f209822",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 166.59,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:54.661Z",
+        "updatedAt": "2026-02-17T12:53:54.661Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Zoo",
+          "url": "https://goo.gl/maps/fYYynS2sLkQfuCyT7"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "If you continue further north into the reserve, you will arrive at the renowned Singapore Zoo. The zoo can be visited during the day or as part of the Night Safari."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Telok Blangah",
+          "url": "https://goo.gl/maps/6GZArPuFf7i1JfRg9"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "In the Telok Blangah district, there are two hills worth visiting: Mount Faber (106 meters above sea level) and Telok Blangah Hill (94 meters above sea level). Both offer a beautiful view of the city and the harbor. On the hilltops, you can use the complimentary telescopes. You can walk between the hills along a marked trail and come across a scenic bridge, which also serves as a relaxing spot."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0756-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0756_1020x765_8e86f56fab.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0756-1020x765.jpg",
+            "hash": "thumbnail_img_0756_1020x765_8e86f56fab",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 10.02,
+            "sizeInBytes": 10015,
+            "url": "/uploads/thumbnail_img_0756_1020x765_8e86f56fab.jpg"
+          },
+          "small": {
+            "name": "small_img_0756-1020x765.jpg",
+            "hash": "small_img_0756_1020x765_8e86f56fab",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 53.5,
+            "sizeInBytes": 53504,
+            "url": "/uploads/small_img_0756_1020x765_8e86f56fab.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0756-1020x765.jpg",
+            "hash": "medium_img_0756_1020x765_8e86f56fab",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 116.07,
+            "sizeInBytes": 116074,
+            "url": "/uploads/medium_img_0756_1020x765_8e86f56fab.jpg"
+          },
+          "large": {
+            "name": "large_img_0756-1020x765.jpg",
+            "hash": "large_img_0756_1020x765_8e86f56fab",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 196.77,
+            "sizeInBytes": 196772,
+            "url": "/uploads/large_img_0756_1020x765_8e86f56fab.jpg"
+          }
+        },
+        "hash": "img_0756_1020x765_8e86f56fab",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 173.4,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:54.984Z",
+        "updatedAt": "2026-02-17T12:53:54.984Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0757.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0757_367b1fae44.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0757.jpg",
+            "hash": "thumbnail_img_0757_367b1fae44",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 10.07,
+            "sizeInBytes": 10075,
+            "url": "/uploads/thumbnail_img_0757_367b1fae44.jpg"
+          },
+          "small": {
+            "name": "small_img_0757.jpg",
+            "hash": "small_img_0757_367b1fae44",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 52.86,
+            "sizeInBytes": 52858,
+            "url": "/uploads/small_img_0757_367b1fae44.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0757.jpg",
+            "hash": "medium_img_0757_367b1fae44",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 112.76,
+            "sizeInBytes": 112760,
+            "url": "/uploads/medium_img_0757_367b1fae44.jpg"
+          },
+          "large": {
+            "name": "large_img_0757.jpg",
+            "hash": "large_img_0757_367b1fae44",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 189.15,
+            "sizeInBytes": 189148,
+            "url": "/uploads/large_img_0757_367b1fae44.jpg"
+          }
+        },
+        "hash": "img_0757_367b1fae44",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 166,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:04:23.640Z",
+        "updatedAt": "2026-02-17T13:04:23.640Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0752-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0752_1020x765_545b1300b0.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0752-1020x765.jpg",
+            "hash": "thumbnail_img_0752_1020x765_545b1300b0",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.67,
+            "sizeInBytes": 8671,
+            "url": "/uploads/thumbnail_img_0752_1020x765_545b1300b0.jpg"
+          },
+          "small": {
+            "name": "small_img_0752-1020x765.jpg",
+            "hash": "small_img_0752_1020x765_545b1300b0",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 47.04,
+            "sizeInBytes": 47040,
+            "url": "/uploads/small_img_0752_1020x765_545b1300b0.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0752-1020x765.jpg",
+            "hash": "medium_img_0752_1020x765_545b1300b0",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 105.16,
+            "sizeInBytes": 105163,
+            "url": "/uploads/medium_img_0752_1020x765_545b1300b0.jpg"
+          },
+          "large": {
+            "name": "large_img_0752-1020x765.jpg",
+            "hash": "large_img_0752_1020x765_545b1300b0",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 180.11,
+            "sizeInBytes": 180109,
+            "url": "/uploads/large_img_0752_1020x765_545b1300b0.jpg"
+          }
+        },
+        "hash": "img_0752_1020x765_545b1300b0",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 159.8,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:55.589Z",
+        "updatedAt": "2026-02-17T12:53:55.589Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "At the top of Mount Faber, you can board a cable car that leads to Sentosa Island."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0758-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0758_1020x765_f71b73fc16.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0758-1020x765.jpg",
+            "hash": "thumbnail_img_0758_1020x765_f71b73fc16",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 11.36,
+            "sizeInBytes": 11362,
+            "url": "/uploads/thumbnail_img_0758_1020x765_f71b73fc16.jpg"
+          },
+          "small": {
+            "name": "small_img_0758-1020x765.jpg",
+            "hash": "small_img_0758_1020x765_f71b73fc16",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 59,
+            "sizeInBytes": 58998,
+            "url": "/uploads/small_img_0758_1020x765_f71b73fc16.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0758-1020x765.jpg",
+            "hash": "medium_img_0758_1020x765_f71b73fc16",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 122.44,
+            "sizeInBytes": 122437,
+            "url": "/uploads/medium_img_0758_1020x765_f71b73fc16.jpg"
+          },
+          "large": {
+            "name": "large_img_0758-1020x765.jpg",
+            "hash": "large_img_0758_1020x765_f71b73fc16",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 200.43,
+            "sizeInBytes": 200425,
+            "url": "/uploads/large_img_0758_1020x765_f71b73fc16.jpg"
+          }
+        },
+        "hash": "img_0758_1020x765_f71b73fc16",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 177.46,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:55.878Z",
+        "updatedAt": "2026-02-17T12:53:55.878Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Ostrov Sentosa",
+          "url": "https://goo.gl/maps/mp1PgN56Eq3wKX417"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Ostrov Sentosa is a popular destination for many tourists, primarily for its numerous attractions and beaches. The entire island gives off an artificial impression, as if it were created specifically for tourists."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0772.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0772_3a3a0da372.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0772.jpg",
+            "hash": "thumbnail_img_0772_3a3a0da372",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 7.98,
+            "sizeInBytes": 7984,
+            "url": "/uploads/thumbnail_img_0772_3a3a0da372.jpg"
+          },
+          "small": {
+            "name": "small_img_0772.jpg",
+            "hash": "small_img_0772_3a3a0da372",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 36.73,
+            "sizeInBytes": 36728,
+            "url": "/uploads/small_img_0772_3a3a0da372.jpg"
+          },
+          "large": {
+            "name": "large_img_0772.jpg",
+            "hash": "large_img_0772_3a3a0da372",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 123.5,
+            "sizeInBytes": 123503,
+            "url": "/uploads/large_img_0772_3a3a0da372.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0772.jpg",
+            "hash": "medium_img_0772_3a3a0da372",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 76.41,
+            "sizeInBytes": 76409,
+            "url": "/uploads/medium_img_0772_3a3a0da372.jpg"
+          }
+        },
+        "hash": "img_0772_3a3a0da372",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 106.23,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:04:24.232Z",
+        "updatedAt": "2026-02-17T13:04:24.232Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "The beaches on Sentosa Island are among the best places to relax near the city. However, you should still expect crowds, bars, and restaurants. You can even reach the beach by a paid cable car. There are several paid attractions around the beach, such as ziplining and bungee jumping."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0790.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0790_70d2a3491f.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0790.jpg",
+            "hash": "thumbnail_img_0790_70d2a3491f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.11,
+            "sizeInBytes": 8107,
+            "url": "/uploads/thumbnail_img_0790_70d2a3491f.jpg"
+          },
+          "small": {
+            "name": "small_img_0790.jpg",
+            "hash": "small_img_0790_70d2a3491f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 38.03,
+            "sizeInBytes": 38033,
+            "url": "/uploads/small_img_0790_70d2a3491f.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0790.jpg",
+            "hash": "medium_img_0790_70d2a3491f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 79.38,
+            "sizeInBytes": 79377,
+            "url": "/uploads/medium_img_0790_70d2a3491f.jpg"
+          },
+          "large": {
+            "name": "large_img_0790.jpg",
+            "hash": "large_img_0790_70d2a3491f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 130.29,
+            "sizeInBytes": 130286,
+            "url": "/uploads/large_img_0790_70d2a3491f.jpg"
+          }
+        },
+        "hash": "img_0790_70d2a3491f",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 112.51,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:04:24.633Z",
+        "updatedAt": "2026-02-17T13:04:24.633Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "The island is also home to Universal Studios, a butterfly park, Madame Tussauds wax museum, and Fort Siloso."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0769.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0769_aee98abc47.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0769.jpg",
+            "hash": "thumbnail_img_0769_aee98abc47",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 11.08,
+            "sizeInBytes": 11084,
+            "url": "/uploads/thumbnail_img_0769_aee98abc47.jpg"
+          },
+          "small": {
+            "name": "small_img_0769.jpg",
+            "hash": "small_img_0769_aee98abc47",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 52.81,
+            "sizeInBytes": 52805,
+            "url": "/uploads/small_img_0769_aee98abc47.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0769.jpg",
+            "hash": "medium_img_0769_aee98abc47",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 108.79,
+            "sizeInBytes": 108790,
+            "url": "/uploads/medium_img_0769_aee98abc47.jpg"
+          },
+          "large": {
+            "name": "large_img_0769.jpg",
+            "hash": "large_img_0769_aee98abc47",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 177.61,
+            "sizeInBytes": 177607,
+            "url": "/uploads/large_img_0769_aee98abc47.jpg"
+          }
+        },
+        "hash": "img_0769_aee98abc47",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 155.68,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:56.787Z",
+        "updatedAt": "2026-02-17T12:53:56.787Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "You can reach the island for free by bus, which operates between the bus interchange on the island and the Harbourfront Interchange bus terminal on the mainland near the MRT station. You can also reach the island on foot, by paid cable car, or by taxi."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0774-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0774_1020x765_81649168f5.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0774-1020x765.jpg",
+            "hash": "thumbnail_img_0774_1020x765_81649168f5",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8,
+            "sizeInBytes": 7995,
+            "url": "/uploads/thumbnail_img_0774_1020x765_81649168f5.jpg"
+          },
+          "small": {
+            "name": "small_img_0774-1020x765.jpg",
+            "hash": "small_img_0774_1020x765_81649168f5",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 38.39,
+            "sizeInBytes": 38391,
+            "url": "/uploads/small_img_0774_1020x765_81649168f5.jpg"
+          },
+          "large": {
+            "name": "large_img_0774-1020x765.jpg",
+            "hash": "large_img_0774_1020x765_81649168f5",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 129.79,
+            "sizeInBytes": 129785,
+            "url": "/uploads/large_img_0774_1020x765_81649168f5.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0774-1020x765.jpg",
+            "hash": "medium_img_0774_1020x765_81649168f5",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 79.82,
+            "sizeInBytes": 79819,
+            "url": "/uploads/medium_img_0774_1020x765_81649168f5.jpg"
+          }
+        },
+        "hash": "img_0774_1020x765_81649168f5",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 112.09,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:57.101Z",
+        "updatedAt": "2026-02-17T12:53:57.101Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Letiště Changi",
+          "url": "https://goo.gl/maps/Mgrx7mDEYBzVbzE5A"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Visiting the airport itself is worth considering when in Singapore. You will find several tourist attractions there as well. You can spend an entire day at Changi Airport, which has been consistently voted the best airport in the world."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Outside the restricted area of Terminal 1, there is Jewel. Jewel is a section of the airport that features the world’s largest indoor waterfall (40 meters high), surrounded by a terraced indoor rainforest. In the rainforest, you can relax on benches while listening to the sound of falling water. An elevator takes you to the upper floors, where you’ll find viewpoints overlooking the waterfall and the rainforest. There are also paid attractions (glass-bottomed bridge and rope courses) and restaurants on the upper levels."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0601-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0601_1020x765_c7d65f57b8.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0601-1020x765.jpg",
+            "hash": "thumbnail_img_0601_1020x765_c7d65f57b8",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 10.51,
+            "sizeInBytes": 10508,
+            "url": "/uploads/thumbnail_img_0601_1020x765_c7d65f57b8.jpg"
+          },
+          "small": {
+            "name": "small_img_0601-1020x765.jpg",
+            "hash": "small_img_0601_1020x765_c7d65f57b8",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 56.47,
+            "sizeInBytes": 56473,
+            "url": "/uploads/small_img_0601_1020x765_c7d65f57b8.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0601-1020x765.jpg",
+            "hash": "medium_img_0601_1020x765_c7d65f57b8",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 119.44,
+            "sizeInBytes": 119440,
+            "url": "/uploads/medium_img_0601_1020x765_c7d65f57b8.jpg"
+          },
+          "large": {
+            "name": "large_img_0601-1020x765.jpg",
+            "hash": "large_img_0601_1020x765_c7d65f57b8",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 197.01,
+            "sizeInBytes": 197006,
+            "url": "/uploads/large_img_0601_1020x765_c7d65f57b8.jpg"
+          }
+        },
+        "hash": "img_0601_1020x765_c7d65f57b8",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 173.49,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:57.396Z",
+        "updatedAt": "2026-02-17T12:53:57.396Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0588-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0588_1020x765_94518c42c2.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0588-1020x765.jpg",
+            "hash": "thumbnail_img_0588_1020x765_94518c42c2",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 10.7,
+            "sizeInBytes": 10703,
+            "url": "/uploads/thumbnail_img_0588_1020x765_94518c42c2.jpg"
+          },
+          "small": {
+            "name": "small_img_0588-1020x765.jpg",
+            "hash": "small_img_0588_1020x765_94518c42c2",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 57.95,
+            "sizeInBytes": 57949,
+            "url": "/uploads/small_img_0588_1020x765_94518c42c2.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0588-1020x765.jpg",
+            "hash": "medium_img_0588_1020x765_94518c42c2",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 123.22,
+            "sizeInBytes": 123222,
+            "url": "/uploads/medium_img_0588_1020x765_94518c42c2.jpg"
+          },
+          "large": {
+            "name": "large_img_0588-1020x765.jpg",
+            "hash": "large_img_0588_1020x765_94518c42c2",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 205.31,
+            "sizeInBytes": 205311,
+            "url": "/uploads/large_img_0588_1020x765_94518c42c2.jpg"
+          }
+        },
+        "hash": "img_0588_1020x765_94518c42c2",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 182.03,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:57.714Z",
+        "updatedAt": "2026-02-17T12:53:57.714Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "img_0586-1020x765.jpg",
+        "alternativeText": "",
+        "url": "/uploads/img_0586_1020x765_4cca771ec1.jpg",
+        "width": 1020,
+        "height": 765,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_img_0586-1020x765.jpg",
+            "hash": "thumbnail_img_0586_1020x765_4cca771ec1",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.55,
+            "sizeInBytes": 9545,
+            "url": "/uploads/thumbnail_img_0586_1020x765_4cca771ec1.jpg"
+          },
+          "small": {
+            "name": "small_img_0586-1020x765.jpg",
+            "hash": "small_img_0586_1020x765_4cca771ec1",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 46.14,
+            "sizeInBytes": 46144,
+            "url": "/uploads/small_img_0586_1020x765_4cca771ec1.jpg"
+          },
+          "medium": {
+            "name": "medium_img_0586-1020x765.jpg",
+            "hash": "medium_img_0586_1020x765_4cca771ec1",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 89.8,
+            "sizeInBytes": 89800,
+            "url": "/uploads/medium_img_0586_1020x765_4cca771ec1.jpg"
+          },
+          "large": {
+            "name": "large_img_0586-1020x765.jpg",
+            "hash": "large_img_0586_1020x765_4cca771ec1",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 140.27,
+            "sizeInBytes": 140268,
+            "url": "/uploads/large_img_0586_1020x765_4cca771ec1.jpg"
+          }
+        },
+        "hash": "img_0586_1020x765_4cca771ec1",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 147.3,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:53:58.003Z",
+        "updatedAt": "2026-02-17T12:53:58.003Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Furthermore, the airport features several indoor gardens, botanical gardens, and other attractions. It provides a pleasant environment for relaxation while waiting for your connecting flight."
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-02-17T13:04:25.268Z",
+  "updatedAt": "2026-02-17T13:04:25.268Z",
+  "publishedAt": "2026-02-17T13:04:25.312Z",
+  "continent": "asia",
+  "contentLang": "en",
+  "flagEmoji": "🇸🇬",
+  "timezone": "SGT (UTC+8)",
+  "languages": [
+    "English",
+    "Mandarin",
+    "Malay",
+    "Tamil"
+  ],
+  "currencyCode": "SGD",
+  "currencyName": "Singapore Dollar",
+  "currencySymbol": "S$",
+  "budgetPerDayBudget": 50,
+  "budgetPerDayMidRange": 100,
+  "budgetPerDayLuxury": 250,
+  "bestTimeToVisit": "February to April",
+  "visaInfo": "Czech citizens: visa-free 90 days",
+  "destinationType": "country",
+  "cover": {
+    "id": 8627,
+    "documentId": "l1g268o7046dpw3rww8ymhmm",
+    "name": "cover-1771333464818-pqzvk4.jpg",
+    "alternativeText": "Singapore",
+    "caption": null,
+    "width": 1020,
+    "height": 765,
+    "formats": {
+      "thumbnail": {
+        "name": "thumbnail_cover-1771333464818-pqzvk4.jpg",
+        "hash": "thumbnail_cover_1771333464818_pqzvk4_8c63cab993",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "path": null,
+        "width": 208,
+        "height": 156,
+        "size": 11.17,
+        "sizeInBytes": 11170,
+        "url": "/uploads/thumbnail_cover_1771333464818_pqzvk4_8c63cab993.jpg"
+      },
+      "small": {
+        "name": "small_cover-1771333464818-pqzvk4.jpg",
+        "hash": "small_cover_1771333464818_pqzvk4_8c63cab993",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "path": null,
+        "width": 500,
+        "height": 375,
+        "size": 63.2,
+        "sizeInBytes": 63204,
+        "url": "/uploads/small_cover_1771333464818_pqzvk4_8c63cab993.jpg"
+      },
+      "medium": {
+        "name": "medium_cover-1771333464818-pqzvk4.jpg",
+        "hash": "medium_cover_1771333464818_pqzvk4_8c63cab993",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "path": null,
+        "width": 750,
+        "height": 563,
+        "size": 134.34,
+        "sizeInBytes": 134337,
+        "url": "/uploads/medium_cover_1771333464818_pqzvk4_8c63cab993.jpg"
+      },
+      "large": {
+        "name": "large_cover-1771333464818-pqzvk4.jpg",
+        "hash": "large_cover_1771333464818_pqzvk4_8c63cab993",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "path": null,
+        "width": 1000,
+        "height": 750,
+        "size": 222.48,
+        "sizeInBytes": 222479,
+        "url": "/uploads/large_cover_1771333464818_pqzvk4_8c63cab993.jpg"
+      }
+    },
+    "hash": "cover_1771333464818_pqzvk4_8c63cab993",
+    "ext": ".jpg",
+    "mime": "image/jpeg",
+    "size": 198.68,
+    "url": "/uploads/cover_1771333464818_pqzvk4_8c63cab993.jpg",
+    "previewUrl": null,
+    "provider": "local",
+    "provider_metadata": null,
+    "createdAt": "2026-02-17T13:04:25.235Z",
+    "updatedAt": "2026-02-17T13:04:25.235Z",
+    "publishedAt": "2026-02-17T13:04:25.235Z"
+  }
+}

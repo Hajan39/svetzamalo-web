@@ -1,0 +1,92 @@
+{
+  "title": "Španělsko – Fuerteventura – praktický průvodce pro cestovatele",
+  "slug": "pruvodce-spanelsko-fuerteventura",
+  "excerpt": "Fuerteventura je jedním z Kanárských ostrovů. Jak už název napovídá (Fuerte – silný, ventura – vítr), čeká vás zde větrné počasí a to až příliš větrné v některých oblastech. Proto je Fuerteventura…",
+  "articleType": "destination-guide",
+  "contentLang": "cs",
+  "tags": [
+    "Evropa",
+    "Španělsko – Fuerteventura",
+    "cestování",
+    "budget"
+  ],
+  "destinationSlug": "spanelsko-fuerteventura",
+  "publish": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Fuerteventura je jedním z Kanárských ostrovů. Jak už název napovídá (Fuerte – silný, ventura – vítr), čeká vás zde větrné počasí a to až příliš větrné v některých oblastech. Proto je Fuerteventura oblíbenou destinací surfařů, windsurfařů a také milovníků kitesurfingu."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Kdy jet"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nejlepší doba pro návštěvu: říjen až duben."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Jazyk a komunikace"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Místní jazyky: španělština. Základy španělštiny se hodí, angličtina funguje v turistických zónách."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobný průvodce"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+        },
+        {
+          "type": "text",
+          "text": "kompletním průvodci – Španělsko – Fuerteventura",
+          "url": "/destinations/guide/spanelsko-fuerteventura"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

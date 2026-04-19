@@ -1,0 +1,1507 @@
+{
+  "id": 879,
+  "documentId": "olxcpci2gw23pkwkacjqzacq",
+  "name": "Berlín",
+  "slug": "berlin",
+  "intro": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Částečně moderní a zároveň historické hlavní město Německa natolik prosáklé nedávnou hrůznou dobou. Většina berlínských památek a zajímavostí upozorňuje právě na dění 20. století. Nečekejte zde útulné uličky a romantická zákoutí, spíš se jedná o moderní město působící studeným dojmem plným vzpomínek. K návštěvě toho hlavního v berlíně vám postačí zhruba 2 – 3 dny."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Doprava"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Do"
+        },
+        {
+          "type": "text",
+          "text": "Berlína",
+          "url": "https://lowcost-traveling.com/evropske-statu/berlin/"
+        },
+        {
+          "type": "text",
+          "text": "se dostane snadno vlakem z Prahy, nebo dálkovým autobusem, který jezdí přímo do centra. Také se sem můžete dostat letadlem na jedno z letišť (Tegel, Schönefeld) a z nich poté vlakem, nebo autobusem do centra."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Po Berlíně se můžete pohybovat samozřejmě pěšky, nebo pomocí MHD. V rámci MHD můžete využít místních vlaků, autobusů, nebo metra. V automatu, nebo trafice zakoupíte lístek s časovou platností na určitý počet pásem, který po nástupu označíte."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Místa k navštívení"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "children": [
+        {
+          "type": "text",
+          "text": "Braniborská brána",
+          "url": "https://goo.gl/maps/ReQemRw8A5PzbG129"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Jeno z ikonických míst Berlína je právě Braniborská brána. Naleznete ji v centru města na začátku rozlehlého parku Tiergarten. Jedná se o mohutnou pískovcovou bránu z roku 1791. Brána je volně přístupná."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20180418_152349-1024x768.jpg",
+        "alternativeText": "Braniburská brána, Berlín.",
+        "url": "/uploads/20180418_152349_1024x768_85f0309025.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20180418_152349-1024x768.jpg",
+            "hash": "thumbnail_20180418_152349_1024x768_85f0309025",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 6.96,
+            "sizeInBytes": 6960,
+            "url": "/uploads/thumbnail_20180418_152349_1024x768_85f0309025.jpg"
+          },
+          "small": {
+            "name": "small_20180418_152349-1024x768.jpg",
+            "hash": "small_20180418_152349_1024x768_85f0309025",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 32.69,
+            "sizeInBytes": 32693,
+            "url": "/uploads/small_20180418_152349_1024x768_85f0309025.jpg"
+          },
+          "large": {
+            "name": "large_20180418_152349-1024x768.jpg",
+            "hash": "large_20180418_152349_1024x768_85f0309025",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 113.07,
+            "sizeInBytes": 113068,
+            "url": "/uploads/large_20180418_152349_1024x768_85f0309025.jpg"
+          },
+          "medium": {
+            "name": "medium_20180418_152349-1024x768.jpg",
+            "hash": "medium_20180418_152349_1024x768_85f0309025",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 67.87,
+            "sizeInBytes": 67872,
+            "url": "/uploads/medium_20180418_152349_1024x768_85f0309025.jpg"
+          }
+        },
+        "hash": "20180418_152349_1024x768_85f0309025",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 120.84,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:59:45.086Z",
+        "updatedAt": "2026-02-17T12:59:45.086Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "children": [
+        {
+          "type": "text",
+          "text": "Tiergarten",
+          "url": "https://goo.gl/maps/3BEkUtvnQCB9Ab4XA"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Jedná se o rozlehlý park navazující na Braniborskou bránu. Uvnitř parku naleznete několik památníků, soch, jezírek, fontán a také trochu klidu v centru města. Jedním z těch větších památníků je"
+        },
+        {
+          "type": "text",
+          "text": "Soviet war memorial",
+          "url": "https://goo.gl/maps/79RwDawC3KcJdd4Z6",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "text": ", kde naleznete i několik tanků."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20180418_162521-1024x768.jpg",
+        "alternativeText": "Soviet war memorial, Berlín.",
+        "url": "/uploads/20180418_162521_1024x768_efc2ca0f64.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20180418_162521-1024x768.jpg",
+            "hash": "thumbnail_20180418_162521_1024x768_efc2ca0f64",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.03,
+            "sizeInBytes": 8025,
+            "url": "/uploads/thumbnail_20180418_162521_1024x768_efc2ca0f64.jpg"
+          },
+          "small": {
+            "name": "small_20180418_162521-1024x768.jpg",
+            "hash": "small_20180418_162521_1024x768_efc2ca0f64",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 41.56,
+            "sizeInBytes": 41559,
+            "url": "/uploads/small_20180418_162521_1024x768_efc2ca0f64.jpg"
+          },
+          "medium": {
+            "name": "medium_20180418_162521-1024x768.jpg",
+            "hash": "medium_20180418_162521_1024x768_efc2ca0f64",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 91.96,
+            "sizeInBytes": 91963,
+            "url": "/uploads/medium_20180418_162521_1024x768_efc2ca0f64.jpg"
+          },
+          "large": {
+            "name": "large_20180418_162521-1024x768.jpg",
+            "hash": "large_20180418_162521_1024x768_efc2ca0f64",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 158.37,
+            "sizeInBytes": 158372,
+            "url": "/uploads/large_20180418_162521_1024x768_efc2ca0f64.jpg"
+          }
+        },
+        "hash": "20180418_162521_1024x768_efc2ca0f64",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 171.46,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:59:45.602Z",
+        "updatedAt": "2026-02-17T12:59:45.602Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "children": [
+        {
+          "type": "text",
+          "text": "Židovský památník",
+          "url": "https://goo.gl/maps/pEwLiHRfS9ZYPSRs7"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Tento rozlehlý památník holokaustu je tvořen 2711 kvádry různých velikostí. Otevřen byl v roce 2005 a složí jako upomínka na židovské oběti holokaustu. Pomník je volně přístupný 24 h denně. Jelikož se jedná o pietní místo, nesmí se po kvádrech lézt, malovat, nebo zde kouřit. Pod povrchem se nachází ještě muzeum."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20180418_154115-1024x768.jpg",
+        "alternativeText": "Židovský pomník, Berlín.",
+        "url": "/uploads/20180418_154115_1024x768_5cef1694a5.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20180418_154115-1024x768.jpg",
+            "hash": "thumbnail_20180418_154115_1024x768_5cef1694a5",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.9,
+            "sizeInBytes": 8900,
+            "url": "/uploads/thumbnail_20180418_154115_1024x768_5cef1694a5.jpg"
+          },
+          "small": {
+            "name": "small_20180418_154115-1024x768.jpg",
+            "hash": "small_20180418_154115_1024x768_5cef1694a5",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 44.59,
+            "sizeInBytes": 44587,
+            "url": "/uploads/small_20180418_154115_1024x768_5cef1694a5.jpg"
+          },
+          "medium": {
+            "name": "medium_20180418_154115-1024x768.jpg",
+            "hash": "medium_20180418_154115_1024x768_5cef1694a5",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 95.7,
+            "sizeInBytes": 95700,
+            "url": "/uploads/medium_20180418_154115_1024x768_5cef1694a5.jpg"
+          },
+          "large": {
+            "name": "large_20180418_154115-1024x768.jpg",
+            "hash": "large_20180418_154115_1024x768_5cef1694a5",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 161.59,
+            "sizeInBytes": 161592,
+            "url": "/uploads/large_20180418_154115_1024x768_5cef1694a5.jpg"
+          }
+        },
+        "hash": "20180418_154115_1024x768_5cef1694a5",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 172,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:59:46.025Z",
+        "updatedAt": "2026-02-17T12:59:46.025Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "children": [
+        {
+          "type": "text",
+          "text": "Checkpoint Charlie",
+          "url": "https://goo.gl/maps/3qM4SAu1U5AxZSQA6"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Checkpoint Charlie je bývalý hraniční přechod v tehdy rozděleném Berlíně. Na tomto místě bylo možné přecházet mezi sovětskou a americkou částí Berlína. Přechod byl samozřejmě ostře střežen a přejít z jedné části do druhé nemohl kdokoli. Místo je dnes volně přístupné, bohužel se ale nachází uprostřed rušné ulice."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20180418_182426-1024x768.jpg",
+        "alternativeText": "Checkpoint Charlie, Berlín.",
+        "url": "/uploads/20180418_182426_1024x768_a130fc00de.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20180418_182426-1024x768.jpg",
+            "hash": "thumbnail_20180418_182426_1024x768_a130fc00de",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.1,
+            "sizeInBytes": 9099,
+            "url": "/uploads/thumbnail_20180418_182426_1024x768_a130fc00de.jpg"
+          },
+          "small": {
+            "name": "small_20180418_182426-1024x768.jpg",
+            "hash": "small_20180418_182426_1024x768_a130fc00de",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 42.97,
+            "sizeInBytes": 42974,
+            "url": "/uploads/small_20180418_182426_1024x768_a130fc00de.jpg"
+          },
+          "medium": {
+            "name": "medium_20180418_182426-1024x768.jpg",
+            "hash": "medium_20180418_182426_1024x768_a130fc00de",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 87.11,
+            "sizeInBytes": 87105,
+            "url": "/uploads/medium_20180418_182426_1024x768_a130fc00de.jpg"
+          },
+          "large": {
+            "name": "large_20180418_182426-1024x768.jpg",
+            "hash": "large_20180418_182426_1024x768_a130fc00de",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 141.29,
+            "sizeInBytes": 141288,
+            "url": "/uploads/large_20180418_182426_1024x768_a130fc00de.jpg"
+          }
+        },
+        "hash": "20180418_182426_1024x768_a130fc00de",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 149.11,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:59:46.352Z",
+        "updatedAt": "2026-02-17T12:59:46.352Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "children": [
+        {
+          "type": "text",
+          "text": "Berlínská zeď",
+          "url": "https://goo.gl/maps/XLk6YJUCrUoPhbEP6"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "I přes to, že je do velké míry zeď, která dělila Berlín, odstraněna, stále můžete v ulicích města najít její pozůstatky. Úlomky, nebo celé kusy zdi dnes slouží jako upomínka na doby, kdy byl Berlín rozdělen. Tam kde zeď chybí úplně, můžete alespoň vidět kamenný pruh na zemi, který značí, kudy zeď vedla."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20180418_170224-768x1024.jpg",
+        "alternativeText": "Zbytky Berlínské zdi.",
+        "url": "/uploads/20180418_170224_768x1024_9b1f2e6fbb.jpg",
+        "width": 768,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20180418_170224-768x1024.jpg",
+            "hash": "thumbnail_20180418_170224_768x1024_9b1f2e6fbb",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 5.52,
+            "sizeInBytes": 5524,
+            "url": "/uploads/thumbnail_20180418_170224_768x1024_9b1f2e6fbb.jpg"
+          },
+          "small": {
+            "name": "small_20180418_170224-768x1024.jpg",
+            "hash": "small_20180418_170224_768x1024_9b1f2e6fbb",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 45.86,
+            "sizeInBytes": 45862,
+            "url": "/uploads/small_20180418_170224_768x1024_9b1f2e6fbb.jpg"
+          },
+          "medium": {
+            "name": "medium_20180418_170224-768x1024.jpg",
+            "hash": "medium_20180418_170224_768x1024_9b1f2e6fbb",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 98.82,
+            "sizeInBytes": 98817,
+            "url": "/uploads/medium_20180418_170224_768x1024_9b1f2e6fbb.jpg"
+          },
+          "large": {
+            "name": "large_20180418_170224-768x1024.jpg",
+            "hash": "large_20180418_170224_768x1024_9b1f2e6fbb",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 166.26,
+            "sizeInBytes": 166255,
+            "url": "/uploads/large_20180418_170224_768x1024_9b1f2e6fbb.jpg"
+          }
+        },
+        "hash": "20180418_170224_768x1024_9b1f2e6fbb",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 177.52,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:59:46.871Z",
+        "updatedAt": "2026-02-17T12:59:46.871Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20180418_170210-768x1024.jpg",
+        "alternativeText": "Pomyslné vymezení Berlínské zdi.",
+        "url": "/uploads/20180418_170210_768x1024_d676389d4d.jpg",
+        "width": 768,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20180418_170210-768x1024.jpg",
+            "hash": "thumbnail_20180418_170210_768x1024_d676389d4d",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 4.43,
+            "sizeInBytes": 4433,
+            "url": "/uploads/thumbnail_20180418_170210_768x1024_d676389d4d.jpg"
+          },
+          "small": {
+            "name": "small_20180418_170210-768x1024.jpg",
+            "hash": "small_20180418_170210_768x1024_d676389d4d",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 46.61,
+            "sizeInBytes": 46614,
+            "url": "/uploads/small_20180418_170210_768x1024_d676389d4d.jpg"
+          },
+          "medium": {
+            "name": "medium_20180418_170210-768x1024.jpg",
+            "hash": "medium_20180418_170210_768x1024_d676389d4d",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 110.91,
+            "sizeInBytes": 110914,
+            "url": "/uploads/medium_20180418_170210_768x1024_d676389d4d.jpg"
+          },
+          "large": {
+            "name": "large_20180418_170210-768x1024.jpg",
+            "hash": "large_20180418_170210_768x1024_d676389d4d",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 196.93,
+            "sizeInBytes": 196931,
+            "url": "/uploads/large_20180418_170210_768x1024_d676389d4d.jpg"
+          }
+        },
+        "hash": "20180418_170210_768x1024_d676389d4d",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 207.15,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:59:47.261Z",
+        "updatedAt": "2026-02-17T12:59:47.261Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "children": [
+        {
+          "type": "text",
+          "text": "Budova Říšského sněmu",
+          "url": "https://goo.gl/maps/rfKX7iwfzMZn5GKX9"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Součástí budovy je i moderní skleněná kopule, která je návštěvníkům přístupná. Ta slouží jako vyhlídka a nabízí hezký výhled na město. Před budovou se nachází park vhodný k odpočinku."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20180418_151606-1024x768.jpg",
+        "alternativeText": "Budova Říšského sněmu, Berlín.",
+        "url": "/uploads/20180418_151606_1024x768_94052972bd.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20180418_151606-1024x768.jpg",
+            "hash": "thumbnail_20180418_151606_1024x768_94052972bd",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 7.24,
+            "sizeInBytes": 7235,
+            "url": "/uploads/thumbnail_20180418_151606_1024x768_94052972bd.jpg"
+          },
+          "small": {
+            "name": "small_20180418_151606-1024x768.jpg",
+            "hash": "small_20180418_151606_1024x768_94052972bd",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 35.84,
+            "sizeInBytes": 35844,
+            "url": "/uploads/small_20180418_151606_1024x768_94052972bd.jpg"
+          },
+          "medium": {
+            "name": "medium_20180418_151606-1024x768.jpg",
+            "hash": "medium_20180418_151606_1024x768_94052972bd",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 77.38,
+            "sizeInBytes": 77376,
+            "url": "/uploads/medium_20180418_151606_1024x768_94052972bd.jpg"
+          },
+          "large": {
+            "name": "large_20180418_151606-1024x768.jpg",
+            "hash": "large_20180418_151606_1024x768_94052972bd",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 131.4,
+            "sizeInBytes": 131403,
+            "url": "/uploads/large_20180418_151606_1024x768_94052972bd.jpg"
+          }
+        },
+        "hash": "20180418_151606_1024x768_94052972bd",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 140.82,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:59:47.590Z",
+        "updatedAt": "2026-02-17T12:59:47.590Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "children": [
+        {
+          "type": "text",
+          "text": "Alexanderplatz",
+          "url": "https://goo.gl/maps/YQgvBKEzdCDZvrUc8"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Jedná se o centrální berlínské náměstí. Hlavní atrakcí jsou zde velké hodiny – Weltzeituhr, které ukazují čas ve 148 městech světa napříč časovými pásmy. Hodiny pochází z roku 1969. Na jejich vrcholu naleznete rotující sluneční soustavu."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Dále zde naleznete velké nákupní centrum Alexa, poblíž můžete navštívit červenou radnici a také druhý nejstarší kostel v Berlíně – Marienkirche, který pochází z roku 1250. Vedle kostela se nachází slavná fontána Neptunbunnen, která také stojí za vidění. Nepřehlédnutelnou je i televizní věž Fernsehturm."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20180423_134119-1024x768.jpg",
+        "alternativeText": "Hodiny Weltzeituhr na náměstí Alexanderplatz, Berlín.",
+        "url": "/uploads/20180423_134119_1024x768_65fba5a306.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20180423_134119-1024x768.jpg",
+            "hash": "thumbnail_20180423_134119_1024x768_65fba5a306",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.53,
+            "sizeInBytes": 8531,
+            "url": "/uploads/thumbnail_20180423_134119_1024x768_65fba5a306.jpg"
+          },
+          "small": {
+            "name": "small_20180423_134119-1024x768.jpg",
+            "hash": "small_20180423_134119_1024x768_65fba5a306",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 41.73,
+            "sizeInBytes": 41725,
+            "url": "/uploads/small_20180423_134119_1024x768_65fba5a306.jpg"
+          },
+          "medium": {
+            "name": "medium_20180423_134119-1024x768.jpg",
+            "hash": "medium_20180423_134119_1024x768_65fba5a306",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 86.2,
+            "sizeInBytes": 86203,
+            "url": "/uploads/medium_20180423_134119_1024x768_65fba5a306.jpg"
+          },
+          "large": {
+            "name": "large_20180423_134119-1024x768.jpg",
+            "hash": "large_20180423_134119_1024x768_65fba5a306",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 141.85,
+            "sizeInBytes": 141849,
+            "url": "/uploads/large_20180423_134119_1024x768_65fba5a306.jpg"
+          }
+        },
+        "hash": "20180423_134119_1024x768_65fba5a306",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 150.78,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:59:47.934Z",
+        "updatedAt": "2026-02-17T12:59:47.934Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20180423_152543-1024x768.jpg",
+        "alternativeText": "Marienkirche a fontána Neptunbrunnen, Berlín.",
+        "url": "/uploads/20180423_152543_1024x768_7ed87643df.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20180423_152543-1024x768.jpg",
+            "hash": "thumbnail_20180423_152543_1024x768_7ed87643df",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 7.78,
+            "sizeInBytes": 7779,
+            "url": "/uploads/thumbnail_20180423_152543_1024x768_7ed87643df.jpg"
+          },
+          "small": {
+            "name": "small_20180423_152543-1024x768.jpg",
+            "hash": "small_20180423_152543_1024x768_7ed87643df",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 39.46,
+            "sizeInBytes": 39458,
+            "url": "/uploads/small_20180423_152543_1024x768_7ed87643df.jpg"
+          },
+          "medium": {
+            "name": "medium_20180423_152543-1024x768.jpg",
+            "hash": "medium_20180423_152543_1024x768_7ed87643df",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 84.84,
+            "sizeInBytes": 84839,
+            "url": "/uploads/medium_20180423_152543_1024x768_7ed87643df.jpg"
+          },
+          "large": {
+            "name": "large_20180423_152543-1024x768.jpg",
+            "hash": "large_20180423_152543_1024x768_7ed87643df",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 142.48,
+            "sizeInBytes": 142477,
+            "url": "/uploads/large_20180423_152543_1024x768_7ed87643df.jpg"
+          }
+        },
+        "hash": "20180423_152543_1024x768_7ed87643df",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 151.85,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:59:48.273Z",
+        "updatedAt": "2026-02-17T12:59:48.273Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20180423_152216-1024x768.jpg",
+        "alternativeText": "Červená radnice, Berlín.",
+        "url": "/uploads/20180423_152216_1024x768_3148d5087a.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20180423_152216-1024x768.jpg",
+            "hash": "thumbnail_20180423_152216_1024x768_3148d5087a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 5.64,
+            "sizeInBytes": 5642,
+            "url": "/uploads/thumbnail_20180423_152216_1024x768_3148d5087a.jpg"
+          },
+          "medium": {
+            "name": "medium_20180423_152216-1024x768.jpg",
+            "hash": "medium_20180423_152216_1024x768_3148d5087a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 58.74,
+            "sizeInBytes": 58738,
+            "url": "/uploads/medium_20180423_152216_1024x768_3148d5087a.jpg"
+          },
+          "small": {
+            "name": "small_20180423_152216-1024x768.jpg",
+            "hash": "small_20180423_152216_1024x768_3148d5087a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 26.77,
+            "sizeInBytes": 26770,
+            "url": "/uploads/small_20180423_152216_1024x768_3148d5087a.jpg"
+          },
+          "large": {
+            "name": "large_20180423_152216-1024x768.jpg",
+            "hash": "large_20180423_152216_1024x768_3148d5087a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 99.16,
+            "sizeInBytes": 99157,
+            "url": "/uploads/large_20180423_152216_1024x768_3148d5087a.jpg"
+          }
+        },
+        "hash": "20180423_152216_1024x768_3148d5087a",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 105.24,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:59:48.597Z",
+        "updatedAt": "2026-02-17T12:59:48.597Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "children": [
+        {
+          "type": "text",
+          "text": "Berliner Fernsehturm",
+          "url": "https://goo.gl/maps/M1QoBbyDMwiwJhxW7"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Televizní věž otevřená roku 1969 je nepřehlédnutelnou a hojně navštěvovanou stavbou Berlína. Nachází se na náměstí Alexanderplatz. Se svými 368mi metry je nepřehlédnutelnou dominantou města. V kopuli se nachází restaurace s výhledy na město jako z letadla a vyhlídková plošina. Kopule se neustále otáčí. Jednu otočku provede za 20 minut a vy si tak můžete vychutnat výhled kolem dokola."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20180423_152802-768x1024.jpg",
+        "alternativeText": "Fernsehturm, Berlin.",
+        "url": "/uploads/20180423_152802_768x1024_8a868cdc8a.jpg",
+        "width": 768,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20180423_152802-768x1024.jpg",
+            "hash": "thumbnail_20180423_152802_768x1024_8a868cdc8a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 3.62,
+            "sizeInBytes": 3620,
+            "url": "/uploads/thumbnail_20180423_152802_768x1024_8a868cdc8a.jpg"
+          },
+          "small": {
+            "name": "small_20180423_152802-768x1024.jpg",
+            "hash": "small_20180423_152802_768x1024_8a868cdc8a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 22.81,
+            "sizeInBytes": 22811,
+            "url": "/uploads/small_20180423_152802_768x1024_8a868cdc8a.jpg"
+          },
+          "medium": {
+            "name": "medium_20180423_152802-768x1024.jpg",
+            "hash": "medium_20180423_152802_768x1024_8a868cdc8a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 45.59,
+            "sizeInBytes": 45591,
+            "url": "/uploads/medium_20180423_152802_768x1024_8a868cdc8a.jpg"
+          },
+          "large": {
+            "name": "large_20180423_152802-768x1024.jpg",
+            "hash": "large_20180423_152802_768x1024_8a868cdc8a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 73.27,
+            "sizeInBytes": 73269,
+            "url": "/uploads/large_20180423_152802_768x1024_8a868cdc8a.jpg"
+          }
+        },
+        "hash": "20180423_152802_768x1024_8a868cdc8a",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 77.33,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:59:48.911Z",
+        "updatedAt": "2026-02-17T12:59:48.911Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "children": [
+        {
+          "type": "text",
+          "text": "Potsdamer Platz",
+          "url": "https://goo.gl/maps/xKAg7HoR9v2pJ6Ci6"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Potsdamer Platz – Postupimské náměstí je další známé náměstí Berlína. Právě tudy procházela Berlínská zeď takže tu stále můžete vidět její pozůstatky. Dále zde naleznete také chodník slávy, nebo první evropský semafor, který ručně ovládal policista. Dnes se jedná o velice moderní a rušné náměstí s bohatým nočním životem."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "children": [
+        {
+          "type": "text",
+          "text": "Gendermenmarkt",
+          "url": "https://goo.gl/maps/msKDLyZ3bU7ZPpfD7"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Historické náměstí nazývané také jako náměstí tří paláců. Dominuje mu Koncertní palác uprostřed a dále pak po stranách Francouzská katedrála a Německá katedrála. Náměstí pochází ze 17. století, ale během 2. světové války bylo značně poničeno a následně prošlo velkou rekonstrukcí."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20180418_172944-1024x768.jpg",
+        "alternativeText": "Gendermenmarkt, Berlín.",
+        "url": "/uploads/20180418_172944_1024x768_6980d4bb38.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20180418_172944-1024x768.jpg",
+            "hash": "thumbnail_20180418_172944_1024x768_6980d4bb38",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 6.03,
+            "sizeInBytes": 6026,
+            "url": "/uploads/thumbnail_20180418_172944_1024x768_6980d4bb38.jpg"
+          },
+          "medium": {
+            "name": "medium_20180418_172944-1024x768.jpg",
+            "hash": "medium_20180418_172944_1024x768_6980d4bb38",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 58.7,
+            "sizeInBytes": 58701,
+            "url": "/uploads/medium_20180418_172944_1024x768_6980d4bb38.jpg"
+          },
+          "small": {
+            "name": "small_20180418_172944-1024x768.jpg",
+            "hash": "small_20180418_172944_1024x768_6980d4bb38",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 27.84,
+            "sizeInBytes": 27843,
+            "url": "/uploads/small_20180418_172944_1024x768_6980d4bb38.jpg"
+          },
+          "large": {
+            "name": "large_20180418_172944-1024x768.jpg",
+            "hash": "large_20180418_172944_1024x768_6980d4bb38",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 98.99,
+            "sizeInBytes": 98991,
+            "url": "/uploads/large_20180418_172944_1024x768_6980d4bb38.jpg"
+          }
+        },
+        "hash": "20180418_172944_1024x768_6980d4bb38",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 105.23,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:59:49.243Z",
+        "updatedAt": "2026-02-17T12:59:49.243Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "children": [
+        {
+          "type": "text",
+          "text": "Berlínský dóm",
+          "url": "https://goo.gl/maps/RADDZeHMqBBRwHm7A"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Monumentální katedrálu pocházející z roku 1451 naleznete na malém ostrově uprostřed řeky Sprévy v centru města. V katedrále se konají koncerty a bohoslužby, ale lze ji za poplatek navštívit i jako turista. Před katedrálou se nachází travnatý park vhodný k odpočinku během teplých dní. Vedle katedrály naleznete budovu Altes Museum s antickými sbírkami, které lze také navštívit."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20180423_155144-1024x768.jpg",
+        "alternativeText": "Berlínský dóm.",
+        "url": "/uploads/20180423_155144_1024x768_2e6120c844.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20180423_155144-1024x768.jpg",
+            "hash": "thumbnail_20180423_155144_1024x768_2e6120c844",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 10.14,
+            "sizeInBytes": 10144,
+            "url": "/uploads/thumbnail_20180423_155144_1024x768_2e6120c844.jpg"
+          },
+          "small": {
+            "name": "small_20180423_155144-1024x768.jpg",
+            "hash": "small_20180423_155144_1024x768_2e6120c844",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 49.02,
+            "sizeInBytes": 49019,
+            "url": "/uploads/small_20180423_155144_1024x768_2e6120c844.jpg"
+          },
+          "medium": {
+            "name": "medium_20180423_155144-1024x768.jpg",
+            "hash": "medium_20180423_155144_1024x768_2e6120c844",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 102.65,
+            "sizeInBytes": 102651,
+            "url": "/uploads/medium_20180423_155144_1024x768_2e6120c844.jpg"
+          },
+          "large": {
+            "name": "large_20180423_155144-1024x768.jpg",
+            "hash": "large_20180423_155144_1024x768_2e6120c844",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 169.56,
+            "sizeInBytes": 169560,
+            "url": "/uploads/large_20180423_155144_1024x768_2e6120c844.jpg"
+          }
+        },
+        "hash": "20180423_155144_1024x768_2e6120c844",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 180.91,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:59:49.600Z",
+        "updatedAt": "2026-02-17T12:59:49.600Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20180423_160430-1024x768.jpg",
+        "alternativeText": "Altes Museum, Berlín.",
+        "url": "/uploads/20180423_160430_1024x768_79d1acfb1e.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20180423_160430-1024x768.jpg",
+            "hash": "thumbnail_20180423_160430_1024x768_79d1acfb1e",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 6.33,
+            "sizeInBytes": 6333,
+            "url": "/uploads/thumbnail_20180423_160430_1024x768_79d1acfb1e.jpg"
+          },
+          "small": {
+            "name": "small_20180423_160430-1024x768.jpg",
+            "hash": "small_20180423_160430_1024x768_79d1acfb1e",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 30.57,
+            "sizeInBytes": 30572,
+            "url": "/uploads/small_20180423_160430_1024x768_79d1acfb1e.jpg"
+          },
+          "large": {
+            "name": "large_20180423_160430-1024x768.jpg",
+            "hash": "large_20180423_160430_1024x768_79d1acfb1e",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 115.86,
+            "sizeInBytes": 115862,
+            "url": "/uploads/large_20180423_160430_1024x768_79d1acfb1e.jpg"
+          },
+          "medium": {
+            "name": "medium_20180423_160430-1024x768.jpg",
+            "hash": "medium_20180423_160430_1024x768_79d1acfb1e",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 67.64,
+            "sizeInBytes": 67635,
+            "url": "/uploads/medium_20180423_160430_1024x768_79d1acfb1e.jpg"
+          }
+        },
+        "hash": "20180423_160430_1024x768_79d1acfb1e",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 123.19,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:59:50.104Z",
+        "updatedAt": "2026-02-17T12:59:50.104Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "children": [
+        {
+          "type": "text",
+          "text": "Tempelhof bývalé letiště",
+          "url": "https://goo.gl/maps/MfZvrn2H4ZUjW31K9"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Prostory bývalého letiště Tempelhof, které se uzavřelo v roce 2008 dnes slouží jako volné prostranství pro místní. Letiště je volně přístupné a lidé ho tak využívají jako velké sportoviště, cyklostezku, místo k setkávání a k pořádání nejrůznějších akcí. I vy se tam můžete volně procházet po nekonečné ranveji."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20180418_193913-1024x768.jpg",
+        "alternativeText": "Tempelhof bývalé letiště, Berlín.",
+        "url": "/uploads/20180418_193913_1024x768_d2760c057c.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20180418_193913-1024x768.jpg",
+            "hash": "thumbnail_20180418_193913_1024x768_d2760c057c",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 2.69,
+            "sizeInBytes": 2692,
+            "url": "/uploads/thumbnail_20180418_193913_1024x768_d2760c057c.jpg"
+          },
+          "large": {
+            "name": "large_20180418_193913-1024x768.jpg",
+            "hash": "large_20180418_193913_1024x768_d2760c057c",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 61.74,
+            "sizeInBytes": 61738,
+            "url": "/uploads/large_20180418_193913_1024x768_d2760c057c.jpg"
+          },
+          "small": {
+            "name": "small_20180418_193913-1024x768.jpg",
+            "hash": "small_20180418_193913_1024x768_d2760c057c",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 14.3,
+            "sizeInBytes": 14299,
+            "url": "/uploads/small_20180418_193913_1024x768_d2760c057c.jpg"
+          },
+          "medium": {
+            "name": "medium_20180418_193913-1024x768.jpg",
+            "hash": "medium_20180418_193913_1024x768_d2760c057c",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 34.18,
+            "sizeInBytes": 34181,
+            "url": "/uploads/medium_20180418_193913_1024x768_d2760c057c.jpg"
+          }
+        },
+        "hash": "20180418_193913_1024x768_d2760c057c",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 65.22,
+        "provider": "local",
+        "createdAt": "2026-02-17T12:59:50.478Z",
+        "updatedAt": "2026-02-17T12:59:50.478Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-02-17T12:59:50.833Z",
+  "updatedAt": "2026-02-17T12:59:50.833Z",
+  "publishedAt": "2026-02-17T12:59:50.862Z",
+  "continent": "europe",
+  "contentLang": "cs",
+  "flagEmoji": "🇩🇪",
+  "timezone": "CET (UTC+1)",
+  "languages": [
+    "German"
+  ],
+  "currencyCode": "EUR",
+  "currencyName": "Euro",
+  "currencySymbol": "€",
+  "budgetPerDayBudget": 50,
+  "budgetPerDayMidRange": 100,
+  "budgetPerDayLuxury": 220,
+  "bestTimeToVisit": "May to September",
+  "visaInfo": "EU citizens: free movement",
+  "destinationType": "city",
+  "cover": {
+    "id": 8051,
+    "documentId": "qgp0exm1u7blfns9skahg51a",
+    "name": "cover-1771333190664-ag1tfd.jpg",
+    "alternativeText": "Berlín",
+    "caption": null,
+    "width": 1020,
+    "height": 765,
+    "formats": {
+      "thumbnail": {
+        "name": "thumbnail_cover-1771333190664-ag1tfd.jpg",
+        "hash": "thumbnail_cover_1771333190664_ag1tfd_1d7d4599b3",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "path": null,
+        "width": 208,
+        "height": 156,
+        "size": 7.24,
+        "sizeInBytes": 7239,
+        "url": "/uploads/thumbnail_cover_1771333190664_ag1tfd_1d7d4599b3.jpg"
+      },
+      "small": {
+        "name": "small_cover-1771333190664-ag1tfd.jpg",
+        "hash": "small_cover_1771333190664_ag1tfd_1d7d4599b3",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "path": null,
+        "width": 500,
+        "height": 375,
+        "size": 35.51,
+        "sizeInBytes": 35508,
+        "url": "/uploads/small_cover_1771333190664_ag1tfd_1d7d4599b3.jpg"
+      },
+      "medium": {
+        "name": "medium_cover-1771333190664-ag1tfd.jpg",
+        "hash": "medium_cover_1771333190664_ag1tfd_1d7d4599b3",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "path": null,
+        "width": 750,
+        "height": 563,
+        "size": 76.02,
+        "sizeInBytes": 76024,
+        "url": "/uploads/medium_cover_1771333190664_ag1tfd_1d7d4599b3.jpg"
+      },
+      "large": {
+        "name": "large_cover-1771333190664-ag1tfd.jpg",
+        "hash": "large_cover_1771333190664_ag1tfd_1d7d4599b3",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "path": null,
+        "width": 1000,
+        "height": 750,
+        "size": 127.69,
+        "sizeInBytes": 127686,
+        "url": "/uploads/large_cover_1771333190664_ag1tfd_1d7d4599b3.jpg"
+      }
+    },
+    "hash": "cover_1771333190664_ag1tfd_1d7d4599b3",
+    "ext": ".jpg",
+    "mime": "image/jpeg",
+    "size": 136.2,
+    "url": "/uploads/cover_1771333190664_ag1tfd_1d7d4599b3.jpg",
+    "previewUrl": null,
+    "provider": "local",
+    "provider_metadata": null,
+    "createdAt": "2026-02-17T12:59:50.808Z",
+    "updatedAt": "2026-02-17T12:59:50.808Z",
+    "publishedAt": "2026-02-17T12:59:50.808Z"
+  }
+}

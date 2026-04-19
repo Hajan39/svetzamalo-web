@@ -1,0 +1,279 @@
+{
+  "title": "Vikend v destinaci Řím 🇮🇹: plan na 3 dny za malo penez",
+  "slug": "vikend-v-rim",
+  "excerpt": "3 dny v destinaci Řím - den po dni plan, co videt, kde jist a kolik to stoji.",
+  "articleType": "itinerary",
+  "contentLang": "cs",
+  "tags": [
+    "Řím",
+    "vikend",
+    "plan cesty",
+    "levne cestovani",
+    "3 dny"
+  ],
+  "destinationSlug": "rim",
+  "publish": true,
+  "readingTime": 4,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Rim za vikend je klasika, ale musis to dobre naplanlovat - je toho strasne moc. Tenhle plan ti pomuze videt to nejdulezitejsi bez zbytecneho stresu."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Patek: Stredoveke centrum"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Prilet a transfer do centra (vlak Leonardo Express nebo bus Terravision)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Prochazka pres Piazza Navona a Pantheon"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Fontana di Trevi (jdi vecer - min lidi, krasne nasvicena)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Vecere v Trastevere - autenticke rimske trattorie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Sobota: Anticke památky"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Rano: Koloseum + Forum Romanum + Palatin (koupit vstupenku predem!)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Obed: pizza al taglio u bonci nebo rivendita"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Odpoledne: Spanelske schody, Piazza del Popolo"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Vatikan: Sv. Petr a namesti (bazilika zdarma, muzeum 17 EUR)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Vecere: cacio e pepe v lokalni trattii"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Nedele: Ruzne ctvrti a odpocinek"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Snidane: cappuccino a cornetto ve stojacim baru"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Aventinsky klicovou dirkou pohledy na Sv. Petra"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Testaccio - rimska ctrvrt pro mistni, skvele jidlo"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Gelato v jedne z top gelaterii (dalek od pamatek)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Posledni prochazka kolem Tibery"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Kolik to stoji?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Pocitej s 4000-6000 Kc na vikend (bez letenek). Hostel 700-1000 Kc/noc, jidlo 400-600 Kc/den."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Tipy na zaver"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Letenky hledej 2-3 mesice predem, sleduj akce u Wizz Air a Ryanair"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Ubytko pres Booking.com nebo Hostelworld - cim driv, tim levneji"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Vezmi si jen prirucni zavazadlo - usetris za check-in"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-rim",
+          "children": [
+            {
+              "type": "text",
+              "text": "Prectisi cely pruvodce: Řím"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

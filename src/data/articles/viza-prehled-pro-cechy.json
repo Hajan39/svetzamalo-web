@@ -1,0 +1,692 @@
+{
+  "title": "Pro Čechy: víza a praktický přehled destinací",
+  "slug": "viza-prehled-pro-cechy",
+  "excerpt": "Kam potřebujete víza? Kde stačí pas? Přehled vízových požadavků pro české cestovní pasy - jednoduše a přehledně.",
+  "articleType": "practical-info",
+  "contentLang": "cs",
+  "tags": [
+    "víza",
+    "Česko",
+    "praktické info",
+    "cestovní doklady"
+  ],
+  "publish": true,
+  "readingTime": 5,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Kam potřebujete víza? Kde vám stačí pas? A kde to vyřídíte přímo na letišti? Tady je přehled vízových požadavků pro české cestovní pasy - přehledně a bez zbytečného balastu."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "🇪🇺 Volný pohyb (EU/Schengen)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "S českým pasem se po většině Evropy pohybujete volně. Stačí platný doklad totožnosti."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Andorra",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: free movement"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Berlín",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: free movement"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Francie",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: free movement"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Itálie sever",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: free movement"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Lucemburk",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: free movement"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Monaco",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: free movement"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Oslo",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: free movement"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Paříž",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: free movement"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Portoriko",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: visa-free (US territory)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Řím",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: free movement"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "San Marino",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: no visa needed"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Slovinsko",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: free movement"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Španělsko – Fuerteventura",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: free movement"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Španělsko – Gran Canaria",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: free movement"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Stockholm",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: free movement"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Švýcarsko",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: free movement"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Vatikán",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - EU citizens: no visa needed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "🛬 Víza na letišti (visa on arrival)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Do těchto zemí nepotřebujete víza předem - vyřídíte je přímo na letišti po příletu. Většinou stačí pas s dostatečnou platností."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Bali",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: visa on arrival 30 days"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Dominikána jih (Santo Domingo, Boca Chica)",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: tourist card on arrival"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Dominikána jihovýchod (Bayahibe, Dominicus a Saona)",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: tourist card on arrival"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Dominikána jihozápad (Barahona, Enriquillo, Pedernales)",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: tourist card on arrival"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Dominikána sever (Cabarete, Sosua, Puerto Plata)",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: tourist card on arrival"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Dominikána střed (Jarabacoa a Constanza)",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: tourist card on arrival"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Dominikána východ (Punta Cana, Samana, Las Galeras, Las Terenas, Lagoons)",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: tourist card on arrival"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Dominikánská republika",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: tourist card on arrival"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Gili Trawangan, Gili Meno a Gili Air",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: visa on arrival 30 days"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Lombok",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: visa on arrival 30 days"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nusa Penida",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: visa on arrival 30 days"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Vietnam",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: e-visa or visa on arrival"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "📋 Víza nutno zařídit předem"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Britské Panenské Ostrovy",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: visa required or via cruise"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Srí Lanka",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: e-visa required"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "✅ Bez víz"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Ekvádor",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: visa-free 90 days"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Galapágy",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: visa-free 90 days (Ecuador)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Jižní Thajsko",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: visa-free 30 days"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Malajsie – Malajský poloostrov",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: visa-free 90 days"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mauricius",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: visa-free 90 days"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Samoa",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: visa-free 60 days"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Singapur",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": " - Czech citizens: visa-free 90 days"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "💡 Obecné tipy"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Vždy si ověřte platnost pasu - mnoho zemí vyžaduje minimálně 6 měsíců platnosti."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Informace se mohou měnit - před cestou si zkontrolujte aktuální stav na mzv.cz."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "V některých zemích budete potřebovat zpáteční letenku nebo potvrzení o ubytování."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Pokud cestujete s dětmi, nezapomeňte na jejich vlastní cestovní doklady."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

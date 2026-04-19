@@ -1,0 +1,396 @@
+{
+  "title": "Kam v cervenci? 5 destinaci, ktere stoji za to",
+  "slug": "kam-v-cervenec",
+  "excerpt": "Hledas, kam vyrazit v cervenci? Tady je 5 overených destinaci s realnym rozpoctem.",
+  "articleType": "list",
+  "contentLang": "cs",
+  "tags": [
+    "cervenec",
+    "kam jet",
+    "destinace",
+    "tipy"
+  ],
+  "destinationSlug": null,
+  "publish": true,
+  "readingTime": 4,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Planujes cestu v cervenci? Super volba. Tady je 5 destinaci, kde si to v cervenci uzijs naplno - od plazi po hory, od Asie po Evropu. Vse overene, zadne kecy."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "1. 🇮🇩 Bali"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Suche, slunecno, surfovani v Uluwatu"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nejlepsi obdobi: April to October"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Budget na den: od 25 USD"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Viza: Czech citizens: visa on arrival 30 days"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-bali",
+          "children": [
+            {
+              "type": "text",
+              "text": "Prectisi cely pruvodce: Bali"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "2. 🇮🇩 Lombok"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Sucha sezona, krasne plaze, malo lidi"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nejlepsi obdobi: April to October"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Budget na den: od 25 USD"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Viza: Czech citizens: visa on arrival 30 days"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-lombok",
+          "children": [
+            {
+              "type": "text",
+              "text": "Prectisi cely pruvodce: Lombok"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "3. 🇫🇷 Francie"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Provensalsko, Azurove pobrezi, Alpy"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nejlepsi obdobi: April to June, September to October"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Budget na den: od 55 USD"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Viza: EU citizens: free movement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-francie",
+          "children": [
+            {
+              "type": "text",
+              "text": "Prectisi cely pruvodce: Francie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "4. 🇦🇩 Andorra"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Hiking v Pyrenejich, ciste hory"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nejlepsi obdobi: December to April (ski), June to September (hiking)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Budget na den: od 50 USD"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Viza: EU citizens: free movement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-andorra",
+          "children": [
+            {
+              "type": "text",
+              "text": "Prectisi cely pruvodce: Andorra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "5. 🇳🇴 Oslo"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Bile noci, dlooouhe dny"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nejlepsi obdobi: May to September"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Budget na den: od 80 USD"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Viza: EU citizens: free movement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-oslo",
+          "children": [
+            {
+              "type": "text",
+              "text": "Prectisi cely pruvodce: Oslo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Jak vybrat?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Zalezi, co hledas. Chces plaze? Mrkni na ostrovy. Chces kulturu a historii? Evropska mesta budou lepsi volba. A hlavne - cim driv zacnes hledat letenky, tim lip."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "url": "/articles/kolik-stoji-den-srovnani",
+          "children": [
+            {
+              "type": "text",
+              "text": "Srovnani cen: kolik stoji den v ruznych destinacich"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

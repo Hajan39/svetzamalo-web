@@ -8,6 +8,18 @@
 import type { Article, Destination } from "@/types";
 import { strapiClient } from "./client";
 import {
+  staticGetArticleById,
+  staticGetArticleBySlug,
+  staticGetArticles,
+  staticGetArticlesByDestination,
+  staticGetArticlesByTag,
+  staticGetDestinationById,
+  staticGetDestinationBySlug,
+  staticGetDestinations,
+  staticGetDestinationsByContinent,
+  staticGetLatestArticles,
+} from "./static-data";
+import {
   type StrapiArticle,
   type StrapiDestination,
   transformStrapiArticle,
@@ -20,11 +32,32 @@ export function toContentLocale(appLocale: string): "cs" | "en" {
 }
 
 /**
+ * When no Strapi URL is configured we run in fully-static mode and read
+ * destination content from bundled JSON exports (WordPress migration).
+ */
+const STRAPI_ENV =
+  (typeof import.meta !== "undefined"
+    ? (
+        import.meta as {
+          env?: { VITE_STRAPI_URL?: string; VITE_USE_STATIC_CONTENT?: string };
+        }
+      ).env
+    : undefined) ?? {};
+const STRAPI_URL = STRAPI_ENV.VITE_STRAPI_URL || "";
+const FORCE_STATIC =
+  String(STRAPI_ENV.VITE_USE_STATIC_CONTENT || "").toLowerCase() === "true";
+const USE_STATIC_DESTINATIONS = FORCE_STATIC || !STRAPI_URL;
+const USE_STATIC_ARTICLES = USE_STATIC_DESTINATIONS;
+
+/**
  * Fetch all destinations, optionally filtered by content locale.
  */
 export async function fetchDestinations(
   contentLocale?: "cs" | "en",
 ): Promise<Destination[]> {
+  if (USE_STATIC_DESTINATIONS) {
+    return staticGetDestinations(contentLocale).map(transformStrapiDestination);
+  }
   // contentLang: cs = Czech, en = English. Entries with null are treated as Czech (schema default).
   const localeFilter =
     contentLocale === "en"
@@ -64,6 +97,10 @@ export async function fetchDestinations(
 export async function fetchDestinationBySlug(
   slug: string,
 ): Promise<Destination | null> {
+  if (USE_STATIC_DESTINATIONS) {
+    const found = staticGetDestinationBySlug(slug);
+    return found ? transformStrapiDestination(found) : null;
+  }
   try {
     const response = await strapiClient.get<StrapiDestination>(
       `/destinations`,
@@ -93,6 +130,10 @@ export async function fetchDestinationBySlug(
 export async function fetchDestinationById(
   id: string | number,
 ): Promise<Destination | null> {
+  if (USE_STATIC_DESTINATIONS) {
+    const found = staticGetDestinationById(id);
+    return found ? transformStrapiDestination(found) : null;
+  }
   try {
     const response = await strapiClient.get<StrapiDestination>(
       `/destinations/${id}`,
@@ -115,6 +156,11 @@ export async function fetchDestinationsByContinent(
   continent: string,
   contentLocale?: "cs" | "en",
 ): Promise<Destination[]> {
+  if (USE_STATIC_DESTINATIONS) {
+    return staticGetDestinationsByContinent(continent, contentLocale).map(
+      transformStrapiDestination,
+    );
+  }
   const filters: Record<string, unknown> = { continent: { $eq: continent } };
   // contentLang: cs = Czech, en = English. Null entries are treated as Czech (schema default).
   if (contentLocale === "en") {
@@ -150,6 +196,9 @@ export async function fetchDestinationsByContinent(
  * Fetch all articles
  */
 export async function fetchArticles(): Promise<Article[]> {
+  if (USE_STATIC_ARTICLES) {
+    return staticGetArticles().map(transformStrapiArticle);
+  }
   try {
     const response = await strapiClient.get<StrapiArticle[]>("/articles", {
       populate: "cover",
@@ -172,6 +221,10 @@ export async function fetchArticles(): Promise<Article[]> {
 export async function fetchArticleBySlug(
   slug: string,
 ): Promise<Article | null> {
+  if (USE_STATIC_ARTICLES) {
+    const found = staticGetArticleBySlug(slug);
+    return found ? transformStrapiArticle(found) : null;
+  }
   try {
     const response = await strapiClient.get<StrapiArticle>("/articles", {
       filters: { slug: { $eq: slug } },
@@ -198,6 +251,10 @@ export async function fetchArticleBySlug(
 export async function fetchArticleById(
   id: string | number,
 ): Promise<Article | null> {
+  if (USE_STATIC_ARTICLES) {
+    const found = staticGetArticleById(id);
+    return found ? transformStrapiArticle(found) : null;
+  }
   try {
     const response = await strapiClient.get<StrapiArticle>(`/articles/${id}`, {
       populate: "cover",
@@ -216,6 +273,11 @@ export async function fetchArticleById(
 export async function fetchArticlesByDestination(
   destinationId: string,
 ): Promise<Article[]> {
+  if (USE_STATIC_ARTICLES) {
+    return staticGetArticlesByDestination(destinationId).map(
+      transformStrapiArticle,
+    );
+  }
   try {
     const response = await strapiClient.get<StrapiArticle[]>("/articles", {
       filters: {
@@ -248,6 +310,9 @@ export async function fetchArticlesByDestination(
  * Fetch articles by tag
  */
 export async function fetchArticlesByTag(tag: string): Promise<Article[]> {
+  if (USE_STATIC_ARTICLES) {
+    return staticGetArticlesByTag(tag).map(transformStrapiArticle);
+  }
   try {
     const response = await strapiClient.get<StrapiArticle[]>("/articles", {
       filters: {
@@ -273,6 +338,9 @@ export async function fetchArticlesByTag(tag: string): Promise<Article[]> {
  * Fetch latest articles
  */
 export async function fetchLatestArticles(limit = 6): Promise<Article[]> {
+  if (USE_STATIC_ARTICLES) {
+    return staticGetLatestArticles(limit).map(transformStrapiArticle);
+  }
   try {
     const response = await strapiClient.get<StrapiArticle[]>("/articles", {
       populate: "cover",

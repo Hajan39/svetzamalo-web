@@ -1,0 +1,92 @@
+{
+  "title": "Samoa – praktický průvodce pro cestovatele",
+  "slug": "pruvodce-samoa",
+  "excerpt": "Samoa , exotický ostrovní ráj ležící v jižním Pacifiku, láká návštěvníky svou neopakovatelnou kombinací velmi tradiční kultury, přírodní krásy a pohostinnosti místních obyvatel. Tato destinace nabízí…",
+  "articleType": "destination-guide",
+  "contentLang": "cs",
+  "tags": [
+    "Oceánie",
+    "Samoa",
+    "cestování",
+    "budget"
+  ],
+  "destinationSlug": "samoa",
+  "publish": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Samoa , exotický ostrovní ráj ležící v jižním Pacifiku, láká návštěvníky svou neopakovatelnou kombinací velmi tradiční kultury, přírodní krásy a pohostinnosti místních obyvatel. Tato destinace nabízí rozmanitý mix od bílých pláží s jasnými tyrkysovými vodami až po divoké deštné pralesy. Kromě nádherného pobřeží a azurových lagun s korálovými útesy se na Samoe mísí tradice, které jsou stále pevně zakořeněny v každodenním životě, s moderním světem."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Kdy jet"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nejlepší doba pro návštěvu: květen až říjen."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Jazyk a komunikace"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Místní jazyky: samojština, angličtina. S angličtinou se v turistických oblastech domluvíte."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobný průvodce"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+        },
+        {
+          "type": "text",
+          "text": "kompletním průvodci – Samoa",
+          "url": "/destinations/guide/samoa"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

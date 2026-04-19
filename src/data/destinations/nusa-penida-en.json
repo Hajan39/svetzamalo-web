@@ -1,0 +1,996 @@
+{
+  "id": 929,
+  "documentId": "vy2124vrc0urkfkgwhk8aen6",
+  "name": "Nusa Penida",
+  "slug": "nusa-penida-en",
+  "intro": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nusa Penida",
+          "url": "https://goo.gl/maps/3oFDwsurGGbmha3Z9",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "text": "and"
+        },
+        {
+          "type": "text",
+          "text": "Lebongan",
+          "url": "https://goo.gl/maps/4eEwwS84EdHGdfBw6",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "text": "are unassuming yet relatively large archipelagos situated between Bali and Lombok, and missing out on them would be a shame. Nusa Penida, part of Bali, offers beautiful coastal spots with photogenic cliffs. Beautiful views, swimming with mantas, beaches, dolphins, snorkeling on coral reefs, scuba diving, and warm weather—all packed into the small area of three islands: Nusa Penida, Ceningan, and Lebongan., Mauricius"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "children": [
+        {
+          "type": "text",
+          "text": "Nusa Penida"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "The largest and most renowned of the islands. It attracts a considerable number of tourists, perhaps even more than"
+        },
+        {
+          "type": "text",
+          "text": "Bali",
+          "url": "https://lowcost-traveling.com/en/asia-en/bali/"
+        },
+        {
+          "type": "text",
+          "text": "itself. While the roads may seem relatively empty, the interesting places are always crowded. The best time to visit the island is on weekdays. During weekends, the island swarms with tourists and locals, with schools organizing outings, leading to traffic jams. You can reach the island by public ferry from Padangbai for about 30 Rupiah. You can also transport a motorcycle, but it’s more expensive. Ferry tickets can be purchased directly at the port before departure."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Transportation"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "To visit all the interesting places on the island, you’ll need to travel quite a bit. The best solution is to rent a scooter. The transportation on the island is peaceful, and the roads are navigable (except for exceptions). It’s also the most affordable option."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "You can also rent a car with a driver, which is, of course, a more expensive option and is more worthwhile for a group of people. These cars are probably the only ones that run on the island, but there are many of them, which can create queues on narrow roads at individual interesting sites."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Although Nusa Penida is only 12x19km in size, you can’t visit all the attractions in a single day due to poor infrastructure. Some roads on the island are in very bad condition, so bad that you might leave your scooter in the middle of the road and continue on foot. However, most roads are undergoing reconstruction due to the large number of tourists. So perhaps soon, there will only be asphalt roads on the island."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191109_104725593-1024x768.jpg",
+        "alternativeText": "Road on Nusa Penida",
+        "url": "/uploads/IMG_20191109_104725593_1024x768_bcce505434.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191109_104725593-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191109_104725593_1024x768_bcce505434",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.6,
+            "sizeInBytes": 9602,
+            "url": "/uploads/thumbnail_IMG_20191109_104725593_1024x768_bcce505434.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191109_104725593-1024x768.jpg",
+            "hash": "small_IMG_20191109_104725593_1024x768_bcce505434",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 51.23,
+            "sizeInBytes": 51234,
+            "url": "/uploads/small_IMG_20191109_104725593_1024x768_bcce505434.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191109_104725593-1024x768.jpg",
+            "hash": "medium_IMG_20191109_104725593_1024x768_bcce505434",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 111.96,
+            "sizeInBytes": 111961,
+            "url": "/uploads/medium_IMG_20191109_104725593_1024x768_bcce505434.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191109_104725593-1024x768.jpg",
+            "hash": "large_IMG_20191109_104725593_1024x768_bcce505434",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 191.25,
+            "sizeInBytes": 191252,
+            "url": "/uploads/large_IMG_20191109_104725593_1024x768_bcce505434.jpg"
+          }
+        },
+        "hash": "IMG_20191109_104725593_1024x768_bcce505434",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 204.94,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:30.498Z",
+        "updatedAt": "2026-02-17T13:01:30.498Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191109_155716030_HDR-1024x768.jpg",
+        "alternativeText": "Impassable and disappearing roads on the island",
+        "url": "/uploads/IMG_20191109_155716030_HDR_1024x768_a19f07cd09.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191109_155716030_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191109_155716030_HDR_1024x768_a19f07cd09",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.11,
+            "sizeInBytes": 9111,
+            "url": "/uploads/thumbnail_IMG_20191109_155716030_HDR_1024x768_a19f07cd09.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191109_155716030_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191109_155716030_HDR_1024x768_a19f07cd09",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 55.68,
+            "sizeInBytes": 55677,
+            "url": "/uploads/small_IMG_20191109_155716030_HDR_1024x768_a19f07cd09.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191109_155716030_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191109_155716030_HDR_1024x768_a19f07cd09",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 130.43,
+            "sizeInBytes": 130427,
+            "url": "/uploads/medium_IMG_20191109_155716030_HDR_1024x768_a19f07cd09.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191109_155716030_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191109_155716030_HDR_1024x768_a19f07cd09",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 231.02,
+            "sizeInBytes": 231020,
+            "url": "/uploads/large_IMG_20191109_155716030_HDR_1024x768_a19f07cd09.jpg"
+          }
+        },
+        "hash": "IMG_20191109_155716030_HDR_1024x768_a19f07cd09",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 248.93,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:31.040Z",
+        "updatedAt": "2026-02-17T13:01:31.040Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "The second problem is that in some parts of the island, roads simply do not exist. Most attractions on the southern part of the island are located on the coast but are not connected by roads. So if you want to move, for example, from Broken Beach to Crystal Bay, which is 2 km along the coastline, you will have to go back to the center of the island to Bunga Mekar, then further to Sakti—a distance of 17 km. Although there is a path along the coast, it quickly turns into a footpath and disappears after a while. Unfortunately, this traveling back and forth wastes a lot of time, and even the travel itself is not very fast because it’s all twists and turns. It’s important to allocate enough time for this island (at least 3 days)."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Places to Visit"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "All the places are well-known tourist spots, so you won’t avoid the crowds. It depends on how early you get up, the weather, or which day you arrive."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "If you don’t want to organize the trip yourself, there are several travel agencies on the island offering tours to the most famous places. However, it’s not necessary since traveling around the island is easily manageable with a map on your phone and a scooter."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Goa Giri Putri Temple",
+          "url": "https://maps.google.com/?cid=14170757162281399027",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "A temple carved into the rock. At the parking lot, you’ll pay parking fees and need to rent a sarong (a special cloth around the waist) for a fee if you don’t have your own. Another fee is charged for entry to the temple. Entry is free only for those going to the temple for religious purposes."
+        },
+        {
+          "type": "text",
+          "text": "\n"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Beaches and Viewpoints"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Atuh Beach",
+          "url": "https://maps.google.com/?cid=2726511866078808755",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "text": "– A beautiful beach between cliffs with paid sunbeds and refreshments. You can get here via steep stairs leading down from the parking lot. Upon arrival at the parking lot, you can choose a parking spot under one of several makeshift shelters. Locals may go out of their way to let you park near them; they advertise everything for free. However, they won’t spend all day just like that and will expect you to buy something from them, but everything is more expensive than usual. North of the beach are stairs made of clay and bags. To the south are concrete stairs with a railing."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "If you park in the northern parking lot, it’s worth crossing the beach and climbing up the concrete stairs at the other end. Here, from the"
+        },
+        {
+          "type": "text",
+          "text": "viewpoint",
+          "url": "https://goo.gl/maps/BJR29Xz1W2KUMDfv5",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "text": ", you’ll have a beautiful view of the islands in the sea and a"
+        },
+        {
+          "type": "text",
+          "text": "beach",
+          "url": "https://goo.gl/maps/Ln9My2uttxp7fVRz6",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "text": "(Diamond Beach) with white sand directly below you – you can head there again via stairs. If you stay up on the cliffs, you can even reach the"
+        },
+        {
+          "type": "text",
+          "text": "Thousand Islands viewpoint",
+          "url": "https://goo.gl/maps/HsKL853PZPU6MkW97",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Suwehan Beach",
+          "url": "https://maps.google.com/?cid=2333702401653139701",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "text": "– A nice beach suitable for swimming with a photogenic cliff in the sea. The path to the beach is steep as it is surrounded by cliffs."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Kelingking Beach",
+          "url": "https://g.page/kelingking-beach?share",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "text": "– The most famous, most beautiful, and also the most visited part of the island. From a high cliff, you can observe a rocky promontory plunging into the sea in the shape of a dinosaur’s head. You probably know these images from social media, but it’s not easy to capture them like this because crowds of tourists surround you from all sides, and you won’t be alone here (as it often looks in photos). Down in the bay is a beach with white sand and clear blue sea. You can go down there via stairs, but the way back is not very pleasant. There are usually strong waves in the sea, so it takes some effort to get there. There are also restaurants and stalls here. Entry is free, but parking is paid."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191109_123242132_HDR-1024x768.jpg",
+        "alternativeText": "View of Kelingking Beach from the cliff.",
+        "url": "/uploads/IMG_20191109_123242132_HDR_1024x768_af630dad10.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191109_123242132_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191109_123242132_HDR_1024x768_af630dad10",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 11.45,
+            "sizeInBytes": 11451,
+            "url": "/uploads/thumbnail_IMG_20191109_123242132_HDR_1024x768_af630dad10.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191109_123242132_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191109_123242132_HDR_1024x768_af630dad10",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 58.74,
+            "sizeInBytes": 58735,
+            "url": "/uploads/small_IMG_20191109_123242132_HDR_1024x768_af630dad10.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191109_123242132_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191109_123242132_HDR_1024x768_af630dad10",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 126.17,
+            "sizeInBytes": 126171,
+            "url": "/uploads/medium_IMG_20191109_123242132_HDR_1024x768_af630dad10.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191109_123242132_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191109_123242132_HDR_1024x768_af630dad10",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 210.6,
+            "sizeInBytes": 210603,
+            "url": "/uploads/large_IMG_20191109_123242132_HDR_1024x768_af630dad10.jpg"
+          }
+        },
+        "hash": "IMG_20191109_123242132_HDR_1024x768_af630dad10",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 226.61,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:31.409Z",
+        "updatedAt": "2026-02-17T13:01:31.409Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Diamond Beach",
+          "url": "https://maps.google.com/?cid=15395315204796587622",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "text": "– Stairs carved into the rock leading to the beach, palm trees, cliffs, a swing, and a beautiful sandy beach."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Broken Beach",
+          "url": "https://goo.gl/maps/eDmAyUgAD7UGWRQv5",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "text": "– It’s not a typical beach but rather cliffs with viewpoints. The path here is sometimes only rocky or muddy, and the road condition is so bad that you’re not sure if you’re even going the right way. However, if you meet tourists on scooters, you’re going the right way. You’ll pay parking fees at Broken Beach, but entry is free. Here, you can see several viewpoints of the sea, and with luck, even dolphins or mantas. There’s also a small lagoon between the rocks where you can swim and take photos if there’s space for photos on the edge by the sea. There’s also tourist infrastructure like restaurants, drink stands, ice creams, and coconuts."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191109_094733480_HDR-1024x768.jpg",
+        "alternativeText": "Viewpoint above Atuh Beach. View of Diamond Beach.",
+        "url": "/uploads/IMG_20191109_094733480_HDR_1024x768_24720ad69a.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191109_094733480_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191109_094733480_HDR_1024x768_24720ad69a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.84,
+            "sizeInBytes": 8843,
+            "url": "/uploads/thumbnail_IMG_20191109_094733480_HDR_1024x768_24720ad69a.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191109_094733480_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191109_094733480_HDR_1024x768_24720ad69a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 41.98,
+            "sizeInBytes": 41976,
+            "url": "/uploads/small_IMG_20191109_094733480_HDR_1024x768_24720ad69a.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191109_094733480_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191109_094733480_HDR_1024x768_24720ad69a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 143.53,
+            "sizeInBytes": 143529,
+            "url": "/uploads/large_IMG_20191109_094733480_HDR_1024x768_24720ad69a.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191109_094733480_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191109_094733480_HDR_1024x768_24720ad69a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 87.32,
+            "sizeInBytes": 87316,
+            "url": "/uploads/medium_IMG_20191109_094733480_HDR_1024x768_24720ad69a.jpg"
+          }
+        },
+        "hash": "IMG_20191109_094733480_HDR_1024x768_24720ad69a",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 152.39,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:31.785Z",
+        "updatedAt": "2026-02-17T13:01:31.785Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191109_135212125_HDR-1024x768.jpg",
+        "alternativeText": "Lagoon at Broken Beach suitable for swimming.",
+        "url": "/uploads/IMG_20191109_135212125_HDR_1024x768_2516a20c5b.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191109_135212125_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191109_135212125_HDR_1024x768_2516a20c5b",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 11.39,
+            "sizeInBytes": 11390,
+            "url": "/uploads/thumbnail_IMG_20191109_135212125_HDR_1024x768_2516a20c5b.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191109_135212125_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191109_135212125_HDR_1024x768_2516a20c5b",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 56.66,
+            "sizeInBytes": 56663,
+            "url": "/uploads/small_IMG_20191109_135212125_HDR_1024x768_2516a20c5b.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191109_135212125_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191109_135212125_HDR_1024x768_2516a20c5b",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 119,
+            "sizeInBytes": 119004,
+            "url": "/uploads/medium_IMG_20191109_135212125_HDR_1024x768_2516a20c5b.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191109_135212125_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191109_135212125_HDR_1024x768_2516a20c5b",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 196.58,
+            "sizeInBytes": 196577,
+            "url": "/uploads/large_IMG_20191109_135212125_HDR_1024x768_2516a20c5b.jpg"
+          }
+        },
+        "hash": "IMG_20191109_135212125_HDR_1024x768_2516a20c5b",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 209.15,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:32.114Z",
+        "updatedAt": "2026-02-17T13:01:32.114Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191109_143512494_HDR-1024x768.jpg",
+        "alternativeText": "Broken Beach. This natural rocky bridge creates the entrance to the lagoon where you can see mantas from the cliff, but you can't get down there.",
+        "url": "/uploads/IMG_20191109_143512494_HDR_1024x768_fe9178cb91.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191109_143512494_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191109_143512494_HDR_1024x768_fe9178cb91",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.86,
+            "sizeInBytes": 8861,
+            "url": "/uploads/thumbnail_IMG_20191109_143512494_HDR_1024x768_fe9178cb91.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191109_143512494_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191109_143512494_HDR_1024x768_fe9178cb91",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 44.76,
+            "sizeInBytes": 44764,
+            "url": "/uploads/small_IMG_20191109_143512494_HDR_1024x768_fe9178cb91.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191109_143512494_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191109_143512494_HDR_1024x768_fe9178cb91",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 96.35,
+            "sizeInBytes": 96348,
+            "url": "/uploads/medium_IMG_20191109_143512494_HDR_1024x768_fe9178cb91.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191109_143512494_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191109_143512494_HDR_1024x768_fe9178cb91",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 161.93,
+            "sizeInBytes": 161934,
+            "url": "/uploads/large_IMG_20191109_143512494_HDR_1024x768_fe9178cb91.jpg"
+          }
+        },
+        "hash": "IMG_20191109_143512494_HDR_1024x768_fe9178cb91",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 172.84,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:32.482Z",
+        "updatedAt": "2026-02-17T13:01:32.482Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Crystal Bay",
+          "url": "https://goo.gl/maps/PYr6nzNW9rRQZhV2A",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "text": "– or the Crystal Clear Bay, located on the west side of the island. Here, you’ll find somewhat cooler water, but a beautiful coral reef with plenty of colorful fish. The beach isn’t very large, and there isn’t much shade, but you can use paid sunbeds or the palm trees at the edge. Especially in the evening before sunset, expect a lot of people. This is the best spot for sunset watching. During the day, you’ll encounter plenty of tour boats bringing snorkeling tourists. If you head south along the beach up the stairs, after a while, you’ll reach another hidden and peaceful beach,"
+        },
+        {
+          "type": "text",
+          "text": "Pandan Beach",
+          "url": "https://goo.gl/maps/U2pAhm9Zb7rtadS47",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "text": ", where you don’t have to expect crowds of tourists. However, there is a refreshment stand here as well."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191110_101157374_HDR-1024x768.jpg",
+        "alternativeText": "Crystal Bay",
+        "url": "/uploads/IMG_20191110_101157374_HDR_1024x768_57998bc4ce.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191110_101157374_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191110_101157374_HDR_1024x768_57998bc4ce",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 6.1,
+            "sizeInBytes": 6098,
+            "url": "/uploads/thumbnail_IMG_20191110_101157374_HDR_1024x768_57998bc4ce.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191110_101157374_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191110_101157374_HDR_1024x768_57998bc4ce",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 61.1,
+            "sizeInBytes": 61100,
+            "url": "/uploads/medium_IMG_20191110_101157374_HDR_1024x768_57998bc4ce.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191110_101157374_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191110_101157374_HDR_1024x768_57998bc4ce",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 29.29,
+            "sizeInBytes": 29291,
+            "url": "/uploads/small_IMG_20191110_101157374_HDR_1024x768_57998bc4ce.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191110_101157374_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191110_101157374_HDR_1024x768_57998bc4ce",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 100.54,
+            "sizeInBytes": 100540,
+            "url": "/uploads/large_IMG_20191110_101157374_HDR_1024x768_57998bc4ce.jpg"
+          }
+        },
+        "hash": "IMG_20191110_101157374_HDR_1024x768_57998bc4ce",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 105.79,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:32.821Z",
+        "updatedAt": "2026-02-17T13:01:32.821Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191109_180204246-1024x768.jpg",
+        "alternativeText": "Sunset at Crystal Bay",
+        "url": "/uploads/IMG_20191109_180204246_1024x768_056830adec.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191109_180204246-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191109_180204246_1024x768_056830adec",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 3.76,
+            "sizeInBytes": 3758,
+            "url": "/uploads/thumbnail_IMG_20191109_180204246_1024x768_056830adec.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191109_180204246-1024x768.jpg",
+            "hash": "large_IMG_20191109_180204246_1024x768_056830adec",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 56.8,
+            "sizeInBytes": 56798,
+            "url": "/uploads/large_IMG_20191109_180204246_1024x768_056830adec.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191109_180204246-1024x768.jpg",
+            "hash": "medium_IMG_20191109_180204246_1024x768_056830adec",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 34.89,
+            "sizeInBytes": 34892,
+            "url": "/uploads/medium_IMG_20191109_180204246_1024x768_056830adec.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191109_180204246-1024x768.jpg",
+            "hash": "small_IMG_20191109_180204246_1024x768_056830adec",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 17.11,
+            "sizeInBytes": 17112,
+            "url": "/uploads/small_IMG_20191109_180204246_1024x768_056830adec.jpg"
+          }
+        },
+        "hash": "IMG_20191109_180204246_1024x768_056830adec",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 59.83,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:33.156Z",
+        "updatedAt": "2026-02-17T13:01:33.156Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Attention!",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "text": "If possible, wear a T-shirt while snorkeling instead of using sunscreen. Sunscreen can easily get into the water, and the substances in it can inhibit coral growth, gradually damaging them. The high level of tourism in these areas poses a significant threat to the future of coral reefs."
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-02-17T13:04:26.894Z",
+  "updatedAt": "2026-02-17T13:04:26.894Z",
+  "publishedAt": "2026-02-17T13:04:26.912Z",
+  "continent": "asia",
+  "contentLang": "en",
+  "flagEmoji": "🇮🇩",
+  "timezone": "WITA (UTC+8)",
+  "languages": [
+    "Indonesian",
+    "Balinese"
+  ],
+  "currencyCode": "IDR",
+  "currencyName": "Indonesian Rupiah",
+  "currencySymbol": "Rp",
+  "budgetPerDayBudget": 30,
+  "budgetPerDayMidRange": 60,
+  "budgetPerDayLuxury": 160,
+  "bestTimeToVisit": "April to October",
+  "visaInfo": "Czech citizens: visa on arrival 30 days",
+  "destinationType": "region",
+  "cover": {
+    "id": 8629,
+    "documentId": "ib4wz931pmuzz1rzfote6jah",
+    "name": "cover-1771333466451-oen97g.jpg",
+    "alternativeText": "Nusa Penida",
+    "caption": null,
+    "width": 1020,
+    "height": 765,
+    "formats": {
+      "thumbnail": {
+        "name": "thumbnail_cover-1771333466451-oen97g.jpg",
+        "hash": "thumbnail_cover_1771333466451_oen97g_95acd478e6",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "path": null,
+        "width": 208,
+        "height": 156,
+        "size": 7.64,
+        "sizeInBytes": 7639,
+        "url": "/uploads/thumbnail_cover_1771333466451_oen97g_95acd478e6.jpg"
+      },
+      "small": {
+        "name": "small_cover-1771333466451-oen97g.jpg",
+        "hash": "small_cover_1771333466451_oen97g_95acd478e6",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "path": null,
+        "width": 500,
+        "height": 375,
+        "size": 39.5,
+        "sizeInBytes": 39497,
+        "url": "/uploads/small_cover_1771333466451_oen97g_95acd478e6.jpg"
+      },
+      "medium": {
+        "name": "medium_cover-1771333466451-oen97g.jpg",
+        "hash": "medium_cover_1771333466451_oen97g_95acd478e6",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "path": null,
+        "width": 750,
+        "height": 563,
+        "size": 85.85,
+        "sizeInBytes": 85852,
+        "url": "/uploads/medium_cover_1771333466451_oen97g_95acd478e6.jpg"
+      },
+      "large": {
+        "name": "large_cover-1771333466451-oen97g.jpg",
+        "hash": "large_cover_1771333466451_oen97g_95acd478e6",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "path": null,
+        "width": 1000,
+        "height": 750,
+        "size": 145.24,
+        "sizeInBytes": 145242,
+        "url": "/uploads/large_cover_1771333466451_oen97g_95acd478e6.jpg"
+      }
+    },
+    "hash": "cover_1771333466451_oen97g_95acd478e6",
+    "ext": ".jpg",
+    "mime": "image/jpeg",
+    "size": 154.67,
+    "url": "/uploads/cover_1771333466451_oen97g_95acd478e6.jpg",
+    "previewUrl": null,
+    "provider": "local",
+    "provider_metadata": null,
+    "createdAt": "2026-02-17T13:04:26.625Z",
+    "updatedAt": "2026-02-17T13:04:26.625Z",
+    "publishedAt": "2026-02-17T13:04:26.626Z"
+  }
+}

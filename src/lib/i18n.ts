@@ -324,6 +324,30 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
       contactTitle: "Get in Touch",
       contactText:
         "Have questions, suggestions, or just want to say hello? We'd love to hear from you. Reach out at",
+      talksTitle: "Live Talks & Presentations",
+      talksIntro:
+        "Travel guides aren't enough — sometimes you just need to hear it from someone who's been there. That's why we give live presentations about budget travel, sharing real stories, tips, and practical advice directly with audiences.",
+      talksOffer1: "Talks for schools, universities, and clubs",
+      talksOffer2:
+        "Themed presentations: budget travel, gap years, solo travel, specific regions",
+      talksOffer3: "Q&A sessions and personal consultations",
+      talksOffer4: "Custom presentations tailored to your event or audience",
+      talksPastTitle: "Where you've seen us",
+      talksPast1: "Festival Cestovatelů (Prague, 2023 & 2024)",
+      talksPast2: "Travel evening at Faculty of Science, Masaryk University",
+      talksPast3: "Meetup Levné Cestování (Brno, Prague)",
+      talksReferencesTitle: "Event references",
+      talksTopicsTitle: "Talk topics",
+      talksTopic1: "New Zealand: van life and day-to-day reality on the road",
+      talksTopic2: "Australia",
+      talksTopic3: "Japan",
+      talksTopic4: "Seychelles and Kenya",
+      talksTopic5: "Vietnam",
+      talksTopic6: "Ecuador",
+      talksUpcomingTitle: "Upcoming events",
+      talksUpcomingEmpty:
+        "No events scheduled right now — follow us on social media or reach out to book a talk for your event.",
+      talksContact: "Want us at your event? Write to us at",
     },
 
     // Destinations Page
@@ -671,6 +695,30 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
       contactTitle: "Kontaktujte nás",
       contactText:
         "Máte otázky, návrhy nebo jen chcete pozdravit? Rádi bychom vás slyšeli. Kontaktujte nás na",
+      talksTitle: "Přednášky a prezentace",
+      talksIntro:
+        "Průvodce na webu nestačí — někdy potřebujete slyšet příběh přímo od toho, kdo tam byl. Proto pořádáme živé přednášky o levném cestování, kde sdílíme reálné zážitky, tipy a praktické rady.",
+      talksOffer1: "Přednášky pro školy, univerzity, spolky a kluby",
+      talksOffer2:
+        "Tematické prezentace: levné cestování, gap year, sólové cestování, konkrétní oblasti",
+      talksOffer3: "Diskuze, Q&A a osobní konzultace",
+      talksOffer4: "Přednáška na míru pro váš event nebo publikum",
+      talksPastTitle: "Kde jste nás mohli vidět",
+      talksPast1: "Festival Cestovatelů (Praha, 2023 a 2024)",
+      talksPast2: "Cestovatelský večer na Přírodovědecké fakultě MU",
+      talksPast3: "Meetup Levné Cestování (Brno, Praha)",
+      talksReferencesTitle: "Zpětné reference",
+      talksTopicsTitle: "Možnosti přednášek",
+      talksTopic1: "Nový Zéland aneb život v dodávce",
+      talksTopic2: "Austrálie",
+      talksTopic3: "Japonsko",
+      talksTopic4: "Seychely a Keňa",
+      talksTopic5: "Vietnam",
+      talksTopic6: "Ekvádor",
+      talksUpcomingTitle: "Nadcházející přednášky",
+      talksUpcomingEmpty:
+        "Momentálně žádné termíny — sledujte nás na sociálních sítích nebo nás kontaktujte pro domluvení přednášky na vaši akci.",
+      talksContact: "Chcete nás na svém eventu? Napište nám na",
     },
 
     // Destinations Page

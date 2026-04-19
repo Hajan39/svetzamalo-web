@@ -1,0 +1,92 @@
+{
+  "title": "Portoriko – praktický průvodce pro cestovatele",
+  "slug": "pruvodce-portoriko",
+  "excerpt": "Portoriko je krásným a poněkud odlišným ostrovem Karibiku nacházejícím se nedaleko Dominikánské republiky. Dokáže potěšit jak milovníky dlouhých pláží, tak i milovníky hor a adrenalinu. V jednom dni…",
+  "articleType": "destination-guide",
+  "contentLang": "cs",
+  "tags": [
+    "Karibik",
+    "Portoriko",
+    "cestování",
+    "budget"
+  ],
+  "destinationSlug": "portoriko",
+  "publish": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Portoriko je krásným a poněkud odlišným ostrovem Karibiku nacházejícím se nedaleko Dominikánské republiky. Dokáže potěšit jak milovníky dlouhých pláží, tak i milovníky hor a adrenalinu. V jednom dni se můžete procházet po národním parku, lézt po horách, skákat do vodopádu, sjíždět vodopádové skluzavky a nakonec se ještě vykoupat v Atlantském oceánu."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Kdy jet"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nejlepší doba pro návštěvu: prosinec až duben."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Jazyk a komunikace"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Místní jazyky: španělština, angličtina. S angličtinou se v turistických oblastech domluvíte."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobný průvodce"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+        },
+        {
+          "type": "text",
+          "text": "kompletním průvodci – Portoriko",
+          "url": "/destinations/guide/portoriko"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

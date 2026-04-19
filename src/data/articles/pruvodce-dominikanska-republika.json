@@ -1,0 +1,92 @@
+{
+  "title": "Dominikánská republika – praktický průvodce pro cestovatele",
+  "slug": "pruvodce-dominikanska-republika",
+  "excerpt": "Země plná kokosových palem, krásných pláží s průzračnou vodou Karibského moře, vysokých hor, přírody a dobré nálady, ale také turistů, dotěrných prodejců a odpadků. Země je plná kontrastů a v…",
+  "articleType": "destination-guide",
+  "contentLang": "cs",
+  "tags": [
+    "Karibik",
+    "Dominikánská republika",
+    "cestování",
+    "budget"
+  ],
+  "destinationSlug": "dominikanska-republika",
+  "publish": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Země plná kokosových palem, krásných pláží s průzračnou vodou Karibského moře, vysokých hor, přírody a dobré nálady, ale také turistů, dotěrných prodejců a odpadků. Země je plná kontrastů a v některých ohledech už zdaleka nepředstavuje ten Kolumbův “ráj na zemi”, kterým tento ostrov nazval, když zde zakotvil. Při putování Dominikánskou republikou máte občas pocit, jako byste navštívili několik různých zemí."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Kdy jet"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nejlepší doba pro návštěvu: prosinec až duben."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Jazyk a komunikace"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Místní jazyky: španělština. Základy španělštiny se hodí, angličtina funguje v turistických zónách."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobný průvodce"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+        },
+        {
+          "type": "text",
+          "text": "kompletním průvodci – Dominikánská republika",
+          "url": "/destinations/guide/dominikanska-republika"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

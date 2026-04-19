@@ -1,0 +1,92 @@
+{
+  "title": "Nusa Penida – praktický průvodce pro cestovatele",
+  "slug": "pruvodce-nusa-penida",
+  "excerpt": "Nusa Penida a Lebongan je nenápadné, ale poměrně velké souostroví mezi Bali a Lombokem, které by bylo škoda minout. Nusa Penida patří k Bali a právě zde naleznete ta nádherná místa na pobřeží s…",
+  "articleType": "destination-guide",
+  "contentLang": "cs",
+  "tags": [
+    "Asie",
+    "Nusa Penida",
+    "cestování",
+    "budget"
+  ],
+  "destinationSlug": "nusa-penida",
+  "publish": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nusa Penida a Lebongan je nenápadné, ale poměrně velké souostroví mezi Bali a Lombokem, které by bylo škoda minout. Nusa Penida patří k Bali a právě zde naleznete ta nádherná místa na pobřeží s fotogenickými útesy. Krásné výhledy, plavání s mantami, pláže, delfíni, šnorchlování na korálových útesech, přístrojové potápění a pořádné teplo."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Kdy jet"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nejlepší doba pro návštěvu: duben až říjen."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Jazyk a komunikace"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Místní jazyky: indonéština, balijština."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobný průvodce"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+        },
+        {
+          "type": "text",
+          "text": "kompletním průvodci – Nusa Penida",
+          "url": "/destinations/guide/nusa-penida"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

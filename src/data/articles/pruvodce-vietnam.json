@@ -1,0 +1,92 @@
+{
+  "title": "Vietnam – praktický průvodce pro cestovatele",
+  "slug": "pruvodce-vietnam",
+  "excerpt": "Vysoké hory a hustá džungle, rýžová políčka a chudí lidé žijící si svůj prostý život. Starobylá města, buddhistické chrámy, ale i všudypřítomné motorky i moderní velkoměsta, luxusní vozy a mohutné…",
+  "articleType": "destination-guide",
+  "contentLang": "cs",
+  "tags": [
+    "Asie",
+    "Vietnam",
+    "cestování",
+    "budget"
+  ],
+  "destinationSlug": "vietnam",
+  "publish": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Vysoké hory a hustá džungle, rýžová políčka a chudí lidé žijící si svůj prostý život. Starobylá města, buddhistické chrámy, ale i všudypřítomné motorky i moderní velkoměsta, luxusní vozy a mohutné moderní stavby. To vše je Vietnam , země kontrastů."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Kdy jet"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nejlepší doba pro návštěvu: February to April, October to December."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Jazyk a komunikace"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Místní jazyky: Vietnamese."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobný průvodce"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+        },
+        {
+          "type": "text",
+          "text": "kompletním průvodci – Vietnam",
+          "url": "/destinations/guide/vietnam"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

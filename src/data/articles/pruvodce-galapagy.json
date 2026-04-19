@@ -1,0 +1,92 @@
+{
+  "title": "Galapágy – praktický průvodce pro cestovatele",
+  "slug": "pruvodce-galapagy",
+  "excerpt": "Galapágy jsou jako malý ještě neobjevený kus přírodního ráje. Jako byste se vrátili do dob, kdy planetu obývala pouze zvířata a náramně se jim dařilo. Místo je to opravdu unikátní a pro milovníky…",
+  "articleType": "destination-guide",
+  "contentLang": "cs",
+  "tags": [
+    "Jižní Amerika",
+    "Galapágy",
+    "cestování",
+    "budget"
+  ],
+  "destinationSlug": "galapagy",
+  "publish": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Galapágy jsou jako malý ještě neobjevený kus přírodního ráje. Jako byste se vrátili do dob, kdy planetu obývala pouze zvířata a náramně se jim dařilo. Místo je to opravdu unikátní a pro milovníky přírody úplným rájem na zemi."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Kdy jet"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nejlepší doba pro návštěvu: červen až prosinec (chladnější, divoká příroda)."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Jazyk a komunikace"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Místní jazyky: španělština. Základy španělštiny se hodí, angličtina funguje v turistických zónách."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobný průvodce"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+        },
+        {
+          "type": "text",
+          "text": "kompletním průvodci – Galapágy",
+          "url": "/destinations/guide/galapagy"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

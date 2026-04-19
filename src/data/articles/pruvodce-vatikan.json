@@ -1,0 +1,92 @@
+{
+  "title": "Vatikán – praktický průvodce pro cestovatele",
+  "slug": "pruvodce-vatikan",
+  "excerpt": "Při návštěvě Říma asi nelze vynechat Vatikán. Jedná se o nejmenší stát na světě, který i přesto stojí za návštěvu. Ve Vatikánu nalezneme světoznámou baziliku svatého Petra a náměstí svatého Petra,…",
+  "articleType": "destination-guide",
+  "contentLang": "cs",
+  "tags": [
+    "Evropa",
+    "Vatikán",
+    "cestování",
+    "budget"
+  ],
+  "destinationSlug": "vatikan",
+  "publish": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Při návštěvě Říma asi nelze vynechat Vatikán. Jedná se o nejmenší stát na světě, který i přesto stojí za návštěvu. Ve Vatikánu nalezneme světoznámou baziliku svatého Petra a náměstí svatého Petra, což je jediné volně přístupné místo."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Kdy jet"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nejlepší doba pro návštěvu: March to May, September to November."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Jazyk a komunikace"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Místní jazyky: italština, Latin."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobný průvodce"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+        },
+        {
+          "type": "text",
+          "text": "kompletním průvodci – Vatikán",
+          "url": "/destinations/guide/vatikan"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

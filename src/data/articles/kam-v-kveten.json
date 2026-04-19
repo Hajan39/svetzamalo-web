@@ -1,0 +1,396 @@
+{
+  "title": "Kam v kvetnu? 5 destinaci, ktere stoji za to",
+  "slug": "kam-v-kveten",
+  "excerpt": "Hledas, kam vyrazit v kvetnu? Tady je 5 overených destinaci s realnym rozpoctem.",
+  "articleType": "list",
+  "contentLang": "cs",
+  "tags": [
+    "kveten",
+    "kam jet",
+    "destinace",
+    "tipy"
+  ],
+  "destinationSlug": null,
+  "publish": true,
+  "readingTime": 4,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Planujes cestu v kvetnu? Super volba. Tady je 5 destinaci, kde si to v kvetnu uzijs naplno - od plazi po hory, od Asie po Evropu. Vse overene, zadne kecy."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "1. 🇸🇮 Slovinsko"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Bledske jezero v plne krase"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nejlepsi obdobi: May to September"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Budget na den: od 40 USD"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Viza: EU citizens: free movement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-slovinsko",
+          "children": [
+            {
+              "type": "text",
+              "text": "Prectisi cely pruvodce: Slovinsko"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "2. 🇩🇪 Berlín"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Jaro v plnem proudu, festivaly"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nejlepsi obdobi: May to September"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Budget na den: od 50 USD"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Viza: EU citizens: free movement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-berlin",
+          "children": [
+            {
+              "type": "text",
+              "text": "Prectisi cely pruvodce: Berlín"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "3. 🇫🇷 Paříž"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Dlouhe dny, krasne pocasi"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nejlepsi obdobi: April to June, September to October"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Budget na den: od 70 USD"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Viza: EU citizens: free movement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-pariz",
+          "children": [
+            {
+              "type": "text",
+              "text": "Prectisi cely pruvodce: Paříž"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "4. 🇮🇹 Itálie sever"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Jezera a hory pred letni spikou"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nejlepsi obdobi: April to June, September to October"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Budget na den: od 50 USD"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Viza: EU citizens: free movement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-italie-sever",
+          "children": [
+            {
+              "type": "text",
+              "text": "Prectisi cely pruvodce: Itálie sever"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "5. 🇮🇩 Bali"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Sucha sezona v plnem proudu"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nejlepsi obdobi: April to October"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Budget na den: od 25 USD"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Viza: Czech citizens: visa on arrival 30 days"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-bali",
+          "children": [
+            {
+              "type": "text",
+              "text": "Prectisi cely pruvodce: Bali"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Jak vybrat?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Zalezi, co hledas. Chces plaze? Mrkni na ostrovy. Chces kulturu a historii? Evropska mesta budou lepsi volba. A hlavne - cim driv zacnes hledat letenky, tim lip."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "url": "/articles/kolik-stoji-den-srovnani",
+          "children": [
+            {
+              "type": "text",
+              "text": "Srovnani cen: kolik stoji den v ruznych destinacich"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "title": "Lombok – praktický průvodce pro cestovatele",
+  "slug": "pruvodce-lombok",
+  "excerpt": "Lombok je sousední ostrov Bali . I přesto, že ostrovy leží jen kousek od sebe, nedá se rozhodně říci, že by byly stejné. Naopak. Říká se, že Lombok je obrazem Bali před 30ti lety. Na ostrově jsou…",
+  "articleType": "destination-guide",
+  "contentLang": "cs",
+  "tags": [
+    "Asie",
+    "Lombok",
+    "cestování",
+    "budget"
+  ],
+  "destinationSlug": "lombok",
+  "publish": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Lombok je sousední ostrov Bali . I přesto, že ostrovy leží jen kousek od sebe, nedá se rozhodně říci, že by byly stejné. Naopak."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Kdy jet"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nejlepší doba pro návštěvu: duben až říjen."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Jazyk a komunikace"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Místní jazyky: indonéština, sasakština."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobný průvodce"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+        },
+        {
+          "type": "text",
+          "text": "kompletním průvodci – Lombok",
+          "url": "/destinations/guide/lombok"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

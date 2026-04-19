@@ -1,0 +1,401 @@
+{
+  "title": "5 mikrostátů Evropy: malé země, velké zážitky",
+  "slug": "top-5-mikrostatu-evropy",
+  "excerpt": "Vatikán projdete za odpoledne. San Marino obejdete pěšky. Monaco vás oslní - i s tím budgetem. Tyhle mini země mají překvapivě hodně co nabídnout. A většina ...",
+  "articleType": "list",
+  "contentLang": "cs",
+  "tags": [
+    "Evropa",
+    "mikrostáty",
+    "top 5",
+    "zajímavosti",
+    "jednodní výlet"
+  ],
+  "publish": true,
+  "readingTime": 4,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Vatikán projdete za odpoledne. San Marino obejdete pěšky. Monaco vás oslní - i s tím budgetem. Tyhle mini země mají překvapivě hodně co nabídnout. A většina z nich se dá navštívit jako jednodenní výlet z okolních měst."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "1. Vatikán"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Při návštěvě Říma asi nelze vynechat Vatikán. Jedná se o nejmenší stát na světě, který i přesto stojí za návštěvu."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "💰 Budget: od 1380 Kč/den (střední: 2760 Kč/den)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "📅 Nejlepší doba: březen až květen, září až listopad"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "🛂 Víza: EU citizens: no visa needed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "→ "
+        },
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-vatikan",
+          "children": [
+            {
+              "type": "text",
+              "text": "Celý průvodce: Vatikán"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "2. San Marino"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "San Marino je kouzelným ministátem s centrem tyčícím se na kopci v severní Itálii kousek od turistického letoviska Rimini."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "💰 Budget: od 1150 Kč/den (střední: 2300 Kč/den)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "📅 Nejlepší doba: duben až červen, září až říjen"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "🛂 Víza: EU citizens: no visa needed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "→ "
+        },
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-san-marino",
+          "children": [
+            {
+              "type": "text",
+              "text": "Celý průvodce: San Marino"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "3. Monaco"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Monaco je zemí přepychu a luxusu. V přístavech kotví ty nejdražší jachty, v ulicích se prohání Ferrari a Lamborginy a levné obchody byste zde hledali těžko."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "💰 Budget: od 2760 Kč/den (střední: 5750 Kč/den)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "📅 Nejlepší doba: duben až červen, září až říjen"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "🛂 Víza: EU citizens: free movement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "→ "
+        },
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-monaco",
+          "children": [
+            {
+              "type": "text",
+              "text": "Celý průvodce: Monaco"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "4. Andorra"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Andorra je horský ministát nacházející se v Pyrenejích na hranicích mezi Francií a Španělskem. Do Andorry lidé jezdí zejména kvůli krásným horám."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "💰 Budget: od 1150 Kč/den (střední: 2300 Kč/den)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "📅 Nejlepší doba: prosinec až duben (lyžování), červen až září (turistika)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "🛂 Víza: EU citizens: free movement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "→ "
+        },
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-andorra",
+          "children": [
+            {
+              "type": "text",
+              "text": "Celý průvodce: Andorra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "5. Lucemburk"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Lucemburk je hlavním městem Lucemburského velkovévodství, což je ministát hraničící s Belgií, Německem a Francií."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "💰 Budget: od 1610 Kč/den (střední: 3220 Kč/den)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "📅 Nejlepší doba: květen až září"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "🛂 Víza: EU citizens: free movement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "→ "
+        },
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-lucemburk",
+          "children": [
+            {
+              "type": "text",
+              "text": "Celý průvodce: Lucemburk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "✈️ Kam dál?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Každá z těchto destinací má svůj kompletní průvodce s praktickými tipy na dopravu, jídlo a ubytování. Klikni na destinaci, která tě zaujala, a zjisti víc."
+        }
+      ]
+    }
+  ]
+}

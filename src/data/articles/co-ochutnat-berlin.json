@@ -1,0 +1,186 @@
+{
+  "title": "Co ochutnat: Berlín 🇩🇪 - 5 jidel, ktera nemuzes minout",
+  "slug": "co-ochutnat-berlin",
+  "excerpt": "Jidlo v destinaci Berlín - 5 typickych pokrmu, tipy na levne stravovani a kolik pocitat na jidlo denne.",
+  "articleType": "other",
+  "contentLang": "cs",
+  "tags": [
+    "Berlín",
+    "jidlo",
+    "gastro",
+    "tipy",
+    "street food"
+  ],
+  "destinationSlug": "berlin",
+  "publish": true,
+  "readingTime": 3,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Jidlo je pulka cestovani. A Berlín 🇩🇪 tohle bere vazne. Tady je 5 veci, ktere musis ochutnat - a tipy, jak se najist levne a dobre."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "5 veci, ktere musis ochutnat"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Currywurst"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Narezany burek s kecupem a kari. Berlinely ikonicke jidlo. Od 3 EUR."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Doner Kebab"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Berlin je hlavni mesto doneru. Mustafa's Gemuse Kebab = legendarni fronta."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Berliner Pfannkuchen"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Kobliha plnena dzem. Pozor: v Berline ji nerikej 'Berliner' ale 'Pfannkuchen'."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Spatzle"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nemecke halusky se syrem. Syte a hrejive - idealni v chladu."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Street food na Markthalle Neun"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Ctvrtecni street food market. Vsechno od ramen po tacos."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Tipy pro jidlo na budgetu"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Berlin je na zapado-evropske pomery hodne levny. Doner za 5 EUR te nasytí. Markety jako Markthalle Neun nebo Thai Park jsou raj pro gurmany na budgetu."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Kolik pocitat na jidlo?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Na budgetovem rezimu pocitej s 402-502 Kc denne na jidlo. To je 3x street food nebo 2x lokalni restaurace."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-berlin",
+          "children": [
+            {
+              "type": "text",
+              "text": "Prectisi cely pruvodce: Berlín"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

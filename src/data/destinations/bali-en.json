@@ -1,0 +1,3931 @@
+{
+  "id": 939,
+  "documentId": "u3w7v4r3jhhv5gwx66l4qfqw",
+  "name": "Bali",
+  "slug": "bali-en",
+  "intro": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Indonesian island full of surprises. Bali is a beautiful island almost representing a tropical paradise. On this relatively small, but sufficiently diverse island, you can find almost everything. Iconic views with a majestic volcano in the background, waterfalls almost on every corner, kitschy green rice fields with coconut palms, beautiful Hindu temples, clean beaches, and blue sea. Surfers, diving enthusiasts, or mountain hikers will find something for themselves."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Basic information"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "children": [
+        {
+          "type": "text",
+          "text": "Culture"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "If you want to experience the real Indonesia, you won’t find it on Bali. It is a completely different and specific island (both in terms of culture and landscape). Hinduism is the dominant religion on Bali, but Islam rules in the rest of Indonesia. Instead of veiled Muslims and loud mosques at 5 in the morning, you will meet smiling Balinese people in colorful traditional costumes, with women often wearing a typical white-yellow flower in their hair, placing offerings in the form of a natural bowl with cookies, rice, and flowers on the roads, statues, or on the beach every morning."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Religion is very important on Bali, and the locals believe in the existence of gods who reside in the mountains, especially on the volcano Gunung Agung, and secure their favor through routine offerings. Thousands of temples can be found throughout Bali, and the locals have shrines in every household. You will feel the scented sticks from the temples and may catch a glimpse of women practicing Balinese dances for a performance. Even the language is said to be slightly different from the rest of Indonesia. The nature is green. Dense and fresh vegetation covers almost the entire island even at the end of the dry season when the surrounding islands are parched. Due to its uniqueness, Bali could be more like a separate state."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191115_151353247-1024x768.jpg",
+        "alternativeText": "Bohatě zdobené hinduistické chrámy naleznete téměř všude",
+        "url": "/uploads/IMG_20191115_151353247_1024x768_c6c5aa7d60.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191115_151353247-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191115_151353247_1024x768_c6c5aa7d60",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 10.27,
+            "sizeInBytes": 10272,
+            "url": "/uploads/thumbnail_IMG_20191115_151353247_1024x768_c6c5aa7d60.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191115_151353247-1024x768.jpg",
+            "hash": "small_IMG_20191115_151353247_1024x768_c6c5aa7d60",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 46.99,
+            "sizeInBytes": 46989,
+            "url": "/uploads/small_IMG_20191115_151353247_1024x768_c6c5aa7d60.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191115_151353247-1024x768.jpg",
+            "hash": "medium_IMG_20191115_151353247_1024x768_c6c5aa7d60",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 95.56,
+            "sizeInBytes": 95560,
+            "url": "/uploads/medium_IMG_20191115_151353247_1024x768_c6c5aa7d60.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191115_151353247-1024x768.jpg",
+            "hash": "large_IMG_20191115_151353247_1024x768_c6c5aa7d60",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 156.29,
+            "sizeInBytes": 156288,
+            "url": "/uploads/large_IMG_20191115_151353247_1024x768_c6c5aa7d60.jpg"
+          }
+        },
+        "hash": "IMG_20191115_151353247_1024x768_c6c5aa7d60",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 165.96,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:33.995Z",
+        "updatedAt": "2026-02-17T13:01:33.995Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20191112_102830-1024x768.jpg",
+        "alternativeText": "Místní kladou obětiny bohům všude, i na pláž, jedná se o každodenní rituál",
+        "url": "/uploads/20191112_102830_1024x768_40b8c58898.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20191112_102830-1024x768.jpg",
+            "hash": "thumbnail_20191112_102830_1024x768_40b8c58898",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 6.29,
+            "sizeInBytes": 6294,
+            "url": "/uploads/thumbnail_20191112_102830_1024x768_40b8c58898.jpg"
+          },
+          "small": {
+            "name": "small_20191112_102830-1024x768.jpg",
+            "hash": "small_20191112_102830_1024x768_40b8c58898",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 33.83,
+            "sizeInBytes": 33832,
+            "url": "/uploads/small_20191112_102830_1024x768_40b8c58898.jpg"
+          },
+          "medium": {
+            "name": "medium_20191112_102830-1024x768.jpg",
+            "hash": "medium_20191112_102830_1024x768_40b8c58898",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 79.26,
+            "sizeInBytes": 79257,
+            "url": "/uploads/medium_20191112_102830_1024x768_40b8c58898.jpg"
+          },
+          "large": {
+            "name": "large_20191112_102830-1024x768.jpg",
+            "hash": "large_20191112_102830_1024x768_40b8c58898",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 141.07,
+            "sizeInBytes": 141072,
+            "url": "/uploads/large_20191112_102830_1024x768_40b8c58898.jpg"
+          }
+        },
+        "hash": "20191112_102830_1024x768_40b8c58898",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 151.64,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:34.681Z",
+        "updatedAt": "2026-02-17T13:01:34.681Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20191115_191821-1024x768.jpg",
+        "alternativeText": "Místní ženy v tradičním oděvu na společném hinduistickém ceremoniálu",
+        "url": "/uploads/20191115_191821_1024x768_0de8f8de38.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20191115_191821-1024x768.jpg",
+            "hash": "thumbnail_20191115_191821_1024x768_0de8f8de38",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 11.38,
+            "sizeInBytes": 11382,
+            "url": "/uploads/thumbnail_20191115_191821_1024x768_0de8f8de38.jpg"
+          },
+          "small": {
+            "name": "small_20191115_191821-1024x768.jpg",
+            "hash": "small_20191115_191821_1024x768_0de8f8de38",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 51.13,
+            "sizeInBytes": 51126,
+            "url": "/uploads/small_20191115_191821_1024x768_0de8f8de38.jpg"
+          },
+          "medium": {
+            "name": "medium_20191115_191821-1024x768.jpg",
+            "hash": "medium_20191115_191821_1024x768_0de8f8de38",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 99.56,
+            "sizeInBytes": 99558,
+            "url": "/uploads/medium_20191115_191821_1024x768_0de8f8de38.jpg"
+          },
+          "large": {
+            "name": "large_20191115_191821-1024x768.jpg",
+            "hash": "large_20191115_191821_1024x768_0de8f8de38",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 155.72,
+            "sizeInBytes": 155721,
+            "url": "/uploads/large_20191115_191821_1024x768_0de8f8de38.jpg"
+          }
+        },
+        "hash": "20191115_191821_1024x768_0de8f8de38",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 164.08,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:35.083Z",
+        "updatedAt": "2026-02-17T13:01:35.083Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "children": [
+        {
+          "type": "text",
+          "text": "Turistic bali"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Bali is also the most visited place in all of Indonesia. You will likely bump into tourists here, and in some areas, you will meet many more white people than locals. If you want to take a nice photo at a famous spot, you will most likely have to queue up, which can take several hours. Sometimes, you feel like people come here mainly to take pictures. Girls take dresses and high-heeled shoes with them to any lookout, along with a photographer. You will find so-called photo spots in many places, where you can take a photo in a wicker nest or an egg tied to a tree for a fee."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Photos on big swings are popular, where you seem to be floating above rice terraces in red or white dresses, which are provided for the photo shoot. They even organize Instagram tours here, where they take you (for a hefty fee) to the most famous and most photogenic places in Bali and take great photos for you to post on social media."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "So, don’t expect to be alone here as it looks in photos on social media. The most typical example is probably the famous Balinese Gateway to Heaven. You can find these gates all over the island, but the most popular one is on the east of the island, with a majestic volcano in the background and a lake in the foreground reflecting your figure along with the gates. However, the reality is that you have to endure a several-hour queue, and then they take your photo using a mirror to create the illusion of a lake. There isn’t any real lake there."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "However, there are still places hidden from tourists, but you have to venture out on a motorcycle completely off the beaten path and explore interesting places. You can easily wander along unfamiliar roads, as there is always something to see in Bali."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "High tourism also means higher prices than usual in Indonesia. On the other hand, you can communicate well in English here, easily find restaurants, accommodation, or hospitals at European standards."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Transportation"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Transportation in Bali is chaotic, as it is in all of Indonesia. Traffic drives on the left side of the road. It’s worth traveling by scooter, as you can get to many places in a relatively short time. You can use several accommodation points as a base and organize motorcycle trips from there. Scooters are very easy to rent on every corner. The longer you want to keep it, the better price you can negotiate. If you can, avoid driving a scooter in the capital city, where almost everyone (including children) has a scooter and traffic is really heavy. It’s ideal to take a taxi from the airport or harbor to the tourist base in Ubud, and rent a scooter from there."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191118_143329755-1024x768.jpg",
+        "alternativeText": "Většina hlavních turistických tahů je velice dobře sjízdná, pozor ale na vedlejší cesty. Tato cesta vede z hor od jezera Danau Tamblingan na sever ostrova, je dlouhá asi 5 km a překonáte na ní velké převýšení kolem 700 m. Pozor na uvařené brzdy!",
+        "url": "/uploads/IMG_20191118_143329755_1024x768_3341846242.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191118_143329755-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191118_143329755_1024x768_3341846242",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.44,
+            "sizeInBytes": 8442,
+            "url": "/uploads/thumbnail_IMG_20191118_143329755_1024x768_3341846242.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191118_143329755-1024x768.jpg",
+            "hash": "small_IMG_20191118_143329755_1024x768_3341846242",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 45.11,
+            "sizeInBytes": 45105,
+            "url": "/uploads/small_IMG_20191118_143329755_1024x768_3341846242.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191118_143329755-1024x768.jpg",
+            "hash": "medium_IMG_20191118_143329755_1024x768_3341846242",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 94.26,
+            "sizeInBytes": 94255,
+            "url": "/uploads/medium_IMG_20191118_143329755_1024x768_3341846242.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191118_143329755-1024x768.jpg",
+            "hash": "large_IMG_20191118_143329755_1024x768_3341846242",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 152.59,
+            "sizeInBytes": 152594,
+            "url": "/uploads/large_IMG_20191118_143329755_1024x768_3341846242.jpg"
+          }
+        },
+        "hash": "IMG_20191118_143329755_1024x768_3341846242",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 160.61,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:35.432Z",
+        "updatedAt": "2026-02-17T13:01:35.432Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Getting around Bali can be chaotic, as it is in the rest of Indonesia. Driving is on the left side of the road. It’s worth traveling by scooter, as you can reach many places in a relatively short amount of time. You can use several accommodation hubs as a starting point and then organize scooter trips from there. Scooters are very easy to rent on every corner. The longer you want to keep it, the better price you can negotiate. If you can, avoid driving a scooter in the capital city, as almost everyone (including children) has one in Bali and traffic can be really busy. It’s best to take a taxi from the airport or port to the tourist base of Ubud further north and rent a scooter from there."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "You can easily but expensively travel by taxi on Bali. You can find them on every corner and they will probably find you instead of you having to look for them. The most widespread and official service is Bluebird. You can find a taximeter in these cars and all you need to do is make sure it’s on. Drivers wear the same blue shirts and the cars are also blue with the Bluebird logo. Beware of fraudulent taxi drivers who also drive in blue cars but without the logo. They will ask for a huge amount of money. However, if you agree on a reasonable price with them in advance, it’s not a problem. Always agree on the price before you go."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "A cheaper option is the services of Grab and GoJek, which work similarly to Uber. In the application, you choose the route in advance and find the best price. The driver knows exactly where to pick you up and where to drop you off. You can track their arrival online on the map. You know exactly how much you will pay, have the certainty that the price is fair, and don’t have to negotiate with anyone. Just be careful on the highway that passes the airport. It is paid, and the driver must ask you if you want to take it and pay extra, or if you want to take the longer route around. The same applies to the airport entry fee. The driver can drop you off before the airport entrance, and you can save money."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "From the airport to Kuta (the main tourist and surfing center), you can practically walk, as it’s not far. The same applies in reverse."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191116_171645211_HDR-1024x768.jpg",
+        "alternativeText": "Doprava na Bali je hustá a chaotická zejména ve městech, nebo při náboženských událostech, které jsou relativně časté",
+        "url": "/uploads/IMG_20191116_171645211_HDR_1024x768_0445c37bb3.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191116_171645211_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191116_171645211_HDR_1024x768_0445c37bb3",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.53,
+            "sizeInBytes": 9530,
+            "url": "/uploads/thumbnail_IMG_20191116_171645211_HDR_1024x768_0445c37bb3.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191116_171645211_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191116_171645211_HDR_1024x768_0445c37bb3",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 41.72,
+            "sizeInBytes": 41723,
+            "url": "/uploads/small_IMG_20191116_171645211_HDR_1024x768_0445c37bb3.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191116_171645211_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191116_171645211_HDR_1024x768_0445c37bb3",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 82.39,
+            "sizeInBytes": 82390,
+            "url": "/uploads/medium_IMG_20191116_171645211_HDR_1024x768_0445c37bb3.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191116_171645211_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191116_171645211_HDR_1024x768_0445c37bb3",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 131.35,
+            "sizeInBytes": 131350,
+            "url": "/uploads/large_IMG_20191116_171645211_HDR_1024x768_0445c37bb3.jpg"
+          }
+        },
+        "hash": "IMG_20191116_171645211_HDR_1024x768_0445c37bb3",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 137.13,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:35.806Z",
+        "updatedAt": "2026-02-17T13:01:35.806Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Food"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Indonesian cuisine is an experience in itself. You can taste it almost everywhere and the quality of a restaurant does not depend on its outward appearance. The best tasting, most affordable, and largest portions of food can be found from street vendors along the road. Expect traditional Indonesian food to be mostly spicy, but locals in tourist destinations have adapted and can prepare non-spicy dishes upon request. Prices for food range from around $1 to $2 USD."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20191024_193001-768x1024.jpg",
+        "alternativeText": "Někde si můžete k jídlu nasi campur přílohy vybrat sami.",
+        "url": "/uploads/20191024_193001_768x1024_0e58eb9ed7.jpg",
+        "width": 768,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20191024_193001-768x1024.jpg",
+            "hash": "thumbnail_20191024_193001_768x1024_0e58eb9ed7",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 7.41,
+            "sizeInBytes": 7408,
+            "url": "/uploads/thumbnail_20191024_193001_768x1024_0e58eb9ed7.jpg"
+          },
+          "small": {
+            "name": "small_20191024_193001-768x1024.jpg",
+            "hash": "small_20191024_193001_768x1024_0e58eb9ed7",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 56.08,
+            "sizeInBytes": 56080,
+            "url": "/uploads/small_20191024_193001_768x1024_0e58eb9ed7.jpg"
+          },
+          "medium": {
+            "name": "medium_20191024_193001-768x1024.jpg",
+            "hash": "medium_20191024_193001_768x1024_0e58eb9ed7",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 108.36,
+            "sizeInBytes": 108357,
+            "url": "/uploads/medium_20191024_193001_768x1024_0e58eb9ed7.jpg"
+          },
+          "large": {
+            "name": "large_20191024_193001-768x1024.jpg",
+            "hash": "large_20191024_193001_768x1024_0e58eb9ed7",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 168.69,
+            "sizeInBytes": 168690,
+            "url": "/uploads/large_20191024_193001_768x1024_0e58eb9ed7.jpg"
+          }
+        },
+        "hash": "20191024_193001_768x1024_0e58eb9ed7",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 178.47,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:36.353Z",
+        "updatedAt": "2026-02-17T13:01:36.353Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191118_110805326-768x1024.jpg",
+        "alternativeText": "V takovéto formě (zabalené v papíru ve tvaru kužele) můžete očekávat nasi campur. Uvnitř naleznete skromnou porci rýže s tempe, trochou smažených nudlí a kouskem kuřete.",
+        "url": "/uploads/IMG_20191118_110805326_768x1024_aba23cb29e.jpg",
+        "width": 768,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191118_110805326-768x1024.jpg",
+            "hash": "thumbnail_IMG_20191118_110805326_768x1024_aba23cb29e",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 6.69,
+            "sizeInBytes": 6686,
+            "url": "/uploads/thumbnail_IMG_20191118_110805326_768x1024_aba23cb29e.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191118_110805326-768x1024.jpg",
+            "hash": "large_IMG_20191118_110805326_768x1024_aba23cb29e",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 128.31,
+            "sizeInBytes": 128306,
+            "url": "/uploads/large_IMG_20191118_110805326_768x1024_aba23cb29e.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191118_110805326-768x1024.jpg",
+            "hash": "small_IMG_20191118_110805326_768x1024_aba23cb29e",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 43.99,
+            "sizeInBytes": 43994,
+            "url": "/uploads/small_IMG_20191118_110805326_768x1024_aba23cb29e.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191118_110805326-768x1024.jpg",
+            "hash": "medium_IMG_20191118_110805326_768x1024_aba23cb29e",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 83.27,
+            "sizeInBytes": 83272,
+            "url": "/uploads/medium_IMG_20191118_110805326_768x1024_aba23cb29e.jpg"
+          }
+        },
+        "hash": "IMG_20191118_110805326_768x1024_aba23cb29e",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 134.65,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:36.739Z",
+        "updatedAt": "2026-02-17T13:01:36.739Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191118_102704442-1024x768.jpg",
+        "alternativeText": "Nesmí chybět ani výborné tropické ovoce, které nejlevněji koupíte u prodavačů u silnice (dole jackfruit, nahoře smrdutý durian - nejdříve ochutnejte kousek, než koupíte celý, nejedná se o klasické ovoce, které chutná každému.",
+        "url": "/uploads/IMG_20191118_102704442_1024x768_c27e697e62.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191118_102704442-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191118_102704442_1024x768_c27e697e62",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 10.35,
+            "sizeInBytes": 10352,
+            "url": "/uploads/thumbnail_IMG_20191118_102704442_1024x768_c27e697e62.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191118_102704442-1024x768.jpg",
+            "hash": "small_IMG_20191118_102704442_1024x768_c27e697e62",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 50.25,
+            "sizeInBytes": 50245,
+            "url": "/uploads/small_IMG_20191118_102704442_1024x768_c27e697e62.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191118_102704442-1024x768.jpg",
+            "hash": "large_IMG_20191118_102704442_1024x768_c27e697e62",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 184.62,
+            "sizeInBytes": 184621,
+            "url": "/uploads/large_IMG_20191118_102704442_1024x768_c27e697e62.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191118_102704442-1024x768.jpg",
+            "hash": "medium_IMG_20191118_102704442_1024x768_c27e697e62",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 109.08,
+            "sizeInBytes": 109079,
+            "url": "/uploads/medium_IMG_20191118_102704442_1024x768_c27e697e62.jpg"
+          }
+        },
+        "hash": "IMG_20191118_102704442_1024x768_c27e697e62",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 197.65,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:37.434Z",
+        "updatedAt": "2026-02-17T13:01:37.434Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Traditional dishes include:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nasi goreng – fried rice with meat and vegetables"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nasi campur – rice with a side dish of your choice (meat, fish, eggs, vegetables)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Bakso – broth with chicken meat, vegetables, meatballs, and noodles"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Gado gado – vegetable salad with tofu, egg, and beetroot sauce"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Sate – grilled meat on a skewer"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mie goreng – fried noodles with vegetables and meat"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Ayam goreng – fried chicken (usually served with rice)"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Tempe – is essentially fermented soy, which is a cheap alternative to meat. Tempe is usually fried and served as a side dish, often with Nasi campur."
+            },
+            {
+              "type": "text",
+              "text": "\n"
+            },
+            {
+              "type": "text",
+              "text": "\n"
+            },
+            {
+              "type": "text",
+              "text": "It is important to remember that nasi = rice, goreng = fried, mie = rice noodles, ayam = chicken."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191026_193145565-768x1024.jpg",
+        "alternativeText": "Nasi Campur - dole je tempe, vedle žluté tofu, zelenina a nahoře vařená rýže. Jídlo dostanete většinou v proutěném kosíku s papírem.",
+        "url": "/uploads/IMG_20191026_193145565_768x1024_053bf1001a.jpg",
+        "width": 768,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191026_193145565-768x1024.jpg",
+            "hash": "thumbnail_IMG_20191026_193145565_768x1024_053bf1001a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 4.47,
+            "sizeInBytes": 4472,
+            "url": "/uploads/thumbnail_IMG_20191026_193145565_768x1024_053bf1001a.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191026_193145565-768x1024.jpg",
+            "hash": "small_IMG_20191026_193145565_768x1024_053bf1001a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 32.56,
+            "sizeInBytes": 32556,
+            "url": "/uploads/small_IMG_20191026_193145565_768x1024_053bf1001a.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191026_193145565-768x1024.jpg",
+            "hash": "large_IMG_20191026_193145565_768x1024_053bf1001a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 113.05,
+            "sizeInBytes": 113046,
+            "url": "/uploads/large_IMG_20191026_193145565_768x1024_053bf1001a.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191026_193145565-768x1024.jpg",
+            "hash": "medium_IMG_20191026_193145565_768x1024_053bf1001a",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 68.23,
+            "sizeInBytes": 68227,
+            "url": "/uploads/medium_IMG_20191026_193145565_768x1024_053bf1001a.jpg"
+          }
+        },
+        "hash": "IMG_20191026_193145565_768x1024_053bf1001a",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 119.91,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:37.818Z",
+        "updatedAt": "2026-02-17T13:01:37.818Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191116_120438581-1024x768.jpg",
+        "alternativeText": "Vegetariánské gado gado s tofu",
+        "url": "/uploads/IMG_20191116_120438581_1024x768_5215521436.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191116_120438581-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191116_120438581_1024x768_5215521436",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.42,
+            "sizeInBytes": 9424,
+            "url": "/uploads/thumbnail_IMG_20191116_120438581_1024x768_5215521436.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191116_120438581-1024x768.jpg",
+            "hash": "small_IMG_20191116_120438581_1024x768_5215521436",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 39.58,
+            "sizeInBytes": 39580,
+            "url": "/uploads/small_IMG_20191116_120438581_1024x768_5215521436.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191116_120438581-1024x768.jpg",
+            "hash": "medium_IMG_20191116_120438581_1024x768_5215521436",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 77.34,
+            "sizeInBytes": 77342,
+            "url": "/uploads/medium_IMG_20191116_120438581_1024x768_5215521436.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191116_120438581-1024x768.jpg",
+            "hash": "large_IMG_20191116_120438581_1024x768_5215521436",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 121.87,
+            "sizeInBytes": 121868,
+            "url": "/uploads/large_IMG_20191116_120438581_1024x768_5215521436.jpg"
+          }
+        },
+        "hash": "IMG_20191116_120438581_1024x768_5215521436",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 128.15,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:38.980Z",
+        "updatedAt": "2026-02-17T13:01:38.980Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20191031_164747-768x1024.jpg",
+        "alternativeText": "Kuřecí vývar - bakso",
+        "url": "/uploads/20191031_164747_768x1024_a1d7cbdae9.jpg",
+        "width": 768,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20191031_164747-768x1024.jpg",
+            "hash": "thumbnail_20191031_164747_768x1024_a1d7cbdae9",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 5.14,
+            "sizeInBytes": 5142,
+            "url": "/uploads/thumbnail_20191031_164747_768x1024_a1d7cbdae9.jpg"
+          },
+          "small": {
+            "name": "small_20191031_164747-768x1024.jpg",
+            "hash": "small_20191031_164747_768x1024_a1d7cbdae9",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 39.12,
+            "sizeInBytes": 39123,
+            "url": "/uploads/small_20191031_164747_768x1024_a1d7cbdae9.jpg"
+          },
+          "medium": {
+            "name": "medium_20191031_164747-768x1024.jpg",
+            "hash": "medium_20191031_164747_768x1024_a1d7cbdae9",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 80.67,
+            "sizeInBytes": 80666,
+            "url": "/uploads/medium_20191031_164747_768x1024_a1d7cbdae9.jpg"
+          },
+          "large": {
+            "name": "large_20191031_164747-768x1024.jpg",
+            "hash": "large_20191031_164747_768x1024_a1d7cbdae9",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 129.84,
+            "sizeInBytes": 129842,
+            "url": "/uploads/large_20191031_164747_768x1024_a1d7cbdae9.jpg"
+          }
+        },
+        "hash": "20191031_164747_768x1024_a1d7cbdae9",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 136.43,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:39.372Z",
+        "updatedAt": "2026-02-17T13:01:39.372Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Places to visit"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "As mentioned at the beginning, Bali offers a wide range of attractions that you can visit during your stay. Some are free, some require a small fee for parking and entrance, and others require you to pay for the entire trip or course."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191116_135735795_HDR-1024x768.jpg",
+        "alternativeText": "Odpočinek v rýžových polích na konci Campuhan Ridge Walk ",
+        "url": "/uploads/IMG_20191116_135735795_HDR_1024x768_11be68aef8.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191116_135735795_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191116_135735795_HDR_1024x768_11be68aef8",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 10.16,
+            "sizeInBytes": 10156,
+            "url": "/uploads/thumbnail_IMG_20191116_135735795_HDR_1024x768_11be68aef8.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191116_135735795_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191116_135735795_HDR_1024x768_11be68aef8",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 53.99,
+            "sizeInBytes": 53986,
+            "url": "/uploads/small_IMG_20191116_135735795_HDR_1024x768_11be68aef8.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191116_135735795_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191116_135735795_HDR_1024x768_11be68aef8",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 116.36,
+            "sizeInBytes": 116360,
+            "url": "/uploads/medium_IMG_20191116_135735795_HDR_1024x768_11be68aef8.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191116_135735795_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191116_135735795_HDR_1024x768_11be68aef8",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 195.57,
+            "sizeInBytes": 195565,
+            "url": "/uploads/large_IMG_20191116_135735795_HDR_1024x768_11be68aef8.jpg"
+          }
+        },
+        "hash": "IMG_20191116_135735795_HDR_1024x768_11be68aef8",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 209.94,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:39.819Z",
+        "updatedAt": "2026-02-17T13:01:39.819Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "What are some interesting places to visit in Ubud, Bali?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Ubud is a popular tourist destination in Bali, known for its beautiful rice terraces, temples, and cultural activities. Here are some interesting places to visit in Ubud:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "ordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Sacred Monkey Forest Sanctuary",
+              "url": "https://maps.google.com/?cid=13180983972448944982",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– Here, monkeys roam freely around the park. You can walk among them and take photos, but be careful not to bring any food or valuables, as the monkeys can steal them."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Campuhan Ridge Walk",
+              "url": "https://maps.google.com/?cid=8940768362772546719",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– This is a pleasant nature walk that offers beautiful views. It’s best to visit this place outside of the midday sun as there is not much shade. You can end your walk in a nearby village and enjoy a fresh juice or dinner among the rice fields."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Tirta Empul Temple",
+              "url": "https://maps.google.com/?cid=6026478213714472129",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– This is a large Hindu temple where you can cleanse yourself in the sacred water. Entrance fee applies and you will be provided with a sarong to wear."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Penglipuran Village",
+              "url": "https://goo.gl/maps/qzY49UeT5NEXPtNz8",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– This ancient village looks like a complex of small temples. You can see how the locals live and buy souvenirs. The admission fee applies."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Free Rice Terraces",
+              "url": "https://maps.google.com/?q=Sideman%2C+Sangkan+Gn.%2C+Sidemen%2C+Kabupaten+Karangasem%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0x6f5f7ac5b71ed3c4",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– In the area around Sideman village, there are beautiful rice fields that you can visit for free. You can enjoy the view of Mount Agung towering in the background."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Jatiluwih Rice Terraces",
+              "url": "https://maps.google.com/?cid=3391077890616886170",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– These are vast rice terraces on the hills. You will be asked to pay an entrance fee, but you can avoid it by telling the ticket collector that you are just passing through."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Tegallalang Rice Terraces",
+              "url": "https://maps.google.com/?cid=10167590193753490669",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– These are small but beautiful rice terraces that look like they are from a fairy tale. You can walk among them and enjoy the view."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191116_160131199_HDR-1024x768.jpg",
+        "alternativeText": "Rýžové terasy Tegallalang s několika velkými houpačkami a fotokoutky",
+        "url": "/uploads/IMG_20191116_160131199_HDR_1024x768_b792c09478.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191116_160131199_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191116_160131199_HDR_1024x768_b792c09478",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 11.24,
+            "sizeInBytes": 11244,
+            "url": "/uploads/thumbnail_IMG_20191116_160131199_HDR_1024x768_b792c09478.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191116_160131199_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191116_160131199_HDR_1024x768_b792c09478",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 57.57,
+            "sizeInBytes": 57565,
+            "url": "/uploads/small_IMG_20191116_160131199_HDR_1024x768_b792c09478.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191116_160131199_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191116_160131199_HDR_1024x768_b792c09478",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 124.46,
+            "sizeInBytes": 124461,
+            "url": "/uploads/medium_IMG_20191116_160131199_HDR_1024x768_b792c09478.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191116_160131199_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191116_160131199_HDR_1024x768_b792c09478",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 210.79,
+            "sizeInBytes": 210789,
+            "url": "/uploads/large_IMG_20191116_160131199_HDR_1024x768_b792c09478.jpg"
+          }
+        },
+        "hash": "IMG_20191116_160131199_HDR_1024x768_b792c09478",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 225.66,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:40.319Z",
+        "updatedAt": "2026-02-17T13:01:40.319Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191116_111619621_HDR-1024x768.jpg",
+        "alternativeText": "Opičí park v Ubudu",
+        "url": "/uploads/IMG_20191116_111619621_HDR_1024x768_af3430cd23.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191116_111619621_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191116_111619621_HDR_1024x768_af3430cd23",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 11.94,
+            "sizeInBytes": 11935,
+            "url": "/uploads/thumbnail_IMG_20191116_111619621_HDR_1024x768_af3430cd23.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191116_111619621_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191116_111619621_HDR_1024x768_af3430cd23",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 59.63,
+            "sizeInBytes": 59629,
+            "url": "/uploads/small_IMG_20191116_111619621_HDR_1024x768_af3430cd23.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191116_111619621_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191116_111619621_HDR_1024x768_af3430cd23",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 117.17,
+            "sizeInBytes": 117174,
+            "url": "/uploads/medium_IMG_20191116_111619621_HDR_1024x768_af3430cd23.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191116_111619621_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191116_111619621_HDR_1024x768_af3430cd23",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 183.32,
+            "sizeInBytes": 183318,
+            "url": "/uploads/large_IMG_20191116_111619621_HDR_1024x768_af3430cd23.jpg"
+          }
+        },
+        "hash": "IMG_20191116_111619621_HDR_1024x768_af3430cd23",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 192.56,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:40.845Z",
+        "updatedAt": "2026-02-17T13:01:40.845Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191117_160105973_HDR-1024x768.jpg",
+        "alternativeText": "Rýžové terasy Jatiluwih",
+        "url": "/uploads/IMG_20191117_160105973_HDR_1024x768_cc58fd8177.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191117_160105973_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191117_160105973_HDR_1024x768_cc58fd8177",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.33,
+            "sizeInBytes": 9329,
+            "url": "/uploads/thumbnail_IMG_20191117_160105973_HDR_1024x768_cc58fd8177.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191117_160105973_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191117_160105973_HDR_1024x768_cc58fd8177",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 50.91,
+            "sizeInBytes": 50914,
+            "url": "/uploads/small_IMG_20191117_160105973_HDR_1024x768_cc58fd8177.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191117_160105973_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191117_160105973_HDR_1024x768_cc58fd8177",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 113.18,
+            "sizeInBytes": 113177,
+            "url": "/uploads/medium_IMG_20191117_160105973_HDR_1024x768_cc58fd8177.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191117_160105973_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191117_160105973_HDR_1024x768_cc58fd8177",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 193.97,
+            "sizeInBytes": 193971,
+            "url": "/uploads/large_IMG_20191117_160105973_HDR_1024x768_cc58fd8177.jpg"
+          }
+        },
+        "hash": "IMG_20191117_160105973_HDR_1024x768_cc58fd8177",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 208.34,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:41.313Z",
+        "updatedAt": "2026-02-17T13:01:41.313Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191115_121023436_HDR-1024x768.jpg",
+        "alternativeText": "Klidné rýžové terasy v okolí Sidemanu s monumentální třítisícovou sopkou v pozadí",
+        "url": "/uploads/IMG_20191115_121023436_HDR_1024x768_d6a8816b95.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191115_121023436_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191115_121023436_HDR_1024x768_d6a8816b95",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.87,
+            "sizeInBytes": 8871,
+            "url": "/uploads/thumbnail_IMG_20191115_121023436_HDR_1024x768_d6a8816b95.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191115_121023436_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191115_121023436_HDR_1024x768_d6a8816b95",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 50.59,
+            "sizeInBytes": 50593,
+            "url": "/uploads/small_IMG_20191115_121023436_HDR_1024x768_d6a8816b95.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191115_121023436_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191115_121023436_HDR_1024x768_d6a8816b95",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 114.02,
+            "sizeInBytes": 114016,
+            "url": "/uploads/medium_IMG_20191115_121023436_HDR_1024x768_d6a8816b95.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191115_121023436_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191115_121023436_HDR_1024x768_d6a8816b95",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 196.86,
+            "sizeInBytes": 196857,
+            "url": "/uploads/large_IMG_20191115_121023436_HDR_1024x768_d6a8816b95.jpg"
+          }
+        },
+        "hash": "IMG_20191115_121023436_HDR_1024x768_d6a8816b95",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 211.87,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:42.053Z",
+        "updatedAt": "2026-02-17T13:01:42.053Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191115_154342095-1024x768.jpg",
+        "alternativeText": "Penglipuran Village",
+        "url": "/uploads/IMG_20191115_154342095_1024x768_49be31fbc9.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191115_154342095-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191115_154342095_1024x768_49be31fbc9",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.42,
+            "sizeInBytes": 8418,
+            "url": "/uploads/thumbnail_IMG_20191115_154342095_1024x768_49be31fbc9.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191115_154342095-1024x768.jpg",
+            "hash": "small_IMG_20191115_154342095_1024x768_49be31fbc9",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 39.23,
+            "sizeInBytes": 39229,
+            "url": "/uploads/small_IMG_20191115_154342095_1024x768_49be31fbc9.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191115_154342095-1024x768.jpg",
+            "hash": "medium_IMG_20191115_154342095_1024x768_49be31fbc9",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 81,
+            "sizeInBytes": 80995,
+            "url": "/uploads/medium_IMG_20191115_154342095_1024x768_49be31fbc9.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191115_154342095-1024x768.jpg",
+            "hash": "large_IMG_20191115_154342095_1024x768_49be31fbc9",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 133.26,
+            "sizeInBytes": 133261,
+            "url": "/uploads/large_IMG_20191115_154342095_1024x768_49be31fbc9.jpg"
+          }
+        },
+        "hash": "IMG_20191115_154342095_1024x768_49be31fbc9",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 141.51,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:42.851Z",
+        "updatedAt": "2026-02-17T13:01:42.851Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191115_172258523-1024x1024.jpg",
+        "alternativeText": "Chrám vodního očištění",
+        "url": "/uploads/IMG_20191115_172258523_1024x1024_705d5c5dd6.jpg",
+        "width": 1024,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191115_172258523-1024x1024.jpg",
+            "hash": "thumbnail_IMG_20191115_172258523_1024x1024_705d5c5dd6",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 156,
+            "height": 156,
+            "size": 8.39,
+            "sizeInBytes": 8385,
+            "url": "/uploads/thumbnail_IMG_20191115_172258523_1024x1024_705d5c5dd6.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191115_172258523-1024x1024.jpg",
+            "hash": "small_IMG_20191115_172258523_1024x1024_705d5c5dd6",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 500,
+            "size": 65.93,
+            "sizeInBytes": 65926,
+            "url": "/uploads/small_IMG_20191115_172258523_1024x1024_705d5c5dd6.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191115_172258523-1024x1024.jpg",
+            "hash": "medium_IMG_20191115_172258523_1024x1024_705d5c5dd6",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 750,
+            "size": 128.1,
+            "sizeInBytes": 128098,
+            "url": "/uploads/medium_IMG_20191115_172258523_1024x1024_705d5c5dd6.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191115_172258523-1024x1024.jpg",
+            "hash": "large_IMG_20191115_172258523_1024x1024_705d5c5dd6",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 1000,
+            "size": 201.59,
+            "sizeInBytes": 201586,
+            "url": "/uploads/large_IMG_20191115_172258523_1024x1024_705d5c5dd6.jpg"
+          }
+        },
+        "hash": "IMG_20191115_172258523_1024x1024_705d5c5dd6",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 210.45,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:43.557Z",
+        "updatedAt": "2026-02-17T13:01:43.557Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Gunung Batur",
+              "url": "https://maps.google.com/?q=Batur%2C+South+Batur%2C+Kintamani%2C+Bangli%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0xd38045afa18670b4",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– This is a smaller (1717 meters above sea level) Balinese volcano that can be climbed. The ascent is usually made at night so that you reach the summit in the morning. The weather at the top is cooler and the view of the surroundings is beautiful."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Gunung Agung",
+              "url": "https://maps.google.com/?cid=3501363261286912478",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– The highest mountain in Bali (3031 m above sea level) is also a beautiful and majestic volcano that can be seen from surrounding islands such as Nusa Penida or Gili. In addition to admiring this volcano from the lowlands, it is possible to hike to the top and enjoy a magnificent view of the island and the crater of the volcano. The hike is not easy, as the volcano is very steep and the weather on the summit is chilly. It is necessary to check in advance if it is possible to climb the mountain. However, since the volcano is still active after its eruption in 2018, it is not currently possible to climb it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191115_130139179-1024x768.jpg",
+        "alternativeText": "Mohutnou stále aktivní sopku Gunung Agung (3031 m n.m.) můžete pozorovat z mnoha míst na Bali, dokonce i ze sousedních ostrovů.",
+        "url": "/uploads/IMG_20191115_130139179_1024x768_8cb60c7df4.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191115_130139179-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191115_130139179_1024x768_8cb60c7df4",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.48,
+            "sizeInBytes": 8479,
+            "url": "/uploads/thumbnail_IMG_20191115_130139179_1024x768_8cb60c7df4.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191115_130139179-1024x768.jpg",
+            "hash": "small_IMG_20191115_130139179_1024x768_8cb60c7df4",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 44.25,
+            "sizeInBytes": 44251,
+            "url": "/uploads/small_IMG_20191115_130139179_1024x768_8cb60c7df4.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191115_130139179-1024x768.jpg",
+            "hash": "medium_IMG_20191115_130139179_1024x768_8cb60c7df4",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 95.67,
+            "sizeInBytes": 95673,
+            "url": "/uploads/medium_IMG_20191115_130139179_1024x768_8cb60c7df4.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191115_130139179-1024x768.jpg",
+            "hash": "large_IMG_20191115_130139179_1024x768_8cb60c7df4",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 161.78,
+            "sizeInBytes": 161777,
+            "url": "/uploads/large_IMG_20191115_130139179_1024x768_8cb60c7df4.jpg"
+          }
+        },
+        "hash": "IMG_20191115_130139179_1024x768_8cb60c7df4",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 172.89,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:44.522Z",
+        "updatedAt": "2026-02-17T13:01:44.522Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Města"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "As for the places to visit in Bali:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Denpasar",
+              "url": "https://maps.google.com/?q=Denpasar%2C+Denpasar+City%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0xe27334e8ccb9374a",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– The capital of Bali, but it’s not a popular tourist destination. It’s more of a busy city with not many interesting things to see. It’s better to avoid this chaotic city."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Kuta",
+              "url": "https://maps.google.com/?q=Kuta%2C+Badung+Regency%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0x4030bfbca7d2c00",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– The main tourist center on the coast near the airport. Here you’ll find everything – restaurants, bars, hotels, countless stalls and vendors selling clothes and souvenirs, luxury shops, rental and sales of surfboards and scooters. There are really a lot of tourists here. The beach is also bustling with surfing. You can rent a surfboard directly on the beach or pay for an instructor. However, don’t expect a beautiful beach. Rather than a tropical paradise, it resembles northern Italy with murky water and almost impossible to swim despite the large number of surfers. You won’t be watching the sunset here alone either. If you’re looking for a lively place, then Kuta is a great choice. If you’re looking for something quieter, visit the adjacent area of Seminyak or head straight north of the island."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "U",
+              "url": "https://maps.google.com/?q=Ubud%2C+Gianyar%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0x54a38afd6b773d1c",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "bud",
+              "url": "https://maps.google.com/?q=Ubud%2C+Gianyar%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0x54a38afd6b773d1c",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– A town in the interior, almost in the hills. Nowadays, it’s more of a tourist base because there are plenty of accommodation and dining options, and most of the interesting places are located around Ubud within scooter driving distance."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Singaraja",
+              "url": "https://maps.google.com/?q=Singaraja%2C+Banyuasri%2C+Buleleng%2C+Buleleng+Regency%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0xfe1f91450bc82961",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– A city in the north of the island on the coast. It’s not yet too touristy here. To the west is the"
+            },
+            {
+              "type": "text",
+              "text": "Lovina area",
+              "url": "https://maps.google.com/?q=Lovina+Beach%2C+Anturan%2C+Buleleng%2C+Buleleng+Regency%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0xab6c47770c720750",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": ", which is becoming more touristy and attracts visitors for dolphin watching trips, a black beach, accommodation, and restaurants. This place could be chosen as a base again as there are several waterfalls in the mountains nearby. If you want, you can pay for a morning dolphin watching tour from a boat or underwater. You can’t swim with them, although it’s often advertised by vendors."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Amed",
+              "url": "https://maps.google.com/?q=Amed%2C+Purwakerti%2C+Karangasem%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0x2dc34e6b4e3b97bf",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– One of the ports, but also a place to dive. You can see a shipwreck here. Amed also has a beach."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Padangbai",
+              "url": "https://maps.google.com/?q=Padangbai%2C+Manggis%2C+Karangasem+Regency%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0x5030bfbca831910",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– A port town. You can get a ferry here to Lombok, Nusa Penida, or fast boats to the Gili Islands. There’s also accommodation and a nice beach – Blue Lagoon (where you can also snorkel)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191112_180219517_HDR-1-1024x768.jpg",
+        "alternativeText": "Na západ slunce v Kutě rozhodně nebudete koukat sami",
+        "url": "/uploads/IMG_20191112_180219517_HDR_1_1024x768_eea2cd3685.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191112_180219517_HDR-1-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191112_180219517_HDR_1_1024x768_eea2cd3685",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.82,
+            "sizeInBytes": 8818,
+            "url": "/uploads/thumbnail_IMG_20191112_180219517_HDR_1_1024x768_eea2cd3685.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191112_180219517_HDR-1-1024x768.jpg",
+            "hash": "small_IMG_20191112_180219517_HDR_1_1024x768_eea2cd3685",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 41.67,
+            "sizeInBytes": 41665,
+            "url": "/uploads/small_IMG_20191112_180219517_HDR_1_1024x768_eea2cd3685.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191112_180219517_HDR-1-1024x768.jpg",
+            "hash": "medium_IMG_20191112_180219517_HDR_1_1024x768_eea2cd3685",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 86.34,
+            "sizeInBytes": 86339,
+            "url": "/uploads/medium_IMG_20191112_180219517_HDR_1_1024x768_eea2cd3685.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191112_180219517_HDR-1-1024x768.jpg",
+            "hash": "large_IMG_20191112_180219517_HDR_1_1024x768_eea2cd3685",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 141.76,
+            "sizeInBytes": 141762,
+            "url": "/uploads/large_IMG_20191112_180219517_HDR_1_1024x768_eea2cd3685.jpg"
+          }
+        },
+        "hash": "IMG_20191112_180219517_HDR_1_1024x768_eea2cd3685",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 150.16,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:44.939Z",
+        "updatedAt": "2026-02-17T13:01:44.939Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20191112_102528-1024x768.jpg",
+        "alternativeText": "Surfa v Kutě seženete na každém rohu.",
+        "url": "/uploads/20191112_102528_1024x768_835eadf8e9.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20191112_102528-1024x768.jpg",
+            "hash": "thumbnail_20191112_102528_1024x768_835eadf8e9",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.87,
+            "sizeInBytes": 9872,
+            "url": "/uploads/thumbnail_20191112_102528_1024x768_835eadf8e9.jpg"
+          },
+          "small": {
+            "name": "small_20191112_102528-1024x768.jpg",
+            "hash": "small_20191112_102528_1024x768_835eadf8e9",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 50.96,
+            "sizeInBytes": 50958,
+            "url": "/uploads/small_20191112_102528_1024x768_835eadf8e9.jpg"
+          },
+          "medium": {
+            "name": "medium_20191112_102528-1024x768.jpg",
+            "hash": "medium_20191112_102528_1024x768_835eadf8e9",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 108.9,
+            "sizeInBytes": 108903,
+            "url": "/uploads/medium_20191112_102528_1024x768_835eadf8e9.jpg"
+          },
+          "large": {
+            "name": "large_20191112_102528-1024x768.jpg",
+            "hash": "large_20191112_102528_1024x768_835eadf8e9",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 181.87,
+            "sizeInBytes": 181865,
+            "url": "/uploads/large_20191112_102528_1024x768_835eadf8e9.jpg"
+          }
+        },
+        "hash": "20191112_102528_1024x768_835eadf8e9",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 194.2,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:45.523Z",
+        "updatedAt": "2026-02-17T13:01:45.523Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Vodopády"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Definitely visit the local waterfalls. They are often huge and suitable for swimming. For all of them, expect to pay a parking fee of around 5 rupiah and an entrance fee of 20-40 rupiah. Some offer an experiential program with a guide (jumping into the waterfall, swimming, sliding down the waterfall – nothing you couldn’t handle yourself) and are therefore significantly more expensive. However, you still have the option to buy a regular ticket, which is up to 10 times cheaper. They won’t offer it to you themselves, though, you have to ask for it. In some places, they even prohibit swimming without a guide so that you have to pay a higher entrance fee. The question, however, is who enforces it."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191117_112724579_HDR-768x1024.jpg",
+        "alternativeText": "Mohutný vodopád Nungnung",
+        "url": "/uploads/IMG_20191117_112724579_HDR_768x1024_b5d81c173f.jpg",
+        "width": 768,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191117_112724579_HDR-768x1024.jpg",
+            "hash": "thumbnail_IMG_20191117_112724579_HDR_768x1024_b5d81c173f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 3.62,
+            "sizeInBytes": 3620,
+            "url": "/uploads/thumbnail_IMG_20191117_112724579_HDR_768x1024_b5d81c173f.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191117_112724579_HDR-768x1024.jpg",
+            "hash": "small_IMG_20191117_112724579_HDR_768x1024_b5d81c173f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 26.13,
+            "sizeInBytes": 26130,
+            "url": "/uploads/small_IMG_20191117_112724579_HDR_768x1024_b5d81c173f.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191117_112724579_HDR-768x1024.jpg",
+            "hash": "medium_IMG_20191117_112724579_HDR_768x1024_b5d81c173f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 56.03,
+            "sizeInBytes": 56029,
+            "url": "/uploads/medium_IMG_20191117_112724579_HDR_768x1024_b5d81c173f.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191117_112724579_HDR-768x1024.jpg",
+            "hash": "large_IMG_20191117_112724579_HDR_768x1024_b5d81c173f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 94.09,
+            "sizeInBytes": 94087,
+            "url": "/uploads/large_IMG_20191117_112724579_HDR_768x1024_b5d81c173f.jpg"
+          }
+        },
+        "hash": "IMG_20191117_112724579_HDR_768x1024_b5d81c173f",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 99.38,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:46.249Z",
+        "updatedAt": "2026-02-17T13:01:46.249Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Here are some examples of waterfalls:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nungnung Waterfall",
+              "url": "https://maps.google.com/?q=Nungnung+Waterfall%2C+Belok%2FSidan%2C+Petang%2C+Badung+Regency%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0x8ad87885a422e318",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– the highest and most powerful waterfall on the island. You will have to descend 500 steps to get there from the parking lot. The most beautiful scenery is around noon when the sun shines on the waterfall. You can swim here for free, but you have to pay for parking and a simple entrance fee. You have to climb back up 500 steps on the way back."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Tukad Cepung Waterfall",
+              "url": "https://maps.google.com/?cid=98953813052689666",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– a magical waterfall hidden in a rock. You can’t swim here, but the surrounding rocks and caves create an unusual atmosphere."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Git Git Waterfall",
+              "url": "https://maps.google.com/?cid=10802026377482918208",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– a nice waterfall, muddy after rain. After paying for a guide, you can swing on a rope and jump into the water here. It has an upper and lower part, but you can’t swim in the lower part."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Git Git Twin Waterfall",
+              "url": "https://maps.google.com/?cid=518862563912556784",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– a twin waterfall made up of two waterfalls joined together. You don’t need a guide here. You can dip your feet in the water, but swimming is not allowed."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Aling-Aling Waterfall",
+              "url": "https://maps.google.com/?cid=9345897367768238354",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– in these waterfalls, you can experience several activities for a higher fee, such as jumping from 5, 10 and 15 meters, riding a stone slide, and more. Or you can pay a regular entrance fee, but swimming is not allowed, although no one is checking."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Sing-Sing Waterfall",
+              "url": "https://maps.google.com/?cid=13474201467709172965",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– a dry waterfall if you go during the dry season. The locals use the water for household purposes, and there is not a drop left."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Air Terjun Kanto Lampo",
+              "url": "https://goo.gl/maps/RR7iuTNsXfYcF7nJ6",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– a wide waterfall flowing over a rock near Ubud. You will probably have to stand in line to take a picture here. There is a nicely maintained park with a swing leading to the waterfall. You can also see the waterfall from above if you climb up to the lookout on the other bank."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Sekumpul Waterfall",
+              "url": "https://maps.google.com/?cid=2512437000172200279",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– the most famous and also the most expensive waterfall. It is a high main waterfall and several smaller ones around it. You can pay a basic entrance fee for a regular price, but you won’t see much, only a view from above, and you won’t be allowed to descend under the waterfall. You can choose from several packages where you get a guide who will take you to the waterfall where you can swim. You can choose from several circuits that differ in length, price, and number of waterfalls. However, the prices are ridiculous even by European standards."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191120_121513188_HDR-768x1024.jpg",
+        "alternativeText": "Git Git Waterfall ",
+        "url": "/uploads/IMG_20191120_121513188_HDR_768x1024_ac11d107d1.jpg",
+        "width": 768,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191120_121513188_HDR-768x1024.jpg",
+            "hash": "thumbnail_IMG_20191120_121513188_HDR_768x1024_ac11d107d1",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 7.5,
+            "sizeInBytes": 7498,
+            "url": "/uploads/thumbnail_IMG_20191120_121513188_HDR_768x1024_ac11d107d1.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191120_121513188_HDR-768x1024.jpg",
+            "hash": "small_IMG_20191120_121513188_HDR_768x1024_ac11d107d1",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 68.47,
+            "sizeInBytes": 68474,
+            "url": "/uploads/small_IMG_20191120_121513188_HDR_768x1024_ac11d107d1.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191120_121513188_HDR-768x1024.jpg",
+            "hash": "medium_IMG_20191120_121513188_HDR_768x1024_ac11d107d1",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 147.49,
+            "sizeInBytes": 147492,
+            "url": "/uploads/medium_IMG_20191120_121513188_HDR_768x1024_ac11d107d1.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191120_121513188_HDR-768x1024.jpg",
+            "hash": "large_IMG_20191120_121513188_HDR_768x1024_ac11d107d1",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 247.44,
+            "sizeInBytes": 247437,
+            "url": "/uploads/large_IMG_20191120_121513188_HDR_768x1024_ac11d107d1.jpg"
+          }
+        },
+        "hash": "IMG_20191120_121513188_HDR_768x1024_ac11d107d1",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 264.44,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:46.716Z",
+        "updatedAt": "2026-02-17T13:01:46.716Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191115_135243035-768x1024.jpg",
+        "alternativeText": "Tukad Cepung Waterfall ",
+        "url": "/uploads/IMG_20191115_135243035_768x1024_9a50dd9841.jpg",
+        "width": 768,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191115_135243035-768x1024.jpg",
+            "hash": "thumbnail_IMG_20191115_135243035_768x1024_9a50dd9841",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 4.35,
+            "sizeInBytes": 4353,
+            "url": "/uploads/thumbnail_IMG_20191115_135243035_768x1024_9a50dd9841.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191115_135243035-768x1024.jpg",
+            "hash": "small_IMG_20191115_135243035_768x1024_9a50dd9841",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 34.26,
+            "sizeInBytes": 34257,
+            "url": "/uploads/small_IMG_20191115_135243035_768x1024_9a50dd9841.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191115_135243035-768x1024.jpg",
+            "hash": "large_IMG_20191115_135243035_768x1024_9a50dd9841",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 113.98,
+            "sizeInBytes": 113975,
+            "url": "/uploads/large_IMG_20191115_135243035_768x1024_9a50dd9841.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191115_135243035-768x1024.jpg",
+            "hash": "medium_IMG_20191115_135243035_768x1024_9a50dd9841",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 70.51,
+            "sizeInBytes": 70506,
+            "url": "/uploads/medium_IMG_20191115_135243035_768x1024_9a50dd9841.jpg"
+          }
+        },
+        "hash": "IMG_20191115_135243035_768x1024_9a50dd9841",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 120.32,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:47.141Z",
+        "updatedAt": "2026-02-17T13:01:47.141Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191119_105735948_HDR-768x1024.jpg",
+        "alternativeText": "Aling-Aling Waterfall",
+        "url": "/uploads/IMG_20191119_105735948_HDR_768x1024_976f648492.jpg",
+        "width": 768,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191119_105735948_HDR-768x1024.jpg",
+            "hash": "thumbnail_IMG_20191119_105735948_HDR_768x1024_976f648492",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 7.44,
+            "sizeInBytes": 7441,
+            "url": "/uploads/thumbnail_IMG_20191119_105735948_HDR_768x1024_976f648492.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191119_105735948_HDR-768x1024.jpg",
+            "hash": "small_IMG_20191119_105735948_HDR_768x1024_976f648492",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 71.6,
+            "sizeInBytes": 71598,
+            "url": "/uploads/small_IMG_20191119_105735948_HDR_768x1024_976f648492.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191119_105735948_HDR-768x1024.jpg",
+            "hash": "medium_IMG_20191119_105735948_HDR_768x1024_976f648492",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 159.05,
+            "sizeInBytes": 159048,
+            "url": "/uploads/medium_IMG_20191119_105735948_HDR_768x1024_976f648492.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191119_105735948_HDR-768x1024.jpg",
+            "hash": "large_IMG_20191119_105735948_HDR_768x1024_976f648492",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 271.76,
+            "sizeInBytes": 271759,
+            "url": "/uploads/large_IMG_20191119_105735948_HDR_768x1024_976f648492.jpg"
+          }
+        },
+        "hash": "IMG_20191119_105735948_HDR_768x1024_976f648492",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 292.05,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:47.882Z",
+        "updatedAt": "2026-02-17T13:01:47.882Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "20191120_102725-768x1024.jpg",
+        "alternativeText": "Pohled shora na Sekumpul, dál vás bez drahé vstupenky nepustí.",
+        "url": "/uploads/20191120_102725_768x1024_e1780741de.jpg",
+        "width": 768,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_20191120_102725-768x1024.jpg",
+            "hash": "thumbnail_20191120_102725_768x1024_e1780741de",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 6.46,
+            "sizeInBytes": 6457,
+            "url": "/uploads/thumbnail_20191120_102725_768x1024_e1780741de.jpg"
+          },
+          "small": {
+            "name": "small_20191120_102725-768x1024.jpg",
+            "hash": "small_20191120_102725_768x1024_e1780741de",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 65.6,
+            "sizeInBytes": 65603,
+            "url": "/uploads/small_20191120_102725_768x1024_e1780741de.jpg"
+          },
+          "medium": {
+            "name": "medium_20191120_102725-768x1024.jpg",
+            "hash": "medium_20191120_102725_768x1024_e1780741de",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 150.52,
+            "sizeInBytes": 150521,
+            "url": "/uploads/medium_20191120_102725_768x1024_e1780741de.jpg"
+          },
+          "large": {
+            "name": "large_20191120_102725-768x1024.jpg",
+            "hash": "large_20191120_102725_768x1024_e1780741de",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 263.22,
+            "sizeInBytes": 263222,
+            "url": "/uploads/large_20191120_102725_768x1024_e1780741de.jpg"
+          }
+        },
+        "hash": "20191120_102725_768x1024_e1780741de",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 285.51,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:48.459Z",
+        "updatedAt": "2026-02-17T13:01:48.459Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Chrámy"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "As mentioned before, Bali is a strongly Hindu country and temples can be found almost everywhere. Admission to smaller temples is free, while admission to larger and more famous ones requires a fee. It is also necessary to dress appropriately, often requiring a traditional sarong around the waist, and a regular scarf is not enough."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "During various festivities, you can see local women dressed in their traditional attire, which consists of a white blouse, a colorful sarong, a sash around the waist, and their hair always tied up and adorned with traditional flowers. These women bring richly decorated trays of fruit as offerings to the gods in the temples."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "On weekends (and sometimes even on weekdays), you can attend a local dance performance right in one of the temples. Balinese dance is closely tied to local culture and religion and is among the long-standing traditions. You can purchase tickets from street vendors near the temple."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191118_122445372_HDR-1024x768.jpg",
+        "alternativeText": "Ulun Danu Beratan Temple ",
+        "url": "/uploads/IMG_20191118_122445372_HDR_1024x768_843ff9d3f5.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191118_122445372_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191118_122445372_HDR_1024x768_843ff9d3f5",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 6.44,
+            "sizeInBytes": 6443,
+            "url": "/uploads/thumbnail_IMG_20191118_122445372_HDR_1024x768_843ff9d3f5.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191118_122445372_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191118_122445372_HDR_1024x768_843ff9d3f5",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 60.63,
+            "sizeInBytes": 60633,
+            "url": "/uploads/medium_IMG_20191118_122445372_HDR_1024x768_843ff9d3f5.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191118_122445372_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191118_122445372_HDR_1024x768_843ff9d3f5",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 29.86,
+            "sizeInBytes": 29863,
+            "url": "/uploads/small_IMG_20191118_122445372_HDR_1024x768_843ff9d3f5.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191118_122445372_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191118_122445372_HDR_1024x768_843ff9d3f5",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 97.32,
+            "sizeInBytes": 97323,
+            "url": "/uploads/large_IMG_20191118_122445372_HDR_1024x768_843ff9d3f5.jpg"
+          }
+        },
+        "hash": "IMG_20191118_122445372_HDR_1024x768_843ff9d3f5",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 102.21,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:48.810Z",
+        "updatedAt": "2026-02-17T13:01:48.810Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Saraswati Temple",
+              "url": "https://maps.google.com/?cid=16152306625377193689",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– Chrám přímo v Ubudu. Zde můžete zvenku vidět zajímavé chrámové budovy a brány, sochy, nebo jezírko s lekníny.  Dovnitř chrámu se nedostanete. Vstupné je zdarma."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Uluwatu temple",
+              "url": "https://maps.google.com/?cid=916919149066388629",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– Poměrně vzdálený chrám od ostatních atrakcí nacházející se až na jižním cípu ostrova. Spíš než o zajímavý chrám, se jedná o vyhlídku na útesu."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Batu Bolong Temple",
+              "url": "https://maps.google.com/?cid=1856562538964370644",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– Chrám na skále v moři. Skála tvoří jakýsi most, či bránu."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Besakih Temple",
+              "url": "https://maps.google.com/?cid=863628422764673866",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": ". Další z chrámových komplexů v horách s hezkými scenériemi. Dojem mohou pokazit místní, kteří vám budou chtít prodat v podstatě cokoli."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Ulun Danu Beratan Temple",
+              "url": "https://maps.google.com/?cid=1739626857262422867",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– Ikonický chrám u horského jezera, který lze nalézt na většině prospektů cestovních kanceláří. Narazíte na něj, pokud budete ostrov přejíždět z jihu na sever. Můžete zde očekávat chladnější a deštivější počasí, jelikož se chrámový komplex nachází v horách v nadmořské výšce 1200 m n.m. Projít si zde můžete areál chrámového komplexu a zahrady, dovnitř se nikam nedostanete. Očekávejte plno turistů, drahé vstupné a parkovné."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Banjar Tegehe Buleleng",
+              "url": "https://maps.google.com/?cid=12026393116176936593",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– Jeden z mála buddhistických chrámů nacházející se na severu Bali. Jedná se o hezký chrámový komplex s udržovanými zahradami, velkými sochami a chrámy, do kterých můžete bez bot nahlédnout. Jelikož se toto místo nachází v kopcích, naskytne se vám i hezký výhled na ostrov a pobřeží. Je zde vybíráno vstupné a v ceně je i sarung, který vám namotají kolem pasu. Poté můžete dovnitř."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191116_121949705_HDR-1024x768.jpg",
+        "alternativeText": "Saraswati Temple ",
+        "url": "/uploads/IMG_20191116_121949705_HDR_1024x768_f03bb9ae8d.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191116_121949705_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191116_121949705_HDR_1024x768_f03bb9ae8d",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 13.13,
+            "sizeInBytes": 13131,
+            "url": "/uploads/thumbnail_IMG_20191116_121949705_HDR_1024x768_f03bb9ae8d.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191116_121949705_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191116_121949705_HDR_1024x768_f03bb9ae8d",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 67.57,
+            "sizeInBytes": 67568,
+            "url": "/uploads/small_IMG_20191116_121949705_HDR_1024x768_f03bb9ae8d.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191116_121949705_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191116_121949705_HDR_1024x768_f03bb9ae8d",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 141.03,
+            "sizeInBytes": 141032,
+            "url": "/uploads/medium_IMG_20191116_121949705_HDR_1024x768_f03bb9ae8d.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191116_121949705_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191116_121949705_HDR_1024x768_f03bb9ae8d",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 232.38,
+            "sizeInBytes": 232380,
+            "url": "/uploads/large_IMG_20191116_121949705_HDR_1024x768_f03bb9ae8d.jpg"
+          }
+        },
+        "hash": "IMG_20191116_121949705_HDR_1024x768_f03bb9ae8d",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 248.29,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:49.193Z",
+        "updatedAt": "2026-02-17T13:01:49.193Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191111_162025035_HDR-768x1024.jpg",
+        "alternativeText": "Obětiny kladené k sochám v chrámech",
+        "url": "/uploads/IMG_20191111_162025035_HDR_768x1024_1a5ac044bf.jpg",
+        "width": 768,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191111_162025035_HDR-768x1024.jpg",
+            "hash": "thumbnail_IMG_20191111_162025035_HDR_768x1024_1a5ac044bf",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 6.51,
+            "sizeInBytes": 6514,
+            "url": "/uploads/thumbnail_IMG_20191111_162025035_HDR_768x1024_1a5ac044bf.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191111_162025035_HDR-768x1024.jpg",
+            "hash": "small_IMG_20191111_162025035_HDR_768x1024_1a5ac044bf",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 47.93,
+            "sizeInBytes": 47927,
+            "url": "/uploads/small_IMG_20191111_162025035_HDR_768x1024_1a5ac044bf.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191111_162025035_HDR-768x1024.jpg",
+            "hash": "medium_IMG_20191111_162025035_HDR_768x1024_1a5ac044bf",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 98.95,
+            "sizeInBytes": 98950,
+            "url": "/uploads/medium_IMG_20191111_162025035_HDR_768x1024_1a5ac044bf.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191111_162025035_HDR-768x1024.jpg",
+            "hash": "large_IMG_20191111_162025035_HDR_768x1024_1a5ac044bf",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 164.27,
+            "sizeInBytes": 164267,
+            "url": "/uploads/large_IMG_20191111_162025035_HDR_768x1024_1a5ac044bf.jpg"
+          }
+        },
+        "hash": "IMG_20191111_162025035_HDR_768x1024_1a5ac044bf",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 175.18,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:49.545Z",
+        "updatedAt": "2026-02-17T13:01:49.545Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191119_151349585_HDR-1024x768.jpg",
+        "alternativeText": "Buddhistický chrám - Banjar Tegehe Buleleng",
+        "url": "/uploads/IMG_20191119_151349585_HDR_1024x768_1723742264.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191119_151349585_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191119_151349585_HDR_1024x768_1723742264",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 10.49,
+            "sizeInBytes": 10489,
+            "url": "/uploads/thumbnail_IMG_20191119_151349585_HDR_1024x768_1723742264.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191119_151349585_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191119_151349585_HDR_1024x768_1723742264",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 52.59,
+            "sizeInBytes": 52589,
+            "url": "/uploads/small_IMG_20191119_151349585_HDR_1024x768_1723742264.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191119_151349585_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191119_151349585_HDR_1024x768_1723742264",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 111.71,
+            "sizeInBytes": 111714,
+            "url": "/uploads/medium_IMG_20191119_151349585_HDR_1024x768_1723742264.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191119_151349585_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191119_151349585_HDR_1024x768_1723742264",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 186.71,
+            "sizeInBytes": 186709,
+            "url": "/uploads/large_IMG_20191119_151349585_HDR_1024x768_1723742264.jpg"
+          }
+        },
+        "hash": "IMG_20191119_151349585_HDR_1024x768_1723742264",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 198.78,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:50.069Z",
+        "updatedAt": "2026-02-17T13:01:50.069Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191119_154026966-768x1024.jpg",
+        "alternativeText": "Banjar Tegehe Buleleng",
+        "url": "/uploads/IMG_20191119_154026966_768x1024_a99b673f6c.jpg",
+        "width": 768,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191119_154026966-768x1024.jpg",
+            "hash": "thumbnail_IMG_20191119_154026966_768x1024_a99b673f6c",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 6.07,
+            "sizeInBytes": 6069,
+            "url": "/uploads/thumbnail_IMG_20191119_154026966_768x1024_a99b673f6c.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191119_154026966-768x1024.jpg",
+            "hash": "small_IMG_20191119_154026966_768x1024_a99b673f6c",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 48.23,
+            "sizeInBytes": 48233,
+            "url": "/uploads/small_IMG_20191119_154026966_768x1024_a99b673f6c.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191119_154026966-768x1024.jpg",
+            "hash": "medium_IMG_20191119_154026966_768x1024_a99b673f6c",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 100.34,
+            "sizeInBytes": 100337,
+            "url": "/uploads/medium_IMG_20191119_154026966_768x1024_a99b673f6c.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191119_154026966-768x1024.jpg",
+            "hash": "large_IMG_20191119_154026966_768x1024_a99b673f6c",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 165.02,
+            "sizeInBytes": 165015,
+            "url": "/uploads/large_IMG_20191119_154026966_768x1024_a99b673f6c.jpg"
+          }
+        },
+        "hash": "IMG_20191119_154026966_768x1024_a99b673f6c",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 175.18,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:50.460Z",
+        "updatedAt": "2026-02-17T13:01:50.460Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Pláže"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "format": "unordered",
+      "children": [
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Kuta Beach",
+              "url": "https://maps.google.com/?q=Kuta+Beach%2C+Kuta%2C+Badung+Regency%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0x82feaae12f4ab48e",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– A surfing beach, not particularly beautiful, but ideal for beginner surfers. The beach is full of surf rentals. Swimming is not directly prohibited, but it is not recommended due to the large number of surfers."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Blue Lagoon",
+              "url": "https://g.page/blue-lagoon-beach?share",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– A small but beautiful beach with sun loungers and a restaurant, near the Padangbai harbor. The sea is suitable for snorkeling."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Lovina Beach",
+              "url": "https://goo.gl/maps/6btcm5tW6XRgAiuW6",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "– A very quiet beach in the north of the island. The sea is clean, but the sand is black, so it looks dark. There is not much shade under the trees on the beach, but you can find a beach restaurant with umbrellas, where you can watch the sunset during dinner."
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Other well-known beaches include:"
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Dre",
+              "url": "https://maps.google.com/?q=Dreamland+Beach%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0xaac6f51b3bd20fcb",
+              "bold": true
+            },
+            {
+              "type": "text",
+              "text": "amland Beach",
+              "url": "https://maps.google.com/?q=Dreamland+Beach%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0xaac6f51b3bd20fcb",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nyang Nyang Beach",
+              "url": "https://maps.google.com/?q=Nyang+Nyang+Beach%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0x8c377f5be0343059",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Pandawa Beach",
+              "url": "https://maps.google.com/?q=Pandawa+Beach%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0x41b8785dd055b2a4",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Amed Beach",
+              "url": "https://maps.google.com/?q=Amed+Beach%2C+Bali%2C+Indon%C3%A9sie&ftid=0x0:0x9178b79de46df737",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "type": "list-item",
+          "children": [
+            {
+              "type": "text",
+              "text": "Lipah beach",
+              "url": "https://maps.google.com/?cid=3618871555078494658",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191118_164425144_HDR-1024x768.jpg",
+        "alternativeText": "Tmavá pláž Lovina Beach",
+        "url": "/uploads/IMG_20191118_164425144_HDR_1024x768_8be056a00f.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191118_164425144_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191118_164425144_HDR_1024x768_8be056a00f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 5.59,
+            "sizeInBytes": 5591,
+            "url": "/uploads/thumbnail_IMG_20191118_164425144_HDR_1024x768_8be056a00f.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191118_164425144_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191118_164425144_HDR_1024x768_8be056a00f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 60.92,
+            "sizeInBytes": 60921,
+            "url": "/uploads/medium_IMG_20191118_164425144_HDR_1024x768_8be056a00f.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191118_164425144_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191118_164425144_HDR_1024x768_8be056a00f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 28.02,
+            "sizeInBytes": 28016,
+            "url": "/uploads/small_IMG_20191118_164425144_HDR_1024x768_8be056a00f.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191118_164425144_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191118_164425144_HDR_1024x768_8be056a00f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 103.18,
+            "sizeInBytes": 103183,
+            "url": "/uploads/large_IMG_20191118_164425144_HDR_1024x768_8be056a00f.jpg"
+          }
+        },
+        "hash": "IMG_20191118_164425144_HDR_1024x768_8be056a00f",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 109.94,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:50.770Z",
+        "updatedAt": "2026-02-17T13:01:50.770Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "If you want to experience beautiful white beaches, crystal clear waters, swim with sea turtles, snorkel on coral reefs, head to the small islands of Gili near Lombok. If you are attracted to tropical beaches, snorkeling, and beautiful photogenic cliffs along the coast, head to the island of Nusa Penida near Bali. Most of the beautiful Balinese coastal photos come from there. You can find more information about these islands on these websites."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Zdravotní péče na Bali"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Hospital facilities are the last thing travelers seek on their journeys, but it may happen that a visit to a doctor is necessary while traveling. If you are traveling to the surrounding islands and find yourself in a situation where you need to see a doctor, it is best to do so in Bali. Since Bali is the most touristy part of Indonesia, you will likely receive the best care here. Tourist hospitals have been established in Bali, which are primarily intended for foreigners with sufficient financial means or quality health insurance, and locals are unlikely to be seen here. One such hospital is BIMC, which has a total of 3 branches in Bali (Nusa Dua, Kuta, Ubud – the main tourist centers). Allegedly, this hospital has been recognized as meeting international standards and you will likely receive better care than in the Czech Republic."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "These hospitals are very modern, clean, well-equipped, and staff speak English. They have anesthesia, rubber gloves, and disinfection, and their approach is professional. However, as is often the case, it all comes down to money. You will pay a considerable amount for any procedure. Even for the initial consultation, where they ask you what brings you there, measure your blood pressure, and suggest further steps, you will pay $200. A night in the hospital costs approximately $500 USD. Therefore, it is good to find out in advance whether your insurance company will cover your expenses. Ideally, there is no need to reach into your pocket, and the insurance company will take care of everything with the hospital directly."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191111_143721979-1024x768.jpg",
+        "alternativeText": "Žádné čekárny, ale recepce a pohodlné pohovky. Voda a Káva zdarma. BIMC Nusa Dua",
+        "url": "/uploads/IMG_20191111_143721979_1024x768_fd774d8a79.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191111_143721979-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191111_143721979_1024x768_fd774d8a79",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 8.29,
+            "sizeInBytes": 8293,
+            "url": "/uploads/thumbnail_IMG_20191111_143721979_1024x768_fd774d8a79.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191111_143721979-1024x768.jpg",
+            "hash": "small_IMG_20191111_143721979_1024x768_fd774d8a79",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 33.12,
+            "sizeInBytes": 33116,
+            "url": "/uploads/small_IMG_20191111_143721979_1024x768_fd774d8a79.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191111_143721979-1024x768.jpg",
+            "hash": "medium_IMG_20191111_143721979_1024x768_fd774d8a79",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 61.48,
+            "sizeInBytes": 61478,
+            "url": "/uploads/medium_IMG_20191111_143721979_1024x768_fd774d8a79.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191111_143721979-1024x768.jpg",
+            "hash": "large_IMG_20191111_143721979_1024x768_fd774d8a79",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 93.68,
+            "sizeInBytes": 93684,
+            "url": "/uploads/large_IMG_20191111_143721979_1024x768_fd774d8a79.jpg"
+          }
+        },
+        "hash": "IMG_20191111_143721979_1024x768_fd774d8a79",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 97.47,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:51.102Z",
+        "updatedAt": "2026-02-17T13:01:51.102Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Zajímavosti"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191114_113712617-768x1024.jpg",
+        "alternativeText": "Není neobvyklé, že místní v obchodech přímo bydlí. Při nakupování suvenýrů tak můžete zakopnout o večeřící dítě na podlaze, kojící matku, nebo třeba spícího člověka zabaleného v dece. Občas také potkáte zaparkované auto, nebo motorku přímo v uličkách obchodu, či v restauraci.",
+        "url": "/uploads/IMG_20191114_113712617_768x1024_02ce912815.jpg",
+        "width": 768,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191114_113712617-768x1024.jpg",
+            "hash": "thumbnail_IMG_20191114_113712617_768x1024_02ce912815",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 6.69,
+            "sizeInBytes": 6692,
+            "url": "/uploads/thumbnail_IMG_20191114_113712617_768x1024_02ce912815.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191114_113712617-768x1024.jpg",
+            "hash": "small_IMG_20191114_113712617_768x1024_02ce912815",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 50.07,
+            "sizeInBytes": 50070,
+            "url": "/uploads/small_IMG_20191114_113712617_768x1024_02ce912815.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191114_113712617-768x1024.jpg",
+            "hash": "medium_IMG_20191114_113712617_768x1024_02ce912815",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 95.8,
+            "sizeInBytes": 95797,
+            "url": "/uploads/medium_IMG_20191114_113712617_768x1024_02ce912815.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191114_113712617-768x1024.jpg",
+            "hash": "large_IMG_20191114_113712617_768x1024_02ce912815",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 147.32,
+            "sizeInBytes": 147318,
+            "url": "/uploads/large_IMG_20191114_113712617_768x1024_02ce912815.jpg"
+          }
+        },
+        "hash": "IMG_20191114_113712617_768x1024_02ce912815",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 153.46,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:51.448Z",
+        "updatedAt": "2026-02-17T13:01:51.448Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191118_103430922_HDR-768x1024.jpg",
+        "alternativeText": "Nejenom na Bali můžete téměř na každém rohu (na balkóně, v obchodě, v restauraci, dokonce i na trajektu) vidět klece s nejrůznějším ptactvem. Smysl není  úplně jasný. Ptáci jsou ve vedru na slunci zavěšeni se svou klecí třeba někde na palmě a nikdo si jich nevšímá. Toto můžete pozorovat i v dalších částech Indonésie, nebo třeba v Thajsku. ",
+        "url": "/uploads/IMG_20191118_103430922_HDR_768x1024_d4fd55d2ad.jpg",
+        "width": 768,
+        "height": 1024,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191118_103430922_HDR-768x1024.jpg",
+            "hash": "thumbnail_IMG_20191118_103430922_HDR_768x1024_d4fd55d2ad",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 117,
+            "height": 156,
+            "size": 7.01,
+            "sizeInBytes": 7007,
+            "url": "/uploads/thumbnail_IMG_20191118_103430922_HDR_768x1024_d4fd55d2ad.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191118_103430922_HDR-768x1024.jpg",
+            "hash": "small_IMG_20191118_103430922_HDR_768x1024_d4fd55d2ad",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 375,
+            "height": 500,
+            "size": 46.9,
+            "sizeInBytes": 46902,
+            "url": "/uploads/small_IMG_20191118_103430922_HDR_768x1024_d4fd55d2ad.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191118_103430922_HDR-768x1024.jpg",
+            "hash": "large_IMG_20191118_103430922_HDR_768x1024_d4fd55d2ad",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 1000,
+            "size": 128.44,
+            "sizeInBytes": 128437,
+            "url": "/uploads/large_IMG_20191118_103430922_HDR_768x1024_d4fd55d2ad.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191118_103430922_HDR-768x1024.jpg",
+            "hash": "medium_IMG_20191118_103430922_HDR_768x1024_d4fd55d2ad",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 563,
+            "height": 750,
+            "size": 85.4,
+            "sizeInBytes": 85400,
+            "url": "/uploads/medium_IMG_20191118_103430922_HDR_768x1024_d4fd55d2ad.jpg"
+          }
+        },
+        "hash": "IMG_20191118_103430922_HDR_768x1024_d4fd55d2ad",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 133.15,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:51.834Z",
+        "updatedAt": "2026-02-17T13:01:51.834Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191115_130059224-1024x768.jpg",
+        "alternativeText": "Sušení prádla na vyhřátých kamenech u silnice.",
+        "url": "/uploads/IMG_20191115_130059224_1024x768_cb10b66503.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191115_130059224-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191115_130059224_1024x768_cb10b66503",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.8,
+            "sizeInBytes": 9803,
+            "url": "/uploads/thumbnail_IMG_20191115_130059224_1024x768_cb10b66503.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191115_130059224-1024x768.jpg",
+            "hash": "small_IMG_20191115_130059224_1024x768_cb10b66503",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 44.63,
+            "sizeInBytes": 44630,
+            "url": "/uploads/small_IMG_20191115_130059224_1024x768_cb10b66503.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191115_130059224-1024x768.jpg",
+            "hash": "medium_IMG_20191115_130059224_1024x768_cb10b66503",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 84.11,
+            "sizeInBytes": 84112,
+            "url": "/uploads/medium_IMG_20191115_130059224_1024x768_cb10b66503.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191115_130059224-1024x768.jpg",
+            "hash": "large_IMG_20191115_130059224_1024x768_cb10b66503",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 127.66,
+            "sizeInBytes": 127655,
+            "url": "/uploads/large_IMG_20191115_130059224_1024x768_cb10b66503.jpg"
+          }
+        },
+        "hash": "IMG_20191115_130059224_1024x768_cb10b66503",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 132.84,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:52.333Z",
+        "updatedAt": "2026-02-17T13:01:52.333Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191102_084655663_HDR-1024x768.jpg",
+        "alternativeText": "V okolí sopek naleznete cedule ukazující evakuační cestu, kudy je potřeba se vydat v případě výbuchu sopky.",
+        "url": "/uploads/IMG_20191102_084655663_HDR_1024x768_995b4e1e27.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191102_084655663_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191102_084655663_HDR_1024x768_995b4e1e27",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.32,
+            "sizeInBytes": 9316,
+            "url": "/uploads/thumbnail_IMG_20191102_084655663_HDR_1024x768_995b4e1e27.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191102_084655663_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191102_084655663_HDR_1024x768_995b4e1e27",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 40.97,
+            "sizeInBytes": 40973,
+            "url": "/uploads/small_IMG_20191102_084655663_HDR_1024x768_995b4e1e27.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191102_084655663_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191102_084655663_HDR_1024x768_995b4e1e27",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 126.37,
+            "sizeInBytes": 126368,
+            "url": "/uploads/large_IMG_20191102_084655663_HDR_1024x768_995b4e1e27.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191102_084655663_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191102_084655663_HDR_1024x768_995b4e1e27",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 80.35,
+            "sizeInBytes": 80348,
+            "url": "/uploads/medium_IMG_20191102_084655663_HDR_1024x768_995b4e1e27.jpg"
+          }
+        },
+        "hash": "IMG_20191102_084655663_HDR_1024x768_995b4e1e27",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 132.61,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:52.660Z",
+        "updatedAt": "2026-02-17T13:01:52.660Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191111_172536773_HDR-1024x768.jpg",
+        "alternativeText": "Cedule ukazující evakuační cestu v případě příchodu tsunami.",
+        "url": "/uploads/IMG_20191111_172536773_HDR_1024x768_a2b2e5bf0b.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191111_172536773_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191111_172536773_HDR_1024x768_a2b2e5bf0b",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 11.96,
+            "sizeInBytes": 11963,
+            "url": "/uploads/thumbnail_IMG_20191111_172536773_HDR_1024x768_a2b2e5bf0b.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191111_172536773_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191111_172536773_HDR_1024x768_a2b2e5bf0b",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 62.08,
+            "sizeInBytes": 62076,
+            "url": "/uploads/small_IMG_20191111_172536773_HDR_1024x768_a2b2e5bf0b.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191111_172536773_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191111_172536773_HDR_1024x768_a2b2e5bf0b",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 131.76,
+            "sizeInBytes": 131761,
+            "url": "/uploads/medium_IMG_20191111_172536773_HDR_1024x768_a2b2e5bf0b.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191111_172536773_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191111_172536773_HDR_1024x768_a2b2e5bf0b",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 218.89,
+            "sizeInBytes": 218892,
+            "url": "/uploads/large_IMG_20191111_172536773_HDR_1024x768_a2b2e5bf0b.jpg"
+          }
+        },
+        "hash": "IMG_20191111_172536773_HDR_1024x768_a2b2e5bf0b",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 234.54,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:53.032Z",
+        "updatedAt": "2026-02-17T13:01:53.032Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": {
+        "name": "IMG_20191116_135731628_HDR-1024x768.jpg",
+        "alternativeText": "",
+        "url": "/uploads/IMG_20191116_135731628_HDR_1024x768_391ee0e821.jpg",
+        "width": 1024,
+        "height": 768,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_IMG_20191116_135731628_HDR-1024x768.jpg",
+            "hash": "thumbnail_IMG_20191116_135731628_HDR_1024x768_391ee0e821",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 208,
+            "height": 156,
+            "size": 9.47,
+            "sizeInBytes": 9466,
+            "url": "/uploads/thumbnail_IMG_20191116_135731628_HDR_1024x768_391ee0e821.jpg"
+          },
+          "small": {
+            "name": "small_IMG_20191116_135731628_HDR-1024x768.jpg",
+            "hash": "small_IMG_20191116_135731628_HDR_1024x768_391ee0e821",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 500,
+            "height": 375,
+            "size": 46.12,
+            "sizeInBytes": 46117,
+            "url": "/uploads/small_IMG_20191116_135731628_HDR_1024x768_391ee0e821.jpg"
+          },
+          "medium": {
+            "name": "medium_IMG_20191116_135731628_HDR-1024x768.jpg",
+            "hash": "medium_IMG_20191116_135731628_HDR_1024x768_391ee0e821",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 750,
+            "height": 563,
+            "size": 93.92,
+            "sizeInBytes": 93924,
+            "url": "/uploads/medium_IMG_20191116_135731628_HDR_1024x768_391ee0e821.jpg"
+          },
+          "large": {
+            "name": "large_IMG_20191116_135731628_HDR-1024x768.jpg",
+            "hash": "large_IMG_20191116_135731628_HDR_1024x768_391ee0e821",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "path": null,
+            "width": 1000,
+            "height": 750,
+            "size": 152,
+            "sizeInBytes": 151999,
+            "url": "/uploads/large_IMG_20191116_135731628_HDR_1024x768_391ee0e821.jpg"
+          }
+        },
+        "hash": "IMG_20191116_135731628_HDR_1024x768_391ee0e821",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 160.99,
+        "provider": "local",
+        "createdAt": "2026-02-17T13:01:53.363Z",
+        "updatedAt": "2026-02-17T13:01:53.363Z"
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-02-17T13:04:29.581Z",
+  "updatedAt": "2026-02-17T13:04:29.581Z",
+  "publishedAt": "2026-02-17T13:04:29.586Z",
+  "continent": "asia",
+  "contentLang": "en",
+  "flagEmoji": "🇮🇩",
+  "timezone": "WITA (UTC+8)",
+  "languages": [
+    "Indonesian",
+    "Balinese"
+  ],
+  "currencyCode": "IDR",
+  "currencyName": "Indonesian Rupiah",
+  "currencySymbol": "Rp",
+  "budgetPerDayBudget": 25,
+  "budgetPerDayMidRange": 55,
+  "budgetPerDayLuxury": 150,
+  "bestTimeToVisit": "April to October",
+  "visaInfo": "Czech citizens: visa on arrival 30 days",
+  "destinationType": "region",
+  "cover": null
+}

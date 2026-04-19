@@ -1,0 +1,186 @@
+{
+  "title": "Co ochutnat: Paříž 🇫🇷 - 5 jidel, ktera nemuzes minout",
+  "slug": "co-ochutnat-pariz",
+  "excerpt": "Jidlo v destinaci Paříž - 5 typickych pokrmu, tipy na levne stravovani a kolik pocitat na jidlo denne.",
+  "articleType": "other",
+  "contentLang": "cs",
+  "tags": [
+    "Paříž",
+    "jidlo",
+    "gastro",
+    "tipy",
+    "street food"
+  ],
+  "destinationSlug": "pariz",
+  "publish": true,
+  "readingTime": 3,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Jidlo je pulka cestovani. A Paříž 🇫🇷 tohle bere vazne. Tady je 5 veci, ktere musis ochutnat - a tipy, jak se najist levne a dobre."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "5 veci, ktere musis ochutnat"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Croissant"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Klasicky masly croissant z mistni pekarne (boulangerie). Zakladni parizsky zazitek."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Croque Monsieur"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Sunkovo-syrovy toast zapeceny bechamelem. Rychly a sytici obed."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Crepes"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Sladke i slane palacínky. Na ulici od 3 EUR, v restauraci od 8 EUR."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Steak Tartare"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Syrove hovezi s kapary a cibulkou. Pokud mas odvahu, neprohloupis."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "children": [
+        {
+          "type": "text",
+          "text": "Falafel v Le Marais"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nejlepsi falafel v Evrope. Fronta stoji za to."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Tipy pro jidlo na budgetu"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Pariz neni tak draha, jak si myslis - pokud vis kde jist. Vyhni se Champs-Elysees restauracim. Chodsverne (Montmartre) nebo do Le Marais. Obed v bistrech byva vyhodny (prix fixe)."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Kolik pocitat na jidlo?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Na budgetovem rezimu pocitej s 563-663 Kc denne na jidlo. To je 3x street food nebo 2x lokalni restaurace."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "url": "/destinations/guide/pruvodce-pariz",
+          "children": [
+            {
+              "type": "text",
+              "text": "Prectisi cely pruvodce: Paříž"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

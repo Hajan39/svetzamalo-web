@@ -1,0 +1,92 @@
+{
+  "title": "Švýcarsko – praktický průvodce pro cestovatele",
+  "slug": "pruvodce-svycarsko",
+  "excerpt": "Čistá a divoká příroda, vysoké horské masivy, dechberoucí výhledy i náročné túry, útulná městečka a rozlehlá jezera nabízí právě Švýcarsko, krásná převážně horská země střední Evropy. Co navštívit Ve…",
+  "articleType": "destination-guide",
+  "contentLang": "cs",
+  "tags": [
+    "Evropa",
+    "Švýcarsko",
+    "cestování",
+    "budget"
+  ],
+  "destinationSlug": "svycarsko",
+  "publish": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Čistá a divoká příroda, vysoké horské masivy, dechberoucí výhledy i náročné túry, útulná městečka a rozlehlá jezera nabízí právě Švýcarsko, krásná převážně horská země střední Evropy. Co navštívit Ve Švýcarsku vás čekají zejména hory, jezera a klidná městečka, hlavní atrakcí této země je čistá a divoká příroda. Švýcarsko bohužel nepatří mezi levné země, ve kterých byste přežili za pár korun."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Kdy jet"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nejlepší doba pro návštěvu: duben až říjen."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Jazyk a komunikace"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Místní jazyky: němčina, francouzština, italština, Romansh. Znalost základů francouzštiny je výhodou."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobný průvodce"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+        },
+        {
+          "type": "text",
+          "text": "kompletním průvodci – Švýcarsko",
+          "url": "/destinations/guide/svycarsko"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

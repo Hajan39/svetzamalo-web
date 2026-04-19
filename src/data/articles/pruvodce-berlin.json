@@ -1,0 +1,92 @@
+{
+  "title": "Berlín – praktický průvodce pro cestovatele",
+  "slug": "pruvodce-berlin",
+  "excerpt": "Částečně moderní a zároveň historické hlavní město Německa natolik prosáklé nedávnou hrůznou dobou. Většina berlínských památek a zajímavostí upozorňuje právě na dění 20. století. Nečekejte zde…",
+  "articleType": "destination-guide",
+  "contentLang": "cs",
+  "tags": [
+    "Evropa",
+    "Berlín",
+    "cestování",
+    "budget"
+  ],
+  "destinationSlug": "berlin",
+  "publish": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Částečně moderní a zároveň historické hlavní město Německa natolik prosáklé nedávnou hrůznou dobou. Většina berlínských památek a zajímavostí upozorňuje právě na dění 20. století."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Kdy jet"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nejlepší doba pro návštěvu: květen až září."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Jazyk a komunikace"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Místní jazyky: němčina."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobný průvodce"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+        },
+        {
+          "type": "text",
+          "text": "kompletním průvodci – Berlín",
+          "url": "/destinations/guide/berlin"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

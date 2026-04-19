@@ -1,11 +1,11 @@
-import { Link } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
 import { CurrencySwitcher } from "@/components/ui/CurrencySwitcher";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { SearchModal } from "@/components/ui/SearchModal";
 import { EXTERNAL_SERVICES } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
+import { Link } from "@tanstack/react-router";
+import { Backpack, Menu, PlaneTakeoff, X } from "lucide-react";
+import { useState } from "react";
 
 /**
  * Modern, responsive site header with logo and main navigation
@@ -22,6 +22,15 @@ interface NavItem {
 	label: string;
 	href: string;
 	description?: string;
+}
+
+function BrandMark() {
+	return (
+		<span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-foreground/10 bg-background-secondary text-foreground lg:h-10 lg:w-10">
+			<Backpack className="absolute bottom-1 left-1 h-4 w-4 lg:h-[18px] lg:w-[18px]" strokeWidth={2.2} />
+			<PlaneTakeoff className="absolute right-0.5 top-0.5 h-4.5 w-4.5 text-primary lg:h-5 lg:w-5" strokeWidth={2.2} />
+		</span>
+	);
 }
 
 export function Header() {
@@ -47,12 +56,12 @@ export function Header() {
 		},
 		...(EXTERNAL_SERVICES.book.available
 			? [
-					{
-						label: t("header.navBook"),
-						href: "/book",
-						description: t("header.navBookDesc"),
-					},
-				]
+				{
+					label: t("header.navBook"),
+					href: "/book",
+					description: t("header.navBookDesc"),
+				},
+			]
 			: []),
 		{
 			label: t("header.navAbout"),
@@ -85,9 +94,10 @@ export function Header() {
 					{/* Logo */}
 					<Link
 						to="/"
-						className="text-xl lg:text-2xl font-bold text-foreground hover:text-primary transition-colors tracking-tight"
+						className="flex items-center gap-2 text-xl lg:text-2xl font-bold text-foreground hover:text-primary transition-colors tracking-tight"
 						onClick={closeMobileMenu}
 					>
+						<BrandMark />
 						<span className="hidden sm:inline">
 							{t("common.siteName")}<span className="text-primary">{t("common.siteNameHighlight")}</span>
 						</span>

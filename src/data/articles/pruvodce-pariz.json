@@ -1,0 +1,92 @@
+{
+  "title": "Paříž – praktický průvodce pro cestovatele",
+  "slug": "pruvodce-pariz",
+  "excerpt": "Jedna z nejromantičtějších destinací, které si můžete vybrat na dovolenou s partnerem/partnerkou. Hlavní město Francie . Město, které vás dokáže okouzlit a kde budete jako v romantickém ráji. Nicméně…",
+  "articleType": "destination-guide",
+  "contentLang": "cs",
+  "tags": [
+    "Evropa",
+    "Paříž",
+    "cestování",
+    "budget"
+  ],
+  "destinationSlug": "pariz",
+  "publish": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Jedna z nejromantičtějších destinací, které si můžete vybrat na dovolenou s partnerem/partnerkou. Hlavní město Francie . Město, které vás dokáže okouzlit a kde budete jako v romantickém ráji."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Kdy jet"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Nejlepší doba pro návštěvu: duben až červen, září až říjen."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Jazyk a komunikace"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Místní jazyky: francouzština. Znalost základů francouzštiny je výhodou."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobný průvodce"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "text": "Podrobnosti, tipy na jednotlivá místa a osobní zkušenosti najdete v našem "
+        },
+        {
+          "type": "text",
+          "text": "kompletním průvodci – Paříž",
+          "url": "/destinations/guide/pariz"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}
