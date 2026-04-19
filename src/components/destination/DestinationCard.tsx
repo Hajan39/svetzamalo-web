@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { SmartImage } from "@/components/ui/SmartImage";
+import { SmartImage } from "@/components/common";
 import type { Destination } from "@/types";
 
 interface DestinationCardProps {

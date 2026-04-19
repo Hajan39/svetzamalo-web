@@ -1,3 +1,5 @@
+import { useTranslation } from "@/lib/i18n";
+
 interface AffiliateBoxProps {
 	type: "flight" | "hotel" | "tour";
 	headline: string;
@@ -30,7 +32,15 @@ export function AffiliateBox({
 	link,
 	partner,
 }: AffiliateBoxProps) {
+	const { t } = useTranslation();
+
 	const config = typeConfig[type];
+	const defaultHeadline =
+		type === "flight"
+			? t("monetization.affiliateDefaultFlight")
+			: type === "hotel"
+				? t("monetization.affiliateDefaultHotel")
+				: t("monetization.affiliateDefaultTour");
 
 	return (
 		<aside className="border border-border border-l-4 border-l-primary rounded-r-lg bg-background-secondary p-4 sm:p-5 md:p-6 my-6 md:my-8">
@@ -40,7 +50,7 @@ export function AffiliateBox({
 				</span>
 				<div className="flex-1 min-w-0">
 					<h3 className="font-semibold text-foreground mb-2 text-sm sm:text-base">
-						{headline || config.defaultHeadline}
+						{headline || defaultHeadline || config.defaultHeadline}
 					</h3>
 					<p className="text-foreground-secondary mb-3 md:mb-4 text-sm sm:text-base">
 						{description}
@@ -55,8 +65,10 @@ export function AffiliateBox({
 						<span aria-hidden="true">→</span>
 					</a>
 					<p className="text-xs text-foreground-muted mt-3 md:mt-4">
-						{partner && `Via ${partner}. `}
-						We may earn a commission at no extra cost to you.
+						{partner
+							? `${t("monetization.viaPartnerPrefix")} ${partner}. `
+							: ""}
+						{t("monetization.affiliateDisclosure")}
 					</p>
 				</div>
 			</div>

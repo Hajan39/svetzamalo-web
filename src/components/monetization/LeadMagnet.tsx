@@ -1,3 +1,5 @@
+import { useTranslation } from "@/lib/i18n";
+
 interface LeadMagnetProps {
 	title: string;
 	description: string;
@@ -11,6 +13,8 @@ export function LeadMagnet({
 	benefits,
 	ctaText,
 }: LeadMagnetProps) {
+	const { t } = useTranslation();
+
 	return (
 		<aside className="border-2 border-primary rounded-xl bg-primary-light p-5 sm:p-6 md:p-8 my-8 md:my-12">
 			<div className="text-center max-w-lg mx-auto">
@@ -42,7 +46,7 @@ export function LeadMagnet({
 				<div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
 					<input
 						type="email"
-						placeholder="Your email"
+						placeholder={t("homePage.ebookPlaceholder")}
 						className="w-full sm:w-auto px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
 					/>
 					<button
@@ -54,7 +58,7 @@ export function LeadMagnet({
 				</div>
 
 				<p className="text-xs text-foreground-muted mt-4">
-					No spam, unsubscribe anytime.
+					{t("homePage.noSpam")}
 				</p>
 			</div>
 		</aside>

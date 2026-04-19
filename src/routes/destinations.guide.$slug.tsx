@@ -1,14 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArticleHtmlContent } from "@/components/article";
+import { EmptyState, SmartImage } from "@/components/common";
 import { NewsletterCta } from "@/components/monetization";
 import { Breadcrumbs } from "@/components/seo";
-import { SmartImage } from "@/components/ui/SmartImage";
 import { fetchDestinationBySlug } from "@/integrations/strapi/api";
 import {
 	strapiQueryKeys,
 	useDestinationBySlug,
 } from "@/integrations/strapi/hooks";
 import { SITE_CONFIG } from "@/lib/constants";
+import { useTranslation } from "@/lib/i18n";
 
 const SITE_URL = SITE_CONFIG.url;
 
@@ -52,6 +53,7 @@ export const Route = createFileRoute("/destinations/guide/$slug")({
 });
 
 function DestinationGuidePage() {
+	const { t } = useTranslation();
 	const { slug } = Route.useParams();
 	const { destination: loaderDest } = Route.useLoaderData();
 	const {
@@ -65,7 +67,7 @@ function DestinationGuidePage() {
 	if (isLoading) {
 		return (
 			<div className="container-narrow py-16 text-center">
-				<p className="text-foreground-secondary">Loading...</p>
+				<p className="text-foreground-secondary">{t("common.loading")}</p>
 			</div>
 		);
 	}
@@ -73,18 +75,18 @@ function DestinationGuidePage() {
 	if (error || !destination) {
 		return (
 			<div className="container-narrow py-16">
-				<h1 className="text-2xl font-semibold text-foreground">
-					Destination not found
-				</h1>
-				<p className="text-foreground-secondary mt-2">
-					The destination "{slug}" does not exist.
-				</p>
-				<Link
-					to="/destinations"
-					className="mt-4 inline-block text-primary hover:underline"
-				>
-					← Back to Destinations
-				</Link>
+				<EmptyState
+					title={t("errors.destinationNotFound")}
+					description={t("destinationsPage.notFoundDescription")}
+					action={
+						<Link
+							to="/destinations"
+							className="inline-block text-primary hover:underline"
+						>
+							← {t("common.backToDestinations")}
+						</Link>
+					}
+				/>
 			</div>
 		);
 	}
@@ -95,7 +97,7 @@ function DestinationGuidePage() {
 		<article className="container-narrow py-8 md:py-12">
 			<Breadcrumbs
 				items={[
-					{ label: "Destinations", href: "/destinations" },
+					{ label: t("nav.destinations"), href: "/destinations" },
 					{ label: destination.name },
 				]}
 			/>

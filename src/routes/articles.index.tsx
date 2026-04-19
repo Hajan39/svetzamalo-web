@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArticleCard } from "@/components/article";
+import { EmptyState, PageHeader } from "@/components/common";
 import { fetchArticleBySlug, fetchArticles } from "@/integrations/strapi/api";
 import { strapiQueryKeys, useArticles } from "@/integrations/strapi/hooks";
 import { SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
-import type { Article } from "@/types";
 
 const SITE_URL = SITE_CONFIG.url;
 
@@ -51,28 +51,6 @@ function ArticlesPage() {
 	const { t } = useTranslation();
 	const { data: articles = [], isLoading, error } = useArticles();
 
-	// Group articles by type
-	const _articlesByType = articles.reduce<Record<string, Article[]>>(
-		(acc, article) => {
-			const type = article.articleType || "other";
-			if (!acc[type]) {
-				acc[type] = [];
-			}
-			acc[type].push(article);
-			return acc;
-		},
-		{},
-	);
-
-	const _typeLabels: Record<string, string> = {
-		"destination-guide": t("articles.typeDestinationGuide"),
-		"place-guide": t("articles.typePlaceGuide"),
-		"practical-info": t("articles.typePracticalInfo"),
-		itinerary: t("articles.typeItinerary"),
-		list: t("articles.typeList"),
-		other: t("articles.typeOther"),
-	};
-
 	if (isLoading) {
 		return (
 			<div className="container-wide py-12">
@@ -95,27 +73,23 @@ function ArticlesPage() {
 
 	return (
 		<div className="container-wide py-8 md:py-16">
-			<header className="mb-8 md:mb-12">
-				<h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
-					{t("articlesPage.title")}
-				</h1>
-				<p className="text-base md:text-lg text-foreground-secondary max-w-2xl">
-					{t("articlesPage.description")}
-				</p>
-			</header>
+			<PageHeader
+				title={t("articlesPage.title")}
+				description={t("articlesPage.description")}
+			/>
 
 			{articles.length === 0 ? (
-				<div className="text-center py-16">
-					<p className="text-foreground-secondary mb-4">
-						{t("articlesPage.noArticles")}
-					</p>
-					<Link
-						to="/destinations"
-						className="text-primary hover:text-primary-hover font-medium"
-					>
-						{t("articlesPage.exploreDestinations")} →
-					</Link>
-				</div>
+				<EmptyState
+					title={t("articlesPage.noArticles")}
+					action={
+						<Link
+							to="/destinations"
+							className="font-medium text-primary hover:text-primary-hover"
+						>
+							{t("articlesPage.exploreDestinations")} →
+						</Link>
+					}
+				/>
 			) : (
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 					{articles.map((article) => (

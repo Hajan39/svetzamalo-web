@@ -1,77 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArticleCard } from "@/components/article/ArticleCard";
+import { EmptyState } from "@/components/common";
 import { submitBookInterest } from "@/integrations/strapi/api";
 import { useLatestArticles } from "@/integrations/strapi/hooks";
 import { EXTERNAL_SERVICES, SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
-import type { Article } from "@/types";
 
 const SITE_URL = SITE_CONFIG.url;
-
-/** Placeholder articles when Strapi is empty – for layout preview */
-const MOCK_ARTICLES: Article[] = [
-	{
-		id: "mock-1",
-		slug: "top-10-andorra",
-		destinationId: "andorra",
-		articleType: "list",
-		title: "Top 10 things to do in Andorra",
-		intro:
-			"From skiing in Grandvalira to duty-free shopping in Andorra la Vella, here are the best experiences for budget travellers in this tiny Pyrenean country.",
-		sections: [],
-		places: [],
-		seo: {
-			metaTitle: "Top 10 Andorra",
-			metaDescription: "Best things to do in Andorra.",
-			keywords: [],
-		},
-		coverImage: {
-			src: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=800&fit=crop",
-			alt: "Andorra mountains",
-		},
-	},
-	{
-		id: "mock-2",
-		slug: "best-beaches-thailand",
-		destinationId: "thailand",
-		articleType: "list",
-		title: "Best beaches in Thailand on a budget",
-		intro:
-			"Skip the crowded resorts and discover quieter shores where you can still find cheap bungalows, local food, and clear water without breaking the bank.",
-		sections: [],
-		places: [],
-		seo: {
-			metaTitle: "Best beaches Thailand",
-			metaDescription: "Budget beaches in Thailand.",
-			keywords: [],
-		},
-		coverImage: {
-			src: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&fit=crop",
-			alt: "Thai beach",
-		},
-	},
-	{
-		id: "mock-3",
-		slug: "andorra-on-a-budget",
-		destinationId: "andorra",
-		articleType: "practical-info",
-		title: "Andorra on a budget: tips and costs",
-		intro:
-			"How much does a day in Andorra cost? Where to sleep and eat cheaply, and how to get there from Barcelona or Toulouse without overspending.",
-		sections: [],
-		places: [],
-		seo: {
-			metaTitle: "Andorra budget",
-			metaDescription: "Andorra budget travel tips.",
-			keywords: [],
-		},
-		coverImage: {
-			src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&fit=crop",
-			alt: "Mountains",
-		},
-	},
-];
 
 export const Route = createFileRoute("/")({
 	head: () => ({
@@ -120,17 +56,17 @@ function HomePage() {
 		<div className="min-h-screen bg-background">
 			{/* 1. Hero – main text on image background */}
 			<section
-				className="relative flex min-h-[320px] items-center justify-center overflow-hidden px-4 py-14 sm:min-h-[380px] sm:py-20 md:min-h-[440px] md:py-24"
+				className="relative flex min-h-80 items-center justify-center overflow-hidden px-4 py-14 sm:min-h-95 sm:py-20 md:min-h-110 md:py-24"
 				style={{
 					backgroundImage: `linear-gradient(135deg, rgba(255,255,255,0.78) 0%, rgba(255,255,255,0.58) 42%, rgba(79,143,58,0.14) 100%), url(${HERO_IMAGE})`,
 					backgroundPosition: "center",
 					backgroundSize: "cover",
 				}}
 			>
-				<div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-transparent" />
+				<div className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-background to-transparent" />
 				<div className="container-wide max-w-2xl mx-auto text-center relative z-10">
 					<span className="mb-4 inline-flex rounded-full border border-primary/15 bg-white/85 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary shadow-sm backdrop-blur">
-						Budget travel guides
+						{t("homePage.heroBadge")}
 					</span>
 					<h1 className="hero-headline mb-4 text-foreground drop-shadow-sm">
 						{t("homePage.mainHeadline")}
@@ -307,11 +243,13 @@ function HomePage() {
 				</h2>
 				{articlesLoading ? (
 					<div className="text-center py-6 text-foreground-secondary text-sm">
-						Loading...
+						{t("common.loading")}
 					</div>
+				) : articles.length === 0 ? (
+					<EmptyState title={t("homePage.latestArticlesEmpty")} />
 				) : (
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-						{(articles.length ? articles : MOCK_ARTICLES).map((article) => (
+						{articles.map((article) => (
 							<ArticleCard key={article.id} article={article} variant="block" />
 						))}
 					</div>

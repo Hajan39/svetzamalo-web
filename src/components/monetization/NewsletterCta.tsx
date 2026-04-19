@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "@/lib/i18n";
 
 interface NewsletterCtaProps {
 	title?: string;
@@ -10,13 +11,23 @@ interface NewsletterCtaProps {
 }
 
 export function NewsletterCta({
-	title = "Stay Updated",
-	description = "Get weekly travel tips, deals, and destination guides delivered to your inbox.",
-	buttonText = "Subscribe",
-	placeholder = "Your email address",
-	disclaimer = "No spam, unsubscribe anytime.",
+	title,
+	description,
+	buttonText,
+	placeholder,
+	disclaimer,
 	className = "",
 }: NewsletterCtaProps) {
+	const { t } = useTranslation();
+
+	const resolvedTitle = title ?? t("monetization.newsletterTitle");
+	const resolvedDescription =
+		description ?? t("monetization.newsletterDescription");
+	const resolvedButtonText = buttonText ?? t("monetization.newsletterButton");
+	const resolvedPlaceholder =
+		placeholder ?? t("monetization.newsletterPlaceholder");
+	const resolvedDisclaimer = disclaimer ?? t("homePage.noSpam");
+
 	const [email, setEmail] = useState("");
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [isSubmitted, setIsSubmitted] = useState(false);
@@ -40,10 +51,10 @@ export function NewsletterCta({
 			>
 				<div className="text-2xl mb-2">✅</div>
 				<h3 className="text-lg font-semibold text-success mb-2">
-					Thanks for subscribing!
+					{t("monetization.newsletterSuccessTitle")}
 				</h3>
 				<p className="text-success text-sm">
-					Check your inbox for a confirmation email.
+					{t("monetization.newsletterSuccessDescription")}
 				</p>
 			</div>
 		);
@@ -54,10 +65,10 @@ export function NewsletterCta({
 			className={`bg-primary-light rounded-xl p-5 sm:p-6 md:p-8 text-center ${className}`}
 		>
 			<h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 md:mb-4">
-				{title}
+				{resolvedTitle}
 			</h3>
 			<p className="text-sm sm:text-base text-foreground-secondary mb-6 md:mb-8 max-w-md mx-auto">
-				{description}
+				{resolvedDescription}
 			</p>
 
 			<form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -66,7 +77,7 @@ export function NewsletterCta({
 						type="email"
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
-						placeholder={placeholder}
+						placeholder={resolvedPlaceholder}
 						required
 						disabled={isSubmitting}
 						className="flex-1 px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
@@ -76,11 +87,15 @@ export function NewsletterCta({
 						disabled={isSubmitting || !email.trim()}
 						className="px-6 py-3 bg-primary hover:bg-primary-hover text-primary-foreground font-medium rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
 					>
-						{isSubmitting ? "Subscribing..." : buttonText}
+						{isSubmitting
+							? t("monetization.newsletterSubmitting")
+							: resolvedButtonText}
 					</button>
 				</div>
-				{disclaimer && (
-					<p className="text-xs text-foreground-muted mt-4">{disclaimer}</p>
+				{resolvedDisclaimer && (
+					<p className="text-xs text-foreground-muted mt-4">
+						{resolvedDisclaimer}
+					</p>
 				)}
 			</form>
 		</div>

@@ -6,6 +6,7 @@ import {
 	ArticlePlaces,
 	ArticleSection,
 } from "@/components/article";
+import { EmptyState } from "@/components/common";
 import {
 	AffiliateBox,
 	LeadMagnet,
@@ -26,6 +27,7 @@ import {
 	useDestinationById,
 } from "@/integrations/strapi/hooks";
 import { SITE_CONFIG } from "@/lib/constants";
+import { useTranslation } from "@/lib/i18n";
 
 const SITE_URL = SITE_CONFIG.url;
 
@@ -84,6 +86,7 @@ export const Route = createFileRoute("/articles/$slug")({
 });
 
 function ArticlePage() {
+	const { t } = useTranslation();
 	const { slug } = Route.useParams();
 	const { article: loaderArticle } = Route.useLoaderData();
 
@@ -107,7 +110,9 @@ function ArticlePage() {
 		return (
 			<div className="container-narrow py-16">
 				<div className="text-center">
-					<p className="text-foreground-secondary">Loading article...</p>
+					<p className="text-foreground-secondary">
+						{t("common.loadingArticle")}
+					</p>
 				</div>
 			</div>
 		);
@@ -116,21 +121,18 @@ function ArticlePage() {
 	if (error || !article) {
 		return (
 			<div className="container-narrow py-16">
-				<h1 className="text-2xl font-semibold text-foreground">
-					Article not found
-				</h1>
-				<p className="text-foreground-secondary mt-2">
-					The article "{slug}" does not exist.
-				</p>
-				{error && (
-					<p className="text-error mt-2 text-sm">Error: {error.message}</p>
-				)}
-				<a
-					href="/articles"
-					className="mt-4 inline-block text-primary hover:underline"
-				>
-					← Back to Articles
-				</a>
+				<EmptyState
+					title={t("errors.articleNotFound")}
+					description={t("articlesPage.notFoundDescription")}
+					action={
+						<a href="/articles" className="inline-block text-primary hover:underline">
+							← {t("common.backToArticles")}
+						</a>
+					}
+				/>
+				{error ? (
+					<p className="mt-3 text-center text-error text-sm">{error.message}</p>
+				) : null}
 			</div>
 		);
 	}
@@ -147,7 +149,7 @@ function ArticlePage() {
 				{/* Breadcrumbs */}
 				<Breadcrumbs
 					items={[
-						{ label: "Destinations", href: "/destinations" },
+						{ label: t("nav.destinations"), href: "/destinations" },
 						...(destination
 							? [
 									{
@@ -184,9 +186,9 @@ function ArticlePage() {
 								{section.id === "getting-there" && destination && (
 									<AffiliateBox
 										type="flight"
-										headline={`Book Your Flight to ${destination.name}`}
-										description={`Find the best deals on flights. We recommend booking 2-3 months in advance for the best prices.`}
-										ctaText="Search Flights"
+										headline={`${t("articlePage.bookFlightTo")} ${destination.name}`}
+										description={t("articlePage.flightAffiliateDescription")}
+										ctaText={t("articlePage.searchFlights")}
 										link={`https://www.skyscanner.com/transport/flights/to/${destination.slug}`}
 										partner="Skyscanner"
 									/>
@@ -196,9 +198,9 @@ function ArticlePage() {
 								{section.id === "where-to-stay" && destination && (
 									<AffiliateBox
 										type="hotel"
-										headline={`Find Accommodation in ${destination.name}`}
-										description={`Compare prices from hostels to luxury resorts. Budget: $${destination.currency.budgetPerDay.budget}/night, Mid-range: $${destination.currency.budgetPerDay.midRange}/night.`}
-										ctaText="Check Prices"
+										headline={`${t("articlePage.findAccommodationIn")} ${destination.name}`}
+										description={`${t("articlePage.hotelAffiliateDescription")} ${t("articlePage.budgetLabel")}: $${destination.currency.budgetPerDay.budget}/${t("articlePage.perNight")}, ${t("articlePage.midRangeLabel")}: $${destination.currency.budgetPerDay.midRange}/${t("articlePage.perNight")}.`}
+										ctaText={t("articlePage.checkPrices")}
 										link={`https://www.booking.com/destination/${destination.slug}`}
 										partner="Booking.com"
 									/>
@@ -214,15 +216,15 @@ function ArticlePage() {
 				{/* Lead Magnet before FAQ */}
 				{destination && (
 					<LeadMagnet
-						title={`Free: ${destination.name} Budget Planner`}
-						description="Plan your trip with our detailed budget spreadsheet and packing checklist."
+						title={`${t("articlePage.freeLabel")}: ${destination.name} ${t("articlePage.budgetPlannerTitle")}`}
+						description={t("articlePage.leadMagnetDescription")}
 						benefits={[
-							"Daily expense tracker",
-							"Packing checklist",
-							"Emergency contacts",
-							"Local phrases",
+							t("articlePage.leadMagnetBenefitTracker"),
+							t("articlePage.leadMagnetBenefitChecklist"),
+							t("articlePage.leadMagnetBenefitContacts"),
+							t("articlePage.leadMagnetBenefitPhrases"),
 						]}
-						ctaText="Get Free Download"
+						ctaText={t("articlePage.getFreeDownload")}
 					/>
 				)}
 

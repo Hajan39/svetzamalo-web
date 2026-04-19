@@ -98,16 +98,25 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 		common: {
 			readMore: "Read more",
 			readGuide: "Read guide",
+			readArticle: "Read article",
+			readFullGuide: "Read full guide",
 			viewDestination: "View destination",
 			explore: "Explore",
 			search: "Search",
 			loading: "Loading...",
+			loadingArticle: "Loading article...",
+			loadingDestinations: "Loading destinations...",
 			errorLoading: "Failed to load content. Please try again.",
 			error: "Error",
 			notFound: "Not found",
 			back: "Back",
+			backToArticles: "Back to Articles",
+			backToDestinations: "Back to Destinations",
 			next: "Next",
 			previous: "Previous",
+			publishedLabel: "Published",
+			updatedLabel: "Updated",
+			contentNavigation: "Content navigation",
 			siteName: "World for ",
 			siteNameHighlight: "Less",
 			siteNameFull: "World for Less",
@@ -237,6 +246,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			readTravelGuide: "Read travel guide",
 			// New dashboard sections
 			mainHeadline: "Travel More, Spend Less",
+			heroBadge: "Budget travel guides",
 			mainIntro:
 				"Practical guides and tips so you can explore the world on a budget. No fluff—just what you need to plan a great trip.",
 			whatWeBringTitle: "What you get here",
@@ -253,6 +263,25 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 				"Our full guide to planning and enjoying budget trips—destinations, saving tips, and real itineraries. Available as e‑book and paperback.",
 			bookCta: "View the book",
 			articlesTitle: "Latest guides & articles",
+			latestArticlesEmpty: "No articles are published yet.",
+		},
+
+		monetization: {
+			affiliateDefaultFlight: "Book Your Flight",
+			affiliateDefaultHotel: "Find Accommodation",
+			affiliateDefaultTour: "Book Tours & Activities",
+			viaPartnerPrefix: "Via",
+			affiliateDisclosure:
+				"We may earn a commission at no extra cost to you.",
+			newsletterTitle: "Stay Updated",
+			newsletterDescription:
+				"Get weekly travel tips, deals, and destination guides delivered to your inbox.",
+			newsletterButton: "Subscribe",
+			newsletterPlaceholder: "Your email address",
+			newsletterSubmitting: "Subscribing...",
+			newsletterSuccessTitle: "Thanks for subscribing!",
+			newsletterSuccessDescription:
+				"Check your inbox for a confirmation email.",
 		},
 
 		// About Page
@@ -355,6 +384,11 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			title: "Travel Destinations",
 			description:
 				"Explore our budget travel guides for destinations around the world. Each guide includes practical tips, costs, and insider advice.",
+			emptyTitle: "No destinations available yet",
+			emptyDescription:
+				"Strapi is reachable, but there are no published destinations for this view yet.",
+			notFoundDescription:
+				"The destination you are looking for is not available right now.",
 			all: "All",
 			continents: {
 				europe: "Europe",
@@ -389,10 +423,34 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			title: "Travel Articles & Guides",
 			description:
 				"Browse our collection of budget travel guides, destination articles, and insider tips to help you explore the world affordably.",
+			notFoundDescription:
+				"The article you are looking for is not available right now.",
 			featured: "Featured Articles",
 			allArticles: "All Articles",
 			noArticles: "No articles found. Check back soon for new travel guides!",
 			exploreDestinations: "Explore Destinations",
+		},
+
+		articlePage: {
+			bookFlightTo: "Book Your Flight to",
+			flightAffiliateDescription:
+				"Find the best deals on flights. We recommend booking 2-3 months in advance for the best prices.",
+			searchFlights: "Search Flights",
+			findAccommodationIn: "Find Accommodation in",
+			hotelAffiliateDescription: "Compare prices from hostels to luxury resorts.",
+			budgetLabel: "Budget",
+			midRangeLabel: "Mid-range",
+			perNight: "night",
+			checkPrices: "Check Prices",
+			freeLabel: "Free",
+			budgetPlannerTitle: "Budget Planner",
+			leadMagnetDescription:
+				"Plan your trip with our detailed budget spreadsheet and packing checklist.",
+			leadMagnetBenefitTracker: "Daily expense tracker",
+			leadMagnetBenefitChecklist: "Packing checklist",
+			leadMagnetBenefitContacts: "Emergency contacts",
+			leadMagnetBenefitPhrases: "Local phrases",
+			getFreeDownload: "Get Free Download",
 		},
 
 		// Article type labels
@@ -470,15 +528,24 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 		common: {
 			readMore: "Číst více",
 			readGuide: "Číst průvodce",
+			readArticle: "Číst článek",
+			readFullGuide: "Číst celý průvodce",
 			viewDestination: "Zobrazit destinaci",
 			explore: "Prozkoumat",
 			search: "Hledat",
 			loading: "Načítání...",
+			loadingArticle: "Načítání článku...",
+			loadingDestinations: "Načítání destinací...",
 			error: "Chyba",
 			notFound: "Nenalezeno",
 			back: "Zpět",
+			backToArticles: "Zpět na články",
+			backToDestinations: "Zpět na destinace",
 			next: "Další",
 			previous: "Předchozí",
+			publishedLabel: "Publikováno",
+			updatedLabel: "Aktualizováno",
+			contentNavigation: "Navigace obsahem",
 			siteName: "Svět za ",
 			siteNameHighlight: "málo",
 			siteNameFull: "Svět za málo",
@@ -607,6 +674,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			bestTime: "Nejlepší",
 			readTravelGuide: "Číst cestovní průvodce",
 			mainHeadline: "Cestujte více, utrácejte méně",
+			heroBadge: "Průvodci levným cestováním",
 			mainIntro:
 				"Praktické průvodce a tipy, díky kterým prozkoumáte svět levně. Žádná omáčka—jen to, co potřebujete na skvělou dovolenou.",
 			whatWeBringTitle: "Co vám nabízíme",
@@ -623,6 +691,25 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 				"Kompletní průvodce plánováním a užíváním si levných cest—destinace, tipy na úspory a reálné itineráře. K dispozici jako e‑book i brožovaná kniha.",
 			bookCta: "Zobrazit knihu",
 			articlesTitle: "Nejnovější průvodce a články",
+			latestArticlesEmpty: "Zatím nejsou publikované žádné články.",
+		},
+
+		monetization: {
+			affiliateDefaultFlight: "Najít letenky",
+			affiliateDefaultHotel: "Najít ubytování",
+			affiliateDefaultTour: "Rezervovat zážitky",
+			viaPartnerPrefix: "Přes",
+			affiliateDisclosure:
+				"Můžeme získat provizi bez dalších nákladů pro vás.",
+			newsletterTitle: "Zůstaňte v obraze",
+			newsletterDescription:
+				"Získejte každý týden cestovní tipy, nabídky a nové průvodce přímo do e-mailu.",
+			newsletterButton: "Přihlásit se",
+			newsletterPlaceholder: "Váš e-mail",
+			newsletterSubmitting: "Odesílání...",
+			newsletterSuccessTitle: "Děkujeme za přihlášení!",
+			newsletterSuccessDescription:
+				"Potvrzovací e-mail najdete ve své schránce.",
 		},
 
 		// About Page
@@ -726,6 +813,11 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			title: "Cestovní destinace",
 			description:
 				"Prozkoumejte naše průvodce levným cestováním pro destinace po celém světě. Každý průvodce obsahuje praktické tipy, náklady a insider rady.",
+			emptyTitle: "Zatím tu nejsou žádné destinace",
+			emptyDescription:
+				"Strapi je dostupné, ale pro tento přehled zatím nejsou publikované žádné destinace.",
+			notFoundDescription:
+				"Hledaná destinace teď není k dispozici.",
 			all: "Vše",
 			continents: {
 				europe: "Evropa",
@@ -760,11 +852,35 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			title: "Cestovní články a průvodci",
 			description:
 				"Procházejte naši sbírku průvodců levným cestováním, článků o destinacích a insider tipů pro cenově dostupné cestování.",
+			notFoundDescription: "Hledaný článek teď není k dispozici.",
 			featured: "Doporučené články",
 			allArticles: "Všechny články",
 			noArticles:
 				"Žádné články nenalezeny. Brzy přidáme nové cestovní průvodce!",
 			exploreDestinations: "Prozkoumat destinace",
+		},
+
+		articlePage: {
+			bookFlightTo: "Najít let do",
+			flightAffiliateDescription:
+				"Najděte nejlepší ceny letenek. Nejvýhodněji obvykle vychází rezervace 2 až 3 měsíce dopředu.",
+			searchFlights: "Hledat lety",
+			findAccommodationIn: "Najít ubytování v",
+			hotelAffiliateDescription:
+				"Porovnejte ceny od hostelů po lepší hotely.",
+			budgetLabel: "Nízký rozpočet",
+			midRangeLabel: "Střední rozpočet",
+			perNight: "noc",
+			checkPrices: "Zjistit ceny",
+			freeLabel: "Zdarma",
+			budgetPlannerTitle: "plánovač rozpočtu",
+			leadMagnetDescription:
+				"Naplánujte cestu pomocí našeho detailního rozpočtového přehledu a checklistu na balení.",
+			leadMagnetBenefitTracker: "Denní přehled výdajů",
+			leadMagnetBenefitChecklist: "Checklist na balení",
+			leadMagnetBenefitContacts: "Nouzové kontakty",
+			leadMagnetBenefitPhrases: "Užitečné fráze",
+			getFreeDownload: "Stáhnout zdarma",
 		},
 
 		// Article type labels

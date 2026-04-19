@@ -98,7 +98,7 @@ export function CountryToArticleLink({
 					{article.title}
 				</h3>
 				<div className="flex items-center text-primary font-medium text-sm">
-					<span>Read full guide</span>
+					<span>{t("common.readFullGuide")}</span>
 					<span aria-hidden="true" className="ml-1">
 						→
 					</span>
@@ -127,7 +127,7 @@ export function CountryToArticleLink({
 				{article.title}
 			</h4>
 			<div className="flex items-center text-primary font-medium text-xs">
-				<span>Read article</span>
+				<span>{t("common.readArticle")}</span>
 				<span aria-hidden="true" className="ml-1">
 					→
 				</span>
@@ -193,11 +193,13 @@ interface ContentNavigationProps {
  * Previous/Next navigation for articles and destinations
  */
 export function ContentNavigation({ previous, next }: ContentNavigationProps) {
+	const { t } = useTranslation();
+
 	if (!previous && !next) return null;
 
 	return (
 		<nav
-			aria-label="Content navigation"
+			aria-label={t("common.contentNavigation")}
 			className="flex justify-between items-center py-8 border-t border-border mt-12"
 		>
 			<div className="flex-1">
@@ -216,7 +218,7 @@ export function ContentNavigation({ previous, next }: ContentNavigationProps) {
 						</span>
 						<div>
 							<div className="text-sm text-foreground-muted uppercase tracking-wide">
-								Previous
+								{t("common.previous")}
 							</div>
 							<div className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
 								{previous.title}
@@ -239,7 +241,7 @@ export function ContentNavigation({ previous, next }: ContentNavigationProps) {
 					>
 						<div className="text-right">
 							<div className="text-sm text-foreground-muted uppercase tracking-wide">
-								Next
+								{t("common.next")}
 							</div>
 							<div className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
 								{next.title}

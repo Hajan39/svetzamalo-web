@@ -1,4 +1,5 @@
-import { SmartImage } from "@/components/ui/SmartImage";
+import { SmartImage } from "@/components/common";
+import { formatLocalizedDate, useTranslation } from "@/lib/i18n";
 
 interface ArticleHeroProps {
 	title: string;
@@ -18,76 +19,73 @@ export function ArticleHero({
 	publishedAt,
 	updatedAt,
 }: ArticleHeroProps) {
+	const { locale, t } = useTranslation();
 	const formatDate = (dateString: string) => {
-		return new Date(dateString).toLocaleDateString("en-US", {
-			year: "numeric",
-			month: "long",
-			day: "numeric",
-		});
+		return formatLocalizedDate(new Date(dateString), locale);
 	};
 
 	return (
 		<header className="mb-8 md:mb-12">
 			{/* Cover Image with Title */}
 			{coverImage ? (
-				<div className="relative w-full h-56 sm:h-72 md:h-112 mb-6 md:mb-8 rounded-xl overflow-hidden">
+				<div className="relative mb-6 h-56 w-full overflow-hidden rounded-xl sm:h-72 md:mb-8 md:h-112">
 					<SmartImage
 						src={coverImage.src}
 						alt={coverImage.alt}
-						className="w-full h-full object-cover"
+						className="h-full w-full object-cover"
 						loading="lazy"
 						fallbackLabel={title}
 					/>
 					<div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent" />
 					<div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-10">
-						<h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-2 md:mb-3 leading-tight drop-shadow-lg">
+						<h1 className="mb-2 text-2xl font-bold leading-tight text-white drop-shadow-lg sm:text-3xl md:mb-3 md:text-5xl">
 							{title}
 						</h1>
-						{(publishedAt || updatedAt) && (
+						{publishedAt || updatedAt ? (
 							<div
-								className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-white/80"
+								className="flex flex-wrap items-center gap-2 text-xs text-white/80 sm:gap-4 sm:text-sm"
 								suppressHydrationWarning
 							>
-								{publishedAt && (
+								{publishedAt ? (
 									<time dateTime={publishedAt}>
-										Published: {formatDate(publishedAt)}
+										{t("common.publishedLabel")}: {formatDate(publishedAt)}
 									</time>
-								)}
-								{updatedAt && (
+								) : null}
+								{updatedAt ? (
 									<time dateTime={updatedAt}>
-										Updated: {formatDate(updatedAt)}
+										{t("common.updatedLabel")}: {formatDate(updatedAt)}
 									</time>
-								)}
+								) : null}
 							</div>
-						)}
+						) : null}
 					</div>
 				</div>
 			) : (
 				<>
-					<h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground mb-4 md:mb-6 leading-tight">
+					<h1 className="mb-4 text-2xl font-bold leading-tight text-foreground sm:text-3xl md:mb-6 md:text-5xl">
 						{title}
 					</h1>
-					{(publishedAt || updatedAt) && (
+					{publishedAt || updatedAt ? (
 						<div
-							className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-foreground-muted mb-4 md:mb-6"
+							className="mb-4 flex flex-wrap items-center gap-2 text-xs text-foreground-muted sm:gap-4 sm:text-sm md:mb-6"
 							suppressHydrationWarning
 						>
-							{publishedAt && (
+							{publishedAt ? (
 								<time dateTime={publishedAt}>
-									Published: {formatDate(publishedAt)}
+									{t("common.publishedLabel")}: {formatDate(publishedAt)}
 								</time>
-							)}
-							{updatedAt && (
+							) : null}
+							{updatedAt ? (
 								<time dateTime={updatedAt}>
-									Updated: {formatDate(updatedAt)}
+									{t("common.updatedLabel")}: {formatDate(updatedAt)}
 								</time>
-							)}
+							) : null}
 						</div>
-					)}
+					) : null}
 				</>
 			)}
 
-			<p className="text-base sm:text-lg md:text-xl text-foreground-secondary leading-relaxed">
+			<p className="text-base leading-relaxed text-foreground-secondary sm:text-lg md:text-xl">
 				{intro}
 			</p>
 		</header>

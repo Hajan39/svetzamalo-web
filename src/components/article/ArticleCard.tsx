@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { SmartImage } from "@/components/ui/SmartImage";
+import { SmartImage } from "@/components/common";
+import { useTranslation } from "@/lib/i18n";
 import type { Article } from "@/types";
 
 interface ArticleCardProps {
@@ -13,6 +14,7 @@ export function ArticleCard({
 	variant = "default",
 	className = "",
 }: ArticleCardProps) {
+	const { t } = useTranslation();
 	const formattedDate = article.publishedAt
 		? new Date(article.publishedAt).toLocaleDateString("en-US", {
 				month: "short",
@@ -50,7 +52,7 @@ export function ArticleCard({
 						{article.intro}
 					</p>
 					<span className="mt-4 inline-flex text-sm font-semibold text-primary">
-						Read article
+						{t("common.readArticle")}
 					</span>
 				</div>
 			</Link>
@@ -73,7 +75,9 @@ export function ArticleCard({
 				<p className="mb-5 mt-3 line-clamp-2 text-foreground-secondary">
 					{article.intro}
 				</p>
-				<span className="text-sm font-semibold text-primary">Read article</span>
+				<span className="text-sm font-semibold text-primary">
+					{t("common.readArticle")}
+				</span>
 			</Link>
 		);
 	}
