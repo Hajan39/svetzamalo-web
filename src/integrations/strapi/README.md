@@ -15,13 +15,40 @@ VITE_STRAPI_URL=http://localhost:1337
 # Strapi API Token (volitelné, pro chráněné endpointy)
 # Vygenerujte v Strapi Admin: Settings > API Tokens
 VITE_STRAPI_API_TOKEN=your_strapi_api_token
+
+# Volitelné přepínače zdroje dat
+# Globální fallback: vše ze statických JSON
+VITE_USE_STATIC_CONTENT=false
+
+# Výchozí chování v tomto repu:
+# - destinace zůstávají statické, dokud nevznikne kompatibilní destination API
+# - články mohou jít ze Strapi
+VITE_USE_STATIC_DESTINATIONS=true
+VITE_USE_STATIC_ARTICLES=false
 ```
 
 ### 2. Strapi Setup
 
 Ujistěte se, že máte v Strapi vytvořené content types:
-- **Destination** - pro destinace
 - **Article** - pro články
+
+Aktuální backend v sousedním repu už umí články. Frontend proto umí běžet v hybridním režimu:
+- destinace ze statických JSON dat,
+- články živě ze Strapi.
+
+Pro tento režim nastavte:
+
+```env
+VITE_STRAPI_URL=http://localhost:1337
+VITE_USE_STATIC_DESTINATIONS=true
+VITE_USE_STATIC_ARTICLES=false
+```
+
+Strapi článek může být navázaný na `country`. Frontend z této relace vytáhne `slug` a spojí ho se statickou destinací pro breadcrumb a související obsah.
+
+Aby články šly z webu číst bez chyby `403 Forbidden`, nastavte ještě jednu z těchto variant:
+- v Strapi Admin → Settings → Users & Permissions Plugin → Roles → Public povolte pro **Article** akce **find** a **findOne**,
+- nebo vytvořte API token se čtením článků a nastavte `VITE_STRAPI_API_TOKEN`.
 
 ## Použití
 

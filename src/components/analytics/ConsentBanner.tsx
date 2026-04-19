@@ -225,7 +225,7 @@ export function PrivacySettingsModal() {
 export function hasDoNotTrack(): boolean {
   return navigator.doNotTrack === '1' ||
          navigator.doNotTrack === 'yes' ||
-         (window as any).doNotTrack === '1'
+         (navigator as unknown as { doNotTrack?: string }).doNotTrack === '1'
 }
 
 /**
@@ -235,11 +235,11 @@ export function anonymizeIp(ip: string): string {
   // Remove last octet of IPv4 or last 80 bits of IPv6
   if (ip.includes('.')) {
     // IPv4: 192.168.1.100 -> 192.168.1.0
-    return ip.split('.').slice(0, 3).join('.') + '.0'
+    return `${ip.split('.').slice(0, 3).join('.')}.0`
   } else if (ip.includes(':')) {
     // IPv6: anonymize last 80 bits (last 5 segments)
     const segments = ip.split(':')
-    return segments.slice(0, Math.max(1, segments.length - 5)).join(':') + '::'
+    return `${segments.slice(0, Math.max(1, segments.length - 5)).join(':')}::`
   }
   return ip
 }

@@ -27,6 +27,27 @@ export default defineConfig(({ mode }) => {
       tanstackStart(),
       viteReact(),
     ],
+    build: {
+      chunkSizeWarningLimit: 1000,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            "vendor-react": ["react", "react-dom"],
+            "vendor-tanstack": [
+              "@tanstack/react-router",
+              "@tanstack/react-query",
+              "@tanstack/react-start",
+            ],
+            "vendor-ui": ["lucide-react", "class-variance-authority", "clsx", "tailwind-merge"],
+            "strapi-integration": [
+              "./src/integrations/strapi/client.ts",
+              "./src/integrations/strapi/api.ts",
+              "./src/integrations/strapi/types.ts",
+            ],
+          },
+        },
+      },
+    },
     define: {
       "import.meta.env.VITE_STRAPI_URL": JSON.stringify(
         env.VITE_STRAPI_URL || "",
