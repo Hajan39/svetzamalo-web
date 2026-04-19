@@ -244,7 +244,7 @@ export function transformStrapiDestination(
 				}
 			: undefined,
 		seo: strapiDest.seo || {
-			metaTitle: `${strapiDest.name} Travel Guide | Lowcost Traveling`,
+			metaTitle: `${strapiDest.name} Travel Guide | Svět za málo`,
 			metaDescription: `Budget travel guide for ${strapiDest.name}. Tips, costs, and practical info.`,
 			keywords: [strapiDest.name.toLowerCase(), "travel", "budget"],
 		},
@@ -343,8 +343,7 @@ export function transformStrapiArticle(strapiArticle: StrapiArticle): Article {
 			: undefined;
 
 	const metaTitle =
-		strapiArticle.seo?.metaTitle ??
-		`${strapiArticle.title} | Lowcost Traveling`;
+		strapiArticle.seo?.metaTitle ?? `${strapiArticle.title} | Svět za málo`;
 	const metaDescription =
 		strapiArticle.seo?.metaDescription ?? intro.slice(0, 160);
 	const keywords = strapiArticle.seo?.keywords ?? [strapiArticle.title];

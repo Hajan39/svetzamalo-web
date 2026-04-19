@@ -1,4 +1,4 @@
-# Lowcost Traveling - robots.txt
+# Svet za malo - robots.txt
 # https://lowcosttraveling.com
 
 User-agent: *

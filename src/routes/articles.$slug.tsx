@@ -54,7 +54,7 @@ export const Route = createFileRoute("/articles/$slug")({
 		if (!article) {
 			return {
 				meta: [
-					{ title: "Article Not Found | Lowcost Traveling" },
+					{ title: "Article Not Found | Svět za málo" },
 					{ name: "robots", content: "noindex,follow" },
 				],
 			};
@@ -125,7 +125,10 @@ function ArticlePage() {
 					title={t("errors.articleNotFound")}
 					description={t("articlesPage.notFoundDescription")}
 					action={
-						<a href="/articles" className="inline-block text-primary hover:underline">
+						<a
+							href="/articles"
+							className="inline-block text-primary hover:underline"
+						>
 							← {t("common.backToArticles")}
 						</a>
 					}

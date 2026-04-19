@@ -7,6 +7,7 @@ import {
 	createComgateBookPayment,
 	submitBookInterest,
 } from "@/integrations/strapi/api";
+import { resendEbookEmail } from "@/integrations/ebookApi";
 import { EXTERNAL_SERVICES, SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
 
@@ -361,6 +362,71 @@ function BookPage() {
 					</section>
 				</div>
 			</div>
+
+			<ResendEbookSection />
 		</div>
+	);
+}
+
+function ResendEbookSection() {
+	const { t } = useTranslation();
+	const uid = useId();
+	const [email, setEmail] = useState("");
+	const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+	const handleSubmit = async (e: React.FormEvent) => {
+		e.preventDefault();
+		if (!email.trim()) return;
+		setStatus("loading");
+		try {
+			await resendEbookEmail({ email: email.trim() });
+			setStatus("success");
+			setEmail("");
+		} catch {
+			setStatus("error");
+		}
+	};
+
+	return (
+		<section className="mt-12 border-t border-border-strong pt-10">
+			<div className="max-w-xl mx-auto text-center">
+				<h2 className="text-lg font-semibold text-foreground mb-2">
+					{t("ebook.resendTitle")}
+				</h2>
+				<p className="text-sm text-foreground-secondary mb-5">
+					{t("ebook.resendDesc")}
+				</p>
+				{status === "success" ? (
+					<p className="text-success font-medium">{t("ebook.resendSuccess")}</p>
+				) : (
+					<form
+						onSubmit={handleSubmit}
+						className="flex flex-col sm:flex-row gap-3 justify-center"
+					>
+						<div className="flex-1 max-w-sm">
+							<Label htmlFor={`${uid}-resend-email`} className="sr-only">
+								{t("book.ebookPlaceholder")}
+							</Label>
+							<Input
+								id={`${uid}-resend-email`}
+								type="email"
+								placeholder={t("book.ebookPlaceholder")}
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
+								disabled={status === "loading"}
+								className="w-full"
+								required
+							/>
+						</div>
+						<Button type="submit" disabled={status === "loading"} variant="outline">
+							{status === "loading" ? t("common.loading") : t("ebook.resendBtn")}
+						</Button>
+					</form>
+				)}
+				{status === "error" && (
+					<p className="mt-2 text-sm text-error">{t("book.registerError")}</p>
+				)}
+			</div>
+		</section>
 	);
 }

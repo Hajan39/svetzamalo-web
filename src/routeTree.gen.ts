@@ -15,6 +15,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as DestinationsIndexRouteImport } from './routes/destinations.index'
 import { Route as BookIndexRouteImport } from './routes/book.index'
 import { Route as ArticlesIndexRouteImport } from './routes/articles.index'
+import { Route as EbookDownloadRouteImport } from './routes/ebook.download'
 import { Route as DestinationsContinentRouteImport } from './routes/destinations.$continent'
 import { Route as BookSuccessRouteImport } from './routes/book.success'
 import { Route as ArticlesSlugRouteImport } from './routes/articles.$slug'
@@ -50,6 +51,11 @@ const ArticlesIndexRoute = ArticlesIndexRouteImport.update({
   path: '/articles/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EbookDownloadRoute = EbookDownloadRouteImport.update({
+  id: '/ebook/download',
+  path: '/ebook/download',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DestinationsContinentRoute = DestinationsContinentRouteImport.update({
   id: '/destinations/$continent',
   path: '/destinations/$continent',
@@ -78,6 +84,7 @@ export interface FileRoutesByFullPath {
   '/articles/$slug': typeof ArticlesSlugRoute
   '/book/success': typeof BookSuccessRoute
   '/destinations/$continent': typeof DestinationsContinentRoute
+  '/ebook/download': typeof EbookDownloadRoute
   '/articles/': typeof ArticlesIndexRoute
   '/book/': typeof BookIndexRoute
   '/destinations/': typeof DestinationsIndexRoute
@@ -89,6 +96,7 @@ export interface FileRoutesByTo {
   '/articles/$slug': typeof ArticlesSlugRoute
   '/book/success': typeof BookSuccessRoute
   '/destinations/$continent': typeof DestinationsContinentRoute
+  '/ebook/download': typeof EbookDownloadRoute
   '/articles': typeof ArticlesIndexRoute
   '/book': typeof BookIndexRoute
   '/destinations': typeof DestinationsIndexRoute
@@ -102,6 +110,7 @@ export interface FileRoutesById {
   '/articles/$slug': typeof ArticlesSlugRoute
   '/book/success': typeof BookSuccessRoute
   '/destinations/$continent': typeof DestinationsContinentRoute
+  '/ebook/download': typeof EbookDownloadRoute
   '/articles/': typeof ArticlesIndexRoute
   '/book/': typeof BookIndexRoute
   '/destinations/': typeof DestinationsIndexRoute
@@ -116,6 +125,7 @@ export interface FileRouteTypes {
     | '/articles/$slug'
     | '/book/success'
     | '/destinations/$continent'
+    | '/ebook/download'
     | '/articles/'
     | '/book/'
     | '/destinations/'
@@ -127,6 +137,7 @@ export interface FileRouteTypes {
     | '/articles/$slug'
     | '/book/success'
     | '/destinations/$continent'
+    | '/ebook/download'
     | '/articles'
     | '/book'
     | '/destinations'
@@ -139,6 +150,7 @@ export interface FileRouteTypes {
     | '/articles/$slug'
     | '/book/success'
     | '/destinations/$continent'
+    | '/ebook/download'
     | '/articles/'
     | '/book/'
     | '/destinations/'
@@ -151,6 +163,7 @@ export interface RootRouteChildren {
   BookRoute: typeof BookRouteWithChildren
   ArticlesSlugRoute: typeof ArticlesSlugRoute
   DestinationsContinentRoute: typeof DestinationsContinentRoute
+  EbookDownloadRoute: typeof EbookDownloadRoute
   ArticlesIndexRoute: typeof ArticlesIndexRoute
   DestinationsIndexRoute: typeof DestinationsIndexRoute
   DestinationsGuideSlugRoute: typeof DestinationsGuideSlugRoute
@@ -198,6 +211,13 @@ declare module '@tanstack/react-router' {
       path: '/articles'
       fullPath: '/articles/'
       preLoaderRoute: typeof ArticlesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ebook/download': {
+      id: '/ebook/download'
+      path: '/ebook/download'
+      fullPath: '/ebook/download'
+      preLoaderRoute: typeof EbookDownloadRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/destinations/$continent': {
@@ -249,6 +269,7 @@ const rootRouteChildren: RootRouteChildren = {
   BookRoute: BookRouteWithChildren,
   ArticlesSlugRoute: ArticlesSlugRoute,
   DestinationsContinentRoute: DestinationsContinentRoute,
+  EbookDownloadRoute: EbookDownloadRoute,
   ArticlesIndexRoute: ArticlesIndexRoute,
   DestinationsIndexRoute: DestinationsIndexRoute,
   DestinationsGuideSlugRoute: DestinationsGuideSlugRoute,

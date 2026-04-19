@@ -58,13 +58,13 @@ const TALKS_REFERENCE_EVENTS = [
 export const Route = createFileRoute("/about")({
 	head: () => ({
 		meta: [
-			{ title: "About Us | Lowcost Traveling" },
+			{ title: "About Us | Svět za málo" },
 			{
 				name: "description",
 				content:
-					"Learn about Lowcost Traveling and our mission to help budget travelers explore the world.",
+					"Learn about Svět za málo and our mission to help budget travelers explore the world.",
 			},
-			{ property: "og:title", content: "About Us | Lowcost Traveling" },
+			{ property: "og:title", content: "About Us | Svět za málo" },
 			{ property: "og:type", content: "website" },
 			{ property: "og:url", content: `${SITE_URL}/about` },
 		],

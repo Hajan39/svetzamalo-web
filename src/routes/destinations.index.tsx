@@ -36,7 +36,7 @@ const VIEW_MODES = [
 export const Route = createFileRoute("/destinations/")({
 	head: () => ({
 		meta: [
-			{ title: "Travel Destinations | Lowcost Traveling" },
+			{ title: "Travel Destinations | Svět za málo" },
 			{
 				name: "description",
 				content:
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/destinations/")({
 			},
 			{
 				property: "og:title",
-				content: "Travel Destinations | Lowcost Traveling",
+				content: "Travel Destinations | Svět za málo",
 			},
 			{ property: "og:type", content: "website" },
 			{ property: "og:url", content: `${SITE_URL}/destinations` },

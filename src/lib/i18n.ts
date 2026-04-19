@@ -126,7 +126,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 		seo: {
 			title: "World for Less – Budget Travel Guides & Tips",
 			description:
-				"Discover budget travel destinations, practical guides, and insider tips for lowcost traveling around the world.",
+				"Discover budget travel destinations, practical guides, and insider tips from Svet za malo.",
 			keywords:
 				"budget travel, lowcost destinations, travel guides, backpacking, cheap travel",
 		},
@@ -271,8 +271,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			affiliateDefaultHotel: "Find Accommodation",
 			affiliateDefaultTour: "Book Tours & Activities",
 			viaPartnerPrefix: "Via",
-			affiliateDisclosure:
-				"We may earn a commission at no extra cost to you.",
+			affiliateDisclosure: "We may earn a commission at no extra cost to you.",
 			newsletterTitle: "Stay Updated",
 			newsletterDescription:
 				"Get weekly travel tips, deals, and destination guides delivered to your inbox.",
@@ -330,6 +329,27 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 				"Your payment was successful. We've sent the download link to your email.",
 			successCheckSpam: "If you don't see it, check your spam folder.",
 			successBackToBook: "Back to the book page",
+		},
+
+		ebook: {
+			downloadTitle: "Your e‑book is ready",
+			downloadReady:
+				"Click the button below to download your PDF. The link is valid for a few minutes.",
+			downloadBtn: "Download e‑book (PDF)",
+			downloadExpiry:
+				"The download link expires shortly — save the file right away.",
+			downloadError:
+				"Something went wrong while preparing your download. Please try again later.",
+			tokenInvalidTitle: "Link expired or already used",
+			tokenInvalidDesc:
+				"This download link has expired or has already been used. Use the form below to request a new one.",
+			tokenInvalidCta: "Go to book page",
+			resendTitle: "Didn't receive your e‑book?",
+			resendDesc:
+				"If you registered but haven't received the download email, enter your email and we'll send a new link.",
+			resendBtn: "Resend e‑book",
+			resendSuccess:
+				"Done! If an account with that email exists, a new download link is on its way.",
 		},
 
 		about: {
@@ -437,7 +457,8 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 				"Find the best deals on flights. We recommend booking 2-3 months in advance for the best prices.",
 			searchFlights: "Search Flights",
 			findAccommodationIn: "Find Accommodation in",
-			hotelAffiliateDescription: "Compare prices from hostels to luxury resorts.",
+			hotelAffiliateDescription:
+				"Compare prices from hostels to luxury resorts.",
 			budgetLabel: "Budget",
 			midRangeLabel: "Mid-range",
 			perNight: "night",
@@ -699,8 +720,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			affiliateDefaultHotel: "Najít ubytování",
 			affiliateDefaultTour: "Rezervovat zážitky",
 			viaPartnerPrefix: "Přes",
-			affiliateDisclosure:
-				"Můžeme získat provizi bez dalších nákladů pro vás.",
+			affiliateDisclosure: "Můžeme získat provizi bez dalších nákladů pro vás.",
 			newsletterTitle: "Zůstaňte v obraze",
 			newsletterDescription:
 				"Získejte každý týden cestovní tipy, nabídky a nové průvodce přímo do e-mailu.",
@@ -761,6 +781,26 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			successBackToBook: "Zpět na stránku knihy",
 		},
 
+		ebook: {
+			downloadTitle: "Váš e‑book je připraven",
+			downloadReady:
+				"Klikněte na tlačítko níže a stáhněte si PDF. Odkaz je platný jen pár minut.",
+			downloadBtn: "Stáhnout e‑book (PDF)",
+			downloadExpiry: "Odkaz ke stažení brzy vyprší — soubor si uložte hned.",
+			downloadError:
+				"Při přípravě stažení se něco pokazilo. Zkuste to prosím znovu.",
+			tokenInvalidTitle: "Odkaz vypršel nebo byl již použit",
+			tokenInvalidDesc:
+				"Tento odkaz ke stažení vypršel nebo byl již použit. Použijte formulář níže a požádejte o nový.",
+			tokenInvalidCta: "Přejít na stránku knihy",
+			resendTitle: "E‑book jste neobdrželi?",
+			resendDesc:
+				"Pokud jste se zaregistrovali a nedostali email ke stažení, zadejte email a pošleme vám nový odkaz.",
+			resendBtn: "Poslat e‑book znovu",
+			resendSuccess:
+				"Hotovo! Pokud u nás existuje účet s tímto emailem, nový odkaz ke stažení je na cestě.",
+		},
+
 		about: {
 			title: "O Svět za málo",
 			subtitle: "Pomáháme levným cestovatelům prozkoumávat svět od roku 2020.",
@@ -816,8 +856,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			emptyTitle: "Zatím tu nejsou žádné destinace",
 			emptyDescription:
 				"Strapi je dostupné, ale pro tento přehled zatím nejsou publikované žádné destinace.",
-			notFoundDescription:
-				"Hledaná destinace teď není k dispozici.",
+			notFoundDescription: "Hledaná destinace teď není k dispozici.",
 			all: "Vše",
 			continents: {
 				europe: "Evropa",
@@ -866,8 +905,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 				"Najděte nejlepší ceny letenek. Nejvýhodněji obvykle vychází rezervace 2 až 3 měsíce dopředu.",
 			searchFlights: "Hledat lety",
 			findAccommodationIn: "Najít ubytování v",
-			hotelAffiliateDescription:
-				"Porovnejte ceny od hostelů po lepší hotely.",
+			hotelAffiliateDescription: "Porovnejte ceny od hostelů po lepší hotely.",
 			budgetLabel: "Nízký rozpočet",
 			midRangeLabel: "Střední rozpočet",
 			perNight: "noc",

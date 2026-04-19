@@ -29,7 +29,7 @@ export const Route = createFileRoute("/articles/")({
 	},
 	head: () => ({
 		meta: [
-			{ title: "Travel Articles & Guides | Lowcost Traveling" },
+			{ title: "Travel Articles & Guides | Svět za málo" },
 			{
 				name: "description",
 				content:
@@ -37,7 +37,7 @@ export const Route = createFileRoute("/articles/")({
 			},
 			{
 				property: "og:title",
-				content: "Travel Articles & Guides | Lowcost Traveling",
+				content: "Travel Articles & Guides | Svět za málo",
 			},
 			{ property: "og:type", content: "website" },
 			{ property: "og:url", content: `${SITE_URL}/articles` },

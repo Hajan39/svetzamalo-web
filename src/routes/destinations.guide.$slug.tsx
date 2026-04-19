@@ -30,7 +30,7 @@ export const Route = createFileRoute("/destinations/guide/$slug")({
 		if (!dest) {
 			return {
 				meta: [
-					{ title: "Destination Not Found | Lowcost Traveling" },
+					{ title: "Destination Not Found | Svět za málo" },
 					{ name: "robots", content: "noindex,follow" },
 				],
 			};

@@ -113,7 +113,7 @@ export function OrganizationStructuredData() {
 		url: "https://lowcost-traveling.com",
 		logo: "https://lowcost-traveling.com/logo.svg",
 		description:
-			"Discover budget travel destinations, practical guides, and insider tips for lowcost traveling around the world.",
+			"Discover budget travel destinations, practical guides, and insider tips from Svet za malo.",
 		sameAs: [
 			"https://www.facebook.com/lowcosttraveling",
 			"https://www.instagram.com/lowcosttraveling",
@@ -152,7 +152,7 @@ export function WebSiteStructuredData() {
 		name: "Svět za málo",
 		url: "https://lowcost-traveling.com",
 		description:
-			"Discover budget travel destinations, practical guides, and insider tips for lowcost traveling around the world.",
+			"Discover budget travel destinations, practical guides, and insider tips from Svet za malo.",
 		inLanguage: ["en", "cs", "es", "de"],
 		potentialAction: {
 			"@type": "SearchAction",

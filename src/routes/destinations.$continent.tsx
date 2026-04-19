@@ -35,7 +35,7 @@ export const Route = createFileRoute("/destinations/$continent")({
 	},
 	head: ({ params }) => ({
 		meta: [
-			{ title: `${params.continent} Destinations | Lowcost Traveling` },
+			{ title: `${params.continent} Destinations | Svět za málo` },
 			{
 				name: "description",
 				content: `Explore budget travel guides for ${params.continent}. Find tips, costs, and practical info.`,
