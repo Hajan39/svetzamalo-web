@@ -10,8 +10,8 @@ import { useEffect, useId } from "react";
 import { Footer, Header, SkipLink } from "@/components/layout";
 import { CurrencyProvider } from "@/lib/currency";
 import { getLocaleForIntl, i18n, useTranslation } from "@/lib/i18n";
+import { Analytics } from "@vercel/analytics/react";
 import appCss from "../styles.css?url";
-import { Analytics } from "@vercel/analytics/next";
 
 /**
  * Router Context
