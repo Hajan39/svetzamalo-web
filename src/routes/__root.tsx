@@ -65,7 +65,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 			{ rel: "stylesheet", href: appCss },
 			// Favicons
 			{ rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
-			{ rel: "icon", href: "/favicon.ico", sizes: "32x32" },
+			{ rel: "icon", href: "/favicon-32.png", sizes: "32x32", type: "image/png" },
 			{ rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
 			{ rel: "manifest", href: "/manifest.json" },
 			// Google Fonts: Poppins headings, Inter body, Playpen Sans brand wordmark
@@ -98,6 +98,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 		<html lang="cs" className="scroll-smooth">
 			<head>
 				<HeadContent />
+				<meta name="seznam-wmt" content="ZV2mM9koaFElO3a0gZudPRjCNidhFJyX" />
+
+
 			</head>
 			<body className="min-h-screen flex flex-col antialiased">
 				{children}
