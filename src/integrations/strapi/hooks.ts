@@ -4,7 +4,7 @@
  * Hooks for fetching Strapi content with React Query
  */
 
-import { type UseQueryOptions, useQuery } from "@tanstack/react-query";
+import { type UseQueryOptions, useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { useLocale } from "@/lib/i18n";
 import type { Article, Destination } from "@/types";
 import type { StrapiSiteConfig } from "./types";
@@ -12,6 +12,7 @@ import {
 	fetchArticleById,
 	fetchArticleBySlug,
 	fetchArticles,
+	fetchArticlesPage,
 	fetchArticlesByDestination,
 	fetchArticlesByTag,
 	fetchDestinationById,
@@ -164,6 +165,22 @@ export function useDestinationsByContinent(
 		enabled: !!continent,
 		staleTime: 1000 * 60 * 5, // 5 minutes
 		...options,
+	});
+}
+
+/**
+ * Hook to fetch articles with infinite scroll (paginated)
+ */
+export function useInfiniteArticles() {
+	const appLocale = useLocale();
+	const contentLocale = toContentLocale(appLocale);
+	return useInfiniteQuery({
+		queryKey: [...strapiQueryKeys.articles.lists(), "infinite", contentLocale],
+		queryFn: ({ pageParam }) => fetchArticlesPage(pageParam as number, contentLocale),
+		initialPageParam: 1,
+		getNextPageParam: (lastPage) =>
+			lastPage.page < lastPage.pageCount ? lastPage.page + 1 : undefined,
+		staleTime: 1000 * 60 * 5,
 	});
 }
 

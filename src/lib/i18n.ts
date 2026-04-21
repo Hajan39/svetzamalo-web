@@ -315,11 +315,37 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			buyTitle: "Buy the book",
 			buyNote:
 				"Purchase the e‑book or paperback securely. After payment you'll receive the download link by email.",
+			buyMethodsTitle: "Choose payment method",
+			buyMethodsDesc:
+				"Fill in your email once and choose either the instant ComGate payment or a classic bank transfer with QR.",
 			buyPrice: "Price",
 			buyEmailPlaceholder: "Your email",
 			buyFullNamePlaceholder: "Your name",
 			buyButton: "Buy now",
 			buySubmitButton: "Go to payment",
+			buyComgateTitle: "Card / online payment",
+			buyComgateDesc:
+				"Recommended option. Immediate redirect to ComGate and faster confirmation after payment.",
+			buyBankTitle: "Bank transfer + QR code",
+			buyBankDesc:
+				"Manual alternative for customers who prefer a bank transfer. Use the generated QR code in your banking app.",
+			buyBankNeedEmail:
+				"Fill in your email above first so we can generate a variable symbol for your payment.",
+			buyBankManualNotice:
+				"Transfer payments are confirmed manually. After the payment is credited, we will send the e‑book to your email.",
+			buyBankUnavailable:
+				"Bank transfer is not configured yet. Add account details in the environment settings.",
+			buyBankRecipientLabel: "Recipient",
+			buyBankAccountLabel: "Account",
+			buyBankIbanLabel: "IBAN",
+			buyBankBicLabel: "BIC / SWIFT",
+			buyBankVariableSymbolLabel: "Variable symbol",
+			buyBankMessageLabel: "Message for payment",
+			buyBankQrHelp:
+				"Scan the QR code in your banking app, or use the details below for a manual transfer.",
+			buyBankQrUnavailable:
+				"The QR code will appear after IBAN is configured. The transfer details below still work for a manual payment.",
+			buyBankContactLabel: "Contact for manual confirmation",
 			buyError:
 				"Payment could not be started. Try again or use the link below.",
 			buyAlternativeLink: "alternative link",
@@ -449,6 +475,8 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			allArticles: "All Articles",
 			noArticles: "No articles found. Check back soon for new travel guides!",
 			exploreDestinations: "Explore Destinations",
+			searchPlaceholder: "Search articles...",
+			noSearchResults: "No articles match your search.",
 		},
 
 		articlePage: {
@@ -472,6 +500,9 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			leadMagnetBenefitContacts: "Emergency contacts",
 			leadMagnetBenefitPhrases: "Local phrases",
 			getFreeDownload: "Get Free Download",
+			recommendedReadingTitle: "Read also",
+			recommendedReadingInCountry: "More guides in",
+			recommendedReadingFallback: "More articles you may want to continue with",
 		},
 
 		// Article type labels
@@ -764,11 +795,37 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			buyTitle: "Koupit knihu",
 			buyNote:
 				"Knihu si můžete koupit přímo zde – e‑book nebo tištěnou. Po platbě vám pošleme odkaz ke stažení na e‑mail.",
+			buyMethodsTitle: "Vyberte způsob platby",
+			buyMethodsDesc:
+				"Vyplňte e-mail jen jednou a zvolte buď okamžitou platbu přes ComGate, nebo klasický převod na účet s QR kódem.",
 			buyPrice: "Cena",
 			buyEmailPlaceholder: "Váš e-mail",
 			buyFullNamePlaceholder: "Jméno a příjmení",
 			buyButton: "Koupit knihu",
 			buySubmitButton: "Přejít k platbě",
+			buyComgateTitle: "Karta / online platba",
+			buyComgateDesc:
+				"Doporučená varianta. Okamžité přesměrování do ComGate a rychlejší potvrzení po zaplacení.",
+			buyBankTitle: "Převod na účet + QR kód",
+			buyBankDesc:
+				"Ruční alternativa pro ty, kdo chtějí platit převodem. QR kód načtete přímo v bankovní aplikaci.",
+			buyBankNeedEmail:
+				"Nejprve vyplňte e-mail výše, ať můžeme pro platbu vygenerovat variabilní symbol.",
+			buyBankManualNotice:
+				"Platby převodem potvrzujeme ručně. Jakmile dorazí na účet, pošleme e‑book na váš e-mail.",
+			buyBankUnavailable:
+				"Platba převodem zatím není nakonfigurovaná. Doplňte číslo účtu v prostředí aplikace.",
+			buyBankRecipientLabel: "Příjemce",
+			buyBankAccountLabel: "Účet",
+			buyBankIbanLabel: "IBAN",
+			buyBankBicLabel: "BIC / SWIFT",
+			buyBankVariableSymbolLabel: "Variabilní symbol",
+			buyBankMessageLabel: "Zpráva pro příjemce",
+			buyBankQrHelp:
+				"QR kód načtěte v mobilní bankovní aplikaci, nebo použijte údaje níže pro ruční převod.",
+			buyBankQrUnavailable:
+				"QR kód se zobrazí po doplnění IBAN. Údaje níže ale stačí i pro ruční zadání platby.",
+			buyBankContactLabel: "Kontakt pro ruční potvrzení",
 			buyError:
 				"Platbu se nepodařilo spustit. Zkuste to znovu nebo použijte odkaz níže.",
 			buyAlternativeLink: "alternativní odkaz",
@@ -897,6 +954,8 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			noArticles:
 				"Žádné články nenalezeny. Brzy přidáme nové cestovní průvodce!",
 			exploreDestinations: "Prozkoumat destinace",
+			searchPlaceholder: "Hledat články...",
+			noSearchResults: "Žádné články neodpovídají vašemu hledání.",
 		},
 
 		articlePage: {
@@ -919,6 +978,9 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			leadMagnetBenefitContacts: "Nouzové kontakty",
 			leadMagnetBenefitPhrases: "Užitečné fráze",
 			getFreeDownload: "Stáhnout zdarma",
+			recommendedReadingTitle: "Čtěte také",
+			recommendedReadingInCountry: "Další články v destinaci",
+			recommendedReadingFallback: "Další články, které stojí za přečtení",
 		},
 
 		// Article type labels

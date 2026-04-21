@@ -20,6 +20,34 @@ export function toContentLocale(appLocale: string): "cs" | "en" {
 	return appLocale === "cs" ? "cs" : "en";
 }
 
+function normalizeCollection<T>(data: T[] | T | null | undefined): T[] {
+	if (Array.isArray(data)) {
+		return data.filter((item): item is T => item != null);
+	}
+	return data == null ? [] : [data];
+}
+
+function mapArticlesSafely(
+	articles: StrapiArticle[],
+	context: string,
+): Article[] {
+	const mapped: Article[] = [];
+
+	for (const article of articles) {
+		try {
+			mapped.push(transformStrapiArticle(article));
+		} catch (error) {
+			console.warn(
+				`Strapi article transform failed (${context}), skipping record:`,
+				error,
+				article,
+			);
+		}
+	}
+
+	return mapped;
+}
+
 /**
  * Fetch all destinations, optionally filtered by content locale.
  */
@@ -130,6 +158,62 @@ export async function fetchDestinationsByContinent(
 	}
 }
 
+const ARTICLES_PAGE_SIZE = 12;
+
+export interface ArticlesPage {
+	articles: Article[];
+	page: number;
+	pageCount: number;
+	total: number;
+}
+
+/**
+ * Fetch a page of articles with pagination
+ */
+export async function fetchArticlesPage(
+	page: number,
+	contentLocale?: "cs" | "en",
+): Promise<ArticlesPage> {
+	try {
+		const response = await strapiClient.get<StrapiArticle[]>("/articles/public", {
+			populate: ["cover", "country"],
+			sort: ["publishedAt:desc"],
+			pagination: { page, pageSize: ARTICLES_PAGE_SIZE },
+			...(contentLocale ? { locale: contentLocale } : {}),
+		});
+
+		const articles = normalizeCollection(response.data);
+		const meta = response.meta?.pagination;
+
+		if (contentLocale === "cs" && articles.length === 0 && page === 1) {
+			const fallback = await strapiClient.get<StrapiArticle[]>("/articles/public", {
+				populate: ["cover", "country"],
+				sort: ["publishedAt:desc"],
+				pagination: { page, pageSize: ARTICLES_PAGE_SIZE },
+				locale: "en",
+			});
+			const fallbackArticles = normalizeCollection(fallback.data);
+			const fallbackMeta = fallback.meta?.pagination;
+			return {
+				articles: mapArticlesSafely(fallbackArticles, "fetchArticlesPage:locale-fallback"),
+				page: fallbackMeta?.page ?? page,
+				pageCount: fallbackMeta?.pageCount ?? 1,
+				total: fallbackMeta?.total ?? 0,
+			};
+		}
+
+		return {
+			articles: mapArticlesSafely(articles, "fetchArticlesPage"),
+			page: meta?.page ?? page,
+			pageCount: meta?.pageCount ?? 1,
+			total: meta?.total ?? 0,
+		};
+	} catch (error) {
+		console.warn("Strapi fetch articles page failed:", error);
+		return { articles: [], page, pageCount: 1, total: 0 };
+	}
+}
+
 /**
  * Fetch all articles
  */
@@ -143,10 +227,22 @@ export async function fetchArticles(
 			...(contentLocale ? { locale: contentLocale } : {}),
 		});
 
-		const articles = Array.isArray(response.data)
-			? response.data
-			: [response.data];
-		return articles.map(transformStrapiArticle);
+		const articles = normalizeCollection(response.data);
+
+		if (contentLocale === "cs" && articles.length === 0) {
+			const fallback = await strapiClient.get<StrapiArticle[]>(
+				"/articles/public",
+				{
+					populate: ["cover", "country"],
+					sort: ["publishedAt:desc"],
+					locale: "en",
+				},
+			);
+			const fallbackArticles = normalizeCollection(fallback.data);
+			return mapArticlesSafely(fallbackArticles, "fetchArticles:locale-fallback");
+		}
+
+		return mapArticlesSafely(articles, "fetchArticles");
 	} catch (error) {
 		console.warn("Strapi fetch articles failed:", error);
 		return [];
@@ -170,6 +266,24 @@ export async function fetchArticleBySlug(
 		const articles = Array.isArray(response.data)
 			? response.data
 			: [response.data];
+		if (articles.length === 0 && contentLocale === "cs") {
+			const fallback = await strapiClient.get<StrapiArticle>(
+				"/articles/public",
+				{
+					filters: { slug: { $eq: slug } },
+					populate: ["cover", "country"],
+					locale: "en",
+				},
+			);
+			const fallbackArticles = Array.isArray(fallback.data)
+				? fallback.data
+				: [fallback.data];
+			if (fallbackArticles.length === 0) {
+				return null;
+			}
+			return transformStrapiArticle(fallbackArticles[0]);
+		}
+
 		if (articles.length === 0) {
 			return null;
 		}
@@ -216,14 +330,6 @@ export async function fetchArticlesByDestination(
 			filters: {
 				$or: [
 					{
-						destination: {
-							documentId: { $eq: destinationId },
-						},
-					},
-					{
-						destinationId: { $eq: destinationId },
-					},
-					{
 						country: {
 							slug: { $eq: destinationId },
 						},
@@ -245,10 +351,44 @@ export async function fetchArticlesByDestination(
 			...(contentLocale ? { locale: contentLocale } : {}),
 		});
 
-		const articles = Array.isArray(response.data)
-			? response.data
-			: [response.data];
-		return articles.map(transformStrapiArticle);
+		const articles = normalizeCollection(response.data);
+
+		if (contentLocale === "cs" && articles.length === 0) {
+			const fallback = await strapiClient.get<StrapiArticle[]>(
+				"/articles/public",
+				{
+					filters: {
+						$or: [
+							{
+								country: {
+									slug: { $eq: destinationId },
+								},
+							},
+							{
+								country: {
+									documentId: { $eq: destinationId },
+								},
+							},
+							{
+								country: {
+									id: { $eq: destinationId },
+								},
+							},
+						],
+					},
+					populate: ["cover", "country"],
+					sort: ["publishedAt:desc"],
+					locale: "en",
+				},
+			);
+			const fallbackArticles = normalizeCollection(fallback.data);
+			return mapArticlesSafely(
+				fallbackArticles,
+				"fetchArticlesByDestination:locale-fallback",
+			);
+		}
+
+		return mapArticlesSafely(articles, "fetchArticlesByDestination");
 	} catch (error) {
 		console.warn("Strapi fetch articles by destination failed:", error);
 		return [];
@@ -274,10 +414,8 @@ export async function fetchArticlesByTag(
 			...(contentLocale ? { locale: contentLocale } : {}),
 		});
 
-		const articles = Array.isArray(response.data)
-			? response.data
-			: [response.data];
-		return articles.map(transformStrapiArticle);
+		const articles = normalizeCollection(response.data);
+		return mapArticlesSafely(articles, "fetchArticlesByTag");
 	} catch (error) {
 		console.warn("Strapi fetch articles by tag failed:", error);
 		return [];
@@ -301,10 +439,8 @@ export async function fetchLatestArticles(
 			...(contentLocale ? { locale: contentLocale } : {}),
 		});
 
-		const articles = Array.isArray(response.data)
-			? response.data
-			: [response.data];
-		return articles.map(transformStrapiArticle);
+		const articles = normalizeCollection(response.data);
+		return mapArticlesSafely(articles, "fetchLatestArticles");
 	} catch (error) {
 		console.warn("Strapi fetch latest articles failed:", error);
 		return [];
@@ -344,7 +480,7 @@ export async function createComgateBookPayment(
 
 /**
  * Fetch site configuration from Strapi Single Type.
- * Returns null when Strapi is unreachable so the FE can fall back to env vars.
+ * Returns null when Strapi is unreachable.
  */
 export async function fetchSiteConfig(
 	contentLocale?: "cs" | "en",
@@ -356,7 +492,7 @@ export async function fetchSiteConfig(
 			});
 		return response.data ?? null;
 	} catch (error) {
-		console.warn("Strapi fetch site-config failed, using env fallbacks:", error);
+		console.warn("Strapi fetch site-config failed:", error);
 		return null;
 	}
 }

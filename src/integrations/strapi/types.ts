@@ -33,6 +33,16 @@ export interface StrapiSiteConfig extends StrapiEntity {
 	bookBuyUrl?: string;
 	bookPrice?: string;
 	ebookPdfUrl?: string;
+	bookBankTransferEnabled?: boolean;
+	bookBankAccountName?: string;
+	bookBankAccountNumber?: string;
+	bookBankCode?: string;
+	bookBankIban?: string;
+	bookBankBic?: string;
+	bookBankAmount?: string;
+	bookBankCurrency?: string;
+	bookBankMessage?: string;
+	bookBankContactEmail?: string;
 	enableAds?: boolean;
 	enableAnalytics?: boolean;
 }
@@ -105,7 +115,7 @@ export interface StrapiDestination extends StrapiEntity {
 
 /**
  * Strapi Article entity
- * Migrated articles (from WordPress) have: content (blocks), excerpt. No sections/destination.
+ * Migrated articles (from WordPress) have: content (blocks), excerpt. No sections.
  */
 export interface StrapiArticle extends StrapiEntity {
 	slug: string;
@@ -115,13 +125,6 @@ export interface StrapiArticle extends StrapiEntity {
 	content?: unknown[];
 	contentLang?: "cs" | "en";
 	articleType?: string;
-	destination?: {
-		data?: StrapiDestination | null;
-		documentId?: string;
-		id?: number;
-		slug?: string;
-		name?: string;
-	};
 	country?: {
 		data?: StrapiDestination | null;
 		documentId?: string;
@@ -129,7 +132,6 @@ export interface StrapiArticle extends StrapiEntity {
 		slug?: string;
 		name?: string;
 	};
-	destinationId?: string;
 	tags?: string[];
 	sections?: Array<{
 		id: string;
@@ -317,16 +319,7 @@ function getStrapiCoverImage(
  * Transform Strapi article to frontend Article type
  */
 export function transformStrapiArticle(strapiArticle: StrapiArticle): Article {
-	// Get destination ID from relation (Strapi v5 returns relation directly or in .data)
-	const destRel = strapiArticle.destination as
-		| {
-				data?: StrapiDestination | null;
-				documentId?: string;
-				id?: number;
-				slug?: string;
-		  }
-		| null
-		| undefined;
+	// Get destination ID from country relation (Strapi v5 returns relation directly or in .data)
 	const countryRel = strapiArticle.country as
 		| {
 				data?: StrapiDestination | null;
@@ -337,12 +330,6 @@ export function transformStrapiArticle(strapiArticle: StrapiArticle): Article {
 		| null
 		| undefined;
 	const destinationId =
-		strapiArticle.destinationId ||
-		destRel?.data?.documentId ||
-		destRel?.data?.id?.toString() ||
-		destRel?.documentId ||
-		destRel?.id?.toString() ||
-		destRel?.slug ||
 		countryRel?.data?.slug ||
 		countryRel?.slug ||
 		countryRel?.data?.documentId ||

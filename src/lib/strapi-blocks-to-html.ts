@@ -48,7 +48,17 @@ function renderChildren(children: StrapiBlockChild[] | undefined): string {
 	return children
 		.map((c) => {
 			if (c.type !== "text" || !c.text) return "";
+			const internalLinkMatch = c.text.match(
+				/\[INTERNAL_LINK:\s*([a-z0-9-]+)\s*\]/i,
+			);
+
 			let html = escapeHtml(c.text);
+			if (!c.url && internalLinkMatch) {
+				const slug = internalLinkMatch[1];
+				const href = `/articles/${slug}`;
+				const linkText = c.text.replace(internalLinkMatch[0], "").trim() || slug;
+				html = `<a href="${escapeAttr(href)}">${escapeHtml(linkText)}</a>`;
+			}
 			if (c.bold) html = `<strong>${html}</strong>`;
 			if (c.italic) html = `<em>${html}</em>`;
 			if (c.url) html = `<a href="${escapeAttr(c.url)}">${html}</a>`;
@@ -67,6 +77,25 @@ function escapeHtml(s: string): string {
 
 function escapeAttr(s: string): string {
 	return s.replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+}
+
+function parseImageCaptionLayout(caption?: string): {
+	layoutClass: string;
+	cleanCaption?: string;
+} {
+	if (!caption) {
+		return { layoutClass: "" };
+	}
+
+	const trimmed = caption.trim();
+	if (/^\[half\]/i.test(trimmed)) {
+		return {
+			layoutClass: " image-half",
+			cleanCaption: trimmed.replace(/^\[half\]\s*/i, ""),
+		};
+	}
+
+	return { layoutClass: "", cleanCaption: caption };
 }
 
 export function strapiBlocksToHtml(blocks: StrapiBlock[] | unknown): string {
@@ -110,9 +139,10 @@ export function strapiBlocksToHtml(blocks: StrapiBlock[] | unknown): string {
 					const alt = escapeAttr(img.alternativeText ?? "");
 					const widthAttr = img.width ? ` width="${img.width}"` : "";
 					const heightAttr = img.height ? ` height="${img.height}"` : "";
-					let html = `<figure><img src="${src}" alt="${alt}"${widthAttr}${heightAttr} loading="lazy" style="max-width:100%;height:auto" />`;
-					if (b.caption) {
-						html += `<figcaption>${escapeHtml(b.caption)}</figcaption>`;
+					const { layoutClass, cleanCaption } = parseImageCaptionLayout(b.caption);
+					let html = `<figure class="article-figure${layoutClass}"><img src="${src}" alt="${alt}"${widthAttr}${heightAttr} loading="lazy" style="max-width:100%;height:auto" />`;
+					if (cleanCaption && cleanCaption.trim()) {
+						html += `<figcaption>${escapeHtml(cleanCaption)}</figcaption>`;
 					}
 					html += "</figure>";
 					parts.push(html);

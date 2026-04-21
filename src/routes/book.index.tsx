@@ -1,16 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useId, useState } from "react";
+import QRCode from "qrcode";
+import { useEffect, useId, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useSiteSettings } from "@/hooks/useSiteSettings";
+import { resendEbookEmail } from "@/integrations/ebookApi";
 import {
 	createComgateBookPayment,
 	submitBookInterest,
 } from "@/integrations/strapi/api";
-import { resendEbookEmail } from "@/integrations/ebookApi";
-import { EXTERNAL_SERVICES, SITE_CONFIG } from "@/lib/constants";
+import {
+	buildBankTransferDetails,
+	createVariableSymbol,
+	normalizePaymentAmount,
+} from "@/lib/bankTransfer";
+import { SITE_CONFIG } from "@/lib/constants";
 import { useTranslation } from "@/lib/i18n";
-import { useSiteSettings } from "@/hooks/useSiteSettings";
 
 const SITE_URL = SITE_CONFIG.url;
 
@@ -85,9 +91,9 @@ function BookPage() {
 		"idle",
 	);
 	const [buyErrorMessage, setBuyErrorMessage] = useState("");
+	const [bankQrCodeUrl, setBankQrCodeUrl] = useState("");
 
-	const handleBuySubmit = async (e: React.FormEvent) => {
-		e.preventDefault();
+	const handleStartComgate = async () => {
 		if (!buyEmail.trim()) return;
 		setBuyStatus("loading");
 		setBuyErrorMessage("");
@@ -104,6 +110,59 @@ function BookPage() {
 			);
 		}
 	};
+
+	const handleBuySubmit = async (e: React.FormEvent) => {
+		e.preventDefault();
+		await handleStartComgate();
+	};
+
+	const bankTransferVariableSymbol = createVariableSymbol(buyEmail);
+	const bankTransferDetails = buildBankTransferDetails(
+		book.bankTransfer,
+		bankTransferVariableSymbol,
+	);
+	const bankTransferAmount =
+		bankTransferDetails?.amount ||
+		normalizePaymentAmount(book.bankTransfer.amount || bookPrice);
+	const bankTransferConfigured =
+		book.bankTransfer.enabled &&
+		Boolean(
+			bankTransferDetails?.accountDisplay ||
+				book.bankTransfer.accountNumber ||
+				book.bankTransfer.iban,
+		);
+	const bankTransferReady = Boolean(
+		bankTransferConfigured && buyEmail.trim() && bankTransferDetails,
+	);
+
+	useEffect(() => {
+		if (!bankTransferReady || !bankTransferDetails?.spaydPayload) {
+			setBankQrCodeUrl("");
+			return;
+		}
+
+		let cancelled = false;
+
+		QRCode.toDataURL(bankTransferDetails.spaydPayload, {
+			width: 320,
+			margin: 1,
+			errorCorrectionLevel: "M",
+		})
+			.then((url: string) => {
+				if (!cancelled) {
+					setBankQrCodeUrl(url);
+				}
+			})
+			.catch(() => {
+				if (!cancelled) {
+					setBankQrCodeUrl("");
+				}
+			});
+
+		return () => {
+			cancelled = true;
+		};
+	}, [bankTransferDetails, bankTransferReady]);
 
 	// When book is not available yet, show minimal "coming soon" page
 	if (!bookAvailable) {
@@ -302,6 +361,9 @@ function BookPage() {
 								{t("book.buyPrice")}: {bookPrice}
 							</p>
 						)}
+						<p className="text-sm text-foreground-secondary mb-4">
+							{t("book.buyMethodsDesc")}
+						</p>
 						<form onSubmit={handleBuySubmit} className="flex flex-col gap-3">
 							<div>
 								<Label htmlFor={`${uid}-buy-email`} className="sr-only">
@@ -332,17 +394,137 @@ function BookPage() {
 									className="w-full"
 								/>
 							</div>
-							<Button
-								type="submit"
-								size="lg"
-								disabled={buyStatus === "loading"}
-								className="bg-secondary hover:bg-secondary-hover text-secondary-foreground"
-							>
-								{buyStatus === "loading"
-									? t("common.loading")
-									: t("book.buySubmitButton")}
-							</Button>
 						</form>
+						<div className="mt-5 grid gap-4 lg:grid-cols-2">
+							<div className="rounded-2xl border border-border bg-background p-5">
+								<h3 className="text-base font-semibold text-foreground">
+									{t("book.buyComgateTitle")}
+								</h3>
+								<p className="mt-2 text-sm text-foreground-secondary">
+									{t("book.buyComgateDesc")}
+								</p>
+								<Button
+									type="button"
+									size="lg"
+									disabled={buyStatus === "loading" || !buyEmail.trim()}
+									className="mt-5 w-full bg-secondary hover:bg-secondary-hover text-secondary-foreground"
+									onClick={() => {
+										void handleStartComgate();
+									}}
+								>
+									{buyStatus === "loading"
+										? t("common.loading")
+										: t("book.buySubmitButton")}
+								</Button>
+							</div>
+							<div className="rounded-2xl border border-border bg-background p-5">
+								<h3 className="text-base font-semibold text-foreground">
+									{t("book.buyBankTitle")}
+								</h3>
+								<p className="mt-2 text-sm text-foreground-secondary">
+									{t("book.buyBankDesc")}
+								</p>
+								{!bankTransferConfigured ? (
+									<p className="mt-4 text-sm text-foreground-muted">
+										{t("book.buyBankUnavailable")}
+									</p>
+								) : !buyEmail.trim() ? (
+									<p className="mt-4 text-sm text-foreground-muted">
+										{t("book.buyBankNeedEmail")}
+									</p>
+								) : bankTransferDetails ? (
+									<div className="mt-4 space-y-4">
+										{bankQrCodeUrl ? (
+											<div className="rounded-xl border border-border bg-background-secondary p-4 text-center">
+												<img
+													src={bankQrCodeUrl}
+													alt={t("book.buyBankTitle") as string}
+													className="mx-auto h-48 w-48 rounded-lg bg-white p-2"
+												/>
+												<p className="mt-3 text-sm text-foreground-secondary">
+													{t("book.buyBankQrHelp")}
+												</p>
+											</div>
+										) : (
+											<p className="text-sm text-foreground-muted">
+												{t("book.buyBankQrUnavailable")}
+											</p>
+										)}
+										<dl className="grid gap-3 rounded-xl border border-border bg-background-secondary p-4 text-sm sm:grid-cols-2">
+											<div>
+												<dt className="text-foreground-muted">
+													{t("book.buyBankRecipientLabel")}
+												</dt>
+												<dd className="font-medium text-foreground">
+													{bankTransferDetails.accountName || "-"}
+												</dd>
+											</div>
+											<div>
+												<dt className="text-foreground-muted">
+													{t("book.buyPrice")}
+												</dt>
+												<dd className="font-medium text-foreground">
+													{bankTransferAmount
+														? `${bankTransferAmount} ${bankTransferDetails.currency}`
+														: bookPrice || "-"}
+												</dd>
+											</div>
+											<div>
+												<dt className="text-foreground-muted">
+													{t("book.buyBankAccountLabel")}
+												</dt>
+												<dd className="font-medium text-foreground">
+													{bankTransferDetails.accountDisplay || "-"}
+												</dd>
+											</div>
+											<div>
+												<dt className="text-foreground-muted">
+													{t("book.buyBankIbanLabel")}
+												</dt>
+												<dd className="font-medium text-foreground break-all">
+													{bankTransferDetails.iban || "-"}
+												</dd>
+											</div>
+											<div>
+												<dt className="text-foreground-muted">
+													{t("book.buyBankBicLabel")}
+												</dt>
+												<dd className="font-medium text-foreground">
+													{bankTransferDetails.bic || "-"}
+												</dd>
+											</div>
+											<div>
+												<dt className="text-foreground-muted">
+													{t("book.buyBankVariableSymbolLabel")}
+												</dt>
+												<dd className="font-medium text-foreground">
+													{bankTransferDetails.variableSymbol || "-"}
+												</dd>
+											</div>
+											<div className="sm:col-span-2">
+												<dt className="text-foreground-muted">
+													{t("book.buyBankMessageLabel")}
+												</dt>
+												<dd className="font-medium text-foreground">
+													{bankTransferDetails.message || "-"}
+												</dd>
+											</div>
+											<div className="sm:col-span-2">
+												<dt className="text-foreground-muted">
+													{t("book.buyBankContactLabel")}
+												</dt>
+												<dd className="font-medium text-foreground break-all">
+													{bankTransferDetails.contactEmail || "-"}
+												</dd>
+											</div>
+										</dl>
+										<p className="text-sm text-foreground-secondary">
+											{t("book.buyBankManualNotice")}
+										</p>
+									</div>
+								) : null}
+							</div>
+						</div>
 						{buyStatus === "error" && (
 							<p className="mt-3 text-sm text-error">
 								{buyErrorMessage || t("book.buyError")}

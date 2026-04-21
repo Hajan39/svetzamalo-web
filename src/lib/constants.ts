@@ -57,16 +57,24 @@ export const EXTERNAL_SERVICES = {
 
 	// Book (sales page + sell on site)
 	book: {
-		buyUrl: process.env.VITE_BOOK_BUY_URL || "",
-		ebookPdfUrl: process.env.VITE_EBOOK_PDF_URL || "",
-		/** Display price e.g. "299 Kč" or "€9.99" – shown next to Buy button */
-		price: process.env.VITE_BOOK_PRICE || "",
-		/**
-		 * Whether to show book-related UI (nav, homepage section, full book page).
-		 * Controlled explicitly via VITE_BOOK_AVAILABLE so you can prepare env vars
-		 * (price, URLs, Comgate integration) without publishing the book yet.
-		 */
-		available: process.env.VITE_BOOK_AVAILABLE === "true",
+		// Source-of-truth is Strapi site-config (bookBuyUrl, ebookPdfUrl, bookPrice).
+		buyUrl: "",
+		ebookPdfUrl: "",
+		price: "",
+		bankTransfer: {
+			enabled: false,
+			accountName: "",
+			accountNumber: "",
+			bankCode: "",
+			iban: "",
+			bic: "",
+			amount: "",
+			currency: "CZK",
+			message: "Kniha Svet za malo",
+			contactEmail: SITE_CONFIG.email,
+		},
+		// Source-of-truth is Strapi site-config (bookAvailable).
+		available: false,
 	},
 } as const;
 

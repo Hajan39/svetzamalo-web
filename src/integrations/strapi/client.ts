@@ -104,7 +104,9 @@ class StrapiClient {
 			if (typeof params.populate === "string") {
 				queryParams.append("populate", params.populate);
 			} else if (Array.isArray(params.populate)) {
-				queryParams.append("populate", params.populate.join(","));
+				for (let i = 0; i < params.populate.length; i++) {
+					queryParams.append(`populate[${i}]`, params.populate[i]);
+				}
 			} else {
 				queryParams.append("populate", JSON.stringify(params.populate));
 			}

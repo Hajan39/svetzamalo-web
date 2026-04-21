@@ -3,7 +3,7 @@ const STATIC_CACHE = "svet-za-malo-static-v1";
 const DYNAMIC_CACHE = "svet-za-malo-dynamic-v1";
 
 // Assets to cache immediately
-const STATIC_ASSETS = ["/", "/manifest.json", "/favicon.ico", "/robots.txt"];
+const STATIC_ASSETS = ["/", "/manifest.json", "/favicon-32.png", "/robots.txt"];
 
 // Install event - cache static assets
 self.addEventListener("install", (event) => {
