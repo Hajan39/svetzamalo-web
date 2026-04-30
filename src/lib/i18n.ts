@@ -248,7 +248,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			mainHeadline: "Travel More, Spend Less",
 			heroBadge: "Budget travel guides",
 			mainIntro:
-				"Practical guides and tips so you can explore the world on a budget. No fluff—just what you need to plan a great trip.",
+				"Practical guides and tips so you can explore the world on a budget. No fluff - just what you need to plan a great trip.",
 			whatWeBringTitle: "What you get here",
 			whatWeBring1: "Budget-friendly destination guides with real costs",
 			whatWeBring2: "Practical tips: transport, accommodation, food",
@@ -260,7 +260,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			ebookCta: "Send me the free e‑book",
 			bookTitle: "The World for Less Handbook",
 			bookDescription:
-				"Our full guide to planning and enjoying budget trips—destinations, saving tips, and real itineraries. Available as e‑book and paperback.",
+				"Our full guide to planning and enjoying budget trips - destinations, saving tips, and real itineraries. Available as e‑book and paperback.",
 			bookCta: "View the book",
 			articlesTitle: "Latest guides & articles",
 			latestArticlesEmpty: "No articles are published yet.",
@@ -363,7 +363,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 				"Click the button below to download your PDF. The link is valid for a few minutes.",
 			downloadBtn: "Download e‑book (PDF)",
 			downloadExpiry:
-				"The download link expires shortly — save the file right away.",
+				"The download link expires shortly  -  save the file right away.",
 			downloadError:
 				"Something went wrong while preparing your download. Please try again later.",
 			tokenInvalidTitle: "Link expired or already used",
@@ -401,7 +401,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 				"Have questions, suggestions, or just want to say hello? We'd love to hear from you. Reach out at",
 			talksTitle: "Live Talks & Presentations",
 			talksIntro:
-				"Travel guides aren't enough — sometimes you just need to hear it from someone who's been there. That's why we give live presentations about budget travel, sharing real stories, tips, and practical advice directly with audiences.",
+				"Travel guides aren't enough  -  sometimes you just need to hear it from someone who's been there. That's why we give live presentations about budget travel, sharing real stories, tips, and practical advice directly with audiences.",
 			talksOffer1: "Talks for schools, universities, and clubs",
 			talksOffer2:
 				"Themed presentations: budget travel, gap years, solo travel, specific regions",
@@ -421,7 +421,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			talksTopic6: "Ecuador",
 			talksUpcomingTitle: "Upcoming events",
 			talksUpcomingEmpty:
-				"No events scheduled right now — follow us on social media or reach out to book a talk for your event.",
+				"No events scheduled right now  -  follow us on social media or reach out to book a talk for your event.",
 			talksContact: "Want us at your event? Write to us at",
 		},
 
@@ -728,7 +728,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			mainHeadline: "Cestujte více, utrácejte méně",
 			heroBadge: "Průvodci levným cestováním",
 			mainIntro:
-				"Praktické průvodce a tipy, díky kterým prozkoumáte svět levně. Žádná omáčka—jen to, co potřebujete na skvělou dovolenou.",
+				"Praktické průvodce a tipy, díky kterým prozkoumáte svět levně. Jen to, co potřebujete na skvělou dovolenou.",
 			whatWeBringTitle: "Co vám nabízíme",
 			whatWeBring1: "Průvodce destinacemi s reálnými náklady",
 			whatWeBring2: "Praktické tipy: doprava, ubytování, jídlo",
@@ -740,7 +740,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			ebookCta: "Chci e‑book zdarma",
 			bookTitle: "Průvodce Svět za málo",
 			bookDescription:
-				"Kompletní průvodce plánováním a užíváním si levných cest—destinace, tipy na úspory a reálné itineráře. K dispozici jako e‑book i brožovaná kniha.",
+				"Kompletní průvodce plánováním a užíváním si levných cest - destinace, tipy na úspory a reálné itineráře. K dispozici jako e‑book i brožovaná kniha.",
 			bookCta: "Zobrazit knihu",
 			articlesTitle: "Nejnovější průvodce a články",
 			latestArticlesEmpty: "Zatím nejsou publikované žádné články.",
@@ -843,7 +843,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			downloadReady:
 				"Klikněte na tlačítko níže a stáhněte si PDF. Odkaz je platný jen pár minut.",
 			downloadBtn: "Stáhnout e‑book (PDF)",
-			downloadExpiry: "Odkaz ke stažení brzy vyprší — soubor si uložte hned.",
+			downloadExpiry: "Odkaz ke stažení brzy vyprší  -  soubor si uložte hned.",
 			downloadError:
 				"Při přípravě stažení se něco pokazilo. Zkuste to prosím znovu.",
 			tokenInvalidTitle: "Odkaz vypršel nebo byl již použit",
@@ -881,7 +881,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 				"Máte otázky, návrhy nebo jen chcete pozdravit? Rádi bychom vás slyšeli. Kontaktujte nás na",
 			talksTitle: "Přednášky a prezentace",
 			talksIntro:
-				"Průvodce na webu nestačí — někdy potřebujete slyšet příběh přímo od toho, kdo tam byl. Proto pořádáme živé přednášky o levném cestování, kde sdílíme reálné zážitky, tipy a praktické rady.",
+				"Průvodce na webu nestačí  -  někdy potřebujete slyšet příběh přímo od toho, kdo tam byl. Proto pořádáme živé přednášky o levném cestování, kde sdílíme reálné zážitky, tipy a praktické rady.",
 			talksOffer1: "Přednášky pro školy, univerzity, spolky a kluby",
 			talksOffer2:
 				"Tematické prezentace: levné cestování, gap year, sólové cestování, konkrétní oblasti",
@@ -901,7 +901,7 @@ const translations: Record<SupportedLocale, TranslationMessages> = {
 			talksTopic6: "Ekvádor",
 			talksUpcomingTitle: "Nadcházející přednášky",
 			talksUpcomingEmpty:
-				"Momentálně žádné termíny — sledujte nás na sociálních sítích nebo nás kontaktujte pro domluvení přednášky na vaši akci.",
+				"Momentálně žádné termíny  -  sledujte nás na sociálních sítích nebo nás kontaktujte pro domluvení přednášky na vaši akci.",
 			talksContact: "Chcete nás na svém eventu? Napište nám na",
 		},
 

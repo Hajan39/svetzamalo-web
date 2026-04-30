@@ -33,7 +33,8 @@ export function ArticleHero({
 						src={coverImage.src}
 						alt={coverImage.alt}
 						className="h-full w-full object-cover"
-						loading="lazy"
+						priority
+						sizes="100vw"
 						fallbackLabel={title}
 					/>
 					<div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent" />

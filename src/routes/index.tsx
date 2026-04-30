@@ -51,8 +51,7 @@ function HomePage() {
 		"idle" | "loading" | "success" | "error"
 	>("idle");
 
-	const HERO_IMAGE =
-		"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format&fit=crop";
+	const HERO_IMAGE = "/images/hero/mauritius-home-hero.jpg";
 
 	return (
 		<div className="min-h-screen bg-background">
