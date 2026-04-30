@@ -1,0 +1,40 @@
+---
+import InteractiveChecklist from '@/components/article/InteractiveChecklist.astro';
+import Layout from '@/layouts/Layout.astro';
+import { getContinentLabel } from '@/lib/continentLabels';
+import { fetchArticleBySlug, fetchDestinations } from '@/lib/strapi/api';
+
+export const prerender = false;
+
+const [article, destinations] = await Promise.all([
+  fetchArticleBySlug(Astro.params.slug || '', 'cs'),
+  fetchDestinations('cs'),
+]);
+if (!article) return Astro.redirect('/articles');
+
+const articleDestination = article.destinationId ? destinations.find((destination) => destination.slug === article.destinationId) : undefined;
+const isChecklistArticle = /(^|-)co-sbalit(-|$)|checklist/i.test(article.slug) || /checklist|co sbalit/i.test(article.title);
+const articleHtml = article.htmlContent || '<p>Obsah článku zatím není dostupný.</p>';
+---
+
+<Layout title={article.seo.metaTitle} description={article.seo.metaDescription} canonicalPath={`/articles/${article.slug}`}>
+  <article class="container-narrow py-10 md:py-16">
+    <a href="/articles" class="mb-6 inline-flex text-sm font-semibold">Zpět na články</a>
+    <header class="mb-8">
+      <div class="mb-4 flex flex-wrap gap-2">
+        <span class="inline-flex rounded-full bg-primary-light px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">{(article.articleType || 'guide').replace(/-/g, ' ')}</span>
+        {articleDestination && (
+          <a href={`/destinations/guide/${articleDestination.slug}`} class="inline-flex rounded-full border border-border bg-background-secondary px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-foreground-secondary hover:border-primary/30 hover:text-primary hover:no-underline">
+            {getContinentLabel(articleDestination.continent)} · {articleDestination.name}
+          </a>
+        )}
+      </div>
+      <h1 class="mb-4">{article.title}</h1>
+      {article.intro && <p class="text-lg text-foreground-secondary md:text-xl">{article.intro}</p>}
+    </header>
+    {article.coverImage && <img src={article.coverImage.src} alt={article.coverImage.alt || article.title} class="mb-8 aspect-[16/9] w-full rounded-xl object-cover" />}
+    <div class="brand-card px-6 py-7 sm:px-8 sm:py-8">
+      {isChecklistArticle ? <InteractiveChecklist slug={article.slug} htmlContent={articleHtml} /> : <div class="prose-content" set:html={articleHtml}></div>}
+    </div>
+  </article>
+</Layout>

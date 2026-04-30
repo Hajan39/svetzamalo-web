@@ -1,0 +1,74 @@
+---
+import DestinationCard from '@/components/destination/DestinationCard.astro';
+import Layout from '@/layouts/Layout.astro';
+import { getContinentLabel } from '@/lib/continentLabels';
+import { fetchDestinations } from '@/lib/strapi/api';
+
+export const prerender = true;
+
+const destinations = await fetchDestinations('cs');
+const continents = Array.from(new Set(destinations.map((destination) => destination.continent))).sort((a, b) =>
+  getContinentLabel(a).localeCompare(getContinentLabel(b), 'cs'),
+);
+---
+
+<Layout title="Destinace | Svět za málo" description="Lowcost průvodce destinacemi, zeměmi a místy pro samostatné cestování." canonicalPath="/destinations">
+  <section class="container-wide py-10 md:py-16">
+    <header class="mb-8 max-w-2xl">
+      <h1 class="mb-4">Destinace</h1>
+      <p>Vyber si zemi nebo oblast a začni plánovat cestu podle reálných nákladů.</p>
+    </header>
+    {continents.length > 0 && (
+      <nav class="destination-filter-chips" aria-label="Filtrovat destinace podle kontinentu">
+        <button type="button" class="filter-chip is-active" data-continent-filter="all" aria-pressed="true">Vše</button>
+        {continents.map((continent) => (
+          <button type="button" class="filter-chip" data-continent-filter={continent} aria-pressed="false">
+            {getContinentLabel(continent)}
+          </button>
+        ))}
+      </nav>
+    )}
+    {destinations.length === 0 ? (
+      <div class="brand-card p-8 text-center text-foreground-secondary">Ve Strapi zatím nejsou žádné destinace.</div>
+    ) : (
+      <div class="mb-6 text-sm text-foreground-muted" data-destination-count>
+        Zobrazeno destinací: {destinations.length}
+      </div>
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" data-destination-grid>
+        {destinations.map((destination) => (
+          <div data-continent-card={destination.continent}>
+            <DestinationCard destination={destination} />
+          </div>
+        ))}
+      </div>
+    )}
+  </section>
+
+  <script>
+    const filterButtons = Array.from(document.querySelectorAll('[data-continent-filter]'));
+    const cards = Array.from(document.querySelectorAll('[data-continent-card]'));
+    const count = document.querySelector('[data-destination-count]');
+
+    function setFilter(activeContinent: string) {
+      let visibleCount = 0;
+
+      for (const card of cards) {
+        const isVisible = activeContinent === 'all' || card.getAttribute('data-continent-card') === activeContinent;
+        card.toggleAttribute('hidden', !isVisible);
+        if (isVisible) visibleCount += 1;
+      }
+
+      for (const button of filterButtons) {
+        const isActive = button.getAttribute('data-continent-filter') === activeContinent;
+        button.classList.toggle('is-active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+      }
+
+      if (count) count.textContent = `Zobrazeno destinací: ${visibleCount}`;
+    }
+
+    for (const button of filterButtons) {
+      button.addEventListener('click', () => setFilter(button.getAttribute('data-continent-filter') || 'all'));
+    }
+  </script>
+</Layout>

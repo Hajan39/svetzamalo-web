@@ -1,0 +1,86 @@
+---
+import ArticleCard from '@/components/article/ArticleCard.astro';
+import DestinationLiveInfo from '@/components/destination/DestinationLiveInfo.astro';
+import Layout from '@/layouts/Layout.astro';
+import { getContinentLabel } from '@/lib/continentLabels';
+import { fetchAllArticles, fetchDestinationBySlug, fetchDestinations } from '@/lib/strapi/api';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const destinations = await fetchDestinations('cs');
+  return destinations.map((destination) => ({ params: { slug: destination.slug }, props: { destination } }));
+}
+
+const destination = Astro.props.destination ?? await fetchDestinationBySlug(Astro.params.slug || '', 'cs');
+if (!destination) return Astro.redirect('/destinations');
+const articles = (await fetchAllArticles('cs')).filter((article) => article.destinationId === destination.slug || article.countryName === destination.name);
+const relatedArticles = articles.map((article) => {
+  if (article.coverImage || !destination.heroImage) return article;
+
+  return {
+    ...article,
+    coverImage: {
+      ...destination.heroImage,
+      alt: article.title,
+    },
+  };
+});
+const continentLabel = getContinentLabel(destination.continent);
+
+function splitIntoChapters(html: string | undefined): string[] {
+  const fallback = '<p>Průvodce destinací se připravuje.</p>';
+  const content = html?.trim() || fallback;
+  const headings = Array.from(content.matchAll(/<h2\b[^>]*>[\s\S]*?<\/h2>/gi));
+
+  if (headings.length === 0) return [content];
+
+  const chapters: string[] = [];
+  const firstHeadingIndex = headings[0].index ?? 0;
+
+  if (firstHeadingIndex > 0) {
+    chapters.push(content.slice(0, firstHeadingIndex).trim());
+  }
+
+  headings.forEach((heading, index) => {
+    const start = heading.index ?? 0;
+    const next = headings[index + 1]?.index ?? content.length;
+    const chapter = content.slice(start, next).trim();
+    if (chapter) chapters.push(chapter);
+  });
+
+  return chapters.filter(Boolean);
+}
+
+const chapters = splitIntoChapters(destination.introHtml);
+---
+
+<Layout title={destination.seo.metaTitle} description={destination.seo.metaDescription} canonicalPath={`/destinations/guide/${destination.slug}`}>
+  <section class="container-narrow py-10 md:py-16">
+    <a href="/destinations" class="mb-6 inline-flex text-sm font-semibold">Zpět na destinace</a>
+    <header class="mb-8">
+      <div class="mb-3 flex items-center gap-3">
+        {destination.flagEmoji && <span class="text-3xl">{destination.flagEmoji}</span>}
+        <span class="rounded-full bg-primary-light px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">{continentLabel}</span>
+      </div>
+      <h1 class="mb-4">{destination.name}</h1>
+      <p>{destination.seo.metaDescription}</p>
+    </header>
+    {destination.heroImage && <img src={destination.heroImage.src} alt={destination.heroImage.alt || destination.name} class="mb-8 aspect-[16/9] w-full rounded-xl object-cover" />}
+    <DestinationLiveInfo />
+    <div class="space-y-5 sm:space-y-6">
+      {chapters.map((chapter) => <section class="prose-content brand-card p-6 sm:p-8" set:html={chapter}></section>)}
+    </div>
+  </section>
+
+  <section class="container-wide pb-12 md:pb-16">
+    <h2 class="mb-6">Související články</h2>
+    {relatedArticles.length === 0 ? (
+      <div class="brand-card p-8 text-center text-foreground-secondary">Zatím tu nejsou žádné související články.</div>
+    ) : (
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {relatedArticles.map((article) => <ArticleCard article={article} variant="block" />)}
+      </div>
+    )}
+  </section>
+</Layout>

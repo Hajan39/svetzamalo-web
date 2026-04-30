@@ -1,0 +1,15 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+export const prerender = true;
+---
+
+<Layout title="Stránka nenalezena | Svět za málo" description="Požadovaná stránka nebyla nalezena." canonicalPath="/404">
+  <section class="container-narrow py-16 text-center">
+    <div class="brand-card px-6 py-10 sm:px-8">
+      <h1 class="mb-4">Stránka nenalezena</h1>
+      <p class="mb-6">Vypadá to, že tahle cesta nikam nevede.</p>
+      <a class="btn-primary" href="/">Zpět domů</a>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,35 @@
+---
+import DestinationCard from '@/components/destination/DestinationCard.astro';
+import Layout from '@/layouts/Layout.astro';
+import { getContinentLabel } from '@/lib/continentLabels';
+import { fetchDestinations, fetchDestinationsByContinent } from '@/lib/strapi/api';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const destinations = await fetchDestinations('cs');
+  const continents = Array.from(new Set(destinations.map((destination) => destination.continent)));
+  return continents.map((continent) => ({ params: { continent } }));
+}
+
+const continent = Astro.params.continent || '';
+const destinations = await fetchDestinationsByContinent(continent, 'cs');
+const continentTitle = getContinentLabel(continent);
+---
+
+<Layout title={`${continentTitle} | Destinace | Svět za málo`} description={`Lowcost destinace v oblasti ${continentTitle}.`} canonicalPath={`/destinations/${continent}`}>
+  <section class="container-wide py-10 md:py-16">
+    <a href="/destinations" class="mb-6 inline-flex text-sm font-semibold">Zpět na destinace</a>
+    <header class="mb-8 max-w-2xl">
+      <h1 class="mb-4">{continentTitle}</h1>
+      <p>Průvodce destinacemi podle kontinentu.</p>
+    </header>
+    {destinations.length === 0 ? (
+      <div class="brand-card p-8 text-center text-foreground-secondary">Pro tuto oblast zatím nejsou žádné destinace.</div>
+    ) : (
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {destinations.map((destination) => <DestinationCard destination={destination} />)}
+      </div>
+    )}
+  </section>
+</Layout>

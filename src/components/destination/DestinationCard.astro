@@ -1,0 +1,40 @@
+---
+import type { Destination } from '@/types';
+import { getContinentLabel } from '@/lib/continentLabels';
+
+interface Props {
+  destination: Destination;
+}
+
+const { destination } = Astro.props;
+const cover = destination.heroImage;
+const continentLabel = getContinentLabel(destination.continent);
+---
+
+<a href={`/destinations/guide/${destination.slug}`} class="group block overflow-hidden rounded-lg bg-background hover:no-underline">
+  <div class="relative aspect-[4/3] overflow-hidden bg-background-secondary">
+    {cover ? (
+      <img src={cover.src} alt={cover.alt || destination.name} class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+    ) : (
+      <div class="flex h-full w-full items-center justify-center bg-primary-light text-primary">{destination.name}</div>
+    )}
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+    <div class="absolute inset-0 flex flex-col justify-end p-4">
+      <div class="mb-1 flex items-center gap-2">
+        {destination.flagEmoji && <span class="text-xl">{destination.flagEmoji}</span>}
+        <h3 class="destination-card-title text-lg font-semibold">{destination.name}</h3>
+      </div>
+      <p class="destination-card-meta text-xs">{continentLabel}</p>
+    </div>
+  </div>
+</a>
+
+<style>
+  .destination-card-title {
+    color: #fff;
+  }
+
+  .destination-card-meta {
+    color: rgba(255, 255, 255, 0.78);
+  }
+</style>

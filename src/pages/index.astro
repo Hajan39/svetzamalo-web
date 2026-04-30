@@ -1,0 +1,208 @@
+---
+import ArticleCard from '@/components/article/ArticleCard.astro';
+import DestinationCard from '@/components/destination/DestinationCard.astro';
+import LeadCapture from '@/components/marketing/LeadCapture.astro';
+import Layout from '@/layouts/Layout.astro';
+import { getFreeEbookDescription, getFreeEbookTitle, getPaidBookTitle, isFreeEbookEnabled, isPaidEbookEnabled } from '@/lib/bookConfig';
+import { getContinentLabel } from '@/lib/continentLabels';
+import { fetchArticlesPage, fetchDestinations, fetchLatestArticles, fetchSiteConfig } from '@/lib/strapi/api';
+
+export const prerender = true;
+
+const [articles, articlePage, destinations, siteConfig] = await Promise.all([
+ fetchLatestArticles(9, 'cs'),
+ fetchArticlesPage(1, 'cs'),
+ fetchDestinations('cs'),
+	fetchSiteConfig('cs'),
+]);
+const freeEbookAvailable = isFreeEbookEnabled(siteConfig);
+const paidEbookAvailable = isPaidEbookEnabled(siteConfig);
+const freeEbookTitle = getFreeEbookTitle(siteConfig);
+const freeEbookDescription = getFreeEbookDescription(siteConfig);
+const paidBookTitle = getPaidBookTitle(siteConfig);
+const featuredArticle = articles[0];
+const secondaryArticles = articles.slice(1, 4);
+const latestArticles = articles.slice(4, 9);
+const featuredDestinations = destinations.slice(0, 6);
+const destinationCount = destinations.length;
+const articleCount = articlePage.total || articles.length;
+
+const continentLabels = new Intl.ListFormat('cs-CZ', { style: 'long', type: 'conjunction' }).format(
+	Array.from(new Set(destinations.map((destination) => getContinentLabel(destination.continent))))
+		.slice(0, 3),
+);
+---
+
+<Layout
+	title="Svět za málo - lowcost průvodci, destinace a ebook zdarma"
+	description="Praktické články, destinace a rozpočty pro cestování levněji. Začni průvodcem, vyber destinaci a stáhni si lowcost ebook zdarma."
+>
+	<section class="home-hero">
+		<div class="home-hero-media" aria-hidden="true"></div>
+		<div class="home-hero-overlay"></div>
+		<div class="container-wide home-hero-inner">
+			<div class="home-hero-copy">
+				<p class="section-kicker">Průvodci pro cesty, které dávají smysl</p>
+				<h1>Cestuj víc, utrácej míň</h1>
+				<p>Destinace, itineráře, rozpočty a konkrétní tipy pro cestování bez zbytečného luxusu i bez zbytečných chyb.</p>
+				<div class="hero-actions">
+					<a class="btn-primary" href="/destinations">Vybrat destinaci</a>
+					<a class="btn-secondary" href="/articles">Číst články</a>
+				</div>
+			</div>
+
+			<div class="home-hero-panel" aria-label="Rychlý přehled webu">
+				<div>
+					<span>{destinationCount || '27'}+</span>
+					<p>destinací a zemí</p>
+				</div>
+				<div>
+					<span>{articleCount || '300'}+</span>
+					<p>praktických článků</p>
+				</div>
+				<div>
+					<span>0 Kč</span>
+					<p>{freeEbookTitle}</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="home-intro-band">
+		<div class="container-wide home-intro-grid">
+			<div>
+				<p class="section-kicker">Nejdřív obsah, potom plán</p>
+				<h2>Začni článkem, pokračuj konkrétní destinací</h2>
+				<p>Web je postavený jako praktická knihovna pro plánování. Kniha je doplněk pro ty, kteří chtějí mít postup, checklisty a rozpočtové uvažování pohromadě.</p>
+			</div>
+			<ul class="home-proof-list">
+				<li><strong>Reálné rozhodování</strong><span>kdy šetřit, kdy připlatit a co vynechat.</span></li>
+				<li><strong>Rychlé plánování</strong><span>doprava, ubytování, jídlo, itineráře a sezóna.</span></li>
+				<li><strong>Jemný email follow-up</strong><span>ebook zdarma a nové tipy pro lidi, kteří chtějí víc.</span></li>
+			</ul>
+		</div>
+	</section>
+
+	{featuredArticle && (
+		<section class="container-wide featured-grid-section">
+			<div class="section-heading-row">
+				<div>
+					<p class="section-kicker">Doporučené čtení</p>
+					<h2>Nejnovější praktické průvodce</h2>
+				</div>
+				<a href="/articles" class="text-link">Všechny články</a>
+			</div>
+
+			<div class="featured-content-grid">
+				<a href={`/articles/${featuredArticle.slug}`} class="featured-article">
+					{featuredArticle.coverImage ? (
+						<img src={featuredArticle.coverImage.src} alt={featuredArticle.coverImage.alt || featuredArticle.title} loading="eager" decoding="async" />
+					) : (
+						<div class="featured-article-fallback">{featuredArticle.title}</div>
+					)}
+					<div class="featured-article-copy">
+						<p class="section-kicker">Nový článek</p>
+						<h3>{featuredArticle.title}</h3>
+						<p>{featuredArticle.intro}</p>
+						<span>Číst průvodce</span>
+					</div>
+				</a>
+
+				<div class="side-article-list">
+					{secondaryArticles.map((article) => (
+						<a href={`/articles/${article.slug}`} class="side-article">
+							<span>{article.countryName || article.articleType?.replace(/-/g, ' ') || 'Průvodce'}</span>
+							<strong>{article.title}</strong>
+						</a>
+					))}
+				</div>
+			</div>
+		</section>
+	)}
+
+	{freeEbookAvailable && (
+		<div class="container-wide soft-cta-wrap">
+			<LeadCapture
+				source="home_midpage"
+				kicker="Materiál zdarma"
+				title={`Vezmi si ${freeEbookTitle}`}
+				text={freeEbookDescription}
+				buttonLabel="Chci ebook zdarma"
+			/>
+		</div>
+	)}
+
+	<section class="container-wide destinations-preview-section">
+		<div class="section-heading-row">
+			<div>
+				<p class="section-kicker">Destinace</p>
+				<h2>Kam vyrazit za málo</h2>
+				{continentLabels && <p>Aktuálně pokrýváme hlavně {continentLabels}. Další místa postupně přibývají podle toho, co jde opravdu dobře naplánovat.</p>}
+			</div>
+			<a href="/destinations" class="text-link">Procházet destinace</a>
+		</div>
+
+		{featuredDestinations.length === 0 ? (
+			<div class="empty-state">Destinace se načtou po propojení se Strapi.</div>
+		) : (
+			<div class="destination-preview-grid">
+				{featuredDestinations.map((destination) => <DestinationCard destination={destination} />)}
+			</div>
+		)}
+	</section>
+
+	<section class="content-paths-band">
+		<div class="container-wide content-paths-grid">
+			<div>
+				<p class="section-kicker">Jak web používat</p>
+				<h2>Vyber si podle fáze plánování</h2>
+			</div>
+			<a href="/articles?q=itinerar" class="content-path">
+				<span>01</span>
+				<strong>Chci sestavit trasu</strong>
+				<p>Itineráře, časy přesunů a místa, která dávají smysl spojit dohromady.</p>
+			</a>
+			<a href="/articles?q=low-cost" class="content-path">
+				<span>02</span>
+				<strong>Chci snížit rozpočet</strong>
+				<p>Konkrétní úspory u dopravy, jídla, výletů a ubytování bez zkaženého zážitku.</p>
+			</a>
+			<a href="/articles?q=prakticky" class="content-path">
+				<span>03</span>
+				<strong>Chci praktické jistoty</strong>
+				<p>Víza, doprava na místě, bezpečnost, sezóna a drobnosti, které před odletem řeší každý.</p>
+			</a>
+		</div>
+	</section>
+
+	<section class="container-wide latest-section">
+		<div class="section-heading-row">
+			<div>
+				<p class="section-kicker">Novinky</p>
+				<h2>Čerstvé články z blogu</h2>
+			</div>
+			{paidEbookAvailable ? <a class="btn-secondary" href="/book">{paidBookTitle}</a> : <a class="text-link" href="/articles">Archiv článků</a>}
+		</div>
+
+		{articles.length === 0 ? (
+			<div class="empty-state">Zatím tu nejsou žádné články ze Strapi.</div>
+		) : (
+			<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
+				{(latestArticles.length ? latestArticles : articles).map((article) => <ArticleCard article={article} variant="block" />)}
+			</div>
+		)}
+	</section>
+
+	{freeEbookAvailable && (
+		<div class="container-wide soft-cta-wrap soft-cta-wrap-bottom">
+			<LeadCapture
+				source="home_bottom"
+				compact
+				kicker="Materiál zdarma"
+				title={`Nech si poslat ${freeEbookTitle}`}
+				text={freeEbookDescription}
+				buttonLabel="Poslat checklist"
+			/>
+		</div>
+	)}
+</Layout>

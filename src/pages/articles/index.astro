@@ -1,0 +1,193 @@
+---
+import ArticleCard from '@/components/article/ArticleCard.astro';
+import Layout from '@/layouts/Layout.astro';
+import { getContinentLabel } from '@/lib/continentLabels';
+import { fetchAllArticles, fetchArticlesPage, fetchDestinations } from '@/lib/strapi/api';
+import type { Article, Destination } from '@/types';
+
+export const prerender = false;
+
+const searchQuery = (Astro.url.searchParams.get('q') || '').trim();
+const normalizedSearchQuery = normalizeSearchText(searchQuery);
+const selectedDestination = (Astro.url.searchParams.get('destination') || '').trim();
+const selectedContinent = (Astro.url.searchParams.get('continent') || '').trim();
+const selectedType = (Astro.url.searchParams.get('type') || '').trim();
+const pageParam = Number(Astro.url.searchParams.get('page') || '1');
+const requestedPage = Number.isFinite(pageParam) && pageParam > 0 ? Math.floor(pageParam) : 1;
+const [pageResult, allArticles, destinations] = await Promise.all([
+  fetchArticlesPage(requestedPage, 'cs'),
+  fetchAllArticles('cs'),
+  fetchDestinations('cs'),
+]);
+const destinationBySlug = new Map(destinations.map((destination) => [destination.slug, destination]));
+const activeFilters = Boolean(normalizedSearchQuery || selectedDestination || selectedContinent || selectedType);
+const articles = activeFilters ? allArticles : pageResult.articles;
+const filteredArticles = activeFilters
+  ? articles.filter((article) => articleMatchesFilters(article, {
+      query: normalizedSearchQuery,
+      destination: selectedDestination,
+      continent: selectedContinent,
+      type: selectedType,
+      destinationBySlug,
+    }))
+  : articles;
+const visibleTotal = activeFilters ? filteredArticles.length : pageResult.total;
+const filteredPageCount = Math.max(1, Math.ceil(visibleTotal / 12));
+const pageCount = activeFilters ? filteredPageCount : pageResult.pageCount;
+const currentPage = activeFilters ? Math.min(requestedPage, pageCount) : pageResult.page;
+const visibleArticles = activeFilters
+  ? filteredArticles.slice((currentPage - 1) * 12, currentPage * 12)
+  : filteredArticles;
+const hasPreviousPage = currentPage > 1;
+const hasNextPage = currentPage < pageCount;
+const articleDestinationSlugs = new Set(allArticles.map((article) => article.destinationId).filter(Boolean));
+const destinationOptions = destinations
+  .filter((destination) => articleDestinationSlugs.has(destination.slug))
+  .sort((first, second) => first.name.localeCompare(second.name, 'cs'));
+const continentOptions = Array.from(new Set(destinationOptions.map((destination) => destination.continent)))
+  .sort((first, second) => getContinentLabel(first).localeCompare(getContinentLabel(second), 'cs'));
+const typeOptions = Array.from(new Set(allArticles.map((article) => article.articleType).filter(Boolean)))
+  .sort((first, second) => getArticleTypeLabel(first || '').localeCompare(getArticleTypeLabel(second || ''), 'cs'));
+
+function normalizeSearchText(value: string) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[-_]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function articleMatchesFilters(
+  article: Article,
+  filters: {
+    query: string;
+    destination: string;
+    continent: string;
+    type: string;
+    destinationBySlug: Map<string, Destination>;
+  },
+) {
+  const destination = article.destinationId ? filters.destinationBySlug.get(article.destinationId) : undefined;
+
+  if (filters.destination && article.destinationId !== filters.destination) return false;
+  if (filters.continent && destination?.continent !== filters.continent) return false;
+  if (filters.type && article.articleType !== filters.type) return false;
+  if (!filters.query) return true;
+
+  const searchableText = [
+    article.title,
+    article.intro,
+    article.slug,
+    article.articleType,
+    article.countryName,
+    destination?.name,
+    destination ? getContinentLabel(destination.continent) : undefined,
+    article.seo.metaTitle,
+    article.seo.metaDescription,
+    ...(article.tags || []),
+  ]
+    .filter(Boolean)
+    .join(' ');
+
+  return normalizeSearchText(searchableText).includes(filters.query);
+}
+
+function getArticleTypeLabel(type: string) {
+  return type.replace(/-/g, ' ');
+}
+
+function getArticlesPageHref(page: number) {
+  const params = new URLSearchParams();
+
+  if (searchQuery) params.set('q', searchQuery);
+  if (selectedContinent) params.set('continent', selectedContinent);
+  if (selectedDestination) params.set('destination', selectedDestination);
+  if (selectedType) params.set('type', selectedType);
+  if (page > 1) params.set('page', String(page));
+
+  const query = params.toString();
+  return query ? `/articles?${query}` : '/articles';
+}
+---
+
+<Layout title="Články | Svět za málo" description="Praktické články a cestovatelské průvodce pro lowcost cestování." canonicalPath="/articles">
+  <section class="container-wide py-10 md:py-16">
+    <header class="mb-8 max-w-2xl">
+      <h1 class="mb-4">Články</h1>
+      <p>Průvodce, rozpočty a praktické tipy pro plánování cest.</p>
+    </header>
+    {pageResult.total === 0 ? (
+      <div class="brand-card p-8 text-center text-foreground-secondary">Ve Strapi zatím nejsou žádné články.</div>
+    ) : (
+      <>
+        <form action="/articles" method="get" class="article-filters mb-6">
+          <div class="article-filters-grid">
+            <label class="article-filter-field" for="articles-search">
+              <span>Hledat</span>
+              <input id="articles-search" name="q" class="form-field" type="search" value={searchQuery} placeholder="Destinace, téma nebo rozpočet" />
+            </label>
+
+            <label class="article-filter-field" for="articles-continent">
+              <span>Kontinent</span>
+              <select id="articles-continent" name="continent" class="form-field">
+                <option value="">Všechny kontinenty</option>
+                {continentOptions.map((continent) => (
+                  <option value={continent} selected={selectedContinent === continent}>{getContinentLabel(continent)}</option>
+                ))}
+              </select>
+            </label>
+
+            <label class="article-filter-field" for="articles-destination">
+              <span>Destinace</span>
+              <select id="articles-destination" name="destination" class="form-field">
+                <option value="">Všechny destinace</option>
+                {destinationOptions.map((destination) => (
+                  <option value={destination.slug} selected={selectedDestination === destination.slug}>{destination.name}</option>
+                ))}
+              </select>
+            </label>
+
+            <label class="article-filter-field" for="articles-type">
+              <span>Typ</span>
+              <select id="articles-type" name="type" class="form-field">
+                <option value="">Všechny typy</option>
+                {typeOptions.map((type) => (
+                  <option value={type} selected={selectedType === type}>{getArticleTypeLabel(type || '')}</option>
+                ))}
+              </select>
+            </label>
+          </div>
+
+          <div class="article-filter-actions">
+            <button type="submit" class="btn-primary shrink-0">Filtrovat</button>
+            {activeFilters && <a href="/articles" class="btn-secondary shrink-0 text-center hover:no-underline">Zrušit filtry</a>}
+          </div>
+        </form>
+
+        <p class="mb-6 text-sm text-foreground-muted">
+          {activeFilters ? `Nalezeno článků podle filtrů: ${visibleTotal}` : `Nalezeno článků: ${visibleTotal}`}
+        </p>
+
+        {visibleArticles.length === 0 ? (
+          <div class="brand-card p-8 text-center text-foreground-secondary">Pro tento dotaz jsme nenašli žádné články.</div>
+        ) : (
+          <>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {visibleArticles.map((article) => <ArticleCard article={article} variant="block" />)}
+            </div>
+
+            {pageCount > 1 && (
+              <nav class="pagination" aria-label="Stránkování článků">
+                {hasPreviousPage ? <a class="btn-secondary" href={getArticlesPageHref(currentPage - 1)}>Novější články</a> : <span />}
+                <span>Strana {currentPage} z {pageCount}</span>
+                {hasNextPage ? <a class="btn-secondary" href={getArticlesPageHref(currentPage + 1)}>Starší články</a> : <span />}
+              </nav>
+            )}
+          </>
+        )}
+      </>
+    )}
+  </section>
+</Layout>

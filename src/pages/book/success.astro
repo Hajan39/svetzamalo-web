@@ -1,0 +1,96 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { buildBankTransferDetails } from '@/lib/bankTransfer';
+import { getBookPaymentMessage, getFreeEbookTitle, getPaidBookTitle } from '@/lib/bookConfig';
+import { fetchSiteConfig } from '@/lib/strapi/api';
+
+export const prerender = false;
+
+const siteConfig = await fetchSiteConfig('cs');
+const variableSymbol = Astro.url.searchParams.get('vs') || '';
+const email = Astro.url.searchParams.get('email') || '';
+const leadType = Astro.url.searchParams.get('lead') || '';
+const isLeadSuccess = Boolean(leadType);
+const freeEbookTitle = getFreeEbookTitle(siteConfig);
+const paidBookTitle = getPaidBookTitle(siteConfig);
+const analyticsEnabled = siteConfig?.enableAnalytics === true;
+const analyticsEventName = isLeadSuccess ? 'Free Ebook Lead' : 'Paid Ebook Order';
+const analyticsEventKey = isLeadSuccess ? `lead:${leadType}` : `order:${variableSymbol || 'pending'}`;
+const details = buildBankTransferDetails({
+  accountNumber: siteConfig?.bookBankAccountNumber,
+  bankCode: siteConfig?.bookBankCode,
+  iban: siteConfig?.bookBankIban,
+  bic: siteConfig?.bookBankBic,
+  accountName: siteConfig?.bookBankAccountName,
+  amount: siteConfig?.bookBankAmount || siteConfig?.bookPrice,
+  currency: siteConfig?.bookBankCurrency || 'CZK',
+  message: getBookPaymentMessage(siteConfig),
+  contactEmail: siteConfig?.bookBankContactEmail || siteConfig?.siteEmail,
+}, variableSymbol);
+---
+
+<Layout title="Hotovo | Svět za málo" description="Potvrzení objednávky nebo registrace k ebooku." canonicalPath="/book/success">
+  <section class="container-narrow py-10 md:py-16">
+    <div class="brand-card px-6 py-7 sm:px-8 sm:py-8">
+      {isLeadSuccess ? (
+        <>
+          <h1 class="mb-4">{freeEbookTitle} je na cestě</h1>
+          <p>Děkujeme. Zkontroluj e-mailovou schránku, případně složku hromadné pošty nebo spam.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a class="btn-primary" href="/destinations">Vybrat destinaci</a>
+            <a class="btn-secondary" href="/articles">Číst články</a>
+          </div>
+        </>
+      ) : (
+        <>
+          <h1 class="mb-4">Objednávka přijata</h1>
+          <p class="mb-2 text-foreground-secondary">Produkt: <strong class="text-foreground">{paidBookTitle}</strong></p>
+          {email ? <p>Instrukce k objednávce pro <strong>{email}</strong> jsou níže.</p> : <p>Děkujeme. Instrukce k objednávce jsou níže.</p>}
+        </>
+      )}
+      {!isLeadSuccess && details ? (
+        <div class="mt-8 grid gap-4 text-sm text-foreground-secondary sm:grid-cols-2">
+          <div><strong class="block text-foreground">Částka</strong>{details.amount} {details.currency}</div>
+          <div><strong class="block text-foreground">Variabilní symbol</strong>{details.variableSymbol}</div>
+          {details.accountDisplay && <div><strong class="block text-foreground">Účet</strong>{details.accountDisplay}</div>}
+          {details.iban && <div><strong class="block text-foreground">IBAN</strong>{details.iban}</div>}
+          {details.message && <div class="sm:col-span-2"><strong class="block text-foreground">Zpráva</strong>{details.message}</div>}
+        </div>
+      ) : !isLeadSuccess ? (
+        <p class="mt-6 text-warning">Bankovní údaje zatím nejsou kompletně nastavené ve Strapi site configu.</p>
+      ) : null}
+      {!isLeadSuccess && <a class="btn-primary mt-8" href="/">Zpět na web</a>}
+    </div>
+  </section>
+  {analyticsEnabled && (
+    <div
+      hidden
+      data-analytics-conversion
+      data-event-name={analyticsEventName}
+      data-event-key={analyticsEventKey}
+      data-lead-type={isLeadSuccess ? leadType : undefined}
+      data-payment-method={isLeadSuccess ? undefined : 'bank_transfer'}
+    ></div>
+  )}
+  {analyticsEnabled && (
+    <script>
+      import { track } from '@vercel/analytics';
+
+      const conversion = document.querySelector<HTMLElement>('[data-analytics-conversion]');
+
+      if (conversion?.dataset.eventName && conversion.dataset.eventKey) {
+        const storageKey = `analytics:${conversion.dataset.eventKey}`;
+
+        if (!window.sessionStorage.getItem(storageKey)) {
+          const properties: Record<string, string> = {};
+
+          if (conversion.dataset.leadType) properties.leadType = conversion.dataset.leadType;
+          if (conversion.dataset.paymentMethod) properties.paymentMethod = conversion.dataset.paymentMethod;
+
+          track(conversion.dataset.eventName, properties);
+          window.sessionStorage.setItem(storageKey, '1');
+        }
+      }
+    </script>
+  )}
+</Layout>

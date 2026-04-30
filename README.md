@@ -1,377 +1,50 @@
-Welcome to your new TanStack app! 
+# Svet za malo Astro frontend
 
-# Getting Started
+Production Astro replacement for the original `svetzamalo-web` frontend. Content, book settings, feature flags and contact email are managed in Strapi.
 
-To run this application:
+## Stack
 
-```bash
+- Astro 6 with the Vercel adapter
+- Tailwind CSS via `@tailwindcss/vite`
+- Strapi 5 REST API
+- Vercel Web Analytics and Speed Insights, enabled from Strapi `site-config.enableAnalytics`
+
+## Local setup
+
+```sh
 npm install
+cp .env.example .env
 npm run dev
 ```
 
-# Building For Production
+Required local env:
 
-To build this application for production:
+- `STRAPI_URL` - Strapi API base URL, usually `http://localhost:1337`
+- `SITE_URL` / `PUBLIC_SITE_URL` - public frontend URL used for canonical URLs and sitemap generation
+- `STRAPI_API_TOKEN` - optional, only if public endpoints are protected
 
-```bash
+## Production env on Vercel
+
+Set these before deploying `main`:
+
+```sh
+SITE_URL=https://svetzamalo.cz
+PUBLIC_SITE_URL=https://svetzamalo.cz
+STRAPI_URL=https://<production-strapi-host>
+STRAPI_API_TOKEN=<optional-token>
+```
+
+Also enable Vercel Web Analytics and Speed Insights in the Vercel project. Tracking scripts are rendered only when `enableAnalytics` is enabled in Strapi Site Config.
+
+## Checks
+
+```sh
+npm run check
 npm run build
 ```
 
-## Testing
+After local Vercel builds, `.vercel/output` is generated temporarily and ignored by git.
 
-This project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
+## Release note
 
-```bash
-npm run test
-```
-
-## Styling
-
-This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
-
-
-## Linting & Formatting
-
-This project uses [Biome](https://biomejs.dev/) for linting and formatting. The following scripts are available:
-
-
-```bash
-npm run lint
-npm run format
-npm run check
-```
-
-
-## Shadcn
-
-Add components using the latest version of [Shadcn](https://ui.shadcn.com/).
-
-```bash
-pnpm dlx shadcn@latest add button
-```
-
-
-
-## Routing
-This project uses [TanStack Router](https://tanstack.com/router). The initial setup is a file based router. Which means that the routes are managed as files in `src/routes`.
-
-### Adding A Route
-
-To add a new route to your application just add another a new file in the `./src/routes` directory.
-
-TanStack will automatically generate the content of the route file for you.
-
-Now that you have two routes you can use a `Link` component to navigate between them.
-
-### Adding Links
-
-To use SPA (Single Page Application) navigation you will need to import the `Link` component from `@tanstack/react-router`.
-
-```tsx
-import { Link } from "@tanstack/react-router";
-```
-
-Then anywhere in your JSX you can use it like so:
-
-```tsx
-<Link to="/about">About</Link>
-```
-
-This will create a link that will navigate to the `/about` route.
-
-More information on the `Link` component can be found in the [Link documentation](https://tanstack.com/router/v1/docs/framework/react/api/router/linkComponent).
-
-### Using A Layout
-
-In the File Based Routing setup the layout is located in `src/routes/__root.tsx`. Anything you add to the root route will appear in all the routes. The route content will appear in the JSX where you use the `<Outlet />` component.
-
-Here is an example layout that includes a header:
-
-```tsx
-import { Outlet, createRootRoute } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
-
-import { Link } from "@tanstack/react-router";
-
-export const Route = createRootRoute({
-  component: () => (
-    <>
-      <header>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-        </nav>
-      </header>
-      <Outlet />
-      <TanStackRouterDevtools />
-    </>
-  ),
-})
-```
-
-The `<TanStackRouterDevtools />` component is not required so you can remove it if you don't want it in your layout.
-
-More information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
-
-
-## Data Fetching
-
-There are multiple ways to fetch data in your application. You can use TanStack Query to fetch data from a server. But you can also use the `loader` functionality built into TanStack Router to load the data for a route before it's rendered.
-
-For example:
-
-```tsx
-const peopleRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/people",
-  loader: async () => {
-    const response = await fetch("https://swapi.dev/api/people");
-    return response.json() as Promise<{
-      results: {
-        name: string;
-      }[];
-    }>;
-  },
-  component: () => {
-    const data = peopleRoute.useLoaderData();
-    return (
-      <ul>
-        {data.results.map((person) => (
-          <li key={person.name}>{person.name}</li>
-        ))}
-      </ul>
-    );
-  },
-});
-```
-
-Loaders simplify your data fetching logic dramatically. Check out more information in the [Loader documentation](https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#loader-parameters).
-
-### React-Query
-
-React-Query is an excellent addition or alternative to route loading and integrating it into you application is a breeze.
-
-First add your dependencies:
-
-```bash
-npm install @tanstack/react-query @tanstack/react-query-devtools
-```
-
-Next we'll need to create a query client and provider. We recommend putting those in `main.tsx`.
-
-```tsx
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-// ...
-
-const queryClient = new QueryClient();
-
-// ...
-
-if (!rootElement.innerHTML) {
-  const root = ReactDOM.createRoot(rootElement);
-
-  root.render(
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-    </QueryClientProvider>
-  );
-}
-```
-
-You can also add TanStack Query Devtools to the root route (optional).
-
-```tsx
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-
-const rootRoute = createRootRoute({
-  component: () => (
-    <>
-      <Outlet />
-      <ReactQueryDevtools buttonPosition="top-right" />
-      <TanStackRouterDevtools />
-    </>
-  ),
-});
-```
-
-Now you can use `useQuery` to fetch your data.
-
-```tsx
-import { useQuery } from "@tanstack/react-query";
-
-import "./App.css";
-
-function App() {
-  const { data } = useQuery({
-    queryKey: ["people"],
-    queryFn: () =>
-      fetch("https://swapi.dev/api/people")
-        .then((res) => res.json())
-        .then((data) => data.results as { name: string }[]),
-    initialData: [],
-  });
-
-  return (
-    <div>
-      <ul>
-        {data.map((person) => (
-          <li key={person.name}>{person.name}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-export default App;
-```
-
-You can find out everything you need to know on how to use React-Query in the [React-Query documentation](https://tanstack.com/query/latest/docs/framework/react/overview).
-
-## State Management
-
-Another common requirement for React applications is state management. There are many options for state management in React. TanStack Store provides a great starting point for your project.
-
-First you need to add TanStack Store as a dependency:
-
-```bash
-npm install @tanstack/store
-```
-
-Now let's create a simple counter in the `src/App.tsx` file as a demonstration.
-
-```tsx
-import { useStore } from "@tanstack/react-store";
-import { Store } from "@tanstack/store";
-import "./App.css";
-
-const countStore = new Store(0);
-
-function App() {
-  const count = useStore(countStore);
-  return (
-    <div>
-      <button onClick={() => countStore.setState((n) => n + 1)}>
-        Increment - {count}
-      </button>
-    </div>
-  );
-}
-
-export default App;
-```
-
-One of the many nice features of TanStack Store is the ability to derive state from other state. That derived state will update when the base state updates.
-
-Let's check this out by doubling the count using derived state.
-
-```tsx
-import { useStore } from "@tanstack/react-store";
-import { Store, Derived } from "@tanstack/store";
-import "./App.css";
-
-const countStore = new Store(0);
-
-const doubledStore = new Derived({
-  fn: () => countStore.state * 2,
-  deps: [countStore],
-});
-doubledStore.mount();
-
-function App() {
-  const count = useStore(countStore);
-  const doubledCount = useStore(doubledStore);
-
-  return (
-    <div>
-      <button onClick={() => countStore.setState((n) => n + 1)}>
-        Increment - {count}
-      </button>
-      <div>Doubled - {doubledCount}</div>
-    </div>
-  );
-}
-
-export default App;
-```
-
-We use the `Derived` class to create a new store that is derived from another store. The `Derived` class has a `mount` method that will start the derived store updating.
-
-Once we've created the derived store we can use it in the `App` component just like we would any other store using the `useStore` hook.
-
-You can find out everything you need to know on how to use TanStack Store in the [TanStack Store documentation](https://tanstack.com/store/latest).
-
-# Deployment
-
-## Vercel Deployment
-
-This application is configured for deployment on Vercel. Follow these steps:
-
-### 1. Environment Variables
-
-Copy `env.example` to `.env.local` and fill in your actual values:
-
-```bash
-cp env.example .env.local
-```
-
-Required environment variables for production:
-- `VITE_SITE_URL` - Your production domain
-- `VITE_GA_TRACKING_ID` - Google Analytics tracking ID (optional)
-- `VITE_ADSENSE_CLIENT_ID` - AdSense client ID (optional)
-
-### 2. Deploy to Vercel
-
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Vercel will automatically detect the configuration and deploy
-
-### 3. Build Settings
-
-Vercel will use these settings automatically from `vercel.json`:
-- **Framework**: Custom (Vite)
-- **Build Command**: `npm run build`
-- **Output Directory**: `.output`
-- **Install Command**: `npm install`
-
-### 4. Domain Configuration
-
-Update your environment variables with the actual Vercel domain:
-```
-VITE_SITE_URL=https://your-app.vercel.app
-```
-
-### 5. Custom Domain (Optional)
-
-To use a custom domain:
-1. Add your domain in Vercel dashboard
-2. Update DNS records as instructed
-3. Update `VITE_SITE_URL` with your custom domain
-
-## Environment Variables Reference
-
-| Variable | Description | Required | Default |
-|----------|-------------|----------|---------|
-| `VITE_SITE_URL` | Production domain URL | Yes | - |
-| `VITE_ENABLE_ANALYTICS` | Enable/disable analytics | No | `true` |
-| `VITE_ANALYTICS_PROVIDER` | Analytics provider | No | `google-analytics` |
-| `VITE_GA_TRACKING_ID` | Google Analytics ID | No | - |
-| `VITE_ENABLE_ADS` | Enable/disable ads | No | `true` |
-| `VITE_AD_PROVIDER` | Ad provider | No | `adsense` |
-| `VITE_ADSENSE_CLIENT_ID` | AdSense client ID | No | - |
-
-## Performance Monitoring
-
-The app includes:
-- Core Web Vitals tracking
-- Bundle analysis scripts
-- Service worker for caching
-- Optimized images and fonts
-
-# Demo files
-
-Files prefixed with `demo` can be safely deleted. They are there to provide a starting point for you to play around with the features you've installed.
-
-# Learn More
-
-You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
+This app is intended to replace the original frontend in `github.com/Hajan39/svetzamalo-web`. Keep the original code in a branch such as `old`, then deploy this Astro code from `main`.

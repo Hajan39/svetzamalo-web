@@ -1,0 +1,31 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+const token = Astro.url.searchParams.get('token') || '';
+const strapiUrl = (import.meta.env.STRAPI_URL || import.meta.env.PUBLIC_STRAPI_URL || 'http://localhost:1337').replace(/\/$/, '');
+const downloadUrl = token ? `${strapiUrl}/api/ebook/download?token=${encodeURIComponent(token)}` : '';
+---
+
+<Layout title="Stažení ebooku | Svět za málo" description="Stažení ebooku přes jednorázový token." canonicalPath="/ebook/download">
+  <section class="container-narrow py-10 md:py-16">
+    <div class="brand-card px-6 py-7 sm:px-8 sm:py-8">
+      <h1 class="mb-4">Stažení ebooku</h1>
+      {token ? (
+        <>
+          <p class="mb-6">Kliknutím pokračuj na zabezpečené stažení ebooku. Odkaz může být časově omezený.</p>
+          <a class="btn-primary" href={downloadUrl}>Stáhnout ebook</a>
+        </>
+      ) : (
+        <>
+          <p class="mb-6">Chybí token pro stažení. Nech si poslat nový odkaz na email.</p>
+          <form class="flex flex-col gap-3 sm:flex-row" method="post" action="/api/leads">
+            <input type="hidden" name="leadType" value="ebook" />
+            <input type="hidden" name="source" value="ebook-download" />
+            <input class="form-field" type="email" name="email" placeholder="Tvůj email" required />
+            <button class="btn-primary" type="submit">Poslat nový odkaz</button>
+          </form>
+        </>
+      )}
+    </div>
+  </section>
+</Layout>

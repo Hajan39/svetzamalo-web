@@ -1,0 +1,39 @@
+---
+interface Props {
+  kicker?: string;
+  title?: string;
+  text?: string;
+  source: string;
+  leadType?: 'ebook' | 'newsletter' | 'book_notify';
+  buttonLabel?: string;
+  note?: string;
+  compact?: boolean;
+}
+
+const {
+  kicker = 'Ebook zdarma',
+  title = 'Chceš lowcost tipy do emailu?',
+  text = 'Pošleme ti praktický startovní balíček a občasné tipy k novým destinacím. Bez spamu.',
+  source,
+  leadType = 'ebook',
+  buttonLabel = 'Poslat zdarma',
+  note = 'Odhlášení kdykoliv. Začínáme praktickými tipy, ne prodejním tlakem.',
+  compact = false,
+} = Astro.props;
+---
+
+<section class:list={['lead-capture', compact ? 'lead-capture-compact' : '']}>
+  <div>
+    <p class="lead-kicker">{kicker}</p>
+    <h2>{title}</h2>
+    <p>{text}</p>
+  </div>
+  <form method="post" action="/api/leads" class="lead-form">
+    <input type="hidden" name="leadType" value={leadType} />
+    <input type="hidden" name="source" value={source} />
+    <label class="sr-only" for={`lead-email-${source}`}>Email</label>
+    <input id={`lead-email-${source}`} class="form-field" type="email" name="email" placeholder="Tvůj email" autocomplete="email" required />
+    <button class="btn-primary" type="submit">{buttonLabel}</button>
+    <span class="lead-note">{note}</span>
+  </form>
+</section>

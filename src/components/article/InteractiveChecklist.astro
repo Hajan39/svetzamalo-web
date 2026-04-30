@@ -1,0 +1,115 @@
+---
+interface Props {
+  slug: string;
+  htmlContent: string;
+}
+
+const { slug, htmlContent } = Astro.props;
+let itemIndex = 0;
+
+function escapeAttr(value: string) {
+  return value.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+}
+
+function stripHtml(value: string) {
+  return value.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function toItemKey(value: string) {
+  let hash = 0;
+
+  for (let index = 0; index < value.length; index += 1) {
+    hash = (hash << 5) - hash + value.charCodeAt(index);
+    hash |= 0;
+  }
+
+  return Math.abs(hash).toString(36);
+}
+
+function renderChecklistItems(itemsHtml: string) {
+  const items = [...itemsHtml.matchAll(/<li>([\s\S]*?)<\/li>/g)]
+    .map((match) => match[1].trim())
+    .filter(Boolean);
+
+  if (!items.length) return '';
+
+  return `<div class="interactive-checklist-list">${items
+    .map((itemHtml) => {
+      const label = stripHtml(itemHtml);
+      const itemKey = `${itemIndex}-${toItemKey(label)}`;
+      itemIndex += 1;
+
+      return `<label class="interactive-checklist-item" data-checklist-item="${escapeAttr(itemKey)}">
+        <input type="checkbox" value="${escapeAttr(itemKey)}" aria-label="${escapeAttr(label)}" />
+        <span>${itemHtml}</span>
+      </label>`;
+    })
+    .join('')}</div>`;
+}
+
+const checklistHtml = htmlContent.replace(/<(ul|ol)>([\s\S]*?)<\/\1>/g, (_match, _tag, listHtml: string) => renderChecklistItems(listHtml));
+---
+
+<section class="interactive-checklist" data-checklist-root data-checklist-key={`article-checklist:${slug}`}>
+  <div class="interactive-checklist-toolbar" aria-live="polite">
+    <div>
+      <span class="interactive-checklist-kicker">Checklist</span>
+      <strong data-checklist-progress>0 z 0 hotovo</strong>
+    </div>
+    <button class="btn-secondary" type="button" data-checklist-reset>Resetovat</button>
+  </div>
+  <div class="prose-content" set:html={checklistHtml}></div>
+</section>
+
+<script>
+  const roots = document.querySelectorAll<HTMLElement>('[data-checklist-root]');
+
+  roots.forEach((root) => {
+    const storageKey = root.dataset.checklistKey;
+    const inputs = Array.from(root.querySelectorAll<HTMLInputElement>('input[type="checkbox"]'));
+    const progress = root.querySelector<HTMLElement>('[data-checklist-progress]');
+    const resetButton = root.querySelector<HTMLButtonElement>('[data-checklist-reset]');
+
+    if (!storageKey || !inputs.length || !progress) return;
+
+    const readSavedItems = () => {
+      try {
+        const value = window.localStorage.getItem(storageKey);
+        return new Set<string>(value ? JSON.parse(value) : []);
+      } catch {
+        return new Set<string>();
+      }
+    };
+
+    const writeSavedItems = () => {
+      const checkedValues = inputs.filter((input) => input.checked).map((input) => input.value);
+      window.localStorage.setItem(storageKey, JSON.stringify(checkedValues));
+    };
+
+    const updateProgress = () => {
+      const checkedCount = inputs.filter((input) => input.checked).length;
+      progress.textContent = `${checkedCount} z ${inputs.length} hotovo`;
+      root.style.setProperty('--checklist-progress', `${Math.round((checkedCount / inputs.length) * 100)}%`);
+    };
+
+    const savedItems = readSavedItems();
+
+    inputs.forEach((input) => {
+      input.checked = savedItems.has(input.value);
+      input.addEventListener('change', () => {
+        writeSavedItems();
+        updateProgress();
+      });
+    });
+
+    resetButton?.addEventListener('click', () => {
+      inputs.forEach((input) => {
+        input.checked = false;
+      });
+      window.localStorage.removeItem(storageKey);
+      updateProgress();
+    });
+
+    updateProgress();
+  });
+</script>
