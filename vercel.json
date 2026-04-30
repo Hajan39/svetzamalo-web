@@ -1,55 +1,185 @@
 {
-  "regions": ["fra1"],
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "regions": [
+    "fra1"
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
       ]
     },
     {
       "source": "/api/:path*",
       "headers": [
-        { "key": "Cache-Control", "value": "no-store" }
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
       ]
     },
     {
       "source": "/sitemap-index.xml",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400"
+        }
       ]
     }
   ],
   "redirects": [
-    { "source": "/home", "destination": "/", "permanent": true },
-    { "source": "/sitemap.xml", "destination": "/sitemap-index.xml", "permanent": true },
-    { "source": "/andorra", "destination": "/destinations/guide/andorra-cs", "permanent": true },
-    { "source": "/francie", "destination": "/destinations/guide/francie-cs", "permanent": true },
-    { "source": "/pariz", "destination": "/destinations/guide/francie-cs", "permanent": true },
-    { "source": "/bali-cs", "destination": "/destinations/guide/indonesie-cs", "permanent": true },
-    { "source": "/gili-cs", "destination": "/destinations/guide/indonesie-cs", "permanent": true },
-    { "source": "/lombok-cs", "destination": "/destinations/guide/indonesie-cs", "permanent": true },
-    { "source": "/nusa-penida-cs", "destination": "/destinations/guide/indonesie-cs", "permanent": true },
-    { "source": "/italie-sever", "destination": "/destinations/guide/italie-cs", "permanent": true },
-    { "source": "/rim", "destination": "/destinations/guide/italie-cs", "permanent": true },
-    { "source": "/lucemburk", "destination": "/destinations/guide/lucemburk-cs", "permanent": true },
-    { "source": "/malajsie", "destination": "/destinations/guide/malajsie-cs", "permanent": true },
-    { "source": "/mauricius", "destination": "/destinations/guide/mauricius-cs", "permanent": true },
-    { "source": "/monaco", "destination": "/destinations/guide/monaco-cs", "permanent": true },
-    { "source": "/berlin", "destination": "/destinations/guide/nemecko-cs", "permanent": true },
-    { "source": "/oslo", "destination": "/destinations/guide/norsko-cs", "permanent": true },
-    { "source": "/san-marino", "destination": "/destinations/guide/san-marino-cs", "permanent": true },
-    { "source": "/singapur", "destination": "/destinations/guide/singapur-cs", "permanent": true },
-    { "source": "/slovinsko", "destination": "/destinations/guide/slovinsko-cs", "permanent": true },
-    { "source": "/spanelsko-fuerteventura", "destination": "/destinations/guide/spanelsko-cs", "permanent": true },
-    { "source": "/spanelsko-gran-canaria", "destination": "/destinations/guide/spanelsko-cs", "permanent": true },
-    { "source": "/stockholm", "destination": "/destinations/guide/svedsko-cs", "permanent": true },
-    { "source": "/svycarsko", "destination": "/destinations/guide/svycarsko-cs", "permanent": true },
-    { "source": "/jizni-thajsko", "destination": "/destinations/guide/thajsko-cs", "permanent": true },
-    { "source": "/vatikan", "destination": "/destinations/guide/vatikan-cs", "permanent": true },
-    { "source": "/vietnam-cs", "destination": "/destinations/guide/vietnam-cs", "permanent": true }
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap-index.xml",
+      "permanent": true
+    },
+    {
+      "source": "/andorra",
+      "destination": "/destinations/guide/andorra-cs",
+      "permanent": true
+    },
+    {
+      "source": "/francie",
+      "destination": "/destinations/guide/francie-cs",
+      "permanent": true
+    },
+    {
+      "source": "/pariz",
+      "destination": "/destinations/guide/francie-cs",
+      "permanent": true
+    },
+    {
+      "source": "/bali-cs",
+      "destination": "/destinations/guide/indonesie-cs",
+      "permanent": true
+    },
+    {
+      "source": "/gili-cs",
+      "destination": "/destinations/guide/indonesie-cs",
+      "permanent": true
+    },
+    {
+      "source": "/lombok-cs",
+      "destination": "/destinations/guide/indonesie-cs",
+      "permanent": true
+    },
+    {
+      "source": "/nusa-penida-cs",
+      "destination": "/destinations/guide/indonesie-cs",
+      "permanent": true
+    },
+    {
+      "source": "/italie-sever",
+      "destination": "/destinations/guide/italie-cs",
+      "permanent": true
+    },
+    {
+      "source": "/rim",
+      "destination": "/destinations/guide/italie-cs",
+      "permanent": true
+    },
+    {
+      "source": "/lucemburk",
+      "destination": "/destinations/guide/lucemburk-cs",
+      "permanent": true
+    },
+    {
+      "source": "/malajsie",
+      "destination": "/destinations/guide/malajsie-cs",
+      "permanent": true
+    },
+    {
+      "source": "/mauricius",
+      "destination": "/destinations/guide/mauricius-cs",
+      "permanent": true
+    },
+    {
+      "source": "/monaco",
+      "destination": "/destinations/guide/monaco-cs",
+      "permanent": true
+    },
+    {
+      "source": "/berlin",
+      "destination": "/destinations/guide/nemecko-cs",
+      "permanent": true
+    },
+    {
+      "source": "/oslo",
+      "destination": "/destinations/guide/norsko-cs",
+      "permanent": true
+    },
+    {
+      "source": "/san-marino",
+      "destination": "/destinations/guide/san-marino-cs",
+      "permanent": true
+    },
+    {
+      "source": "/singapur",
+      "destination": "/destinations/guide/singapur-cs",
+      "permanent": true
+    },
+    {
+      "source": "/slovinsko",
+      "destination": "/destinations/guide/slovinsko-cs",
+      "permanent": true
+    },
+    {
+      "source": "/spanelsko-fuerteventura",
+      "destination": "/destinations/guide/spanelsko-cs",
+      "permanent": true
+    },
+    {
+      "source": "/spanelsko-gran-canaria",
+      "destination": "/destinations/guide/spanelsko-cs",
+      "permanent": true
+    },
+    {
+      "source": "/stockholm",
+      "destination": "/destinations/guide/svedsko-cs",
+      "permanent": true
+    },
+    {
+      "source": "/svycarsko",
+      "destination": "/destinations/guide/svycarsko-cs",
+      "permanent": true
+    },
+    {
+      "source": "/jizni-thajsko",
+      "destination": "/destinations/guide/thajsko-cs",
+      "permanent": true
+    },
+    {
+      "source": "/vatikan",
+      "destination": "/destinations/guide/vatikan-cs",
+      "permanent": true
+    },
+    {
+      "source": "/vietnam-cs",
+      "destination": "/destinations/guide/vietnam-cs",
+      "permanent": true
+    }
   ]
 }
