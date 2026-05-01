@@ -46,6 +46,9 @@ interface StrapiDestination extends StrapiEntity {
 	currencyCode?: string;
 	currencyName?: string;
 	currencySymbol?: string;
+	electricityPlug?: string;
+	drivingSide?: string;
+	trafficSide?: string;
 	budgetPerDayBudget?: number | null;
 	budgetPerDayMidRange?: number | null;
 	budgetPerDayLuxury?: number | null;
@@ -211,6 +214,8 @@ function transformDestination(
 		timezone: destination.timezone,
 		visaInfo: destination.visaInfo,
 		bestTimeToVisit: destination.bestTimeToVisit,
+		electricityPlug: destination.electricityPlug,
+		drivingSide: destination.drivingSide || destination.trafficSide,
 		heroImage: image
 			? { ...image, alt: image.alt || destination.name }
 			: undefined,

@@ -1,16 +1,29 @@
 ---
 /**
- * Live destination info strip — always rendered, client-side JS scans the
- * page text for currency code, timezone (UTC±H), driving side and socket type badges.
+ * Live destination info strip — always rendered, client-side JS reads structured
+ * destination quick facts from data attributes (currency, timezone, driving side, sockets).
  *  - Exchange rate to the user's preferred header currency (Frankfurter, no auth)
  *  - Current local time (Intl.DateTimeFormat, IANA or UTC±H)
  *  - Electric socket type badges with hover SVG tooltip
  */
+
+interface Props {
+  currencyCode?: string;
+  timezone?: string;
+  drivingSide?: string;
+  electricityPlug?: string;
+}
+
+const { currencyCode, timezone, drivingSide, electricityPlug } = Astro.props as Props;
 ---
 
 <!-- Always mount the bar; JS will show/hide items after DOM scan -->
 <div
   id="dest-live"
+  data-currency-code={currencyCode || ''}
+  data-timezone={timezone || ''}
+  data-driving-side={drivingSide || ''}
+  data-electricity-plug={electricityPlug || ''}
   class="mb-5 hidden flex-wrap items-center gap-x-5 gap-y-2.5 rounded-xl border border-border bg-background-secondary px-5 py-3.5 text-sm sm:mb-6"
 >
   <!-- Currency -->
@@ -20,7 +33,7 @@
       <path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"/>
       <path d="M12 18V6"/>
     </svg>
-    <span class="text-foreground-secondary">1&nbsp;<strong id="live-currency-code" class="font-semibold text-foreground"></strong></span>
+    <span class="text-foreground-secondary"><strong id="live-currency-amount" class="font-semibold text-foreground">1</strong>&nbsp;<strong id="live-currency-code" class="font-semibold text-foreground"></strong></span>
     <span id="live-exrate" class="font-semibold tabular-nums text-primary" aria-live="polite">…</span>
   </div>
 
@@ -91,56 +104,28 @@
     N: { label: 'Typ N — Brazílie (2 kulaté + kulatý zem.)', svgInner: BASE + `<circle cx="20" cy="32" r="6.5" fill="#374151"/><circle cx="40" cy="32" r="6.5" fill="#374151"/><circle cx="30" cy="54" r="5.5" fill="#374151"/>` },
   };
 
-  /* ── Collect all visible text from chapter cards ────── */
-  const allNodes = Array.from(
-    document.querySelectorAll<HTMLElement>('main .prose-content p, main .prose-content li')
-  );
-  const pageText = allNodes.map(n => n.textContent ?? '').join('\n');
+  const bar = document.getElementById('dest-live') as HTMLElement | null;
+  if (!bar) return;
 
-  /* ── Extract currency code ─────────────────────────── */
-  // Looks for patterns like "Měna: Americký dolar (USD)" or "Měna: USD"
-  const currencyMatch =
-    pageText.match(/[Mm]ěna\s*:\s*[^(\n]+\(([A-Z]{3})\)/) ??
-    pageText.match(/[Mm]ěna\s*:\s*([A-Z]{3})\b/);
-  const currencyCode = currencyMatch?.[1] ?? null;
-
-  /* ── Extract timezone ──────────────────────────────── */
-  // "Časové pásmo: UTC-4 (bez letního času)" or "UTC+5:30"
-  const tzMatch = pageText.match(/[Čč]asov[eé]\s+p[aá]smo\s*:[^\n]*(UTC[+-]\d{1,2}(?::\d{2})?)/i);
-  const timezoneRaw = tzMatch?.[1] ?? null;
-
-  /* ── Extract socket types ──────────────────────────── */
-  const socketRaw = pageText.match(/[Ee]lektrick[eé]\s+z[aá]suvk[ay]\s*:[^\n]*/i)?.[0] ?? '';
-  const rawSocketTags = socketRaw.match(/[Tt]yp[u]?\s+([A-N](?:\/[A-N])*)/g) ?? [];
-  const socketTypes = [...new Set(
-    rawSocketTags.flatMap(m => m.replace(/^[Tt]yp[u]?\s+/, '').split('/'))
-  )].filter(t => t in SOCKETS);
-
-  /* ── Extract driving side ─────────────────────────── */
-  const drivingMatch =
-    pageText.match(/jezd[ií]\s+se\s+(vlevo|vpravo)/i) ??
-    pageText.match(/j[ií]zda\s+(vlevo|vpravo)/i) ??
-    pageText.match(/doprava\s+je\s+(?:veden[aá]\s+)?(?:po\s+)?(lev[eé]|prav[eé])\s+stran[eě]/i) ??
-    pageText.match(/(levostrann[yý]|pravostrann[yý])\s+provoz/i);
-  const drivingRaw = drivingMatch?.[1]?.toLowerCase() ?? null;
-  const drivingSide = drivingRaw
-    ? drivingRaw.startsWith('lev') || drivingRaw.startsWith('vle') || drivingRaw.includes('levostrann') ? 'vlevo' : 'vpravo'
-    : null;
+  const currencyCode = normalizeCurrencyCode(bar.dataset.currencyCode);
+  const timezoneRaw = bar.dataset.timezone?.trim() || null;
+  const drivingSide = normalizeDrivingSide(bar.dataset.drivingSide);
+  const socketTypes = parseSocketTypes(bar.dataset.electricityPlug);
 
   const hasAnything = currencyCode || timezoneRaw || drivingSide || socketTypes.length > 0;
   if (!hasAnything) return;
 
-  const bar = document.getElementById('dest-live');
-  if (!bar) return;
   bar.style.display = 'flex';
   bar.classList.remove('hidden');
 
   /* ── 1. Exchange rate ──────────────────────────────── */
   if (currencyCode) {
     const wrap    = document.getElementById('live-currency-wrap');
+    const amountEl = document.getElementById('live-currency-amount');
     const codeEl  = document.getElementById('live-currency-code');
     const rateEl  = document.getElementById('live-exrate');
     if (wrap) { wrap.style.display = 'flex'; wrap.classList.remove('hidden'); }
+    if (amountEl) amountEl.textContent = '1';
     if (codeEl) codeEl.textContent = currencyCode;
 
     const preferredCurrencyKey = 'svet-za-malo:preferred-currency';
@@ -157,17 +142,31 @@
       const target = targetCurrency.toUpperCase();
 
       if (target === currencyCode) {
+        if (amountEl) amountEl.textContent = '1';
+        if (codeEl) codeEl.textContent = currencyCode;
         rateEl.textContent = '= místní měna';
         return;
       }
 
+      if (amountEl) amountEl.textContent = '1';
+      if (codeEl) codeEl.textContent = currencyCode;
       rateEl.textContent = '…';
       fetch(`https://api.frankfurter.dev/v1/latest?base=${encodeURIComponent(currencyCode)}&symbols=${encodeURIComponent(target)}`)
         .then(r => r.ok ? r.json() : Promise.reject())
         .then((data: { rates?: Record<string, number> }) => {
           const rate = data?.rates?.[target];
-          if (typeof rate === 'number') {
-            rateEl.textContent = `≈ ${rate.toLocaleString('cs-CZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${target}`;
+          if (typeof rate === 'number' && rate > 0) {
+            let baseAmount = 1;
+            while (rate * baseAmount < 1 && baseAmount < 1000) {
+              baseAmount *= 10;
+            }
+
+            const converted = rate * baseAmount;
+            if (amountEl) amountEl.textContent = baseAmount.toLocaleString('cs-CZ');
+            if (codeEl) codeEl.textContent = currencyCode;
+            rateEl.textContent = `≈ ${converted.toLocaleString('cs-CZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${target}`;
+          } else {
+            rateEl.textContent = '(kurz nedostupný)';
           }
         })
         .catch(() => {
@@ -281,6 +280,39 @@
   }
 
   /* ── Helpers ───────────────────────────────────────── */
+  function normalizeCurrencyCode(value?: string): string | null {
+    const raw = (value || '').trim();
+    if (!raw) return null;
+    const code = raw.match(/\b([A-Z]{3})\b/)?.[1];
+    if (code) return code;
+
+    const normalized = raw
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase();
+    if (normalized.includes('eur') || normalized.includes('euro') || normalized.includes('€')) return 'EUR';
+    if (normalized.includes('usd') || normalized.includes('dolar') || normalized.includes('$')) return 'USD';
+    if (normalized.includes('czk') || normalized.includes('koruna') || normalized.includes('kc') || normalized.includes('kč')) return 'CZK';
+    if (normalized.includes('gbp') || normalized.includes('libra') || normalized.includes('£')) return 'GBP';
+    if (normalized.includes('pln') || normalized.includes('zlot') || normalized.includes('zł')) return 'PLN';
+    return null;
+  }
+
+  function normalizeDrivingSide(value?: string): string | null {
+    const raw = (value || '').trim().toLowerCase();
+    if (!raw) return null;
+    if (raw.includes('vlevo') || raw.includes('left') || raw.includes('levostr')) return 'vlevo';
+    if (raw.includes('vpravo') || raw.includes('right') || raw.includes('pravostr')) return 'vpravo';
+    return value?.trim() || null;
+  }
+
+  function parseSocketTypes(value?: string): string[] {
+    const raw = value || '';
+    if (!raw.trim()) return [];
+    const matches = raw.match(/[A-N](?:\/[A-N])*/gi) ?? [];
+    return [...new Set(matches.flatMap((item) => item.toUpperCase().split('/')).filter((item) => item in SOCKETS))];
+  }
+
   function resolveIANA(raw: string): string | null {
     const t = raw.trim();
     try { Intl.DateTimeFormat('en', { timeZone: t }); return t; } catch { /* not IANA */ }

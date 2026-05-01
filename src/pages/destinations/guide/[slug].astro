@@ -67,7 +67,12 @@ const chapters = splitIntoChapters(destination.introHtml);
       <p>{destination.seo.metaDescription}</p>
     </header>
     {destination.heroImage && <img src={destination.heroImage.src} alt={destination.heroImage.alt || destination.name} class="mb-8 aspect-[16/9] w-full rounded-xl object-cover" />}
-    <DestinationLiveInfo />
+    <DestinationLiveInfo
+      currencyCode={destination.currency?.code}
+      timezone={destination.timezone}
+      drivingSide={destination.drivingSide}
+      electricityPlug={destination.electricityPlug}
+    />
     <div class="space-y-5 sm:space-y-6">
       {chapters.map((chapter) => <section class="prose-content brand-card p-6 sm:p-8" set:html={chapter}></section>)}
     </div>

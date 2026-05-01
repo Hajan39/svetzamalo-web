@@ -37,6 +37,8 @@ interface SanityCountry {
     timezone?: string
     bestTime?: string
     visa?: string
+    electricityPlug?: string
+    drivingSide?: string
   }
   continent?: SanityContinent
   seoTitle?: string
@@ -164,6 +166,46 @@ function normalizeContinent(continent?: SanityContinent): Destination['continent
   return (continent?.slug || 'europe') as Destination['continent']
 }
 
+function parseCurrencyFromQuickFacts(currency?: string): Destination['currency'] {
+  if (!currency) return undefined
+  const line = currency.trim()
+  if (!line) return undefined
+
+  const upper = line.toUpperCase()
+  const isoFromParens = line.match(/\(([A-Z]{3})\)/)?.[1]
+  const isoFromWord = line.match(/\b([A-Z]{3})\b/)?.[1]
+  const inferredCode =
+    isoFromParens ||
+    isoFromWord ||
+    (upper.includes('EURO') || line.includes('€') ? 'EUR' : undefined) ||
+    (upper.includes('DOLAR') || upper.includes('DOLLAR') || line.includes('$') ? 'USD' : undefined) ||
+    (upper.includes('KORUNA') || upper.includes('CZK') || line.includes('Kč') ? 'CZK' : undefined) ||
+    (upper.includes('LIBRA') || upper.includes('GBP') || line.includes('£') ? 'GBP' : undefined) ||
+    (upper.includes('ZLOT') || upper.includes('PLN') || line.includes('zł') ? 'PLN' : undefined)
+
+  if (!inferredCode) return undefined
+
+  const symbolFromParens = line.match(/\(([^)]+)\)/)?.[1]
+  return {
+    code: inferredCode,
+    name: line,
+    symbol: symbolFromParens || inferredCode,
+    budgetPerDay: {
+      budget: 50,
+      midRange: 100,
+      luxury: 200,
+    },
+  }
+}
+
+function normalizeDrivingSide(value?: string): string | undefined {
+  if (!value) return undefined
+  const lower = value.toLowerCase()
+  if (lower.includes('vlevo') || lower.includes('left') || lower.includes('levostr')) return 'vlevo'
+  if (lower.includes('vpravo') || lower.includes('right') || lower.includes('pravostr')) return 'vpravo'
+  return value
+}
+
 function transformDestination(destination: SanityCountry): Destination {
   const heroImage = normalizeMedia(destination.cover)
   const introHtml = sanityPortableTextToHtml(destination.intro)
@@ -182,9 +224,12 @@ function transformDestination(destination: SanityCountry): Destination {
     timezone: destination.quickFacts?.timezone,
     visaInfo: destination.quickFacts?.visa,
     bestTimeToVisit: destination.quickFacts?.bestTime,
+    electricityPlug: destination.quickFacts?.electricityPlug,
+    drivingSide: normalizeDrivingSide(destination.quickFacts?.drivingSide),
     heroImage: heroImage ? {...heroImage, alt: heroImage.alt || destination.name} : undefined,
     introHtml: introHtml || undefined,
     locale: destination.locale || 'cs',
+    currency: parseCurrencyFromQuickFacts(destination.quickFacts?.currency),
     seo: {
       metaTitle: destination.seoTitle || `${destination.name} | Svět za málo`,
       metaDescription,

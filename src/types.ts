@@ -51,6 +51,8 @@ export interface Destination {
 	timezone?: string;
 	visaInfo?: string;
 	bestTimeToVisit?: string;
+	electricityPlug?: string;
+	drivingSide?: string;
 	heroImage?: ImageAsset;
 	introHtml?: string;
 	seo: SeoMetadata;
