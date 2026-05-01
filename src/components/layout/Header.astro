@@ -1,7 +1,7 @@
 ---
 import BrandLogo from './BrandLogo.astro';
 import { isBookPageEnabled } from '@/lib/bookConfig';
-import { fetchSiteConfig } from '@/lib/strapi/api';
+import { fetchSiteConfig } from '@/lib/content/api';
 
 const siteConfig = await fetchSiteConfig('cs');
 const isBookAvailable = isBookPageEnabled(siteConfig);

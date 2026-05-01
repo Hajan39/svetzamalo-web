@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 import { z } from "zod";
 import { isFreeEbookEnabled } from "@/lib/bookConfig";
-import { createLead, fetchSiteConfig } from "@/lib/strapi/api";
+import { createLead, fetchSiteConfig } from "@/lib/content/api";
 
 export const prerender = false;
 

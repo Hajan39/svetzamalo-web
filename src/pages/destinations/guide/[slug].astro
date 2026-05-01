@@ -3,7 +3,7 @@ import ArticleCard from '@/components/article/ArticleCard.astro';
 import DestinationLiveInfo from '@/components/destination/DestinationLiveInfo.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getContinentLabel } from '@/lib/continentLabels';
-import { fetchAllArticles, fetchDestinationBySlug, fetchDestinations } from '@/lib/strapi/api';
+import { fetchAllArticles, fetchDestinationBySlug, fetchDestinations } from '@/lib/content/api';
 
 export const prerender = true;
 

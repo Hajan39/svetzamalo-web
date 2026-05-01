@@ -2,7 +2,7 @@
 import Layout from '@/layouts/Layout.astro';
 import { buildBankTransferDetails } from '@/lib/bankTransfer';
 import { getBookPaymentMessage, getFreeEbookTitle, getPaidBookTitle } from '@/lib/bookConfig';
-import { fetchSiteConfig } from '@/lib/strapi/api';
+import { fetchSiteConfig } from '@/lib/content/api';
 
 export const prerender = false;
 

@@ -5,7 +5,7 @@ import LeadCapture from '@/components/marketing/LeadCapture.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getFreeEbookDescription, getFreeEbookTitle, getPaidBookTitle, isFreeEbookEnabled, isPaidEbookEnabled } from '@/lib/bookConfig';
 import { getContinentLabel } from '@/lib/continentLabels';
-import { fetchArticlesPage, fetchDestinations, fetchLatestArticles, fetchSiteConfig } from '@/lib/strapi/api';
+import { fetchArticlesPage, fetchDestinations, fetchLatestArticles, fetchSiteConfig } from '@/lib/content/api';
 
 export const prerender = true;
 

@@ -6,7 +6,7 @@ import {
 	normalizePaymentAmount,
 } from "@/lib/bankTransfer";
 import { getBookPaymentMessage } from "@/lib/bookConfig";
-import { createOrder, fetchSiteConfig } from "@/lib/strapi/api";
+import { createOrder, fetchSiteConfig } from "@/lib/content/api";
 
 export const prerender = false;
 

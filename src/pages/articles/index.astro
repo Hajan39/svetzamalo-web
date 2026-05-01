@@ -2,7 +2,7 @@
 import ArticleCard from '@/components/article/ArticleCard.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getContinentLabel } from '@/lib/continentLabels';
-import { fetchAllArticles, fetchArticlesPage, fetchDestinations } from '@/lib/strapi/api';
+import { fetchAllArticles, fetchArticlesPage, fetchDestinations } from '@/lib/content/api';
 import type { Article, Destination } from '@/types';
 
 export const prerender = false;

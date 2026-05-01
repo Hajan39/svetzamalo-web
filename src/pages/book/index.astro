@@ -1,7 +1,7 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import { getFreeEbookDescription, getFreeEbookTitle, getPaidBookDescription, getPaidBookTitle, isFreeEbookEnabled, isPaidEbookEnabled } from '@/lib/bookConfig';
-import { fetchSiteConfig } from '@/lib/strapi/api';
+import { fetchSiteConfig } from '@/lib/content/api';
 
 export const prerender = true;
 
