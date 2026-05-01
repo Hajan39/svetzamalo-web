@@ -54,6 +54,7 @@ interface SanityArticle {
   articleType?: string
   cover?: SanityImage
   content?: unknown[]
+  relatedArticles?: SanityArticle[]
   country?: SanityCountry
   seoTitle?: string
   seoDescription?: string
@@ -104,6 +105,18 @@ const articleProjection = `
   articleType,
   cover{${imageProjection}},
   content[]{${contentProjection}},
+  relatedArticles[]->{
+    _id,
+    _createdAt,
+    _updatedAt,
+    title,
+    "slug": slug.current,
+    locale,
+    excerpt,
+    articleType,
+    cover{${imageProjection}},
+    country->{_id, name, "slug": slug.current, locale}
+  },
   country->{${countryProjection}},
   seoTitle,
   seoDescription
@@ -196,6 +209,7 @@ function transformArticle(article: SanityArticle): Article {
     destinationId: article.country?.slug,
     countryName: article.country?.name,
     coverImage: resolvedCover ? {...resolvedCover, alt: resolvedCover.alt || article.title} : undefined,
+    relatedArticles: article.relatedArticles?.map(transformArticle).filter(Boolean),
     tags: [],
     publishedAt: article._createdAt,
     updatedAt: article._updatedAt,

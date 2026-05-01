@@ -32,6 +32,7 @@ export interface Article {
 	destinationId?: string;
 	countryName?: string;
 	coverImage?: ImageAsset;
+	relatedArticles?: Article[];
 	tags?: string[];
 	publishedAt?: string;
 	updatedAt?: string;

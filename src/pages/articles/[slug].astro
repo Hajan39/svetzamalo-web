@@ -1,20 +1,44 @@
 ---
 import InteractiveChecklist from '@/components/article/InteractiveChecklist.astro';
+import ArticleCard from '@/components/article/ArticleCard.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getContinentLabel } from '@/lib/continentLabels';
-import { fetchArticleBySlug, fetchDestinations } from '@/lib/content/api';
+import { fetchAllArticles, fetchArticleBySlug, fetchDestinations } from '@/lib/content/api';
 
 export const prerender = false;
 
-const [article, destinations] = await Promise.all([
+const [article, destinations, allArticles] = await Promise.all([
   fetchArticleBySlug(Astro.params.slug || '', 'cs'),
   fetchDestinations('cs'),
+  fetchAllArticles('cs'),
 ]);
 if (!article) return Astro.redirect('/articles');
 
+const currentArticleSlug = article.slug;
 const articleDestination = article.destinationId ? destinations.find((destination) => destination.slug === article.destinationId) : undefined;
 const isChecklistArticle = /(^|-)co-sbalit(-|$)|checklist/i.test(article.slug) || /checklist|co sbalit/i.test(article.title);
 const articleHtml = article.htmlContent || '<p>Obsah článku zatím není dostupný.</p>';
+
+function extractRelatedArticleSlugs(html: string): string[] {
+  const block = Array.from(html.matchAll(/<p\b[^>]*>[\s\S]*?<\/p>/gi), (match) => match[0]).find((paragraph) => /Navazuj(?:í|i)cí články:/i.test(paragraph));
+  if (!block) return [];
+
+  const text = block.replace(/<[^>]*>/g, ' ');
+  const slugs = Array.from(text.matchAll(/\/articles\/([a-z0-9-]+)(?=[\s,.;)]|$)/gi), (match) => match[1]);
+  return [...new Set(slugs)].filter((slug) => slug !== currentArticleSlug);
+}
+
+function removeRelatedArticlesBlock(html: string): string {
+  const cleaned = html.replace(/<p\b[^>]*>[\s\S]*?<\/p>/gi, (paragraph) => (/Navazuj(?:í|i)cí články:/i.test(paragraph) ? '' : paragraph)).trim();
+  return cleaned || '<p>Obsah článku zatím není dostupný.</p>';
+}
+
+const relatedArticleSlugs = extractRelatedArticleSlugs(articleHtml);
+const relatedArticlesBySlug = new Map(allArticles.map((relatedArticle) => [relatedArticle.slug, relatedArticle]));
+const relatedArticlesFromContent = relatedArticleSlugs.map((slug) => relatedArticlesBySlug.get(slug)).filter(Boolean);
+const relatedArticlesFromSchema = article.relatedArticles?.filter((relatedArticle) => relatedArticle.slug !== currentArticleSlug) ?? [];
+const relatedArticles = relatedArticlesFromSchema.length ? relatedArticlesFromSchema : relatedArticlesFromContent;
+const displayHtml = removeRelatedArticlesBlock(articleHtml);
 ---
 
 <Layout title={article.seo.metaTitle} description={article.seo.metaDescription} canonicalPath={`/articles/${article.slug}`}>
@@ -34,7 +58,16 @@ const articleHtml = article.htmlContent || '<p>Obsah článku zatím není dostu
     </header>
     {article.coverImage && <img src={article.coverImage.src} alt={article.coverImage.alt || article.title} class="mb-8 aspect-[16/9] w-full rounded-xl object-cover" />}
     <div class="brand-card px-6 py-7 sm:px-8 sm:py-8">
-      {isChecklistArticle ? <InteractiveChecklist slug={article.slug} htmlContent={articleHtml} /> : <div class="prose-content" set:html={articleHtml}></div>}
+      {isChecklistArticle ? <InteractiveChecklist slug={article.slug} htmlContent={displayHtml} /> : <div class="prose-content" set:html={displayHtml}></div>}
     </div>
+
+    {relatedArticles.length > 0 && (
+      <section class="mt-10 md:mt-12">
+        <h2 class="mb-6">Navazující články</h2>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {relatedArticles.map((relatedArticle) => relatedArticle && <ArticleCard article={relatedArticle} variant="block" />)}
+        </div>
+      </section>
+    )}
   </article>
 </Layout>
