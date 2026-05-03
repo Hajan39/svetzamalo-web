@@ -5,8 +5,12 @@ export const prerender = false
 const STRAPI_URL = (
   import.meta.env.STRAPI_URL ||
   import.meta.env.PUBLIC_STRAPI_URL ||
-  'http://localhost:1337'
+  ''
 ).replace(/\/$/, '')
+
+if (import.meta.env.PROD && !STRAPI_URL) {
+  console.error('[ebook/download] STRAPI_URL is not set — ebook downloads will fail')
+}
 
 const STRAPI_API_TOKEN = import.meta.env.STRAPI_API_TOKEN
 
