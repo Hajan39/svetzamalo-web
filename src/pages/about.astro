@@ -22,7 +22,7 @@ const upcomingTalks = about.upcomingTalks;
 const talkSubject = encodeURIComponent(about.requestTalkSubject);
 ---
 
-<Layout title={text.title} description={text.description} canonicalPath={withLocalePath('/about', locale)}>
+<Layout title={text.title} description={text.description} canonicalPath={withLocalePath('/about', locale)} siteConfig={siteConfig}>
   <section class="about-hero">
     <div class="container-wide about-hero-grid">
       <div class="about-hero-copy">

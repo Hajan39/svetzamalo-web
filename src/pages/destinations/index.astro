@@ -5,7 +5,7 @@ import { getContinentLabel } from '@/lib/continentLabels';
 import { fetchDestinations } from '@/lib/content/api';
 import { translations } from '@/i18n/translations';
 import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
-export const prerender = true;
+export const prerender = false;
 
 const locale = getLocaleFromAstro(Astro);
 let destinations = await fetchDestinations(locale);

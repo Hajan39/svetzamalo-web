@@ -4,28 +4,18 @@ import InteractiveChecklist from '@/components/article/InteractiveChecklist.astr
 import ArticleCard from '@/components/article/ArticleCard.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getContinentLabel } from '@/lib/continentLabels';
-import { fetchAllArticles, fetchDestinations } from '@/lib/content/api';
+import { fetchAllArticles, fetchArticleBySlug, fetchDestinations } from '@/lib/content/api';
 import type { Article, Destination } from '@/types';
 import { translations } from '@/i18n/translations';
 import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
 
-export const prerender = true;
-
-export async function getStaticPaths() {
-  const [allArticles, destinations] = await Promise.all([
-    fetchAllArticles('cs'),
-    fetchDestinations('cs'),
-  ]);
-  return allArticles.map((article) => ({
-    params: { slug: article.slug },
-    props: { article, allArticles, destinations },
-  }));
-}
-
 const locale = getLocaleFromAstro(Astro);
-const article = Astro.props.article;
-const allArticles: Article[] = Astro.props.allArticles ?? [];
-const destinations: Destination[] = Astro.props.destinations ?? [];
+const slug = Astro.params.slug!;
+const [article, allArticles, destinations] = await Promise.all([
+  fetchArticleBySlug(slug, locale),
+  fetchAllArticles(locale),
+  fetchDestinations(locale),
+]) as [Article | null, Article[], Destination[]];
 if (!article) return Astro.redirect(withLocalePath('/articles', locale));
 
 const currentArticleSlug = article.slug;

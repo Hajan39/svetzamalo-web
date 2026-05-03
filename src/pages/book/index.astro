@@ -24,7 +24,7 @@ const text = translations[locale].pages.book;
 const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${translations[locale].shared.brand}`;
 ---
 
-<Layout title={bookPageTitle} description={`${freeEbookDescription} ${paidBookDescription}`} canonicalPath={withLocalePath('/book', locale)}>
+<Layout title={bookPageTitle} description={`${freeEbookDescription} ${paidBookDescription}`} canonicalPath={withLocalePath('/book', locale)} siteConfig={siteConfig}>
   <section class="book-hero">
     <div class="container-wide book-hero-grid">
       <div>

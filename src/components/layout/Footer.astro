@@ -1,11 +1,13 @@
 ---
 import BrandLogo from './BrandLogo.astro';
-import { fetchSiteConfig } from '@/lib/content/api';
+import type { SiteConfig } from '@/types';
 import { getLangFromUrl, useTranslations, withLocalePath } from '@/i18n/utils';
+
+interface Props { siteConfig?: SiteConfig | null }
 
 const locale = getLangFromUrl(Astro.url);
 const t = useTranslations(locale);
-const siteConfig = await fetchSiteConfig(locale);
+const { siteConfig } = Astro.props;
 const year = new Date().getFullYear();
 const siteEmail = siteConfig?.siteEmail || 'info@svetzamalo.cz';
 const mainLinks = [

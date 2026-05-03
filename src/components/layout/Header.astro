@@ -1,13 +1,15 @@
 ---
 import BrandLogo from './BrandLogo.astro';
 import { isBookPageEnabled } from '@/lib/bookConfig';
-import { fetchSiteConfig } from '@/lib/content/api';
+import type { SiteConfig } from '@/types';
 import { languageSwitcherEnabled, languages } from '@/i18n/ui';
 import { getLangFromUrl, switchLocalePath, useTranslations, withLocalePath } from '@/i18n/utils';
 
+interface Props { siteConfig?: SiteConfig | null }
+
 const locale = getLangFromUrl(Astro.url);
 const t = useTranslations(locale);
-const siteConfig = await fetchSiteConfig(locale);
+const { siteConfig } = Astro.props;
 const isBookAvailable = isBookPageEnabled(siteConfig);
 
 const navItems = [
