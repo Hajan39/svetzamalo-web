@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import ArticleCard from '@/components/article/ArticleCard.astro';
 import DestinationCard from '@/components/destination/DestinationCard.astro';
 import LeadCapture from '@/components/marketing/LeadCapture.astro';
@@ -96,7 +97,7 @@ const continentLabels = new Intl.ListFormat('cs-CZ', { style: 'long', type: 'con
 			<div class="featured-content-grid">
 				<a href={`/articles/${featuredArticle.slug}`} class="featured-article">
 					{featuredArticle.coverImage ? (
-						<img src={featuredArticle.coverImage.src} alt={featuredArticle.coverImage.alt || featuredArticle.title} loading="eager" decoding="async" />
+						<Image src={featuredArticle.coverImage.src} alt={featuredArticle.coverImage.alt || featuredArticle.title} width={900} height={506} loading="eager" />
 					) : (
 						<div class="featured-article-fallback">{featuredArticle.title}</div>
 					)}

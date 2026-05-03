@@ -51,8 +51,9 @@ export function sanityPortableTextToHtml(value: unknown): string {
           const widthAttr = width ? ` width="${width}"` : ''
           const heightAttr = height ? ` height="${height}"` : ''
           const caption = image.caption?.trim()
+          const optimizedUrl = `${url}?w=900&auto=format&q=80`
 
-          return `<figure class="article-figure"><img src="${escapeAttr(url)}" alt="${escapeAttr(image.alt || '')}"${widthAttr}${heightAttr} loading="lazy" style="max-width:100%;height:auto" />${caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : ''}</figure>`
+          return `<figure class="article-figure"><img src="${escapeAttr(optimizedUrl)}" alt="${escapeAttr(image.alt || '')}"${widthAttr}${heightAttr} loading="lazy" style="max-width:100%;height:auto" />${caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : ''}</figure>`
         },
       },
       marks: {

@@ -11,6 +11,9 @@ import vercel from "@astrojs/vercel";
 export default defineConfig({
 	site: process.env.SITE_URL || "https://svetzamalo.cz",
 	adapter: vercel(),
+	image: {
+		domains: ['cdn.sanity.io'],
+	},
 	vite: {
 		plugins: [tailwindcss()],
 	},

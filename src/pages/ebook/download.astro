@@ -1,31 +1,95 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import { fetchPageCopy } from '@/lib/content/api';
+import { copyValue } from '@/lib/copy';
 
 const token = Astro.url.searchParams.get('token') || '';
-const strapiUrl = (import.meta.env.STRAPI_URL || import.meta.env.PUBLIC_STRAPI_URL || 'http://localhost:1337').replace(/\/$/, '');
-const downloadUrl = token ? `${strapiUrl}/api/ebook/download?token=${encodeURIComponent(token)}` : '';
+const downloadType = Astro.url.searchParams.get('type') || 'free';
+const isPaidDownload = downloadType === 'paid';
+const copy = await fetchPageCopy(isPaidDownload ? 'ebook-download-paid' : 'ebook-download-free', 'cs');
+const apiDownloadUrl = token ? `/api/ebook/download?token=${encodeURIComponent(token)}` : '';
+const copyVariables = { type: downloadType };
+const title = copyValue(copy?.metaTitle, isPaidDownload ? 'Děkujeme za nákup | Svět za málo' : 'Stažení ebooku | Svět za málo', copyVariables);
+const description = copyValue(copy?.metaDescription, isPaidDownload
+  ? 'Zabezpečené stažení zakoupeného ebooku přes osobní token.'
+  : 'Stažení ebooku přes jednorázový token.', copyVariables);
 ---
 
-<Layout title="Stažení ebooku | Svět za málo" description="Stažení ebooku přes jednorázový token." canonicalPath="/ebook/download">
+<Layout title={title} description={description} canonicalPath="/ebook/download">
   <section class="container-narrow py-10 md:py-16">
     <div class="brand-card px-6 py-7 sm:px-8 sm:py-8">
-      <h1 class="mb-4">Stažení ebooku</h1>
+      <h1 class="mb-4">{copyValue(copy?.heading, isPaidDownload ? 'Děkujeme za nákup' : 'Stažení ebooku', copyVariables)}</h1>
       {token ? (
         <>
-          <p class="mb-6">Kliknutím pokračuj na zabezpečené stažení ebooku. Odkaz může být časově omezený.</p>
-          <a class="btn-primary" href={downloadUrl}>Stáhnout ebook</a>
+          {isPaidDownload ? (
+            <>
+              <p class="mb-4">{copyValue(copy?.intro, 'Platba je potvrzená a tvoje kniha je připravená. Díky, že podporuješ Svět za málo.', copyVariables)}</p>
+              <p class="mb-6 text-foreground-secondary">{copyValue(copy?.body, 'Odkaz je osobní, jednorázový a časově omezený. Po kliknutí ti stránka vygeneruje krátkodobý odkaz ke stažení.', copyVariables)}</p>
+            </>
+          ) : (
+            <p class="mb-6">{copyValue(copy?.intro, 'Kliknutím pokračuj na zabezpečené stažení ebooku. Odkaz může být časově omezený.', copyVariables)}</p>
+          )}
+          <button class="btn-primary" type="button" data-download-button data-download-url={apiDownloadUrl}>
+            {copyValue(copy?.primaryButtonLabel, isPaidDownload ? 'Stáhnout zakoupenou knihu' : 'Stáhnout ebook', copyVariables)}
+          </button>
+          <p
+            class="mt-4 text-sm text-foreground-secondary"
+            data-download-status
+            data-loading-message={copyValue(copy?.successMessage, 'Připravuji zabezpečené stažení...', copyVariables)}
+            data-error-message={copyValue(copy?.errorMessage, 'Odkaz je neplatný, expirovaný nebo už použitý. Odpověz na email a pošleme nový.', copyVariables)}
+            aria-live="polite"
+          ></p>
+        </>
+      ) : isPaidDownload ? (
+        <>
+          <p class="mb-6">{copyValue(copy?.secondaryBody, 'Chybí token pro stažení zakoupené knihy. Odpověz prosím na potvrzovací email a pošleme nový odkaz.', copyVariables)}</p>
+          <a class="btn-secondary" href="/book">{copyValue(copy?.secondaryButtonLabel, 'Zpět na stránku ebooku', copyVariables)}</a>
         </>
       ) : (
         <>
-          <p class="mb-6">Chybí token pro stažení. Nech si poslat nový odkaz na email.</p>
+          <p class="mb-6">{copyValue(copy?.secondaryBody, 'Chybí token pro stažení. Nech si poslat nový odkaz na email.', copyVariables)}</p>
           <form class="flex flex-col gap-3 sm:flex-row" method="post" action="/api/leads">
             <input type="hidden" name="leadType" value="ebook" />
             <input type="hidden" name="source" value="ebook-download" />
             <input class="form-field" type="email" name="email" placeholder="Tvůj email" required />
-            <button class="btn-primary" type="submit">Poslat nový odkaz</button>
+            <button class="btn-primary" type="submit">{copyValue(copy?.secondaryButtonLabel, 'Poslat nový odkaz', copyVariables)}</button>
           </form>
         </>
       )}
     </div>
   </section>
+  {token && (
+    <script>
+      const button = document.querySelector('[data-download-button]');
+      const status = document.querySelector('[data-download-status]');
+
+      button?.addEventListener('click', async () => {
+        const downloadUrl = button.getAttribute('data-download-url');
+        if (!downloadUrl) return;
+
+        button.setAttribute('disabled', 'true');
+        if (status) status.textContent = status.getAttribute('data-loading-message') || 'Připravuji zabezpečené stažení...';
+
+        try {
+          const response = await fetch(downloadUrl, { headers: { accept: 'application/json' } });
+          const payload = await response.json().catch(() => null);
+
+          if (!response.ok || !payload?.url) {
+            throw new Error('download_failed');
+          }
+
+          if (status) {
+            status.textContent = payload.expiresInSeconds
+              ? `Odkaz je připravený a platí krátce (${payload.expiresInSeconds} s). Přesměrovávám...`
+              : 'Odkaz je připravený. Přesměrovávám...';
+          }
+
+          window.location.href = payload.url;
+        } catch {
+          if (status) status.textContent = status.getAttribute('data-error-message') || 'Odkaz je neplatný, expirovaný nebo už použitý. Odpověz na email a pošleme nový.';
+          button.removeAttribute('disabled');
+        }
+      });
+    </script>
+  )}
 </Layout>

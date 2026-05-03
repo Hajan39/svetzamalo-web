@@ -17,7 +17,7 @@ const siteUrl = import.meta.env.SITE_URL || import.meta.env.PUBLIC_SITE_URL || '
 const title = Astro.props.title ?? 'Svět za málo - průvodce levným cestováním';
 const description = Astro.props.description ?? 'Praktické průvodce, destinace a rozpočty pro levné cestování. Objevte svět chytřeji a stáhněte si lowcost ebook zdarma.';
 const canonicalUrl = new URL(Astro.props.canonicalPath ?? Astro.url.pathname, siteUrl).toString();
-const image = Astro.props.image ?? '/images/og-default.jpg';
+const image = Astro.props.image ?? '/images/hero/mauritius-home-hero.jpg';
 const siteConfig = await fetchSiteConfig('cs');
 const analyticsEnabled = siteConfig?.enableAnalytics === true;
 ---

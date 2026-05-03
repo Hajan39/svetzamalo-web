@@ -151,7 +151,7 @@ function findFirstContentImage(content: unknown[] | undefined) {
 }
 
 function shouldUseCoverFallback(cover: Article['coverImage'] | undefined) {
-  return !cover || cover.src.includes('localhost:1337')
+  return !cover
 }
 
 function languagesFromQuickFacts(language?: string) {

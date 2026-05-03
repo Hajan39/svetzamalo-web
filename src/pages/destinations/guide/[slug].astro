@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import ArticleCard from '@/components/article/ArticleCard.astro';
 import DestinationLiveInfo from '@/components/destination/DestinationLiveInfo.astro';
 import Layout from '@/layouts/Layout.astro';
@@ -66,7 +67,7 @@ const chapters = splitIntoChapters(destination.introHtml);
       <h1 class="mb-4">{destination.name}</h1>
       <p>{destination.seo.metaDescription}</p>
     </header>
-    {destination.heroImage && <img src={destination.heroImage.src} alt={destination.heroImage.alt || destination.name} class="mb-8 aspect-[16/9] w-full rounded-xl object-cover" />}
+    {destination.heroImage && <Image src={destination.heroImage.src} alt={destination.heroImage.alt || destination.name} width={900} height={506} class="mb-8 aspect-[16/9] w-full rounded-xl object-cover" loading="eager" />}
     <DestinationLiveInfo
       currencyCode={destination.currency?.code}
       timezone={destination.timezone}

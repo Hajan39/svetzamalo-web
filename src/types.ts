@@ -78,6 +78,7 @@ export interface SiteConfig {
 	bookDescription?: string;
 	bookCover?: ImageAsset;
 	bookBuyUrl?: string;
+	paidEbookPdfUrl?: string;
 	bookPrice?: string;
 	ebookPdfUrl?: string;
 	freeEbookAvailable?: boolean;
@@ -96,4 +97,20 @@ export interface SiteConfig {
 	bookBankContactEmail?: string;
 	enableAnalytics?: boolean;
 	enableAds?: boolean;
+}
+
+export interface PageCopy {
+	key?: string;
+	name?: string;
+	metaTitle?: string;
+	metaDescription?: string;
+	heading?: string;
+	intro?: string;
+	body?: string;
+	secondaryBody?: string;
+	primaryButtonLabel?: string;
+	secondaryButtonLabel?: string;
+	successMessage?: string;
+	errorMessage?: string;
+	footnote?: string;
 }

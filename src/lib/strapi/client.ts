@@ -32,6 +32,13 @@ const STRAPI_URL = (
 ).replace(/\/$/, "");
 const STRAPI_API_TOKEN = import.meta.env.STRAPI_API_TOKEN;
 
+if (import.meta.env.PROD && !import.meta.env.STRAPI_URL && !import.meta.env.PUBLIC_STRAPI_URL) {
+	console.error('[strapi] STRAPI_URL is not set — all Strapi requests will fail. Set it in Vercel environment variables.');
+}
+if (import.meta.env.PROD && !STRAPI_API_TOKEN) {
+	console.warn('[strapi] STRAPI_API_TOKEN is not set — write endpoints (orders, leads) are unauthenticated.');
+}
+
 function appendFlattened(
 	params: URLSearchParams,
 	prefix: string,
