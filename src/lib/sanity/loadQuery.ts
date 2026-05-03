@@ -42,7 +42,7 @@ export async function loadQuery<QueryResponse>({
 			perspective,
 			resultSourceMap: draftMode ? "withKeyArraySelector" : false,
 			stega: draftMode,
-			...(draftMode ? { token } : {}),
+			...(token ? { token } : {}),
 		},
 	);
 

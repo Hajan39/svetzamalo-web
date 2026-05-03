@@ -38,7 +38,7 @@ interface StrapiPageCopy extends StrapiEntity, PageCopy {}
 const STRAPI_BASE = (
 	import.meta.env.STRAPI_URL ||
 	import.meta.env.PUBLIC_STRAPI_URL ||
-	"http://localhost:1337"
+	""
 ).replace(/\/$/, "");
 
 function absoluteUrl(url?: string): string | undefined {

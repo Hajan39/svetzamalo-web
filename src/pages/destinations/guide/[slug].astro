@@ -4,24 +4,28 @@ import ArticleCard from '@/components/article/ArticleCard.astro';
 import DestinationLiveInfo from '@/components/destination/DestinationLiveInfo.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getContinentLabel } from '@/lib/continentLabels';
-import { fetchAllArticles, fetchDestinationBySlug } from '@/lib/content/api';
+import { fetchAllArticles, fetchDestinations } from '@/lib/content/api';
+import type { Article } from '@/types';
 import { translations } from '@/i18n/translations';
 import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
-import { getDraftModeProps } from '@/lib/sanity/draftMode';
 
-export const prerender = false;
+export const prerender = true;
 
-const sanityOptions = getDraftModeProps(Astro.cookies);
+export async function getStaticPaths() {
+  const [destinations, allArticles] = await Promise.all([
+    fetchDestinations('cs'),
+    fetchAllArticles('cs'),
+  ]);
+  return destinations.map((destination) => ({
+    params: { slug: destination.slug },
+    props: { destination, allArticles },
+  }));
+}
+
 const locale = getLocaleFromAstro(Astro);
-let destination = Astro.props.destination ?? await fetchDestinationBySlug(Astro.params.slug || '', locale, sanityOptions);
-if (!destination && locale === 'en') {
-  destination = await fetchDestinationBySlug(Astro.params.slug || '', 'cs', sanityOptions);
-}
+const destination = Astro.props.destination;
 if (!destination) return Astro.redirect(withLocalePath('/destinations', locale));
-let allArticles = await fetchAllArticles(locale, sanityOptions);
-if (locale === 'en' && allArticles.length === 0) {
-  allArticles = await fetchAllArticles('cs', sanityOptions);
-}
+const allArticles: Article[] = Astro.props.allArticles ?? [];
 const articles = allArticles.filter((article) => article.destinationId === destination.slug || article.countryName === destination.name);
 const relatedArticles = articles.map((article) => {
   if (article.coverImage || !destination.heroImage) return article;

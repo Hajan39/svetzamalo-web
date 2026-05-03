@@ -5,15 +5,12 @@ import { getContinentLabel } from '@/lib/continentLabels';
 import { fetchDestinations } from '@/lib/content/api';
 import { translations } from '@/i18n/translations';
 import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
-import { getDraftModeProps } from '@/lib/sanity/draftMode';
-
-export const prerender = false;
+export const prerender = true;
 
 const locale = getLocaleFromAstro(Astro);
-const sanityOptions = getDraftModeProps(Astro.cookies);
-let destinations = await fetchDestinations(locale, sanityOptions);
+let destinations = await fetchDestinations(locale);
 if (locale === 'en' && destinations.length === 0) {
-  destinations = await fetchDestinations('cs', sanityOptions);
+  destinations = await fetchDestinations('cs');
 }
 const continents = Array.from(new Set(destinations.map((destination) => destination.continent))).sort((a, b) =>
   getContinentLabel(a, locale).localeCompare(getContinentLabel(b, locale), translations[locale].shared.localeTag),

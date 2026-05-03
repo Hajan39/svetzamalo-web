@@ -4,28 +4,28 @@ import InteractiveChecklist from '@/components/article/InteractiveChecklist.astr
 import ArticleCard from '@/components/article/ArticleCard.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getContinentLabel } from '@/lib/continentLabels';
-import { fetchAllArticles, fetchArticleBySlug, fetchDestinations } from '@/lib/content/api';
+import { fetchAllArticles, fetchDestinations } from '@/lib/content/api';
+import type { Article, Destination } from '@/types';
 import { translations } from '@/i18n/translations';
 import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
-import { getDraftModeProps } from '@/lib/sanity/draftMode';
 
-export const prerender = false;
+export const prerender = true;
 
-const sanityOptions = getDraftModeProps(Astro.cookies);
-const locale = getLocaleFromAstro(Astro);
-
-let [article, destinations, allArticles] = await Promise.all([
-  fetchArticleBySlug(Astro.params.slug || '', locale, sanityOptions),
-  fetchDestinations(locale, sanityOptions),
-  fetchAllArticles(locale, sanityOptions),
-]);
-if (!article && locale === 'en') {
-  [article, destinations, allArticles] = await Promise.all([
-    fetchArticleBySlug(Astro.params.slug || '', 'cs', sanityOptions),
-    fetchDestinations('cs', sanityOptions),
-    fetchAllArticles('cs', sanityOptions),
+export async function getStaticPaths() {
+  const [allArticles, destinations] = await Promise.all([
+    fetchAllArticles('cs'),
+    fetchDestinations('cs'),
   ]);
+  return allArticles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article, allArticles, destinations },
+  }));
 }
+
+const locale = getLocaleFromAstro(Astro);
+const article = Astro.props.article;
+const allArticles: Article[] = Astro.props.allArticles ?? [];
+const destinations: Destination[] = Astro.props.destinations ?? [];
 if (!article) return Astro.redirect(withLocalePath('/articles', locale));
 
 const currentArticleSlug = article.slug;

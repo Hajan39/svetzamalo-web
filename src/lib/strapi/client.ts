@@ -28,12 +28,12 @@ export interface StrapiQueryParams {
 const STRAPI_URL = (
 	import.meta.env.STRAPI_URL ||
 	import.meta.env.PUBLIC_STRAPI_URL ||
-	"http://localhost:1337"
+	""
 ).replace(/\/$/, "");
 const STRAPI_API_TOKEN = import.meta.env.STRAPI_API_TOKEN;
 
-if (import.meta.env.PROD && !import.meta.env.STRAPI_URL && !import.meta.env.PUBLIC_STRAPI_URL) {
-	console.error('[strapi] STRAPI_URL is not set — all Strapi requests will fail. Set it in Vercel environment variables.');
+if (!STRAPI_URL) {
+	console.error('[strapi] STRAPI_URL is not set — all Strapi requests will be skipped. Set it in Vercel environment variables.');
 }
 if (import.meta.env.PROD && !STRAPI_API_TOKEN) {
 	console.warn('[strapi] STRAPI_API_TOKEN is not set — write endpoints (orders, leads) are unauthenticated.');
@@ -120,6 +120,7 @@ export async function strapiGet<T>(
 	endpoint: string,
 	query?: StrapiQueryParams,
 ): Promise<StrapiResponse<T>> {
+	if (!STRAPI_URL) throw new Error(`Strapi GET ${endpoint} skipped: STRAPI_URL not set`);
 	const queryString = buildQueryString(query);
 	const url = `${STRAPI_URL}/api${endpoint}${queryString ? `?${queryString}` : ""}`;
 	const response = await fetch(url, { headers: headers() });
@@ -138,6 +139,7 @@ export async function strapiPost<T>(
 	endpoint: string,
 	body: unknown,
 ): Promise<StrapiResponse<T> | T> {
+	if (!STRAPI_URL) throw new Error(`Strapi POST ${endpoint} skipped: STRAPI_URL not set`);
 	const response = await fetch(`${STRAPI_URL}/api${endpoint}`, {
 		method: "POST",
 		headers: headers(),
