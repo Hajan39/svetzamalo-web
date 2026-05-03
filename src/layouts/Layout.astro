@@ -1,6 +1,10 @@
 ---
 import Analytics from '@vercel/analytics/astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
+import { stegaClean } from '@sanity/client/stega';
+import { perspectiveCookieName } from '@sanity/preview-url-secret/constants';
+import SanityVisualEditing from '@/components/SanityVisualEditing';
+import DisableDraftMode from '@/components/DisableDraftMode';
 import Footer from '../components/layout/Footer.astro';
 import Header from '../components/layout/Header.astro';
 import { fetchSiteConfig } from '@/lib/content/api';
@@ -14,12 +18,13 @@ interface Props {
 }
 
 const siteUrl = import.meta.env.SITE_URL || import.meta.env.PUBLIC_SITE_URL || 'https://svetzamalo.cz';
-const title = Astro.props.title ?? 'Svět za málo - průvodce levným cestováním';
-const description = Astro.props.description ?? 'Praktické průvodce, destinace a rozpočty pro levné cestování. Objevte svět chytřeji a stáhněte si lowcost ebook zdarma.';
+const title = stegaClean(Astro.props.title ?? 'Svět za málo - průvodce levným cestováním');
+const description = stegaClean(Astro.props.description ?? 'Praktické průvodce, destinace a rozpočty pro levné cestování. Objevte svět chytřeji a stáhněte si lowcost ebook zdarma.');
 const canonicalUrl = new URL(Astro.props.canonicalPath ?? Astro.url.pathname, siteUrl).toString();
 const image = Astro.props.image ?? '/images/hero/mauritius-home-hero.jpg';
 const siteConfig = await fetchSiteConfig('cs');
 const analyticsEnabled = siteConfig?.enableAnalytics === true;
+const draftMode = Astro.cookies.has(perspectiveCookieName);
 ---
 
 <!doctype html>
@@ -65,5 +70,7 @@ const analyticsEnabled = siteConfig?.enableAnalytics === true;
 		</main>
 		<Footer />
 		{analyticsEnabled && <SpeedInsights />}
+		{draftMode && <SanityVisualEditing client:only="react" />}
+		{draftMode && <DisableDraftMode client:only="react" />}
 	</body>
 </html>

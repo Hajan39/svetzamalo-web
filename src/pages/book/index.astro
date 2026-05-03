@@ -3,7 +3,7 @@ import Layout from '@/layouts/Layout.astro';
 import { getFreeEbookDescription, getFreeEbookTitle, getPaidBookDescription, getPaidBookTitle, isFreeEbookEnabled, isPaidEbookEnabled } from '@/lib/bookConfig';
 import { fetchSiteConfig } from '@/lib/content/api';
 
-export const prerender = true;
+export const prerender = false;
 
 const siteConfig = await fetchSiteConfig('cs');
 const price = siteConfig?.bookPrice || siteConfig?.bookBankAmount || '490 Kč';

@@ -1,7 +1,12 @@
 import type {Article, Destination, SupportedLocale} from '@/types'
+import {stegaClean} from '@sanity/client/stega'
 import {ARTICLE_COVER_FALLBACKS} from '../articleCoverFallbacks'
 import {sanityPortableTextToHtml} from './portableText'
-import {sanityClient} from './client'
+import {loadQuery} from './loadQuery'
+
+export interface SanityFetchOptions {
+  perspectiveCookie?: string
+}
 
 interface SanityImage {
   asset?: {
@@ -136,6 +141,10 @@ function normalizeMedia(image?: SanityImage): Article['coverImage'] {
   }
 }
 
+function cleanString(value?: string): string | undefined {
+  return value ? stegaClean(value) : value
+}
+
 function findFirstContentImage(content: unknown[] | undefined) {
   if (!Array.isArray(content)) return undefined
 
@@ -163,7 +172,7 @@ function languagesFromQuickFacts(language?: string) {
 }
 
 function normalizeContinent(continent?: SanityContinent): Destination['continent'] {
-  return (continent?.slug || 'europe') as Destination['continent']
+  return (cleanString(continent?.slug) || 'europe') as Destination['continent']
 }
 
 function parseCurrencyFromQuickFacts(currency?: string): Destination['currency'] {
@@ -209,15 +218,16 @@ function normalizeDrivingSide(value?: string): string | undefined {
 function transformDestination(destination: SanityCountry): Destination {
   const heroImage = normalizeMedia(destination.cover)
   const introHtml = sanityPortableTextToHtml(destination.intro)
+  const name = cleanString(destination.name) || destination.name
   const metaDescription =
-    destination.seoDescription ||
+    cleanString(destination.seoDescription) ||
     introHtml.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 160) ||
-    `Lowcost průvodce pro ${destination.name}: rozpočet, doprava, tipy a praktické informace.`
+    `Lowcost průvodce pro ${name}: rozpočet, doprava, tipy a praktické informace.`
 
   return {
     id: destination._id,
-    slug: destination.slug,
-    name: destination.name,
+    slug: cleanString(destination.slug) || destination.slug,
+    name,
     continent: normalizeContinent(destination.continent),
     type: 'country',
     languages: languagesFromQuickFacts(destination.quickFacts?.language),
@@ -226,14 +236,14 @@ function transformDestination(destination: SanityCountry): Destination {
     bestTimeToVisit: destination.quickFacts?.bestTime,
     electricityPlug: destination.quickFacts?.electricityPlug,
     drivingSide: normalizeDrivingSide(destination.quickFacts?.drivingSide),
-    heroImage: heroImage ? {...heroImage, alt: heroImage.alt || destination.name} : undefined,
+    heroImage: heroImage ? {...heroImage, alt: heroImage.alt || name} : undefined,
     introHtml: introHtml || undefined,
-    locale: destination.locale || 'cs',
+    locale: (cleanString(destination.locale) as SupportedLocale | undefined) || 'cs',
     currency: parseCurrencyFromQuickFacts(destination.quickFacts?.currency),
     seo: {
-      metaTitle: destination.seoTitle || `${destination.name} | Svět za málo`,
+      metaTitle: cleanString(destination.seoTitle) || `${name} | Svět za málo`,
       metaDescription,
-      keywords: [destination.name, 'levné cestování'],
+      keywords: [name, 'levné cestování'],
     },
   }
 }
@@ -241,28 +251,31 @@ function transformDestination(destination: SanityCountry): Destination {
 function transformArticle(article: SanityArticle): Article {
   const intro = article.excerpt || ''
   const cover = normalizeMedia(article.cover) ?? findFirstContentImage(article.content)
-  const coverFallback = ARTICLE_COVER_FALLBACKS[article.slug]
+  const slug = cleanString(article.slug) || article.slug
+  const title = article.title
+  const cleanTitle = cleanString(article.title) || article.title
+  const coverFallback = ARTICLE_COVER_FALLBACKS[slug]
   const resolvedCover = shouldUseCoverFallback(cover) ? coverFallback ?? cover : cover
 
   return {
     id: article._id,
-    slug: article.slug,
-    title: article.title,
+    slug,
+    title,
     intro,
     htmlContent: sanityPortableTextToHtml(article.content) || undefined,
-    articleType: article.articleType || 'destination-guide',
-    destinationId: article.country?.slug,
+    articleType: cleanString(article.articleType) || 'destination-guide',
+    destinationId: cleanString(article.country?.slug),
     countryName: article.country?.name,
     coverImage: resolvedCover ? {...resolvedCover, alt: resolvedCover.alt || article.title} : undefined,
     relatedArticles: article.relatedArticles?.map(transformArticle).filter(Boolean),
     tags: [],
     publishedAt: article._createdAt,
     updatedAt: article._updatedAt,
-    locale: article.locale || 'cs',
+    locale: (cleanString(article.locale) as SupportedLocale | undefined) || 'cs',
     seo: {
-      metaTitle: article.seoTitle || `${article.title} | Svět za málo`,
-      metaDescription: article.seoDescription || intro.slice(0, 160),
-      keywords: [article.title, 'levné cestování'],
+      metaTitle: cleanString(article.seoTitle) || `${cleanTitle} | Svět za málo`,
+      metaDescription: cleanString(article.seoDescription) || cleanString(intro)?.slice(0, 160) || '',
+      keywords: [cleanTitle, 'levné cestování'],
     },
   }
 }
@@ -279,43 +292,46 @@ function mapSafely<TInput, TOutput>(items: TInput[], transform: (item: TInput) =
   return mapped
 }
 
-export async function fetchLatestArticles(limit = 6, locale: SupportedLocale = 'cs'): Promise<Article[]> {
+export async function fetchLatestArticles(limit = 6, locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Article[]> {
   try {
-    const articles = await sanityClient.fetch<SanityArticle[]>(
-      `*[_type == "article" && locale == $locale] | order(_createdAt desc)[0...$limit]{${articleProjection}}`,
-      {locale, limit},
-    )
-    return mapSafely(articles, transformArticle, 'latest articles')
+    const {data} = await loadQuery<SanityArticle[]>({
+      query: `*[_type == "article" && locale == $locale] | order(_createdAt desc)[0...$limit]{${articleProjection}}`,
+      params: {locale, limit},
+      ...options,
+    })
+    return mapSafely(data, transformArticle, 'latest articles')
   } catch (error) {
     console.warn('Sanity fetch latest articles failed:', error)
     return []
   }
 }
 
-export async function fetchArticles(locale: SupportedLocale = 'cs'): Promise<Article[]> {
+export async function fetchArticles(locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Article[]> {
   try {
-    const articles = await sanityClient.fetch<SanityArticle[]>(
-      `*[_type == "article" && locale == $locale] | order(_createdAt desc){${articleProjection}}`,
-      {locale},
-    )
-    return mapSafely(articles, transformArticle, 'articles')
+    const {data} = await loadQuery<SanityArticle[]>({
+      query: `*[_type == "article" && locale == $locale] | order(_createdAt desc){${articleProjection}}`,
+      params: {locale},
+      ...options,
+    })
+    return mapSafely(data, transformArticle, 'articles')
   } catch (error) {
     console.warn('Sanity fetch articles failed:', error)
     return []
   }
 }
 
-export async function fetchArticlesPage(page = 1, locale: SupportedLocale = 'cs', pageSize = ARTICLES_PAGE_SIZE) {
+export async function fetchArticlesPage(page = 1, locale: SupportedLocale = 'cs', pageSize = ARTICLES_PAGE_SIZE, options: SanityFetchOptions = {}) {
   try {
     const start = Math.max(0, (page - 1) * pageSize)
     const end = start + pageSize
-    const result = await sanityClient.fetch<{articles: SanityArticle[]; total: number}>(
-      `{
+    const {data: result} = await loadQuery<{articles: SanityArticle[]; total: number}>({
+      query: `{
         "articles": *[_type == "article" && locale == $locale] | order(_createdAt desc)[$start...$end]{${articleProjection}},
         "total": count(*[_type == "article" && locale == $locale])
       }`,
-      {locale, start, end},
-    )
+      params: {locale, start, end},
+      ...options,
+    })
     const articles = mapSafely(result.articles, transformArticle, 'articles page')
     const total = result.total ?? articles.length
     return {
@@ -330,13 +346,13 @@ export async function fetchArticlesPage(page = 1, locale: SupportedLocale = 'cs'
   }
 }
 
-export async function fetchAllArticles(locale: SupportedLocale = 'cs'): Promise<Article[]> {
+export async function fetchAllArticles(locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Article[]> {
   const articlesBySlug = new Map<string, Article>()
   let page = 1
   let pageCount = 1
 
   while (page <= pageCount) {
-    const result = await fetchArticlesPage(page, locale, ARTICLES_SEARCH_PAGE_SIZE)
+    const result = await fetchArticlesPage(page, locale, ARTICLES_SEARCH_PAGE_SIZE, options)
     let addedArticles = 0
 
     for (const article of result.articles) {
@@ -354,46 +370,49 @@ export async function fetchAllArticles(locale: SupportedLocale = 'cs'): Promise<
   return Array.from(articlesBySlug.values())
 }
 
-export async function fetchArticleBySlug(slug: string, locale: SupportedLocale = 'cs'): Promise<Article | null> {
+export async function fetchArticleBySlug(slug: string, locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Article | null> {
   try {
-    const article = await sanityClient.fetch<SanityArticle | null>(
-      `*[_type == "article" && slug.current == $slug && locale == $locale][0]{${articleProjection}}`,
-      {slug, locale},
-    )
-    return article ? transformArticle(article) : null
+    const {data} = await loadQuery<SanityArticle | null>({
+      query: `*[_type == "article" && slug.current == $slug && locale == $locale][0]{${articleProjection}}`,
+      params: {slug, locale},
+      ...options,
+    })
+    return data ? transformArticle(data) : null
   } catch (error) {
     console.warn('Sanity fetch article by slug failed:', error)
     return null
   }
 }
 
-export async function fetchDestinations(locale: SupportedLocale = 'cs'): Promise<Destination[]> {
+export async function fetchDestinations(locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Destination[]> {
   try {
-    const destinations = await sanityClient.fetch<SanityCountry[]>(
-      `*[_type == "country" && locale == $locale] | order(name asc){${countryProjection}}`,
-      {locale},
-    )
-    return mapSafely(destinations, transformDestination, 'destinations')
+    const {data} = await loadQuery<SanityCountry[]>({
+      query: `*[_type == "country" && locale == $locale] | order(name asc){${countryProjection}}`,
+      params: {locale},
+      ...options,
+    })
+    return mapSafely(data, transformDestination, 'destinations')
   } catch (error) {
     console.warn('Sanity fetch destinations failed:', error)
     return []
   }
 }
 
-export async function fetchDestinationBySlug(slug: string, locale: SupportedLocale = 'cs'): Promise<Destination | null> {
+export async function fetchDestinationBySlug(slug: string, locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Destination | null> {
   try {
-    const destination = await sanityClient.fetch<SanityCountry | null>(
-      `*[_type == "country" && slug.current == $slug && locale == $locale][0]{${countryProjection}}`,
-      {slug, locale},
-    )
-    return destination ? transformDestination(destination) : null
+    const {data} = await loadQuery<SanityCountry | null>({
+      query: `*[_type == "country" && slug.current == $slug && locale == $locale][0]{${countryProjection}}`,
+      params: {slug, locale},
+      ...options,
+    })
+    return data ? transformDestination(data) : null
   } catch (error) {
     console.warn('Sanity fetch destination by slug failed:', error)
     return null
   }
 }
 
-export async function fetchDestinationsByContinent(continent: string, locale: SupportedLocale = 'cs'): Promise<Destination[]> {
-  const destinations = await fetchDestinations(locale)
+export async function fetchDestinationsByContinent(continent: string, locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Destination[]> {
+  const destinations = await fetchDestinations(locale, options)
   return destinations.filter((destination) => destination.continent === continent)
 }

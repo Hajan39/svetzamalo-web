@@ -7,13 +7,16 @@ import Layout from '@/layouts/Layout.astro';
 import { getFreeEbookDescription, getFreeEbookTitle, getPaidBookTitle, isFreeEbookEnabled, isPaidEbookEnabled } from '@/lib/bookConfig';
 import { getContinentLabel } from '@/lib/continentLabels';
 import { fetchArticlesPage, fetchDestinations, fetchLatestArticles, fetchSiteConfig } from '@/lib/content/api';
+import { getDraftModeProps } from '@/lib/sanity/draftMode';
 
-export const prerender = true;
+export const prerender = false;
+
+const sanityOptions = getDraftModeProps(Astro.cookies);
 
 const [articles, articlePage, destinations, siteConfig] = await Promise.all([
- fetchLatestArticles(9, 'cs'),
- fetchArticlesPage(1, 'cs'),
- fetchDestinations('cs'),
+	fetchLatestArticles(9, 'cs', sanityOptions),
+	fetchArticlesPage(1, 'cs', undefined, sanityOptions),
+	fetchDestinations('cs', sanityOptions),
 	fetchSiteConfig('cs'),
 ]);
 const freeEbookAvailable = isFreeEbookEnabled(siteConfig);

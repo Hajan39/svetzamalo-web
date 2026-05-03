@@ -4,18 +4,15 @@ import ArticleCard from '@/components/article/ArticleCard.astro';
 import DestinationLiveInfo from '@/components/destination/DestinationLiveInfo.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getContinentLabel } from '@/lib/continentLabels';
-import { fetchAllArticles, fetchDestinationBySlug, fetchDestinations } from '@/lib/content/api';
+import { fetchAllArticles, fetchDestinationBySlug } from '@/lib/content/api';
+import { getDraftModeProps } from '@/lib/sanity/draftMode';
 
-export const prerender = true;
+export const prerender = false;
 
-export async function getStaticPaths() {
-  const destinations = await fetchDestinations('cs');
-  return destinations.map((destination) => ({ params: { slug: destination.slug }, props: { destination } }));
-}
-
-const destination = Astro.props.destination ?? await fetchDestinationBySlug(Astro.params.slug || '', 'cs');
+const sanityOptions = getDraftModeProps(Astro.cookies);
+const destination = Astro.props.destination ?? await fetchDestinationBySlug(Astro.params.slug || '', 'cs', sanityOptions);
 if (!destination) return Astro.redirect('/destinations');
-const articles = (await fetchAllArticles('cs')).filter((article) => article.destinationId === destination.slug || article.countryName === destination.name);
+const articles = (await fetchAllArticles('cs', sanityOptions)).filter((article) => article.destinationId === destination.slug || article.countryName === destination.name);
 const relatedArticles = articles.map((article) => {
   if (article.coverImage || !destination.heroImage) return article;
 

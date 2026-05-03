@@ -5,18 +5,16 @@ import ArticleCard from '@/components/article/ArticleCard.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getContinentLabel } from '@/lib/continentLabels';
 import { fetchAllArticles, fetchArticleBySlug, fetchDestinations } from '@/lib/content/api';
+import { getDraftModeProps } from '@/lib/sanity/draftMode';
 
-export const prerender = true;
+export const prerender = false;
 
-export async function getStaticPaths() {
-  const articles = await fetchAllArticles('cs');
-  return articles.map((article) => ({ params: { slug: article.slug } }));
-}
+const sanityOptions = getDraftModeProps(Astro.cookies);
 
 const [article, destinations, allArticles] = await Promise.all([
-  fetchArticleBySlug(Astro.params.slug || '', 'cs'),
-  fetchDestinations('cs'),
-  fetchAllArticles('cs'),
+  fetchArticleBySlug(Astro.params.slug || '', 'cs', sanityOptions),
+  fetchDestinations('cs', sanityOptions),
+  fetchAllArticles('cs', sanityOptions),
 ]);
 if (!article) return Astro.redirect('/articles');
 

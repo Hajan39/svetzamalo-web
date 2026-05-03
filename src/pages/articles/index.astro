@@ -3,6 +3,7 @@ import ArticleCard from '@/components/article/ArticleCard.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getContinentLabel } from '@/lib/continentLabels';
 import { fetchAllArticles, fetchArticlesPage, fetchDestinations } from '@/lib/content/api';
+import { getDraftModeProps } from '@/lib/sanity/draftMode';
 import type { Article, Destination } from '@/types';
 
 export const prerender = false;
@@ -14,10 +15,11 @@ const selectedContinent = (Astro.url.searchParams.get('continent') || '').trim()
 const selectedType = (Astro.url.searchParams.get('type') || '').trim();
 const pageParam = Number(Astro.url.searchParams.get('page') || '1');
 const requestedPage = Number.isFinite(pageParam) && pageParam > 0 ? Math.floor(pageParam) : 1;
+const sanityOptions = getDraftModeProps(Astro.cookies);
 const [pageResult, allArticles, destinations] = await Promise.all([
-  fetchArticlesPage(requestedPage, 'cs'),
-  fetchAllArticles('cs'),
-  fetchDestinations('cs'),
+  fetchArticlesPage(requestedPage, 'cs', undefined, sanityOptions),
+  fetchAllArticles('cs', sanityOptions),
+  fetchDestinations('cs', sanityOptions),
 ]);
 const destinationBySlug = new Map(destinations.map((destination) => [destination.slug, destination]));
 const activeFilters = Boolean(normalizedSearchQuery || selectedDestination || selectedContinent || selectedType);

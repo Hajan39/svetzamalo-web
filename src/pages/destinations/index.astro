@@ -3,10 +3,12 @@ import DestinationCard from '@/components/destination/DestinationCard.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getContinentLabel } from '@/lib/continentLabels';
 import { fetchDestinations } from '@/lib/content/api';
+import { getDraftModeProps } from '@/lib/sanity/draftMode';
 
-export const prerender = true;
+export const prerender = false;
 
-const destinations = await fetchDestinations('cs');
+const sanityOptions = getDraftModeProps(Astro.cookies);
+const destinations = await fetchDestinations('cs', sanityOptions);
 const continents = Array.from(new Set(destinations.map((destination) => destination.continent))).sort((a, b) =>
   getContinentLabel(a).localeCompare(getContinentLabel(b), 'cs'),
 );
