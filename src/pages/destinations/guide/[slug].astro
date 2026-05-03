@@ -5,14 +5,24 @@ import DestinationLiveInfo from '@/components/destination/DestinationLiveInfo.as
 import Layout from '@/layouts/Layout.astro';
 import { getContinentLabel } from '@/lib/continentLabels';
 import { fetchAllArticles, fetchDestinationBySlug } from '@/lib/content/api';
+import { translations } from '@/i18n/translations';
+import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
 import { getDraftModeProps } from '@/lib/sanity/draftMode';
 
 export const prerender = false;
 
 const sanityOptions = getDraftModeProps(Astro.cookies);
-const destination = Astro.props.destination ?? await fetchDestinationBySlug(Astro.params.slug || '', 'cs', sanityOptions);
-if (!destination) return Astro.redirect('/destinations');
-const articles = (await fetchAllArticles('cs', sanityOptions)).filter((article) => article.destinationId === destination.slug || article.countryName === destination.name);
+const locale = getLocaleFromAstro(Astro);
+let destination = Astro.props.destination ?? await fetchDestinationBySlug(Astro.params.slug || '', locale, sanityOptions);
+if (!destination && locale === 'en') {
+  destination = await fetchDestinationBySlug(Astro.params.slug || '', 'cs', sanityOptions);
+}
+if (!destination) return Astro.redirect(withLocalePath('/destinations', locale));
+let allArticles = await fetchAllArticles(locale, sanityOptions);
+if (locale === 'en' && allArticles.length === 0) {
+  allArticles = await fetchAllArticles('cs', sanityOptions);
+}
+const articles = allArticles.filter((article) => article.destinationId === destination.slug || article.countryName === destination.name);
 const relatedArticles = articles.map((article) => {
   if (article.coverImage || !destination.heroImage) return article;
 
@@ -24,10 +34,11 @@ const relatedArticles = articles.map((article) => {
     },
   };
 });
-const continentLabel = getContinentLabel(destination.continent);
+const continentLabel = getContinentLabel(destination.continent, locale);
+const text = translations[locale].pages.destinationGuide;
 
 function splitIntoChapters(html: string | undefined): string[] {
-  const fallback = '<p>Průvodce destinací se připravuje.</p>';
+  const fallback = text.fallback;
   const content = html?.trim() || fallback;
   const headings = Array.from(content.matchAll(/<h2\b[^>]*>[\s\S]*?<\/h2>/gi));
 
@@ -53,18 +64,17 @@ function splitIntoChapters(html: string | undefined): string[] {
 const chapters = splitIntoChapters(destination.introHtml);
 ---
 
-<Layout title={destination.seo.metaTitle} description={destination.seo.metaDescription} canonicalPath={`/destinations/guide/${destination.slug}`}>
+<Layout title={destination.seo.metaTitle} description={destination.seo.metaDescription} canonicalPath={withLocalePath(`/destinations/guide/${destination.slug}`, locale)}>
   <section class="container-narrow py-10 md:py-16">
-    <a href="/destinations" class="mb-6 inline-flex text-sm font-semibold">Zpět na destinace</a>
+    <a href={withLocalePath('/destinations', locale)} class="mb-6 inline-flex text-sm font-semibold">{text.back}</a>
     <header class="mb-8">
       <div class="mb-3 flex items-center gap-3">
         {destination.flagEmoji && <span class="text-3xl">{destination.flagEmoji}</span>}
         <span class="rounded-full bg-primary-light px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">{continentLabel}</span>
       </div>
       <h1 class="mb-4">{destination.name}</h1>
-      <p>{destination.seo.metaDescription}</p>
     </header>
-    {destination.heroImage && <Image src={destination.heroImage.src} alt={destination.heroImage.alt || destination.name} width={900} height={506} class="mb-8 aspect-[16/9] w-full rounded-xl object-cover" loading="eager" />}
+    {destination.heroImage && <Image src={destination.heroImage.src} alt={destination.heroImage.alt || destination.name} width={900} height={506} class="mb-8 aspect-video w-full rounded-xl object-cover" loading="eager" />}
     <DestinationLiveInfo
       currencyCode={destination.currency?.code}
       timezone={destination.timezone}
@@ -77,9 +87,9 @@ const chapters = splitIntoChapters(destination.introHtml);
   </section>
 
   <section class="container-wide pb-12 md:pb-16">
-    <h2 class="mb-6">Související články</h2>
+    <h2 class="mb-6">{text.related}</h2>
     {relatedArticles.length === 0 ? (
-      <div class="brand-card p-8 text-center text-foreground-secondary">Zatím tu nejsou žádné související články.</div>
+      <div class="brand-card p-8 text-center text-foreground-secondary">{text.emptyRelated}</div>
     ) : (
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {relatedArticles.map((article) => <ArticleCard article={article} variant="block" />)}

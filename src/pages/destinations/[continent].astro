@@ -3,25 +3,32 @@ import DestinationCard from '@/components/destination/DestinationCard.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getContinentLabel } from '@/lib/continentLabels';
 import { fetchDestinationsByContinent } from '@/lib/content/api';
+import { translations } from '@/i18n/translations';
+import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
 import { getDraftModeProps } from '@/lib/sanity/draftMode';
 
 export const prerender = false;
 
 const continent = Astro.params.continent || '';
+const locale = getLocaleFromAstro(Astro);
 const sanityOptions = getDraftModeProps(Astro.cookies);
-const destinations = await fetchDestinationsByContinent(continent, 'cs', sanityOptions);
-const continentTitle = getContinentLabel(continent);
+let destinations = await fetchDestinationsByContinent(continent, locale, sanityOptions);
+if (locale === 'en' && destinations.length === 0) {
+  destinations = await fetchDestinationsByContinent(continent, 'cs', sanityOptions);
+}
+const continentTitle = getContinentLabel(continent, locale);
+const text = translations[locale].pages.destinationContinent;
 ---
 
-<Layout title={`${continentTitle} | Destinace | Svět za málo`} description={`Lowcost destinace v oblasti ${continentTitle}.`} canonicalPath={`/destinations/${continent}`}>
+<Layout title={text.title(continentTitle)} description={text.description(continentTitle)} canonicalPath={withLocalePath(`/destinations/${continent}`, locale)}>
   <section class="container-wide py-10 md:py-16">
-    <a href="/destinations" class="mb-6 inline-flex text-sm font-semibold">Zpět na destinace</a>
+    <a href={withLocalePath('/destinations', locale)} class="mb-6 inline-flex text-sm font-semibold">{text.back}</a>
     <header class="mb-8 max-w-2xl">
       <h1 class="mb-4">{continentTitle}</h1>
-      <p>Průvodce destinacemi podle kontinentu.</p>
+      <p>{text.intro}</p>
     </header>
     {destinations.length === 0 ? (
-      <div class="brand-card p-8 text-center text-foreground-secondary">Pro tuto oblast zatím nejsou žádné destinace.</div>
+      <div class="brand-card p-8 text-center text-foreground-secondary">{text.empty}</div>
     ) : (
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {destinations.map((destination) => <DestinationCard destination={destination} />)}

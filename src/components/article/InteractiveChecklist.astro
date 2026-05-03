@@ -4,7 +4,12 @@ interface Props {
   htmlContent: string;
 }
 
+import { translations } from '@/i18n/translations';
+import { getLangFromUrl } from '@/i18n/utils';
+
 const { slug, htmlContent } = Astro.props;
+const locale = getLangFromUrl(Astro.url);
+const text = translations[locale].components.interactiveChecklist;
 let itemIndex = 0;
 
 function escapeAttr(value: string) {
@@ -50,13 +55,18 @@ function renderChecklistItems(itemsHtml: string) {
 const checklistHtml = htmlContent.replace(/<(ul|ol)>([\s\S]*?)<\/\1>/g, (_match, _tag, listHtml: string) => renderChecklistItems(listHtml));
 ---
 
-<section class="interactive-checklist" data-checklist-root data-checklist-key={`article-checklist:${slug}`}>
+<section
+  class="interactive-checklist"
+  data-checklist-root
+  data-checklist-key={`article-checklist:${slug}`}
+  data-progress-template={text.progressTemplate(999, 1000).replace('999', '{done}').replace('1000', '{total}')}
+>
   <div class="interactive-checklist-toolbar" aria-live="polite">
     <div>
-      <span class="interactive-checklist-kicker">Checklist</span>
-      <strong data-checklist-progress>0 z 0 hotovo</strong>
+      <span class="interactive-checklist-kicker">{text.title}</span>
+      <strong data-checklist-progress>{text.progress}</strong>
     </div>
-    <button class="btn-secondary" type="button" data-checklist-reset>Resetovat</button>
+    <button class="btn-secondary" type="button" data-checklist-reset>{text.reset}</button>
   </div>
   <div class="prose-content" set:html={checklistHtml}></div>
 </section>
@@ -65,12 +75,14 @@ const checklistHtml = htmlContent.replace(/<(ul|ol)>([\s\S]*?)<\/\1>/g, (_match,
   const roots = document.querySelectorAll<HTMLElement>('[data-checklist-root]');
 
   roots.forEach((root) => {
+    const progressTemplate = root.dataset.progressTemplate;
+
     const storageKey = root.dataset.checklistKey;
     const inputs = Array.from(root.querySelectorAll<HTMLInputElement>('input[type="checkbox"]'));
     const progress = root.querySelector<HTMLElement>('[data-checklist-progress]');
     const resetButton = root.querySelector<HTMLButtonElement>('[data-checklist-reset]');
 
-    if (!storageKey || !inputs.length || !progress) return;
+    if (!storageKey || !inputs.length || !progress || !progressTemplate) return;
 
     const readSavedItems = () => {
       try {
@@ -88,7 +100,7 @@ const checklistHtml = htmlContent.replace(/<(ul|ol)>([\s\S]*?)<\/\1>/g, (_match,
 
     const updateProgress = () => {
       const checkedCount = inputs.filter((input) => input.checked).length;
-      progress.textContent = `${checkedCount} z ${inputs.length} hotovo`;
+      progress.textContent = progressTemplate.replace('{done}', String(checkedCount)).replace('{total}', String(inputs.length));
       root.style.setProperty('--checklist-progress', `${Math.round((checkedCount / inputs.length) * 100)}%`);
     };
 

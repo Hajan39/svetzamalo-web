@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import type { Destination } from '@/types';
 import { getContinentLabel } from '@/lib/continentLabels';
+import { getLangFromUrl, withLocalePath } from '@/i18n/utils';
 
 interface Props {
   destination: Destination;
@@ -9,17 +10,18 @@ interface Props {
 
 const { destination } = Astro.props;
 const cover = destination.heroImage;
-const continentLabel = getContinentLabel(destination.continent);
+const locale = getLangFromUrl(Astro.url);
+const continentLabel = getContinentLabel(destination.continent, locale);
 ---
 
-<a href={`/destinations/guide/${destination.slug}`} class="group block overflow-hidden rounded-lg bg-background hover:no-underline">
-  <div class="relative aspect-[4/3] overflow-hidden bg-background-secondary">
+<a href={withLocalePath(`/destinations/guide/${destination.slug}`, locale)} class="group block overflow-hidden rounded-lg bg-background hover:no-underline">
+  <div class="relative aspect-4/3 overflow-hidden bg-background-secondary">
     {cover ? (
       <Image src={cover.src} alt={cover.alt || destination.name} width={600} height={450} class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
     ) : (
       <div class="flex h-full w-full items-center justify-center bg-primary-light text-primary">{destination.name}</div>
     )}
-    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+    <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent"></div>
     <div class="absolute inset-0 flex flex-col justify-end p-4">
       <div class="mb-1 flex items-center gap-2">
         {destination.flagEmoji && <span class="text-xl">{destination.flagEmoji}</span>}

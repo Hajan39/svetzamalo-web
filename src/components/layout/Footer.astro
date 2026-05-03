@@ -1,18 +1,21 @@
 ---
 import BrandLogo from './BrandLogo.astro';
 import { fetchSiteConfig } from '@/lib/content/api';
+import { getLangFromUrl, useTranslations, withLocalePath } from '@/i18n/utils';
 
-const siteConfig = await fetchSiteConfig('cs');
+const locale = getLangFromUrl(Astro.url);
+const t = useTranslations(locale);
+const siteConfig = await fetchSiteConfig(locale);
 const year = new Date().getFullYear();
 const siteEmail = siteConfig?.siteEmail || 'info@svetzamalo.cz';
 const mainLinks = [
-  { label: 'Destinace', href: '/destinations' },
-  { label: 'Články', href: '/articles' },
-  { label: 'O nás', href: '/about' },
+  { label: t('footer.destinations'), href: withLocalePath('/destinations', locale) },
+  { label: t('footer.articles'), href: withLocalePath('/articles', locale) },
+  { label: t('footer.about'), href: withLocalePath('/about', locale) },
 ];
 const legalLinks = [
-  { label: 'Soukromí', href: '/privacy' },
-  { label: 'Podmínky', href: '/terms' },
+  { label: t('footer.privacy'), href: withLocalePath('/privacy', locale) },
+  { label: t('footer.terms'), href: withLocalePath('/terms', locale) },
 ];
 ---
 
@@ -20,15 +23,15 @@ const legalLinks = [
   <div class="container-wide py-12 lg:py-16">
     <div class="grid grid-cols-1 gap-10 lg:grid-cols-12">
       <div class="lg:col-span-5">
-        <a href="/" class="mb-4 inline-flex hover:no-underline">
+        <a href={withLocalePath('/', locale)} class="mb-4 inline-flex hover:no-underline">
           <BrandLogo markClass="h-12 w-10" />
         </a>
-        <p class="mb-6 max-w-sm text-sm leading-relaxed text-foreground-secondary">Praktické průvodce, rozpočty a tipy pro cestování, které dává smysl i bez velkého rozpočtu.</p>
+        <p class="mb-6 max-w-sm text-sm leading-relaxed text-foreground-secondary">{t('footer.tagline')}</p>
         <p class="text-sm text-foreground-muted">{siteEmail}</p>
       </div>
 
       <div class="lg:col-span-3">
-        <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">Prozkoumat</h2>
+        <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">{t('footer.explore')}</h2>
         <ul class="space-y-3">
           {mainLinks.map((link) => (
             <li><a href={link.href} class="text-sm text-foreground-secondary hover:text-primary">{link.label}</a></li>
@@ -37,21 +40,21 @@ const legalLinks = [
       </div>
 
       <div class="lg:col-span-4">
-        <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">Tipy na cesty do emailu</h2>
+        <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">{t('footer.tipsToEmail')}</h2>
         <form class="mb-4 flex gap-2" method="post" action="/api/leads">
           <input type="hidden" name="leadType" value="newsletter" />
           <input type="hidden" name="source" value="footer" />
-          <input class="form-field flex-1 text-sm" type="email" name="email" placeholder="Tvůj email" required />
-          <button class="btn-primary px-5 text-sm" type="submit">Odebírat</button>
+          <input class="form-field flex-1 text-sm" type="email" name="email" placeholder={t('footer.emailPlaceholder')} required />
+          <button class="btn-primary px-5 text-sm" type="submit">{t('footer.subscribe')}</button>
         </form>
-        <p class="text-xs text-foreground-muted">Žádný spam. Jen praktické cestovatelské tipy.</p>
+        <p class="text-xs text-foreground-muted">{t('footer.noSpam')}</p>
       </div>
     </div>
   </div>
 
   <div class="border-t border-border">
     <div class="container-wide flex flex-col items-center justify-between gap-4 py-6 sm:flex-row">
-      <p class="text-xs text-foreground-muted">© {year} Svět za málo</p>
+      <p class="text-xs text-foreground-muted">© {year} {t('footer.brandName')}</p>
       <div class="flex gap-6">
         {legalLinks.map((link) => (
           <a href={link.href} class="text-xs text-foreground-muted hover:text-primary">{link.label}</a>

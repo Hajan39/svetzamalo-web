@@ -3,6 +3,8 @@ import ArticleCard from '@/components/article/ArticleCard.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getContinentLabel } from '@/lib/continentLabels';
 import { fetchAllArticles, fetchArticlesPage, fetchDestinations } from '@/lib/content/api';
+import { translations } from '@/i18n/translations';
+import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
 import { getDraftModeProps } from '@/lib/sanity/draftMode';
 import type { Article, Destination } from '@/types';
 
@@ -15,12 +17,22 @@ const selectedContinent = (Astro.url.searchParams.get('continent') || '').trim()
 const selectedType = (Astro.url.searchParams.get('type') || '').trim();
 const pageParam = Number(Astro.url.searchParams.get('page') || '1');
 const requestedPage = Number.isFinite(pageParam) && pageParam > 0 ? Math.floor(pageParam) : 1;
+const locale = getLocaleFromAstro(Astro);
+const text = translations[locale].pages.articlesIndex;
+const localeTag = translations[locale].shared.localeTag;
 const sanityOptions = getDraftModeProps(Astro.cookies);
-const [pageResult, allArticles, destinations] = await Promise.all([
-  fetchArticlesPage(requestedPage, 'cs', undefined, sanityOptions),
-  fetchAllArticles('cs', sanityOptions),
-  fetchDestinations('cs', sanityOptions),
+let [pageResult, allArticles, destinations] = await Promise.all([
+  fetchArticlesPage(requestedPage, locale, undefined, sanityOptions),
+  fetchAllArticles(locale, sanityOptions),
+  fetchDestinations(locale, sanityOptions),
 ]);
+if (locale === 'en' && pageResult.total === 0 && allArticles.length === 0) {
+  [pageResult, allArticles, destinations] = await Promise.all([
+    fetchArticlesPage(requestedPage, 'cs', undefined, sanityOptions),
+    fetchAllArticles('cs', sanityOptions),
+    fetchDestinations('cs', sanityOptions),
+  ]);
+}
 const destinationBySlug = new Map(destinations.map((destination) => [destination.slug, destination]));
 const activeFilters = Boolean(normalizedSearchQuery || selectedDestination || selectedContinent || selectedType);
 const articles = activeFilters ? allArticles : pageResult.articles;
@@ -45,11 +57,11 @@ const hasNextPage = currentPage < pageCount;
 const articleDestinationSlugs = new Set(allArticles.map((article) => article.destinationId).filter(Boolean));
 const destinationOptions = destinations
   .filter((destination) => articleDestinationSlugs.has(destination.slug))
-  .sort((first, second) => first.name.localeCompare(second.name, 'cs'));
+  .sort((first, second) => first.name.localeCompare(second.name, localeTag));
 const continentOptions = Array.from(new Set(destinationOptions.map((destination) => destination.continent)))
-  .sort((first, second) => getContinentLabel(first).localeCompare(getContinentLabel(second), 'cs'));
+  .sort((first, second) => getContinentLabel(first, locale).localeCompare(getContinentLabel(second, locale), localeTag));
 const typeOptions = Array.from(new Set(allArticles.map((article) => article.articleType).filter(Boolean)))
-  .sort((first, second) => getArticleTypeLabel(first || '').localeCompare(getArticleTypeLabel(second || ''), 'cs'));
+  .sort((first, second) => getArticleTypeLabel(first || '').localeCompare(getArticleTypeLabel(second || ''), localeTag));
 
 function normalizeSearchText(value: string) {
   return value
@@ -85,7 +97,7 @@ function articleMatchesFilters(
     article.articleType,
     article.countryName,
     destination?.name,
-    destination ? getContinentLabel(destination.continent) : undefined,
+    destination ? getContinentLabel(destination.continent, locale) : undefined,
     article.seo.metaTitle,
     article.seo.metaDescription,
     ...(article.tags || []),
@@ -110,41 +122,42 @@ function getArticlesPageHref(page: number) {
   if (page > 1) params.set('page', String(page));
 
   const query = params.toString();
-  return query ? `/articles?${query}` : '/articles';
+  const basePath = withLocalePath('/articles', locale);
+  return query ? `${basePath}?${query}` : basePath;
 }
 ---
 
-<Layout title="Články | Svět za málo" description="Praktické články a cestovatelské průvodce pro lowcost cestování." canonicalPath="/articles">
+<Layout title={text.title} description={text.description} canonicalPath={withLocalePath('/articles', locale)}>
   <section class="container-wide py-10 md:py-16">
     <header class="mb-8 max-w-2xl">
-      <h1 class="mb-4">Články</h1>
-      <p>Průvodce, rozpočty a praktické tipy pro plánování cest.</p>
+      <h1 class="mb-4">{text.heading}</h1>
+      <p>{text.intro}</p>
     </header>
     {pageResult.total === 0 ? (
-      <div class="brand-card p-8 text-center text-foreground-secondary">Ve Strapi zatím nejsou žádné články.</div>
+      <div class="brand-card p-8 text-center text-foreground-secondary">{text.cmsEmpty}</div>
     ) : (
       <>
-        <form action="/articles" method="get" class="article-filters mb-6">
+        <form action={withLocalePath('/articles', locale)} method="get" class="article-filters mb-6">
           <div class="article-filters-grid">
             <label class="article-filter-field" for="articles-search">
-              <span>Hledat</span>
-              <input id="articles-search" name="q" class="form-field" type="search" value={searchQuery} placeholder="Destinace, téma nebo rozpočet" />
+              <span>{text.search}</span>
+              <input id="articles-search" name="q" class="form-field" type="search" value={searchQuery} placeholder={text.searchPlaceholder} />
             </label>
 
             <label class="article-filter-field" for="articles-continent">
-              <span>Kontinent</span>
+              <span>{text.continent}</span>
               <select id="articles-continent" name="continent" class="form-field">
-                <option value="">Všechny kontinenty</option>
+                <option value="">{text.allContinents}</option>
                 {continentOptions.map((continent) => (
-                  <option value={continent} selected={selectedContinent === continent}>{getContinentLabel(continent)}</option>
+                  <option value={continent} selected={selectedContinent === continent}>{getContinentLabel(continent, locale)}</option>
                 ))}
               </select>
             </label>
 
             <label class="article-filter-field" for="articles-destination">
-              <span>Destinace</span>
+              <span>{text.destination}</span>
               <select id="articles-destination" name="destination" class="form-field">
-                <option value="">Všechny destinace</option>
+                <option value="">{text.allDestinations}</option>
                 {destinationOptions.map((destination) => (
                   <option value={destination.slug} selected={selectedDestination === destination.slug}>{destination.name}</option>
                 ))}
@@ -152,9 +165,9 @@ function getArticlesPageHref(page: number) {
             </label>
 
             <label class="article-filter-field" for="articles-type">
-              <span>Typ</span>
+              <span>{text.type}</span>
               <select id="articles-type" name="type" class="form-field">
-                <option value="">Všechny typy</option>
+                <option value="">{text.allTypes}</option>
                 {typeOptions.map((type) => (
                   <option value={type} selected={selectedType === type}>{getArticleTypeLabel(type || '')}</option>
                 ))}
@@ -163,17 +176,17 @@ function getArticlesPageHref(page: number) {
           </div>
 
           <div class="article-filter-actions">
-            <button type="submit" class="btn-primary shrink-0">Filtrovat</button>
-            {activeFilters && <a href="/articles" class="btn-secondary shrink-0 text-center hover:no-underline">Zrušit filtry</a>}
+            <button type="submit" class="btn-primary shrink-0">{text.filter}</button>
+            {activeFilters && <a href={withLocalePath('/articles', locale)} class="btn-secondary shrink-0 text-center hover:no-underline">{text.clearFilters}</a>}
           </div>
         </form>
 
         <p class="mb-6 text-sm text-foreground-muted">
-          {activeFilters ? `Nalezeno článků podle filtrů: ${visibleTotal}` : `Nalezeno článků: ${visibleTotal}`}
+          {activeFilters ? text.foundWithFilters(visibleTotal) : text.found(visibleTotal)}
         </p>
 
         {visibleArticles.length === 0 ? (
-          <div class="brand-card p-8 text-center text-foreground-secondary">Pro tento dotaz jsme nenašli žádné články.</div>
+          <div class="brand-card p-8 text-center text-foreground-secondary">{text.noResults}</div>
         ) : (
           <>
             <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -181,10 +194,10 @@ function getArticlesPageHref(page: number) {
             </div>
 
             {pageCount > 1 && (
-              <nav class="pagination" aria-label="Stránkování článků">
-                {hasPreviousPage ? <a class="btn-secondary" href={getArticlesPageHref(currentPage - 1)}>Novější články</a> : <span />}
-                <span>Strana {currentPage} z {pageCount}</span>
-                {hasNextPage ? <a class="btn-secondary" href={getArticlesPageHref(currentPage + 1)}>Starší články</a> : <span />}
+              <nav class="pagination" aria-label={text.paginationLabel}>
+                {hasPreviousPage ? <a class="btn-secondary" href={getArticlesPageHref(currentPage - 1)}>{text.newer}</a> : <span />}
+                <span>{text.page(currentPage, pageCount)}</span>
+                {hasNextPage ? <a class="btn-secondary" href={getArticlesPageHref(currentPage + 1)}>{text.older}</a> : <span />}
               </nav>
             )}
           </>

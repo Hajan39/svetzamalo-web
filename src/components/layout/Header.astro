@@ -2,33 +2,57 @@
 import BrandLogo from './BrandLogo.astro';
 import { isBookPageEnabled } from '@/lib/bookConfig';
 import { fetchSiteConfig } from '@/lib/content/api';
+import { languageSwitcherEnabled, languages } from '@/i18n/ui';
+import { getLangFromUrl, switchLocalePath, useTranslations, withLocalePath } from '@/i18n/utils';
 
-const siteConfig = await fetchSiteConfig('cs');
+const locale = getLangFromUrl(Astro.url);
+const t = useTranslations(locale);
+const siteConfig = await fetchSiteConfig(locale);
 const isBookAvailable = isBookPageEnabled(siteConfig);
 
 const navItems = [
-  { label: 'Domů', href: '/', description: 'Úvodní stránka a nejnovější tipy' },
-  { label: 'Destinace', href: '/destinations', description: 'Průvodci podle zemí a regionů' },
-  { label: 'Články', href: '/articles', description: 'Praktické lowcost návody a inspirace' },
-  ...(isBookAvailable ? [{ label: 'Ebook', href: '/book', description: 'Checklisty, PDF průvodci a placená kniha' }] : []),
-  { label: 'O nás', href: '/about', description: 'Kdo jsme, přednášky a spolupráce' },
+  {
+    label: t('header.home'),
+    href: withLocalePath('/', locale),
+    description: t('header.navDescHome'),
+  },
+  {
+    label: t('header.destinations'),
+    href: withLocalePath('/destinations', locale),
+    description: t('header.navDescDestinations'),
+  },
+  {
+    label: t('header.articles'),
+    href: withLocalePath('/articles', locale),
+    description: t('header.navDescArticles'),
+  },
+  ...(isBookAvailable ? [{
+    label: t('header.ebook'),
+    href: withLocalePath('/book', locale),
+    description: t('header.navDescEbook'),
+  }] : []),
+  {
+    label: t('header.about'),
+    href: withLocalePath('/about', locale),
+    description: t('header.navDescAbout'),
+  },
 ];
 
 const currentPath = `${Astro.url.pathname}${Astro.url.search}`;
 const languageItems = [
-  { label: 'Čeština', shortLabel: 'CS', flag: '🇨🇿', href: currentPath, active: true, disabled: false },
-  { label: 'English', shortLabel: 'EN', flag: '🇬🇧', href: '', active: false, disabled: true },
+  { label: languages.cs, shortLabel: 'CS', flag: '🇨🇿', href: switchLocalePath(currentPath, 'cs'), active: locale === 'cs', disabled: false },
+  { label: languages.en, shortLabel: 'EN', flag: '🇬🇧', href: switchLocalePath(currentPath, 'en'), active: locale === 'en', disabled: false },
 ];
 ---
 
 <header class="sticky top-0 z-50 border-b border-border bg-white/92 backdrop-blur-md">
   <div class="container-wide">
     <div class="flex h-16 items-center justify-between gap-3 lg:h-20">
-      <a href="/" class="inline-flex items-center hover:no-underline" aria-label="Svět za málo - domů">
+      <a href={withLocalePath('/', locale)} class="inline-flex items-center hover:no-underline" aria-label={t('header.logoHome')}>
         <BrandLogo markClass="h-11 w-10 lg:h-12 lg:w-11" textClass="hidden sm:flex" />
       </a>
 
-      <nav class="hidden items-center rounded-full border border-border bg-background-secondary/80 p-1 lg:flex" aria-label="Hlavní navigace">
+      <nav class="hidden items-center rounded-full border border-border bg-background-secondary/80 p-1 lg:flex" aria-label={t('header.navLabel')}>
         {navItems.map((item) => (
           <a href={item.href} class="rounded-full px-4 py-2 text-sm font-medium text-foreground-secondary transition-colors hover:bg-white hover:text-primary hover:no-underline">{item.label}</a>
         ))}
@@ -37,58 +61,60 @@ const languageItems = [
       <div class="flex items-center gap-2 rounded-full border border-border bg-background px-2 py-1 shadow-sm">
         <div class="hidden items-center gap-2 md:flex">
           <div class="header-currency-picker" data-currency-picker>
-            <button type="button" class="currency-picker-trigger" data-currency-trigger aria-label="Měna pro kurzy" aria-haspopup="listbox" aria-expanded="false">
+            <button type="button" class="currency-picker-trigger" data-currency-trigger aria-label={t('header.currencyLabel')} aria-haspopup="listbox" aria-expanded="false">
               <span data-currency-code>CZK</span>
               <svg aria-hidden="true" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"></path></svg>
             </button>
-            <div class="currency-picker-menu hidden" data-currency-menu role="listbox" aria-label="Měna pro kurzy">
-              <p class="currency-picker-status" data-currency-status>Načítám měny...</p>
+            <div class="currency-picker-menu hidden" data-currency-menu role="listbox" aria-label={t('header.currencyLabel')}>
+              <p class="currency-picker-status" data-currency-status>{t('header.loadingCurrencies')}</p>
             </div>
           </div>
-          <nav class="flex h-10 items-center rounded-full border border-border bg-background-secondary p-1" aria-label="Jazyk">
-            {languageItems.map((language) => (
-              language.disabled ? (
-                <button
-                  type="button"
-                  class="inline-flex h-8 cursor-not-allowed items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold text-foreground-muted opacity-60"
-                  aria-label={`${language.label} bude dostupná později`}
-                  disabled
-                >
-                  <span class="text-base leading-none" aria-hidden="true">{language.flag}</span>
-                  <span>{language.shortLabel}</span>
-                </button>
-              ) : (
-                <a
-                  href={language.href}
-                  class:list={[
-                    'inline-flex h-8 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold transition hover:no-underline',
-                    language.active ? 'bg-white text-primary shadow-sm' : 'text-foreground-muted hover:bg-white/80 hover:text-primary',
-                  ]}
-                  aria-current={language.active ? 'true' : undefined}
-                  aria-label={language.label}
-                >
-                  <span class="text-base leading-none" aria-hidden="true">{language.flag}</span>
-                  <span>{language.shortLabel}</span>
-                </a>
-              )
-            ))}
-          </nav>
+          {languageSwitcherEnabled && (
+            <nav class="flex h-10 items-center rounded-full border border-border bg-background-secondary p-1" aria-label={t('header.languageLabel')}>
+              {languageItems.map((language) => (
+                language.disabled ? (
+                  <button
+                    type="button"
+                    class="inline-flex h-8 cursor-not-allowed items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold text-foreground-muted opacity-60"
+                    aria-label={language.label}
+                    disabled
+                  >
+                    <span class="text-base leading-none" aria-hidden="true">{language.flag}</span>
+                    <span>{language.shortLabel}</span>
+                  </button>
+                ) : (
+                  <a
+                    href={language.href}
+                    class:list={[
+                      'inline-flex h-8 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold transition hover:no-underline',
+                      language.active ? 'bg-white text-primary shadow-sm' : 'text-foreground-muted hover:bg-white/80 hover:text-primary',
+                    ]}
+                    aria-current={language.active ? 'true' : undefined}
+                    aria-label={language.label}
+                  >
+                    <span class="text-base leading-none" aria-hidden="true">{language.flag}</span>
+                    <span>{language.shortLabel}</span>
+                  </a>
+                )
+              ))}
+            </nav>
+          )}
           <button type="button" class="inline-flex h-10 min-w-52 items-center gap-2 rounded-full border border-border bg-background-secondary px-4 text-left text-sm text-foreground-muted transition hover:border-primary/40 hover:text-primary" data-open-search>
             <svg aria-hidden="true" class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
-            <span>Hledat články...</span>
+            <span>{t('header.searchPlaceholder')}</span>
           </button>
         </div>
-        <button type="button" class="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background-secondary text-foreground-secondary hover:border-primary/40 hover:text-primary md:hidden" aria-label="Hledat" data-open-search>
+        <button type="button" class="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background-secondary text-foreground-secondary hover:border-primary/40 hover:text-primary md:hidden" aria-label={t('header.searchLabel')} data-open-search>
           <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
         </button>
         <details class="group relative lg:hidden">
-          <summary class="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-full text-foreground-secondary hover:bg-primary-light hover:text-primary" aria-label="Otevřít menu">
-            <span class="sr-only">Menu</span>
+          <summary class="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-full text-foreground-secondary hover:bg-primary-light hover:text-primary" aria-label={t('header.openMenu')}>
+            <span class="sr-only">{t('header.menu')}</span>
             <svg aria-hidden="true" class="h-5 w-5 group-open:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
             <svg aria-hidden="true" class="hidden h-5 w-5 group-open:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"></path></svg>
           </summary>
           <div class="absolute right-0 mt-3 w-[min(20rem,calc(100vw-2rem))] rounded-xl border border-border bg-white p-2 shadow-card">
-            <nav class="flex flex-col gap-1" aria-label="Mobilní navigace">
+            <nav class="flex flex-col gap-1" aria-label={t('header.mobileNavLabel')}>
               {navItems.map((item) => (
                 <a href={item.href} class="rounded-lg px-4 py-3 text-sm hover:bg-background-secondary hover:no-underline">
                   <span class="block font-semibold text-foreground">{item.label}</span>
@@ -98,43 +124,45 @@ const languageItems = [
             </nav>
             <div class="mt-2 border-t border-border pt-2 md:hidden">
               <div class="mobile-currency-control" data-currency-picker>
-                <span>Měna pro kurzy</span>
-                <button type="button" class="currency-picker-trigger" data-currency-trigger aria-label="Měna pro kurzy" aria-haspopup="listbox" aria-expanded="false">
+                <span>{t('header.currencyLabel')}</span>
+                <button type="button" class="currency-picker-trigger" data-currency-trigger aria-label={t('header.currencyLabel')} aria-haspopup="listbox" aria-expanded="false">
                   <span data-currency-code>CZK</span>
                   <svg aria-hidden="true" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"></path></svg>
                 </button>
-                <div class="currency-picker-menu hidden" data-currency-menu role="listbox" aria-label="Měna pro kurzy">
-                  <p class="currency-picker-status" data-currency-status>Načítám měny...</p>
+                <div class="currency-picker-menu hidden" data-currency-menu role="listbox" aria-label={t('header.currencyLabel')}>
+                  <p class="currency-picker-status" data-currency-status>{t('header.loadingCurrencies')}</p>
                 </div>
               </div>
-              <nav class="grid grid-cols-2 gap-2" aria-label="Jazyk">
-                {languageItems.map((language) => (
-                  language.disabled ? (
-                    <button
-                      type="button"
-                      class="flex cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-border bg-background-secondary px-3 py-2 text-sm font-semibold text-foreground-muted opacity-60"
-                      aria-label={`${language.label} bude dostupná později`}
-                      disabled
-                    >
-                      <span class="text-lg leading-none" aria-hidden="true">{language.flag}</span>
-                      <span>{language.shortLabel}</span>
-                    </button>
-                  ) : (
-                    <a
-                      href={language.href}
-                      class:list={[
-                        'flex items-center justify-center gap-2 rounded-lg border px-3 py-2 text-sm font-semibold hover:no-underline',
-                        language.active ? 'border-primary bg-primary-light text-primary' : 'border-border bg-background-secondary text-foreground-secondary hover:border-primary/30 hover:text-primary',
-                      ]}
-                      aria-current={language.active ? 'true' : undefined}
-                      aria-label={language.label}
-                    >
-                      <span class="text-lg leading-none" aria-hidden="true">{language.flag}</span>
-                      <span>{language.shortLabel}</span>
-                    </a>
-                  )
-                ))}
-              </nav>
+              {languageSwitcherEnabled && (
+                <nav class="grid grid-cols-2 gap-2" aria-label={t('header.languageLabel')}>
+                  {languageItems.map((language) => (
+                    language.disabled ? (
+                      <button
+                        type="button"
+                        class="flex cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-border bg-background-secondary px-3 py-2 text-sm font-semibold text-foreground-muted opacity-60"
+                        aria-label={language.label}
+                        disabled
+                      >
+                        <span class="text-lg leading-none" aria-hidden="true">{language.flag}</span>
+                        <span>{language.shortLabel}</span>
+                      </button>
+                    ) : (
+                      <a
+                        href={language.href}
+                        class:list={[
+                          'flex items-center justify-center gap-2 rounded-lg border px-3 py-2 text-sm font-semibold hover:no-underline',
+                          language.active ? 'border-primary bg-primary-light text-primary' : 'border-border bg-background-secondary text-foreground-secondary hover:border-primary/30 hover:text-primary',
+                        ]}
+                        aria-current={language.active ? 'true' : undefined}
+                        aria-label={language.label}
+                      >
+                        <span class="text-lg leading-none" aria-hidden="true">{language.flag}</span>
+                        <span>{language.shortLabel}</span>
+                      </a>
+                    )
+                  ))}
+                </nav>
+              )}
             </div>
           </div>
         </details>
@@ -145,17 +173,17 @@ const languageItems = [
   <dialog id="site-search-dialog" class="w-[min(42rem,calc(100vw-2rem))] rounded-xl border border-border bg-background p-0 shadow-card backdrop:bg-foreground/30">
     <form method="dialog" class="border-b border-border px-5 py-4">
       <div class="flex items-center justify-between gap-4">
-        <h2 class="text-lg font-semibold">Hledat články</h2>
-        <button type="submit" class="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground-secondary hover:border-primary/40 hover:text-primary" aria-label="Zavřít vyhledávání">
+        <h2 class="text-lg font-semibold">{t('header.searchArticles')}</h2>
+        <button type="submit" class="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground-secondary hover:border-primary/40 hover:text-primary" aria-label={t('header.closeSearch')}>
           <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"></path></svg>
         </button>
       </div>
     </form>
-    <form action="/articles" method="get" class="p-5">
-      <label class="sr-only" for="site-search-input">Hledat články</label>
+    <form action={withLocalePath('/articles', locale)} method="get" class="p-5">
+      <label class="sr-only" for="site-search-input">{t('header.searchArticles')}</label>
       <div class="flex flex-col gap-3 sm:flex-row">
-        <input id="site-search-input" name="q" class="form-field" type="search" placeholder="Zadejte destinaci, rozpočet nebo téma" autocomplete="off" />
-        <button type="submit" class="btn-primary shrink-0">Hledat</button>
+        <input id="site-search-input" name="q" class="form-field" type="search" placeholder={t('header.searchInputPlaceholder')} autocomplete="off" />
+        <button type="submit" class="btn-primary shrink-0">{t('header.searchLabel')}</button>
       </div>
     </form>
   </dialog>

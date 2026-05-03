@@ -2,57 +2,66 @@
 import Layout from '@/layouts/Layout.astro';
 import { fetchPageCopy } from '@/lib/content/api';
 import { copyValue } from '@/lib/copy';
+import { translations } from '@/i18n/translations';
+import { getLangFromUrl, withLocalePath } from '@/i18n/utils';
 
+const locale = getLangFromUrl(Astro.url);
 const token = Astro.url.searchParams.get('token') || '';
 const downloadType = Astro.url.searchParams.get('type') || 'free';
 const isPaidDownload = downloadType === 'paid';
-const copy = await fetchPageCopy(isPaidDownload ? 'ebook-download-paid' : 'ebook-download-free', 'cs');
+const copy = await fetchPageCopy(isPaidDownload ? 'ebook-download-paid' : 'ebook-download-free', locale);
 const apiDownloadUrl = token ? `/api/ebook/download?token=${encodeURIComponent(token)}` : '';
 const copyVariables = { type: downloadType };
-const title = copyValue(copy?.metaTitle, isPaidDownload ? 'Děkujeme za nákup | Svět za málo' : 'Stažení ebooku | Svět za málo', copyVariables);
+const text = translations[locale].pages.ebookDownload;
+
+const title = copyValue(copy?.metaTitle, isPaidDownload ? text.titlePaid : text.titleFree, copyVariables);
 const description = copyValue(copy?.metaDescription, isPaidDownload
-  ? 'Zabezpečené stažení zakoupeného ebooku přes osobní token.'
-  : 'Stažení ebooku přes jednorázový token.', copyVariables);
+  ? text.descriptionPaid
+  : text.descriptionFree, copyVariables);
 ---
 
-<Layout title={title} description={description} canonicalPath="/ebook/download">
+<Layout title={title} description={description} canonicalPath={withLocalePath('/ebook/download', locale)}>
   <section class="container-narrow py-10 md:py-16">
     <div class="brand-card px-6 py-7 sm:px-8 sm:py-8">
-      <h1 class="mb-4">{copyValue(copy?.heading, isPaidDownload ? 'Děkujeme za nákup' : 'Stažení ebooku', copyVariables)}</h1>
+      <h1 class="mb-4">{copyValue(copy?.heading, isPaidDownload ? text.headingPaid : text.headingFree, copyVariables)}</h1>
       {token ? (
         <>
           {isPaidDownload ? (
             <>
-              <p class="mb-4">{copyValue(copy?.intro, 'Platba je potvrzená a tvoje kniha je připravená. Díky, že podporuješ Svět za málo.', copyVariables)}</p>
-              <p class="mb-6 text-foreground-secondary">{copyValue(copy?.body, 'Odkaz je osobní, jednorázový a časově omezený. Po kliknutí ti stránka vygeneruje krátkodobý odkaz ke stažení.', copyVariables)}</p>
+              <p class="mb-4">{copyValue(copy?.intro, text.paidIntro, copyVariables)}</p>
+              <p class="mb-6 text-foreground-secondary">{copyValue(copy?.body, text.paidBody, copyVariables)}</p>
             </>
           ) : (
-            <p class="mb-6">{copyValue(copy?.intro, 'Kliknutím pokračuj na zabezpečené stažení ebooku. Odkaz může být časově omezený.', copyVariables)}</p>
+            <p class="mb-6">{copyValue(copy?.intro, text.freeIntro, copyVariables)}</p>
           )}
           <button class="btn-primary" type="button" data-download-button data-download-url={apiDownloadUrl}>
-            {copyValue(copy?.primaryButtonLabel, isPaidDownload ? 'Stáhnout zakoupenou knihu' : 'Stáhnout ebook', copyVariables)}
+            {copyValue(copy?.primaryButtonLabel, isPaidDownload ? text.downloadPaid : text.downloadFree, copyVariables)}
           </button>
           <p
             class="mt-4 text-sm text-foreground-secondary"
             data-download-status
-            data-loading-message={copyValue(copy?.successMessage, 'Připravuji zabezpečené stažení...', copyVariables)}
-            data-error-message={copyValue(copy?.errorMessage, 'Odkaz je neplatný, expirovaný nebo už použitý. Odpověz na email a pošleme nový.', copyVariables)}
+            data-loading-message={copyValue(copy?.successMessage, text.loading, copyVariables)}
+            data-error-message={copyValue(copy?.errorMessage, text.error, copyVariables)}
+            data-ready-message={text.redirectReady}
+            data-ready-timed-template={text.redirectReadyTimed(999).replace('999', '{seconds}')}
+            data-fallback-loading={text.fallbackLoading}
+            data-fallback-error={text.fallbackError}
             aria-live="polite"
           ></p>
         </>
       ) : isPaidDownload ? (
         <>
-          <p class="mb-6">{copyValue(copy?.secondaryBody, 'Chybí token pro stažení zakoupené knihy. Odpověz prosím na potvrzovací email a pošleme nový odkaz.', copyVariables)}</p>
-          <a class="btn-secondary" href="/book">{copyValue(copy?.secondaryButtonLabel, 'Zpět na stránku ebooku', copyVariables)}</a>
+          <p class="mb-6">{copyValue(copy?.secondaryBody, text.missingPaid, copyVariables)}</p>
+          <a class="btn-secondary" href={withLocalePath('/book', locale)}>{copyValue(copy?.secondaryButtonLabel, text.backToBook, copyVariables)}</a>
         </>
       ) : (
         <>
-          <p class="mb-6">{copyValue(copy?.secondaryBody, 'Chybí token pro stažení. Nech si poslat nový odkaz na email.', copyVariables)}</p>
+          <p class="mb-6">{copyValue(copy?.secondaryBody, text.missingFree, copyVariables)}</p>
           <form class="flex flex-col gap-3 sm:flex-row" method="post" action="/api/leads">
             <input type="hidden" name="leadType" value="ebook" />
             <input type="hidden" name="source" value="ebook-download" />
-            <input class="form-field" type="email" name="email" placeholder="Tvůj email" required />
-            <button class="btn-primary" type="submit">{copyValue(copy?.secondaryButtonLabel, 'Poslat nový odkaz', copyVariables)}</button>
+            <input class="form-field" type="email" name="email" placeholder={text.emailPlaceholder} required />
+            <button class="btn-primary" type="submit">{copyValue(copy?.secondaryButtonLabel, text.sendNew, copyVariables)}</button>
           </form>
         </>
       )}
@@ -68,7 +77,7 @@ const description = copyValue(copy?.metaDescription, isPaidDownload
         if (!downloadUrl) return;
 
         button.setAttribute('disabled', 'true');
-        if (status) status.textContent = status.getAttribute('data-loading-message') || 'Připravuji zabezpečené stažení...';
+        if (status) status.textContent = status.getAttribute('data-loading-message') || status.getAttribute('data-fallback-loading') || '';
 
         try {
           const response = await fetch(downloadUrl, { headers: { accept: 'application/json' } });
@@ -79,14 +88,16 @@ const description = copyValue(copy?.metaDescription, isPaidDownload
           }
 
           if (status) {
+            const readyMessage = status.getAttribute('data-ready-message') || '';
+            const readyTimedTemplate = status.getAttribute('data-ready-timed-template') || '{seconds}';
             status.textContent = payload.expiresInSeconds
-              ? `Odkaz je připravený a platí krátce (${payload.expiresInSeconds} s). Přesměrovávám...`
-              : 'Odkaz je připravený. Přesměrovávám...';
+              ? readyTimedTemplate.replace('{seconds}', String(payload.expiresInSeconds))
+              : readyMessage;
           }
 
           window.location.href = payload.url;
         } catch {
-          if (status) status.textContent = status.getAttribute('data-error-message') || 'Odkaz je neplatný, expirovaný nebo už použitý. Odpověz na email a pošleme nový.';
+          if (status) status.textContent = status.getAttribute('data-error-message') || status.getAttribute('data-fallback-error') || '';
           button.removeAttribute('disabled');
         }
       });

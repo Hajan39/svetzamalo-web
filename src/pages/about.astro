@@ -1,125 +1,41 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import { fetchSiteConfig } from '@/lib/content/api';
+import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
+import { translations } from '@/i18n/translations';
 
 export const prerender = false;
 
-const siteConfig = await fetchSiteConfig('cs');
+const locale = getLocaleFromAstro(Astro);
+const siteConfig = await fetchSiteConfig(locale);
 const siteEmail = siteConfig?.siteEmail || 'info@svetzamalo.cz';
 
-const principles = [
-  {
-    title: 'Píšeme prakticky',
-    text: 'Neřešíme jen hezká místa. Zajímá nás doprava, čas, rozpočet, sezóna a chyby, které cestu zbytečně prodraží.',
-  },
-  {
-    title: 'Neprodáváme pohádku',
-    text: 'Když je místo přeceňované, drahé nebo logisticky otravné, řekneme to. Lowcost cestování má být chytré, ne utrápené.',
-  },
-  {
-    title: 'Stavíme na zkušenosti',
-    text: 'Obsah vzniká z cest, plánování, přednášek a dlouhodobého porovnávání toho, co lidem před odletem opravdu chybí.',
-  },
-];
+const about = translations[locale].pages.about;
 
-const stats = [
-  { value: '2020', label: 'od roku, kdy web pomáhá cestovatelům plánovat levněji' },
-  { value: '300+', label: 'praktických článků, itinerářů, checklistů a rozpočtových tipů' },
-  { value: '27+', label: 'destinací a zemí v českých průvodcích' },
-];
-
-const talks = [
-  'Přednášky pro školy, univerzity, knihovny, spolky a cestovatelské kluby',
-  'Témata od lowcost plánování po konkrétní země a dlouhé cesty',
-  'Q&A, osobní zkušenosti, rozpočty, chyby z praxe a doporučení na míru publiku',
-];
-
-const topics = [
-  'Nový Zéland a život v dodávce',
-  'Austrálie po vlastní ose',
-  'Vietnam prakticky a lowcost',
-  'Ekvádor a Galapágy',
-  'Japonsko',
-  'Seychely a Keňa',
-];
-
-const pastEvents = [
-  {
-    date: '24. 3. 2025',
-    title: 'Nový Zéland, život v dodávce',
-    place: 'Informační středisko města Ústí nad Labem',
-    url: 'https://www.facebook.com/events/1356228828885707/',
-  },
-  {
-    date: '28. 2. 2025',
-    title: 'Austrálie, po vlastní ose divokou přírodou',
-    place: 'Povrly',
-    url: 'https://www.facebook.com/events/1673004716584445/',
-  },
-  {
-    date: '24. 1. 2025',
-    title: 'Austrálie, po vlastní ose divokou přírodou',
-    place: 'Dolní Habartice',
-    url: 'https://www.facebook.com/events/858409472940981/',
-  },
-  {
-    date: '24. 10. 2024',
-    title: 'Nový Zéland, život v dodávce',
-    place: 'Povrly',
-    url: 'https://www.facebook.com/events/2000133807118716/',
-  },
-  {
-    date: '18. 10. 2024',
-    title: 'Nový Zéland, život v dodávce',
-    place: 'Dolní Habartice',
-    url: 'https://www.facebook.com/events/1571191513470630/',
-  },
-  {
-    date: '22. 7. 2022',
-    title: 'Ekvádor a Galapágy',
-    place: 'Dolní Habartice',
-    url: 'https://www.facebook.com/events/568010488114472/',
-  },
-  {
-    date: '6. 3. 2020',
-    title: 'Vietnam',
-    place: 'KC Povrly',
-    url: 'https://www.facebook.com/events/234326800897358/',
-  },
-  {
-    date: '31. 1. 2020',
-    title: 'Vietnam s Káťou a Honzou',
-    place: 'Dolní Habartice',
-    url: 'https://www.facebook.com/events/433382267544839/',
-  },
-];
-
-const upcomingTalks = [
-  {
-    title: 'Mexiko prakticky a lowcost',
-    meta: 'podzim 2026, Praha a Brno',
-  },
-  {
-    title: 'Mexiko: jídlo, doprava, bezpečnost a rozpočet',
-    meta: 'zima 2026/2027, Severní Čechy',
-  },
-];
+const text = about;
+const principles = about.principles;
+const stats = about.stats;
+const talks = about.talksList;
+const topics = about.topics;
+const pastEvents = about.pastEvents;
+const upcomingTalks = about.upcomingTalks;
+const talkSubject = encodeURIComponent(about.requestTalkSubject);
 ---
 
-<Layout title="O nás | Svět za málo" description="Kdo stojí za webem Svět za málo, jak tvoříme průvodce a proč věříme v praktické lowcost cestování." canonicalPath="/about">
+<Layout title={text.title} description={text.description} canonicalPath={withLocalePath('/about', locale)}>
   <section class="about-hero">
     <div class="container-wide about-hero-grid">
       <div class="about-hero-copy">
-        <p class="section-kicker">Kdo jsme</p>
-        <h1>Pomáháme cestovat levněji, ale ne hůř</h1>
-        <p>Svět za málo je český cestovatelský projekt pro lidi, kteří chtějí vidět víc světa, plánovat chytře a nedělat drahé chyby jen proto, že jim před cestou chyběly konkrétní informace.</p>
+        <p class="section-kicker">{text.who}</p>
+        <h1>{text.heroHeading}</h1>
+        <p>{text.heroBody}</p>
         <div class="hero-actions">
-          <a class="btn-primary" href="/destinations">Procházet destinace</a>
-          <a class="btn-secondary" href={`mailto:${siteEmail}`}>Napsat nám</a>
+          <a class="btn-primary" href={withLocalePath('/destinations', locale)}>{text.browseDestinations}</a>
+          <a class="btn-secondary" href={`mailto:${siteEmail}`}>{text.writeUs}</a>
         </div>
       </div>
 
-      <div class="about-proof-panel" aria-label="Rychlá fakta o projektu">
+      <div class="about-proof-panel" aria-label={text.quickFacts}>
         {stats.map((stat) => (
           <div>
             <strong>{stat.value}</strong>
@@ -133,12 +49,12 @@ const upcomingTalks = [
   <section class="about-story-band">
     <div class="container-wide about-story-grid">
       <div>
-        <p class="section-kicker">Náš přístup</p>
-        <h2>Průvodce, které řeší skutečné rozhodování před cestou</h2>
+        <p class="section-kicker">{text.approach}</p>
+        <h2>{text.approachHeading}</h2>
       </div>
       <div class="about-story-copy">
-        <p>Nechceme tvořit katalog míst, která vypadají dobře na fotce. Dobrý cestovatelský obsah má člověku ušetřit čas, nervy a peníze: kdy jet, kde spát, jak se přesouvat, co vynechat a za co se naopak vyplatí připlatit.</p>
-        <p>Proto u destinací propojujeme články, itineráře, rozpočty, checklisty a praktické poznámky. Web má fungovat jako plánovací knihovna, do které se člověk vrací před cestou i během ní.</p>
+        <p>{text.approachP1}</p>
+        <p>{text.approachP2}</p>
       </div>
     </div>
   </section>
@@ -157,17 +73,17 @@ const upcomingTalks = [
   <section class="about-talks-band">
     <div class="container-wide about-talks-grid">
       <div>
-        <p class="section-kicker">Přednášky</p>
-        <h2>O cestování mluvíme i naživo</h2>
-        <p>Web je základ, ale některé věci nejlépe fungují v živé besedě: příběhy z cest, konkrétní rozpočty, chyby, dotazy publika a srovnání různých stylů cestování.</p>
+        <p class="section-kicker">{text.talks}</p>
+        <h2>{text.talksHeading}</h2>
+        <p>{text.talksBody}</p>
         <ul class="about-check-list">
           {talks.map((talk) => <li>{talk}</li>)}
         </ul>
-        <a class="btn-primary" href={`mailto:${siteEmail}?subject=Poptavka%20prednasky%20Sv%C4%9Bt%20za%20m%C3%A1lo`}>Poptat přednášku</a>
+        <a class="btn-primary" href={`mailto:${siteEmail}?subject=${talkSubject}`}>{text.requestTalk}</a>
       </div>
 
       <div class="about-topic-panel">
-        <h3>Témata, která umíme připravit</h3>
+        <h3>{text.topicsWeCanCover}</h3>
         <div class="about-topic-grid">
           {topics.map((topic) => <span>{topic}</span>)}
         </div>
@@ -178,10 +94,10 @@ const upcomingTalks = [
   <section class="container-wide about-events-section">
     <div class="section-heading-row">
       <div>
-        <p class="section-kicker">Kde jste nás mohli vidět</p>
-        <h2>Proběhlé a chystané akce</h2>
+        <p class="section-kicker">{text.whereSeen}</p>
+        <h2>{text.eventsHeading}</h2>
       </div>
-      <a class="text-link" href={`mailto:${siteEmail}`}>Domluvit spolupráci</a>
+      <a class="text-link" href={`mailto:${siteEmail}`}>{text.collab}</a>
     </div>
 
     <div class="about-events-grid">
@@ -196,7 +112,7 @@ const upcomingTalks = [
       </div>
 
       <aside class="about-upcoming-panel">
-        <h3>Co připravujeme</h3>
+        <h3>{text.upcoming}</h3>
         <ul>
           {upcomingTalks.map((talk) => (
             <li>
@@ -205,16 +121,16 @@ const upcomingTalks = [
             </li>
           ))}
         </ul>
-        <p>Termíny postupně upřesníme. Pro školy, knihovny nebo cestovatelské akce umíme připravit téma i na míru.</p>
+        <p>{text.upcomingNote}</p>
       </aside>
     </div>
   </section>
 
   <section class="container-wide about-contact-section">
     <div>
-      <p class="section-kicker">Kontakt</p>
-      <h2>Máte tip, dotaz nebo chcete spolupráci?</h2>
-      <p>Napište nám. Hodí se nám zpětná vazba k článkům, tipy na destinace i poptávky přednášek nebo cestovatelských besed.</p>
+      <p class="section-kicker">{text.contact}</p>
+      <h2>{text.contactHeading}</h2>
+      <p>{text.contactBody}</p>
     </div>
     <a class="btn-primary" href={`mailto:${siteEmail}`}>{siteEmail}</a>
   </section>

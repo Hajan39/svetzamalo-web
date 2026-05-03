@@ -20,6 +20,17 @@ const {
 export default defineConfig({
 	site: process.env.SITE_URL || "https://svetzamalo.cz",
 	output: "server",
+	i18n: {
+		locales: ["cs", "en"],
+		defaultLocale: "cs",
+		fallback: {
+			en: "cs",
+		},
+		routing: {
+			prefixDefaultLocale: false,
+			fallbackType: "rewrite",
+		},
+	},
 	adapter: vercel(),
 	image: {
 		domains: ['cdn.sanity.io'],

@@ -7,18 +7,29 @@ import Layout from '@/layouts/Layout.astro';
 import { getFreeEbookDescription, getFreeEbookTitle, getPaidBookTitle, isFreeEbookEnabled, isPaidEbookEnabled } from '@/lib/bookConfig';
 import { getContinentLabel } from '@/lib/continentLabels';
 import { fetchArticlesPage, fetchDestinations, fetchLatestArticles, fetchSiteConfig } from '@/lib/content/api';
+import { translations } from '@/i18n/translations';
+import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
 import { getDraftModeProps } from '@/lib/sanity/draftMode';
 
 export const prerender = false;
 
+const locale = getLocaleFromAstro(Astro);
 const sanityOptions = getDraftModeProps(Astro.cookies);
 
-const [articles, articlePage, destinations, siteConfig] = await Promise.all([
-	fetchLatestArticles(9, 'cs', sanityOptions),
-	fetchArticlesPage(1, 'cs', undefined, sanityOptions),
-	fetchDestinations('cs', sanityOptions),
-	fetchSiteConfig('cs'),
+let [articles, articlePage, destinations, siteConfig] = await Promise.all([
+	fetchLatestArticles(9, locale, sanityOptions),
+	fetchArticlesPage(1, locale, undefined, sanityOptions),
+	fetchDestinations(locale, sanityOptions),
+	fetchSiteConfig(locale),
 ]);
+if (locale === 'en' && articles.length === 0 && destinations.length === 0) {
+	[articles, articlePage, destinations, siteConfig] = await Promise.all([
+		fetchLatestArticles(9, 'cs', sanityOptions),
+		fetchArticlesPage(1, 'cs', undefined, sanityOptions),
+		fetchDestinations('cs', sanityOptions),
+		fetchSiteConfig('cs'),
+	]);
+}
 const freeEbookAvailable = isFreeEbookEnabled(siteConfig);
 const paidEbookAvailable = isPaidEbookEnabled(siteConfig);
 const freeEbookTitle = getFreeEbookTitle(siteConfig);
@@ -30,42 +41,44 @@ const latestArticles = articles.slice(4, 9);
 const featuredDestinations = destinations.slice(0, 6);
 const destinationCount = destinations.length;
 const articleCount = articlePage.total || articles.length;
+const text = translations[locale].pages.home;
+const shared = translations[locale].shared;
 
-const continentLabels = new Intl.ListFormat('cs-CZ', { style: 'long', type: 'conjunction' }).format(
-	Array.from(new Set(destinations.map((destination) => getContinentLabel(destination.continent))))
+const continentLabels = new Intl.ListFormat(shared.htmlLocale, { style: 'long', type: 'conjunction' }).format(
+	Array.from(new Set(destinations.map((destination) => getContinentLabel(destination.continent, locale))))
 		.slice(0, 3),
 );
 ---
 
 <Layout
-	title="Svět za málo - lowcost průvodci, destinace a ebook zdarma"
-	description="Praktické články, destinace a rozpočty pro cestování levněji. Začni průvodcem, vyber destinaci a stáhni si lowcost ebook zdarma."
+	title={text.title}
+	description={text.description}
 >
 	<section class="home-hero">
 		<div class="home-hero-media" aria-hidden="true"></div>
 		<div class="home-hero-overlay"></div>
 		<div class="container-wide home-hero-inner">
 			<div class="home-hero-copy">
-				<p class="section-kicker">Průvodci pro cesty, které dávají smysl</p>
-				<h1>Cestuj víc, utrácej míň</h1>
-				<p>Destinace, itineráře, rozpočty a konkrétní tipy pro cestování bez zbytečného luxusu i bez zbytečných chyb.</p>
+				<p class="section-kicker">{text.kicker}</p>
+				<h1>{text.heroHeading}</h1>
+				<p>{text.heroBody}</p>
 				<div class="hero-actions">
-					<a class="btn-primary" href="/destinations">Vybrat destinaci</a>
-					<a class="btn-secondary" href="/articles">Číst články</a>
+					<a class="btn-primary" href={withLocalePath('/destinations', locale)}>{text.chooseDestination}</a>
+					<a class="btn-secondary" href={withLocalePath('/articles', locale)}>{text.readArticles}</a>
 				</div>
 			</div>
 
-			<div class="home-hero-panel" aria-label="Rychlý přehled webu">
+			<div class="home-hero-panel" aria-label={text.quickOverview}>
 				<div>
 					<span>{destinationCount || '27'}+</span>
-					<p>destinací a zemí</p>
+					<p>{text.destinationCountLabel}</p>
 				</div>
 				<div>
 					<span>{articleCount || '300'}+</span>
-					<p>praktických článků</p>
+					<p>{text.articleCountLabel}</p>
 				</div>
 				<div>
-					<span>0 Kč</span>
+					<span>{text.free}</span>
 					<p>{freeEbookTitle}</p>
 				</div>
 			</div>
@@ -75,14 +88,14 @@ const continentLabels = new Intl.ListFormat('cs-CZ', { style: 'long', type: 'con
 	<section class="home-intro-band">
 		<div class="container-wide home-intro-grid">
 			<div>
-				<p class="section-kicker">Nejdřív obsah, potom plán</p>
-				<h2>Začni článkem, pokračuj konkrétní destinací</h2>
-				<p>Web je postavený jako praktická knihovna pro plánování. Kniha je doplněk pro ty, kteří chtějí mít postup, checklisty a rozpočtové uvažování pohromadě.</p>
+				<p class="section-kicker">{text.introKicker}</p>
+				<h2>{text.introHeading}</h2>
+				<p>{text.introBody}</p>
 			</div>
 			<ul class="home-proof-list">
-				<li><strong>Reálné rozhodování</strong><span>kdy šetřit, kdy připlatit a co vynechat.</span></li>
-				<li><strong>Rychlé plánování</strong><span>doprava, ubytování, jídlo, itineráře a sezóna.</span></li>
-				<li><strong>Jemný email follow-up</strong><span>ebook zdarma a nové tipy pro lidi, kteří chtějí víc.</span></li>
+				<li><strong>{text.proof1Title}</strong><span>{text.proof1Text}</span></li>
+				<li><strong>{text.proof2Title}</strong><span>{text.proof2Text}</span></li>
+				<li><strong>{text.proof3Title}</strong><span>{text.proof3Text}</span></li>
 			</ul>
 		</div>
 	</section>
@@ -91,31 +104,31 @@ const continentLabels = new Intl.ListFormat('cs-CZ', { style: 'long', type: 'con
 		<section class="container-wide featured-grid-section">
 			<div class="section-heading-row">
 				<div>
-					<p class="section-kicker">Doporučené čtení</p>
-					<h2>Nejnovější praktické průvodce</h2>
+					<p class="section-kicker">{text.featuredKicker}</p>
+					<h2>{text.featuredHeading}</h2>
 				</div>
-				<a href="/articles" class="text-link">Všechny články</a>
+				<a href={withLocalePath('/articles', locale)} class="text-link">{text.allArticles}</a>
 			</div>
 
 			<div class="featured-content-grid">
-				<a href={`/articles/${featuredArticle.slug}`} class="featured-article">
+				<a href={withLocalePath(`/articles/${featuredArticle.slug}`, locale)} class="featured-article">
 					{featuredArticle.coverImage ? (
 						<Image src={featuredArticle.coverImage.src} alt={featuredArticle.coverImage.alt || featuredArticle.title} width={900} height={506} loading="eager" />
 					) : (
 						<div class="featured-article-fallback">{featuredArticle.title}</div>
 					)}
 					<div class="featured-article-copy">
-						<p class="section-kicker">Nový článek</p>
+						<p class="section-kicker">{text.newArticle}</p>
 						<h3>{featuredArticle.title}</h3>
 						<p>{featuredArticle.intro}</p>
-						<span>Číst průvodce</span>
+						<span>{text.readGuide}</span>
 					</div>
 				</a>
 
 				<div class="side-article-list">
 					{secondaryArticles.map((article) => (
-						<a href={`/articles/${article.slug}`} class="side-article">
-							<span>{article.countryName || article.articleType?.replace(/-/g, ' ') || 'Průvodce'}</span>
+						<a href={withLocalePath(`/articles/${article.slug}`, locale)} class="side-article">
+							<span>{article.countryName || article.articleType?.replace(/-/g, ' ') || shared.guideFallback}</span>
 							<strong>{article.title}</strong>
 						</a>
 					))}
@@ -128,10 +141,10 @@ const continentLabels = new Intl.ListFormat('cs-CZ', { style: 'long', type: 'con
 		<div class="container-wide soft-cta-wrap">
 			<LeadCapture
 				source="home_midpage"
-				kicker="Materiál zdarma"
-				title={`Vezmi si ${freeEbookTitle}`}
+				kicker={text.freeMaterial}
+				title={text.getFreeEbook(freeEbookTitle)}
 				text={freeEbookDescription}
-				buttonLabel="Chci ebook zdarma"
+				buttonLabel={text.getFreeEbookButton}
 			/>
 		</div>
 	)}
@@ -139,15 +152,15 @@ const continentLabels = new Intl.ListFormat('cs-CZ', { style: 'long', type: 'con
 	<section class="container-wide destinations-preview-section">
 		<div class="section-heading-row">
 			<div>
-				<p class="section-kicker">Destinace</p>
-				<h2>Kam vyrazit za málo</h2>
-				{continentLabels && <p>Aktuálně pokrýváme hlavně {continentLabels}. Další místa postupně přibývají podle toho, co jde opravdu dobře naplánovat.</p>}
+				<p class="section-kicker">{text.destinationsKicker}</p>
+				<h2>{text.destinationsHeading}</h2>
+				{continentLabels && <p>{text.destinationsIntro(continentLabels)}</p>}
 			</div>
-			<a href="/destinations" class="text-link">Procházet destinace</a>
+			<a href={withLocalePath('/destinations', locale)} class="text-link">{text.browseDestinations}</a>
 		</div>
 
 		{featuredDestinations.length === 0 ? (
-			<div class="empty-state">Destinace se načtou po propojení se Strapi.</div>
+			<div class="empty-state">{text.emptyDestinations}</div>
 		) : (
 			<div class="destination-preview-grid">
 				{featuredDestinations.map((destination) => <DestinationCard destination={destination} />)}
@@ -158,23 +171,23 @@ const continentLabels = new Intl.ListFormat('cs-CZ', { style: 'long', type: 'con
 	<section class="content-paths-band">
 		<div class="container-wide content-paths-grid">
 			<div>
-				<p class="section-kicker">Jak web používat</p>
-				<h2>Vyber si podle fáze plánování</h2>
+				<p class="section-kicker">{text.usageKicker}</p>
+				<h2>{text.usageHeading}</h2>
 			</div>
-			<a href="/articles?q=itinerar" class="content-path">
+			<a href={withLocalePath('/articles', locale) + '?q=itinerar'} class="content-path">
 				<span>01</span>
-				<strong>Chci sestavit trasu</strong>
-				<p>Itineráře, časy přesunů a místa, která dávají smysl spojit dohromady.</p>
+				<strong>{text.path1Title}</strong>
+				<p>{text.path1Text}</p>
 			</a>
-			<a href="/articles?q=low-cost" class="content-path">
+			<a href={withLocalePath('/articles', locale) + '?q=low-cost'} class="content-path">
 				<span>02</span>
-				<strong>Chci snížit rozpočet</strong>
-				<p>Konkrétní úspory u dopravy, jídla, výletů a ubytování bez zkaženého zážitku.</p>
+				<strong>{text.path2Title}</strong>
+				<p>{text.path2Text}</p>
 			</a>
-			<a href="/articles?q=prakticky" class="content-path">
+			<a href={withLocalePath('/articles', locale) + '?q=prakticky'} class="content-path">
 				<span>03</span>
-				<strong>Chci praktické jistoty</strong>
-				<p>Víza, doprava na místě, bezpečnost, sezóna a drobnosti, které před odletem řeší každý.</p>
+				<strong>{text.path3Title}</strong>
+				<p>{text.path3Text}</p>
 			</a>
 		</div>
 	</section>
@@ -182,14 +195,14 @@ const continentLabels = new Intl.ListFormat('cs-CZ', { style: 'long', type: 'con
 	<section class="container-wide latest-section">
 		<div class="section-heading-row">
 			<div>
-				<p class="section-kicker">Novinky</p>
-				<h2>Čerstvé články z blogu</h2>
+				<p class="section-kicker">{text.newsKicker}</p>
+				<h2>{text.newsHeading}</h2>
 			</div>
-			{paidEbookAvailable ? <a class="btn-secondary" href="/book">{paidBookTitle}</a> : <a class="text-link" href="/articles">Archiv článků</a>}
+			{paidEbookAvailable ? <a class="btn-secondary" href={withLocalePath('/book', locale)}>{paidBookTitle}</a> : <a class="text-link" href={withLocalePath('/articles', locale)}>{text.articleArchive}</a>}
 		</div>
 
 		{articles.length === 0 ? (
-			<div class="empty-state">Zatím tu nejsou žádné články ze Strapi.</div>
+			<div class="empty-state">{text.emptyArticles}</div>
 		) : (
 			<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
 				{(latestArticles.length ? latestArticles : articles).map((article) => <ArticleCard article={article} variant="block" />)}
@@ -202,10 +215,10 @@ const continentLabels = new Intl.ListFormat('cs-CZ', { style: 'long', type: 'con
 			<LeadCapture
 				source="home_bottom"
 				compact
-				kicker="Materiál zdarma"
-				title={`Nech si poslat ${freeEbookTitle}`}
+				kicker={text.freeMaterial}
+				title={text.sendFreeEbookTitle(freeEbookTitle)}
 				text={freeEbookDescription}
-				buttonLabel="Poslat checklist"
+				buttonLabel={text.sendChecklist}
 			/>
 		</div>
 	)}

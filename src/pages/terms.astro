@@ -1,15 +1,19 @@
 ---
 import { getEntry, render } from 'astro:content';
 import Layout from '@/layouts/Layout.astro';
+import { translations } from '@/i18n/translations';
+import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
 
 export const prerender = false;
 
-const page = await getEntry('pages', 'terms');
+const locale = getLocaleFromAstro(Astro);
+const localizedId = locale === 'en' ? 'terms-en' : 'terms';
+const page = (await getEntry('pages', localizedId)) || (await getEntry('pages', 'terms'));
 if (!page) throw new Error('Missing terms page content');
 const { Content } = await render(page);
 ---
 
-<Layout title={`${page.data.title} | Svět za málo`} description={page.data.description} canonicalPath="/terms">
+<Layout title={`${page.data.title} | ${translations[locale].shared.brand}`} description={page.data.description} canonicalPath={withLocalePath('/terms', locale)}>
   <section class="container-narrow py-10 md:py-16">
     <h1 class="mb-4">{page.data.title}</h1>
     <article class="prose-content brand-card px-6 py-7 sm:px-8 sm:py-8">

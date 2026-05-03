@@ -4,22 +4,30 @@ import { buildBankTransferDetails } from '@/lib/bankTransfer';
 import { getBookPaymentMessage, getFreeEbookTitle, getPaidBookTitle } from '@/lib/bookConfig';
 import { fetchPageCopy, fetchSiteConfig } from '@/lib/content/api';
 import { copyValue } from '@/lib/copy';
+import { translations } from '@/i18n/translations';
+import { getLangFromUrl, withLocalePath } from '@/i18n/utils';
 
 export const prerender = false;
 
-const siteConfig = await fetchSiteConfig('cs');
+const locale = getLangFromUrl(Astro.url);
+let siteConfig = await fetchSiteConfig(locale);
+if (locale === 'en' && !siteConfig) {
+  siteConfig = await fetchSiteConfig('cs');
+}
 const variableSymbol = Astro.url.searchParams.get('vs') || '';
 const email = Astro.url.searchParams.get('email') || '';
 const leadType = Astro.url.searchParams.get('lead') || '';
 const isLeadSuccess = Boolean(leadType);
 const freeEbookTitle = getFreeEbookTitle(siteConfig);
 const paidBookTitle = getPaidBookTitle(siteConfig);
-const copy = await fetchPageCopy(isLeadSuccess ? 'book-success-lead' : 'book-success-order', 'cs');
+const copy = await fetchPageCopy(isLeadSuccess ? 'book-success-lead' : 'book-success-order', locale);
 const copyVariables = { freeEbookTitle, paidBookTitle, email, variableSymbol };
-const pageTitle = copyValue(copy?.metaTitle, 'Hotovo | Svět za málo', copyVariables);
-const pageDescription = copyValue(copy?.metaDescription, 'Potvrzení objednávky nebo registrace k ebooku.', copyVariables);
+const text = translations[locale].pages.bookSuccess;
+
+const pageTitle = copyValue(copy?.metaTitle, text.pageTitle, copyVariables);
+const pageDescription = copyValue(copy?.metaDescription, text.pageDescription, copyVariables);
 const analyticsEnabled = siteConfig?.enableAnalytics === true;
-const analyticsEventName = isLeadSuccess ? 'Free Ebook Lead' : 'Paid Ebook Order';
+const analyticsEventName = isLeadSuccess ? text.analyticsLeadEvent : text.analyticsOrderEvent;
 const analyticsEventKey = isLeadSuccess ? `lead:${leadType}` : `order:${variableSymbol || 'pending'}`;
 const details = buildBankTransferDetails({
   accountNumber: siteConfig?.bookBankAccountNumber,
@@ -49,7 +57,7 @@ const qrUrl = spdString
   : null;
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonicalPath="/book/success">
+<Layout title={pageTitle} description={pageDescription} canonicalPath={withLocalePath('/book/success', locale)}>
   <section class="container-narrow py-10 md:py-16">
 
     <div class="mb-8 flex flex-col items-center text-center">
@@ -60,15 +68,15 @@ const qrUrl = spdString
       </div>
       {isLeadSuccess ? (
         <>
-          <h1 class="mb-2 text-2xl font-bold md:text-3xl">{copyValue(copy?.heading, `${freeEbookTitle} je na cestě`, copyVariables)}</h1>
-          <p class="max-w-md text-foreground-secondary">{copyValue(copy?.intro, 'Děkujeme. Zkontroluj e-mailovou schránku, případně složku hromadné pošty nebo spam.', copyVariables)}</p>
+          <h1 class="mb-2 text-2xl font-bold md:text-3xl">{copyValue(copy?.heading, text.leadHeading(freeEbookTitle), copyVariables)}</h1>
+          <p class="max-w-md text-foreground-secondary">{copyValue(copy?.intro, text.leadIntro, copyVariables)}</p>
         </>
       ) : (
         <>
-          <h1 class="mb-2 text-2xl font-bold md:text-3xl">{copyValue(copy?.heading, 'Objednávka přijata', copyVariables)}</h1>
+          <h1 class="mb-2 text-2xl font-bold md:text-3xl">{copyValue(copy?.heading, text.orderHeading, copyVariables)}</h1>
           <p class="text-foreground-secondary">
-            Produkt: <strong class="text-foreground">{paidBookTitle}</strong>
-            {email && <> · potvrzení na <strong class="text-foreground">{email}</strong></>}
+            {text.product}: <strong class="text-foreground">{paidBookTitle}</strong>
+            {email && <> · {text.confirmationTo} <strong class="text-foreground">{email}</strong></>}
           </p>
         </>
       )}
@@ -77,15 +85,15 @@ const qrUrl = spdString
     {isLeadSuccess && (
       <div class="brand-card px-6 py-7 sm:px-8 sm:py-8">
         <div class="flex flex-wrap gap-3">
-          <a class="btn-primary" href="/destinations">{copyValue(copy?.primaryButtonLabel, 'Vybrat destinaci', copyVariables)}</a>
-          <a class="btn-secondary" href="/articles">{copyValue(copy?.secondaryButtonLabel, 'Číst články', copyVariables)}</a>
+          <a class="btn-primary" href={withLocalePath('/destinations', locale)}>{copyValue(copy?.primaryButtonLabel, text.pickDestination, copyVariables)}</a>
+          <a class="btn-secondary" href={withLocalePath('/articles', locale)}>{copyValue(copy?.secondaryButtonLabel, text.readArticles, copyVariables)}</a>
         </div>
       </div>
     )}
 
     {!isLeadSuccess && !details && (
       <div class="brand-card px-6 py-7 text-center">
-        <p class="text-warning">Bankovní údaje zatím nejsou kompletně nastavené ve Strapi site configu.</p>
+        <p class="text-warning">{text.bankIncomplete}</p>
       </div>
     )}
 
@@ -94,41 +102,41 @@ const qrUrl = spdString
 
         <div class="brand-card overflow-hidden">
           <div class="border-b border-border px-6 py-4">
-            <h2 class="text-base font-semibold">Platební instrukce</h2>
-            <p class="mt-0.5 text-sm text-foreground-secondary">Pošli platbu převodem — po připsání ti automaticky pošleme ebook.</p>
+            <h2 class="text-base font-semibold">{text.paymentInstructions}</h2>
+            <p class="mt-0.5 text-sm text-foreground-secondary">{text.paymentNote}</p>
           </div>
           <div class="flex flex-col sm:flex-row">
             {qrUrl && (
               <div class="flex flex-col items-center justify-center gap-2 border-b border-border p-6 sm:w-52 sm:shrink-0 sm:border-b-0 sm:border-r">
-                <img src={qrUrl} alt="QR kód pro platbu" width="180" height="180" class="rounded-lg" loading="eager" />
-                <p class="text-center text-xs text-foreground-secondary">Naskenuj v mobilní bance</p>
+                <img src={qrUrl} alt={text.qrAlt} width="180" height="180" class="rounded-lg" loading="eager" />
+                <p class="text-center text-xs text-foreground-secondary">{text.scanQr}</p>
               </div>
             )}
             <div class="flex-1 p-6">
               <dl class="grid grid-cols-1 gap-x-8 gap-y-4 text-sm sm:grid-cols-2">
                 <div>
-                  <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">Částka</dt>
+                  <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">{text.amount}</dt>
                   <dd class="mt-0.5 font-semibold text-foreground">{details.amount} {details.currency}</dd>
                 </div>
                 <div>
-                  <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">Variabilní symbol</dt>
+                  <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">{text.variableSymbol}</dt>
                   <dd class="mt-0.5 font-mono font-semibold text-foreground">{details.variableSymbol}</dd>
                 </div>
                 {details.accountDisplay && (
                   <div>
-                    <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">Číslo účtu</dt>
+                    <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">{text.accountNumber}</dt>
                     <dd class="mt-0.5 font-mono text-foreground">{details.accountDisplay}</dd>
                   </div>
                 )}
                 {details.iban && (
                   <div>
-                    <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">IBAN</dt>
+                    <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">{text.iban}</dt>
                     <dd class="mt-0.5 font-mono text-xs text-foreground">{details.iban}</dd>
                   </div>
                 )}
                 {details.message && (
                   <div class="sm:col-span-2">
-                    <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">Zpráva pro příjemce</dt>
+                    <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">{text.message}</dt>
                     <dd class="mt-0.5 text-foreground">{details.message}</dd>
                   </div>
                 )}
@@ -138,26 +146,26 @@ const qrUrl = spdString
         </div>
 
         <div class="brand-card px-6 py-5">
-          <h2 class="mb-4 text-base font-semibold">Co se stane dál?</h2>
+          <h2 class="mb-4 text-base font-semibold">{text.next}</h2>
           <ol class="space-y-3">
             <li class="flex items-start gap-3 text-sm">
               <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">1</span>
-              <span><strong>Pošli platbu</strong> — QR kódem v mobilní bance nebo ručně podle údajů výše</span>
+              <span><strong>{text.step1}</strong> — {text.step1Body}</span>
             </li>
             <li class="flex items-start gap-3 text-sm">
               <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">2</span>
-              <span><strong>Potvrdíme příjem</strong> — po připsání platby objednávku potvrdíme</span>
+              <span><strong>{text.step2}</strong> — {text.step2Body}</span>
             </li>
             <li class="flex items-start gap-3 text-sm">
               <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">3</span>
-              <span><strong>Dostaneš ebook emailem</strong>{email ? <> na <strong>{email}</strong></> : ''} se zabezpečeným odkazem ke stažení</span>
+              <span><strong>{text.step3}</strong>{email ? <> {text.emailTo} <strong>{email}</strong></> : ''} {text.step3Body}</span>
             </li>
           </ol>
         </div>
 
         <div class="flex flex-wrap gap-3">
-          <a class="btn-primary" href="/">{copyValue(copy?.primaryButtonLabel, 'Zpět na web', copyVariables)}</a>
-          <a class="btn-secondary" href="/articles">Číst články</a>
+          <a class="btn-primary" href={withLocalePath('/', locale)}>{copyValue(copy?.primaryButtonLabel, text.backWeb, copyVariables)}</a>
+          <a class="btn-secondary" href={withLocalePath('/articles', locale)}>{text.readArticles}</a>
         </div>
       </div>
     )}

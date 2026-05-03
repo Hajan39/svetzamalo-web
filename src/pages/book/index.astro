@@ -2,10 +2,16 @@
 import Layout from '@/layouts/Layout.astro';
 import { getFreeEbookDescription, getFreeEbookTitle, getPaidBookDescription, getPaidBookTitle, isFreeEbookEnabled, isPaidEbookEnabled } from '@/lib/bookConfig';
 import { fetchSiteConfig } from '@/lib/content/api';
+import { translations } from '@/i18n/translations';
+import { getLangFromUrl, withLocalePath } from '@/i18n/utils';
 
 export const prerender = false;
 
-const siteConfig = await fetchSiteConfig('cs');
+const locale = getLangFromUrl(Astro.url);
+let siteConfig = await fetchSiteConfig(locale);
+if (locale === 'en' && !siteConfig) {
+  siteConfig = await fetchSiteConfig('cs');
+}
 const price = siteConfig?.bookPrice || siteConfig?.bookBankAmount || '490 Kč';
 const freeEbookAvailable = isFreeEbookEnabled(siteConfig);
 const bankEnabled = isPaidEbookEnabled(siteConfig);
@@ -13,37 +19,39 @@ const freeEbookTitle = getFreeEbookTitle(siteConfig);
 const freeEbookDescription = getFreeEbookDescription(siteConfig);
 const paidBookTitle = getPaidBookTitle(siteConfig);
 const paidBookDescription = getPaidBookDescription(siteConfig);
-const bookPageTitle = `${freeEbookTitle} a ${paidBookTitle} | Svět za málo`;
+const text = translations[locale].pages.book;
+
+const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${translations[locale].shared.brand}`;
 ---
 
-<Layout title={bookPageTitle} description={`${freeEbookDescription} ${paidBookDescription}`} canonicalPath="/book">
+<Layout title={bookPageTitle} description={`${freeEbookDescription} ${paidBookDescription}`} canonicalPath={withLocalePath('/book', locale)}>
   <section class="book-hero">
     <div class="container-wide book-hero-grid">
       <div>
-        <p class="section-kicker">Materiály k cestování</p>
+        <p class="section-kicker">{text.travelMaterials}</p>
         <h1>{freeEbookTitle}</h1>
         <p>{freeEbookDescription}</p>
         <div class="hero-actions">
           {freeEbookAvailable ? (
             <>
-              <a href="#ebook-zdarma" class="btn-primary">Stáhnout zdarma</a>
-              <a href="/articles" class="btn-secondary">Projít články</a>
+              <a href="#ebook-zdarma" class="btn-primary">{text.downloadFree}</a>
+              <a href={withLocalePath('/articles', locale)} class="btn-secondary">{text.browseArticles}</a>
             </>
           ) : (
-            <a href="/articles" class="btn-primary">Projít články</a>
+            <a href={withLocalePath('/articles', locale)} class="btn-primary">{text.browseArticles}</a>
           )}
         </div>
       </div>
-      <aside class="book-summary" aria-label="Co ebook řeší">
+      <aside class="book-summary" aria-label={text.summaryLabel}>
         {siteConfig?.freeEbookCover ? (
           <img src={siteConfig.freeEbookCover.src} alt={siteConfig.freeEbookCover.alt || freeEbookTitle} loading="eager" decoding="async" />
         ) : (
           <>
-            <span>Uvnitř najdeš</span>
+            <span>{text.insideYouGet}</span>
             <ul>
-              <li>rychlý rámec pro výběr destinace</li>
-              <li>nejčastější lowcost chyby před odletem</li>
-              <li>kontrolní seznam pro letenky, ubytování a rozpočet</li>
+              <li>{text.pickDestination}</li>
+              <li>{text.avoidMistakes}</li>
+              <li>{text.checklist}</li>
             </ul>
           </>
         )}
@@ -54,15 +62,15 @@ const bookPageTitle = `${freeEbookTitle} a ${paidBookTitle} | Svět za málo`;
   <section class="container-wide book-options-section" id="ebook-zdarma">
     <div class="section-heading-row">
       <div>
-        <p class="section-kicker">Vyber si podle toho, kde jsi</p>
-        <h2>Nejdřív hodnota, potom případně hlubší průvodce</h2>
+        <p class="section-kicker">{text.chooseByStage}</p>
+        <h2>{text.valueFirst}</h2>
       </div>
-      <p>Free ebook stačí pro první lepší rozhodnutí. Placený průvodce je až pro chvíli, kdy chceš mít plánování víc pohromadě.</p>
+      <p>{text.valueBody}</p>
     </div>
 
     <div class="grid gap-6 md:grid-cols-2">
       <section class="brand-card book-option book-option-primary">
-        <p class="section-kicker">Dobrý start</p>
+        <p class="section-kicker">{text.goodStart}</p>
         {siteConfig?.freeEbookCover && <img class="book-option-media" src={siteConfig.freeEbookCover.src} alt={siteConfig.freeEbookCover.alt || freeEbookTitle} loading="lazy" decoding="async" />}
         <h3>{freeEbookTitle}</h3>
         <p>{freeEbookDescription}</p>
@@ -70,32 +78,32 @@ const bookPageTitle = `${freeEbookTitle} a ${paidBookTitle} | Svět za málo`;
           <form class="space-y-3" method="post" action="/api/leads">
             <input type="hidden" name="leadType" value="ebook" />
             <input type="hidden" name="source" value="book" />
-            <label class="sr-only" for="free-ebook-email">Email pro ebook zdarma</label>
-            <input id="free-ebook-email" class="form-field" type="email" name="email" placeholder="Tvůj email" required />
-            <button class="btn-primary w-full" type="submit">Poslat ebook zdarma</button>
-            <p class="lead-note">Pošleme PDF a občas i další praktické tipy. Žádné spamování.</p>
+            <label class="sr-only" for="free-ebook-email">{text.freeEmailLabel}</label>
+            <input id="free-ebook-email" class="form-field" type="email" name="email" placeholder={text.freeEmailPlaceholder} required />
+            <button class="btn-primary w-full" type="submit">{text.sendFree}</button>
+            <p class="lead-note">{text.freeNote}</p>
           </form>
         ) : (
-          <p class="text-sm text-foreground-muted">Materiál zdarma zatím není dostupný. Jakmile bude připravený, zapneš ho ve Strapi site configu.</p>
+          <p class="text-sm text-foreground-muted">{text.freeUnavailable}</p>
         )}
       </section>
 
       <section class="brand-card book-option">
-        <p class="section-kicker">Když chceš víc</p>
+        <p class="section-kicker">{text.wantMore}</p>
         {siteConfig?.bookCover && <img class="book-option-media" src={siteConfig.bookCover.src} alt={siteConfig.bookCover.alt || paidBookTitle} loading="lazy" decoding="async" />}
         <h3>{paidBookTitle}</h3>
-        <p>{paidBookDescription} Cena: <strong>{price}</strong>.</p>
+        <p>{paidBookDescription} {text.priceLabel}: <strong>{price}</strong>.</p>
         {bankEnabled ? (
           <form class="space-y-3" method="post" action="/api/orders">
             <input type="hidden" name="productCode" value="ebook-paid-v1" />
-            <label class="sr-only" for="paid-book-name">Jméno a příjmení</label>
-            <input id="paid-book-name" class="form-field" type="text" name="fullName" placeholder="Jméno a příjmení" required />
-            <label class="sr-only" for="paid-book-email">Email pro doručení</label>
-            <input id="paid-book-email" class="form-field" type="email" name="email" placeholder="Email pro doručení" required />
-            <button class="btn-primary w-full" type="submit">Objednat převodem</button>
+            <label class="sr-only" for="paid-book-name">{text.fullNameLabel}</label>
+            <input id="paid-book-name" class="form-field" type="text" name="fullName" placeholder={text.fullNamePlaceholder} required />
+            <label class="sr-only" for="paid-book-email">{text.deliveryEmailLabel}</label>
+            <input id="paid-book-email" class="form-field" type="email" name="email" placeholder={text.deliveryEmailPlaceholder} required />
+            <button class="btn-primary w-full" type="submit">{text.orderByBank}</button>
           </form>
         ) : (
-          <p class="text-sm text-foreground-muted">Objednávky budou spuštěné brzy.</p>
+          <p class="text-sm text-foreground-muted">{text.ordersSoon}</p>
         )}
       </section>
     </div>

@@ -3,38 +3,45 @@ import DestinationCard from '@/components/destination/DestinationCard.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getContinentLabel } from '@/lib/continentLabels';
 import { fetchDestinations } from '@/lib/content/api';
+import { translations } from '@/i18n/translations';
+import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
 import { getDraftModeProps } from '@/lib/sanity/draftMode';
 
 export const prerender = false;
 
+const locale = getLocaleFromAstro(Astro);
 const sanityOptions = getDraftModeProps(Astro.cookies);
-const destinations = await fetchDestinations('cs', sanityOptions);
+let destinations = await fetchDestinations(locale, sanityOptions);
+if (locale === 'en' && destinations.length === 0) {
+  destinations = await fetchDestinations('cs', sanityOptions);
+}
 const continents = Array.from(new Set(destinations.map((destination) => destination.continent))).sort((a, b) =>
-  getContinentLabel(a).localeCompare(getContinentLabel(b), 'cs'),
+  getContinentLabel(a, locale).localeCompare(getContinentLabel(b, locale), translations[locale].shared.localeTag),
 );
+const text = translations[locale].pages.destinationsIndex;
 ---
 
-<Layout title="Destinace | Svět za málo" description="Lowcost průvodce destinacemi, zeměmi a místy pro samostatné cestování." canonicalPath="/destinations">
+<Layout title={text.title} description={text.description} canonicalPath={withLocalePath('/destinations', locale)}>
   <section class="container-wide py-10 md:py-16">
     <header class="mb-8 max-w-2xl">
-      <h1 class="mb-4">Destinace</h1>
-      <p>Vyber si zemi nebo oblast a začni plánovat cestu podle reálných nákladů.</p>
+      <h1 class="mb-4">{text.heading}</h1>
+      <p>{text.intro}</p>
     </header>
     {continents.length > 0 && (
-      <nav class="destination-filter-chips" aria-label="Filtrovat destinace podle kontinentu">
-        <button type="button" class="filter-chip is-active" data-continent-filter="all" aria-pressed="true">Vše</button>
+      <nav class="destination-filter-chips" aria-label={text.filterLabel}>
+        <button type="button" class="filter-chip is-active" data-continent-filter="all" aria-pressed="true">{text.all}</button>
         {continents.map((continent) => (
           <button type="button" class="filter-chip" data-continent-filter={continent} aria-pressed="false">
-            {getContinentLabel(continent)}
+            {getContinentLabel(continent, locale)}
           </button>
         ))}
       </nav>
     )}
     {destinations.length === 0 ? (
-      <div class="brand-card p-8 text-center text-foreground-secondary">Ve Strapi zatím nejsou žádné destinace.</div>
+      <div class="brand-card p-8 text-center text-foreground-secondary">{text.empty}</div>
     ) : (
-      <div class="mb-6 text-sm text-foreground-muted" data-destination-count>
-        Zobrazeno destinací: {destinations.length}
+      <div class="mb-6 text-sm text-foreground-muted" data-destination-count data-shown-label={text.shown}>
+        {text.shown}: {destinations.length}
       </div>
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" data-destination-grid>
         {destinations.map((destination) => (
@@ -49,7 +56,8 @@ const continents = Array.from(new Set(destinations.map((destination) => destinat
   <script>
     const filterButtons = Array.from(document.querySelectorAll('[data-continent-filter]'));
     const cards = Array.from(document.querySelectorAll('[data-continent-card]'));
-    const count = document.querySelector('[data-destination-count]');
+    const count = document.querySelector<HTMLElement>('[data-destination-count]');
+    const shownLabel = count?.dataset.shownLabel || 'Shown destinations';
 
     function setFilter(activeContinent: string) {
       let visibleCount = 0;
@@ -66,7 +74,7 @@ const continents = Array.from(new Set(destinations.map((destination) => destinat
         button.setAttribute('aria-pressed', String(isActive));
       }
 
-      if (count) count.textContent = `Zobrazeno destinací: ${visibleCount}`;
+      if (count) count.textContent = `${shownLabel}: ${visibleCount}`;
     }
 
     for (const button of filterButtons) {
