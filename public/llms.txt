@@ -1,0 +1,25 @@
+# Svět za málo
+
+> Průvodce levným cestováním po celém světě. Tipy, destinace a průvodci pro cestovatele s omezeným rozpočtem.
+
+Svět za málo (World for cheap) is a Czech-language travel website focused on budget travel. We publish practical travel guides, destination overviews, packing checklists, and tips for traveling on a tight budget. Content is primarily in Czech (cs-CZ).
+
+## Main sections
+
+- [Destinace](https://svetzamalo.cz/destinations): Průvodci destinacemi po celém světě — informace o vízech, měnách, klimatu, dopravě a cenách
+- [Články](https://svetzamalo.cz/articles): Cestovatelské tipy, co sbalit, jak levně cestovat, zkušenosti z cest
+- [Kniha / Ebook](https://svetzamalo.cz/book): Ucelený průvodce levným cestováním v knižní podobě
+
+## Content focus
+
+- Budget travel tips for backpackers and budget travelers
+- Destination guides: visa requirements, currency, budget per day, best time to visit, electricity plugs, driving side
+- Packing lists (co sbalit / what to pack)
+- How to find cheap flights, accommodation, and transport
+- Travel experience articles from destinations across Europe, Asia, Americas, Africa, and Oceania
+
+## Technical
+
+- Language: Czech (cs-CZ), partial English (en)
+- Sitemap: https://svetzamalo.cz/sitemap-index.xml
+- Updated: regularly with new articles and destination guides

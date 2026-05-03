@@ -56,9 +56,25 @@ function splitIntoChapters(html: string | undefined): string[] {
 }
 
 const chapters = splitIntoChapters(destination.introHtml);
+
+const siteUrl = import.meta.env.SITE_URL || import.meta.env.PUBLIC_SITE_URL || 'https://svetzamalo.cz';
+const destinationUrl = `${siteUrl}${withLocalePath(`/destinations/guide/${destination.slug}`, locale)}`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristDestination',
+  name: destination.name,
+  description: destination.seo.metaDescription,
+  url: destinationUrl,
+  inLanguage: locale === 'cs' ? 'cs-CZ' : 'en',
+  ...(destination.heroImage ? { image: destination.heroImage.src } : {}),
+  touristType: { '@type': 'Audience', audienceType: 'Budget traveler' },
+};
 ---
 
 <Layout title={destination.seo.metaTitle} description={destination.seo.metaDescription} canonicalPath={withLocalePath(`/destinations/guide/${destination.slug}`, locale)}>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
+  </Fragment>
   <section class="container-narrow py-10 md:py-16">
     <a href={withLocalePath('/destinations', locale)} class="mb-6 inline-flex text-sm font-semibold">{text.back}</a>
     <header class="mb-8">

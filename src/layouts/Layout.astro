@@ -6,7 +6,7 @@ import { perspectiveCookieName } from '@sanity/preview-url-secret/constants';
 import SanityVisualEditing from '@/components/SanityVisualEditing';
 import DisableDraftMode from '@/components/DisableDraftMode';
 import { translations } from '@/i18n/translations';
-import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+import { getLangFromUrl, stripLocalePrefix, useTranslations } from '@/i18n/utils';
 import Footer from '../components/layout/Footer.astro';
 import Header from '../components/layout/Header.astro';
 import { fetchSiteConfig } from '@/lib/content/api';
@@ -27,7 +27,11 @@ const shared = translations[locale].shared;
 const siteUrl = import.meta.env.SITE_URL || import.meta.env.PUBLIC_SITE_URL || 'https://svetzamalo.cz';
 const title = stegaClean(Astro.props.title ?? t('layout.defaultTitle'));
 const description = stegaClean(Astro.props.description ?? t('layout.defaultDescription'));
-const canonicalUrl = new URL(Astro.props.canonicalPath ?? Astro.url.pathname, siteUrl).toString();
+const canonicalRawPath = Astro.props.canonicalPath ?? Astro.url.pathname;
+const canonicalUrl = new URL(canonicalRawPath, siteUrl).toString();
+const pathWithoutLocale = stripLocalePrefix(canonicalRawPath);
+const hreflangCs = new URL(pathWithoutLocale || '/', siteUrl).toString();
+const hreflangEn = new URL(`/en${pathWithoutLocale || '/'}`, siteUrl).toString();
 const image = Astro.props.image ?? '/images/hero/mauritius-home-hero.jpg';
 const siteConfig = Astro.props.siteConfig !== undefined ? Astro.props.siteConfig : await fetchSiteConfig(locale);
 const analyticsEnabled = siteConfig?.enableAnalytics === true;
@@ -50,6 +54,9 @@ const ogLocale = shared.ogLocale;
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonicalUrl} />
+		<link rel="alternate" hreflang="cs" href={hreflangCs} />
+		<link rel="alternate" hreflang="en" href={hreflangEn} />
+		<link rel="alternate" hreflang="x-default" href={hreflangCs} />
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
 		<link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png" />
@@ -71,6 +78,7 @@ const ogLocale = shared.ogLocale;
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={new URL(image, siteUrl).toString()} />
 		{analyticsEnabled && <Analytics />}
+		<slot name="head" />
 	</head>
 	<body class="flex min-h-screen flex-col antialiased">
 		<Header siteConfig={siteConfig} />

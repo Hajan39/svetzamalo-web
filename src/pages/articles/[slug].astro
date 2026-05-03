@@ -53,9 +53,27 @@ const relatedArticlesFromContent = relatedArticleSlugs.map((slug) => relatedArti
 const relatedArticlesFromSchema = article.relatedArticles?.filter((relatedArticle) => relatedArticle.slug !== currentArticleSlug) ?? [];
 const relatedArticles = relatedArticlesFromSchema.length ? relatedArticlesFromSchema : relatedArticlesFromContent;
 const displayHtml = removeRelatedArticlesBlock(articleHtml);
+
+const siteUrl = import.meta.env.SITE_URL || import.meta.env.PUBLIC_SITE_URL || 'https://svetzamalo.cz';
+const articleUrl = `${siteUrl}${withLocalePath(`/articles/${article.slug}`, locale)}`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: article.title,
+  description: article.intro || article.seo.metaDescription,
+  url: articleUrl,
+  inLanguage: locale === 'cs' ? 'cs-CZ' : 'en',
+  ...(article.coverImage ? { image: article.coverImage.src } : {}),
+  ...(article.publishedAt ? { datePublished: article.publishedAt } : {}),
+  ...(article.updatedAt ? { dateModified: article.updatedAt } : {}),
+  publisher: { '@type': 'Organization', name: 'Svět za málo', url: siteUrl },
+};
 ---
 
 <Layout title={article.seo.metaTitle} description={article.seo.metaDescription} canonicalPath={withLocalePath(`/articles/${article.slug}`, locale)}>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
+  </Fragment>
   <article class="container-narrow py-10 md:py-16">
     <a href={withLocalePath('/articles', locale)} class="mb-6 inline-flex text-sm font-semibold">{text.back}</a>
     <header class="mb-8">

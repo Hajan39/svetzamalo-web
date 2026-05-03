@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://svetzamalo.cz/sitemap-index.xml
+Sitemap: https://svetzamalo.cz/sitemap.xml
+LLMs: https://svetzamalo.cz/llms.txt
