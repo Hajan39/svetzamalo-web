@@ -9,6 +9,7 @@
 
 interface Props {
   currencyCode?: string;
+  currencyName?: string;
   timezone?: string;
   drivingSide?: string;
   electricityPlug?: string;
@@ -17,7 +18,7 @@ interface Props {
 import { translations } from '@/i18n/translations';
 import { getLangFromUrl } from '@/i18n/utils';
 
-const { currencyCode, timezone, drivingSide, electricityPlug } = Astro.props as Props;
+const { currencyCode, currencyName, timezone, drivingSide, electricityPlug } = Astro.props as Props;
 const locale = getLangFromUrl(Astro.url);
 const text = translations[locale].components.destinationLiveInfo;
 const shared = translations[locale].shared;
@@ -27,6 +28,7 @@ const shared = translations[locale].shared;
 <div
   id="dest-live"
   data-currency-code={currencyCode || ''}
+  data-currency-name={currencyName || ''}
   data-timezone={timezone || ''}
   data-driving-side={drivingSide || ''}
   data-electricity-plug={electricityPlug || ''}
@@ -37,12 +39,14 @@ const shared = translations[locale].shared;
   data-right-label={text.right}
   data-number-locale={shared.numberLocale}
   data-time-locale={shared.timeLocale}
+  data-day-tomorrow={locale === 'cs' ? '+1 den' : '+1 day'}
+  data-day-yesterday={locale === 'cs' ? '−1 den' : '−1 day'}
   data-socket-type-template={text.socketTypeLabel('{type}')}
   data-socket-labels={JSON.stringify(text.socketLabels)}
   class="mb-5 hidden flex-wrap items-center gap-x-5 gap-y-2.5 rounded-xl border border-border bg-background-secondary px-5 py-3.5 text-sm sm:mb-6"
 >
   <!-- Currency -->
-  <div id="live-currency-wrap" class="hidden items-center gap-2">
+  <div id="live-currency-wrap" class="hidden items-center gap-2 rounded-lg px-2 py-1 -mx-2 -my-1 transition-colors">
     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="shrink-0 text-primary" aria-hidden="true">
       <circle cx="12" cy="12" r="10"/>
       <path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"/>
@@ -50,6 +54,10 @@ const shared = translations[locale].shared;
     </svg>
     <span class="text-foreground-secondary"><strong id="live-currency-amount" class="font-semibold text-foreground">1</strong>&nbsp;<strong id="live-currency-code" class="font-semibold text-foreground"></strong></span>
     <span id="live-exrate" class="font-semibold tabular-nums text-primary" aria-live="polite">…</span>
+    <span id="live-currency-name" style="display:none" class="text-xs text-foreground-muted"></span>
+    <svg id="live-currency-swap-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:none" class="shrink-0 text-foreground-muted" aria-hidden="true">
+      <path d="M7 16V4m0 0L3 8m4-4 4 4M17 8v12m0 0 4-4m-4 4-4-4"/>
+    </svg>
   </div>
 
   <span id="live-sep-tz" class="hidden text-border" aria-hidden="true">·</span>
@@ -62,6 +70,7 @@ const shared = translations[locale].shared;
     </svg>
     <span id="live-clock" class="font-semibold tabular-nums text-foreground" aria-live="polite">--:--</span>
     <span class="text-foreground-secondary">{text.localTime}</span>
+    <span id="live-clock-day" style="display:none" class="rounded-md bg-primary-light px-1.5 py-0.5 text-xs font-semibold text-primary" aria-live="polite"></span>
   </div>
 
   <span id="live-sep-driving" class="hidden text-border" aria-hidden="true">·</span>
@@ -145,25 +154,55 @@ const shared = translations[locale].shared;
 
   /* ── 1. Exchange rate ──────────────────────────────── */
   if (currencyCode) {
-    const wrap    = document.getElementById('live-currency-wrap');
+    const wrap     = document.getElementById('live-currency-wrap');
     const amountEl = document.getElementById('live-currency-amount');
-    const codeEl  = document.getElementById('live-currency-code');
-    const rateEl  = document.getElementById('live-exrate');
+    const codeEl   = document.getElementById('live-currency-code');
+    const rateEl   = document.getElementById('live-exrate');
+    const nameEl   = document.getElementById('live-currency-name');
+    const swapIcon = document.getElementById('live-currency-swap-icon') as SVGElement | null;
+
+    const rawCurrencyName = (bar.dataset.currencyName || '').replace(/\([A-Z]{3}\)/g, '').trim();
+    if (nameEl && rawCurrencyName) {
+      nameEl.textContent = rawCurrencyName;
+      nameEl.style.display = 'inline';
+    }
     if (wrap) { wrap.style.display = 'flex'; wrap.classList.remove('hidden'); }
     if (amountEl) amountEl.textContent = '1';
     if (codeEl) codeEl.textContent = currencyCode;
 
     const preferredCurrencyKey = 'svet-za-malo:preferred-currency';
     const getPreferredCurrency = () => {
-      try {
-        return window.localStorage.getItem(preferredCurrencyKey) || 'CZK';
-      } catch {
-        return 'CZK';
-      }
+      try { return window.localStorage.getItem(preferredCurrencyKey) || 'CZK'; }
+      catch { return 'CZK'; }
     };
+
+    type RateState = { amount: string; code: string; rate: string } | null;
+    let fwd: RateState = null;
+    let rev: RateState = null;
+    let isReversed = false;
+
+    const applyState = (s: RateState) => {
+      if (!s) return;
+      if (amountEl) amountEl.textContent = s.amount;
+      if (codeEl) codeEl.textContent = s.code;
+      if (rateEl) rateEl.textContent = s.rate;
+    };
+
+    if (wrap) {
+      wrap.addEventListener('click', () => {
+        if (!fwd || !rev) return;
+        isReversed = !isReversed;
+        applyState(isReversed ? rev : fwd);
+        if (swapIcon) swapIcon.style.transform = isReversed ? 'rotate(180deg)' : '';
+      });
+    }
 
     const renderRate = (targetCurrency: string) => {
       if (!rateEl) return;
+      fwd = null; rev = null; isReversed = false;
+      if (wrap) { wrap.style.cursor = 'default'; wrap.title = ''; }
+      if (swapIcon) { swapIcon.style.display = 'none'; swapIcon.style.transform = ''; }
+
       const target = targetCurrency.toUpperCase();
 
       if (target === currencyCode) {
@@ -176,27 +215,35 @@ const shared = translations[locale].shared;
       if (amountEl) amountEl.textContent = '1';
       if (codeEl) codeEl.textContent = currencyCode;
       rateEl.textContent = loadingRate;
-      fetch(`https://api.frankfurter.dev/v1/latest?base=${encodeURIComponent(currencyCode)}&symbols=${encodeURIComponent(target)}`)
-        .then(r => r.ok ? r.json() : Promise.reject())
-        .then((data: { rates?: Record<string, number> }) => {
-          const rate = data?.rates?.[target];
-          if (typeof rate === 'number' && rate > 0) {
-            let baseAmount = 1;
-            while (rate * baseAmount < 1 && baseAmount < 1000) {
-              baseAmount *= 10;
-            }
 
-            const converted = rate * baseAmount;
-            if (amountEl) amountEl.textContent = baseAmount.toLocaleString(numberLocale);
-            if (codeEl) codeEl.textContent = currencyCode;
-            rateEl.textContent = `≈ ${converted.toLocaleString(numberLocale, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${target}`;
+      const baseLower = currencyCode!.toLowerCase();
+      const targetLower = target.toLowerCase();
+      const primary  = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${baseLower}.json`;
+      const fallback = `https://latest.currency-api.pages.dev/v1/currencies/${baseLower}.json`;
+      fetch(primary)
+        .then(r => r.ok ? r.json() : fetch(fallback).then(r2 => r2.ok ? r2.json() : Promise.reject()))
+        .then((data: Record<string, Record<string, number>>) => {
+          const rate = data?.[baseLower]?.[targetLower];
+          if (typeof rate === 'number' && rate > 0) {
+            const fmt = (n: number) => n.toLocaleString(numberLocale, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+            let fwdBase = 1;
+            while (rate * fwdBase < 1 && fwdBase < 10000) fwdBase *= 10;
+            fwd = { amount: fwdBase.toLocaleString(numberLocale), code: currencyCode!, rate: `≈ ${fmt(rate * fwdBase)} ${target}` };
+
+            const revRate = 1 / rate;
+            let revBase = 1;
+            while (revRate * revBase < 1 && revBase < 10000) revBase *= 10;
+            rev = { amount: revBase.toLocaleString(numberLocale), code: target, rate: `≈ ${fmt(revRate * revBase)} ${currencyCode!}` };
+
+            applyState(fwd);
+            if (wrap) { wrap.style.cursor = 'pointer'; wrap.title = 'Kliknutím obrátíš kurz'; }
+            if (swapIcon) { swapIcon.style.display = 'inline'; }
           } else {
             rateEl.textContent = rateUnavailable;
           }
         })
-        .catch(() => {
-          rateEl.textContent = rateUnavailable;
-        });
+        .catch(() => { rateEl.textContent = rateUnavailable; });
     };
 
     renderRate(getPreferredCurrency());
@@ -212,15 +259,44 @@ const shared = translations[locale].shared;
     const wrap    = document.getElementById('live-clock-wrap');
     const sepTz   = document.getElementById('live-sep-tz');
     const clockEl = document.getElementById('live-clock');
+    const dayEl   = document.getElementById('live-clock-day');
+    const dayTomorrow  = bar.dataset.dayTomorrow  || '+1 day';
+    const dayYesterday = bar.dataset.dayYesterday || '−1 day';
+
     if (iana && clockEl) {
       if (wrap) { wrap.style.display = 'flex'; wrap.classList.remove('hidden'); }
       if (sepTz && currencyCode) {
         sepTz.style.display = 'inline'; sepTz.classList.remove('hidden');
       }
-      const fmt = new Intl.DateTimeFormat(timeLocale, {
+
+      const timeFmt = new Intl.DateTimeFormat(timeLocale, {
         timeZone: iana, hour: '2-digit', minute: '2-digit', second: '2-digit',
       });
-      const tick = () => { clockEl.textContent = fmt.format(new Date()); };
+      const dateFmt = new Intl.DateTimeFormat('en-CA', {
+        timeZone: iana, year: 'numeric', month: '2-digit', day: '2-digit',
+      });
+      const localDateFmt = new Intl.DateTimeFormat('en-CA', {
+        year: 'numeric', month: '2-digit', day: '2-digit',
+      });
+
+      const tick = () => {
+        const now = new Date();
+        clockEl.textContent = timeFmt.format(now);
+
+        if (dayEl) {
+          const destDay  = dateFmt.format(now);
+          const localDay = localDateFmt.format(now);
+          if (destDay > localDay) {
+            dayEl.textContent = dayTomorrow;
+            dayEl.style.display = 'inline';
+          } else if (destDay < localDay) {
+            dayEl.textContent = dayYesterday;
+            dayEl.style.display = 'inline';
+          } else {
+            dayEl.style.display = 'none';
+          }
+        }
+      };
       tick();
       setInterval(tick, 1000);
     }

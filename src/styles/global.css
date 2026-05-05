@@ -65,6 +65,7 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
+  overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
   letter-spacing: 0;
@@ -1059,7 +1060,6 @@ p {
     font-size: 2rem;
   }
 
-  .section-heading-row,
   .about-hero-grid,
   .about-story-grid,
   .about-talks-grid,
@@ -1072,6 +1072,7 @@ p {
   }
 
   .section-heading-row {
+    flex-direction: column;
     align-items: flex-start;
   }
 
@@ -1085,7 +1086,72 @@ p {
   }
 
   .article-filters-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
+  }
+
+  .article-filter-top {
+    grid-template-columns: 1fr auto;
+    align-items: flex-end;
+  }
+
+  .article-filter-toggle-btn {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 0.45rem;
+    height: 3rem;
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    background: var(--background);
+    color: var(--foreground-secondary);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 0 0.875rem;
+    transition: border-color 150ms, color 150ms, background 150ms;
+    white-space: nowrap;
+  }
+
+  .article-filter-toggle-btn:hover,
+  .article-filter-toggle-btn[aria-expanded="true"] {
+    border-color: rgba(15, 108, 189, 0.35);
+    background: var(--primary-light);
+    color: var(--primary);
+  }
+
+  .article-filter-toggle-btn .toggle-chevron {
+    transition: transform 220ms ease;
+  }
+
+  .article-filter-toggle-btn[aria-expanded="true"] .toggle-chevron {
+    transform: rotate(180deg);
+  }
+
+  .article-filter-advanced {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 300ms ease, opacity 200ms ease;
+  }
+
+  .article-filter-advanced.is-open {
+    max-height: 40rem;
+    opacity: 1;
+    margin-bottom: 0.875rem;
+  }
+
+  .article-filter-advanced .article-filters-grid {
+    padding-top: 0.875rem;
+  }
+
+  .article-filter-actions {
+    flex-direction: column;
+  }
+
+  .article-filter-actions .btn-primary,
+  .article-filter-actions .btn-secondary {
+    width: 100%;
   }
 
   .featured-article {
@@ -1099,15 +1165,15 @@ p {
   }
 
   h1 {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
   }
 
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .featured-article-copy h3 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 
   .home-hero,
@@ -1129,15 +1195,19 @@ p {
   }
 
   .home-hero-inner {
-    padding-block: 3.5rem 2.5rem;
+    padding-block: 3rem 2rem;
   }
 
-  .hero-actions,
+  .hero-actions {
+    flex-direction: column;
+  }
+
   .hero-actions a,
   .about-contact-section .btn-primary,
   .section-heading-row .btn-secondary,
   .section-heading-row .text-link {
     width: 100%;
+    justify-content: center;
   }
 
   .about-contact-section {
@@ -1153,7 +1223,11 @@ p {
     grid-column: auto;
   }
 
-  .home-hero-panel,
+  .home-hero-panel {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
   .destination-preview-grid {
     grid-template-columns: 1fr;
   }
@@ -1190,11 +1264,15 @@ p {
   }
 
   .featured-article {
-    min-height: 24rem;
+    min-height: 22rem;
   }
 
   .lead-capture {
     padding: 1.25rem;
+  }
+
+  .lead-capture h2 {
+    font-size: 1.4rem;
   }
 
   .pagination {
@@ -1207,7 +1285,121 @@ p {
   }
 
   .book-hero-grid {
-    padding-block: 3rem;
+    padding-block: 2.5rem;
+  }
+
+  .about-principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-paths-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 1.85rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  .container-wide,
+  .container-narrow {
+    width: calc(100% - 1.5rem);
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 0.9rem;
+    padding: 0.65rem 1rem;
+  }
+}
+
+.mobile-bottom-nav {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  body {
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 60;
+    display: flex;
+    align-items: stretch;
+    border-top: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(14px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .mobile-nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.22rem;
+    padding: 0.6rem 0.25rem 0.7rem;
+    color: var(--foreground-muted);
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    text-decoration: none;
+    transition: color 150ms ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-nav-item:hover {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .mobile-nav-item.is-active {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .mobile-nav-item svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    flex-shrink: 0;
+  }
+
+  .mobile-nav-item.is-active svg {
+    filter: drop-shadow(0 0 6px rgba(15, 108, 189, 0.35));
+  }
+
+  .mobile-nav-dot {
+    position: absolute;
+    top: -0.45rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.3rem;
+    height: 0.3rem;
+    border-radius: 50%;
+    background: var(--primary);
+  }
+
+  .mobile-nav-item-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.22rem;
   }
 }
 
@@ -1285,15 +1477,31 @@ p {
 }
 
 .article-filters {
+  overflow: hidden;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--background-secondary);
   padding: 1rem;
 }
 
+.article-filter-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.875rem;
+  margin-bottom: 0.875rem;
+}
+
+.article-filter-toggle-btn {
+  display: none;
+}
+
+.article-filter-advanced {
+  display: block;
+}
+
 .article-filters-grid {
   display: grid;
-  grid-template-columns: minmax(14rem, 1.3fr) repeat(3, minmax(10rem, 1fr));
+  grid-template-columns: minmax(0, 1.3fr) repeat(3, minmax(0, 1fr));
   gap: 0.875rem;
 }
 

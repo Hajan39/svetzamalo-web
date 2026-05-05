@@ -87,6 +87,7 @@ const jsonLd = {
     {destination.heroImage && <Image src={destination.heroImage.src} alt={destination.heroImage.alt || destination.name} width={900} height={506} class="mb-8 aspect-video w-full rounded-xl object-cover" loading="eager" />}
     <DestinationLiveInfo
       currencyCode={destination.currency?.code}
+      currencyName={destination.currency?.name}
       timezone={destination.timezone}
       drivingSide={destination.drivingSide}
       electricityPlug={destination.electricityPlug}

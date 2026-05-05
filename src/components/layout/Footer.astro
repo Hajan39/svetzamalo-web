@@ -43,7 +43,7 @@ const legalLinks = [
 
       <div class="lg:col-span-4">
         <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">{t('footer.tipsToEmail')}</h2>
-        <form class="mb-4 flex gap-2" method="post" action="/api/leads">
+        <form class="mb-4 flex flex-col gap-2 sm:flex-row" method="post" action="/api/leads">
           <input type="hidden" name="leadType" value="newsletter" />
           <input type="hidden" name="source" value="footer" />
           <input class="form-field flex-1 text-sm" type="email" name="email" placeholder={t('footer.emailPlaceholder')} required />

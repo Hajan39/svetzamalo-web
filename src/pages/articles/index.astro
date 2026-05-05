@@ -138,41 +138,51 @@ function getArticlesPageHref(page: number) {
     ) : (
       <>
         <form action={withLocalePath('/articles', locale)} method="get" class="article-filters mb-6">
-          <div class="article-filters-grid">
+          <div class="article-filter-top">
             <label class="article-filter-field" for="articles-search">
               <span>{text.search}</span>
               <input id="articles-search" name="q" class="form-field" type="search" value={searchQuery} placeholder={text.searchPlaceholder} />
             </label>
+            <button type="button" class="article-filter-toggle-btn" id="article-filter-toggle" aria-expanded={activeFilters ? 'true' : 'false'} aria-controls="article-filter-advanced">
+              <svg aria-hidden="true" class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="10" y2="18"/></svg>
+              {locale === 'cs' ? 'Filtry' : 'Filters'}
+              {activeFilters && <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[11px] font-bold text-white">{[selectedContinent, selectedDestination, selectedType].filter(Boolean).length}</span>}
+              <svg aria-hidden="true" class="toggle-chevron h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </div>
 
-            <label class="article-filter-field" for="articles-continent">
-              <span>{text.continent}</span>
-              <select id="articles-continent" name="continent" class="form-field">
-                <option value="">{text.allContinents}</option>
-                {continentOptions.map((continent) => (
-                  <option value={continent} selected={selectedContinent === continent}>{getContinentLabel(continent, locale)}</option>
-                ))}
-              </select>
-            </label>
+          <div class="article-filter-advanced" id="article-filter-advanced" class:list={[activeFilters && 'is-open']}>
+            <div class="article-filters-grid">
+              <label class="article-filter-field" for="articles-continent">
+                <span>{text.continent}</span>
+                <select id="articles-continent" name="continent" class="form-field">
+                  <option value="">{text.allContinents}</option>
+                  {continentOptions.map((continent) => (
+                    <option value={continent} selected={selectedContinent === continent}>{getContinentLabel(continent, locale)}</option>
+                  ))}
+                </select>
+              </label>
 
-            <label class="article-filter-field" for="articles-destination">
-              <span>{text.destination}</span>
-              <select id="articles-destination" name="destination" class="form-field">
-                <option value="">{text.allDestinations}</option>
-                {destinationOptions.map((destination) => (
-                  <option value={destination.slug} selected={selectedDestination === destination.slug}>{destination.name}</option>
-                ))}
-              </select>
-            </label>
+              <label class="article-filter-field" for="articles-destination">
+                <span>{text.destination}</span>
+                <select id="articles-destination" name="destination" class="form-field">
+                  <option value="">{text.allDestinations}</option>
+                  {destinationOptions.map((destination) => (
+                    <option value={destination.slug} selected={selectedDestination === destination.slug}>{destination.name}</option>
+                  ))}
+                </select>
+              </label>
 
-            <label class="article-filter-field" for="articles-type">
-              <span>{text.type}</span>
-              <select id="articles-type" name="type" class="form-field">
-                <option value="">{text.allTypes}</option>
-                {typeOptions.map((type) => (
-                  <option value={type} selected={selectedType === type}>{getArticleTypeLabel(type || '')}</option>
-                ))}
-              </select>
-            </label>
+              <label class="article-filter-field" for="articles-type">
+                <span>{text.type}</span>
+                <select id="articles-type" name="type" class="form-field">
+                  <option value="">{text.allTypes}</option>
+                  {typeOptions.map((type) => (
+                    <option value={type} selected={selectedType === type}>{getArticleTypeLabel(type || '')}</option>
+                  ))}
+                </select>
+              </label>
+            </div>
           </div>
 
           <div class="article-filter-actions">
@@ -180,6 +190,15 @@ function getArticlesPageHref(page: number) {
             {activeFilters && <a href={withLocalePath('/articles', locale)} class="btn-secondary shrink-0 text-center hover:no-underline">{text.clearFilters}</a>}
           </div>
         </form>
+
+        <script>
+          const toggle = document.getElementById('article-filter-toggle');
+          const panel = document.getElementById('article-filter-advanced');
+          toggle?.addEventListener('click', () => {
+            const open = panel?.classList.toggle('is-open');
+            toggle.setAttribute('aria-expanded', String(open));
+          });
+        </script>
 
         <p class="mb-6 text-sm text-foreground-muted">
           {activeFilters ? text.foundWithFilters(visibleTotal) : text.found(visibleTotal)}
