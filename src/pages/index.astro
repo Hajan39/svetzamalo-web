@@ -6,7 +6,7 @@ import LeadCapture from '@/components/marketing/LeadCapture.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getFreeEbookDescription, getFreeEbookTitle, getPaidBookTitle, isFreeEbookEnabled, isPaidEbookEnabled } from '@/lib/bookConfig';
 import { getContinentLabel } from '@/lib/continentLabels';
-import { fetchArticlesPage, fetchDestinations, fetchLatestArticles, fetchSiteConfig } from '@/lib/content/api';
+import { fetchArticleCount, fetchDestinations, fetchLatestArticles, fetchSiteConfig } from '@/lib/content/api';
 import { translations } from '@/i18n/translations';
 import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
 import { getDraftModeProps } from '@/lib/sanity/draftMode';
@@ -16,16 +16,16 @@ export const prerender = false;
 const locale = getLocaleFromAstro(Astro);
 const sanityOptions = getDraftModeProps(Astro.cookies);
 
-let [articles, articlePage, destinations, siteConfig] = await Promise.all([
+let [articles, articleCount, destinations, siteConfig] = await Promise.all([
 	fetchLatestArticles(9, locale, sanityOptions),
-	fetchArticlesPage(1, locale, undefined, sanityOptions),
+	fetchArticleCount(locale, sanityOptions),
 	fetchDestinations(locale, sanityOptions),
 	fetchSiteConfig(locale),
 ]);
 if (locale === 'en' && articles.length === 0 && destinations.length === 0) {
-	[articles, articlePage, destinations, siteConfig] = await Promise.all([
+	[articles, articleCount, destinations, siteConfig] = await Promise.all([
 		fetchLatestArticles(9, 'cs', sanityOptions),
-		fetchArticlesPage(1, 'cs', undefined, sanityOptions),
+		fetchArticleCount('cs', sanityOptions),
 		fetchDestinations('cs', sanityOptions),
 		fetchSiteConfig('cs'),
 	]);
@@ -40,7 +40,6 @@ const secondaryArticles = articles.slice(1, 4);
 const latestArticles = articles.slice(4, 9);
 const featuredDestinations = destinations.slice(0, 6);
 const destinationCount = destinations.length;
-const articleCount = articlePage.total || articles.length;
 const text = translations[locale].pages.home;
 const shared = translations[locale].shared;
 

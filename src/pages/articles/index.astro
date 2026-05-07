@@ -2,7 +2,7 @@
 import ArticleCard from '@/components/article/ArticleCard.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getContinentLabel } from '@/lib/continentLabels';
-import { fetchAllArticles, fetchArticlesPage, fetchDestinations } from '@/lib/content/api';
+import { fetchAllArticles, fetchArticleFilterMeta, fetchArticlesPage, fetchDestinations } from '@/lib/content/api';
 import { translations } from '@/i18n/translations';
 import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
 import { getDraftModeProps } from '@/lib/sanity/draftMode';
@@ -21,20 +21,22 @@ const locale = getLocaleFromAstro(Astro);
 const text = translations[locale].pages.articlesIndex;
 const localeTag = translations[locale].shared.localeTag;
 const sanityOptions = getDraftModeProps(Astro.cookies);
-let [pageResult, allArticles, destinations] = await Promise.all([
+const activeFilters = Boolean(normalizedSearchQuery || selectedDestination || selectedContinent || selectedType);
+let [pageResult, filterMeta, allArticles, destinations] = await Promise.all([
   fetchArticlesPage(requestedPage, locale, undefined, sanityOptions),
-  fetchAllArticles(locale, sanityOptions),
+  fetchArticleFilterMeta(locale, sanityOptions),
+  activeFilters ? fetchAllArticles(locale, sanityOptions) : Promise.resolve([] as Awaited<ReturnType<typeof fetchAllArticles>>),
   fetchDestinations(locale, sanityOptions),
 ]);
-if (locale === 'en' && pageResult.total === 0 && allArticles.length === 0) {
-  [pageResult, allArticles, destinations] = await Promise.all([
+if (locale === 'en' && pageResult.total === 0 && filterMeta.length === 0) {
+  [pageResult, filterMeta, allArticles, destinations] = await Promise.all([
     fetchArticlesPage(requestedPage, 'cs', undefined, sanityOptions),
-    fetchAllArticles('cs', sanityOptions),
+    fetchArticleFilterMeta('cs', sanityOptions),
+    activeFilters ? fetchAllArticles('cs', sanityOptions) : Promise.resolve([] as Awaited<ReturnType<typeof fetchAllArticles>>),
     fetchDestinations('cs', sanityOptions),
   ]);
 }
 const destinationBySlug = new Map(destinations.map((destination) => [destination.slug, destination]));
-const activeFilters = Boolean(normalizedSearchQuery || selectedDestination || selectedContinent || selectedType);
 const articles = activeFilters ? allArticles : pageResult.articles;
 const filteredArticles = activeFilters
   ? articles.filter((article) => articleMatchesFilters(article, {
@@ -54,13 +56,13 @@ const visibleArticles = activeFilters
   : filteredArticles;
 const hasPreviousPage = currentPage > 1;
 const hasNextPage = currentPage < pageCount;
-const articleDestinationSlugs = new Set(allArticles.map((article) => article.destinationId).filter(Boolean));
+const articleDestinationSlugs = new Set(filterMeta.map((article) => article.destinationId).filter(Boolean));
 const destinationOptions = destinations
   .filter((destination) => articleDestinationSlugs.has(destination.slug))
   .sort((first, second) => first.name.localeCompare(second.name, localeTag));
 const continentOptions = Array.from(new Set(destinationOptions.map((destination) => destination.continent)))
   .sort((first, second) => getContinentLabel(first, locale).localeCompare(getContinentLabel(second, locale), localeTag));
-const typeOptions = Array.from(new Set(allArticles.map((article) => article.articleType).filter(Boolean)))
+const typeOptions = Array.from(new Set(filterMeta.map((article) => article.articleType).filter(Boolean)))
   .sort((first, second) => getArticleTypeLabel(first || '').localeCompare(getArticleTypeLabel(second || ''), localeTag));
 
 function normalizeSearchText(value: string) {

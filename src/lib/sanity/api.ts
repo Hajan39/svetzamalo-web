@@ -86,6 +86,21 @@ const contentProjection = `
 
 const imageProjection = `asset->{url, metadata{dimensions}}, alt, caption`
 
+const articleCardProjection = `
+  _id,
+  _createdAt,
+  _updatedAt,
+  title,
+  "slug": slug.current,
+  locale,
+  excerpt,
+  articleType,
+  cover{${imageProjection}},
+  country->{_id, name, "slug": slug.current, locale},
+  seoTitle,
+  seoDescription
+`
+
 const countryProjection = `
   _id,
   _createdAt,
@@ -295,7 +310,7 @@ function mapSafely<TInput, TOutput>(items: TInput[], transform: (item: TInput) =
 export async function fetchLatestArticles(limit = 6, locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Article[]> {
   try {
     const {data} = await loadQuery<SanityArticle[]>({
-      query: `*[_type == "article" && locale == $locale] | order(_createdAt desc)[0...$limit]{${articleProjection}}`,
+      query: `*[_type == "article" && locale == $locale] | order(_createdAt desc)[0...$limit]{${articleCardProjection}}`,
       params: {locale, limit},
       ...options,
     })
@@ -326,7 +341,7 @@ export async function fetchArticlesPage(page = 1, locale: SupportedLocale = 'cs'
     const end = start + pageSize
     const {data: result} = await loadQuery<{articles: SanityArticle[]; total: number}>({
       query: `{
-        "articles": *[_type == "article" && locale == $locale] | order(_createdAt desc)[$start...$end]{${articleProjection}},
+        "articles": *[_type == "article" && locale == $locale] | order(_createdAt desc)[$start...$end]{${articleCardProjection}},
         "total": count(*[_type == "article" && locale == $locale])
       }`,
       params: {locale, start, end},
@@ -346,27 +361,52 @@ export async function fetchArticlesPage(page = 1, locale: SupportedLocale = 'cs'
   }
 }
 
+export async function fetchArticleCount(locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<number> {
+  try {
+    const {data} = await loadQuery<number>({
+      query: `count(*[_type == "article" && locale == $locale])`,
+      params: {locale},
+      ...options,
+    })
+    return data ?? 0
+  } catch {
+    return 0
+  }
+}
+
+export async function fetchArticleFilterMeta(
+  locale: SupportedLocale = 'cs',
+  options: SanityFetchOptions = {},
+): Promise<{slug: string; articleType?: string; destinationId?: string}[]> {
+  try {
+    const {data} = await loadQuery<{slug: string; articleType?: string; destinationId?: string}[]>({
+      query: `*[_type == "article" && locale == $locale]{"slug": slug.current, articleType, "destinationId": country->slug.current}`,
+      params: {locale},
+      ...options,
+    })
+    return data ?? []
+  } catch {
+    return []
+  }
+}
+
 export async function fetchAllArticles(locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Article[]> {
+  const total = await fetchArticleCount(locale, options)
+  if (total === 0) return []
+
+  const pageCount = Math.ceil(total / ARTICLES_SEARCH_PAGE_SIZE)
+  const pages = await Promise.all(
+    Array.from({length: pageCount}, (_, i) => fetchArticlesPage(i + 1, locale, ARTICLES_SEARCH_PAGE_SIZE, options)),
+  )
+
   const articlesBySlug = new Map<string, Article>()
-  let page = 1
-  let pageCount = 1
-
-  while (page <= pageCount) {
-    const result = await fetchArticlesPage(page, locale, ARTICLES_SEARCH_PAGE_SIZE, options)
-    let addedArticles = 0
-
+  for (const result of pages) {
     for (const article of result.articles) {
       if (!articlesBySlug.has(article.slug)) {
         articlesBySlug.set(article.slug, article)
-        addedArticles += 1
       }
     }
-
-    pageCount = result.pageCount
-    if (result.articles.length === 0 || addedArticles === 0) break
-    page += 1
   }
-
   return Array.from(articlesBySlug.values())
 }
 
@@ -413,6 +453,15 @@ export async function fetchDestinationBySlug(slug: string, locale: SupportedLoca
 }
 
 export async function fetchDestinationsByContinent(continent: string, locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Destination[]> {
-  const destinations = await fetchDestinations(locale, options)
-  return destinations.filter((destination) => destination.continent === continent)
+  try {
+    const {data} = await loadQuery<SanityCountry[]>({
+      query: `*[_type == "country" && locale == $locale && continent->slug.current == $continent] | order(name asc){${countryProjection}}`,
+      params: {locale, continent},
+      ...options,
+    })
+    return mapSafely(data, transformDestination, 'destinations by continent')
+  } catch (error) {
+    console.warn('Sanity fetch destinations by continent failed:', error)
+    return []
+  }
 }
