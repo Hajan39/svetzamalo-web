@@ -1,74 +1,92 @@
-import type {Article, Destination, SupportedLocale} from '@/types'
-import {stegaClean} from '@sanity/client/stega'
-import {ARTICLE_COVER_FALLBACKS} from '../articleCoverFallbacks'
-import {sanityPortableTextToHtml} from './portableText'
-import {loadQuery} from './loadQuery'
+import type {
+	AffiliateLink,
+	Article,
+	Destination,
+	SupportedLocale,
+} from "@/types";
+import { stegaClean } from "@sanity/client/stega";
+import { ARTICLE_COVER_FALLBACKS } from "../articleCoverFallbacks";
+import { sanityPortableTextToHtml } from "./portableText";
+import { loadQuery } from "./loadQuery";
 
 export interface SanityFetchOptions {
-  perspectiveCookie?: string
+	perspectiveCookie?: string;
 }
 
 interface SanityImage {
-  asset?: {
-    url?: string
-    metadata?: {
-      dimensions?: {
-        width?: number
-        height?: number
-      }
-    }
-  }
-  alt?: string
-  caption?: string
+	asset?: {
+		url?: string;
+		metadata?: {
+			dimensions?: {
+				width?: number;
+				height?: number;
+			};
+		};
+	};
+	alt?: string;
+	caption?: string;
 }
 
 interface SanityContinent {
-  name?: string
-  slug?: string
+	name?: string;
+	slug?: string;
 }
 
 interface SanityCountry {
-  _id: string
-  _createdAt?: string
-  _updatedAt?: string
-  name: string
-  slug: string
-  locale?: SupportedLocale
-  cover?: SanityImage
-  intro?: unknown[]
-  quickFacts?: {
-    currency?: string
-    language?: string
-    timezone?: string
-    bestTime?: string
-    visa?: string
-    electricityPlug?: string
-    drivingSide?: string
-  }
-  continent?: SanityContinent
-  seoTitle?: string
-  seoDescription?: string
+	_id: string;
+	_createdAt?: string;
+	_updatedAt?: string;
+	name: string;
+	slug: string;
+	locale?: SupportedLocale;
+	cover?: SanityImage;
+	intro?: unknown[];
+	quickFacts?: {
+		currency?: string;
+		language?: string;
+		timezone?: string;
+		bestTime?: string;
+		visa?: string;
+		electricityPlug?: string;
+		drivingSide?: string;
+	};
+	continent?: SanityContinent;
+	seoTitle?: string;
+	seoDescription?: string;
 }
 
 interface SanityArticle {
-  _id: string
-  _createdAt?: string
-  _updatedAt?: string
-  title: string
-  slug: string
-  locale?: SupportedLocale
-  excerpt?: string
-  articleType?: string
-  cover?: SanityImage
-  content?: unknown[]
-  relatedArticles?: SanityArticle[]
-  country?: SanityCountry
-  seoTitle?: string
-  seoDescription?: string
+	_id: string;
+	_createdAt?: string;
+	_updatedAt?: string;
+	title: string;
+	slug: string;
+	locale?: SupportedLocale;
+	excerpt?: string;
+	articleType?: string;
+	cover?: SanityImage;
+	content?: unknown[];
+	relatedArticles?: SanityArticle[];
+	country?: SanityCountry;
+	seoTitle?: string;
+	seoDescription?: string;
 }
 
-const ARTICLES_PAGE_SIZE = 12
-const ARTICLES_SEARCH_PAGE_SIZE = 100
+interface SanityAffiliateLink {
+	_id: string;
+	title: string;
+	slug: string;
+	destinationUrl: string;
+	locale?: SupportedLocale;
+	label?: string;
+	description?: string;
+	disclosureText?: string;
+	relSponsored?: boolean;
+	enabled?: boolean;
+}
+
+const ARTICLES_PAGE_SIZE = 12;
+const ARTICLES_SEARCH_PAGE_SIZE = 100;
 const contentProjection = `
   ...,
   _type == "articleImage" => {
@@ -80,11 +98,17 @@ const contentProjection = `
     _type == "internalArticleLink" => {
       ...,
       "articleSlug": article->slug.current
+    },
+    _type == "affiliateLinkRef" => {
+      ...,
+      "affiliateSlug": affiliateLink->slug.current,
+      "relSponsored": affiliateLink->relSponsored,
+      "enabled": affiliateLink->enabled
     }
   }
-`
+`;
 
-const imageProjection = `asset->{url, metadata{dimensions}}, alt, caption`
+const imageProjection = `asset->{url, metadata{dimensions}}, alt, caption`;
 
 const articleCardProjection = `
   _id,
@@ -99,7 +123,7 @@ const articleCardProjection = `
   country->{_id, name, "slug": slug.current, locale},
   seoTitle,
   seoDescription
-`
+`;
 
 const countryProjection = `
   _id,
@@ -114,7 +138,7 @@ const countryProjection = `
   continent->{name, "slug": slug.current},
   seoTitle,
   seoDescription
-`
+`;
 
 const articleProjection = `
   _id,
@@ -142,326 +166,463 @@ const articleProjection = `
   country->{${countryProjection}},
   seoTitle,
   seoDescription
-`
+`;
 
-function normalizeMedia(image?: SanityImage): Article['coverImage'] {
-  const url = image?.asset?.url
-  if (!url) return undefined
+function normalizeMedia(image?: SanityImage): Article["coverImage"] {
+	const url = image?.asset?.url;
+	if (!url) return undefined;
 
-  return {
-    src: url,
-    alt: image.alt || '',
-    width: image.asset?.metadata?.dimensions?.width,
-    height: image.asset?.metadata?.dimensions?.height,
-  }
+	return {
+		src: url,
+		alt: image.alt || "",
+		width: image.asset?.metadata?.dimensions?.width,
+		height: image.asset?.metadata?.dimensions?.height,
+	};
 }
 
 function cleanString(value?: string): string | undefined {
-  return value ? stegaClean(value) : value
+	return value ? stegaClean(value) : value;
 }
 
 function findFirstContentImage(content: unknown[] | undefined) {
-  if (!Array.isArray(content)) return undefined
+	if (!Array.isArray(content)) return undefined;
 
-  for (const block of content) {
-    const item = block as {_type?: string} & SanityImage
-    if (item._type !== 'articleImage') continue
+	for (const block of content) {
+		const item = block as { _type?: string } & SanityImage;
+		if (item._type !== "articleImage") continue;
 
-    const image = normalizeMedia(item)
-    if (image) return image
-  }
+		const image = normalizeMedia(item);
+		if (image) return image;
+	}
 
-  return undefined
+	return undefined;
 }
 
-function shouldUseCoverFallback(cover: Article['coverImage'] | undefined) {
-  return !cover
+function shouldUseCoverFallback(cover: Article["coverImage"] | undefined) {
+	return !cover;
 }
 
 function languagesFromQuickFacts(language?: string) {
-  if (!language) return []
-  return language
-    .split(/[,/]/)
-    .map((item) => item.trim())
-    .filter(Boolean)
+	if (!language) return [];
+	return language
+		.split(/[,/]/)
+		.map((item) => item.trim())
+		.filter(Boolean);
 }
 
-function normalizeContinent(continent?: SanityContinent): Destination['continent'] {
-  return (cleanString(continent?.slug) || 'europe') as Destination['continent']
+function normalizeContinent(
+	continent?: SanityContinent,
+): Destination["continent"] {
+	return (cleanString(continent?.slug) || "europe") as Destination["continent"];
 }
 
-function parseCurrencyFromQuickFacts(currency?: string): Destination['currency'] {
-  if (!currency) return undefined
-  const line = currency.trim()
-  if (!line) return undefined
+function parseCurrencyFromQuickFacts(
+	currency?: string,
+): Destination["currency"] {
+	if (!currency) return undefined;
+	const line = currency.trim();
+	if (!line) return undefined;
 
-  const upper = line.toUpperCase()
-  const isoFromParens = line.match(/\(([A-Z]{3})\)/)?.[1]
-  const isoFromWord = line.match(/\b([A-Z]{3})\b/)?.[1]
-  const inferredCode =
-    isoFromParens ||
-    isoFromWord ||
-    (upper.includes('EURO') || line.includes('€') ? 'EUR' : undefined) ||
-    (upper.includes('DOLAR') || upper.includes('DOLLAR') || line.includes('$') ? 'USD' : undefined) ||
-    (upper.includes('KORUNA') || upper.includes('CZK') || line.includes('Kč') ? 'CZK' : undefined) ||
-    (upper.includes('LIBRA') || upper.includes('GBP') || line.includes('£') ? 'GBP' : undefined) ||
-    (upper.includes('ZLOT') || upper.includes('PLN') || line.includes('zł') ? 'PLN' : undefined)
+	const upper = line.toUpperCase();
+	const isoFromParens = line.match(/\(([A-Z]{3})\)/)?.[1];
+	const isoFromWord = line.match(/\b([A-Z]{3})\b/)?.[1];
+	const inferredCode =
+		isoFromParens ||
+		isoFromWord ||
+		(upper.includes("EURO") || line.includes("€") ? "EUR" : undefined) ||
+		(upper.includes("DOLAR") || upper.includes("DOLLAR") || line.includes("$")
+			? "USD"
+			: undefined) ||
+		(upper.includes("KORUNA") || upper.includes("CZK") || line.includes("Kč")
+			? "CZK"
+			: undefined) ||
+		(upper.includes("LIBRA") || upper.includes("GBP") || line.includes("£")
+			? "GBP"
+			: undefined) ||
+		(upper.includes("ZLOT") || upper.includes("PLN") || line.includes("zł")
+			? "PLN"
+			: undefined);
 
-  if (!inferredCode) return undefined
+	if (!inferredCode) return undefined;
 
-  const symbolFromParens = line.match(/\(([^)]+)\)/)?.[1]
-  return {
-    code: inferredCode,
-    name: line,
-    symbol: symbolFromParens || inferredCode,
-    budgetPerDay: {
-      budget: 50,
-      midRange: 100,
-      luxury: 200,
-    },
-  }
+	const symbolFromParens = line.match(/\(([^)]+)\)/)?.[1];
+	return {
+		code: inferredCode,
+		name: line,
+		symbol: symbolFromParens || inferredCode,
+		budgetPerDay: {
+			budget: 50,
+			midRange: 100,
+			luxury: 200,
+		},
+	};
 }
 
 function normalizeDrivingSide(value?: string): string | undefined {
-  if (!value) return undefined
-  const lower = value.toLowerCase()
-  if (lower.includes('vlevo') || lower.includes('left') || lower.includes('levostr')) return 'vlevo'
-  if (lower.includes('vpravo') || lower.includes('right') || lower.includes('pravostr')) return 'vpravo'
-  return value
+	if (!value) return undefined;
+	const lower = value.toLowerCase();
+	if (
+		lower.includes("vlevo") ||
+		lower.includes("left") ||
+		lower.includes("levostr")
+	)
+		return "vlevo";
+	if (
+		lower.includes("vpravo") ||
+		lower.includes("right") ||
+		lower.includes("pravostr")
+	)
+		return "vpravo";
+	return value;
 }
 
 function transformDestination(destination: SanityCountry): Destination {
-  const heroImage = normalizeMedia(destination.cover)
-  const introHtml = sanityPortableTextToHtml(destination.intro)
-  const name = cleanString(destination.name) || destination.name
-  const metaDescription =
-    cleanString(destination.seoDescription) ||
-    introHtml.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 160) ||
-    `Lowcost průvodce pro ${name}: rozpočet, doprava, tipy a praktické informace.`
+	const heroImage = normalizeMedia(destination.cover);
+	const introHtml = sanityPortableTextToHtml(destination.intro);
+	const name = cleanString(destination.name) || destination.name;
+	const metaDescription =
+		cleanString(destination.seoDescription) ||
+		introHtml
+			.replace(/<[^>]+>/g, " ")
+			.replace(/\s+/g, " ")
+			.trim()
+			.slice(0, 160) ||
+		`Lowcost průvodce pro ${name}: rozpočet, doprava, tipy a praktické informace.`;
 
-  return {
-    id: destination._id,
-    slug: cleanString(destination.slug) || destination.slug,
-    name,
-    continent: normalizeContinent(destination.continent),
-    type: 'country',
-    languages: languagesFromQuickFacts(destination.quickFacts?.language),
-    timezone: destination.quickFacts?.timezone,
-    visaInfo: destination.quickFacts?.visa,
-    bestTimeToVisit: destination.quickFacts?.bestTime,
-    electricityPlug: destination.quickFacts?.electricityPlug,
-    drivingSide: normalizeDrivingSide(destination.quickFacts?.drivingSide),
-    heroImage: heroImage ? {...heroImage, alt: heroImage.alt || name} : undefined,
-    introHtml: introHtml || undefined,
-    locale: (cleanString(destination.locale) as SupportedLocale | undefined) || 'cs',
-    currency: parseCurrencyFromQuickFacts(destination.quickFacts?.currency),
-    seo: {
-      metaTitle: cleanString(destination.seoTitle) || `${name} | Svět za málo`,
-      metaDescription,
-      keywords: [name, 'levné cestování'],
-    },
-  }
+	return {
+		id: destination._id,
+		slug: cleanString(destination.slug) || destination.slug,
+		name,
+		continent: normalizeContinent(destination.continent),
+		type: "country",
+		languages: languagesFromQuickFacts(destination.quickFacts?.language),
+		timezone: destination.quickFacts?.timezone,
+		visaInfo: destination.quickFacts?.visa,
+		bestTimeToVisit: destination.quickFacts?.bestTime,
+		electricityPlug: destination.quickFacts?.electricityPlug,
+		drivingSide: normalizeDrivingSide(destination.quickFacts?.drivingSide),
+		heroImage: heroImage
+			? { ...heroImage, alt: heroImage.alt || name }
+			: undefined,
+		introHtml: introHtml || undefined,
+		locale:
+			(cleanString(destination.locale) as SupportedLocale | undefined) || "cs",
+		currency: parseCurrencyFromQuickFacts(destination.quickFacts?.currency),
+		seo: {
+			metaTitle: cleanString(destination.seoTitle) || `${name} | Svět za málo`,
+			metaDescription,
+			keywords: [name, "levné cestování"],
+		},
+	};
 }
 
 function transformArticle(article: SanityArticle): Article {
-  const intro = article.excerpt || ''
-  const cover = normalizeMedia(article.cover) ?? findFirstContentImage(article.content)
-  const slug = cleanString(article.slug) || article.slug
-  const title = article.title
-  const cleanTitle = cleanString(article.title) || article.title
-  const coverFallback = ARTICLE_COVER_FALLBACKS[slug]
-  const resolvedCover = shouldUseCoverFallback(cover) ? coverFallback ?? cover : cover
+	const intro = article.excerpt || "";
+	const cover =
+		normalizeMedia(article.cover) ?? findFirstContentImage(article.content);
+	const slug = cleanString(article.slug) || article.slug;
+	const title = article.title;
+	const cleanTitle = cleanString(article.title) || article.title;
+	const coverFallback = ARTICLE_COVER_FALLBACKS[slug];
+	const resolvedCover = shouldUseCoverFallback(cover)
+		? (coverFallback ?? cover)
+		: cover;
 
-  return {
-    id: article._id,
-    slug,
-    title,
-    intro,
-    htmlContent: sanityPortableTextToHtml(article.content) || undefined,
-    articleType: cleanString(article.articleType) || 'destination-guide',
-    destinationId: cleanString(article.country?.slug),
-    countryName: article.country?.name,
-    coverImage: resolvedCover ? {...resolvedCover, alt: resolvedCover.alt || article.title} : undefined,
-    relatedArticles: article.relatedArticles?.map(transformArticle).filter(Boolean),
-    tags: [],
-    publishedAt: article._createdAt,
-    updatedAt: article._updatedAt,
-    locale: (cleanString(article.locale) as SupportedLocale | undefined) || 'cs',
-    seo: {
-      metaTitle: cleanString(article.seoTitle) || `${cleanTitle} | Svět za málo`,
-      metaDescription: cleanString(article.seoDescription) || cleanString(intro)?.slice(0, 160) || '',
-      keywords: [cleanTitle, 'levné cestování'],
-    },
-  }
+	return {
+		id: article._id,
+		slug,
+		title,
+		intro,
+		htmlContent: sanityPortableTextToHtml(article.content) || undefined,
+		articleType: cleanString(article.articleType) || "destination-guide",
+		destinationId: cleanString(article.country?.slug),
+		countryName: article.country?.name,
+		coverImage: resolvedCover
+			? { ...resolvedCover, alt: resolvedCover.alt || article.title }
+			: undefined,
+		relatedArticles: article.relatedArticles
+			?.map(transformArticle)
+			.filter(Boolean),
+		tags: [],
+		publishedAt: article._createdAt,
+		updatedAt: article._updatedAt,
+		locale:
+			(cleanString(article.locale) as SupportedLocale | undefined) || "cs",
+		seo: {
+			metaTitle:
+				cleanString(article.seoTitle) || `${cleanTitle} | Svět za málo`,
+			metaDescription:
+				cleanString(article.seoDescription) ||
+				cleanString(intro)?.slice(0, 160) ||
+				"",
+			keywords: [cleanTitle, "levné cestování"],
+		},
+	};
 }
 
-function mapSafely<TInput, TOutput>(items: TInput[], transform: (item: TInput) => TOutput, context: string): TOutput[] {
-  const mapped: TOutput[] = []
-  for (const item of items) {
-    try {
-      mapped.push(transform(item))
-    } catch (error) {
-      console.warn(`Sanity transform failed (${context}), skipping record:`, error)
-    }
-  }
-  return mapped
+function transformAffiliateLink(link: SanityAffiliateLink): AffiliateLink {
+	return {
+		id: link._id,
+		slug: cleanString(link.slug) || link.slug,
+		title: cleanString(link.title) || link.title,
+		destinationUrl: link.destinationUrl,
+		locale: (cleanString(link.locale) as SupportedLocale | undefined) || "cs",
+		label: cleanString(link.label),
+		description: cleanString(link.description),
+		disclosureText: cleanString(link.disclosureText),
+		relSponsored: link.relSponsored ?? true,
+		enabled: link.enabled ?? false,
+	};
 }
 
-export async function fetchLatestArticles(limit = 6, locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Article[]> {
-  try {
-    const {data} = await loadQuery<SanityArticle[]>({
-      query: `*[_type == "article" && locale == $locale] | order(_createdAt desc)[0...$limit]{${articleCardProjection}}`,
-      params: {locale, limit},
-      ...options,
-    })
-    return mapSafely(data, transformArticle, 'latest articles')
-  } catch (error) {
-    console.warn('Sanity fetch latest articles failed:', error)
-    return []
-  }
+function mapSafely<TInput, TOutput>(
+	items: TInput[],
+	transform: (item: TInput) => TOutput,
+	context: string,
+): TOutput[] {
+	const mapped: TOutput[] = [];
+	for (const item of items) {
+		try {
+			mapped.push(transform(item));
+		} catch (error) {
+			console.warn(
+				`Sanity transform failed (${context}), skipping record:`,
+				error,
+			);
+		}
+	}
+	return mapped;
 }
 
-export async function fetchArticles(locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Article[]> {
-  try {
-    const {data} = await loadQuery<SanityArticle[]>({
-      query: `*[_type == "article" && locale == $locale] | order(_createdAt desc){${articleProjection}}`,
-      params: {locale},
-      ...options,
-    })
-    return mapSafely(data, transformArticle, 'articles')
-  } catch (error) {
-    console.warn('Sanity fetch articles failed:', error)
-    return []
-  }
+export async function fetchLatestArticles(
+	limit = 6,
+	locale: SupportedLocale = "cs",
+	options: SanityFetchOptions = {},
+): Promise<Article[]> {
+	try {
+		const { data } = await loadQuery<SanityArticle[]>({
+			query: `*[_type == "article" && locale == $locale] | order(_createdAt desc)[0...$limit]{${articleCardProjection}}`,
+			params: { locale, limit },
+			...options,
+		});
+		return mapSafely(data, transformArticle, "latest articles");
+	} catch (error) {
+		console.warn("Sanity fetch latest articles failed:", error);
+		return [];
+	}
 }
 
-export async function fetchArticlesPage(page = 1, locale: SupportedLocale = 'cs', pageSize = ARTICLES_PAGE_SIZE, options: SanityFetchOptions = {}) {
-  try {
-    const start = Math.max(0, (page - 1) * pageSize)
-    const end = start + pageSize
-    const {data: result} = await loadQuery<{articles: SanityArticle[]; total: number}>({
-      query: `{
+export async function fetchArticles(
+	locale: SupportedLocale = "cs",
+	options: SanityFetchOptions = {},
+): Promise<Article[]> {
+	try {
+		const { data } = await loadQuery<SanityArticle[]>({
+			query: `*[_type == "article" && locale == $locale] | order(_createdAt desc){${articleProjection}}`,
+			params: { locale },
+			...options,
+		});
+		return mapSafely(data, transformArticle, "articles");
+	} catch (error) {
+		console.warn("Sanity fetch articles failed:", error);
+		return [];
+	}
+}
+
+export async function fetchArticlesPage(
+	page = 1,
+	locale: SupportedLocale = "cs",
+	pageSize = ARTICLES_PAGE_SIZE,
+	options: SanityFetchOptions = {},
+) {
+	try {
+		const start = Math.max(0, (page - 1) * pageSize);
+		const end = start + pageSize;
+		const { data: result } = await loadQuery<{
+			articles: SanityArticle[];
+			total: number;
+		}>({
+			query: `{
         "articles": *[_type == "article" && locale == $locale] | order(_createdAt desc)[$start...$end]{${articleCardProjection}},
         "total": count(*[_type == "article" && locale == $locale])
       }`,
-      params: {locale, start, end},
-      ...options,
-    })
-    const articles = mapSafely(result.articles, transformArticle, 'articles page')
-    const total = result.total ?? articles.length
-    return {
-      articles,
-      page,
-      pageCount: Math.max(1, Math.ceil(total / pageSize)),
-      total,
-    }
-  } catch (error) {
-    console.warn('Sanity fetch articles page failed:', error)
-    return {articles: [], page, pageCount: 1, total: 0}
-  }
+			params: { locale, start, end },
+			...options,
+		});
+		const articles = mapSafely(
+			result.articles,
+			transformArticle,
+			"articles page",
+		);
+		const total = result.total ?? articles.length;
+		return {
+			articles,
+			page,
+			pageCount: Math.max(1, Math.ceil(total / pageSize)),
+			total,
+		};
+	} catch (error) {
+		console.warn("Sanity fetch articles page failed:", error);
+		return { articles: [], page, pageCount: 1, total: 0 };
+	}
 }
 
-export async function fetchArticleCount(locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<number> {
-  try {
-    const {data} = await loadQuery<number>({
-      query: `count(*[_type == "article" && locale == $locale])`,
-      params: {locale},
-      ...options,
-    })
-    return data ?? 0
-  } catch {
-    return 0
-  }
+export async function fetchArticleCount(
+	locale: SupportedLocale = "cs",
+	options: SanityFetchOptions = {},
+): Promise<number> {
+	try {
+		const { data } = await loadQuery<number>({
+			query: `count(*[_type == "article" && locale == $locale])`,
+			params: { locale },
+			...options,
+		});
+		return data ?? 0;
+	} catch {
+		return 0;
+	}
 }
 
 export async function fetchArticleFilterMeta(
-  locale: SupportedLocale = 'cs',
-  options: SanityFetchOptions = {},
-): Promise<{slug: string; articleType?: string; destinationId?: string}[]> {
-  try {
-    const {data} = await loadQuery<{slug: string; articleType?: string; destinationId?: string}[]>({
-      query: `*[_type == "article" && locale == $locale]{"slug": slug.current, articleType, "destinationId": country->slug.current}`,
-      params: {locale},
-      ...options,
-    })
-    return data ?? []
-  } catch {
-    return []
-  }
+	locale: SupportedLocale = "cs",
+	options: SanityFetchOptions = {},
+): Promise<{ slug: string; articleType?: string; destinationId?: string }[]> {
+	try {
+		const { data } = await loadQuery<
+			{ slug: string; articleType?: string; destinationId?: string }[]
+		>({
+			query: `*[_type == "article" && locale == $locale]{"slug": slug.current, articleType, "destinationId": country->slug.current}`,
+			params: { locale },
+			...options,
+		});
+		return data ?? [];
+	} catch {
+		return [];
+	}
 }
 
-export async function fetchAllArticles(locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Article[]> {
-  const total = await fetchArticleCount(locale, options)
-  if (total === 0) return []
+export async function fetchAllArticles(
+	locale: SupportedLocale = "cs",
+	options: SanityFetchOptions = {},
+): Promise<Article[]> {
+	const total = await fetchArticleCount(locale, options);
+	if (total === 0) return [];
 
-  const pageCount = Math.ceil(total / ARTICLES_SEARCH_PAGE_SIZE)
-  const pages = await Promise.all(
-    Array.from({length: pageCount}, (_, i) => fetchArticlesPage(i + 1, locale, ARTICLES_SEARCH_PAGE_SIZE, options)),
-  )
+	const pageCount = Math.ceil(total / ARTICLES_SEARCH_PAGE_SIZE);
+	const pages = await Promise.all(
+		Array.from({ length: pageCount }, (_, i) =>
+			fetchArticlesPage(i + 1, locale, ARTICLES_SEARCH_PAGE_SIZE, options),
+		),
+	);
 
-  const articlesBySlug = new Map<string, Article>()
-  for (const result of pages) {
-    for (const article of result.articles) {
-      if (!articlesBySlug.has(article.slug)) {
-        articlesBySlug.set(article.slug, article)
-      }
-    }
-  }
-  return Array.from(articlesBySlug.values())
+	const articlesBySlug = new Map<string, Article>();
+	for (const result of pages) {
+		for (const article of result.articles) {
+			if (!articlesBySlug.has(article.slug)) {
+				articlesBySlug.set(article.slug, article);
+			}
+		}
+	}
+	return Array.from(articlesBySlug.values());
 }
 
-export async function fetchArticleBySlug(slug: string, locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Article | null> {
-  try {
-    const {data} = await loadQuery<SanityArticle | null>({
-      query: `*[_type == "article" && slug.current == $slug && locale == $locale][0]{${articleProjection}}`,
-      params: {slug, locale},
-      ...options,
-    })
-    return data ? transformArticle(data) : null
-  } catch (error) {
-    console.warn('Sanity fetch article by slug failed:', error)
-    return null
-  }
+export async function fetchArticleBySlug(
+	slug: string,
+	locale: SupportedLocale = "cs",
+	options: SanityFetchOptions = {},
+): Promise<Article | null> {
+	try {
+		const { data } = await loadQuery<SanityArticle | null>({
+			query: `*[_type == "article" && slug.current == $slug && locale == $locale][0]{${articleProjection}}`,
+			params: { slug, locale },
+			...options,
+		});
+		return data ? transformArticle(data) : null;
+	} catch (error) {
+		console.warn("Sanity fetch article by slug failed:", error);
+		return null;
+	}
 }
 
-export async function fetchDestinations(locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Destination[]> {
-  try {
-    const {data} = await loadQuery<SanityCountry[]>({
-      query: `*[_type == "country" && locale == $locale] | order(name asc){${countryProjection}}`,
-      params: {locale},
-      ...options,
-    })
-    return mapSafely(data, transformDestination, 'destinations')
-  } catch (error) {
-    console.warn('Sanity fetch destinations failed:', error)
-    return []
-  }
+export async function fetchDestinations(
+	locale: SupportedLocale = "cs",
+	options: SanityFetchOptions = {},
+): Promise<Destination[]> {
+	try {
+		const { data } = await loadQuery<SanityCountry[]>({
+			query: `*[_type == "country" && locale == $locale] | order(name asc){${countryProjection}}`,
+			params: { locale },
+			...options,
+		});
+		return mapSafely(data, transformDestination, "destinations");
+	} catch (error) {
+		console.warn("Sanity fetch destinations failed:", error);
+		return [];
+	}
 }
 
-export async function fetchDestinationBySlug(slug: string, locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Destination | null> {
-  try {
-    const {data} = await loadQuery<SanityCountry | null>({
-      query: `*[_type == "country" && slug.current == $slug && locale == $locale][0]{${countryProjection}}`,
-      params: {slug, locale},
-      ...options,
-    })
-    return data ? transformDestination(data) : null
-  } catch (error) {
-    console.warn('Sanity fetch destination by slug failed:', error)
-    return null
-  }
+export async function fetchDestinationBySlug(
+	slug: string,
+	locale: SupportedLocale = "cs",
+	options: SanityFetchOptions = {},
+): Promise<Destination | null> {
+	try {
+		const { data } = await loadQuery<SanityCountry | null>({
+			query: `*[_type == "country" && slug.current == $slug && locale == $locale][0]{${countryProjection}}`,
+			params: { slug, locale },
+			...options,
+		});
+		return data ? transformDestination(data) : null;
+	} catch (error) {
+		console.warn("Sanity fetch destination by slug failed:", error);
+		return null;
+	}
 }
 
-export async function fetchDestinationsByContinent(continent: string, locale: SupportedLocale = 'cs', options: SanityFetchOptions = {}): Promise<Destination[]> {
-  try {
-    const {data} = await loadQuery<SanityCountry[]>({
-      query: `*[_type == "country" && locale == $locale && continent->slug.current == $continent] | order(name asc){${countryProjection}}`,
-      params: {locale, continent},
-      ...options,
-    })
-    return mapSafely(data, transformDestination, 'destinations by continent')
-  } catch (error) {
-    console.warn('Sanity fetch destinations by continent failed:', error)
-    return []
-  }
+export async function fetchAffiliateLinkBySlug(
+	slug: string,
+	locale: SupportedLocale = "cs",
+	options: SanityFetchOptions = {},
+): Promise<AffiliateLink | null> {
+	try {
+		const { data } = await loadQuery<SanityAffiliateLink | null>({
+			query: `*[_type == "affiliateLink" && slug.current == $slug && enabled == true && locale in [$locale, "cs"]]{
+        _id,
+        title,
+        "slug": slug.current,
+        destinationUrl,
+        locale,
+        label,
+        description,
+        disclosureText,
+        relSponsored,
+        enabled,
+        "priority": select(locale == $locale => 0, 1)
+      } | order(priority asc)[0]`,
+			params: { slug, locale },
+			...options,
+		});
+		return data ? transformAffiliateLink(data) : null;
+	} catch (error) {
+		console.warn("Sanity fetch affiliate link failed:", error);
+		return null;
+	}
+}
+
+export async function fetchDestinationsByContinent(
+	continent: string,
+	locale: SupportedLocale = "cs",
+	options: SanityFetchOptions = {},
+): Promise<Destination[]> {
+	try {
+		const { data } = await loadQuery<SanityCountry[]>({
+			query: `*[_type == "country" && locale == $locale && continent->slug.current == $continent] | order(name asc){${countryProjection}}`,
+			params: { locale, continent },
+			...options,
+		});
+		return mapSafely(data, transformDestination, "destinations by continent");
+	} catch (error) {
+		console.warn("Sanity fetch destinations by continent failed:", error);
+		return [];
+	}
 }

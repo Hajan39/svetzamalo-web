@@ -114,3 +114,16 @@ export interface PageCopy {
 	errorMessage?: string;
 	footnote?: string;
 }
+
+export interface AffiliateLink {
+	id: string;
+	slug: string;
+	title: string;
+	destinationUrl: string;
+	locale: SupportedLocale;
+	label?: string;
+	description?: string;
+	disclosureText?: string;
+	relSponsored?: boolean;
+	enabled: boolean;
+}
