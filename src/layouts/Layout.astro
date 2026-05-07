@@ -1,17 +1,21 @@
 ---
-import Analytics from '@vercel/analytics/astro';
-import SpeedInsights from '@vercel/speed-insights/astro';
-import { stegaClean } from '@sanity/client/stega';
-import { perspectiveCookieName } from '@sanity/preview-url-secret/constants';
-import SanityVisualEditing from '@/components/SanityVisualEditing';
-import DisableDraftMode from '@/components/DisableDraftMode';
-import { translations } from '@/i18n/translations';
-import { getLangFromUrl, stripLocalePrefix, useTranslations } from '@/i18n/utils';
-import Footer from '../components/layout/Footer.astro';
-import Header from '../components/layout/Header.astro';
-import { fetchSiteConfig } from '@/lib/content/api';
-import type { SiteConfig } from '@/types';
-import '@/styles/global.css';
+import Analytics from "@vercel/analytics/astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
+import { stegaClean } from "@sanity/client/stega";
+import { perspectiveCookieName } from "@sanity/preview-url-secret/constants";
+import SanityVisualEditing from "@/components/SanityVisualEditing";
+import DisableDraftMode from "@/components/DisableDraftMode";
+import { translations } from "@/i18n/translations";
+import {
+	getLangFromUrl,
+	stripLocalePrefix,
+	useTranslations,
+} from "@/i18n/utils";
+import Footer from "../components/layout/Footer.astro";
+import Header from "../components/layout/Header.astro";
+import { fetchSiteConfig } from "@/lib/content/api";
+import type { SiteConfig } from "@/types";
+import "@/styles/global.css";
 
 interface Props {
 	title?: string;
@@ -24,19 +28,34 @@ interface Props {
 const locale = getLangFromUrl(Astro.url);
 const t = useTranslations(locale);
 const shared = translations[locale].shared;
-const siteUrl = import.meta.env.SITE_URL || import.meta.env.PUBLIC_SITE_URL || 'https://svetzamalo.cz';
-const title = stegaClean(Astro.props.title ?? t('layout.defaultTitle'));
-const description = stegaClean(Astro.props.description ?? t('layout.defaultDescription'));
+const siteUrl =
+	import.meta.env.SITE_URL ||
+	import.meta.env.PUBLIC_SITE_URL ||
+	"https://svetzamalo.cz";
+const title = stegaClean(Astro.props.title ?? t("layout.defaultTitle"));
+const description = stegaClean(
+	Astro.props.description ?? t("layout.defaultDescription"),
+);
 const canonicalRawPath = Astro.props.canonicalPath ?? Astro.url.pathname;
 const canonicalUrl = new URL(canonicalRawPath, siteUrl).toString();
 const pathWithoutLocale = stripLocalePrefix(canonicalRawPath);
-const hreflangCs = new URL(pathWithoutLocale || '/', siteUrl).toString();
-const hreflangEn = new URL(`/en${pathWithoutLocale || '/'}`, siteUrl).toString();
-const image = Astro.props.image ?? '/images/hero/mauritius-home-hero.jpg';
-const siteConfig = Astro.props.siteConfig !== undefined ? Astro.props.siteConfig : await fetchSiteConfig(locale);
+const hreflangCs = new URL(pathWithoutLocale || "/", siteUrl).toString();
+const hreflangEn = new URL(
+	`/en${pathWithoutLocale || "/"}`,
+	siteUrl,
+).toString();
+const image = Astro.props.image ?? "/images/hero/mauritius-home-hero.jpg";
+const siteConfig =
+	Astro.props.siteConfig !== undefined
+		? Astro.props.siteConfig
+		: await fetchSiteConfig(locale);
 const analyticsEnabled = siteConfig?.enableAnalytics === true;
 let draftMode = false;
-try { draftMode = Astro.cookies.has(perspectiveCookieName); } catch { /* not available on prerendered pages */ }
+try {
+	draftMode = Astro.cookies.has(perspectiveCookieName);
+} catch {
+	/* not available on prerendered pages */
+}
 const ogLocale = shared.ogLocale;
 ---
 
@@ -77,6 +96,7 @@ const ogLocale = shared.ogLocale;
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={new URL(image, siteUrl).toString()} />
+		
 		{analyticsEnabled && <Analytics />}
 		<slot name="head" />
 	</head>
@@ -89,5 +109,13 @@ const ogLocale = shared.ogLocale;
 		{analyticsEnabled && <SpeedInsights />}
 		{draftMode && <SanityVisualEditing client:only="react" />}
 		{draftMode && <DisableDraftMode client:only="react" />}
+		<script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1">
+		(function () {
+			var script = document.createElement("script");
+			script.async = 1;
+			script.src = 'https://emrldtp.com/NTI2NTIx.js?t=526521';
+			document.head.appendChild(script);
+		})();
+		</script>
 	</body>
 </html>
