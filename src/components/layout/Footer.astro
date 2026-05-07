@@ -1,23 +1,28 @@
 ---
-import BrandLogo from './BrandLogo.astro';
-import type { SiteConfig } from '@/types';
-import { getLangFromUrl, useTranslations, withLocalePath } from '@/i18n/utils';
+import BrandLogo from "./BrandLogo.astro";
+import type { SiteConfig } from "@/types";
+import { getLangFromUrl, useTranslations, withLocalePath } from "@/i18n/utils";
 
-interface Props { siteConfig?: SiteConfig | null }
+interface Props {
+	siteConfig?: SiteConfig | null;
+}
 
 const locale = getLangFromUrl(Astro.url);
 const t = useTranslations(locale);
 const { siteConfig } = Astro.props;
 const year = new Date().getFullYear();
-const siteEmail = siteConfig?.siteEmail || 'info@svetzamalo.cz';
+const siteEmail = siteConfig?.siteEmail || "info@svetzamalo.cz";
 const mainLinks = [
-  { label: t('footer.destinations'), href: withLocalePath('/destinations', locale) },
-  { label: t('footer.articles'), href: withLocalePath('/articles', locale) },
-  { label: t('footer.about'), href: withLocalePath('/about', locale) },
+	{
+		label: t("footer.destinations"),
+		href: withLocalePath("/destinations", locale),
+	},
+	{ label: t("footer.articles"), href: withLocalePath("/articles", locale) },
+	{ label: t("footer.about"), href: withLocalePath("/about", locale) },
 ];
 const legalLinks = [
-  { label: t('footer.privacy'), href: withLocalePath('/privacy', locale) },
-  { label: t('footer.terms'), href: withLocalePath('/terms', locale) },
+	{ label: t("footer.privacy"), href: withLocalePath("/privacy", locale) },
+	{ label: t("footer.terms"), href: withLocalePath("/terms", locale) },
 ];
 ---
 
@@ -26,7 +31,7 @@ const legalLinks = [
     <div class="grid grid-cols-1 gap-10 lg:grid-cols-12">
       <div class="lg:col-span-5">
         <a href={withLocalePath('/', locale)} class="mb-4 inline-flex hover:no-underline">
-          <BrandLogo markClass="h-12 w-10" />
+          <BrandLogo size="footer" />
         </a>
         <p class="mb-6 max-w-sm text-sm leading-relaxed text-foreground-secondary">{t('footer.tagline')}</p>
         <p class="text-sm text-foreground-muted">{siteEmail}</p>

@@ -1,11 +1,18 @@
 ---
-import BrandLogo from './BrandLogo.astro';
-import { isBookPageEnabled } from '@/lib/bookConfig';
-import type { SiteConfig } from '@/types';
-import { languageSwitcherEnabled, languages } from '@/i18n/ui';
-import { getLangFromUrl, switchLocalePath, useTranslations, withLocalePath } from '@/i18n/utils';
+import BrandLogo from "./BrandLogo.astro";
+import { isBookPageEnabled } from "@/lib/bookConfig";
+import type { SiteConfig } from "@/types";
+import { languageSwitcherEnabled, languages } from "@/i18n/ui";
+import {
+	getLangFromUrl,
+	switchLocalePath,
+	useTranslations,
+	withLocalePath,
+} from "@/i18n/utils";
 
-interface Props { siteConfig?: SiteConfig | null }
+interface Props {
+	siteConfig?: SiteConfig | null;
+}
 
 const locale = getLangFromUrl(Astro.url);
 const t = useTranslations(locale);
@@ -13,37 +20,55 @@ const { siteConfig } = Astro.props;
 const isBookAvailable = isBookPageEnabled(siteConfig);
 
 const navItems = [
-  {
-    label: t('header.home'),
-    href: withLocalePath('/', locale),
-    description: t('header.navDescHome'),
-  },
-  {
-    label: t('header.destinations'),
-    href: withLocalePath('/destinations', locale),
-    description: t('header.navDescDestinations'),
-  },
-  {
-    label: t('header.articles'),
-    href: withLocalePath('/articles', locale),
-    description: t('header.navDescArticles'),
-  },
-  ...(isBookAvailable ? [{
-    label: t('header.ebook'),
-    href: withLocalePath('/book', locale),
-    description: t('header.navDescEbook'),
-  }] : []),
-  {
-    label: t('header.about'),
-    href: withLocalePath('/about', locale),
-    description: t('header.navDescAbout'),
-  },
+	{
+		label: t("header.home"),
+		href: withLocalePath("/", locale),
+		description: t("header.navDescHome"),
+	},
+	{
+		label: t("header.destinations"),
+		href: withLocalePath("/destinations", locale),
+		description: t("header.navDescDestinations"),
+	},
+	{
+		label: t("header.articles"),
+		href: withLocalePath("/articles", locale),
+		description: t("header.navDescArticles"),
+	},
+	...(isBookAvailable
+		? [
+				{
+					label: t("header.ebook"),
+					href: withLocalePath("/book", locale),
+					description: t("header.navDescEbook"),
+				},
+			]
+		: []),
+	{
+		label: t("header.about"),
+		href: withLocalePath("/about", locale),
+		description: t("header.navDescAbout"),
+	},
 ];
 
 const currentPath = `${Astro.url.pathname}${Astro.url.search}`;
 const languageItems = [
-  { label: languages.cs, shortLabel: 'CS', flag: '🇨🇿', href: switchLocalePath(currentPath, 'cs'), active: locale === 'cs', disabled: false },
-  { label: languages.en, shortLabel: 'EN', flag: '🇬🇧', href: switchLocalePath(currentPath, 'en'), active: locale === 'en', disabled: false },
+	{
+		label: languages.cs,
+		shortLabel: "CS",
+		flag: "🇨🇿",
+		href: switchLocalePath(currentPath, "cs"),
+		active: locale === "cs",
+		disabled: false,
+	},
+	{
+		label: languages.en,
+		shortLabel: "EN",
+		flag: "🇬🇧",
+		href: switchLocalePath(currentPath, "en"),
+		active: locale === "en",
+		disabled: false,
+	},
 ];
 ---
 
@@ -51,7 +76,7 @@ const languageItems = [
   <div class="container-wide">
     <div class="flex h-16 items-center justify-between gap-3 lg:h-20">
       <a href={withLocalePath('/', locale)} class="inline-flex items-center hover:no-underline" aria-label={t('header.logoHome')}>
-        <BrandLogo markClass="h-11 w-10 lg:h-12 lg:w-11" textClass="hidden sm:flex" />
+        <BrandLogo size="header" hideWordmarkOnMobile />
       </a>
 
       <nav class="hidden items-center rounded-full border border-border bg-background-secondary/80 p-1 lg:flex" aria-label={t('header.navLabel')}>
