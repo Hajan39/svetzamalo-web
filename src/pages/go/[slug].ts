@@ -1,4 +1,5 @@
 import type { APIRoute } from "astro";
+import { track } from "@vercel/analytics/server";
 import { fetchAffiliateLinkBySlug } from "@/lib/content/api";
 import { getLocaleFromAstro } from "@/lib/i18n";
 
@@ -34,6 +35,12 @@ export const GET: APIRoute = async (context) => {
 		if (!["http:", "https:"].includes(destination.protocol)) {
 			return new Response("Invalid affiliate destination", { status: 502 });
 		}
+		// fire-and-forget — neblokuje redirect
+		track("affiliate_click", {
+			slug,
+			locale,
+			title: affiliateLink.title,
+		}).catch(() => {});
 		return redirectResponse(destination.toString());
 	} catch {
 		return new Response("Invalid affiliate destination", { status: 502 });
