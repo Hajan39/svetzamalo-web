@@ -1,23 +1,41 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import { fetchPageCopy } from '@/lib/content/api';
-import { copyValue } from '@/lib/copy';
-import { translations } from '@/i18n/translations';
-import { getLangFromUrl, withLocalePath } from '@/i18n/utils';
+import Layout from "@/layouts/Layout.astro";
+import { fetchPageCopy } from "@/lib/content/api";
+import { copyValue } from "@/lib/copy";
+import { translations } from "@/i18n/translations";
+import { getLangFromUrl, withLocalePath } from "@/i18n/utils";
 
 const locale = getLangFromUrl(Astro.url);
-const token = Astro.url.searchParams.get('token') || '';
-const downloadType = Astro.url.searchParams.get('type') || 'free';
-const isPaidDownload = downloadType === 'paid';
-const copy = await fetchPageCopy(isPaidDownload ? 'ebook-download-paid' : 'ebook-download-free', locale);
-const apiDownloadUrl = token ? `/api/ebook/download?token=${encodeURIComponent(token)}` : '';
+const token = Astro.url.searchParams.get("token") || "";
+const downloadType = Astro.url.searchParams.get("type") || "free";
+const downloadFormat = Astro.url.searchParams.get("format");
+const isPaidDownload = downloadType === "paid";
+const copy = await fetchPageCopy(
+	isPaidDownload ? "ebook-download-paid" : "ebook-download-free",
+	locale,
+);
+const apiDownloadUrl = token
+	? `/api/ebook/download?token=${encodeURIComponent(token)}`
+	: "";
 const copyVariables = { type: downloadType };
 const text = translations[locale].pages.ebookDownload;
 
-const title = copyValue(copy?.metaTitle, isPaidDownload ? text.titlePaid : text.titleFree, copyVariables);
-const description = copyValue(copy?.metaDescription, isPaidDownload
-  ? text.descriptionPaid
-  : text.descriptionFree, copyVariables);
+const title = copyValue(
+	copy?.metaTitle,
+	isPaidDownload ? text.titlePaid : text.titleFree,
+	copyVariables,
+);
+const description = copyValue(
+	copy?.metaDescription,
+	isPaidDownload ? text.descriptionPaid : text.descriptionFree,
+	copyVariables,
+);
+const paidDownloadLabel =
+	downloadFormat === "epub"
+		? text.downloadPaidEpub
+		: downloadFormat === "pdf"
+			? text.downloadPaidPdf
+			: text.downloadPaid;
 ---
 
 <Layout title={title} description={description} canonicalPath={withLocalePath('/ebook/download', locale)}>
@@ -35,7 +53,7 @@ const description = copyValue(copy?.metaDescription, isPaidDownload
             <p class="mb-6">{copyValue(copy?.intro, text.freeIntro, copyVariables)}</p>
           )}
           <button class="btn-primary" type="button" data-download-button data-download-url={apiDownloadUrl}>
-            {copyValue(copy?.primaryButtonLabel, isPaidDownload ? text.downloadPaid : text.downloadFree, copyVariables)}
+            {copyValue(copy?.primaryButtonLabel, isPaidDownload ? paidDownloadLabel : text.downloadFree, copyVariables)}
           </button>
           <p
             class="mt-4 text-sm text-foreground-secondary"

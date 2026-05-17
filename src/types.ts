@@ -79,6 +79,7 @@ export interface SiteConfig {
 	bookCover?: ImageAsset;
 	bookBuyUrl?: string;
 	paidEbookPdfUrl?: string;
+	paidEbookEpubUrl?: string;
 	bookPrice?: string;
 	ebookPdfUrl?: string;
 	freeEbookAvailable?: boolean;
@@ -95,6 +96,15 @@ export interface SiteConfig {
 	bookBankCurrency?: string;
 	bookBankMessage?: string;
 	bookBankContactEmail?: string;
+	bookGatewayEnabled?: boolean;
+	bookGatewayProvider?: "comgate";
+	bookGatewayTestMode?: boolean;
+	bookGatewayMerchantId?: string;
+	bookGatewayApiBaseUrl?: string;
+	bookGatewayReturnPath?: string;
+	bookGatewayCancelPath?: string;
+	bookGatewayCallbackPath?: string;
+	bookGatewayButtonLabel?: string;
 	enableAnalytics?: boolean;
 	enableAds?: boolean;
 }
