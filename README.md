@@ -50,9 +50,31 @@ PUBLIC_SANITY_READ_TOKEN=<optional-token>
 SANITY_API_TOKEN=<optional-server-token>
 STRAPI_URL=https://<production-strapi-host>
 STRAPI_API_TOKEN=<optional-token>
+STRAPI_GET_CACHE_TTL_SECONDS=3600
+STRAPI_GET_CACHE_MAX_ENTRIES=100
 ```
 
 Also enable Vercel Web Analytics and Speed Insights in the Vercel project. Tracking scripts are rendered only when `enableAnalytics` is enabled in Strapi Site Config.
+
+## Strapi API request budget
+
+Strapi is used only for operational features: site config, page/email copy, lead capture, orders, and ebook token downloads. Editorial traffic is served from Sanity.
+
+To stay under low Strapi API limits, the frontend uses two cache layers:
+
+- Public SSR pages send `Cache-Control: public, max-age=0, s-maxage=3600, stale-while-revalidate=86400`, so Vercel/CDN can reuse rendered pages instead of calling Strapi on every page view.
+- Strapi GET calls are cached in the server process for `STRAPI_GET_CACHE_TTL_SECONDS` seconds. Default is `3600`; set `0` to disable during debugging.
+
+The middleware deliberately sends `no-store` for API routes, draft mode, URLs with query strings, `/ebook/download`, `/book/success`, and affiliate redirects. Those paths may contain tokens, emails, payment references, or tracking decisions and must not be CDN-cached.
+
+Recommended production values for a 2.5k monthly Strapi request budget:
+
+```sh
+STRAPI_GET_CACHE_TTL_SECONDS=3600
+STRAPI_GET_CACHE_MAX_ENTRIES=100
+```
+
+If the site gets more traffic, prefer increasing CDN cache duration or prerendering stable pages before moving more runtime reads back to Strapi.
 
 ## Checks
 

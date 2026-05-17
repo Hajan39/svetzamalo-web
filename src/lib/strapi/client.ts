@@ -31,12 +31,32 @@ const STRAPI_URL = (
 	""
 ).replace(/\/$/, "");
 const STRAPI_API_TOKEN = import.meta.env.STRAPI_API_TOKEN;
+const STRAPI_GET_CACHE_TTL_SECONDS = Number.parseInt(
+	import.meta.env.STRAPI_GET_CACHE_TTL_SECONDS || "3600",
+	10,
+);
+const STRAPI_GET_CACHE_MAX_ENTRIES = Number.parseInt(
+	import.meta.env.STRAPI_GET_CACHE_MAX_ENTRIES || "100",
+	10,
+);
+
+const getCache = new Map<
+	string,
+	{
+		expiresAt: number;
+		value: StrapiResponse<unknown>;
+	}
+>();
 
 if (!STRAPI_URL) {
-	console.error('[strapi] STRAPI_URL is not set — all Strapi requests will be skipped. Set it in Vercel environment variables.');
+	console.error(
+		"[strapi] STRAPI_URL is not set — all Strapi requests will be skipped. Set it in Vercel environment variables.",
+	);
 }
 if (import.meta.env.PROD && !STRAPI_API_TOKEN) {
-	console.warn('[strapi] STRAPI_API_TOKEN is not set — write endpoints (orders, leads) are unauthenticated.');
+	console.warn(
+		"[strapi] STRAPI_API_TOKEN is not set — write endpoints (orders, leads) are unauthenticated.",
+	);
 }
 
 function appendFlattened(
@@ -116,13 +136,45 @@ function headers(): HeadersInit {
 	return requestHeaders;
 }
 
+function getCachedResponse<T>(url: string): StrapiResponse<T> | null {
+	if (STRAPI_GET_CACHE_TTL_SECONDS <= 0) return null;
+
+	const cached = getCache.get(url);
+	if (!cached) return null;
+
+	if (cached.expiresAt <= Date.now()) {
+		getCache.delete(url);
+		return null;
+	}
+
+	return cached.value as StrapiResponse<T>;
+}
+
+function setCachedResponse<T>(url: string, value: StrapiResponse<T>) {
+	if (STRAPI_GET_CACHE_TTL_SECONDS <= 0) return;
+
+	if (getCache.size >= STRAPI_GET_CACHE_MAX_ENTRIES) {
+		const oldestKey = getCache.keys().next().value;
+		if (oldestKey) getCache.delete(oldestKey);
+	}
+
+	getCache.set(url, {
+		expiresAt: Date.now() + STRAPI_GET_CACHE_TTL_SECONDS * 1000,
+		value: value as StrapiResponse<unknown>,
+	});
+}
+
 export async function strapiGet<T>(
 	endpoint: string,
 	query?: StrapiQueryParams,
 ): Promise<StrapiResponse<T>> {
-	if (!STRAPI_URL) throw new Error(`Strapi GET ${endpoint} skipped: STRAPI_URL not set`);
+	if (!STRAPI_URL)
+		throw new Error(`Strapi GET ${endpoint} skipped: STRAPI_URL not set`);
 	const queryString = buildQueryString(query);
 	const url = `${STRAPI_URL}/api${endpoint}${queryString ? `?${queryString}` : ""}`;
+	const cached = getCachedResponse<T>(url);
+	if (cached) return cached;
+
 	const response = await fetch(url, { headers: headers() });
 
 	if (!response.ok) {
@@ -132,14 +184,17 @@ export async function strapiGet<T>(
 		);
 	}
 
-	return response.json() as Promise<StrapiResponse<T>>;
+	const payload = (await response.json()) as StrapiResponse<T>;
+	setCachedResponse(url, payload);
+	return payload;
 }
 
 export async function strapiPost<T>(
 	endpoint: string,
 	body: unknown,
 ): Promise<StrapiResponse<T> | T> {
-	if (!STRAPI_URL) throw new Error(`Strapi POST ${endpoint} skipped: STRAPI_URL not set`);
+	if (!STRAPI_URL)
+		throw new Error(`Strapi POST ${endpoint} skipped: STRAPI_URL not set`);
 	const response = await fetch(`${STRAPI_URL}/api${endpoint}`, {
 		method: "POST",
 		headers: headers(),
