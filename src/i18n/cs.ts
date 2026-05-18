@@ -283,6 +283,9 @@ const cs = {
 			leadIntro:
 				"Děkujeme. Zkontroluj e-mailovou schránku, případně složku hromadné pošty nebo spam.",
 			orderHeading: "Objednávka přijata",
+			gatewayPaidHeading: "Děkujeme za objednání a zaplacení",
+			gatewayPaidIntro:
+				"Platba byla úspěšně dokončena. Potvrzení a doručení ebooku řešíme přes zabezpečené backendové zpracování.",
 			product: "Produkt",
 			confirmationTo: "potvrzení na",
 			pickDestination: "Vybrat destinaci",

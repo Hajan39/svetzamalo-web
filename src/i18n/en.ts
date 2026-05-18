@@ -284,6 +284,9 @@ const en = {
 			leadIntro:
 				"Thanks. Check your inbox, and also Promotions or Spam folders.",
 			orderHeading: "Order received",
+			gatewayPaidHeading: "Thank you for your order and payment",
+			gatewayPaidIntro:
+				"Your payment was completed successfully. Confirmation and ebook delivery are handled by a secure backend process.",
 			product: "Product",
 			confirmationTo: "confirmation to",
 			pickDestination: "Choose destination",

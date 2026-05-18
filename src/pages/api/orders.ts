@@ -16,6 +16,14 @@ import {
 
 export const prerender = false;
 
+type GatewayOrderResponse = {
+	payment?: {
+		provider?: string;
+		paymentId?: string;
+		redirectUrl?: string;
+	};
+};
+
 const orderSchema = z.object({
 	email: z.email(),
 	fullName: z.string().min(2).max(120),
@@ -65,8 +73,8 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 
 	if (
 		(!isTestOrder && !isGatewayOrder && !siteConfig?.bookBankTransferEnabled) ||
-		!bankTransfer ||
-		!normalizedAmount
+		!normalizedAmount ||
+		(!isGatewayOrder && !bankTransfer)
 	) {
 		return new Response(
 			JSON.stringify({ error: "bank_transfer_not_configured" }),
@@ -103,24 +111,18 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 		return redirect(testPaymentUrl, 303);
 	}
 
-	if (isGatewayOrder) {
-		return new Response(JSON.stringify({ error: "gateway_not_implemented" }), {
-			status: 501,
-		});
-	}
-
+	let orderResponse: GatewayOrderResponse | unknown;
 	try {
-		await createOrder({
+		orderResponse = await createOrder({
 			data: {
 				email: result.data.email,
 				fullName: result.data.fullName,
 				productCode: result.data.productCode,
-				amount: bankTransfer.amount || normalizedAmount,
+				amount: bankTransfer?.amount || normalizedAmount,
 				currency:
-					bankTransfer.currency || siteConfig?.bookBankCurrency || "CZK",
+					bankTransfer?.currency || siteConfig?.bookBankCurrency || "CZK",
 				variableSymbol,
-				paymentMethod,
-				paymentStatus: "pending_bank_transfer",
+				paymentMethod: isGatewayOrder ? "gateway" : "bank_transfer",
 				locale: "cs",
 			},
 		});
@@ -132,6 +134,29 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 		return new Response(JSON.stringify({ error: "order_persistence_failed" }), {
 			status: 502,
 		});
+	}
+
+	if (isGatewayOrder) {
+		const paymentUrl = (orderResponse as GatewayOrderResponse)?.payment?.redirectUrl;
+		if (!paymentUrl) {
+			return new Response(JSON.stringify({ error: "gateway_redirect_missing" }), {
+				status: 502,
+			});
+		}
+
+		if (
+			(request.headers.get("content-type") || "").includes("application/json")
+		) {
+			return Response.json({
+				status: "gateway_redirect",
+				variableSymbol,
+				paymentMethod,
+				paymentUrl,
+				paymentId: (orderResponse as GatewayOrderResponse)?.payment?.paymentId,
+			});
+		}
+
+		return redirect(paymentUrl, 303);
 	}
 
 	if (

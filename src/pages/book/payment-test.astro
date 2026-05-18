@@ -17,7 +17,7 @@ const variableSymbol = Astro.url.searchParams.get("vs") || "";
 const provider = Astro.url.searchParams.get("provider") || "comgate";
 const paidBookTitle = getPaidBookTitle(siteConfig);
 const text = translations[locale].pages.bookPaymentTest;
-const successUrl = `${withLocalePath("/book/success", locale)}?vs=${encodeURIComponent(variableSymbol)}&payment=${encodeURIComponent(provider)}&test=1`;
+const successUrl = `${withLocalePath("/book/success", locale)}?vs=${encodeURIComponent(variableSymbol)}&payment=${encodeURIComponent(provider)}&status=paid&test=1`;
 const cancelUrl = withLocalePath("/book", locale);
 ---
 

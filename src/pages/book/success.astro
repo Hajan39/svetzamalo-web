@@ -1,60 +1,94 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import { buildBankTransferDetails } from '@/lib/bankTransfer';
-import { getBookPaymentMessage, getFreeEbookTitle, getPaidBookTitle } from '@/lib/bookConfig';
-import { fetchPageCopy, fetchSiteConfig } from '@/lib/content/api';
-import { copyValue } from '@/lib/copy';
-import { translations } from '@/i18n/translations';
-import { getLangFromUrl, withLocalePath } from '@/i18n/utils';
+import Layout from "@/layouts/Layout.astro";
+import { buildBankTransferDetails } from "@/lib/bankTransfer";
+import {
+	getBookPaymentMessage,
+	getFreeEbookTitle,
+	getPaidBookTitle,
+} from "@/lib/bookConfig";
+import { fetchPageCopy, fetchSiteConfig } from "@/lib/content/api";
+import { copyValue } from "@/lib/copy";
+import { translations } from "@/i18n/translations";
+import { getLangFromUrl, withLocalePath } from "@/i18n/utils";
 
 export const prerender = false;
 
 const locale = getLangFromUrl(Astro.url);
 let siteConfig = await fetchSiteConfig(locale);
-if (locale === 'en' && !siteConfig) {
-  siteConfig = await fetchSiteConfig('cs');
+if (locale === "en" && !siteConfig) {
+	siteConfig = await fetchSiteConfig("cs");
 }
-const variableSymbol = Astro.url.searchParams.get('vs') || '';
-const email = Astro.url.searchParams.get('email') || '';
-const leadType = Astro.url.searchParams.get('lead') || '';
+const variableSymbol = Astro.url.searchParams.get("vs") || "";
+const email = Astro.url.searchParams.get("email") || "";
+const leadType = Astro.url.searchParams.get("lead") || "";
+const paymentMethod = (
+	Astro.url.searchParams.get("payment") || ""
+).toLowerCase();
+const paymentStatus = (
+	Astro.url.searchParams.get("status") || ""
+).toLowerCase();
+const paidFlag = Astro.url.searchParams.get("paid");
 const isLeadSuccess = Boolean(leadType);
+const isComgateReturn = paymentMethod === "comgate";
+const isComgatePaid =
+	isComgateReturn &&
+	(paymentStatus === "paid" || paidFlag === "1" || paidFlag === "true");
 const freeEbookTitle = getFreeEbookTitle(siteConfig);
 const paidBookTitle = getPaidBookTitle(siteConfig);
-const copy = await fetchPageCopy(isLeadSuccess ? 'book-success-lead' : 'book-success-order', locale);
+const copy = await fetchPageCopy(
+	isLeadSuccess ? "book-success-lead" : "book-success-order",
+	locale,
+);
 const copyVariables = { freeEbookTitle, paidBookTitle, email, variableSymbol };
 const text = translations[locale].pages.bookSuccess;
 
 const pageTitle = copyValue(copy?.metaTitle, text.pageTitle, copyVariables);
-const pageDescription = copyValue(copy?.metaDescription, text.pageDescription, copyVariables);
+const pageDescription = copyValue(
+	copy?.metaDescription,
+	text.pageDescription,
+	copyVariables,
+);
 const analyticsEnabled = siteConfig?.enableAnalytics === true;
-const analyticsEventName = isLeadSuccess ? text.analyticsLeadEvent : text.analyticsOrderEvent;
-const analyticsEventKey = isLeadSuccess ? `lead:${leadType}` : `order:${variableSymbol || 'pending'}`;
-const details = buildBankTransferDetails({
-  accountNumber: siteConfig?.bookBankAccountNumber,
-  bankCode: siteConfig?.bookBankCode,
-  iban: siteConfig?.bookBankIban,
-  bic: siteConfig?.bookBankBic,
-  accountName: siteConfig?.bookBankAccountName,
-  amount: siteConfig?.bookBankAmount || siteConfig?.bookPrice,
-  currency: siteConfig?.bookBankCurrency || 'CZK',
-  message: getBookPaymentMessage(siteConfig),
-  contactEmail: siteConfig?.bookBankContactEmail || siteConfig?.siteEmail,
-}, variableSymbol);
+const analyticsEventName = isLeadSuccess
+	? text.analyticsLeadEvent
+	: text.analyticsOrderEvent;
+const analyticsEventKey = isLeadSuccess
+	? `lead:${leadType}`
+	: `order:${variableSymbol || "pending"}`;
+const analyticsPaymentMethod = isLeadSuccess
+	? undefined
+	: isComgateReturn
+		? "comgate"
+		: "bank_transfer";
+const details = buildBankTransferDetails(
+	{
+		accountNumber: siteConfig?.bookBankAccountNumber,
+		bankCode: siteConfig?.bookBankCode,
+		iban: siteConfig?.bookBankIban,
+		bic: siteConfig?.bookBankBic,
+		accountName: siteConfig?.bookBankAccountName,
+		amount: siteConfig?.bookBankAmount || siteConfig?.bookPrice,
+		currency: siteConfig?.bookBankCurrency || "CZK",
+		message: getBookPaymentMessage(siteConfig),
+		contactEmail: siteConfig?.bookBankContactEmail || siteConfig?.siteEmail,
+	},
+	variableSymbol,
+);
 
 function buildSpdString(d: NonNullable<typeof details>): string | null {
-  if (!d.iban) return null;
-  const parts = [`SPD*1.0*ACC:${d.iban.replace(/\s/g, '')}`];
-  if (d.amount) parts.push(`AM:${d.amount}`);
-  if (d.currency) parts.push(`CC:${d.currency}`);
-  if (d.variableSymbol) parts.push(`X-VS:${d.variableSymbol}`);
-  if (d.message) parts.push(`MSG:${d.message.slice(0, 60)}`);
-  return parts.join('*');
+	if (!d.iban) return null;
+	const parts = [`SPD*1.0*ACC:${d.iban.replace(/\s/g, "")}`];
+	if (d.amount) parts.push(`AM:${d.amount}`);
+	if (d.currency) parts.push(`CC:${d.currency}`);
+	if (d.variableSymbol) parts.push(`X-VS:${d.variableSymbol}`);
+	if (d.message) parts.push(`MSG:${d.message.slice(0, 60)}`);
+	return parts.join("*");
 }
 
 const spdString = details ? buildSpdString(details) : null;
 const qrUrl = spdString
-  ? `https://api.qrserver.com/v1/create-qr-code/?size=180x180&format=svg&margin=4&data=${encodeURIComponent(spdString)}`
-  : null;
+	? `https://api.qrserver.com/v1/create-qr-code/?size=180x180&format=svg&margin=4&data=${encodeURIComponent(spdString)}`
+	: null;
 ---
 
 <Layout title={pageTitle} description={pageDescription} canonicalPath={withLocalePath('/book/success', locale)} siteConfig={siteConfig}>
@@ -73,11 +107,20 @@ const qrUrl = spdString
         </>
       ) : (
         <>
-          <h1 class="mb-2 text-2xl font-bold md:text-3xl">{copyValue(copy?.heading, text.orderHeading, copyVariables)}</h1>
-          <p class="text-foreground-secondary">
-            {text.product}: <strong class="text-foreground">{paidBookTitle}</strong>
-            {email && <> · {text.confirmationTo} <strong class="text-foreground">{email}</strong></>}
-          </p>
+          {isComgatePaid ? (
+            <>
+              <h1 class="mb-2 text-2xl font-bold md:text-3xl">{text.gatewayPaidHeading}</h1>
+              <p class="max-w-md text-foreground-secondary">{text.gatewayPaidIntro}</p>
+            </>
+          ) : (
+            <>
+              <h1 class="mb-2 text-2xl font-bold md:text-3xl">{copyValue(copy?.heading, text.orderHeading, copyVariables)}</h1>
+              <p class="text-foreground-secondary">
+                {text.product}: <strong class="text-foreground">{paidBookTitle}</strong>
+                {email && <> · {text.confirmationTo} <strong class="text-foreground">{email}</strong></>}
+              </p>
+            </>
+          )}
         </>
       )}
     </div>
@@ -91,13 +134,13 @@ const qrUrl = spdString
       </div>
     )}
 
-    {!isLeadSuccess && !details && (
+    {!isLeadSuccess && !isComgateReturn && !details && (
       <div class="brand-card px-6 py-7 text-center">
         <p class="text-warning">{text.bankIncomplete}</p>
       </div>
     )}
 
-    {!isLeadSuccess && details && (
+    {!isLeadSuccess && !isComgateReturn && details && (
       <div class="space-y-4">
 
         <div class="brand-card overflow-hidden">
@@ -179,7 +222,7 @@ const qrUrl = spdString
       data-event-name={analyticsEventName}
       data-event-key={analyticsEventKey}
       data-lead-type={isLeadSuccess ? leadType : undefined}
-      data-payment-method={isLeadSuccess ? undefined : 'bank_transfer'}
+      data-payment-method={analyticsPaymentMethod}
     ></div>
   )}
   {analyticsEnabled && (

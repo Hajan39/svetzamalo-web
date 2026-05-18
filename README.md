@@ -33,7 +33,7 @@ Required local env:
 - `SANITY_API_TOKEN` - optional server-side token for Sanity
 - `STRAPI_URL` - Strapi API base URL, usually `http://localhost:1337`
 - `SITE_URL` / `PUBLIC_SITE_URL` - public frontend URL used for canonical URLs and sitemap generation
-- `STRAPI_API_TOKEN` - optional, if Strapi endpoints are protected
+- `STRAPI_API_TOKEN` - optional, if Strapi endpoints are protected; must allow creating book interests and orders when used
 - `BOOK_ORDER_TEST_EMAILS` - optional comma-separated exact email allowlist for testing ebook lead, bank transfer, or gateway flow without creating Strapi records or sending emails. Add `?testMode=1` to `/book` to reveal disabled book flows in the UI.
 - `BOOK_ORDER_TEST_VARIABLE_SYMBOL` - optional variable symbol used by the test order bypass, default `9999999999`
 
@@ -55,6 +55,8 @@ STRAPI_API_TOKEN=<optional-token>
 STRAPI_GET_CACHE_TTL_SECONDS=3600
 STRAPI_GET_CACHE_MAX_ENTRIES=100
 ```
+
+For Comgate checkout, enable and configure gateway fields in Strapi **Nastavení webu**. The web sends UI value `comgate` to its local order API, then the server maps it to Strapi `paymentMethod: "gateway"` and redirects to the Comgate URL returned by Strapi.
 
 Also enable Vercel Web Analytics and Speed Insights in the Vercel project. Tracking scripts are rendered only when `enableAnalytics` is enabled in Strapi Site Config.
 
