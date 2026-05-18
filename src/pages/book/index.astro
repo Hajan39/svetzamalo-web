@@ -1,25 +1,50 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import { getFreeEbookDescription, getFreeEbookTitle, getPaidBookDescription, getPaidBookTitle, isFreeEbookEnabled, isPaidEbookEnabled } from '@/lib/bookConfig';
-import { fetchSiteConfig } from '@/lib/content/api';
-import { translations } from '@/i18n/translations';
-import { getLangFromUrl, withLocalePath } from '@/i18n/utils';
+import Layout from "@/layouts/Layout.astro";
+import {
+	getFreeEbookDescription,
+	getFreeEbookTitle,
+	getPaidBookDescription,
+	getPaidBookTitle,
+	isFreeEbookEnabled,
+	isPaidEbookEnabled,
+} from "@/lib/bookConfig";
+import { fetchSiteConfig } from "@/lib/content/api";
+import {
+	isBookTestModeRequested,
+	isOrderTestModeEnabled,
+} from "@/lib/orderTestMode";
+import {
+	getGatewayButtonLabel,
+	isBookGatewayEnabled,
+} from "@/lib/paymentGateway";
+import { translations } from "@/i18n/translations";
+import { getLangFromUrl, withLocalePath } from "@/i18n/utils";
 
 export const prerender = false;
 
 const locale = getLangFromUrl(Astro.url);
 let siteConfig = await fetchSiteConfig(locale);
-if (locale === 'en' && !siteConfig) {
-  siteConfig = await fetchSiteConfig('cs');
+if (locale === "en" && !siteConfig) {
+	siteConfig = await fetchSiteConfig("cs");
 }
-const price = siteConfig?.bookPrice || siteConfig?.bookBankAmount || '490 Kč';
+const price = siteConfig?.bookPrice || siteConfig?.bookBankAmount || "490 Kč";
 const freeEbookAvailable = isFreeEbookEnabled(siteConfig);
 const bankEnabled = isPaidEbookEnabled(siteConfig);
 const freeEbookTitle = getFreeEbookTitle(siteConfig);
 const freeEbookDescription = getFreeEbookDescription(siteConfig);
 const paidBookTitle = getPaidBookTitle(siteConfig);
 const paidBookDescription = getPaidBookDescription(siteConfig);
+const orderTestModeEnabled = isOrderTestModeEnabled();
+const urlTestModeEnabled = isBookTestModeRequested(Astro.url.searchParams);
+const bookTestModeEnabled = orderTestModeEnabled || urlTestModeEnabled;
+const gatewayEnabled = isBookGatewayEnabled(siteConfig) || urlTestModeEnabled;
+const freeEbookVisible = freeEbookAvailable || urlTestModeEnabled;
+const bankVisible = bankEnabled || urlTestModeEnabled;
 const text = translations[locale].pages.book;
+const gatewayButtonLabel = getGatewayButtonLabel(
+	siteConfig,
+	text.orderByGateway,
+);
 
 const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${translations[locale].shared.brand}`;
 ---
@@ -32,7 +57,7 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
         <h1>{freeEbookTitle}</h1>
         <p>{freeEbookDescription}</p>
         <div class="hero-actions">
-          {freeEbookAvailable ? (
+          {freeEbookVisible ? (
             <>
               <a href="#ebook-zdarma" class="btn-primary">{text.downloadFree}</a>
               <a href={withLocalePath('/articles', locale)} class="btn-secondary">{text.browseArticles}</a>
@@ -74,10 +99,11 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
         {siteConfig?.freeEbookCover && <img class="book-option-media" src={siteConfig.freeEbookCover.src} alt={siteConfig.freeEbookCover.alt || freeEbookTitle} loading="lazy" decoding="async" />}
         <h3>{freeEbookTitle}</h3>
         <p>{freeEbookDescription}</p>
-        {freeEbookAvailable ? (
+        {freeEbookVisible ? (
           <form class="space-y-3" method="post" action="/api/leads">
             <input type="hidden" name="leadType" value="ebook" />
             <input type="hidden" name="source" value="book" />
+            {urlTestModeEnabled && <input type="hidden" name="testMode" value="1" />}
             <label class="sr-only" for="free-ebook-email">{text.freeEmailLabel}</label>
             <input id="free-ebook-email" class="form-field" type="email" name="email" placeholder={text.freeEmailPlaceholder} required />
             <button class="btn-primary w-full" type="submit">{text.sendFree}</button>
@@ -93,14 +119,20 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
         {siteConfig?.bookCover && <img class="book-option-media" src={siteConfig.bookCover.src} alt={siteConfig.bookCover.alt || paidBookTitle} loading="lazy" decoding="async" />}
         <h3>{paidBookTitle}</h3>
         <p>{paidBookDescription} {text.priceLabel}: <strong>{price}</strong>.</p>
-        {bankEnabled ? (
+        {bankVisible || gatewayEnabled || bookTestModeEnabled ? (
           <form class="space-y-3" method="post" action="/api/orders">
             <input type="hidden" name="productCode" value="ebook-paid-v1" />
+            {urlTestModeEnabled && <input type="hidden" name="testMode" value="1" />}
             <label class="sr-only" for="paid-book-name">{text.fullNameLabel}</label>
             <input id="paid-book-name" class="form-field" type="text" name="fullName" placeholder={text.fullNamePlaceholder} required />
             <label class="sr-only" for="paid-book-email">{text.deliveryEmailLabel}</label>
             <input id="paid-book-email" class="form-field" type="email" name="email" placeholder={text.deliveryEmailPlaceholder} required />
-            <button class="btn-primary w-full" type="submit">{text.orderByBank}</button>
+            {gatewayEnabled || bookTestModeEnabled ? (
+              <button class="btn-primary w-full" type="submit" name="paymentMethod" value="comgate">{gatewayButtonLabel}</button>
+            ) : null}
+            {bankVisible || bookTestModeEnabled ? (
+              <button class="btn-secondary w-full" type="submit" name="paymentMethod" value="bank_transfer">{text.orderByBank}</button>
+            ) : null}
           </form>
         ) : (
           <p class="text-sm text-foreground-muted">{text.ordersSoon}</p>

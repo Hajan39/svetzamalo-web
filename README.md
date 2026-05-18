@@ -34,6 +34,8 @@ Required local env:
 - `STRAPI_URL` - Strapi API base URL, usually `http://localhost:1337`
 - `SITE_URL` / `PUBLIC_SITE_URL` - public frontend URL used for canonical URLs and sitemap generation
 - `STRAPI_API_TOKEN` - optional, if Strapi endpoints are protected
+- `BOOK_ORDER_TEST_EMAILS` - optional comma-separated exact email allowlist for testing ebook lead, bank transfer, or gateway flow without creating Strapi records or sending emails. Add `?testMode=1` to `/book` to reveal disabled book flows in the UI.
+- `BOOK_ORDER_TEST_VARIABLE_SYMBOL` - optional variable symbol used by the test order bypass, default `9999999999`
 
 ## Production env on Vercel
 

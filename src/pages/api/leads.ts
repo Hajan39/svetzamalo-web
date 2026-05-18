@@ -2,6 +2,7 @@ import type { APIRoute } from "astro";
 import { z } from "zod";
 import { isFreeEbookEnabled } from "@/lib/bookConfig";
 import { createLead, fetchSiteConfig } from "@/lib/content/api";
+import { isOrderTestEmail } from "@/lib/orderTestMode";
 
 export const prerender = false;
 
@@ -9,6 +10,7 @@ const leadSchema = z.object({
 	email: z.email(),
 	leadType: z.enum(["ebook", "newsletter", "book_notify"]).default("ebook"),
 	source: z.string().max(80).optional(),
+	testMode: z.string().optional(),
 });
 
 async function parseBody(request: Request) {
@@ -28,6 +30,23 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 
 	if (result.data.leadType === "ebook") {
 		const siteConfig = await fetchSiteConfig("cs");
+		const isTestLead =
+			result.data.testMode && isOrderTestEmail(result.data.email);
+
+		if (isTestLead) {
+			if (
+				(request.headers.get("content-type") || "").includes("application/json")
+			) {
+				return Response.json({ status: "test_accepted", testMode: true });
+			}
+
+			const params = new URLSearchParams({
+				lead: result.data.leadType,
+				test: "1",
+			});
+			return redirect(`/book/success?${params.toString()}`, 303);
+		}
+
 		if (!isFreeEbookEnabled(siteConfig)) {
 			return new Response(
 				JSON.stringify({ error: "free_ebook_not_configured" }),

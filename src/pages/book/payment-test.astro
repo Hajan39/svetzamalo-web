@@ -1,0 +1,50 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { fetchSiteConfig } from "@/lib/content/api";
+import { getPaidBookTitle } from "@/lib/bookConfig";
+import { getLangFromUrl, withLocalePath } from "@/i18n/utils";
+import { translations } from "@/i18n/translations";
+
+export const prerender = false;
+
+const locale = getLangFromUrl(Astro.url);
+let siteConfig = await fetchSiteConfig(locale);
+if (locale === "en" && !siteConfig) {
+	siteConfig = await fetchSiteConfig("cs");
+}
+
+const variableSymbol = Astro.url.searchParams.get("vs") || "";
+const provider = Astro.url.searchParams.get("provider") || "comgate";
+const paidBookTitle = getPaidBookTitle(siteConfig);
+const text = translations[locale].pages.bookPaymentTest;
+const successUrl = `${withLocalePath("/book/success", locale)}?vs=${encodeURIComponent(variableSymbol)}&payment=${encodeURIComponent(provider)}&test=1`;
+const cancelUrl = withLocalePath("/book", locale);
+---
+
+<Layout title={text.pageTitle} description={text.pageDescription} canonicalPath={withLocalePath('/book/payment-test', locale)} siteConfig={siteConfig}>
+  <section class="container-narrow py-10 md:py-16">
+    <div class="brand-card px-6 py-7 sm:px-8 sm:py-8">
+      <p class="section-kicker">{provider}</p>
+      <h1 class="mb-3 text-2xl font-bold md:text-3xl">{text.heading}</h1>
+      <p class="text-foreground-secondary">{text.intro}</p>
+
+      <dl class="my-6 grid grid-cols-1 gap-4 text-sm sm:grid-cols-2">
+        <div>
+          <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">{text.product}</dt>
+          <dd class="mt-0.5 font-semibold text-foreground">{paidBookTitle}</dd>
+        </div>
+        {variableSymbol && (
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">{text.variableSymbol}</dt>
+            <dd class="mt-0.5 font-mono font-semibold text-foreground">{variableSymbol}</dd>
+          </div>
+        )}
+      </dl>
+
+      <div class="flex flex-wrap gap-3">
+        <a class="btn-primary" href={successUrl}>{text.payButton}</a>
+        <a class="btn-secondary" href={cancelUrl}>{text.cancelButton}</a>
+      </div>
+    </div>
+  </section>
+</Layout>

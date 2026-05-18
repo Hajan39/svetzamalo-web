@@ -7,6 +7,12 @@ import {
 } from "@/lib/bankTransfer";
 import { getBookPaymentMessage } from "@/lib/bookConfig";
 import { createOrder, fetchSiteConfig } from "@/lib/content/api";
+import { getTestVariableSymbol, isOrderTestEmail } from "@/lib/orderTestMode";
+import {
+	buildGatewayTestUrl,
+	isBookGatewayEnabled,
+	type BookPaymentMethod,
+} from "@/lib/paymentGateway";
 
 export const prerender = false;
 
@@ -14,6 +20,7 @@ const orderSchema = z.object({
 	email: z.email(),
 	fullName: z.string().min(2).max(120),
 	productCode: z.string().min(2).max(80).default("ebook-paid-v1"),
+	paymentMethod: z.enum(["bank_transfer", "comgate"]).default("bank_transfer"),
 });
 
 async function parseBody(request: Request) {
@@ -32,12 +39,15 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 	}
 
 	const siteConfig = await fetchSiteConfig("cs");
+	const isTestOrder = isOrderTestEmail(result.data.email);
+	const paymentMethod = result.data.paymentMethod as BookPaymentMethod;
+	const isGatewayOrder = paymentMethod === "comgate";
 	const normalizedAmount = normalizePaymentAmount(
 		siteConfig?.bookBankAmount || siteConfig?.bookPrice || "490",
 	);
-	const variableSymbol = createVariableSymbol(
-		`${result.data.email}:${Date.now()}`,
-	);
+	const variableSymbol = isTestOrder
+		? getTestVariableSymbol()
+		: createVariableSymbol(`${result.data.email}:${Date.now()}`);
 	const bankTransfer = buildBankTransferDetails(
 		{
 			accountNumber: siteConfig?.bookBankAccountNumber,
@@ -53,13 +63,50 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 		variableSymbol,
 	);
 
-	if (!siteConfig?.bookBankTransferEnabled || !bankTransfer || !normalizedAmount) {
+	if (
+		(!isTestOrder && !isGatewayOrder && !siteConfig?.bookBankTransferEnabled) ||
+		!bankTransfer ||
+		!normalizedAmount
+	) {
 		return new Response(
 			JSON.stringify({ error: "bank_transfer_not_configured" }),
 			{
 				status: 503,
 			},
 		);
+	}
+
+	if (isGatewayOrder && !isTestOrder && !isBookGatewayEnabled(siteConfig)) {
+		return new Response(JSON.stringify({ error: "gateway_not_configured" }), {
+			status: 503,
+		});
+	}
+
+	if (isTestOrder) {
+		const testPaymentUrl = isGatewayOrder
+			? buildGatewayTestUrl(variableSymbol)
+			: `/book/success?vs=${encodeURIComponent(variableSymbol)}&test=1`;
+
+		if (
+			(request.headers.get("content-type") || "").includes("application/json")
+		) {
+			return Response.json({
+				status: isGatewayOrder ? "test_gateway_redirect" : "test_bank_transfer",
+				variableSymbol,
+				bankTransfer,
+				paymentMethod,
+				paymentUrl: testPaymentUrl,
+				testMode: true,
+			});
+		}
+
+		return redirect(testPaymentUrl, 303);
+	}
+
+	if (isGatewayOrder) {
+		return new Response(JSON.stringify({ error: "gateway_not_implemented" }), {
+			status: 501,
+		});
 	}
 
 	try {
@@ -72,7 +119,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 				currency:
 					bankTransfer.currency || siteConfig?.bookBankCurrency || "CZK",
 				variableSymbol,
-				paymentMethod: "bank_transfer",
+				paymentMethod,
 				paymentStatus: "pending_bank_transfer",
 				locale: "cs",
 			},

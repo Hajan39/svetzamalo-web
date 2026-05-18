@@ -243,10 +243,10 @@ const cs = {
 			pickDestination: "rychlý rámec pro výběr destinace",
 			avoidMistakes: "nejčastější lowcost chyby před odletem",
 			checklist: "kontrolní seznam pro letenky, ubytování a rozpočet",
-			chooseByStage: "Vyber si podle toho, kde jsi",
-			valueFirst: "Nejdřív hodnota, potom případně hlubší průvodce",
+			chooseByStage: "Začni zdarma, plánuj naplno s průvodcem",
+			valueFirst: "Ukázka zdarma, kompletní plánování v placeném ebooku",
 			valueBody:
-				"Free ebook stačí pro první lepší rozhodnutí. Placený průvodce je až pro chvíli, kdy chceš mít plánování víc pohromadě.",
+				"Ebook zdarma ti rychle ukáže nejčastější chyby a první úspory. Placený průvodce jde výrazně dál: pomůže dát dohromady rozpočet, trasu, letenky, ubytování i konkrétní rozhodnutí před cestou.",
 			goodStart: "Dobrý start",
 			freeEmailLabel: "Email pro ebook zdarma",
 			freeEmailPlaceholder: "Tvůj email",
@@ -260,8 +260,21 @@ const cs = {
 			fullNamePlaceholder: "Jméno a příjmení",
 			deliveryEmailLabel: "Email pro doručení",
 			deliveryEmailPlaceholder: "Email pro doručení",
+			orderByGateway: "Zaplatit kartou / online",
 			orderByBank: "Objednat převodem",
 			ordersSoon: "Objednávky budou spuštěné brzy.",
+		},
+		bookPaymentTest: {
+			pageTitle: "Testovací platební brána | Svět za málo",
+			pageDescription:
+				"Testovací stránka platební brány pro objednávku ebooku.",
+			heading: "Testovací platební brána",
+			intro:
+				"Tahle stránka simuluje krok platební brány. Nevytváří reálnou platbu a neposílá zákaznický e-mail.",
+			product: "Produkt",
+			variableSymbol: "Variabilní symbol",
+			payButton: "Simulovat úspěšnou platbu",
+			cancelButton: "Zrušit test",
 		},
 		bookSuccess: {
 			pageTitle: "Hotovo | Svět za málo",
