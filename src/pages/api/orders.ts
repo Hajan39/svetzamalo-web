@@ -5,7 +5,11 @@ import {
 	createVariableSymbol,
 	normalizePaymentAmount,
 } from "@/lib/bankTransfer";
-import { getBookPaymentMessage } from "@/lib/bookConfig";
+import {
+	getBookPaymentMessage,
+	hasPaidEbookDownload,
+	isPaidEbookEnabled,
+} from "@/lib/bookConfig";
 import { createOrder, fetchSiteConfig } from "@/lib/content/api";
 import { getTestVariableSymbol, isOrderTestEmail } from "@/lib/orderTestMode";
 import {
@@ -70,9 +74,18 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 		},
 		variableSymbol,
 	);
+	const paidEbookEnabled = isPaidEbookEnabled(siteConfig);
+	const paidDownloadConfigured = hasPaidEbookDownload(siteConfig);
+
+	if (!isTestOrder && !paidDownloadConfigured) {
+		return new Response(
+			JSON.stringify({ error: "paid_ebook_not_configured" }),
+			{ status: 503 },
+		);
+	}
 
 	if (
-		(!isTestOrder && !isGatewayOrder && !siteConfig?.bookBankTransferEnabled) ||
+		(!isTestOrder && !isGatewayOrder && !paidEbookEnabled) ||
 		!normalizedAmount ||
 		(!isGatewayOrder && !bankTransfer)
 	) {
@@ -137,11 +150,15 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 	}
 
 	if (isGatewayOrder) {
-		const paymentUrl = (orderResponse as GatewayOrderResponse)?.payment?.redirectUrl;
+		const paymentUrl = (orderResponse as GatewayOrderResponse)?.payment
+			?.redirectUrl;
 		if (!paymentUrl) {
-			return new Response(JSON.stringify({ error: "gateway_redirect_missing" }), {
-				status: 502,
-			});
+			return new Response(
+				JSON.stringify({ error: "gateway_redirect_missing" }),
+				{
+					status: 502,
+				},
+			);
 		}
 
 		if (

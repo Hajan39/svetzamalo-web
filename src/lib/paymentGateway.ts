@@ -1,4 +1,5 @@
 import type { SiteConfig } from "@/types";
+import { hasPaidEbookDownload } from "@/lib/bookConfig";
 
 export type BookPaymentMethod = "bank_transfer" | "comgate";
 
@@ -6,7 +7,8 @@ export function isBookGatewayEnabled(
 	siteConfig: SiteConfig | null | undefined,
 ) {
 	return Boolean(
-		siteConfig?.bookGatewayEnabled &&
+		hasPaidEbookDownload(siteConfig) &&
+			siteConfig?.bookGatewayEnabled &&
 			siteConfig.bookGatewayProvider === "comgate",
 	);
 }

@@ -20,18 +20,32 @@ export function isFreeEbookEnabled(siteConfig: SiteConfig | null | undefined) {
 	return Boolean(siteConfig?.ebookPdfUrl?.trim());
 }
 
+export function hasPaidEbookDownload(
+	siteConfig: SiteConfig | null | undefined,
+) {
+	return Boolean(
+		siteConfig?.paidEbookPdfUrl?.trim() || siteConfig?.paidEbookEpubUrl?.trim(),
+	);
+}
+
 export function isPaidEbookEnabled(siteConfig: SiteConfig | null | undefined) {
 	if (siteConfig?.bookAvailable === false) return false;
 
 	const hasBankAccount = Boolean(
-		siteConfig?.bookBankAccountNumber?.trim() || siteConfig?.bookBankIban?.trim(),
+		siteConfig?.bookBankAccountNumber?.trim() ||
+			siteConfig?.bookBankIban?.trim(),
 	);
 	const hasAmount = Boolean(
-		normalizePaymentAmount(siteConfig?.bookBankAmount || siteConfig?.bookPrice || ""),
+		normalizePaymentAmount(
+			siteConfig?.bookBankAmount || siteConfig?.bookPrice || "",
+		),
 	);
 
 	return Boolean(
-		siteConfig?.bookBankTransferEnabled && hasBankAccount && hasAmount,
+		hasPaidEbookDownload(siteConfig) &&
+			siteConfig?.bookBankTransferEnabled &&
+			hasBankAccount &&
+			hasAmount,
 	);
 }
 
