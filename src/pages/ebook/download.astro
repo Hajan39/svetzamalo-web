@@ -15,8 +15,13 @@ const copy = await fetchPageCopy(
 	locale,
 );
 const apiDownloadUrl = token
-	? `/api/ebook/download?token=${encodeURIComponent(token)}`
-	: "";
+  ? `/api/ebook/download?${new URLSearchParams({
+      token,
+      download: "1",
+      type: downloadType,
+      ...(downloadFormat ? { format: downloadFormat } : {}),
+    }).toString()}`
+  : "";
 const copyVariables = { type: downloadType };
 const text = translations[locale].pages.ebookDownload;
 
@@ -98,22 +103,28 @@ const paidDownloadLabel =
         if (status) status.textContent = status.getAttribute('data-loading-message') || status.getAttribute('data-fallback-loading') || '';
 
         try {
-          const response = await fetch(downloadUrl, { headers: { accept: 'application/json' } });
-          const payload = await response.json().catch(() => null);
+          const response = await fetch(downloadUrl);
 
-          if (!response.ok || !payload?.url) {
+          if (!response.ok) {
             throw new Error('download_failed');
           }
 
           if (status) {
             const readyMessage = status.getAttribute('data-ready-message') || '';
-            const readyTimedTemplate = status.getAttribute('data-ready-timed-template') || '{seconds}';
-            status.textContent = payload.expiresInSeconds
-              ? readyTimedTemplate.replace('{seconds}', String(payload.expiresInSeconds))
-              : readyMessage;
+            status.textContent = readyMessage;
           }
 
-          window.location.href = payload.url;
+          const blob = await response.blob();
+          const objectUrl = URL.createObjectURL(blob);
+          const disposition = response.headers.get('content-disposition') || '';
+          const filename = disposition.match(/filename="?([^";]+)"?/i)?.[1] || 'svet-za-malo-ebook.pdf';
+          const anchor = document.createElement('a');
+          anchor.href = objectUrl;
+          anchor.download = filename;
+          document.body.appendChild(anchor);
+          anchor.click();
+          anchor.remove();
+          URL.revokeObjectURL(objectUrl);
         } catch {
           if (status) status.textContent = status.getAttribute('data-error-message') || status.getAttribute('data-fallback-error') || '';
           button.removeAttribute('disabled');
