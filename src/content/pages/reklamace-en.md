@@ -9,7 +9,8 @@ description: Returns, refund, and order cancellation conditions for the Svět za
 Ústecká 94  
 403 32 Povrly, Czech Republic  
 Company ID (IČO): 06328229  
-Email: info@svetzamalo.cz
+Email: info@svetzamalo.cz  
+Phone: +420 734 839 007
 
 ## Digital Products (Ebook)
 

@@ -9,7 +9,8 @@ description: Podmínky reklamace, vrácení zboží a storno objednávky pro e-s
 Ústecká 94  
 403 32 Povrly  
 IČO: 06328229  
-E-mail: info@svetzamalo.cz
+E-mail: info@svetzamalo.cz  
+Tel: +420 734 839 007
 
 ## Digitální produkty (ebook)
 

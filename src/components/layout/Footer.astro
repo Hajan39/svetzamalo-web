@@ -37,6 +37,7 @@ const legalLinks = [
         </a>
         <p class="mb-6 max-w-sm text-sm leading-relaxed text-foreground-secondary">{t('footer.tagline')}</p>
         <p class="text-sm text-foreground-muted">{siteEmail}</p>
+        <p class="text-sm text-foreground-muted">+420 734 839 007</p>
       </div>
 
       <div class="lg:col-span-3">
@@ -64,7 +65,11 @@ const legalLinks = [
   <div class="border-t border-border">
     <div class="container-wide flex flex-col gap-3 py-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
       <p class="text-xs text-foreground-muted">© {year} {t('footer.brandName')}</p>
-      <p class="text-xs text-foreground-muted">{t('footer.paymentProvider')}</p>
+      <div class="flex items-center gap-3">
+        <img src="/payment-visa.svg" alt="Visa" width="47" height="30" loading="lazy" />
+        <img src="/payment-mastercard.svg" alt="Mastercard" width="47" height="30" loading="lazy" />
+        <span class="text-xs text-foreground-muted">{t('footer.paymentProvider')}</span>
+      </div>
       <div class="flex flex-wrap gap-4">
         {legalLinks.map((link) => (
           <a href={link.href} class="text-xs text-foreground-muted hover:text-primary">{link.label}</a>
