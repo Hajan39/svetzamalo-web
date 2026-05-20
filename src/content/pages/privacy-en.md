@@ -1,14 +1,42 @@
 ---
-title: Privacy policy
-description: Information about personal data processing on Svet za malo.
+title: Privacy Policy
+description: Information about personal data processing by the Svět za málo e-shop operator.
 ---
 
-This page is a baseline template for legal text. Before production launch, update it with the final operator details, tools used, and personal data processing setup.
+## Operator
 
-## Email forms
+The operator of svetzamalo.cz and data controller is:
 
-Email addresses submitted through forms are used to send promised content, newsletters, or ebook information. Data is stored in Strapi and is not sold to third parties.
+**Jan Hanč**  
+Ústecká 94  
+403 32 Povrly, Czech Republic  
+Company ID (IČO): 06328229  
+Email: info@svetzamalo.cz
 
-## Analytics
+## Data We Collect
 
-Enable analytics only after implementing final cookie and consent logic.
+- **Email address** – to send the ebook, newsletter, or order confirmation
+- **Full name** – to process a paid ebook order
+
+## Why We Process Data
+
+- Delivery of ordered or free ebook
+- Sending order confirmation and payment instructions
+- Newsletter (with consent only)
+- Payment processing via ComGate Payments, a.s. payment gateway
+
+## Payment Gateway ComGate
+
+Card and online payments are processed by **ComGate Payments, a.s.**, Company ID: 279 24 505, registered at Gočárova třída 1754/48b, 500 02 Hradec Králové, Czech Republic. Your payment data is transmitted exclusively to ComGate Payments, a.s. and is not stored on our servers.
+
+## Data Retention
+
+Email addresses and names are retained for the period necessary to fulfil the above purposes. Data is not sold or shared with third parties, except for providers of essential technical services.
+
+## Your Rights
+
+You have the right to access, correct, or delete your personal data. Send requests to: info@svetzamalo.cz.
+
+## Analytics and Cookies
+
+The site does not use analytics tools or advertising cookies in its default configuration. If analytics are enabled, users will be notified via a cookie banner.

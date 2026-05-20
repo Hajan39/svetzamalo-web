@@ -23,6 +23,8 @@ const mainLinks = [
 const legalLinks = [
 	{ label: t("footer.privacy"), href: withLocalePath("/privacy", locale) },
 	{ label: t("footer.terms"), href: withLocalePath("/terms", locale) },
+	{ label: t("footer.reklamace"), href: withLocalePath("/reklamace", locale) },
+	{ label: t("footer.dodaciPodminky"), href: withLocalePath("/dodaci-podminky", locale) },
 ];
 ---
 
@@ -60,9 +62,10 @@ const legalLinks = [
   </div>
 
   <div class="border-t border-border">
-    <div class="container-wide flex flex-col items-center justify-between gap-4 py-6 sm:flex-row">
+    <div class="container-wide flex flex-col gap-3 py-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
       <p class="text-xs text-foreground-muted">© {year} {t('footer.brandName')}</p>
-      <div class="flex gap-6">
+      <p class="text-xs text-foreground-muted">{t('footer.paymentProvider')}</p>
+      <div class="flex flex-wrap gap-4">
         {legalLinks.map((link) => (
           <a href={link.href} class="text-xs text-foreground-muted hover:text-primary">{link.label}</a>
         ))}
