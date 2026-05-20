@@ -9,7 +9,8 @@ description: Delivery and payment information for the Svět za málo e-shop.
 Ústecká 94  
 403 32 Povrly, Czech Republic  
 Company ID (IČO): 06328229  
-Email: info@svetzamalo.cz
+Email: info@svetzamalo.cz  
+Phone: +420 734 839 007
 
 ## Delivery Method
 

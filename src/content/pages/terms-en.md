@@ -9,7 +9,8 @@ description: Terms and conditions for purchasing digital products in the Svět z
 Ústecká 94  
 403 32 Povrly, Czech Republic  
 Company ID (IČO): 06328229  
-Email: info@svetzamalo.cz
+Email: info@svetzamalo.cz  
+Phone: +420 734 839 007
 
 The operator is not a VAT payer.
 
