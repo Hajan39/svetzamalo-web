@@ -29,6 +29,9 @@ const en = {
 		"footer.about": "About",
 		"footer.privacy": "Privacy",
 		"footer.terms": "Terms",
+		"footer.reklamace": "Returns",
+		"footer.dodaciPodminky": "Delivery & Payment",
+		"footer.paymentProvider": "Card payments: ComGate Payments, a.s.",
 		"footer.tagline":
 			"Practical guides, budgets, and tips for travel that still makes sense without a big budget.",
 		"footer.explore": "Explore",

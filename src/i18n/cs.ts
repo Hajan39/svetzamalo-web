@@ -29,6 +29,9 @@ const cs = {
 		"footer.about": "O nás",
 		"footer.privacy": "Soukromí",
 		"footer.terms": "Podmínky",
+		"footer.reklamace": "Reklamace",
+		"footer.dodaciPodminky": "Dodání a platba",
+		"footer.paymentProvider": "Platby kartou: ComGate Payments, a.s.",
 		"footer.tagline":
 			"Praktické průvodce, rozpočty a tipy pro cestování, které dává smysl i bez velkého rozpočtu.",
 		"footer.explore": "Prozkoumat",
