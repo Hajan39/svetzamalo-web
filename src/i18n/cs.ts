@@ -322,6 +322,8 @@ const cs = {
 			pageDescription: "Platba nebyla dokončena.",
 			heading: "Platba byla zrušena",
 			intro: "Platbu jsi zrušil nebo vypršel časový limit. Objednávka nebyla dokončena a nic ti nebylo účtováno.",
+			variableSymbol: "Variabilní symbol",
+			transId: "ID transakce",
 			tryAgain: "Zkusit znovu",
 			backWeb: "Zpět na web",
 		},
@@ -331,6 +333,7 @@ const cs = {
 			heading: "Platba se zpracovává",
 			intro: "Platba ještě nebyla potvrzena. Jakmile ji banka nebo platební brána dokončí, pošleme ti ebook automaticky na email.",
 			variableSymbol: "Variabilní symbol",
+			transId: "ID transakce",
 			backWeb: "Zpět na web",
 		},
 		ebookDownload: {

@@ -323,6 +323,8 @@ const en = {
 			pageDescription: "Payment was not completed.",
 			heading: "Payment was cancelled",
 			intro: "You cancelled the payment or the time limit expired. Your order was not completed and you were not charged.",
+			variableSymbol: "Variable symbol",
+			transId: "Transaction ID",
 			tryAgain: "Try again",
 			backWeb: "Back to website",
 		},
@@ -332,6 +334,7 @@ const en = {
 			heading: "Payment is processing",
 			intro: "Payment has not been confirmed yet. Once the bank or payment gateway completes it, we will send the ebook to your email automatically.",
 			variableSymbol: "Variable symbol",
+			transId: "Transaction ID",
 			backWeb: "Back to website",
 		},
 		ebookDownload: {

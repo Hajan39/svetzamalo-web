@@ -6,7 +6,8 @@ import { getLangFromUrl, withLocalePath } from "@/i18n/utils";
 export const prerender = false;
 
 const locale = getLangFromUrl(Astro.url);
-const variableSymbol = Astro.url.searchParams.get("vs") || "";
+const refId = Astro.url.searchParams.get("refId") || Astro.url.searchParams.get("vs") || "";
+const transId = Astro.url.searchParams.get("transId") || "";
 const text = translations[locale].pages.bookPending;
 ---
 
@@ -22,10 +23,20 @@ const text = translations[locale].pages.bookPending;
       <p class="max-w-md text-foreground-secondary">{text.intro}</p>
     </div>
     <div class="brand-card px-6 py-7 sm:px-8 sm:py-8">
-      {variableSymbol && (
-        <dl class="mb-6 text-sm">
-          <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">{text.variableSymbol}</dt>
-          <dd class="mt-0.5 font-mono font-semibold text-foreground">{variableSymbol}</dd>
+      {(refId || transId) && (
+        <dl class="mb-6 grid grid-cols-1 gap-4 text-sm sm:grid-cols-2">
+          {refId && (
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">{text.variableSymbol}</dt>
+              <dd class="mt-0.5 font-mono font-semibold text-foreground">{refId}</dd>
+            </div>
+          )}
+          {transId && (
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">{text.transId}</dt>
+              <dd class="mt-0.5 font-mono text-sm text-foreground">{transId}</dd>
+            </div>
+          )}
         </dl>
       )}
       <div class="flex flex-wrap gap-3">
