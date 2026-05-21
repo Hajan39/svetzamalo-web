@@ -318,6 +318,22 @@ const en = {
 			analyticsLeadEvent: "Free Ebook Lead",
 			analyticsOrderEvent: "Paid Ebook Order",
 		},
+		bookCancelled: {
+			pageTitle: "Payment cancelled | Svet za malo",
+			pageDescription: "Payment was not completed.",
+			heading: "Payment was cancelled",
+			intro: "You cancelled the payment or the time limit expired. Your order was not completed and you were not charged.",
+			tryAgain: "Try again",
+			backWeb: "Back to website",
+		},
+		bookPending: {
+			pageTitle: "Payment processing | Svet za malo",
+			pageDescription: "Payment is waiting for confirmation.",
+			heading: "Payment is processing",
+			intro: "Payment has not been confirmed yet. Once the bank or payment gateway completes it, we will send the ebook to your email automatically.",
+			variableSymbol: "Variable symbol",
+			backWeb: "Back to website",
+		},
 		ebookDownload: {
 			titlePaid: "Thanks for your purchase | Svet za malo",
 			titleFree: "Ebook download | Svet za malo",

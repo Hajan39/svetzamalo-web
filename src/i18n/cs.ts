@@ -317,6 +317,22 @@ const cs = {
 			analyticsLeadEvent: "Free Ebook Lead",
 			analyticsOrderEvent: "Paid Ebook Order",
 		},
+		bookCancelled: {
+			pageTitle: "Platba zrušena | Svět za málo",
+			pageDescription: "Platba nebyla dokončena.",
+			heading: "Platba byla zrušena",
+			intro: "Platbu jsi zrušil nebo vypršel časový limit. Objednávka nebyla dokončena a nic ti nebylo účtováno.",
+			tryAgain: "Zkusit znovu",
+			backWeb: "Zpět na web",
+		},
+		bookPending: {
+			pageTitle: "Platba se zpracovává | Svět za málo",
+			pageDescription: "Platba ještě čeká na potvrzení.",
+			heading: "Platba se zpracovává",
+			intro: "Platba ještě nebyla potvrzena. Jakmile ji banka nebo platební brána dokončí, pošleme ti ebook automaticky na email.",
+			variableSymbol: "Variabilní symbol",
+			backWeb: "Zpět na web",
+		},
 		ebookDownload: {
 			titlePaid: "Děkujeme za nákup | Svět za málo",
 			titleFree: "Stažení ebooku | Svět za málo",
