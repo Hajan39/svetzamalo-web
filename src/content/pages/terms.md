@@ -26,14 +26,15 @@ Objednávku lze zadat prostřednictvím objednávkového formuláře na stránce
 
 Aktuální cena produktu je uvedena na stránce objednávky v českých korunách (Kč). Platba je možná:
 
-- **Kartou online** – prostřednictvím platební brány **ComGate Payments, a.s.**, IČO: 279 24 505 (platba proběhne bezprostředně)
+- **Kartou online** – prostřednictvím platební brány **Comgate, a.s.**, IČO: 279 24 505 (platba proběhne bezprostředně)
+- **Platebním tlačítkem banky** – okamžitá platba přímo z internetového bankovnictví
 - **Bankovním převodem** – zákazník obdrží platební instrukce e-mailem a platbu provede do 5 pracovních dnů
 
 ## Dodání
 
 Digitální produkt (ebook) je doručen elektronicky na e-mailovou adresu zadanou při objednávce:
 
-- Při platbě kartou: bezprostředně po potvrzení platby
+- Při platbě kartou nebo platebním tlačítkem: bezprostředně po potvrzení platby
 - Při bankovním převodu: do 3 pracovních dnů od připsání platby na účet
 
 ## Reklamace a vrácení

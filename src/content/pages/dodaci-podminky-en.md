@@ -18,22 +18,36 @@ All products in this e-shop are **digital** (ebook in PDF or EPUB format). No ph
 
 The ebook is sent electronically to the email address provided during checkout:
 
-- **Card payment:** automatically after payment confirmation, usually within a few minutes
+- **Card or bank button payment:** automatically after payment confirmation, usually within a few minutes
 - **Bank transfer:** within 3 business days of payment being credited
 
 ## Payment Methods
 
+Payments are processed by the [Comgate, a.s.](https://www.comgate.eu/cs/platebni-brana) payment gateway.
+
 ### Online Card Payment
 
-Card payments are processed by **ComGate Payments, a.s.**  
-Company ID: 279 24 505  
-Customer support: platby-podpora@comgate.cz | +420 228 224 267
+When paying by card, you will be redirected to the secure ComGate payment gateway. After entering your card details, the payment is verified and processed immediately. Payment data is transmitted securely and is not stored on our servers.
 
-We accept Visa, Mastercard, and Maestro. Payment data is transmitted securely and is not stored on our servers.
+We accept Visa, Mastercard, and Maestro cards.
+
+### Bank Payment Buttons
+
+When paying via a bank payment button, you will be redirected directly to your online banking, where you confirm the payment. Funds are sent instantly. This method is supported by major Czech banks (ČSOB, Komerční banka, Raiffeisenbank, Moneta, and others).
 
 ### Bank Transfer
 
 After placing your order you will receive payment instructions by email (account number, variable symbol, amount). Please complete the transfer within 5 business days.
+
+## Payment Support
+
+For questions or complaints regarding payments, contact the payment gateway provider:
+
+**Comgate, a.s.**  
+Gočárova třída 1754/48b  
+Hradec Králové, Czech Republic  
+Email: podpora@comgate.cz  
+Tel: +420 228 224 267
 
 ## Pricing
 

@@ -26,14 +26,15 @@ Orders are placed via the order form at /book. The customer must provide accurat
 
 Current product prices are shown on the order page in Czech Koruna (CZK). Available payment methods:
 
-- **Online card payment** – via **ComGate Payments, a.s.**, Company ID: 279 24 505 (immediate processing)
+- **Online card payment** – via **Comgate, a.s.**, Company ID: 279 24 505 (immediate processing)
+- **Bank payment button** – instant payment directly from online banking
 - **Bank transfer** – customer receives payment instructions by email and completes the transfer within 5 business days
 
 ## Delivery
 
 Digital products (ebooks) are delivered electronically to the email address provided during checkout:
 
-- Card payment: immediately after payment confirmation
+- Card or bank button payment: immediately after payment confirmation
 - Bank transfer: within 3 business days of payment being credited
 
 ## Returns and Complaints

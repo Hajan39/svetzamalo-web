@@ -24,11 +24,11 @@ Tel: +420 734 839 007
 - Doručení objednaného nebo bezplatného ebooku
 - Zaslání potvrzení objednávky a platebních instrukcí
 - Zasílání newsletteru (pouze se souhlasem)
-- Zpracování platby prostřednictvím platební brány ComGate Payments, a.s.
+- Zpracování platby prostřednictvím platební brány Comgate, a.s.
 
-## Platební brána ComGate
+## Platební brána Comgate
 
-Platby kartou a online platby jsou zpracovávány prostřednictvím platební brány **ComGate Payments, a.s.**, IČO: 279 24 505, sídlem Gočárova třída 1754/48b, 500 02 Hradec Králové. Při platbě kartou jsou vaše platební údaje předávány výhradně společnosti ComGate Payments, a.s. a nejsou ukládány na našich serverech.
+Platby kartou a online platby jsou zpracovávány prostřednictvím platební brány **Comgate, a.s.**, IČO: 279 24 505, sídlem Gočárova třída 1754/48b, Hradec Králové. Při platbě kartou jsou vaše platební údaje předávány výhradně společnosti Comgate, a.s. a nejsou ukládány na našich serverech.
 
 ## Uchování dat
 
