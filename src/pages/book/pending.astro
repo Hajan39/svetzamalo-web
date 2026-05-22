@@ -1,0 +1,47 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { translations } from "@/i18n/translations";
+import { getLangFromUrl, withLocalePath } from "@/i18n/utils";
+
+export const prerender = false;
+
+const locale = getLangFromUrl(Astro.url);
+const refId = Astro.url.searchParams.get("refId") || Astro.url.searchParams.get("vs") || "";
+const transId = Astro.url.searchParams.get("transId") || "";
+const text = translations[locale].pages.bookPending;
+---
+
+<Layout title={text.pageTitle} description={text.pageDescription} canonicalPath={withLocalePath('/book/pending', locale)}>
+  <section class="container-narrow py-10 md:py-16">
+    <div class="mb-8 flex flex-col items-center text-center">
+      <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-yellow-100">
+        <svg class="h-8 w-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+      <h1 class="mb-2 text-2xl font-bold md:text-3xl">{text.heading}</h1>
+      <p class="max-w-md text-foreground-secondary">{text.intro}</p>
+    </div>
+    <div class="brand-card px-6 py-7 sm:px-8 sm:py-8">
+      {(refId || transId) && (
+        <dl class="mb-6 grid grid-cols-1 gap-4 text-sm sm:grid-cols-2">
+          {refId && (
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">{text.variableSymbol}</dt>
+              <dd class="mt-0.5 font-mono font-semibold text-foreground">{refId}</dd>
+            </div>
+          )}
+          {transId && (
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">{text.transId}</dt>
+              <dd class="mt-0.5 font-mono text-sm text-foreground">{transId}</dd>
+            </div>
+          )}
+        </dl>
+      )}
+      <div class="flex flex-wrap gap-3">
+        <a class="btn-secondary" href={withLocalePath('/', locale)}>{text.backWeb}</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -15,7 +15,7 @@ const {
 } = Astro.props;
 
 const markSizeClass =
-	size === "header" ? "h-11 lg:h-12" : size === "footer" ? "h-12" : "sm:h-14";
+	size === "header" ? "h-8 sm:h-10 lg:h-12" : size === "footer" ? "h-12" : "sm:h-14";
 
 const wordmarkVisibilityClass = hideWordmarkOnMobile
 	? "hidden sm:flex"
