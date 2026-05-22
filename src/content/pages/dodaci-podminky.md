@@ -18,22 +18,36 @@ Veškeré produkty v tomto e-shopu jsou **digitální** (ebook ve formátu PDF n
 
 Ebook je odeslán elektronicky na e-mailovou adresu zadanou při objednávce:
 
-- **Platba kartou:** automaticky po potvrzení platby, zpravidla do několika minut
+- **Platba kartou nebo platebním tlačítkem:** automaticky po potvrzení platby, zpravidla do několika minut
 - **Bankovní převod:** do 3 pracovních dnů od připsání platby na účet
 
 ## Platební metody
 
+Platby jsou zpracovávány prostřednictvím platební brány [Comgate, a.s.](https://www.comgate.eu/cs/platebni-brana).
+
 ### Platba kartou online
 
-Platby kartou jsou zpracovávány prostřednictvím platební brány **ComGate Payments, a.s.**  
-IČO: 279 24 505  
-Podpora pro zákazníky: platby-podpora@comgate.cz | +420 228 224 267
+Při platbě kartou budete přesměrováni na zabezpečenou platební bránu ComGate. Po zadání údajů o kartě proběhne ověření a platba je zúčtována okamžitě. Platební údaje jsou přenášeny šifrovaně a nejsou ukládány na našich serverech.
 
-Akceptujeme karty Visa, Mastercard a Maestro. Platební údaje jsou přenášeny šifrovaně a nejsou ukládány na našich serverech.
+Akceptujeme karty Visa, Mastercard a Maestro.
+
+### Platební tlačítka bank
+
+Při platbě bankovním tlačítkem budete přesměrováni přímo do svého internetového bankovnictví, kde platbu potvrdíte. Peníze jsou odeslány okamžitě. Metodu podporují hlavní české banky (ČSOB, Komerční banka, Raiffeisenbank, Moneta a další).
 
 ### Bankovní převod
 
 Po odeslání objednávky obdržíte e-mailem platební instrukce (číslo účtu, variabilní symbol, částka). Platbu proveďte do 5 pracovních dnů.
+
+## Podpora k platbám
+
+V případě dotazů nebo reklamací týkajících se platby kontaktujte poskytovatele platební brány:
+
+**Comgate, a.s.**  
+Gočárova třída 1754/48b  
+Hradec Králové  
+E-mail: podpora@comgate.cz  
+Tel: +420 228 224 267
 
 ## Ceny
 

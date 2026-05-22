@@ -24,11 +24,11 @@ Phone: +420 734 839 007
 - Delivery of ordered or free ebook
 - Sending order confirmation and payment instructions
 - Newsletter (with consent only)
-- Payment processing via ComGate Payments, a.s. payment gateway
+- Payment processing via Comgate, a.s. payment gateway
 
-## Payment Gateway ComGate
+## Payment Gateway Comgate
 
-Card and online payments are processed by **ComGate Payments, a.s.**, Company ID: 279 24 505, registered at Gočárova třída 1754/48b, 500 02 Hradec Králové, Czech Republic. Your payment data is transmitted exclusively to ComGate Payments, a.s. and is not stored on our servers.
+Card and online payments are processed by **Comgate, a.s.**, Company ID: 279 24 505, registered at Gočárova třída 1754/48b, Hradec Králové, Czech Republic. Your payment data is transmitted exclusively to Comgate, a.s. and is not stored on our servers.
 
 ## Data Retention
 

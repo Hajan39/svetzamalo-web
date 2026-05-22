@@ -65,7 +65,10 @@ const legalLinks = [
   <div class="border-t border-border">
     <div class="container-wide flex flex-col gap-3 py-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
       <p class="text-xs text-foreground-muted">© {year} {t('footer.brandName')}</p>
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-3 flex-wrap">
+        <a href="https://www.comgate.eu/cs/platebni-brana" target="_blank" rel="noopener noreferrer" aria-label="ComGate platební brána">
+          <img src="/payment-comgate.svg" alt="ComGate" width="80" height="30" loading="lazy" />
+        </a>
         <img src="/payment-visa.svg" alt="Visa" width="47" height="30" loading="lazy" />
         <img src="/payment-mastercard.svg" alt="Mastercard" width="47" height="30" loading="lazy" />
         <span class="text-xs text-foreground-muted">{t('footer.paymentProvider')}</span>
