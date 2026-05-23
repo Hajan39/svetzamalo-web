@@ -59,7 +59,16 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 	);
 	const variableSymbol = isTestOrder
 		? getTestVariableSymbol()
-		: createVariableSymbol(`${result.data.email}:${Date.now()}`);
+		: createVariableSymbol(
+				[
+					result.data.email,
+					result.data.fullName,
+					result.data.productCode,
+					paymentMethod,
+					normalizedAmount,
+					new Date().toISOString().slice(0, 10),
+				].join(":"),
+			);
 	const bankTransfer = buildBankTransferDetails(
 		{
 			accountNumber: siteConfig?.bookBankAccountNumber,
