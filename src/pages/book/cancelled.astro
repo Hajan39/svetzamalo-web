@@ -6,7 +6,8 @@ import { getLangFromUrl, withLocalePath } from "@/i18n/utils";
 export const prerender = false;
 
 const locale = getLangFromUrl(Astro.url);
-const refId = Astro.url.searchParams.get("refId") || Astro.url.searchParams.get("vs") || "";
+const refId =
+	Astro.url.searchParams.get("refId") || Astro.url.searchParams.get("vs") || "";
 const transId = Astro.url.searchParams.get("transId") || "";
 const text = translations[locale].pages.bookCancelled;
 ---
@@ -22,23 +23,35 @@ const text = translations[locale].pages.bookCancelled;
       <h1 class="mb-2 text-2xl font-bold md:text-3xl">{text.heading}</h1>
       <p class="max-w-md text-foreground-secondary">{text.intro}</p>
     </div>
-    <div class="brand-card px-6 py-7 sm:px-8 sm:py-8">
-      {(refId || transId) && (
-        <dl class="mb-6 grid grid-cols-1 gap-4 text-sm sm:grid-cols-2">
-          {refId && (
-            <div>
-              <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">{text.variableSymbol}</dt>
-              <dd class="mt-0.5 font-mono font-semibold text-foreground">{refId}</dd>
+    <div class="space-y-4">
+      <div class="brand-card px-6 py-7 sm:px-8 sm:py-8">
+        <div class="grid gap-6 md:grid-cols-[1.3fr_0.9fr] md:items-start">
+          <div>
+            <h2 class="text-base font-semibold">{text.nextTitle}</h2>
+            <p class="mt-2 text-sm leading-6 text-foreground-secondary">{text.nextBody}</p>
+          </div>
+          {(refId || transId) && (
+            <div class="rounded-lg border border-border bg-background-secondary p-4">
+              <h3 class="mb-3 text-sm font-semibold">{text.referenceTitle}</h3>
+              <dl class="space-y-3 text-sm">
+                {refId && (
+                  <div>
+                    <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">{text.variableSymbol}</dt>
+                    <dd class="mt-0.5 font-mono font-semibold text-foreground">{refId}</dd>
+                  </div>
+                )}
+                {transId && (
+                  <div>
+                    <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">{text.transId}</dt>
+                    <dd class="mt-0.5 break-all font-mono text-foreground">{transId}</dd>
+                  </div>
+                )}
+              </dl>
             </div>
           )}
-          {transId && (
-            <div>
-              <dt class="text-xs font-semibold uppercase tracking-wide text-foreground-secondary">{text.transId}</dt>
-              <dd class="mt-0.5 font-mono text-sm text-foreground">{transId}</dd>
-            </div>
-          )}
-        </dl>
-      )}
+        </div>
+      </div>
+
       <div class="flex flex-wrap gap-3">
         <a class="btn-primary" href={withLocalePath('/book', locale)}>{text.tryAgain}</a>
         <a class="btn-secondary" href={withLocalePath('/', locale)}>{text.backWeb}</a>

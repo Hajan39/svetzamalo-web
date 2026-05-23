@@ -15,18 +15,22 @@ const {
 } = Astro.props;
 
 const markSizeClass =
-	size === "header" ? "h-8 sm:h-10 lg:h-12" : size === "footer" ? "h-12" : "sm:h-14";
+	size === "header"
+		? "h-8 max-h-8 sm:h-10 sm:max-h-10 lg:h-12 lg:max-h-12"
+		: size === "footer"
+			? "h-12"
+			: "h-12 sm:h-14";
 
 const wordmarkVisibilityClass = hideWordmarkOnMobile
 	? "hidden sm:flex"
 	: "flex";
 ---
 
-<span class="inline-flex items-center gap-3" role="img" aria-label="Svět za málo">
+<span class="inline-flex max-h-full items-center gap-3" role="img" aria-label="Svět za málo">
   <Image
     src={logoMark}
     alt="Logo"
-    class:list={['h-auto w-auto object-contain', markSizeClass]}
+	class:list={['w-auto shrink-0 object-contain', markSizeClass]}
     loading="eager"
     decoding="sync"
   />

@@ -287,9 +287,15 @@ const en = {
 			leadIntro:
 				"Thanks. Check your inbox, and also Promotions or Spam folders.",
 			orderHeading: "Order received",
-			gatewayPaidHeading: "Thank you for your order and payment",
+			gatewayPaidHeading: "Thank you, your payment was successful",
 			gatewayPaidIntro:
-				"Your payment was completed successfully. Confirmation and ebook delivery are handled by a secure backend process.",
+				"Your order is paid. You can expect the ebook download link in your email within a few minutes.",
+			gatewayNext: "What happens next",
+			gatewayNextBody:
+				"Once the payment gateway sends confirmation, we will email you a personal download link for the PDF and EPUB versions. If the email does not arrive within 10 minutes, check Promotions or Spam.",
+			gatewayReference: "Payment reference",
+			gatewayContact:
+				"If we need to trace the payment, send us the variable symbol or transaction ID.",
 			product: "Product",
 			confirmationTo: "confirmation to",
 			pickDestination: "Choose destination",
@@ -303,6 +309,7 @@ const en = {
 			qrAlt: "QR payment code",
 			amount: "Amount",
 			variableSymbol: "Variable symbol",
+			transId: "Transaction ID",
 			accountNumber: "Account number",
 			iban: "IBAN",
 			message: "Recipient message",
@@ -322,7 +329,12 @@ const en = {
 			pageTitle: "Payment cancelled | Svet za malo",
 			pageDescription: "Payment was not completed.",
 			heading: "Payment was cancelled",
-			intro: "You cancelled the payment or the time limit expired. Your order was not completed and you were not charged.",
+			intro:
+				"The payment was not completed, so you will not be charged. You can try the order again anytime.",
+			nextTitle: "What you can do now",
+			nextBody:
+				"If the checkout window was closed, the time limit expired, or your bank verification failed, return to the order and start the payment again. A new attempt creates a new secure payment.",
+			referenceTitle: "Unfinished payment reference",
 			variableSymbol: "Variable symbol",
 			transId: "Transaction ID",
 			tryAgain: "Try again",
@@ -332,7 +344,13 @@ const en = {
 			pageTitle: "Payment processing | Svet za malo",
 			pageDescription: "Payment is waiting for confirmation.",
 			heading: "Payment is processing",
-			intro: "Payment has not been confirmed yet. Once the bank or payment gateway completes it, we will send the ebook to your email automatically.",
+			intro:
+				"The payment is still waiting for gateway confirmation. Once it arrives, we will automatically email you the ebook download link.",
+			nextTitle: "No further action needed",
+			nextBody:
+				"Some payments take a short while to confirm. You do not need to refresh this page or place another order. Once Comgate confirms the result, ebook delivery starts automatically.",
+			referenceTitle: "Payment reference",
+			readArticles: "Read articles",
 			variableSymbol: "Variable symbol",
 			transId: "Transaction ID",
 			backWeb: "Back to website",

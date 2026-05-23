@@ -286,9 +286,15 @@ const cs = {
 			leadIntro:
 				"Děkujeme. Zkontroluj e-mailovou schránku, případně složku hromadné pošty nebo spam.",
 			orderHeading: "Objednávka přijata",
-			gatewayPaidHeading: "Děkujeme za objednání a zaplacení",
+			gatewayPaidHeading: "Děkujeme, platba proběhla úspěšně",
 			gatewayPaidIntro:
-				"Platba byla úspěšně dokončena. Potvrzení a doručení ebooku řešíme přes zabezpečené backendové zpracování.",
+				"Objednávku máme v pořádku zaplacenou. Odkaz ke stažení ebooku můžeš během několika minut očekávat v e-mailu.",
+			gatewayNext: "Co bude následovat",
+			gatewayNextBody:
+				"Jakmile platební brána předá potvrzení, odešleme ti osobní odkaz ke stažení PDF a EPUB verze. Pokud e-mail nedorazí do 10 minut, zkontroluj složku hromadné pošty nebo spam.",
+			gatewayReference: "Údaje k platbě",
+			gatewayContact:
+				"Kdyby bylo potřeba platbu dohledat, pošli nám variabilní symbol nebo ID transakce.",
 			product: "Produkt",
 			confirmationTo: "potvrzení na",
 			pickDestination: "Vybrat destinaci",
@@ -302,6 +308,7 @@ const cs = {
 			qrAlt: "QR kód pro platbu",
 			amount: "Částka",
 			variableSymbol: "Variabilní symbol",
+			transId: "ID transakce",
 			accountNumber: "Číslo účtu",
 			iban: "IBAN",
 			message: "Zpráva pro příjemce",
@@ -321,7 +328,12 @@ const cs = {
 			pageTitle: "Platba zrušena | Svět za málo",
 			pageDescription: "Platba nebyla dokončena.",
 			heading: "Platba byla zrušena",
-			intro: "Platbu jsi zrušil nebo vypršel časový limit. Objednávka nebyla dokončena a nic ti nebylo účtováno.",
+			intro:
+				"Platba se nedokončila, takže ti nic nebudeme účtovat. Objednávku můžeš kdykoliv zkusit znovu.",
+			nextTitle: "Co můžeš udělat teď",
+			nextBody:
+				"Pokud šlo jen o zavřené okno, vypršený limit nebo chybu při ověření v bance, vrať se k objednávce a platbu spusť znovu. Nový pokus vytvoří novou bezpečnou platbu.",
+			referenceTitle: "Údaje k nedokončené platbě",
 			variableSymbol: "Variabilní symbol",
 			transId: "ID transakce",
 			tryAgain: "Zkusit znovu",
@@ -331,7 +343,13 @@ const cs = {
 			pageTitle: "Platba se zpracovává | Svět za málo",
 			pageDescription: "Platba ještě čeká na potvrzení.",
 			heading: "Platba se zpracovává",
-			intro: "Platba ještě nebyla potvrzena. Jakmile ji banka nebo platební brána dokončí, pošleme ti ebook automaticky na email.",
+			intro:
+				"Platba ještě čeká na potvrzení platební brány. Jakmile dorazí, pošleme ti odkaz ke stažení ebooku automaticky na e-mail.",
+			nextTitle: "Nemusíš dělat nic dalšího",
+			nextBody:
+				"U některých plateb může potvrzení chvíli trvat. Stránku není potřeba obnovovat ani objednávku zadávat znovu. Jakmile Comgate potvrdí výsledek, doručení ebooku se spustí automaticky.",
+			referenceTitle: "Údaje k platbě",
+			readArticles: "Číst články",
 			variableSymbol: "Variabilní symbol",
 			transId: "ID transakce",
 			backWeb: "Zpět na web",
