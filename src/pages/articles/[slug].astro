@@ -1,72 +1,112 @@
 ---
-import { Image } from 'astro:assets';
-import InteractiveChecklist from '@/components/article/InteractiveChecklist.astro';
-import ArticleCard from '@/components/article/ArticleCard.astro';
-import Layout from '@/layouts/Layout.astro';
-import { getContinentLabel } from '@/lib/continentLabels';
-import { fetchAllArticles, fetchArticleBySlug, fetchDestinations } from '@/lib/content/api';
-import type { Article, Destination } from '@/types';
-import { translations } from '@/i18n/translations';
-import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
+import { Image } from "astro:assets";
+import InteractiveChecklist from "@/components/article/InteractiveChecklist.astro";
+import ArticleCard from "@/components/article/ArticleCard.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getContinentLabel } from "@/lib/continentLabels";
+import {
+	fetchAllArticles,
+	fetchArticleBySlug,
+	fetchDestinations,
+} from "@/lib/content/api";
+import type { Article, Destination } from "@/types";
+import { translations } from "@/i18n/translations";
+import { getLocaleFromAstro, withLocalePath } from "@/lib/i18n";
 
 const locale = getLocaleFromAstro(Astro);
 const slug = Astro.params.slug!;
-const [article, allArticles, destinations] = await Promise.all([
-  fetchArticleBySlug(slug, locale),
-  fetchAllArticles(locale),
-  fetchDestinations(locale),
-]) as [Article | null, Article[], Destination[]];
-if (!article) return Astro.redirect(withLocalePath('/articles', locale));
+const [article, allArticles, destinations] = (await Promise.all([
+	fetchArticleBySlug(slug, locale),
+	fetchAllArticles(locale),
+	fetchDestinations(locale),
+])) as [Article | null, Article[], Destination[]];
+if (!article) return Astro.redirect(withLocalePath("/articles", locale));
 
 const currentArticleSlug = article.slug;
-const articleDestination = article.destinationId ? destinations.find((destination) => destination.slug === article.destinationId) : undefined;
-const isChecklistArticle = /(^|-)co-sbalit(-|$)|checklist/i.test(article.slug) || /checklist|co sbalit/i.test(article.title);
+const articleDestination = article.destinationId
+	? destinations.find(
+			(destination) => destination.slug === article.destinationId,
+		)
+	: undefined;
+const isChecklistArticle =
+	/(^|-)co-sbalit(-|$)|checklist/i.test(article.slug) ||
+	/checklist|co sbalit/i.test(article.title);
 const text = translations[locale].pages.articleDetail;
+const articleLabel =
+	article.countryName ||
+	(article.articleType || text.defaultType).replace(/-/g, " ");
 
 const articleHtml = article.htmlContent || text.emptyContent;
 
 function normalizeMarker(value: string) {
-  return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+	return value
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.toLowerCase();
 }
 
 function hasRelatedArticlesMarker(paragraph: string) {
-  return normalizeMarker(paragraph.replace(/<[^>]*>/g, ' ')).includes(normalizeMarker(text.relatedHeadingKeyword));
+	return normalizeMarker(paragraph.replace(/<[^>]*>/g, " ")).includes(
+		normalizeMarker(text.relatedHeadingKeyword),
+	);
 }
 
 function extractRelatedArticleSlugs(html: string): string[] {
-  const block = Array.from(html.matchAll(/<p\b[^>]*>[\s\S]*?<\/p>/gi), (match) => match[0]).find(hasRelatedArticlesMarker);
-  if (!block) return [];
+	const block = Array.from(
+		html.matchAll(/<p\b[^>]*>[\s\S]*?<\/p>/gi),
+		(match) => match[0],
+	).find(hasRelatedArticlesMarker);
+	if (!block) return [];
 
-  const text = block.replace(/<[^>]*>/g, ' ');
-  const slugs = Array.from(text.matchAll(/\/articles\/([a-z0-9-]+)(?=[\s,.;)]|$)/gi), (match) => match[1]);
-  return [...new Set(slugs)].filter((slug) => slug !== currentArticleSlug);
+	const text = block.replace(/<[^>]*>/g, " ");
+	const slugs = Array.from(
+		text.matchAll(/\/articles\/([a-z0-9-]+)(?=[\s,.;)]|$)/gi),
+		(match) => match[1],
+	);
+	return [...new Set(slugs)].filter((slug) => slug !== currentArticleSlug);
 }
 
 function removeRelatedArticlesBlock(html: string): string {
-  const cleaned = html.replace(/<p\b[^>]*>[\s\S]*?<\/p>/gi, (paragraph) => (hasRelatedArticlesMarker(paragraph) ? '' : paragraph)).trim();
-  return cleaned || text.emptyContent;
+	const cleaned = html
+		.replace(/<p\b[^>]*>[\s\S]*?<\/p>/gi, (paragraph) =>
+			hasRelatedArticlesMarker(paragraph) ? "" : paragraph,
+		)
+		.trim();
+	return cleaned || text.emptyContent;
 }
 
 const relatedArticleSlugs = extractRelatedArticleSlugs(articleHtml);
-const relatedArticlesBySlug = new Map(allArticles.map((relatedArticle) => [relatedArticle.slug, relatedArticle]));
-const relatedArticlesFromContent = relatedArticleSlugs.map((slug) => relatedArticlesBySlug.get(slug)).filter(Boolean);
-const relatedArticlesFromSchema = article.relatedArticles?.filter((relatedArticle) => relatedArticle.slug !== currentArticleSlug) ?? [];
-const relatedArticles = relatedArticlesFromSchema.length ? relatedArticlesFromSchema : relatedArticlesFromContent;
+const relatedArticlesBySlug = new Map(
+	allArticles.map((relatedArticle) => [relatedArticle.slug, relatedArticle]),
+);
+const relatedArticlesFromContent = relatedArticleSlugs
+	.map((slug) => relatedArticlesBySlug.get(slug))
+	.filter(Boolean);
+const relatedArticlesFromSchema =
+	article.relatedArticles?.filter(
+		(relatedArticle) => relatedArticle.slug !== currentArticleSlug,
+	) ?? [];
+const relatedArticles = relatedArticlesFromSchema.length
+	? relatedArticlesFromSchema
+	: relatedArticlesFromContent;
 const displayHtml = removeRelatedArticlesBlock(articleHtml);
 
-const siteUrl = import.meta.env.SITE_URL || import.meta.env.PUBLIC_SITE_URL || 'https://svetzamalo.cz';
+const siteUrl =
+	import.meta.env.SITE_URL ||
+	import.meta.env.PUBLIC_SITE_URL ||
+	"https://svetzamalo.cz";
 const articleUrl = `${siteUrl}${withLocalePath(`/articles/${article.slug}`, locale)}`;
 const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
-  headline: article.title,
-  description: article.intro || article.seo.metaDescription,
-  url: articleUrl,
-  inLanguage: locale === 'cs' ? 'cs-CZ' : 'en',
-  ...(article.coverImage ? { image: article.coverImage.src } : {}),
-  ...(article.publishedAt ? { datePublished: article.publishedAt } : {}),
-  ...(article.updatedAt ? { dateModified: article.updatedAt } : {}),
-  publisher: { '@type': 'Organization', name: 'Svět za málo', url: siteUrl },
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	headline: article.title,
+	description: article.intro || article.seo.metaDescription,
+	url: articleUrl,
+	inLanguage: locale === "cs" ? "cs-CZ" : "en",
+	...(article.coverImage ? { image: article.coverImage.src } : {}),
+	...(article.publishedAt ? { datePublished: article.publishedAt } : {}),
+	...(article.updatedAt ? { dateModified: article.updatedAt } : {}),
+	publisher: { "@type": "Organization", name: "Svět za málo", url: siteUrl },
 };
 ---
 
@@ -78,7 +118,7 @@ const jsonLd = {
     <a href={withLocalePath('/articles', locale)} class="mb-6 inline-flex text-sm font-semibold">{text.back}</a>
     <header class="mb-8">
       <div class="mb-4 flex flex-wrap gap-2">
-        <span class="inline-flex rounded-full bg-primary-light px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">{(article.articleType || text.defaultType).replace(/-/g, ' ')}</span>
+        <span class="inline-flex rounded-full bg-primary-light px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">{articleLabel}</span>
         {articleDestination && (
           <a href={withLocalePath(`/destinations/guide/${articleDestination.slug}`, locale)} class="inline-flex rounded-full border border-border bg-background-secondary px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-foreground-secondary hover:border-primary/30 hover:text-primary hover:no-underline">
             {getContinentLabel(articleDestination.continent, locale)} · {articleDestination.name}

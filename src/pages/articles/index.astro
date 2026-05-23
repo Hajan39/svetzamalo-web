@@ -1,131 +1,231 @@
 ---
-import ArticleCard from '@/components/article/ArticleCard.astro';
-import Layout from '@/layouts/Layout.astro';
-import { getContinentLabel } from '@/lib/continentLabels';
-import { fetchAllArticles, fetchArticleFilterMeta, fetchArticlesPage, fetchDestinations } from '@/lib/content/api';
-import { translations } from '@/i18n/translations';
-import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
-import { getDraftModeProps } from '@/lib/sanity/draftMode';
-import type { Article, Destination } from '@/types';
+import ArticleCard from "@/components/article/ArticleCard.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getContinentLabel } from "@/lib/continentLabels";
+import {
+	fetchAllArticles,
+	fetchArticleFilterMeta,
+	fetchArticlesPage,
+	fetchDestinations,
+} from "@/lib/content/api";
+import { translations } from "@/i18n/translations";
+import { getLocaleFromAstro, withLocalePath } from "@/lib/i18n";
+import { getDraftModeProps } from "@/lib/sanity/draftMode";
+import type { Article, Destination } from "@/types";
 
 export const prerender = false;
 
-const searchQuery = (Astro.url.searchParams.get('q') || '').trim();
+const searchQuery = (Astro.url.searchParams.get("q") || "").trim();
 const normalizedSearchQuery = normalizeSearchText(searchQuery);
-const selectedDestination = (Astro.url.searchParams.get('destination') || '').trim();
-const selectedContinent = (Astro.url.searchParams.get('continent') || '').trim();
-const selectedType = (Astro.url.searchParams.get('type') || '').trim();
-const pageParam = Number(Astro.url.searchParams.get('page') || '1');
-const requestedPage = Number.isFinite(pageParam) && pageParam > 0 ? Math.floor(pageParam) : 1;
+const selectedDestination = (
+	Astro.url.searchParams.get("destination") || ""
+).trim();
+const selectedContinent = (
+	Astro.url.searchParams.get("continent") || ""
+).trim();
+const selectedType = (Astro.url.searchParams.get("type") || "").trim();
+const pageParam = Number(Astro.url.searchParams.get("page") || "1");
+const requestedPage =
+	Number.isFinite(pageParam) && pageParam > 0 ? Math.floor(pageParam) : 1;
 const locale = getLocaleFromAstro(Astro);
 const text = translations[locale].pages.articlesIndex;
 const localeTag = translations[locale].shared.localeTag;
 const sanityOptions = getDraftModeProps(Astro.cookies);
-const activeFilters = Boolean(normalizedSearchQuery || selectedDestination || selectedContinent || selectedType);
+const activeFilters = Boolean(
+	normalizedSearchQuery ||
+		selectedDestination ||
+		selectedContinent ||
+		selectedType,
+);
 let [pageResult, filterMeta, allArticles, destinations] = await Promise.all([
-  fetchArticlesPage(requestedPage, locale, undefined, sanityOptions),
-  fetchArticleFilterMeta(locale, sanityOptions),
-  activeFilters ? fetchAllArticles(locale, sanityOptions) : Promise.resolve([] as Awaited<ReturnType<typeof fetchAllArticles>>),
-  fetchDestinations(locale, sanityOptions),
+	fetchArticlesPage(requestedPage, locale, undefined, sanityOptions),
+	fetchArticleFilterMeta(locale, sanityOptions),
+	fetchAllArticles(locale, sanityOptions),
+	fetchDestinations(locale, sanityOptions),
 ]);
-if (locale === 'en' && pageResult.total === 0 && filterMeta.length === 0) {
-  [pageResult, filterMeta, allArticles, destinations] = await Promise.all([
-    fetchArticlesPage(requestedPage, 'cs', undefined, sanityOptions),
-    fetchArticleFilterMeta('cs', sanityOptions),
-    activeFilters ? fetchAllArticles('cs', sanityOptions) : Promise.resolve([] as Awaited<ReturnType<typeof fetchAllArticles>>),
-    fetchDestinations('cs', sanityOptions),
-  ]);
+if (locale === "en" && pageResult.total === 0 && filterMeta.length === 0) {
+	[pageResult, filterMeta, allArticles, destinations] = await Promise.all([
+		fetchArticlesPage(requestedPage, "cs", undefined, sanityOptions),
+		fetchArticleFilterMeta("cs", sanityOptions),
+		fetchAllArticles("cs", sanityOptions),
+		fetchDestinations("cs", sanityOptions),
+	]);
 }
-const destinationBySlug = new Map(destinations.map((destination) => [destination.slug, destination]));
-const articles = activeFilters ? allArticles : pageResult.articles;
+const destinationBySlug = new Map(
+	destinations.map((destination) => [destination.slug, destination]),
+);
+const articles = allArticles.length ? allArticles : pageResult.articles;
 const filteredArticles = activeFilters
-  ? articles.filter((article) => articleMatchesFilters(article, {
-      query: normalizedSearchQuery,
-      destination: selectedDestination,
-      continent: selectedContinent,
-      type: selectedType,
-      destinationBySlug,
-    }))
-  : articles;
-const visibleTotal = activeFilters ? filteredArticles.length : pageResult.total;
+	? articles.filter((article) =>
+			articleMatchesFilters(article, {
+				query: normalizedSearchQuery,
+				destination: selectedDestination,
+				continent: selectedContinent,
+				type: selectedType,
+				destinationBySlug,
+			}),
+		)
+	: interleaveArticlesByDestination(
+			articles,
+			`${locale}:${currentPageSeed(requestedPage)}`,
+		);
+const visibleTotal = filteredArticles.length || pageResult.total;
 const filteredPageCount = Math.max(1, Math.ceil(visibleTotal / 12));
-const pageCount = activeFilters ? filteredPageCount : pageResult.pageCount;
-const currentPage = activeFilters ? Math.min(requestedPage, pageCount) : pageResult.page;
-const visibleArticles = activeFilters
-  ? filteredArticles.slice((currentPage - 1) * 12, currentPage * 12)
-  : filteredArticles;
+const pageCount = filteredPageCount;
+const currentPage = Math.min(requestedPage, pageCount);
+const visibleArticles = filteredArticles.slice(
+	(currentPage - 1) * 12,
+	currentPage * 12,
+);
 const hasPreviousPage = currentPage > 1;
 const hasNextPage = currentPage < pageCount;
-const articleDestinationSlugs = new Set(filterMeta.map((article) => article.destinationId).filter(Boolean));
+const articleDestinationSlugs = new Set(
+	filterMeta.map((article) => article.destinationId).filter(Boolean),
+);
 const destinationOptions = destinations
-  .filter((destination) => articleDestinationSlugs.has(destination.slug))
-  .sort((first, second) => first.name.localeCompare(second.name, localeTag));
-const continentOptions = Array.from(new Set(destinationOptions.map((destination) => destination.continent)))
-  .sort((first, second) => getContinentLabel(first, locale).localeCompare(getContinentLabel(second, locale), localeTag));
-const typeOptions = Array.from(new Set(filterMeta.map((article) => article.articleType).filter(Boolean)))
-  .sort((first, second) => getArticleTypeLabel(first || '').localeCompare(getArticleTypeLabel(second || ''), localeTag));
+	.filter((destination) => articleDestinationSlugs.has(destination.slug))
+	.sort((first, second) => first.name.localeCompare(second.name, localeTag));
+const continentOptions = Array.from(
+	new Set(destinationOptions.map((destination) => destination.continent)),
+).sort((first, second) =>
+	getContinentLabel(first, locale).localeCompare(
+		getContinentLabel(second, locale),
+		localeTag,
+	),
+);
+const typeOptions = Array.from(
+	new Set(filterMeta.map((article) => article.articleType).filter(Boolean)),
+).sort((first, second) =>
+	getArticleTypeLabel(first || "").localeCompare(
+		getArticleTypeLabel(second || ""),
+		localeTag,
+	),
+);
 
 function normalizeSearchText(value: string) {
-  return value
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/[-_]+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
+	return value
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.toLowerCase()
+		.replace(/[-_]+/g, " ")
+		.replace(/\s+/g, " ")
+		.trim();
 }
 
 function articleMatchesFilters(
-  article: Article,
-  filters: {
-    query: string;
-    destination: string;
-    continent: string;
-    type: string;
-    destinationBySlug: Map<string, Destination>;
-  },
+	article: Article,
+	filters: {
+		query: string;
+		destination: string;
+		continent: string;
+		type: string;
+		destinationBySlug: Map<string, Destination>;
+	},
 ) {
-  const destination = article.destinationId ? filters.destinationBySlug.get(article.destinationId) : undefined;
+	const destination = article.destinationId
+		? filters.destinationBySlug.get(article.destinationId)
+		: undefined;
 
-  if (filters.destination && article.destinationId !== filters.destination) return false;
-  if (filters.continent && destination?.continent !== filters.continent) return false;
-  if (filters.type && article.articleType !== filters.type) return false;
-  if (!filters.query) return true;
+	if (filters.destination && article.destinationId !== filters.destination)
+		return false;
+	if (filters.continent && destination?.continent !== filters.continent)
+		return false;
+	if (filters.type && article.articleType !== filters.type) return false;
+	if (!filters.query) return true;
 
-  const searchableText = [
-    article.title,
-    article.intro,
-    article.slug,
-    article.articleType,
-    article.countryName,
-    destination?.name,
-    destination ? getContinentLabel(destination.continent, locale) : undefined,
-    article.seo.metaTitle,
-    article.seo.metaDescription,
-    ...(article.tags || []),
-  ]
-    .filter(Boolean)
-    .join(' ');
+	const searchableText = [
+		article.title,
+		article.intro,
+		article.slug,
+		article.articleType,
+		article.countryName,
+		destination?.name,
+		destination ? getContinentLabel(destination.continent, locale) : undefined,
+		article.seo.metaTitle,
+		article.seo.metaDescription,
+		...(article.tags || []),
+	]
+		.filter(Boolean)
+		.join(" ");
 
-  return normalizeSearchText(searchableText).includes(filters.query);
+	return normalizeSearchText(searchableText).includes(filters.query);
 }
 
 function getArticleTypeLabel(type: string) {
-  return type.replace(/-/g, ' ');
+	return type.replace(/-/g, " ");
+}
+
+function currentPageSeed(page: number) {
+	return String(Math.max(1, page));
+}
+
+function seededNumber(seed: string) {
+	let hash = 2166136261;
+	for (const char of seed) {
+		hash ^= char.charCodeAt(0);
+		hash = Math.imul(hash, 16777619);
+	}
+	return hash >>> 0;
+}
+
+function getArticleGroupKey(article: Article) {
+	return (
+		article.destinationId ||
+		article.countryName ||
+		article.articleType ||
+		article.slug
+	);
+}
+
+function interleaveArticlesByDestination(input: Article[], seed: string) {
+	const groups = new Map<string, Article[]>();
+
+	for (const article of input) {
+		const key = getArticleGroupKey(article);
+		groups.set(key, [...(groups.get(key) || []), article]);
+	}
+
+	const queues = Array.from(groups, ([key, items]) => ({
+		key,
+		items,
+		rank: seededNumber(`${seed}:${key}`),
+	}));
+	const mixed: Article[] = [];
+	let lastKey = "";
+
+	while (queues.some((queue) => queue.items.length > 0)) {
+		const available = queues.filter((queue) => queue.items.length > 0);
+		const candidates = available.some((queue) => queue.key !== lastKey)
+			? available.filter((queue) => queue.key !== lastKey)
+			: available;
+		candidates.sort(
+			(first, second) =>
+				second.items.length - first.items.length || first.rank - second.rank,
+		);
+		const next = candidates[0];
+		const article = next.items.shift();
+
+		if (article) {
+			mixed.push(article);
+			lastKey = next.key;
+		}
+	}
+
+	return mixed;
 }
 
 function getArticlesPageHref(page: number) {
-  const params = new URLSearchParams();
+	const params = new URLSearchParams();
 
-  if (searchQuery) params.set('q', searchQuery);
-  if (selectedContinent) params.set('continent', selectedContinent);
-  if (selectedDestination) params.set('destination', selectedDestination);
-  if (selectedType) params.set('type', selectedType);
-  if (page > 1) params.set('page', String(page));
+	if (searchQuery) params.set("q", searchQuery);
+	if (selectedContinent) params.set("continent", selectedContinent);
+	if (selectedDestination) params.set("destination", selectedDestination);
+	if (selectedType) params.set("type", selectedType);
+	if (page > 1) params.set("page", String(page));
 
-  const query = params.toString();
-  const basePath = withLocalePath('/articles', locale);
-  return query ? `${basePath}?${query}` : basePath;
+	const query = params.toString();
+	const basePath = withLocalePath("/articles", locale);
+	return query ? `${basePath}?${query}` : basePath;
 }
 ---
 
@@ -135,7 +235,7 @@ function getArticlesPageHref(page: number) {
       <h1 class="mb-4">{text.heading}</h1>
       <p>{text.intro}</p>
     </header>
-    {pageResult.total === 0 ? (
+    {visibleTotal === 0 ? (
       <div class="brand-card p-8 text-center text-foreground-secondary">{text.cmsEmpty}</div>
     ) : (
       <>

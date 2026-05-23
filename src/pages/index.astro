@@ -1,15 +1,27 @@
 ---
-import { Image } from 'astro:assets';
-import ArticleCard from '@/components/article/ArticleCard.astro';
-import DestinationCard from '@/components/destination/DestinationCard.astro';
-import LeadCapture from '@/components/marketing/LeadCapture.astro';
-import Layout from '@/layouts/Layout.astro';
-import { getFreeEbookDescription, getFreeEbookTitle, getPaidBookTitle, isFreeEbookEnabled, isPaidEbookEnabled } from '@/lib/bookConfig';
-import { getContinentLabel } from '@/lib/continentLabels';
-import { fetchArticleCount, fetchDestinations, fetchLatestArticles, fetchSiteConfig } from '@/lib/content/api';
-import { translations } from '@/i18n/translations';
-import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
-import { getDraftModeProps } from '@/lib/sanity/draftMode';
+import { Image } from "astro:assets";
+import ArticleCard from "@/components/article/ArticleCard.astro";
+import DestinationCard from "@/components/destination/DestinationCard.astro";
+import LeadCapture from "@/components/marketing/LeadCapture.astro";
+import Layout from "@/layouts/Layout.astro";
+import {
+	getFreeEbookDescription,
+	getFreeEbookTitle,
+	getPaidBookTitle,
+	isFreeEbookEnabled,
+	isPaidEbookEnabled,
+} from "@/lib/bookConfig";
+import { getContinentLabel } from "@/lib/continentLabels";
+import {
+	fetchArticleCount,
+	fetchArticlesPage,
+	fetchDestinations,
+	fetchLatestArticles,
+	fetchSiteConfig,
+} from "@/lib/content/api";
+import { translations } from "@/i18n/translations";
+import { getLocaleFromAstro, withLocalePath } from "@/lib/i18n";
+import { getDraftModeProps } from "@/lib/sanity/draftMode";
 
 export const prerender = false;
 
@@ -22,14 +34,41 @@ let [articles, articleCount, destinations, siteConfig] = await Promise.all([
 	fetchDestinations(locale, sanityOptions),
 	fetchSiteConfig(locale),
 ]);
-if (locale === 'en' && articles.length === 0 && destinations.length === 0) {
+if (locale === "en" && articles.length === 0 && destinations.length === 0) {
 	[articles, articleCount, destinations, siteConfig] = await Promise.all([
-		fetchLatestArticles(9, 'cs', sanityOptions),
-		fetchArticleCount('cs', sanityOptions),
-		fetchDestinations('cs', sanityOptions),
-		fetchSiteConfig('cs'),
+		fetchLatestArticles(9, "cs", sanityOptions),
+		fetchArticleCount("cs", sanityOptions),
+		fetchDestinations("cs", sanityOptions),
+		fetchSiteConfig("cs"),
 	]);
 }
+
+function seededNumber(seed: string) {
+	let hash = 2166136261;
+	for (const char of seed) {
+		hash ^= char.charCodeAt(0);
+		hash = Math.imul(hash, 16777619);
+	}
+	return hash >>> 0;
+}
+
+const randomArticlePageCount = Math.max(1, Math.ceil(articleCount / 3));
+const randomArticlePage =
+	(seededNumber(`${locale}:${new Date().toISOString().slice(0, 10)}`) %
+		randomArticlePageCount) +
+	1;
+let randomArticles =
+	articleCount > 3
+		? (await fetchArticlesPage(randomArticlePage, locale, 3, sanityOptions))
+				.articles
+		: [];
+
+if (locale === "en" && randomArticles.length === 0 && articleCount > 3) {
+	randomArticles = (
+		await fetchArticlesPage(randomArticlePage, "cs", 3, sanityOptions)
+	).articles;
+}
+
 const freeEbookAvailable = isFreeEbookEnabled(siteConfig);
 const paidEbookAvailable = isPaidEbookEnabled(siteConfig);
 const freeEbookTitle = getFreeEbookTitle(siteConfig);
@@ -37,15 +76,25 @@ const freeEbookDescription = getFreeEbookDescription(siteConfig);
 const paidBookTitle = getPaidBookTitle(siteConfig);
 const featuredArticle = articles[0];
 const secondaryArticles = articles.slice(1, 4);
-const latestArticles = articles.slice(4, 9);
+const randomArticleCards = randomArticles.length
+	? randomArticles
+	: articles.slice(4, 7);
 const featuredDestinations = destinations.slice(0, 6);
 const destinationCount = destinations.length;
 const text = translations[locale].pages.home;
 const shared = translations[locale].shared;
 
-const continentLabels = new Intl.ListFormat(shared.htmlLocale, { style: 'long', type: 'conjunction' }).format(
-	Array.from(new Set(destinations.map((destination) => getContinentLabel(destination.continent, locale))))
-		.slice(0, 3),
+const continentLabels = new Intl.ListFormat(shared.htmlLocale, {
+	style: "long",
+	type: "conjunction",
+}).format(
+	Array.from(
+		new Set(
+			destinations.map((destination) =>
+				getContinentLabel(destination.continent, locale),
+			),
+		),
+	).slice(0, 3),
 );
 ---
 
@@ -205,7 +254,7 @@ const continentLabels = new Intl.ListFormat(shared.htmlLocale, { style: 'long', 
 			<div class="empty-state">{text.emptyArticles}</div>
 		) : (
 			<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
-				{(latestArticles.length ? latestArticles : articles).map((article) => <ArticleCard article={article} variant="block" />)}
+				{(randomArticleCards.length ? randomArticleCards : articles).map((article) => <ArticleCard article={article} variant="block" />)}
 			</div>
 		)}
 	</section>

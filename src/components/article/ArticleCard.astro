@@ -1,20 +1,22 @@
 ---
-import { Image } from 'astro:assets';
-import { translations } from '@/i18n/translations';
-import { getLangFromUrl, useTranslations } from '@/i18n/utils';
-import type { Article } from '@/types';
+import { Image } from "astro:assets";
+import { translations } from "@/i18n/translations";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import type { Article } from "@/types";
 
 interface Props {
-  article: Article;
-  variant?: 'default' | 'block' | 'compact';
+	article: Article;
+	variant?: "default" | "block" | "compact";
 }
 
-const { article, variant = 'default' } = Astro.props;
+const { article, variant = "default" } = Astro.props;
 const cover = article.coverImage;
-const typeLabel = (article.articleType || 'destination-guide').replace(/-/g, ' ');
+const typeLabel =
+	article.countryName ||
+	(article.articleType || "destination-guide").replace(/-/g, " ");
 const locale = getLangFromUrl(Astro.url);
 const t = useTranslations(locale);
-const readLabel = t('articleCard.read');
+const readLabel = t("articleCard.read");
 const dateLocale = translations[locale].shared.dateLocale;
 ---
 
