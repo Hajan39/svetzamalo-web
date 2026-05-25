@@ -7,6 +7,7 @@ import Layout from "@/layouts/Layout.astro";
 import {
 	getFreeEbookDescription,
 	getFreeEbookTitle,
+	getPaidBookDescription,
 	getPaidBookTitle,
 	isFreeEbookEnabled,
 	isPaidEbookEnabled,
@@ -74,6 +75,8 @@ const paidEbookAvailable = isPaidEbookEnabled(siteConfig);
 const freeEbookTitle = getFreeEbookTitle(siteConfig);
 const freeEbookDescription = getFreeEbookDescription(siteConfig);
 const paidBookTitle = getPaidBookTitle(siteConfig);
+const paidBookDescription = getPaidBookDescription(siteConfig);
+const price = siteConfig?.bookPrice || siteConfig?.bookBankAmount || null;
 const featuredArticle = articles[0];
 const secondaryArticles = articles.slice(1, 4);
 const randomArticleCards = randomArticles.length
@@ -82,6 +85,7 @@ const randomArticleCards = randomArticles.length
 const featuredDestinations = destinations.slice(0, 6);
 const destinationCount = destinations.length;
 const text = translations[locale].pages.home;
+const bookText = translations[locale].pages.book;
 const shared = translations[locale].shared;
 
 const continentLabels = new Intl.ListFormat(shared.htmlLocale, {
@@ -208,6 +212,20 @@ const continentLabels = new Intl.ListFormat(shared.htmlLocale, {
 				text={freeEbookDescription}
 				buttonLabel={text.getFreeEbookButton}
 			/>
+		</div>
+	)}
+
+	{paidEbookAvailable && (
+		<div class="container-wide soft-cta-wrap">
+			<div class="book-promo-cta">
+				<div class="book-promo-copy">
+					<p class="section-kicker">{bookText.wantMore}</p>
+					<h2>{paidBookTitle}</h2>
+					{paidBookDescription && <p>{paidBookDescription}</p>}
+					{price && <p class="book-promo-price">{bookText.priceLabel}: <strong>{price}</strong></p>}
+				</div>
+				<a class="btn-primary" href={withLocalePath('/book', locale)}>{paidBookTitle}</a>
+			</div>
 		</div>
 	)}
 
