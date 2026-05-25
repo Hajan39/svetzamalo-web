@@ -224,7 +224,7 @@ const continentLabels = new Intl.ListFormat(shared.htmlLocale, {
 					{paidBookDescription && <p>{paidBookDescription}</p>}
 					{price && <p class="book-promo-price">{bookText.priceLabel}: <strong>{price}</strong></p>}
 				</div>
-				<a class="btn-primary" href={withLocalePath('/book', locale)}>{paidBookTitle}</a>
+				<a class="btn-primary" href={withLocalePath('/book/kompletni-pruvodce', locale)}>{paidBookTitle}</a>
 			</div>
 		</div>
 	)}
@@ -278,7 +278,7 @@ const continentLabels = new Intl.ListFormat(shared.htmlLocale, {
 				<p class="section-kicker">{text.newsKicker}</p>
 				<h2>{text.newsHeading}</h2>
 			</div>
-			{paidEbookAvailable ? <a class="btn-secondary" href={withLocalePath('/book', locale)}>{paidBookTitle}</a> : <a class="text-link" href={withLocalePath('/articles', locale)}>{text.articleArchive}</a>}
+			{paidEbookAvailable ? <a class="btn-secondary" href={withLocalePath('/book/kompletni-pruvodce', locale)}>{paidBookTitle}</a> : <a class="text-link" href={withLocalePath('/articles', locale)}>{text.articleArchive}</a>}
 		</div>
 
 		{articles.length === 0 ? (
