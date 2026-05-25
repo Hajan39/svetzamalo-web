@@ -40,10 +40,42 @@ const {
     <input type="hidden" name="source" value={source} />
     <label class="sr-only" for={`lead-email-${source}`}>{t('leadCapture.emailLabel')}</label>
     <input id={`lead-email-${source}`} class="form-field" type="email" name="email" placeholder={t('leadCapture.emailPlaceholder')} autocomplete="email" required />
-    <button class="btn-primary lead-submit-btn" type="submit">{buttonLabel}</button>
+    <button class="btn-primary lead-submit-btn" type="submit">
+      <span class="lead-btn-label">{buttonLabel}</span>
+      <span class="lead-btn-spinner" aria-hidden="true"></span>
+    </button>
     <span class="lead-note">{note}</span>
   </form>
 </section>
+
+<style>
+  .lead-btn-spinner {
+    display: none;
+    width: 1em;
+    height: 1em;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: lead-spin 0.6s linear infinite;
+    flex-shrink: 0;
+  }
+
+  .lead-submit-btn[aria-busy="true"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    cursor: not-allowed;
+    opacity: 0.75;
+  }
+
+  .lead-submit-btn[aria-busy="true"] .lead-btn-spinner {
+    display: inline-block;
+  }
+
+  @keyframes lead-spin {
+    to { transform: rotate(360deg); }
+  }
+</style>
 
 <script>
   document.querySelectorAll('.lead-form').forEach((form) => {
