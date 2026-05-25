@@ -117,6 +117,19 @@ const continentLabels = new Intl.ListFormat(shared.htmlLocale, {
 				</div>
 			</div>
 
+			{freeEbookAvailable && (
+				<div class="hero-lead-wrap">
+					<LeadCapture
+						source="home_hero"
+						compact
+						kicker={text.freeMaterial}
+						title={text.getFreeEbook(freeEbookTitle)}
+						text={freeEbookDescription}
+						buttonLabel={text.getFreeEbookButton}
+					/>
+				</div>
+			)}
+
 			<div class="home-hero-panel" aria-label={text.quickOverview}>
 				<div>
 					<span>{destinationCount || '27'}+</span>

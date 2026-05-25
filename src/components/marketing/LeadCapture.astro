@@ -40,7 +40,19 @@ const {
     <input type="hidden" name="source" value={source} />
     <label class="sr-only" for={`lead-email-${source}`}>{t('leadCapture.emailLabel')}</label>
     <input id={`lead-email-${source}`} class="form-field" type="email" name="email" placeholder={t('leadCapture.emailPlaceholder')} autocomplete="email" required />
-    <button class="btn-primary" type="submit">{buttonLabel}</button>
+    <button class="btn-primary lead-submit-btn" type="submit">{buttonLabel}</button>
     <span class="lead-note">{note}</span>
   </form>
 </section>
+
+<script>
+  document.querySelectorAll('.lead-form').forEach((form) => {
+    form.addEventListener('submit', () => {
+      const btn = form.querySelector('.lead-submit-btn');
+      if (btn instanceof HTMLButtonElement && !btn.disabled) {
+        btn.disabled = true;
+        btn.setAttribute('aria-busy', 'true');
+      }
+    });
+  });
+</script>
