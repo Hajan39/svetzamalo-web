@@ -81,7 +81,7 @@ const en = {
 		leadCapture: {
 			kicker: "Free ebook",
 			title: "Want budget travel tips in your inbox?",
-			text: "We will send a practical starter pack and occasional tips for new destinations. No spam.",
+			text: "We'll send you the Lowcost Starter Pack: 10 most common mistakes that make every trip more expensive — flights, accommodation, transport, food, currency exchange, and tourist traps. No spam.",
 			buttonLabel: "Send for free",
 			note: "Unsubscribe anytime. We start with practical tips, not sales pressure.",
 			emailPlaceholder: "Your email",
@@ -244,9 +244,9 @@ const en = {
 			browseArticles: "Browse articles",
 			summaryLabel: "What this ebook solves",
 			insideYouGet: "Inside you get",
-			pickDestination: "planning from destination selection all the way to landing",
-			avoidMistakes: "flights, budget airlines, and hidden money-saving tricks",
-			checklist: "health, insurance, money, safety, and travel apps",
+			pickDestination: "most common mistakes with flights, accommodation, and transport",
+			avoidMistakes: "overpriced food, expensive currency exchange, and tourist traps",
+			checklist: "apps, mobile data, late bookings, and how to start traveling budget",
 			chooseByStage: "Start free, plan properly with the full guide",
 			valueFirst: "Free preview, complete guide in the paid edition",
 			valueBody:

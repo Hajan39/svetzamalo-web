@@ -3,7 +3,7 @@ import { normalizePaymentAmount } from "@/lib/bankTransfer";
 
 export const DEFAULT_FREE_EBOOK_TITLE = "Lowcost startovní balíček";
 export const DEFAULT_FREE_EBOOK_DESCRIPTION =
-	"Krátké PDF pro první plánování: rozpočet, chytré šetření, doprava, ubytování a chyby, které cestu zbytečně prodraží.";
+	"10 nejčastějších chyb, které zdražují každou cestu: letenky, ubytování, doprava, jídlo, směna peněz, pozdní rezervace, aplikace, turistické pasti a drahá data.";
 export const DEFAULT_PAID_BOOK_TITLE = "Kompletní cestovatelský průvodce";
 export const DEFAULT_PAID_BOOK_DESCRIPTION =
 	"Průvodce na 230+ stranách: dokumenty, letenky, ubytování, zdraví, pojištění, peníze, mobilní tarify a aplikace. Levně a chytře do celého světa.";

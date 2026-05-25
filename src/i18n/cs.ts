@@ -81,7 +81,7 @@ const cs = {
 		leadCapture: {
 			kicker: "Ebook zdarma",
 			title: "Chceš lowcost tipy do emailu?",
-			text: "Pošleme ti praktický startovní balíček a občasné tipy k novým destinacím. Bez spamu.",
+			text: "Pošleme ti Lowcost startovní balíček: 10 nejčastějších chyb, které zdražují každou cestu — letenky, ubytování, doprava, jídlo, směna peněz a turistické pasti. Bez spamu.",
 			buttonLabel: "Poslat zdarma",
 			note: "Odhlášení kdykoliv. Začínáme praktickými tipy, ne prodejním tlakem.",
 			emailPlaceholder: "Tvůj email",
@@ -243,9 +243,9 @@ const cs = {
 			browseArticles: "Projít články",
 			summaryLabel: "Co ebook řeší",
 			insideYouGet: "Uvnitř najdeš",
-			pickDestination: "plánování od výběru destinace až po přistání",
-			avoidMistakes: "letenky, nízkonákladovky a skryté triky na ušetření",
-			checklist: "zdraví, pojištění, peníze, bezpečnost a aplikace",
+			pickDestination: "nejčastější chyby u letenek, ubytování a dopravy",
+			avoidMistakes: "přeplacené jídlo, drahá směna peněz a turistické pasti",
+			checklist: "aplikace, datové tarify, pozdní rezervace a jak začít lowcost",
 			chooseByStage: "Začni zdarma, plánuj naplno s průvodcem",
 			valueFirst: "Ukázka zdarma, kompletní průvodce v placeném vydání",
 			valueBody:
