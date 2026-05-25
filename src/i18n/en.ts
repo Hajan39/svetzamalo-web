@@ -21,7 +21,7 @@ const en = {
 		"header.navDescHome": "Landing page and latest tips",
 		"header.navDescDestinations": "Guides by countries and regions",
 		"header.navDescArticles": "Practical budget travel advice and inspiration",
-		"header.navDescEbook": "Checklists, PDF guides, and paid ebook",
+		"header.navDescEbook": "Travel guide",
 		"header.navDescAbout": "Who we are, talks, and collaboration",
 
 		"footer.destinations": "Destinations",

@@ -21,7 +21,7 @@ const cs = {
 		"header.navDescHome": "Úvodní stránka a nejnovější tipy",
 		"header.navDescDestinations": "Průvodci podle zemí a regionů",
 		"header.navDescArticles": "Praktické lowcost návody a inspirace",
-		"header.navDescEbook": "Checklisty, PDF průvodci a placená kniha",
+		"header.navDescEbook": "Cestovatelský průvodce",
 		"header.navDescAbout": "Kdo jsme, přednášky a spolupráce",
 
 		"footer.destinations": "Destinace",
