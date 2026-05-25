@@ -1,0 +1,156 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import {
+	getFreeEbookTitle,
+	getPaidBookDescription,
+	getPaidBookTitle,
+	isFreeEbookEnabled,
+	isPaidEbookEnabled,
+} from "@/lib/bookConfig";
+import { fetchSiteConfig } from "@/lib/content/api";
+import { isBookTestModeRequested, isOrderTestModeEnabled } from "@/lib/orderTestMode";
+import { getGatewayButtonLabel, isBookGatewayEnabled } from "@/lib/paymentGateway";
+import { translations } from "@/i18n/translations";
+import { getLangFromUrl, withLocalePath } from "@/i18n/utils";
+
+export const prerender = false;
+
+const locale = getLangFromUrl(Astro.url);
+let siteConfig = await fetchSiteConfig(locale);
+if (locale === "en" && !siteConfig) siteConfig = await fetchSiteConfig("cs");
+
+const price = siteConfig?.bookPrice || siteConfig?.bookBankAmount || null;
+const paidBookTitle = getPaidBookTitle(siteConfig) || "Kompletní cestovatelský průvodce";
+const paidBookDescription = getPaidBookDescription(siteConfig);
+const freeEbookTitle = getFreeEbookTitle(siteConfig);
+const freeEbookAvailable = isFreeEbookEnabled(siteConfig);
+const orderTestModeEnabled = isOrderTestModeEnabled();
+const urlTestModeEnabled = isBookTestModeRequested(Astro.url.searchParams);
+const bookTestModeEnabled = orderTestModeEnabled || urlTestModeEnabled;
+const gatewayEnabled = isBookGatewayEnabled(siteConfig) || urlTestModeEnabled;
+const bankVisible = isPaidEbookEnabled(siteConfig) || urlTestModeEnabled;
+const text = translations[locale].pages.book;
+const gatewayButtonLabel = getGatewayButtonLabel(siteConfig, text.orderByGateway);
+
+const topics = [
+	{
+		heading: "Plánování bez cestovky",
+		body: "Výběr destinace krok za krokem, tvorba trasy a jak naplánovat, co v zemi vidět.",
+	},
+	{
+		heading: "Dokumenty a vstup do země",
+		body: "Pas, víza, povolená délka pobytu a co se stane, pokud v zemi zůstanete déle.",
+	},
+	{
+		heading: "Zdraví, bezpečnost a pojištění",
+		body: "Nemoci, zranění, dostupnost péče, léky, očkování. Jak vybrat pojištění a co dělat při pojistné události.",
+	},
+	{
+		heading: "Peníze a platební karty",
+		body: "Karty bez poplatků, výběry z bankomatů v zahraničí a jak na směnu – jakou měnu vzít a kde.",
+	},
+	{
+		heading: "Letecká doprava a letenky",
+		body: "Skryté triky na levné letenky, vyhledávače, nízkonákladovky, chybné tarify, zavazadla a letištní proces.",
+	},
+	{
+		heading: "Ubytování a stravování",
+		body: "Jak ušetřit na ubytování – nebo jak za něj neplatit vůbec. Stravování v Evropě i tropech.",
+	},
+	{
+		heading: "Balení, jazyk a mobilní tarif",
+		body: "Co balit a co ne, překonání jazykové bariéry, mobilní tarify, eSIM a top offline aplikace.",
+	},
+	{
+		heading: "Pokročilé cestování",
+		body: "Luxusní destinace bez luxusního rozpočtu, práce na cestách a parťák versus sólo cestování.",
+	},
+];
+---
+
+<Layout
+	title={`Kompletní cestovatelský průvodce – Levně a chytře do celého světa | Svět za málo`}
+	description="Průvodce cestováním na 230+ stranách. Letenky, ubytování, dokumenty, zdraví, peníze a aplikace – vše pro cestování bez zbytečných chyb a výdajů."
+	siteConfig={siteConfig}
+>
+	<section class="book-guide-hero">
+		<div class="container-wide book-guide-hero-inner">
+			<div class="book-guide-hero-copy">
+				<p class="section-kicker">Průvodce</p>
+				<h1>Kompletní cestovatelský průvodce</h1>
+				<p class="book-guide-subtitle">Levně a chytře do celého světa</p>
+				{paidBookDescription && <p>{paidBookDescription}</p>}
+				<ul class="book-guide-stats">
+					<li>230+ stran</li>
+					<li>40+ kapitol</li>
+					{price && <li>{price}</li>}
+				</ul>
+				<div class="hero-actions">
+					<a class="btn-primary" href="#objednat">{text.orderByGateway}</a>
+					<a class="btn-secondary" href={withLocalePath('/book', locale)}>{text.downloadFree}</a>
+				</div>
+			</div>
+			{siteConfig?.bookCover && (
+				<div class="book-guide-cover">
+					<img
+						src={siteConfig.bookCover.src}
+						alt={siteConfig.bookCover.alt || paidBookTitle}
+						loading="eager"
+						decoding="async"
+					/>
+				</div>
+			)}
+		</div>
+	</section>
+
+	<section class="container-wide book-guide-topics">
+		<div class="section-heading-row">
+			<div>
+				<p class="section-kicker">Co v průvodci najdeš</p>
+				<h2>40+ kapitol, vše co potřebuješ vědět</h2>
+			</div>
+		</div>
+		<div class="book-guide-topics-grid">
+			{topics.map((topic) => (
+				<div class="book-guide-topic-card">
+					<strong>{topic.heading}</strong>
+					<p>{topic.body}</p>
+				</div>
+			))}
+		</div>
+	</section>
+
+	<section class="container-wide book-guide-order" id="objednat">
+		<div class="book-guide-order-inner">
+			<div class="book-guide-order-copy">
+				<p class="section-kicker">{text.wantMore}</p>
+				<h2>{paidBookTitle}</h2>
+				{price && <p class="book-guide-price">{text.priceLabel}: <strong>{price}</strong></p>}
+			</div>
+			{(bankVisible || gatewayEnabled || bookTestModeEnabled) ? (
+				<form class="book-guide-order-form" method="post" action="/api/orders">
+					<input type="hidden" name="productCode" value="ebook-paid-v1" />
+					{urlTestModeEnabled && <input type="hidden" name="testMode" value="1" />}
+					<label class="sr-only" for="guide-book-name">{text.fullNameLabel}</label>
+					<input id="guide-book-name" class="form-field" type="text" name="fullName" placeholder={text.fullNamePlaceholder} required />
+					<label class="sr-only" for="guide-book-email">{text.deliveryEmailLabel}</label>
+					<input id="guide-book-email" class="form-field" type="email" name="email" placeholder={text.deliveryEmailPlaceholder} required />
+					{(gatewayEnabled || bookTestModeEnabled) && (
+						<button class="btn-primary w-full" type="submit" name="paymentMethod" value="comgate">{gatewayButtonLabel}</button>
+					)}
+					{(bankVisible || bookTestModeEnabled) && (
+						<button class="btn-secondary w-full" type="submit" name="paymentMethod" value="bank_transfer">{text.orderByBank}</button>
+					)}
+				</form>
+			) : (
+				<p class="text-sm text-foreground-muted">{text.ordersSoon}</p>
+			)}
+		</div>
+	</section>
+
+	{freeEbookAvailable && (
+		<div class="container-wide book-guide-free-note">
+			<p>{text.goodStart}: <a href={withLocalePath('/book', locale)} class="text-link">{freeEbookTitle} — {text.downloadFree}</a></p>
+		</div>
+	)}
+</Layout>
