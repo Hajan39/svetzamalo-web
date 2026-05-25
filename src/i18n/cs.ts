@@ -38,12 +38,12 @@ const cs = {
 		"footer.tipsToEmail": "Tipy na cesty do emailu",
 		"footer.emailPlaceholder": "Tvůj email",
 		"footer.subscribe": "Odebírat",
-		"footer.noSpam": "Žádný spam. Jen praktické cestovatelské tipy.",
+		"footer.noSpam": "Posíláme jen věci, které bychom sami chtěli dostat.",
 		"footer.brandName": "Svět za málo",
 
 		"layout.defaultTitle": "Svět za málo - průvodce levným cestováním",
 		"layout.defaultDescription":
-			"Praktické průvodce, destinace a rozpočty pro levné cestování. Objevte svět chytřeji a stáhněte si lowcost ebook zdarma.",
+			"Praktické průvodce, destinace a rozpočty pro cestování bez přeplacení. Lowcost ebook ke stažení zdarma.",
 		"layout.author": "Svět za málo",
 
 		"notFound.title": "Stránka nenalezena | Svět za málo",
@@ -81,9 +81,9 @@ const cs = {
 		leadCapture: {
 			kicker: "Ebook zdarma",
 			title: "Chceš lowcost tipy do emailu?",
-			text: "Pošleme ti Lowcost startovní balíček: 10 nejčastějších chyb, které zdražují každou cestu — letenky, ubytování, doprava, jídlo, směna peněz a turistické pasti. Bez spamu.",
+			text: "Pošleme ti Lowcost startovní balíček — 10 nejčastějších chyb, které zbytečně prodražují cesty: letenky, ubytování, doprava, jídlo, směna peněz a turistické pasti.",
 			buttonLabel: "Poslat zdarma",
-			note: "Odhlášení kdykoliv. Začínáme praktickými tipy, ne prodejním tlakem.",
+			note: "Odhlásit se můžeš jedním klikem kdykoliv.",
 			emailPlaceholder: "Tvůj email",
 			emailLabel: "Email",
 		},
@@ -254,7 +254,7 @@ const cs = {
 			freeEmailLabel: "Email pro ebook zdarma",
 			freeEmailPlaceholder: "Tvůj email",
 			sendFree: "Poslat ebook zdarma",
-			freeNote: "Pošleme PDF a občas i další praktické tipy. Žádné spamování.",
+			freeNote: "Pošleme PDF na email a občas dáme vědět, když vyjde něco k tématu.",
 			freeUnavailable:
 				"Materiál zdarma zatím není dostupný. Jakmile bude připravený, zapneš ho ve Strapi site configu.",
 			wantMore: "Když chceš víc",
