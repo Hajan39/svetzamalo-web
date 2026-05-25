@@ -38,12 +38,12 @@ const en = {
 		"footer.tipsToEmail": "Travel tips to your inbox",
 		"footer.emailPlaceholder": "Your email",
 		"footer.subscribe": "Subscribe",
-		"footer.noSpam": "No spam. Just practical travel tips.",
+		"footer.noSpam": "We only send things worth reading.",
 		"footer.brandName": "Svet za malo",
 
 		"layout.defaultTitle": "Svet za malo - budget travel guides",
 		"layout.defaultDescription":
-			"Practical guides, destinations, and budgets for affordable travel. Explore the world more intelligently.",
+			"Practical guides, destinations, and budgets for traveling without overpaying. Free ebook to download.",
 		"layout.author": "Svet za malo",
 
 		"notFound.title": "Page not found | Svet za malo",
@@ -81,9 +81,9 @@ const en = {
 		leadCapture: {
 			kicker: "Free ebook",
 			title: "Want budget travel tips in your inbox?",
-			text: "We'll send you the Lowcost Starter Pack: 10 most common mistakes that make every trip more expensive — flights, accommodation, transport, food, currency exchange, and tourist traps. No spam.",
+			text: "We'll send you the Lowcost Starter Pack — 10 most common mistakes that make every trip more expensive: flights, accommodation, transport, food, currency exchange, and tourist traps.",
 			buttonLabel: "Send for free",
-			note: "Unsubscribe anytime. We start with practical tips, not sales pressure.",
+			note: "Unsubscribe anytime with one click.",
 			emailPlaceholder: "Your email",
 			emailLabel: "Email",
 		},
@@ -255,7 +255,7 @@ const en = {
 			freeEmailLabel: "Email for free ebook",
 			freeEmailPlaceholder: "Your email",
 			sendFree: "Send free ebook",
-			freeNote: "We send PDF and occasional practical tips. No spam.",
+			freeNote: "We'll send the PDF to your email and occasionally share something relevant.",
 			freeUnavailable:
 				"Free material is not available yet. Enable it in site config once ready.",
 			wantMore: "When you want more",
