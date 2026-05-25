@@ -84,6 +84,26 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
     </div>
   </section>
 
+  <section class="book-mistakes-section">
+    <div class="container-wide">
+      <div class="section-heading-row">
+        <div>
+          <p class="section-kicker">{text.insideYouGet}</p>
+          <h2>{text.mistakesHeading}</h2>
+        </div>
+        <p>{text.mistakesBody}</p>
+      </div>
+      <div class="book-mistakes-grid">
+        {text.freeMistakes.map((mistake, i) => (
+          <div class="book-mistake-item">
+            <span class="book-mistake-num">{i + 1}</span>
+            <span>{mistake}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <section class="container-wide book-options-section" id="ebook-zdarma">
     <div class="section-heading-row">
       <div>
@@ -118,7 +138,17 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
         <p class="section-kicker">{text.wantMore}</p>
         {siteConfig?.bookCover && <img class="book-option-media" src={siteConfig.bookCover.src} alt={siteConfig.bookCover.alt || paidBookTitle} loading="lazy" decoding="async" />}
         <h3>{paidBookTitle}</h3>
-        <p>{paidBookDescription} {text.priceLabel}: <strong>{price}</strong>.</p>
+        <p>{paidBookDescription}</p>
+        <p class="section-kicker book-paid-topics-label">{text.paidTopicsLabel}</p>
+        <ul class="book-paid-topics">
+          {text.paidHighlights.map((topic) => (
+            <li class="book-paid-topic">
+              <strong>{topic.heading}</strong>
+              <span>{topic.body}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="book-option-price">{text.priceLabel}: <strong>{price}</strong></p>
         {bankVisible || gatewayEnabled || bookTestModeEnabled ? (
           <form class="space-y-3" method="post" action="/api/orders">
             <input type="hidden" name="productCode" value="ebook-paid-v1" />
@@ -137,6 +167,7 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
         ) : (
           <p class="text-sm text-foreground-muted">{text.ordersSoon}</p>
         )}
+        <a href={withLocalePath('/book/kompletni-pruvodce', locale)} class="book-option-detail-link">{text.detailLink}</a>
       </section>
     </div>
   </section>
