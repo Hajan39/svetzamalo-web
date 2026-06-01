@@ -1223,6 +1223,99 @@ p {
   font-size: 0.98rem;
 }
 
+/* --- /book page enrichment: chapter grid + paid topics --- */
+.book-mistakes-section {
+  border-block: 1px solid var(--border);
+  background: var(--background-secondary);
+  padding-block: clamp(3rem, 7vw, 5rem);
+}
+
+.book-mistakes-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.book-mistake-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+  padding: 1rem 1.1rem;
+  color: var(--foreground-secondary);
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.book-mistake-num {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.book-paid-topics-label {
+  margin-top: 1rem;
+}
+
+.book-paid-topics {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.75rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.book-paid-topic {
+  border-left: 2px solid var(--primary);
+  padding: 0.35rem 0 0.35rem 0.85rem;
+}
+
+.book-paid-topic strong {
+  display: block;
+  color: var(--foreground);
+  font-size: 0.88rem;
+  margin-bottom: 0.12rem;
+}
+
+.book-paid-topic span {
+  display: block;
+  color: var(--foreground-muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.book-option-price {
+  margin: 0.75rem 0 0.25rem;
+  color: var(--foreground-secondary);
+  font-size: 1rem;
+}
+
+.book-option-detail-link {
+  display: block;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.book-option-detail-link:hover {
+  color: var(--primary-hover);
+  text-decoration: none;
+}
+
 @media (max-width: 960px) {
   h1 {
     font-size: 3rem;
@@ -1337,6 +1430,10 @@ p {
   }
 
   .book-guide-topics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .book-mistakes-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -1499,6 +1596,10 @@ p {
 
   .book-guide-hero-inner {
     padding-block: 2.5rem;
+  }
+
+  .book-mistakes-grid {
+    grid-template-columns: 1fr;
   }
 }
 
