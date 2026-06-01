@@ -485,6 +485,7 @@ const cs = {
 				"Ekvádor a Galapágy",
 				"Japonsko",
 				"Seychely a Keňa",
+				"Peru",
 			],
 			pastEvents: [
 				{

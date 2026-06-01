@@ -487,6 +487,7 @@ const en = {
 				"Ecuador and Galapagos",
 				"Japan",
 				"Seychelles and Kenya",
+				"Peru",
 			],
 			pastEvents: [
 				{
