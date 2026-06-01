@@ -37,13 +37,13 @@ const cs = {
 		"footer.explore": "Prozkoumat",
 		"footer.tipsToEmail": "Tipy na cesty do emailu",
 		"footer.emailPlaceholder": "Tvůj email",
-		"footer.subscribe": "Odebírat",
+		"footer.subscribe": "Odbírát",
 		"footer.noSpam": "Posíláme jen věci, které bychom sami chtěli dostat.",
 		"footer.brandName": "Svět za málo",
 
 		"layout.defaultTitle": "Svět za málo - průvodce levným cestováním",
 		"layout.defaultDescription":
-			"Praktické průvodce, destinace a rozpočty pro cestování bez přeplacení. Lowcost ebook ke stažení zdarma.",
+			"Praktické průvodce, destinace a rozpočty pro cestování bez přeplatání. Lowcost ebook ke stažení zdarma.",
 		"layout.author": "Svět za málo",
 
 		"notFound.title": "Stránka nenalezena | Svět za málo",
@@ -110,7 +110,7 @@ const cs = {
 				C: "Typ C - Evropa, Asie, Jižní Amerika (230 V, 2 kulaté)",
 				E: "Typ E - Francie, Belgie, Polsko (2 kulaté + kolík)",
 				F: "Typ F / Schuko - Německo, Střední Evropa (2 kulaté + boční zemnicí)",
-				G: "Typ G - Velká Británie, Hong Kong, Singapur (3 pravoúhlé)",
+				G: "Typ G - Velká Británie, Hong Kong, Singapur (3 pravoúhlné)",
 				I: "Typ I - Austrálie, Čína, Argentina (šikmé ploché kolíky)",
 				K: "Typ K - Dánsko (2 kulaté + podkova)",
 				L: "Typ L - Itálie (3 kulaté v řadě)",
@@ -123,7 +123,7 @@ const cs = {
 		home: {
 			title: "Svět za málo - lowcost průvodci, destinace a ebook zdarma",
 			description:
-				"Praktické články, destinace a rozpočty pro cestování levněji. Začni průvodcem, vyber destinaci a stáhni si lowcost ebook zdarma.",
+				"Praktické články, destinace a rozpočty pro cestování levněji. Začni průvodcem, vyber destinaci a stažhni si lowcost ebook zdarma.",
 			kicker: "Průvodci pro cesty, které dávají smysl",
 			heroHeading: "Cestuj víc, utrácej míň",
 			heroBody:
@@ -137,7 +137,7 @@ const cs = {
 			introKicker: "Nejdřív obsah, potom plán",
 			introHeading: "Začni článkem, pokračuj konkrétní destinací",
 			introBody:
-				"Web je postavený jako praktická knihovna pro plánování. Kniha je doplněk pro ty, kteří chtějí mít postup, checklisty a rozpočtové uvažování pohromadě.",
+				"Web je postavený jako praktická knihovna pro plánování. Kniha je doplňek pro ty, kteří chtějí mít postup, checklisty a rozpočtové uvažování pohromadě.",
 			proof1Title: "Reálné rozhodování",
 			proof1Text: "kdy šetřit, kdy připlatit a co vynechat.",
 			proof2Title: "Rychlé plánování",
@@ -166,7 +166,7 @@ const cs = {
 				"Itineráře, časy přesunů a místa, která dávají smysl spojit dohromady.",
 			path2Title: "Chci snížit rozpočet",
 			path2Text:
-				"Konkrétní úspory u dopravy, jídla, výletů a ubytování bez zkaženého zážitku.",
+				"Konkrétní úспоry u dopravy, jídla, výletů a ubytování bez zkaženého zážitku.",
 			path3Title: "Chci praktické jistoty",
 			path3Text:
 				"Víza, doprava na místě, bezpečnost, sezóna a drobnosti, které před odletem řeší každý.",
@@ -212,7 +212,7 @@ const cs = {
 		destinationsIndex: {
 			title: "Destinace | Svět za málo",
 			description:
-				"Lowcost průvodce destinacemi, zeměmi a místy pro samostatné cestování.",
+				"Lowcost průvodce destinacemi, zeměmi a m­sty pro samostatné cestování.",
 			heading: "Destinace",
 			intro:
 				"Vyber si zemi nebo oblast a začni plánovat cestu podle reálných nákladů.",
@@ -244,12 +244,12 @@ const cs = {
 			summaryLabel: "Co ebook řeší",
 			insideYouGet: "Uvnitř najdeš",
 			pickDestination: "nejčastější chyby u letenek, ubytování a dopravy",
-			avoidMistakes: "přeplacené jídlo, drahá směna peněz a turistické pasti",
+			avoidMistakes: "přeplatené jídlo, drахá směna peněz a turistické pasti",
 			checklist: "aplikace, datové tarify, pozdní rezervace a jak začít lowcost",
-			chooseByStage: "Začni zdarma, plánuj naplno s průvodcem",
+			chooseByStage: "Začni zdarma, plánuj naplnó s průvodcem",
 			valueFirst: "Ukázka zdarma, kompletní průvodce v placeném vydání",
 			valueBody:
-				"Ebook zdarma ti rychle ukáže nejdůležitější chyby a první úspory. Kompletní průvodce na 230+ stranách jde výrazně dál: pokrývá dokumenty, letenky, ubytování, zdraví, pojištění, peníze, mobilní tarify i aplikace.",
+				"Ebook zdarma ti rychle ukáže nejdůležitější chyby a první úспоры. Kompletní průvodce na 230+ stránách jde výrazně dál: pokrývá dokumenty, letenky, ubytování, zdraví, pojištění, peníze, mobilní tarify i aplikace.",
 			goodStart: "Dobrý start",
 			freeEmailLabel: "Email pro ebook zdarma",
 			freeEmailPlaceholder: "Tvůj email",
@@ -265,7 +265,31 @@ const cs = {
 			deliveryEmailPlaceholder: "Email pro doručení",
 			orderByGateway: "Zaplatit kartou / online",
 			orderByBank: "Objednat převodem",
-			ordersSoon: "Objednávky budou spuštěné brzy.",
+			ordersSoon: "Objednávky budou spouštěné brzy.",
+			mistakesHeading: "10 kapitol, 10 skutečných chyb na cestách",
+			mistakesBody: "Každá kapitola řeší jednu oblast, kde cestovatelé zbytečně přicházejí o peníze nebo čas.",
+			paidTopicsLabel: "Co v knize najdeš",
+			detailLink: "Celý přehled průvodce →",
+			freeMistakes: [
+				"Nejčastější chyby před odjezdem",
+				"Výběr destinace a správného termínu",
+				"Letenky: jak hledat a nekoupit draho",
+				"Ubytování bez přeplatku",
+				"Doprava na místě",
+				"Jídlo a stravování v zahraničí",
+				"Směna peněz a platební karty",
+				"Mobilní data a offline aplikace",
+				"Turistické pasti a jak je obejít",
+				"Jak začít lowcost cestovat",
+			],
+			paidHighlights: [
+				{ heading: "Dokumenty a vstup do země", body: "Pas, víza, délka pobytu a co dělat při problémech na hranici." },
+				{ heading: "Zdraví, bezpečnost a pojištění", body: "Nemoci, léky, očkování a jak vybrat pojištění." },
+				{ heading: "Letenky a letecká doprava", body: "Pokročilé strategie hledání, nízkonákladovky a chybné tarify." },
+				{ heading: "Peníze a platební karty", body: "Karty bez poplatků, výběry v zahraničí a správná měna." },
+				{ heading: "Ubytování a stravování", body: "Jak ušetřit na ubytování nebo za něj neplatit vůbec." },
+				{ heading: "Balení, mobilní tarif a aplikace", body: "Co balit, eSIM a top offline aplikace pro cesty." },
+			],
 		},
 		bookPaymentTest: {
 			pageTitle: "Testovací platební brána | Svět za málo",
@@ -273,9 +297,9 @@ const cs = {
 				"Testovací stránka platební brány pro objednávku ebooku.",
 			heading: "Testovací platební brána",
 			intro:
-				"Tahle stránka simuluje krok platební brány. Nevytváří reálnou platbu a neposílá zákaznický e-mail.",
+				"Tahle stránka simuluje krok platební brány. Nevytváří reálnou platbu a neposílá zákaznínský e-mail.",
 			product: "Produkt",
-			variableSymbol: "Variabilní symbol",
+			variableSymbol: "Varia bilní symbol",
 			payButton: "Simulovat úspěšnou platbu",
 			cancelButton: "Zrušit test",
 		},
@@ -294,7 +318,7 @@ const cs = {
 				"Jakmile platební brána předá potvrzení, odešleme ti osobní odkaz ke stažení PDF a EPUB verze. Pokud e-mail nedorazí do 10 minut, zkontroluj složku hromadné pošty nebo spam.",
 			gatewayReference: "Údaje k platbě",
 			gatewayContact:
-				"Kdyby bylo potřeba platbu dohledat, pošli nám variabilní symbol nebo ID transakce.",
+				"Kdyby bylo potřeba platbu dohledat, pošli nám varia bilní symbol nebo ID transakce.",
 			product: "Produkt",
 			confirmationTo: "potvrzení na",
 			pickDestination: "Vybrat destinaci",
@@ -303,11 +327,11 @@ const cs = {
 				"Bankovní údaje zatím nejsou kompletně nastavené ve Strapi site configu.",
 			paymentInstructions: "Platební instrukce",
 			paymentNote:
-				"Pošli platbu převodem - po připsání ti automaticky pošleme ebook.",
+				"Pošli platbu převodem - po připísání ti automaticky pošleme ebook.",
 			scanQr: "Naskenuj v mobilní bance",
 			qrAlt: "QR kód pro platbu",
 			amount: "Částka",
-			variableSymbol: "Variabilní symbol",
+			variableSymbol: "Varia bilní symbol",
 			transId: "ID transakce",
 			accountNumber: "Číslo účtu",
 			iban: "IBAN",
@@ -316,8 +340,8 @@ const cs = {
 			step1: "Pošli platbu",
 			step1Body: "QR kódem v mobilní bance nebo ručně podle údajů výše",
 			step2: "Potvrdíme příjem",
-			step2Body: "po připsání platby objednávku potvrdíme",
-			step3: "Dostaneš ebook emailem",
+			step2Body: "po připísání platby objednávku potvrdíme",
+			step3: "Dostačneš ebook emailem",
 			step3Body: "se zabezpečeným odkazem ke stažení",
 			emailTo: "na",
 			backWeb: "Zpět na web",
@@ -334,7 +358,7 @@ const cs = {
 			nextBody:
 				"Pokud šlo jen o zavřené okno, vypršený limit nebo chybu při ověření v bance, vrať se k objednávce a platbu spusť znovu. Nový pokus vytvoří novou bezpečnou platbu.",
 			referenceTitle: "Údaje k nedokončené platbě",
-			variableSymbol: "Variabilní symbol",
+			variableSymbol: "Varia bilní symbol",
 			transId: "ID transakce",
 			tryAgain: "Zkusit znovu",
 			backWeb: "Zpět na web",
@@ -350,7 +374,7 @@ const cs = {
 				"U některých plateb může potvrzení chvíli trvat. Stránku není potřeba obnovovat ani objednávku zadávat znovu. Jakmile Comgate potvrdí výsledek, doručení ebooku se spustí automaticky.",
 			referenceTitle: "Údaje k platbě",
 			readArticles: "Číst články",
-			variableSymbol: "Variabilní symbol",
+			variableSymbol: "Varia bilní symbol",
 			transId: "ID transakce",
 			backWeb: "Zpět na web",
 		},
@@ -382,7 +406,7 @@ const cs = {
 				"Chybí token pro stažení. Nech si poslat nový odkaz na email.",
 			emailPlaceholder: "Tvůj email",
 			sendNew: "Poslat nový odkaz",
-			redirectReady: "Odkaz je připravený. Přesměrovávám...",
+			redirectReady: "Odkaz je připravený. Přesměřovávám...",
 			redirectReadyTimed: (seconds: number) =>
 				`Odkaz je připravený a platí krátce (${seconds} s). Přesměrovávám...`,
 			fallbackLoading: "Připravuji zabezpečené stažení...",
@@ -403,7 +427,7 @@ const cs = {
 			approach: "Náš přístup",
 			approachHeading: "Průvodce, které řeší skutečné rozhodování před cestou",
 			approachP1:
-				"Nechceme tvořit katalog míst, která vypadají dobře na fotce. Dobrý cestovatelský obsah má člověku ušetřit čas, nervy a peníze: kdy jet, kde spát, jak se přesouvat, co vynechat a za co se naopak vyplatí připlatit.",
+				"Nechceme tvōřit katalog míst, která vypadají dobře na fotce. Dobrý cestovatelský obsah má člověku ušetřit čas, nervy a peníze: kdy jet, kde spát, jak se přesouval, co vynechat a za co se naopak vyplatí připlatit.",
 			approachP2:
 				"Proto u destinací propojujeme články, itineráře, rozpočty, checklisty a praktické poznámky. Web má fungovat jako plánovací knihovna, do které se člověk vrací před cestou i během ní.",
 			talks: "Přednášky",
@@ -445,9 +469,9 @@ const cs = {
 				{
 					value: "300+",
 					label:
-						"praktických článků, itinerářů, checklistů a rozpočtových tipů",
+						"praktických článků, itinerářů, checkistů a rozpočtových tipů",
 				},
-				{ value: "27+", label: "destinací a zemí v českých průvodcích" },
+				{ value: "27+", label: "destinací a zemí v českých průvodcich" },
 			],
 			talksList: [
 				"Přednášky pro školy, univerzity, knihovny, spolky a cestovatelské kluby",
@@ -458,9 +482,10 @@ const cs = {
 				"Nový Zéland a život v dodávce",
 				"Austrálie po vlastní ose",
 				"Vietnam prakticky a lowcost",
-				"Ekvádor a Galapágy",
+				"Ekvádor a Galápágy",
 				"Japonsko",
 				"Seychely a Keňa",
+				"Peru",
 			],
 			pastEvents: [
 				{
@@ -495,7 +520,7 @@ const cs = {
 				},
 				{
 					date: "22. 7. 2022",
-					title: "Ekvádor a Galapágy",
+					title: "Ekvádor a Galápágy",
 					place: "Dolní Habartice",
 					url: "https://www.facebook.com/events/568010488114472/",
 				},
