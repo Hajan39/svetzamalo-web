@@ -51,7 +51,7 @@ interface SanityCountry {
 		timezone?: string;
 		bestTime?: string;
 		visa?: string;
-		electrícityPlug?: string;
+		electricityPlug?: string;
 		drivingSide?: string;
 	};
 	continent?: SanityContinent;
@@ -309,7 +309,7 @@ function transformDestination(destination: SanityCountry): Destination {
 		timezone: destination.quickFacts?.timezone,
 		visaInfo: destination.quickFacts?.visa,
 		bestTimeToVisit: destination.quickFacts?.bestTime,
-		electrícityPlug: destination.quickFacts?.electricityPlug,
+		electicityPlug: destination.quickFacts?.electricityPlug,
 		drivingSide: normalizeDrivingSide(destination.quickFacts?.drivingSide),
 		heroImage: heroImage
 			? { ...heroImage, alt: heroImage.alt || name }
