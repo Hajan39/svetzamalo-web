@@ -87,3 +87,81 @@ export function sanityPortableTextToHtml(value: unknown): string {
 		},
 	});
 }
+
+export interface AffiliateLinkForReplacement {
+	slug: string;
+	keywords: string[];
+	relSponsored: boolean;
+}
+
+const VOID_ELEMENTS = new Set([
+	"area", "base", "br", "col", "embed", "hr", "img", "input",
+	"link", "meta", "param", "source", "track", "wbr",
+]);
+
+const NO_REPLACE_TAGS = new Set(["a", "code", "pre", "script", "style"]);
+
+export function replaceAffiliateKeywords(
+	html: string,
+	links: AffiliateLinkForReplacement[],
+): string {
+	if (!html) return html;
+	const active = links.filter((l) => l.keywords.length > 0);
+	if (active.length === 0) return html;
+
+	// Build lowercase keyword → link map; first definition wins on duplicates
+	const keywordMap = new Map<string, { slug: string; relSponsored: boolean }>();
+	for (const link of active) {
+		for (const kw of link.keywords) {
+			if (kw && !keywordMap.has(kw.toLowerCase())) {
+				keywordMap.set(kw.toLowerCase(), {
+					slug: link.slug,
+					relSponsored: link.relSponsored,
+				});
+			}
+		}
+	}
+
+	// Longest keyword first so "Booking.com" wins over "Booking" in the alternation
+	const sorted = [...keywordMap.keys()].sort((a, b) => b.length - a.length);
+	const pattern = sorted
+		.map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+		.join("|");
+	const regex = new RegExp(`\\b(${pattern})\\b`, "gi");
+
+	// Walk tag-by-tag; only substitute inside text nodes outside no-replace tags
+	const tagStack: string[] = [];
+	const parts = html.split(/(<[^>]+>)/);
+	let result = "";
+
+	for (const part of parts) {
+		if (part.startsWith("<")) {
+			const m = part.match(/^<\/?([a-zA-Z][a-zA-Z0-9]*)/);
+			const tag = m?.[1]?.toLowerCase() ?? "";
+			const isClosing = part.startsWith("</");
+			if (
+				!isClosing &&
+				tag &&
+				!VOID_ELEMENTS.has(tag) &&
+				!part.endsWith("/>")
+			) {
+				tagStack.push(tag);
+			} else if (isClosing && tag) {
+				const idx = tagStack.lastIndexOf(tag);
+				if (idx !== -1) tagStack.splice(idx, 1);
+			}
+			result += part;
+		} else if (tagStack.some((t) => NO_REPLACE_TAGS.has(t))) {
+			result += part;
+		} else {
+			result += part.replace(regex, (match) => {
+				const info = keywordMap.get(match.toLowerCase());
+				if (!info) return match;
+				const rel = info.relSponsored ? ' rel="sponsored nofollow"' : "";
+				return `<a href="/go/${info.slug}"${rel}>${match}</a>`;
+			});
+		}
+	}
+
+	return result;
+}

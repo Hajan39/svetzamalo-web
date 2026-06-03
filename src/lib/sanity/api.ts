@@ -6,7 +6,11 @@ import type {
 } from "@/types";
 import { stegaClean } from "@sanity/client/stega";
 import { ARTICLE_COVER_FALLBACKS } from "../articleCoverFallbacks";
-import { sanityPortableTextToHtml } from "./portableText";
+import {
+	sanityPortableTextToHtml,
+	replaceAffiliateKeywords,
+	type AffiliateLinkForReplacement,
+} from "./portableText";
 import { loadQuery } from "./loadQuery";
 
 export interface SanityFetchOptions {
@@ -47,7 +51,7 @@ interface SanityCountry {
 		timezone?: string;
 		bestTime?: string;
 		visa?: string;
-		electricityPlug?: string;
+		electricity Plug?: string;
 		drivingSide?: string;
 	};
 	continent?: SanityContinent;
@@ -83,6 +87,12 @@ interface SanityAffiliateLink {
 	disclosureText?: string;
 	relSponsored?: boolean;
 	enabled?: boolean;
+}
+
+interface SanityAffiliateLinkForKeywords {
+	slug: string;
+	relSponsored?: boolean;
+	replacementKeywords?: string[];
 }
 
 const ARTICLES_PAGE_SIZE = 12;
@@ -299,7 +309,7 @@ function transformDestination(destination: SanityCountry): Destination {
 		timezone: destination.quickFacts?.timezone,
 		visaInfo: destination.quickFacts?.visa,
 		bestTimeToVisit: destination.quickFacts?.bestTime,
-		electricityPlug: destination.quickFacts?.electricityPlug,
+		electricity Plug: destination.quickFacts?.electricityPlug,
 		drivingSide: normalizeDrivingSide(destination.quickFacts?.drivingSide),
 		heroImage: heroImage
 			? { ...heroImage, alt: heroImage.alt || name }
@@ -394,6 +404,48 @@ function mapSafely<TInput, TOutput>(
 	return mapped;
 }
 
+async function fetchEnabledAffiliateLinkKeywords(
+	locale: SupportedLocale = "cs",
+	options: SanityFetchOptions = {},
+): Promise<AffiliateLinkForReplacement[]> {
+	try {
+		const { data } = await loadQuery<SanityAffiliateLinkForKeywords[]>({
+			query: `*[_type == "affiliateLink" && enabled == true && count(replacementKeywords) > 0 && locale in [$locale, "cs"]]{
+        "slug": slug.current,
+        relSponsored,
+        replacementKeywords
+      }`,
+			params: { locale },
+			...options,
+		});
+		return (data ?? [])
+			.filter((l) => l.slug && l.replacementKeywords?.length)
+			.map((l) => ({
+				slug: l.slug,
+				keywords: (l.replacementKeywords ?? []).filter(Boolean),
+				relSponsored: l.relSponsored ?? true,
+			}));
+	} catch {
+		return [];
+	}
+}
+
+function applyKeywordReplacement(
+	articles: Article[],
+	affiliateLinks: AffiliateLinkForReplacement[],
+): Article[] {
+	if (affiliateLinks.length === 0) return articles;
+	for (const article of articles) {
+		if (article.htmlContent) {
+			article.htmlContent = replaceAffiliateKeywords(
+				article.htmlContent,
+				affiliateLinks,
+			);
+		}
+	}
+	return articles;
+}
+
 export async function fetchLatestArticles(
 	limit = 6,
 	locale: SupportedLocale = "cs",
@@ -417,12 +469,16 @@ export async function fetchArticles(
 	options: SanityFetchOptions = {},
 ): Promise<Article[]> {
 	try {
-		const { data } = await loadQuery<SanityArticle[]>({
-			query: `*[_type == "article" && locale == $locale] | order(_createdAt desc){${articleProjection}}`,
-			params: { locale },
-			...options,
-		});
-		return mapSafely(data, transformArticle, "articles");
+		const [{ data }, affiliateLinks] = await Promise.all([
+			loadQuery<SanityArticle[]>({
+				query: `*[_type == "article" && locale == $locale] | order(_createdAt desc){${articleProjection}}`,
+				params: { locale },
+				...options,
+			}),
+			fetchEnabledAffiliateLinkKeywords(locale, options),
+		]);
+		const articles = mapSafely(data, transformArticle, "articles");
+		return applyKeywordReplacement(articles, affiliateLinks);
 	} catch (error) {
 		console.warn("Sanity fetch articles failed:", error);
 		return [];
@@ -532,12 +588,23 @@ export async function fetchArticleBySlug(
 	options: SanityFetchOptions = {},
 ): Promise<Article | null> {
 	try {
-		const { data } = await loadQuery<SanityArticle | null>({
-			query: `*[_type == "article" && slug.current == $slug && locale == $locale][0]{${articleProjection}}`,
-			params: { slug, locale },
-			...options,
-		});
-		return data ? transformArticle(data) : null;
+		const [{ data }, affiliateLinks] = await Promise.all([
+			loadQuery<SanityArticle | null>({
+				query: `*[_type == "article" && slug.current == $slug && locale == $locale][0]{${articleProjection}}`,
+				params: { slug, locale },
+				...options,
+			}),
+			fetchEnabledAffiliateLinkKeywords(locale, options),
+		]);
+		if (!data) return null;
+		const article = transformArticle(data);
+		if (article.htmlContent && affiliateLinks.length > 0) {
+			article.htmlContent = replaceAffiliateKeywords(
+				article.htmlContent,
+				affiliateLinks,
+			);
+		}
+		return article;
 	} catch (error) {
 		console.warn("Sanity fetch article by slug failed:", error);
 		return null;
