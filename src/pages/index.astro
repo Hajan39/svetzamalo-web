@@ -87,6 +87,7 @@ const destinationCount = destinations.length;
 const text = translations[locale].pages.home;
 const bookText = translations[locale].pages.book;
 const shared = translations[locale].shared;
+const siteUrl = import.meta.env.SITE_URL || import.meta.env.PUBLIC_SITE_URL || "https://svetzamalo.cz";
 
 const continentLabels = new Intl.ListFormat(shared.htmlLocale, {
 	style: "long",
@@ -107,6 +108,32 @@ const continentLabels = new Intl.ListFormat(shared.htmlLocale, {
 	description={text.description}
 	siteConfig={siteConfig}
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Svět za málo",
+        url: siteUrl,
+        logo: `${siteUrl}/icons/icon-512.png`,
+        description: text.description,
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "Svět za málo",
+        url: siteUrl,
+        potentialAction: {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: `${siteUrl}${withLocalePath('/articles', locale)}?q={search_term_string}`,
+          },
+          "query-input": "required name=search_term_string",
+        },
+      },
+    ])}></script>
+  </Fragment>
 	<section class="home-hero">
 		<div class="home-hero-media" aria-hidden="true"></div>
 		<div class="home-hero-overlay"></div>
