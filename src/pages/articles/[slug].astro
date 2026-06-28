@@ -41,7 +41,7 @@ const articleHtml = article.htmlContent || text.emptyContent;
 function normalizeMarker(value: string) {
 	return value
 		.normalize("NFD")
-		.replace(/[\u0300-\u036f]/g, "")
+		.replace(/[̀-ͯ]/g, "")
 		.toLowerCase();
 }
 
@@ -96,23 +96,39 @@ const siteUrl =
 	import.meta.env.PUBLIC_SITE_URL ||
 	"https://svetzamalo.cz";
 const articleUrl = `${siteUrl}${withLocalePath(`/articles/${article.slug}`, locale)}`;
+const articlesPath = withLocalePath('/articles', locale);
 const jsonLd = {
 	"@context": "https://schema.org",
-	"@type": "BlogPosting",
-	headline: article.title,
-	description: article.intro || article.seo.metaDescription,
-	url: articleUrl,
-	inLanguage: locale === "cs" ? "cs-CZ" : "en",
-	...(article.coverImage ? { image: article.coverImage.src } : {}),
-	...(article.publishedAt ? { datePublished: article.publishedAt } : {}),
-	...(article.updatedAt ? { dateModified: article.updatedAt } : {}),
-	publisher: { "@type": "Organization", name: "Svět za málo", url: siteUrl },
+	"@graph": [
+		{
+			"@type": "BlogPosting",
+			headline: article.title,
+			description: article.intro || article.seo.metaDescription,
+			url: articleUrl,
+			inLanguage: locale === "cs" ? "cs-CZ" : "en",
+			...(article.coverImage ? { image: article.coverImage.src } : {}),
+			...(article.publishedAt ? { datePublished: article.publishedAt } : {}),
+			...(article.updatedAt ? { dateModified: article.updatedAt } : {}),
+			author: { "@type": "Organization", name: "Svět za málo", url: siteUrl },
+			publisher: { "@type": "Organization", name: "Svět za málo", url: siteUrl },
+		},
+		{
+			"@type": "BreadcrumbList",
+			itemListElement: [
+				{ "@type": "ListItem", position: 1, name: "Svět za málo", item: siteUrl },
+				{ "@type": "ListItem", position: 2, name: locale === "cs" ? "Články" : "Articles", item: `${siteUrl}${articlesPath}` },
+				{ "@type": "ListItem", position: 3, name: article.title, item: articleUrl },
+			],
+		},
+	],
 };
 ---
 
-<Layout title={article.seo.metaTitle} description={article.seo.metaDescription} canonicalPath={withLocalePath(`/articles/${article.slug}`, locale)}>
+<Layout title={article.seo.metaTitle} description={article.seo.metaDescription} canonicalPath={withLocalePath(`/articles/${article.slug}`, locale)} ogType="article">
   <Fragment slot="head">
     <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
+    {article.publishedAt && <meta property="article:published_time" content={article.publishedAt} />}
+    {article.updatedAt && <meta property="article:modified_time" content={article.updatedAt} />}
   </Fragment>
   <article class="container-narrow py-10 md:py-16">
     <a href={withLocalePath('/articles', locale)} class="mb-6 inline-flex text-sm font-semibold">{text.back}</a>

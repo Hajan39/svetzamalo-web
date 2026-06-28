@@ -22,6 +22,7 @@ interface Props {
 	description?: string;
 	canonicalPath?: string;
 	image?: string;
+	ogType?: string;
 	siteConfig?: SiteConfig | null;
 }
 
@@ -45,6 +46,7 @@ const hreflangEn = new URL(
 	siteUrl,
 ).toString();
 const image = Astro.props.image ?? "/images/hero/mauritius-home-hero.jpg";
+const ogType = Astro.props.ogType ?? "website";
 const siteConfig =
 	Astro.props.siteConfig !== undefined
 		? Astro.props.siteConfig
@@ -85,7 +87,7 @@ const ogLocale = shared.ogLocale;
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playpen+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" />
-		<meta property="og:type" content="website" />
+		<meta property="og:type" content={ogType} />
 		<meta property="og:site_name" content="Svet za malo" />
 		<meta property="og:locale" content={ogLocale} />
 		<meta property="og:title" content={title} />
