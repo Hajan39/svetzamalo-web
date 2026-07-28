@@ -71,7 +71,7 @@ const jsonLd = {
 };
 ---
 
-<Layout title={destination.seo.metaTitle} description={destination.seo.metaDescription} canonicalPath={withLocalePath(`/destinations/guide/${destination.slug}`, locale)}>
+<Layout title={destination.seo.metaTitle} description={destination.seo.metaDescription} canonicalPath={withLocalePath(`/destinations/guide/${destination.slug}`, locale)} alternateLocales={[locale]}>
   <Fragment slot="head">
     <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
   </Fragment>

@@ -124,7 +124,7 @@ const jsonLd = {
 };
 ---
 
-<Layout title={article.seo.metaTitle} description={article.seo.metaDescription} canonicalPath={withLocalePath(`/articles/${article.slug}`, locale)} ogType="article">
+<Layout title={article.seo.metaTitle} description={article.seo.metaDescription} canonicalPath={withLocalePath(`/articles/${article.slug}`, locale)} ogType="article" alternateLocales={[locale]}>
   <Fragment slot="head">
     <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
     {article.publishedAt && <meta property="article:published_time" content={article.publishedAt} />}
