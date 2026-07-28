@@ -14,7 +14,7 @@ import {
 import Footer from "../components/layout/Footer.astro";
 import Header from "../components/layout/Header.astro";
 import { fetchSiteConfig } from "@/lib/content/api";
-import type { SiteConfig } from "@/types";
+import type { SiteConfig, SupportedLocale } from "@/types";
 import "@/styles/global.css";
 
 interface Props {
@@ -23,6 +23,8 @@ interface Props {
 	canonicalPath?: string;
 	image?: string;
 	ogType?: string;
+	noindex?: boolean;
+	alternateLocales?: SupportedLocale[];
 	siteConfig?: SiteConfig | null;
 }
 
@@ -47,6 +49,14 @@ const hreflangEn = new URL(
 ).toString();
 const image = Astro.props.image ?? "/images/hero/mauritius-home-hero.jpg";
 const ogType = Astro.props.ogType ?? "website";
+const robots = Astro.props.noindex
+	? "noindex,follow"
+	: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1";
+// hreflang only makes sense once more than one language version actually
+// exists. Advertising a URL that merely redirects makes Google queue it and
+// then discard it, so pages without a real translation pass a single locale.
+const alternateLocales = Astro.props.alternateLocales ?? ["cs", "en"];
+const emitHreflang = alternateLocales.length > 1;
 const siteConfig =
 	Astro.props.siteConfig !== undefined
 		? Astro.props.siteConfig
@@ -67,17 +77,21 @@ const ogLocale = shared.ogLocale;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-		<meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+		<meta name="robots" content={robots} />
+		<meta name="googlebot" content={robots} />
 		<meta name="theme-color" content="#0F6CBD" />
 		<meta name="author" content={t('layout.author')} />
 		<meta name="seznam-wmt" content="ZV2mM9koaFElO3a0gZudPRjCNidhFJyX" />
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonicalUrl} />
-		<link rel="alternate" hreflang="cs" href={hreflangCs} />
-		<link rel="alternate" hreflang="en" href={hreflangEn} />
-		<link rel="alternate" hreflang="x-default" href={hreflangCs} />
+		{emitHreflang && (
+			<>
+				<link rel="alternate" hreflang="cs" href={hreflangCs} />
+				<link rel="alternate" hreflang="en" href={hreflangEn} />
+				<link rel="alternate" hreflang="x-default" href={hreflangCs} />
+			</>
+		)}
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
 		<link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png" />
