@@ -32,11 +32,21 @@ const STRAPI_URL = (
 ).replace(/\/$/, "");
 const STRAPI_API_TOKEN = import.meta.env.STRAPI_API_TOKEN;
 const STRAPI_GET_CACHE_TTL_SECONDS = Number.parseInt(
-	import.meta.env.STRAPI_GET_CACHE_TTL_SECONDS || "3600",
+	import.meta.env.STRAPI_GET_CACHE_TTL_SECONDS || "21600",
 	10,
 );
 const STRAPI_GET_CACHE_MAX_ENTRIES = Number.parseInt(
 	import.meta.env.STRAPI_GET_CACHE_MAX_ENTRIES || "100",
+	10,
+);
+// How long a failed GET is remembered. Without this every page render retries a
+// broken/suspended Strapi, which burns request quota and stalls the response.
+const STRAPI_GET_ERROR_CACHE_TTL_SECONDS = Number.parseInt(
+	import.meta.env.STRAPI_GET_ERROR_CACHE_TTL_SECONDS || "120",
+	10,
+);
+const STRAPI_TIMEOUT_MS = Number.parseInt(
+	import.meta.env.STRAPI_TIMEOUT_MS || "5000",
 	10,
 );
 
@@ -48,14 +58,20 @@ const getCache = new Map<
 	}
 >();
 
+const errorCache = new Map<string, { expiresAt: number; message: string }>();
+
+// Requests in flight, keyed by URL. Concurrent renders asking for the same
+// resource share a single upstream fetch instead of issuing one each.
+const inFlight = new Map<string, Promise<StrapiResponse<unknown>>>();
+
 if (!STRAPI_URL) {
 	console.error(
-		"[strapi] STRAPI_URL is not set — all Strapi requests will be skipped. Set it in Vercel environment variables.",
+		"[strapi] STRAPI_URL is not set -- all Strapi requests will be skipped. Set it in Vercel environment variables.",
 	);
 }
 if (import.meta.env.PROD && !STRAPI_API_TOKEN) {
 	console.warn(
-		"[strapi] STRAPI_API_TOKEN is not set — write endpoints (orders, leads) are unauthenticated.",
+		"[strapi] STRAPI_API_TOKEN is not set -- write endpoints (orders, leads) are unauthenticated.",
 	);
 }
 
@@ -164,6 +180,34 @@ function setCachedResponse<T>(url: string, value: StrapiResponse<T>) {
 	});
 }
 
+function getCachedError(url: string): string | null {
+	if (STRAPI_GET_ERROR_CACHE_TTL_SECONDS <= 0) return null;
+
+	const cached = errorCache.get(url);
+	if (!cached) return null;
+
+	if (cached.expiresAt <= Date.now()) {
+		errorCache.delete(url);
+		return null;
+	}
+
+	return cached.message;
+}
+
+function setCachedError(url: string, message: string) {
+	if (STRAPI_GET_ERROR_CACHE_TTL_SECONDS <= 0) return;
+
+	if (errorCache.size >= STRAPI_GET_CACHE_MAX_ENTRIES) {
+		const oldestKey = errorCache.keys().next().value;
+		if (oldestKey) errorCache.delete(oldestKey);
+	}
+
+	errorCache.set(url, {
+		expiresAt: Date.now() + STRAPI_GET_ERROR_CACHE_TTL_SECONDS * 1000,
+		message,
+	});
+}
+
 export async function strapiGet<T>(
 	endpoint: string,
 	query?: StrapiQueryParams,
@@ -172,21 +216,43 @@ export async function strapiGet<T>(
 		throw new Error(`Strapi GET ${endpoint} skipped: STRAPI_URL not set`);
 	const queryString = buildQueryString(query);
 	const url = `${STRAPI_URL}/api${endpoint}${queryString ? `?${queryString}` : ""}`;
+
 	const cached = getCachedResponse<T>(url);
 	if (cached) return cached;
 
-	const response = await fetch(url, { headers: headers() });
+	const cachedError = getCachedError(url);
+	if (cachedError)
+		throw new Error(`Strapi GET ${endpoint} failed (cached): ${cachedError}`);
 
-	if (!response.ok) {
-		const message = await response.text().catch(() => response.statusText);
-		throw new Error(
-			`Strapi GET ${endpoint} failed: ${response.status} ${message}`,
-		);
-	}
+	const pending = inFlight.get(url);
+	if (pending) return pending as Promise<StrapiResponse<T>>;
 
-	const payload = (await response.json()) as StrapiResponse<T>;
-	setCachedResponse(url, payload);
-	return payload;
+	const request = (async () => {
+		try {
+			const response = await fetch(url, {
+				headers: headers(),
+				signal: AbortSignal.timeout(STRAPI_TIMEOUT_MS),
+			});
+
+			if (!response.ok) {
+				const message = await response.text().catch(() => response.statusText);
+				throw new Error(`${response.status} ${message}`);
+			}
+
+			const payload = (await response.json()) as StrapiResponse<T>;
+			setCachedResponse(url, payload);
+			return payload as StrapiResponse<unknown>;
+		} catch (error) {
+			const message = error instanceof Error ? error.message : String(error);
+			setCachedError(url, message);
+			throw new Error(`Strapi GET ${endpoint} failed: ${message}`);
+		} finally {
+			inFlight.delete(url);
+		}
+	})();
+
+	inFlight.set(url, request);
+	return request as Promise<StrapiResponse<T>>;
 }
 
 export async function strapiPost<T>(
