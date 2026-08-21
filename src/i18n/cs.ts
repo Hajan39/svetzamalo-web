@@ -266,6 +266,9 @@ const cs = {
 			orderByGateway: "Zaplatit kartou / online",
 			orderByBank: "Objednat převodem",
 			ordersSoon: "Objednávky budou spouštěné brzy.",
+			buyExternal: "Koupit knihu",
+			buyExternalNote:
+				"Bezpečná platba kartou nebo převodem. Kniha přijde e-mailem hned po zaplacení.",
 			mistakesHeading: "10 kapitol, 10 skutečných chyb na cestách",
 			mistakesBody: "Každá kapitola řeší jednu oblast, kde cestovatelé zbytečně přicházejí o peníze nebo čas.",
 			paidTopicsLabel: "Co v knize najdeš",

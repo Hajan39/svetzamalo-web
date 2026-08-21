@@ -267,6 +267,9 @@ const en = {
 			orderByGateway: "Pay by card / online",
 			orderByBank: "Order by bank transfer",
 			ordersSoon: "Orders will be available soon.",
+			buyExternal: "Buy the book",
+			buyExternalNote:
+				"Secure card or bank payment. The book arrives by e-mail right after checkout.",
 			mistakesHeading: "10 chapters, 10 real travel mistakes",
 			mistakesBody: "Each chapter covers one area where travelers regularly lose money or time.",
 			paidTopicsLabel: "What's inside the guide",

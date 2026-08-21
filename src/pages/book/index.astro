@@ -2,6 +2,7 @@
 import HoneypotField from "@/components/forms/HoneypotField.astro";
 import Layout from "@/layouts/Layout.astro";
 import {
+	getExternalBuyUrl,
 	getFreeEbookDescription,
 	getFreeEbookTitle,
 	getPaidBookDescription,
@@ -29,6 +30,7 @@ if (locale === "en" && !siteConfig) {
 	siteConfig = await fetchSiteConfig("cs");
 }
 const price = siteConfig?.bookPrice || siteConfig?.bookBankAmount || "490 Kč";
+const externalBuyUrl = getExternalBuyUrl(siteConfig);
 const freeEbookAvailable = isFreeEbookEnabled(siteConfig);
 const bankEnabled = isPaidEbookEnabled(siteConfig);
 const freeEbookTitle = getFreeEbookTitle(siteConfig);
@@ -151,7 +153,12 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
           ))}
         </ul>
         <p class="book-option-price">{text.priceLabel}: <strong>{price}</strong></p>
-        {bankVisible || gatewayEnabled || bookTestModeEnabled ? (
+        {externalBuyUrl ? (
+          <div class="space-y-3">
+            <a class="btn-primary w-full" href={externalBuyUrl} rel="noopener">{text.buyExternal}</a>
+            <p class="lead-note">{text.buyExternalNote}</p>
+          </div>
+        ) : bankVisible || gatewayEnabled || bookTestModeEnabled ? (
           <form class="space-y-3" method="post" action="/api/orders">
             <input type="hidden" name="productCode" value="ebook-paid-v1" />
             <HoneypotField id="hp-book-order" />
