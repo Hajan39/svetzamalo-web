@@ -28,8 +28,16 @@ export function hasPaidEbookDownload(
 	);
 }
 
+// External checkout (e.g. SimpleShop) that handles payment, invoicing and
+// ebook delivery on its own. When set, none of the bank/gateway/download
+// configuration is required for the paid book to be purchasable.
+export function getExternalBuyUrl(siteConfig: SiteConfig | null | undefined) {
+	return siteConfig?.bookBuyUrl?.trim() || undefined;
+}
+
 export function isPaidEbookEnabled(siteConfig: SiteConfig | null | undefined) {
 	if (siteConfig?.bookAvailable === false) return false;
+	if (getExternalBuyUrl(siteConfig)) return true;
 
 	const hasBankAccount = Boolean(
 		siteConfig?.bookBankAccountNumber?.trim() ||
