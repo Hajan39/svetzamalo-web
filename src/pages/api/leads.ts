@@ -3,6 +3,7 @@ import { z } from "zod";
 import { isFreeEbookEnabled } from "@/lib/bookConfig";
 import { createLead, fetchSiteConfig } from "@/lib/content/api";
 import { isOrderTestEmail } from "@/lib/orderTestMode";
+import { isHoneypotTripped, isRateLimited } from "@/lib/spamGuard";
 
 export const prerender = false;
 
@@ -21,7 +22,25 @@ async function parseBody(request: Request) {
 }
 
 export const POST: APIRoute = async ({ request, redirect }) => {
-	const result = leadSchema.safeParse(await parseBody(request));
+	const body = await parseBody(request);
+
+	if (isHoneypotTripped(body)) {
+		// Fake success: the bot must not learn it was detected.
+		if (
+			(request.headers.get("content-type") || "").includes("application/json")
+		) {
+			return Response.json({ status: "accepted" });
+		}
+		return redirect("/book/success?lead=ebook", 303);
+	}
+
+	if (isRateLimited(request, "leads")) {
+		return new Response(JSON.stringify({ error: "rate_limited" }), {
+			status: 429,
+		});
+	}
+
+	const result = leadSchema.safeParse(body);
 	if (!result.success) {
 		return new Response(JSON.stringify({ error: "invalid_lead" }), {
 			status: 400,

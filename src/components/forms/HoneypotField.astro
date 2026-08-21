@@ -1,0 +1,27 @@
+---
+// Spam trap: a visually hidden text input humans never see or fill. Bots that
+// auto-fill every field reveal themselves and the API silently drops the
+// submission (see src/lib/spamGuard.ts). Must NOT be type="hidden" — bots
+// skip those; it has to look like a real field.
+interface Props {
+	id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<div class="hp-field" aria-hidden="true">
+	<label for={id}>Nechte toto pole prázdné / Leave this field empty</label>
+	<input id={id} type="text" name="website" tabindex="-1" autocomplete="off" />
+</div>
+
+<style>
+	.hp-field {
+		position: absolute;
+		left: -9999px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+	}
+</style>

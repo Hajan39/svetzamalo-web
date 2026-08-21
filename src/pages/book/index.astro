@@ -1,4 +1,5 @@
 ---
+import HoneypotField from "@/components/forms/HoneypotField.astro";
 import Layout from "@/layouts/Layout.astro";
 import {
 	getFreeEbookDescription,
@@ -123,6 +124,7 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
           <form class="space-y-3" method="post" action="/api/leads">
             <input type="hidden" name="leadType" value="ebook" />
             <input type="hidden" name="source" value="book" />
+            <HoneypotField id="hp-book-lead" />
             {urlTestModeEnabled && <input type="hidden" name="testMode" value="1" />}
             <label class="sr-only" for="free-ebook-email">{text.freeEmailLabel}</label>
             <input id="free-ebook-email" class="form-field" type="email" name="email" placeholder={text.freeEmailPlaceholder} required />
@@ -152,6 +154,7 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
         {bankVisible || gatewayEnabled || bookTestModeEnabled ? (
           <form class="space-y-3" method="post" action="/api/orders">
             <input type="hidden" name="productCode" value="ebook-paid-v1" />
+            <HoneypotField id="hp-book-order" />
             {urlTestModeEnabled && <input type="hidden" name="testMode" value="1" />}
             <label class="sr-only" for="paid-book-name">{text.fullNameLabel}</label>
             <input id="paid-book-name" class="form-field" type="text" name="fullName" placeholder={text.fullNamePlaceholder} required />

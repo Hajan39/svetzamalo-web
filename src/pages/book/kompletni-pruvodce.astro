@@ -1,4 +1,5 @@
 ---
+import HoneypotField from "@/components/forms/HoneypotField.astro";
 import Layout from "@/layouts/Layout.astro";
 import {
 	getFreeEbookTitle,
@@ -130,6 +131,7 @@ const topics = [
 			{(bankVisible || gatewayEnabled || bookTestModeEnabled) ? (
 				<form class="book-guide-order-form" method="post" action="/api/orders">
 					<input type="hidden" name="productCode" value="ebook-paid-v1" />
+					<HoneypotField id="hp-guide-order" />
 					{urlTestModeEnabled && <input type="hidden" name="testMode" value="1" />}
 					<label class="sr-only" for="guide-book-name">{text.fullNameLabel}</label>
 					<input id="guide-book-name" class="form-field" type="text" name="fullName" placeholder={text.fullNamePlaceholder} required />
