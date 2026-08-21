@@ -2,6 +2,7 @@ import type { APIRoute } from "astro";
 import { z } from "zod";
 import { isFreeEbookEnabled } from "@/lib/bookConfig";
 import { createLead, fetchSiteConfig } from "@/lib/content/api";
+import { isEcomailConfigured, subscribeToEcomail } from "@/lib/ecomail";
 import { isOrderTestEmail } from "@/lib/orderTestMode";
 import { isHoneypotTripped, isRateLimited } from "@/lib/spamGuard";
 
@@ -48,7 +49,6 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 	}
 
 	if (result.data.leadType === "ebook") {
-		const siteConfig = await fetchSiteConfig("cs");
 		const isTestLead =
 			result.data.testMode && isOrderTestEmail(result.data.email);
 
@@ -66,16 +66,26 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 			return redirect(`/book/success?${params.toString()}`, 303);
 		}
 
-		if (!isFreeEbookEnabled(siteConfig)) {
-			return new Response(
-				JSON.stringify({ error: "free_ebook_not_configured" }),
-				{ status: 503 },
-			);
+		// With Ecomail configured, ebook delivery is handled by its automation
+		// and does not depend on site config; the availability gate only
+		// protects the legacy Strapi flow.
+		if (!isEcomailConfigured()) {
+			const siteConfig = await fetchSiteConfig("cs");
+			if (!isFreeEbookEnabled(siteConfig)) {
+				return new Response(
+					JSON.stringify({ error: "free_ebook_not_configured" }),
+					{ status: 503 },
+				);
+			}
 		}
 	}
 
 	try {
-		await createLead({ ...result.data, locale: "cs" });
+		if (isEcomailConfigured()) {
+			await subscribeToEcomail(result.data);
+		} else {
+			await createLead({ ...result.data, locale: "cs" });
+		}
 	} catch (error) {
 		console.warn(
 			"Lead persistence failed. Check Strapi lead/book-interest endpoint.",
