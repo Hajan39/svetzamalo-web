@@ -112,6 +112,10 @@ const ogLocale = shared.ogLocale;
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={new URL(image, siteUrl).toString()} />
+		{/* Travelpayouts affiliate tracking (partner marker 526521). Third-party
+		    revenue script — flags itself in every security audit, but it is
+		    intentional: removed as "malicious" and knowingly restored in commit
+		    84f107d. emrldtp.com is whitelisted for it in the CSP (vercel.json). */}
 		<script is:inline data-nowprocket="1" data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1">
 			(function () {
 				var script = document.createElement("script");

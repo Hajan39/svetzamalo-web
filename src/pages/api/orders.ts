@@ -17,6 +17,7 @@ import {
 	isBookGatewayEnabled,
 	type BookPaymentMethod,
 } from "@/lib/paymentGateway";
+import { isHoneypotTripped, isRateLimited } from "@/lib/spamGuard";
 
 export const prerender = false;
 
@@ -43,7 +44,25 @@ async function parseBody(request: Request) {
 }
 
 export const POST: APIRoute = async ({ request, redirect }) => {
-	const result = orderSchema.safeParse(await parseBody(request));
+	const body = await parseBody(request);
+
+	if (isHoneypotTripped(body)) {
+		// Fake success: the bot must not learn it was detected.
+		if (
+			(request.headers.get("content-type") || "").includes("application/json")
+		) {
+			return Response.json({ status: "accepted" });
+		}
+		return redirect("/book/success", 303);
+	}
+
+	if (isRateLimited(request, "orders")) {
+		return new Response(JSON.stringify({ error: "rate_limited" }), {
+			status: 429,
+		});
+	}
+
+	const result = orderSchema.safeParse(body);
 	if (!result.success) {
 		return new Response(JSON.stringify({ error: "invalid_order" }), {
 			status: 400,

@@ -1,4 +1,5 @@
 ---
+import HoneypotField from "@/components/forms/HoneypotField.astro";
 import Layout from "@/layouts/Layout.astro";
 import { fetchPageCopy } from "@/lib/content/api";
 import { copyValue } from "@/lib/copy";
@@ -83,6 +84,7 @@ const paidDownloadLabel =
           <form class="flex flex-col gap-3 sm:flex-row" method="post" action="/api/leads">
             <input type="hidden" name="leadType" value="ebook" />
             <input type="hidden" name="source" value="ebook-download" />
+            <HoneypotField id="hp-download-lead" />
             <input class="form-field" type="email" name="email" placeholder={text.emailPlaceholder} required />
             <button class="btn-primary" type="submit">{copyValue(copy?.secondaryButtonLabel, text.sendNew, copyVariables)}</button>
           </form>

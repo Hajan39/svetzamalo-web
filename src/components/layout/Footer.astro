@@ -1,5 +1,6 @@
 ---
 import BrandLogo from "./BrandLogo.astro";
+import HoneypotField from "@/components/forms/HoneypotField.astro";
 import type { SiteConfig } from "@/types";
 import { getLangFromUrl, useTranslations, withLocalePath } from "@/i18n/utils";
 
@@ -54,6 +55,7 @@ const legalLinks = [
         <form class="mb-4 flex flex-col gap-2 sm:flex-row" method="post" action="/api/leads">
           <input type="hidden" name="leadType" value="newsletter" />
           <input type="hidden" name="source" value="footer" />
+          <HoneypotField id="hp-footer" />
           <input class="form-field flex-1 text-sm" type="email" name="email" placeholder={t('footer.emailPlaceholder')} required />
           <button class="btn-primary px-5 text-sm" type="submit">{t('footer.subscribe')}</button>
         </form>
