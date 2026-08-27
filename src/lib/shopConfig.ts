@@ -81,3 +81,30 @@ export function isComgateLive(): boolean {
 export function isPaidBookLive(): boolean {
 	return isBankTransferLive() || isComgateLive();
 }
+
+/**
+ * True when the paid book appears to be served from somewhere the public can
+ * reach directly, which would let anyone download it without paying.
+ *
+ * The delivery endpoint only ever hands out PAID_BOOK_FILE_URL through a
+ * per-order token, so that URL must live somewhere unlisted (Vercel Blob, S3,
+ * ...) -- never under this site's own public/ directory next to the free ebook.
+ */
+export function isPaidBookFileExposed(): boolean {
+	const url = SHOP.paidBookFileUrl;
+	if (!url) return false;
+
+	const path = url.startsWith("http")
+		? (() => {
+				try {
+					const parsed = new URL(url);
+					const sameHost = parsed.origin === new URL(SHOP.siteUrl).origin;
+					return sameHost ? parsed.pathname : "";
+				} catch {
+					return "";
+				}
+			})()
+		: url;
+
+	return path.startsWith("/downloads") || path.startsWith("/images");
+}

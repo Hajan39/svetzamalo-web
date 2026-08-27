@@ -9,7 +9,7 @@ import {
 } from "@/lib/adminAuth";
 import { db, isDbConfigured, type LeadRow, type OrderRow } from "@/lib/db";
 import { isMailConfigured, sendPaidBookEmail } from "@/lib/mail";
-import { SHOP } from "@/lib/shopConfig";
+import { isPaidBookFileExposed, SHOP } from "@/lib/shopConfig";
 
 export const prerender = false;
 
@@ -160,6 +160,16 @@ const statusLabels: Record<string, string> = {
             <p>Nastav ve Vercelu <code>DATABASE_URL</code> (Neon) a znovu nasaď web.</p>
           </div>
         )}
+        {isPaidBookFileExposed() && (
+          <div class="admin-card admin-danger">
+            <strong>Placená kniha je veřejně dostupná.</strong>
+            <p>
+              <code>PAID_BOOK_FILE_URL</code> míří na <code>{SHOP.paidBookFileUrl}</code>, což si může
+              kdokoli stáhnout bez zaplacení. Přesuň soubor mimo veřejnou část webu
+              (Vercel Blob) a proměnnou přepiš.
+            </p>
+          </div>
+        )}
         {dbError && (
           <div class="admin-card admin-warn">
             <strong>Databáze odpověděla chybou.</strong>
@@ -266,6 +276,8 @@ const statusLabels: Record<string, string> = {
     padding: 1.25rem;
   }
   .admin-warn { border-color: var(--primary); }
+  .admin-danger { border-color: #9f1d1d; background: #fdecec; color: #9f1d1d; }
+  .admin-danger code { background: rgba(159, 29, 29, 0.12); }
   .admin-login {
     display: flex;
     flex-direction: column;
