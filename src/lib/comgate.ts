@@ -56,8 +56,13 @@ export async function createComgatePayment(input: CreatePaymentInput): Promise<{
 		throw new Error("Comgate is not configured");
 	}
 
-	const returnUrl = (status: string) =>
-		`${SHOP.siteUrl}/book/success?payment=comgate&status=${status}&vs=${encodeURIComponent(input.variableSymbol)}`;
+	// Each outcome gets its own page. Sending a cancelled payer to the success
+	// page with a status parameter reads as "thanks for your purchase" for a
+	// purchase that did not happen.
+	const vs = encodeURIComponent(input.variableSymbol);
+	const paidUrl = `${SHOP.siteUrl}/book/success?payment=comgate&status=paid&vs=${vs}`;
+	const cancelledUrl = `${SHOP.siteUrl}/book/cancelled?vs=${vs}`;
+	const pendingUrl = `${SHOP.siteUrl}/book/pending?vs=${vs}`;
 
 	const payload = await post("/create", {
 		merchant: SHOP.comgateMerchant,
@@ -76,9 +81,9 @@ export async function createComgatePayment(input: CreatePaymentInput): Promise<{
 		name: input.productCode,
 		lang: input.locale === "en" ? "en" : "cs",
 		prepareOnly: "true",
-		url_paid: returnUrl("paid"),
-		url_cancelled: returnUrl("cancelled"),
-		url_pending: returnUrl("pending"),
+		url_paid: paidUrl,
+		url_cancelled: cancelledUrl,
+		url_pending: pendingUrl,
 		url_push: `${SHOP.siteUrl}/api/comgate/callback`,
 	});
 
