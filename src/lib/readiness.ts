@@ -159,7 +159,16 @@ export async function runReadinessChecks(): Promise<Check[]> {
 				detail: "Chybí COMGATE_MERCHANT / COMGATE_SECRET, případně soubor knihy.",
 			};
 
-	const list = [database, email, freeEbook, paidBookFile, bank, comgate];
+	const list = [
+		checkPublicUrl(),
+		database,
+		email,
+		freeEbook,
+		paidBookFile,
+		bank,
+		comgate,
+		checkComgateCredentials(),
+	];
 
 	if (isEcomailConfigured()) {
 		list.push({
@@ -170,4 +179,69 @@ export async function runReadinessChecks(): Promise<Check[]> {
 	}
 
 	return list;
+}
+
+/**
+ * Shows the values the shop actually resolved, not just whether a variable is
+ * non-empty. A wrong SITE_URL is invisible in every other check while quietly
+ * breaking payments: the gateway is told to call back at
+ * ${SITE_URL}/api/comgate/callback, which overrides whatever is configured in
+ * the Comgate portal, so the notification goes to the wrong host.
+ */
+function checkPublicUrl(): Check {
+	const label = "Veřejná adresa webu";
+	const url = SHOP.siteUrl;
+	const pushUrl = `${url}/api/comgate/callback`;
+
+	if (!/^https:\/\//i.test(url)) {
+		return {
+			label,
+			state: "fail",
+			detail: `SITE_URL je "${url}" — musí to být https adresa webu, jinak brána posílá potvrzení platby na špatné místo.`,
+		};
+	}
+
+	let host = "";
+	try {
+		host = new URL(url).hostname;
+	} catch {
+		return {
+			label,
+			state: "fail",
+			detail: `SITE_URL "${url}" není platná adresa.`,
+		};
+	}
+
+	if (host.endsWith(".vercel.app")) {
+		return {
+			label,
+			state: "fail",
+			detail: `SITE_URL míří na náhledovou domenu ${host}. Brána bude posílat potvrzení tam. Nastav produkční doménu.`,
+		};
+	}
+
+	return {
+		label,
+		state: "ok",
+		detail: `${url} · brána posílá potvrzení na ${pushUrl}`,
+	};
+}
+
+function checkComgateCredentials(): Check {
+	const label = "Comgate přihlašovací údaje";
+	if (!SHOP.comgateMerchant || !SHOP.comgateSecret) {
+		return {
+			label,
+			state: "warn",
+			detail: "COMGATE_MERCHANT nebo COMGATE_SECRET chybí.",
+		};
+	}
+	const merchant = SHOP.comgateMerchant;
+	const masked =
+		merchant.length > 4 ? `${"*".repeat(merchant.length - 4)}${merchant.slice(-4)}` : "****";
+	return {
+		label,
+		state: "ok",
+		detail: `Merchant ${masked}, secret ${SHOP.comgateSecret.length} znaků. Testovací i produkční prostředí mají v Comgate vlastní údaje — zkontroluj, že sedí k režimu níže.`,
+	};
 }
