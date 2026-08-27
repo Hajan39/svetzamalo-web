@@ -1,3 +1,7 @@
+import {
+	isEmailLoginAvailable,
+	isPasswordLoginAvailable,
+} from "./adminAuth";
 import { db, isDbConfigured } from "./db";
 import { isEcomailConfigured } from "./ecomail";
 import { isMailConfigured } from "./mail";
@@ -159,7 +163,24 @@ export async function runReadinessChecks(): Promise<Check[]> {
 				detail: "Chybí COMGATE_MERCHANT / COMGATE_SECRET, případně soubor knihy.",
 			};
 
+	const adminLogin: Check = isEmailLoginAvailable()
+		? {
+				label: "Přihlášení do administrace",
+				state: "ok",
+				detail: isPasswordLoginAvailable()
+					? "Odkazem na e-mail. Heslo zůstává jako záloha — pokud ho nepotřebuješ, smaž ADMIN_PASSWORD."
+					: "Odkazem na e-mail.",
+			}
+		: {
+				label: "Přihlášení do administrace",
+				state: isPasswordLoginAvailable() ? "warn" : "fail",
+				detail: isPasswordLoginAvailable()
+					? "Jen heslem. Doplň ADMIN_EMAILS a přihlašování se přepne na odkaz do e-mailu, který nejde uhodnout ani vynést."
+					: "Není nastavené ani ADMIN_EMAILS, ani ADMIN_PASSWORD — administrace je nedostupná.",
+			};
+
 	const list = [
+		adminLogin,
 		checkPublicUrl(),
 		database,
 		email,

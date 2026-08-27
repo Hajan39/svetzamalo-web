@@ -121,3 +121,18 @@ export async function sendPaidBookEmail(to: string, token: string) {
 		`Platba přijata. ${SHOP.paidBookTitle} ke stažení:\n${url}\n\n${SHOP.sellerName}, IČO ${SHOP.sellerIco}`,
 	);
 }
+
+export async function sendAdminLoginEmail(to: string, loginUrl: string) {
+	return send(
+		to,
+		"Přihlášení do administrace Svět za málo",
+		layout(
+			"Přihlášení do administrace",
+			`<p style="margin:0 0 12px;">Klikni na odkaz a budeš přihlášen. Platí 15 minut a jde použít jen jednou.</p>
+			 ${button(loginUrl, "Přihlásit se")}
+			 <p style="margin:0;font-size:13px;color:#5a6b7b;">Pokud jsi o přihlášení nežádal, tento e-mail ignoruj — bez kliknutí se nic nestane.</p>`,
+		),
+		`Přihlášení do administrace Svět za málo\n\nOdkaz (platí 15 minut, jen jedno použití):\n${loginUrl}\n\nPokud jsi o přihlášení nežádal, e-mail ignoruj.`,
+	);
+}
+
