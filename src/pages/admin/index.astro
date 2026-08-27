@@ -37,7 +37,7 @@ if (Astro.request.method === "POST") {
 	} else if (action === "logout") {
 		Astro.cookies.delete(ADMIN_COOKIE, { path: "/admin" });
 		return Astro.redirect("/admin", 303);
-	} else if (action === "mark-paid") {
+	} else if (action === "mark-paid" || action === "resend-link") {
 		// Guarded separately: a POST must never act on an unauthenticated session.
 		if (!(await isAuthenticated(Astro.cookies.get(ADMIN_COOKIE)?.value))) {
 			return Astro.redirect("/admin", 303);
@@ -52,6 +52,22 @@ if (Astro.request.method === "POST") {
 			if (!order) {
 				notice = `Objednávka ${id} nenalezena.`;
 				noticeKind = "error";
+			} else if (action === "resend-link") {
+				// The callback and the mark-paid path both warn "resend from /admin"
+				// when delivery fails, so that has to be an action you can take here.
+				if (order.status !== "paid" || !order.download_token) {
+					notice = "Odkaz lze poslat jen u zaplacené objednávky.";
+					noticeKind = "error";
+				} else if (!isMailConfigured()) {
+					notice = "RESEND_API_KEY není nastavený — odkaz zkopíruj z tabulky a pošli ručně.";
+					noticeKind = "error";
+				} else {
+					const sent = await sendPaidBookEmail(order.email, order.download_token);
+					notice = sent
+						? `Odkaz znovu odeslán na ${order.email}.`
+						: `Odeslání se nepovedlo — zkus to znovu, nebo zkopíruj odkaz z tabulky.`;
+					if (!sent) noticeKind = "error";
+				}
 			} else if (order.status === "paid") {
 				notice = `Objednávka ${order.variable_symbol} už je zaplacená.`;
 			} else {
@@ -242,13 +258,15 @@ const statusLabels: Record<string, string> = {
                     )}
                   </td>
                   <td>
-                    {order.status !== "paid" && (
-                      <form method="post" class="admin-inline-form">
-                        <input type="hidden" name="action" value="mark-paid" />
-                        <input type="hidden" name="orderId" value={String(order.id)} />
+                    <form method="post" class="admin-inline-form">
+                      <input type="hidden" name="action" value={order.status === "paid" ? "resend-link" : "mark-paid"} />
+                      <input type="hidden" name="orderId" value={String(order.id)} />
+                      {order.status === "paid" ? (
+                        <button class="btn-secondary admin-small-btn" type="submit" disabled={!order.download_token}>Poslat odkaz znovu</button>
+                      ) : (
                         <button class="btn-primary admin-small-btn" type="submit">Zaplaceno</button>
-                      </form>
-                    )}
+                      )}
+                    </form>
                   </td>
                 </tr>
               ))}

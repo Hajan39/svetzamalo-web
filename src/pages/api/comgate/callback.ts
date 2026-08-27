@@ -1,5 +1,9 @@
 import type { APIRoute } from "astro";
-import { fetchComgateStatus, orderStatusFromComgate } from "@/lib/comgate";
+import {
+	fetchComgateStatus,
+	isValidComgateSecret,
+	orderStatusFromComgate,
+} from "@/lib/comgate";
 import { db, isDbConfigured, logPaymentEvent, type OrderRow } from "@/lib/db";
 import { isMailConfigured, sendPaidBookEmail } from "@/lib/mail";
 
@@ -78,7 +82,13 @@ export const POST: APIRoute = async ({ request }) => {
 		// Logged before any decision, so "did the callback even arrive?" is always
 		// answerable from the Vercel logs.
 		console.log(
-			`[comgate] callback transId=${transId || "-"} refId=${refId || "-"} status=${params.status || "-"}`,
+			`[comgate] callback transId=${transId || "-"} refId=${refId || "-"} status=${params.status || "-"} secret=${
+				params.secret
+					? isValidComgateSecret(params.secret)
+						? "valid"
+						: "mismatch"
+					: "absent"
+			}`,
 		);
 
 		if (!isDbConfigured()) {
@@ -123,24 +133,38 @@ export const POST: APIRoute = async ({ request }) => {
 			return ok();
 		}
 
-		// The callback body is public and unauthenticated, so it only triggers the
-		// check — the gateway itself is asked what the real status is.
+		// Comgate's HTTP POST protocol signs the callback with the shop secret, so
+		// a matching secret authenticates it outright. Trusting it here keeps the
+		// acknowledgement off the network: an outbound call to /status that is slow
+		// or failing would otherwise tell the payer the shop did not process a
+		// payment that actually succeeded.
 		let verified: Record<string, string>;
-		try {
-			verified = await fetchComgateStatus(
-				transId || order.comgate_trans_id || "",
-				order.amount_minor,
-			);
-		} catch (error) {
-			console.error("[comgate] status verification failed:", error);
-			await logPaymentEvent(order.id, "comgate", "status_failed", {
+		if (isValidComgateSecret(params.secret)) {
+			verified = params;
+			await logPaymentEvent(order.id, "comgate", "callback_authenticated", {
 				...params,
-				message: error instanceof Error ? error.message : String(error),
+				secret: "[redacted]",
 			});
-			return retryLater("verification failed");
+		} else {
+			// No usable secret: the body is then just an unauthenticated nudge, and
+			// the gateway itself has to be asked what really happened.
+			try {
+				verified = await fetchComgateStatus(
+					transId || order.comgate_trans_id || "",
+					order.amount_minor,
+				);
+			} catch (error) {
+				console.error("[comgate] status verification failed:", error);
+				await logPaymentEvent(order.id, "comgate", "status_failed", {
+					...params,
+					secret: params.secret ? "[mismatch]" : "[absent]",
+					message: error instanceof Error ? error.message : String(error),
+				});
+				return retryLater("verification failed");
+			}
+			await logPaymentEvent(order.id, "comgate", "status", verified);
 		}
 
-		await logPaymentEvent(order.id, "comgate", "status", verified);
 		const nextStatus = orderStatusFromComgate(verified.status);
 
 		if (nextStatus === "paid") {

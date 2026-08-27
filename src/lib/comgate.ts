@@ -22,7 +22,7 @@ async function post(
 			Accept: "application/x-www-form-urlencoded",
 		},
 		body: new URLSearchParams(params).toString(),
-		signal: AbortSignal.timeout(15000),
+		signal: AbortSignal.timeout(8000),
 	});
 	const text = await response.text();
 	const payload = parseFormResponse(text);
@@ -124,4 +124,27 @@ export function orderStatusFromComgate(status?: string): string {
 		default:
 			return "pending";
 	}
+}
+
+/**
+ * Comgate's HTTP POST protocol posts the shop secret alongside the result, so a
+ * callback carrying the right secret is already authenticated and can be
+ * trusted without a second round trip to /status.
+ *
+ * That matters for reliability, not just speed: making the acknowledgement
+ * depend on an outbound call means a slow gateway shows the payer "the shop did
+ * not process your payment" for a payment that went through.
+ */
+export function isValidComgateSecret(candidate: string | undefined): boolean {
+	const expected = SHOP.comgateSecret;
+	if (!expected || !candidate) return false;
+
+	const encoder = new TextEncoder();
+	const a = encoder.encode(candidate);
+	const b = encoder.encode(expected);
+	let diff = a.length ^ b.length;
+	for (let i = 0; i < Math.max(a.length, b.length); i++) {
+		diff |= (a[i] ?? 0) ^ (b[i] ?? 0);
+	}
+	return diff === 0;
 }
