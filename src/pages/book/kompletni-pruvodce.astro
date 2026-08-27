@@ -10,6 +10,7 @@ import {
 	isPaidEbookEnabled,
 } from "@/lib/bookConfig";
 import { fetchSiteConfig } from "@/lib/content/api";
+import { SHOP } from "@/lib/shopConfig";
 import { isBookTestModeRequested, isOrderTestModeEnabled } from "@/lib/orderTestMode";
 import { getGatewayButtonLabel, isBookGatewayEnabled } from "@/lib/paymentGateway";
 import { translations } from "@/i18n/translations";
@@ -69,6 +70,65 @@ const topics = [
 		body: "Luxusní destinace bez luxusního rozpočtu, práce na cestách a parťák versus sólo cestování.",
 	},
 ];
+
+// Qualifying the reader is part of selling: someone who recognises themselves
+// buys, and someone who does not is spared a refund request. Both lists are
+// drawn from what the book actually covers above, not invented.
+const forWho = [
+	"Chystáš první cestu mimo Evropu a nechceš platit cestovce za to, co zvládneš sám.",
+	"Cestuješ pravidelně, ale máš pocit, že za letenky a ubytování dáváš víc, než je nutné.",
+	"Chceš mít před odletem jistotu v dokumentech, pojištění a penězích, ne dohledávat to na fórech.",
+	"Plánuješ delší cestu nebo práci na cestách a potřebuješ postup, ne jednotlivé tipy.",
+];
+
+const notForWho = [
+	"Hledáš konkrétní itinerář na jednu destinaci — na to jsou články a průvodci na tomhle webu, zdarma.",
+	"Chceš all-inclusive dovolenou bez plánování. Průvodce je o tom, jak si cestu postavit sám.",
+];
+
+const outcomes = [
+	{
+		heading: "Najdeš letenku za rozumnou cenu",
+		body: "Víš, kdy hledat, kde hledat a proč je stejný let jednou za třetinu ceny. Včetně chybných tarifů a nízkonákladovek.",
+	},
+	{
+		heading: "Vyřešíš dokumenty bez nervů",
+		body: "Pas, víza, délka pobytu, co dělat při problému na hranici. Bez dohadování na fórech den před odletem.",
+	},
+	{
+		heading: "Nepřeplatíš za peníze samotné",
+		body: "Karty bez poplatků, výběry v zahraničí, správná měna. Nejtišší způsob, jak na cestě utratit navíc.",
+	},
+	{
+		heading: "Sbalíš se a zůstaneš online",
+		body: "Co s sebou a co ne, eSIM a mobilní tarify, offline aplikace, které opravdu použiješ.",
+	},
+];
+
+// Answers are limited to what is actually true of this shop and this file —
+// no invented guarantees, no promises about future updates.
+const faq = [
+	{
+		q: "Jak a kdy knihu dostanu?",
+		a: "Při platbě kartou přijde odkaz ke stažení e-mailem hned po zaplacení. Při platbě převodem ti pošleme e-mailem částku a variabilní symbol, a odkaz odejde, jakmile platba dorazí — obvykle do jednoho pracovního dne.",
+	},
+	{
+		q: "V jakém formátu kniha je?",
+		a: "PDF. Otevřeš ji v mobilu, na tabletu i v počítači, a po stažení ji máš k dispozici i offline na cestě.",
+	},
+	{
+		q: "Je to pro začátečníky, nebo i pro zkušené cestovatele?",
+		a: "Pro obojí. Průvodce začíná plánováním a dokumenty, ale má i kapitoly o pokročilém cestování — luxusních destinacích za rozumné peníze a práci na cestách.",
+	},
+	{
+		q: "Čím se to liší od článků na webu, které jsou zdarma?",
+		a: "Články řeší jednotlivé destinace a dílčí témata. Průvodce je celý postup pohromadě a v pořadí, v jakém cestu opravdu plánuješ — od rozhodnutí kam až po návrat.",
+	},
+	{
+		q: "Co když mi kniha nepřijde?",
+		a: "Napiš nám a odkaz pošleme znovu. Objednávku máme uloženou, takže stačí uvést e-mail nebo variabilní symbol z potvrzení.",
+	},
+];
 ---
 
 <Layout
@@ -106,6 +166,23 @@ const topics = [
 		</div>
 	</section>
 
+	<section class="container-wide sales-block">
+		<div class="section-heading-row">
+			<div>
+				<p class="section-kicker">Po přečtení</p>
+				<h2>Co budeš umět</h2>
+			</div>
+		</div>
+		<div class="sales-outcomes">
+			{outcomes.map((item) => (
+				<div class="sales-outcome">
+					<strong>{item.heading}</strong>
+					<p>{item.body}</p>
+				</div>
+			))}
+		</div>
+	</section>
+
 	<section class="container-wide book-guide-topics">
 		<div class="section-heading-row">
 			<div>
@@ -120,6 +197,23 @@ const topics = [
 					<p>{topic.body}</p>
 				</div>
 			))}
+		</div>
+	</section>
+
+	<section class="container-wide sales-block">
+		<div class="sales-audience">
+			<div class="sales-audience-col">
+				<h2>Průvodce je pro tebe, pokud</h2>
+				<ul class="sales-list sales-list-yes">
+					{forWho.map((item) => <li>{item}</li>)}
+				</ul>
+			</div>
+			<div class="sales-audience-col">
+				<h2>Nekupuj ho, pokud</h2>
+				<ul class="sales-list sales-list-no">
+					{notForWho.map((item) => <li>{item}</li>)}
+				</ul>
+			</div>
 		</div>
 	</section>
 
@@ -157,9 +251,167 @@ const topics = [
 		</div>
 	</section>
 
+	<div class="container-wide sales-trust">
+		<ul>
+			<li><strong>Doručení e-mailem</strong><span>Kartou hned po zaplacení, převodem po přijetí platby.</span></li>
+			<li><strong>Platba přes ComGate</strong><span>Kartou nebo bankovním převodem.</span></li>
+			<li><strong>Prodejce</strong><span>{SHOP.sellerName}, IČO {SHOP.sellerIco}</span></li>
+		</ul>
+		<p>
+			<a href={withLocalePath('/dodaci-podminky', locale)}>Dodání a platba</a>
+			<a href={withLocalePath('/reklamace', locale)}>Reklamace</a>
+			<a href={withLocalePath('/terms', locale)}>Podmínky</a>
+		</p>
+	</div>
+
+	<section class="container-wide sales-block">
+		<div class="section-heading-row">
+			<div>
+				<p class="section-kicker">Než koupíš</p>
+				<h2>Časté otázky</h2>
+			</div>
+		</div>
+		<div class="sales-faq">
+			{faq.map((item) => (
+				<details>
+					<summary>{item.q}</summary>
+					<p>{item.a}</p>
+				</details>
+			))}
+		</div>
+	</section>
+
 	{freeEbookAvailable && (
 		<div class="container-wide book-guide-free-note">
 			<p>{text.goodStart}: <a href={withLocalePath('/book', locale)} class="text-link">{freeEbookTitle} — {text.downloadFree}</a></p>
 		</div>
 	)}
 </Layout>
+
+<style>
+	.sales-block { padding-block: clamp(2.5rem, 6vw, 4rem); }
+
+	.sales-outcomes {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+		gap: 1rem;
+	}
+
+	.sales-outcome {
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		background: var(--background-secondary);
+		padding: 1.15rem 1.25rem;
+	}
+
+	.sales-outcome strong { display: block; margin-bottom: 0.3rem; }
+	.sales-outcome p { margin: 0; color: var(--foreground-secondary); font-size: 0.94rem; }
+
+	.sales-audience {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+		gap: 1.5rem 2.5rem;
+	}
+
+	.sales-audience h2 { font-size: clamp(1.2rem, 2.4vw, 1.5rem); margin-bottom: 0.85rem; }
+
+	.sales-list { display: grid; gap: 0.6rem; margin: 0; padding: 0; list-style: none; }
+
+	.sales-list li {
+		position: relative;
+		padding-left: 1.75rem;
+		color: var(--foreground-secondary);
+	}
+
+	/* Drawn marks rather than emoji, so they inherit colour and stay crisp. */
+	.sales-list-yes li::before,
+	.sales-list-no li::before {
+		content: "";
+		position: absolute;
+		top: 0.42em;
+	}
+
+	.sales-list-yes li::before {
+		left: 0.3rem;
+		width: 0.55rem;
+		height: 0.3rem;
+		border-left: 2px solid var(--primary);
+		border-bottom: 2px solid var(--primary);
+		transform: rotate(-45deg);
+	}
+
+	.sales-list-no li::before {
+		left: 0.35rem;
+		width: 0.7rem;
+		height: 0;
+		border-top: 2px solid var(--foreground-muted);
+	}
+
+	.sales-trust {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem 2rem;
+		margin-top: 1.25rem;
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		padding: 1.1rem 1.35rem;
+	}
+
+	.sales-trust ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.25rem 2.25rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.sales-trust li { max-width: 17rem; }
+	.sales-trust strong { display: block; font-size: 0.9rem; }
+	.sales-trust span { color: var(--foreground-muted); font-size: 0.85rem; }
+
+	.sales-trust p {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin: 0;
+		font-size: 0.85rem;
+	}
+
+	.sales-trust p a { color: var(--primary); }
+
+	.sales-faq { display: grid; gap: 0.6rem; }
+
+	.sales-faq details {
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		background: var(--background-secondary);
+		padding: 0.9rem 1.15rem;
+	}
+
+	.sales-faq summary {
+		cursor: pointer;
+		font-weight: 700;
+		list-style: none;
+	}
+
+	.sales-faq summary::-webkit-details-marker { display: none; }
+
+	.sales-faq summary::after {
+		content: "+";
+		float: right;
+		color: var(--primary);
+		font-size: 1.15rem;
+		line-height: 1;
+	}
+
+	.sales-faq details[open] summary::after { content: "\2212"; }
+
+	.sales-faq p {
+		margin: 0.65rem 0 0;
+		color: var(--foreground-secondary);
+		font-size: 0.95rem;
+	}
+</style>
