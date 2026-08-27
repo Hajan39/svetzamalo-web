@@ -35,8 +35,15 @@ export const GET: APIRoute = async ({ url }) => {
 
 	const upstream = await fetch(SHOP.paidBookFileUrl);
 	if (!upstream.ok || !upstream.body) {
+		// 401/403 almost always means the file is in a private store that needs
+		// an access token, which this plain fetch does not send. Say so, rather
+		// than leaving a generic 502 to be guessed at.
+		const hint =
+			upstream.status === 401 || upstream.status === 403
+				? " — the file store requires authentication; use a store this fetch can read without a token, or add token support here"
+				: "";
 		console.error(
-			`[download] upstream file fetch failed: ${upstream.status} ${SHOP.paidBookFileUrl}`,
+			`[download] upstream file fetch failed: ${upstream.status} ${SHOP.paidBookFileUrl}${hint}`,
 		);
 		return jsonResponse({ error: "file_unavailable" }, 502);
 	}
