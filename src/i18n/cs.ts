@@ -37,7 +37,7 @@ const cs = {
 		"footer.explore": "Prozkoumat",
 		"footer.tipsToEmail": "Tipy na cesty do emailu",
 		"footer.emailPlaceholder": "Tvůj email",
-		"footer.subscribe": "Odbírát",
+		"footer.subscribe": "Odebírat",
 		"footer.noSpam": "Posíláme jen věci, které bychom sami chtěli dostat.",
 		"footer.brandName": "Svět za málo",
 
@@ -87,6 +87,20 @@ const cs = {
 			emailPlaceholder: "Tvůj email",
 			emailLabel: "Email",
 		},
+		bookCta: {
+			kicker: "Kompletní průvodce",
+			heading: "Chceš to celé pohromadě?",
+			body: "Tenhle článek řeší jednu věc. Kniha řeší celou cestu — od dokumentů a letenek po ubytování, pojištění a peníze v zahraničí.",
+			bullets: [
+				"230+ stran, ověřeno na vlastních cestách",
+				"Konkrétní postupy, ne obecné rady",
+				"Ke stažení hned po zaplacení, navždy tvoje",
+			],
+			priceLabel: "Cena",
+			cta: "Prohlédnout knihu",
+			freeAlt: "Nebo si nejdřív vezmi",
+			freeAltLink: "ukázku zdarma",
+		},
 		interactiveChecklist: {
 			title: "Checklist",
 			progress: "0 z 0 hotovo",
@@ -123,7 +137,7 @@ const cs = {
 		home: {
 			title: "Svět za málo - lowcost průvodci, destinace a ebook zdarma",
 			description:
-				"Praktické články, destinace a rozpočty pro cestování levněji. Začni průvodcem, vyber destinaci a stažhni si lowcost ebook zdarma.",
+				"Praktické články, destinace a rozpočty pro cestování levněji. Začni průvodcem, vyber destinaci a stáhni si lowcost ebook zdarma.",
 			kicker: "Průvodci pro cesty, které dávají smysl",
 			heroHeading: "Cestuj víc, utrácej míň",
 			heroBody:
@@ -166,7 +180,7 @@ const cs = {
 				"Itineráře, časy přesunů a místa, která dávají smysl spojit dohromady.",
 			path2Title: "Chci snížit rozpočet",
 			path2Text:
-				"Konkrétní úспоry u dopravy, jídla, výletů a ubytování bez zkaženého zážitku.",
+				"Konkrétní úspory u dopravy, jídla, výletů a ubytování bez zkaženého zážitku.",
 			path3Title: "Chci praktické jistoty",
 			path3Text:
 				"Víza, doprava na místě, bezpečnost, sezóna a drobnosti, které před odletem řeší každý.",

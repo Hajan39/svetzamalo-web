@@ -33,7 +33,7 @@ export const GET: APIRoute = async ({ url, cookies }) => {
 	if (type === "leads") {
 		const rows = (await db()`
 			SELECT id, email, lead_type, source, locale, created_at
-			FROM leads ORDER BY created_at DESC
+			FROM shop_leads ORDER BY created_at DESC
 		`) as unknown as LeadRow[];
 		csv = toCsv(rows as unknown as Record<string, unknown>[], [
 			"id",
@@ -48,7 +48,7 @@ export const GET: APIRoute = async ({ url, cookies }) => {
 			SELECT id, created_at, paid_at, email, full_name, product_code,
 			       amount_minor, currency, variable_symbol, payment_method,
 			       status, comgate_trans_id
-			FROM orders ORDER BY created_at DESC
+			FROM shop_orders ORDER BY created_at DESC
 		`) as unknown as OrderRow[];
 		csv = toCsv(rows as unknown as Record<string, unknown>[], [
 			"id",

@@ -58,7 +58,7 @@ export async function logPaymentEvent(
 ): Promise<void> {
 	try {
 		await db()`
-			INSERT INTO payment_events (order_id, provider, event, payload)
+			INSERT INTO shop_payment_events (order_id, provider, event, payload)
 			VALUES (${orderId}, ${provider}, ${event}, ${JSON.stringify(payload ?? {})})
 		`;
 	} catch (error) {

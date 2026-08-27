@@ -21,7 +21,7 @@ export function envSiteConfig(): SiteConfig {
 
 		freeEbookAvailable: isFreeEbookLive(),
 		freeEbookTitle: SHOP.freeEbookTitle,
-		ebookPdfUrl: SHOP.freeEbookPath,
+		ebookPdfUrl: SHOP.freeEbookUrl,
 
 		bookAvailable: true,
 		bookTitle: SHOP.paidBookTitle,

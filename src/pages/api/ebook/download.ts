@@ -26,7 +26,7 @@ export const GET: APIRoute = async ({ url }) => {
 	}
 
 	const rows = (await db()`
-		SELECT * FROM orders
+		SELECT * FROM shop_orders
 		WHERE download_token = ${token} AND status = 'paid'
 		LIMIT 1
 	`) as unknown as OrderRow[];

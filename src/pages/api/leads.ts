@@ -70,7 +70,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 
 	try {
 		await db()`
-			INSERT INTO leads (email, lead_type, source, locale)
+			INSERT INTO shop_leads (email, lead_type, source, locale)
 			VALUES (${email}, ${leadType}, ${source ?? null}, 'cs')
 			ON CONFLICT (lower(email), lead_type) DO NOTHING
 		`;

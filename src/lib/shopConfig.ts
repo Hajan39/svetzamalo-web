@@ -18,11 +18,23 @@ const FREE_EBOOK_PATH = env(
 const bankAccount = env("BANK_ACCOUNT");
 const bankCode = env("BANK_CODE");
 
+const SITE_URL = env(
+	"SITE_URL",
+	env("PUBLIC_SITE_URL", "https://svetzamalo.cz"),
+).replace(/\/$/, "");
+
+/**
+ * The free ebook may be served from this site (public/) or from external file
+ * storage. Accept either, so moving the file does not need a code change.
+ */
+function absoluteFileUrl(value: string): string {
+	if (!value) return "";
+	if (/^https?:\/\//i.test(value)) return value;
+	return `${SITE_URL}${value.startsWith("/") ? "" : "/"}${value}`;
+}
+
 export const SHOP = {
-	siteUrl: env("SITE_URL", env("PUBLIC_SITE_URL", "https://svetzamalo.cz")).replace(
-		/\/$/,
-		"",
-	),
+	siteUrl: SITE_URL,
 
 	sellerName: env("SELLER_NAME", "Jan Hanč"),
 	sellerIco: env("SELLER_ICO", "06328229"),
@@ -30,6 +42,8 @@ export const SHOP = {
 
 	freeEbookTitle: env("FREE_EBOOK_TITLE", "10 nejdražších cestovatelských chyb"),
 	freeEbookPath: FREE_EBOOK_PATH,
+	/** Ready to link straight from an e-mail, wherever the file lives. */
+	freeEbookUrl: absoluteFileUrl(FREE_EBOOK_PATH),
 
 	paidBookTitle: env("PAID_BOOK_TITLE", "Kompletní cestovatelský průvodce"),
 	/** Where the paid PDF lives. Never exposed to the browser. */
