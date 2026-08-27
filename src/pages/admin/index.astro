@@ -99,7 +99,27 @@ const blocking = checks.filter((check) => check.state === "fail").length;
 let orders: OrderRow[] = [];
 let leads: LeadRow[] = [];
 let leadCount = 0;
+let events: PaymentEventRow[] = [];
 let dbError = "";
+
+interface PaymentEventRow {
+	created_at: string;
+	event: string;
+	payload: Record<string, string> | null;
+	variable_symbol: string | null;
+}
+
+/** Pulls the few fields that actually explain a gateway callback. */
+function summarizeEvent(payload: Record<string, string> | null) {
+	if (!payload) return "—";
+	const parts = [
+		payload.status ? `status=${payload.status}` : "",
+		payload.test ? `test=${payload.test}` : "",
+		payload.secret ? `secret=${payload.secret}` : "",
+		payload.message ? `chyba: ${payload.message}` : "",
+	].filter(Boolean);
+	return parts.length > 0 ? parts.join(" · ") : "—";
+}
 
 if (authed && isDbConfigured()) {
 	try {
@@ -113,6 +133,14 @@ if (authed && isDbConfigured()) {
 			SELECT count(*)::int AS total FROM shop_leads
 		`) as unknown as { total: number }[];
 		leadCount = counted[0]?.total ?? 0;
+		// Raw gateway traffic. Without this the only way to answer "did the
+		// callback arrive, and what did it say?" is digging through platform logs.
+		events = (await db()`
+			SELECT e.created_at, e.event, e.payload, o.variable_symbol
+			FROM shop_payment_events e
+			LEFT JOIN shop_orders o ON o.id = e.order_id
+			ORDER BY e.created_at DESC LIMIT 25
+		`) as unknown as PaymentEventRow[];
 	} catch (error) {
 		dbError = error instanceof Error ? error.message : String(error);
 	}
@@ -268,6 +296,25 @@ const statusLabels: Record<string, string> = {
                       )}
                     </form>
                   </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="admin-h2">Události platební brány</h2>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead><tr><th>Kdy</th><th>VS</th><th>Událost</th><th>Detail</th></tr></thead>
+            <tbody>
+              {events.length === 0 ? (
+                <tr><td colspan="4" class="admin-empty">Zatím nedorazil žádný callback z platební brány.</td></tr>
+              ) : events.map((event) => (
+                <tr>
+                  <td>{formatDate(event.created_at)}</td>
+                  <td class="admin-mono">{event.variable_symbol || "—"}</td>
+                  <td class="admin-mono">{event.event}</td>
+                  <td class="admin-sub">{summarizeEvent(event.payload)}</td>
                 </tr>
               ))}
             </tbody>
