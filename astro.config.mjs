@@ -31,6 +31,14 @@ export default defineConfig({
 		},
 	},
 	adapter: vercel(),
+	security: {
+		// Astro's built-in origin check rejects every form-encoded POST without an
+		// Origin header, which is exactly what a server-to-server webhook looks
+		// like: Comgate's payment notifications were answered 403 before any
+		// handler ran. It is all-or-nothing per site, so the equivalent check now
+		// lives in src/middleware.ts, which can exempt the webhook path.
+		checkOrigin: false,
+	},
 	image: {
 		domains: ['cdn.sanity.io'],
 	},
