@@ -61,3 +61,16 @@ CREATE TABLE IF NOT EXISTS shop_payment_events (
 
 CREATE INDEX IF NOT EXISTS shop_payment_events_order_idx
   ON shop_payment_events (order_id, created_at DESC);
+
+-- Admin login tokens: one-time e-mail links and the sessions they produce.
+-- Only hashes are stored, so a leaked row cannot be replayed as a login.
+CREATE TABLE IF NOT EXISTS shop_admin_tokens (
+  token_hash  TEXT        PRIMARY KEY,
+  email       TEXT        NOT NULL,
+  kind        TEXT        NOT NULL,          -- login | session
+  expires_at  TIMESTAMPTZ NOT NULL,
+  created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS shop_admin_tokens_expiry_idx
+  ON shop_admin_tokens (expires_at);

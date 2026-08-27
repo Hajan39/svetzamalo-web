@@ -2,14 +2,25 @@
 import Layout from "@/layouts/Layout.astro";
 import {
 	ADMIN_COOKIE,
+	consumeLoginToken,
+	createLoginToken,
 	isAdminConfigured,
+	isAllowedAdminEmail,
 	isAuthenticated,
-	sessionToken,
+	isEmailLoginAvailable,
+	isPasswordLoginAvailable,
+	passwordSessionValue,
+	revokeSession,
 	verifyPassword,
 } from "@/lib/adminAuth";
 import { db, isDbConfigured, type LeadRow, type OrderRow } from "@/lib/db";
-import { isMailConfigured, sendPaidBookEmail } from "@/lib/mail";
+import {
+	isMailConfigured,
+	sendAdminLoginEmail,
+	sendPaidBookEmail,
+} from "@/lib/mail";
 import { runReadinessChecks, type Check } from "@/lib/readiness";
+import { isRateLimited } from "@/lib/spamGuard";
 import { isPaidBookFileExposed, SHOP } from "@/lib/shopConfig";
 
 export const prerender = false;
@@ -17,13 +28,55 @@ export const prerender = false;
 let notice = "";
 let noticeKind: "ok" | "error" = "ok";
 
+// A link from the e-mail arrives as a GET. Redeemed first, then the token is
+// dropped from the URL so it cannot end up in history or a referrer header.
+const linkToken = Astro.url.searchParams.get("token");
+if (linkToken) {
+	const session = await consumeLoginToken(linkToken);
+	if (session) {
+		Astro.cookies.set(ADMIN_COOKIE, session, {
+				httpOnly: true,
+				secure: true,
+				sameSite: "strict",
+				path: "/admin",
+				maxAge: 60 * 60 * 12,
+			});
+		return Astro.redirect("/admin", 303);
+	}
+	notice = "Odkaz už není platný. Nech si poslat nový.";
+	noticeKind = "error";
+}
+
 if (Astro.request.method === "POST") {
 	const form = await Astro.request.formData();
 	const action = String(form.get("action") || "");
 
-	if (action === "login") {
+	if (action === "request-link") {
+		const email = String(form.get("email") || "").trim();
+		// Rate limited because this endpoint sends mail to a third party.
+		if (isRateLimited(Astro.request, "admin-login")) {
+			notice = "Příliš mnoho pokusů. Zkus to za chvíli.";
+			noticeKind = "error";
+		} else {
+			if (isEmailLoginAvailable() && isAllowedAdminEmail(email)) {
+				try {
+					const token = await createLoginToken(email);
+					await sendAdminLoginEmail(
+						email,
+						`${SHOP.siteUrl}/admin?token=${encodeURIComponent(token)}`,
+					);
+				} catch (error) {
+					console.error("[admin] login link failed:", error);
+				}
+			}
+			// Deliberately identical whether or not the address is an admin, so
+			// this form cannot be used to discover who has access.
+			notice =
+				"Pokud adresa patří správci, poslali jsme na ni přihlašovací odkaz.";
+		}
+	} else if (action === "login") {
 		if (await verifyPassword(String(form.get("password") || ""))) {
-			Astro.cookies.set(ADMIN_COOKIE, await sessionToken(), {
+			Astro.cookies.set(ADMIN_COOKIE, await passwordSessionValue(), {
 				httpOnly: true,
 				secure: true,
 				sameSite: "strict",
@@ -35,6 +88,7 @@ if (Astro.request.method === "POST") {
 		notice = "Nesprávné heslo.";
 		noticeKind = "error";
 	} else if (action === "logout") {
+		await revokeSession(Astro.cookies.get(ADMIN_COOKIE)?.value);
 		Astro.cookies.delete(ADMIN_COOKIE, { path: "/admin" });
 		return Astro.redirect("/admin", 303);
 	} else if (action === "mark-paid" || action === "resend-link") {
@@ -183,14 +237,38 @@ const statusLabels: Record<string, string> = {
         <p>Nastav ve Vercelu proměnnou <code>ADMIN_PASSWORD</code> a znovu nasaď web.</p>
       </div>
     ) : !authed ? (
-      <form class="admin-card admin-login" method="post">
+      <div class="admin-card admin-login">
         <h1>Administrace</h1>
         {notice && <p class:list={["admin-notice", noticeKind]}>{notice}</p>}
-        <input type="hidden" name="action" value="login" />
-        <label for="admin-password">Heslo</label>
-        <input id="admin-password" class="form-field" type="password" name="password" autocomplete="current-password" required />
-        <button class="btn-primary" type="submit">Přihlásit</button>
-      </form>
+
+        {isEmailLoginAvailable() ? (
+          <form method="post" class="admin-login-form">
+            <input type="hidden" name="action" value="request-link" />
+            <label for="admin-email">E-mail správce</label>
+            <input id="admin-email" class="form-field" type="email" name="email" autocomplete="email" required />
+            <button class="btn-primary" type="submit">Poslat přihlašovací odkaz</button>
+            <p class="admin-sub">Odkaz platí 15 minut a jde použít jen jednou.</p>
+          </form>
+        ) : (
+          <p class="admin-sub">
+            Přihlášení e-mailem není nastavené. Doplň <code>ADMIN_EMAILS</code>,
+            <code>RESEND_API_KEY</code> a <code>DATABASE_URL</code>.
+          </p>
+        )}
+
+        {isPasswordLoginAvailable() && (
+          <details class="admin-login-fallback">
+            <summary>Přihlásit heslem</summary>
+            <form method="post" class="admin-login-form">
+              <input type="hidden" name="action" value="login" />
+              <label for="admin-password">Heslo</label>
+              <input id="admin-password" class="form-field" type="password" name="password" autocomplete="current-password" required />
+              <button class="btn-secondary" type="submit">Přihlásit</button>
+              <p class="admin-sub">Záloha pro případ, že e-mail nebo databáze nefungují.</p>
+            </form>
+          </details>
+        )}
+      </div>
     ) : (
       <>
         <header class="admin-head">
@@ -373,9 +451,20 @@ const statusLabels: Record<string, string> = {
   .admin-login {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
-    max-width: 22rem;
+    gap: 0.85rem;
+    max-width: 24rem;
   }
+  .admin-login-form { display: flex; flex-direction: column; gap: 0.55rem; }
+  .admin-login-fallback {
+    border-top: 1px solid var(--border);
+    padding-top: 0.75rem;
+  }
+  .admin-login-fallback summary {
+    cursor: pointer;
+    color: var(--foreground-muted);
+    font-size: 0.9rem;
+  }
+  .admin-login-fallback[open] summary { margin-bottom: 0.6rem; }
   .admin-notice {
     border-radius: var(--radius);
     padding: 0.7rem 0.9rem;
