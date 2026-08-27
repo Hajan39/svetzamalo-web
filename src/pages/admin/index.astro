@@ -9,6 +9,7 @@ import {
 } from "@/lib/adminAuth";
 import { db, isDbConfigured, type LeadRow, type OrderRow } from "@/lib/db";
 import { isMailConfigured, sendPaidBookEmail } from "@/lib/mail";
+import { runReadinessChecks, type Check } from "@/lib/readiness";
 import { isPaidBookFileExposed, SHOP } from "@/lib/shopConfig";
 
 export const prerender = false;
@@ -73,6 +74,11 @@ if (Astro.request.method === "POST") {
 }
 
 const authed = await isAuthenticated(Astro.cookies.get(ADMIN_COOKIE)?.value);
+
+// Runs on every admin load: it is the only place the shop's dependencies get
+// exercised end to end, including actually reading the paid book file.
+const checks: Check[] = authed ? await runReadinessChecks() : [];
+const blocking = checks.filter((check) => check.state === "fail").length;
 
 let orders: OrderRow[] = [];
 let leads: LeadRow[] = [];
@@ -177,6 +183,26 @@ const statusLabels: Record<string, string> = {
             <p>Pokud tabulky ještě neexistují, spusť v Neonu obsah <code>db/schema.sql</code>.</p>
           </div>
         )}
+
+        <section class="admin-card admin-checks">
+          <h2>Stav zapojení</h2>
+          <p class="admin-checks-lead">
+            {blocking === 0
+              ? "Vše potřebné je nastavené."
+              : `${blocking} věc(i) blokují prodej — viz červené položky.`}
+          </p>
+          <ul>
+            {checks.map((check) => (
+              <li class:list={["admin-check", check.state]}>
+                <span class="admin-check-dot" aria-hidden="true"></span>
+                <span>
+                  <strong>{check.label}</strong>
+                  <span class="admin-sub">{check.detail}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
 
         <div class="admin-stats">
           <div><span>{paidCount}</span><p>Zaplaceno</p></div>
@@ -306,6 +332,22 @@ const statusLabels: Record<string, string> = {
   .admin-stats span { display: block; font-size: 1.5rem; font-weight: 800; font-variant-numeric: tabular-nums; }
   .admin-stats p { margin: 0.15rem 0 0; font-size: 0.8rem; color: var(--foreground-muted); }
   .admin-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+  .admin-checks h2 { font-size: 1.05rem; margin: 0; }
+  .admin-checks-lead { margin: 0.25rem 0 0.85rem; font-size: 0.9rem; color: var(--foreground-muted); }
+  .admin-checks ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.55rem; }
+  .admin-check { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.92rem; }
+  .admin-check-dot {
+    flex-shrink: 0;
+    width: 0.65rem;
+    height: 0.65rem;
+    margin-top: 0.4rem;
+    border-radius: 50%;
+    background: var(--border);
+  }
+  .admin-check.ok .admin-check-dot { background: #2e7d4f; }
+  .admin-check.warn .admin-check-dot { background: #c98a12; }
+  .admin-check.fail .admin-check-dot { background: #9f1d1d; }
+  .admin-check.fail strong { color: #9f1d1d; }
   .admin-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); }
   .admin-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
   .admin-table th {
