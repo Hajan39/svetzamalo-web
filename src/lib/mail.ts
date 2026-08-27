@@ -56,7 +56,7 @@ function button(href: string, label: string) {
 }
 
 export async function sendFreeEbookEmail(to: string) {
-	const url = `${SHOP.siteUrl}${SHOP.freeEbookPath}`;
+	const url = SHOP.freeEbookUrl;
 	return send(
 		to,
 		"Tvůj e-book od Světa za málo",

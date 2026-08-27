@@ -87,6 +87,20 @@ const en = {
 			emailPlaceholder: "Your email",
 			emailLabel: "Email",
 		},
+		bookCta: {
+			kicker: "The complete guide",
+			heading: "Want the whole thing in one place?",
+			body: "This article covers one topic. The book covers the whole trip — documents, flights, accommodation, insurance and money abroad.",
+			bullets: [
+				"230+ pages, tested on our own trips",
+				"Concrete procedures, not general advice",
+				"Download right after payment, yours forever",
+			],
+			priceLabel: "Price",
+			cta: "See the book",
+			freeAlt: "Or start with the",
+			freeAltLink: "free sample",
+		},
 		interactiveChecklist: {
 			title: "Checklist",
 			progress: "0 of 0 done",

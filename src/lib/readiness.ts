@@ -17,7 +17,7 @@ export interface Check {
 	detail: string;
 }
 
-const REQUIRED_TABLES = ["orders", "leads", "payment_events"];
+const REQUIRED_TABLES = ["shop_orders", "shop_leads", "shop_payment_events"];
 
 async function checkDatabase(): Promise<Check> {
 	if (!isDbConfigured()) {

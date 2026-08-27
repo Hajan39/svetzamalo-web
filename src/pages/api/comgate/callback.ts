@@ -35,7 +35,7 @@ export const POST: APIRoute = async ({ request }) => {
 
 	const sql = db();
 	const rows = (await sql`
-		SELECT * FROM orders WHERE comgate_trans_id = ${transId} LIMIT 1
+		SELECT * FROM shop_orders WHERE comgate_trans_id = ${transId} LIMIT 1
 	`) as unknown as OrderRow[];
 	const order = rows[0];
 
@@ -70,7 +70,7 @@ export const POST: APIRoute = async ({ request }) => {
 	if (nextStatus === "paid" && order.status !== "paid") {
 		const token = crypto.randomUUID();
 		await sql`
-			UPDATE orders
+			UPDATE shop_orders
 			SET status = 'paid', paid_at = now(), download_token = ${token}
 			WHERE id = ${order.id}
 		`;
@@ -85,7 +85,7 @@ export const POST: APIRoute = async ({ request }) => {
 	}
 
 	if (nextStatus !== order.status && order.status !== "paid") {
-		await sql`UPDATE orders SET status = ${nextStatus} WHERE id = ${order.id}`;
+		await sql`UPDATE shop_orders SET status = ${nextStatus} WHERE id = ${order.id}`;
 	}
 
 	return ok();

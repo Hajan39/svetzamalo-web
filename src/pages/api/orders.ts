@@ -57,7 +57,7 @@ async function insertOrder(data: {
 		const variableSymbol = randomVariableSymbol();
 		try {
 			const rows = (await sql`
-				INSERT INTO orders (
+				INSERT INTO shop_orders (
 					email, full_name, product_code, amount_minor, currency,
 					variable_symbol, payment_method, status, locale
 				) VALUES (
@@ -152,7 +152,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 			});
 
 			await db()`
-				UPDATE orders SET comgate_trans_id = ${payment.transId} WHERE id = ${order.id}
+				UPDATE shop_orders SET comgate_trans_id = ${payment.transId} WHERE id = ${order.id}
 			`;
 			await logPaymentEvent(order.id, "comgate", "created", {
 				transId: payment.transId,

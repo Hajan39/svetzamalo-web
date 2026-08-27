@@ -1,0 +1,173 @@
+---
+// Product offer for the end of long-form pages. Articles and destination
+// guides carry nearly all of the site's search traffic and until now had no
+// path to the product at all, so this is the only place most readers will ever
+// be offered the book.
+//
+// Degrades on purpose: if the paid book is not sellable yet it offers the free
+// ebook instead, so the page always has somewhere to convert.
+import type { SiteConfig } from "@/types";
+import { getPaidBookTitle, isFreeEbookEnabled, isPaidEbookEnabled } from "@/lib/bookConfig";
+import { translations } from "@/i18n/translations";
+import { getLangFromUrl } from "@/i18n/utils";
+import { withLocalePath } from "@/lib/i18n";
+import LeadCapture from "./LeadCapture.astro";
+
+interface Props {
+	siteConfig?: SiteConfig | null;
+	source?: string;
+}
+
+const { siteConfig, source = "article" } = Astro.props;
+const locale = getLangFromUrl(Astro.url);
+const text = translations[locale].components.bookCta;
+const bookText = translations[locale].pages.book;
+
+const paidLive = isPaidEbookEnabled(siteConfig);
+const freeLive = isFreeEbookEnabled(siteConfig);
+const bookTitle = getPaidBookTitle(siteConfig);
+const price = siteConfig?.bookPrice || siteConfig?.bookBankAmount;
+const cover = siteConfig?.bookCover;
+const bookHref = withLocalePath("/book/kompletni-pruvodce", locale);
+const freeHref = withLocalePath("/book", locale);
+---
+
+{paidLive ? (
+	<aside class="book-cta">
+		{cover && (
+			<img class="book-cta-cover" src={cover.src} alt={cover.alt || bookTitle} width="150" height="212" loading="lazy" decoding="async" />
+		)}
+		<div class="book-cta-body">
+			<p class="book-cta-kicker">{text.kicker}</p>
+			<h2>{text.heading}</h2>
+			<p class="book-cta-lead">{text.body}</p>
+			<ul class="book-cta-list">
+				{text.bullets.map((bullet) => <li>{bullet}</li>)}
+			</ul>
+			<div class="book-cta-actions">
+				<a class="btn-primary" href={bookHref} data-cta-source={source}>{text.cta}</a>
+				{price && <span class="book-cta-price">{text.priceLabel}: <strong>{price}</strong></span>}
+			</div>
+			{freeLive && (
+				<p class="book-cta-alt">
+					{text.freeAlt} <a href={freeHref}>{text.freeAltLink}</a>.
+				</p>
+			)}
+		</div>
+	</aside>
+) : freeLive ? (
+	<LeadCapture
+		source={`${source}_free`}
+		compact
+		kicker={bookText.travelMaterials}
+		buttonLabel={bookText.sendFree}
+	/>
+) : null}
+
+<style>
+	.book-cta {
+		display: grid;
+		grid-template-columns: auto minmax(0, 1fr);
+		gap: 1.5rem;
+		align-items: start;
+		margin-top: 2.5rem;
+		border: 1px solid var(--border);
+		border-left: 4px solid var(--primary);
+		border-radius: var(--radius);
+		background: var(--background-secondary);
+		padding: 1.6rem 1.75rem;
+	}
+
+	.book-cta-cover {
+		width: 150px;
+		height: auto;
+		border-radius: calc(var(--radius) * 0.6);
+		box-shadow: 0 10px 24px rgb(0 0 0 / 0.16);
+	}
+
+	.book-cta-body { min-width: 0; }
+
+	.book-cta-kicker {
+		margin: 0 0 0.3rem;
+		color: var(--primary);
+		font-size: 0.75rem;
+		font-weight: 800;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+	}
+
+	.book-cta h2 {
+		margin: 0 0 0.5rem;
+		font-size: clamp(1.25rem, 2.6vw, 1.6rem);
+		text-wrap: balance;
+	}
+
+	.book-cta-lead {
+		margin: 0 0 0.9rem;
+		color: var(--foreground-secondary);
+	}
+
+	.book-cta-list {
+		display: grid;
+		gap: 0.35rem;
+		margin: 0 0 1.15rem;
+		padding: 0;
+		list-style: none;
+	}
+
+	.book-cta-list li {
+		position: relative;
+		padding-left: 1.5rem;
+		color: var(--foreground-secondary);
+		font-size: 0.95rem;
+	}
+
+	/* Drawn rather than an emoji so it inherits the accent and stays crisp. */
+	.book-cta-list li::before {
+		content: "";
+		position: absolute;
+		left: 0.15rem;
+		top: 0.42em;
+		width: 0.5rem;
+		height: 0.28rem;
+		border-left: 2px solid var(--primary);
+		border-bottom: 2px solid var(--primary);
+		transform: rotate(-45deg);
+	}
+
+	.book-cta-actions {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.9rem;
+	}
+
+	.book-cta-price {
+		color: var(--foreground-secondary);
+		font-size: 0.95rem;
+	}
+
+	.book-cta-alt {
+		margin: 0.85rem 0 0;
+		color: var(--foreground-muted);
+		font-size: 0.88rem;
+	}
+
+	.book-cta-alt a {
+		color: var(--primary);
+		font-weight: 600;
+	}
+
+	@media (max-width: 640px) {
+		.book-cta {
+			grid-template-columns: 1fr;
+			padding: 1.35rem 1.25rem;
+			gap: 1.1rem;
+		}
+
+		.book-cta-cover {
+			width: 110px;
+			justify-self: start;
+		}
+	}
+</style>
