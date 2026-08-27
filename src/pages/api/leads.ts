@@ -1,9 +1,9 @@
 import type { APIRoute } from "astro";
 import { z } from "zod";
-import { isFreeEbookEnabled } from "@/lib/bookConfig";
-import { createLead, fetchSiteConfig } from "@/lib/content/api";
+import { db, isDbConfigured } from "@/lib/db";
 import { isEcomailConfigured, subscribeToEcomail } from "@/lib/ecomail";
-import { isOrderTestEmail } from "@/lib/orderTestMode";
+import { isMailConfigured, sendFreeEbookEmail } from "@/lib/mail";
+import { isFreeEbookLive } from "@/lib/shopConfig";
 import { isHoneypotTripped, isRateLimited } from "@/lib/spamGuard";
 
 export const prerender = false;
@@ -12,7 +12,6 @@ const leadSchema = z.object({
 	email: z.email(),
 	leadType: z.enum(["ebook", "newsletter", "book_notify"]).default("ebook"),
 	source: z.string().max(80).optional(),
-	testMode: z.string().optional(),
 });
 
 async function parseBody(request: Request) {
@@ -22,16 +21,18 @@ async function parseBody(request: Request) {
 	return Object.fromEntries(form.entries());
 }
 
+function wantsJson(request: Request) {
+	return (request.headers.get("content-type") || "").includes(
+		"application/json",
+	);
+}
+
 export const POST: APIRoute = async ({ request, redirect }) => {
 	const body = await parseBody(request);
 
 	if (isHoneypotTripped(body)) {
 		// Fake success: the bot must not learn it was detected.
-		if (
-			(request.headers.get("content-type") || "").includes("application/json")
-		) {
-			return Response.json({ status: "accepted" });
-		}
+		if (wantsJson(request)) return Response.json({ status: "accepted" });
 		return redirect("/book/success?lead=ebook", 303);
 	}
 
@@ -48,60 +49,53 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 		});
 	}
 
-	if (result.data.leadType === "ebook") {
-		const isTestLead =
-			result.data.testMode && isOrderTestEmail(result.data.email);
+	const { email, leadType, source } = result.data;
+	const wantsEbook = leadType === "ebook";
 
-		if (isTestLead) {
-			if (
-				(request.headers.get("content-type") || "").includes("application/json")
-			) {
-				return Response.json({ status: "test_accepted", testMode: true });
-			}
+	if (wantsEbook && !isFreeEbookLive()) {
+		return new Response(
+			JSON.stringify({ error: "free_ebook_not_configured" }),
+			{ status: 503 },
+		);
+	}
 
-			const params = new URLSearchParams({
-				lead: result.data.leadType,
-				test: "1",
-			});
-			return redirect(`/book/success?${params.toString()}`, 303);
-		}
-
-		// With Ecomail configured, ebook delivery is handled by its automation
-		// and does not depend on site config; the availability gate only
-		// protects the legacy Strapi flow.
-		if (!isEcomailConfigured()) {
-			const siteConfig = await fetchSiteConfig("cs");
-			if (!isFreeEbookEnabled(siteConfig)) {
-				return new Response(
-					JSON.stringify({ error: "free_ebook_not_configured" }),
-					{ status: 503 },
-				);
-			}
-		}
+	// Postgres is the record of truth for the mailing list. Without it we would
+	// hand out the ebook and lose the address, which is the whole point.
+	if (!isDbConfigured()) {
+		console.error("[leads] DATABASE_URL is not set — cannot store lead");
+		return new Response(JSON.stringify({ error: "storage_unavailable" }), {
+			status: 503,
+		});
 	}
 
 	try {
-		if (isEcomailConfigured()) {
-			await subscribeToEcomail(result.data);
-		} else {
-			await createLead({ ...result.data, locale: "cs" });
-		}
+		await db()`
+			INSERT INTO leads (email, lead_type, source, locale)
+			VALUES (${email}, ${leadType}, ${source ?? null}, 'cs')
+			ON CONFLICT (lower(email), lead_type) DO NOTHING
+		`;
 	} catch (error) {
-		console.warn(
-			"Lead persistence failed. Check Strapi lead/book-interest endpoint.",
-			error,
-		);
+		console.error("[leads] insert failed:", error);
 		return new Response(JSON.stringify({ error: "lead_persistence_failed" }), {
 			status: 502,
 		});
 	}
 
-	if (
-		(request.headers.get("content-type") || "").includes("application/json")
-	) {
-		return Response.json({ status: "accepted" });
+	// Newsletter tooling is optional; a failure there must not cost us the lead
+	// we already stored, so it is fire-and-forget.
+	if (isEcomailConfigured()) {
+		subscribeToEcomail({ email, leadType, source }).catch((error) =>
+			console.warn("[leads] Ecomail subscribe failed:", error),
+		);
 	}
 
-	const params = new URLSearchParams({ lead: result.data.leadType });
-	return redirect(`/book/success?${params.toString()}`, 303);
+	// With Ecomail connected its automation sends the ebook, so sending here too
+	// would deliver the same e-mail twice.
+	if (wantsEbook && !isEcomailConfigured() && isMailConfigured()) {
+		await sendFreeEbookEmail(email);
+	}
+
+	if (wantsJson(request)) return Response.json({ status: "accepted" });
+
+	return redirect(`/book/success?lead=${encodeURIComponent(leadType)}`, 303);
 };

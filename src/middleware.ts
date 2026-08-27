@@ -41,6 +41,7 @@ function shouldSkipPublicCache(request: Request, url: URL) {
 	const pathname = url.pathname.replace(/\/$/, "") || "/";
 	if (pathname.startsWith("/api/")) return true;
 	if (pathname.startsWith("/go/")) return true;
+	if (pathname.startsWith("/admin")) return true;
 	if (pathname === "/ebook/download" || pathname === "/en/ebook/download")
 		return true;
 	if (pathname === "/book/success" || pathname === "/en/book/success")

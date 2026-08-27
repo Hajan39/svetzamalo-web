@@ -1,89 +1,54 @@
-import type { APIRoute } from 'astro'
+import type { APIRoute } from "astro";
+import { db, isDbConfigured, type OrderRow } from "@/lib/db";
+import { SHOP } from "@/lib/shopConfig";
 
-export const prerender = false
-
-const STRAPI_URL = (
-  import.meta.env.STRAPI_URL ||
-  import.meta.env.PUBLIC_STRAPI_URL ||
-  ''
-).replace(/\/$/, '')
-
-if (import.meta.env.PROD && !STRAPI_URL) {
-  console.error('[ebook/download] STRAPI_URL is not set — ebook downloads will fail')
-}
-
-const STRAPI_API_TOKEN = import.meta.env.STRAPI_API_TOKEN
+export const prerender = false;
 
 function jsonResponse(body: unknown, status = 200) {
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: { 'Content-Type': 'application/json' },
-  })
+	return new Response(JSON.stringify(body), {
+		status,
+		headers: { "Content-Type": "application/json", "Cache-Control": "no-store" },
+	});
 }
 
-function extensionFromContentType(contentType: string | null) {
-  if (contentType?.includes('application/epub+zip')) return 'epub'
-  if (contentType?.includes('application/pdf')) return 'pdf'
-  return 'bin'
-}
-
-function resolveFilename(downloadUrl: URL, contentType: string | null) {
-  const requestedFormat = downloadUrl.searchParams.get('format')
-  const extension = requestedFormat === 'epub' || requestedFormat === 'pdf'
-    ? requestedFormat
-    : extensionFromContentType(contentType)
-
-  return `svet-za-malo-ebook.${extension}`
-}
-
+/**
+ * Serves the paid book against a per-order download token. The file URL itself
+ * is server-only, so the token is the only way to reach it and it exists only
+ * for orders that are actually paid.
+ */
 export const GET: APIRoute = async ({ url }) => {
-  const token = url.searchParams.get('token')
-  if (!token) {
-    return jsonResponse({ error: 'Missing token' }, 400)
-  }
+	const token = url.searchParams.get("token")?.trim();
+	if (!token) return jsonResponse({ error: "missing_token" }, 400);
+	if (!isDbConfigured()) return jsonResponse({ error: "unavailable" }, 503);
+	if (!SHOP.paidBookFileUrl) {
+		console.error("[download] PAID_BOOK_FILE_URL is not set");
+		return jsonResponse({ error: "unavailable" }, 503);
+	}
 
-  const strapiEndpoint = `${STRAPI_URL}/api/ebook/download?token=${encodeURIComponent(token)}`
-  const requestHeaders: HeadersInit = { Accept: 'application/json' }
-  if (STRAPI_API_TOKEN) {
-    requestHeaders.Authorization = `Bearer ${STRAPI_API_TOKEN}`
-  }
+	const rows = (await db()`
+		SELECT * FROM orders
+		WHERE download_token = ${token} AND status = 'paid'
+		LIMIT 1
+	`) as unknown as OrderRow[];
 
-  try {
-    const response = await fetch(strapiEndpoint, { headers: requestHeaders })
-    const body = await response.text()
+	if (!rows[0]) return jsonResponse({ error: "invalid_token" }, 404);
 
-    if (url.searchParams.get('download') !== '1') {
-      return new Response(body, {
-        status: response.status,
-        headers: { 'Content-Type': 'application/json' },
-      })
-    }
+	const upstream = await fetch(SHOP.paidBookFileUrl);
+	if (!upstream.ok || !upstream.body) {
+		console.error(
+			`[download] upstream file fetch failed: ${upstream.status} ${SHOP.paidBookFileUrl}`,
+		);
+		return jsonResponse({ error: "file_unavailable" }, 502);
+	}
 
-    const payload = JSON.parse(body) as { url?: string; error?: string }
-    if (!response.ok || !payload.url) {
-      return jsonResponse(payload || { error: 'Download unavailable' }, response.status)
-    }
+	const headers = new Headers({
+		"Content-Type": upstream.headers.get("content-type") || "application/pdf",
+		"Content-Disposition":
+			'attachment; filename="kompletni-cestovatelsky-pruvodce.pdf"',
+		"Cache-Control": "no-store",
+	});
+	const length = upstream.headers.get("content-length");
+	if (length) headers.set("Content-Length", length);
 
-    const fileResponse = await fetch(payload.url)
-    if (!fileResponse.ok || !fileResponse.body) {
-      return jsonResponse({ error: 'Download unavailable' }, 502)
-    }
-
-    const contentType = fileResponse.headers.get('content-type') || 'application/octet-stream'
-    const headers = new Headers({
-      'Content-Type': contentType,
-      'Content-Disposition': `attachment; filename="${resolveFilename(url, contentType)}"`,
-      'Cache-Control': 'no-store',
-    })
-    const contentLength = fileResponse.headers.get('content-length')
-    if (contentLength) headers.set('Content-Length', contentLength)
-
-    return new Response(fileResponse.body, {
-      status: 200,
-      headers,
-    })
-  } catch (error) {
-    console.error('Ebook download proxy failed:', error)
-    return jsonResponse({ error: 'Download unavailable' }, 502)
-  }
-}
+	return new Response(upstream.body, { status: 200, headers });
+};

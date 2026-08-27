@@ -1,27 +1,32 @@
 ---
-// Spam trap: a visually hidden text input humans never see or fill. Bots that
-// auto-fill every field reveal themselves and the API silently drops the
-// submission (see src/lib/spamGuard.ts). Must NOT be type="hidden" — bots
-// skip those; it has to look like a real field.
+// Spam trap: a field humans never see and never fill, so any submission that
+// fills it is a bot (see src/lib/spamGuard.ts).
+//
+// The hiding is done with inline styles on purpose. A honeypot that becomes
+// visible when a stylesheet fails to load is worse than no honeypot -- real
+// visitors get asked to leave a field empty. Inline styles cannot arrive late
+// or get cached separately from the markup.
+//
+// It must NOT be type="hidden": bots skip those, so it has to look like a real
+// text field to them while staying out of reach for people.
 interface Props {
 	id: string;
 }
 
 const { id } = Astro.props;
+
+const HIDDEN =
+	"position:absolute!important;left:-9999px!important;top:auto!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important;pointer-events:none!important;";
 ---
 
-<div class="hp-field" aria-hidden="true">
-	<label for={id}>Nechte toto pole prázdné / Leave this field empty</label>
-	<input id={id} type="text" name="website" tabindex="-1" autocomplete="off" />
+<div style={HIDDEN} aria-hidden="true">
+	<label for={id} style={HIDDEN}>Toto pole nevyplňujte</label>
+	<input
+		id={id}
+		style={HIDDEN}
+		type="text"
+		name="website"
+		tabindex="-1"
+		autocomplete="off"
+	/>
 </div>
-
-<style>
-	.hp-field {
-		position: absolute;
-		left: -9999px;
-		top: auto;
-		width: 1px;
-		height: 1px;
-		overflow: hidden;
-	}
-</style>

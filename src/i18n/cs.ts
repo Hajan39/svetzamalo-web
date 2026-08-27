@@ -158,7 +158,7 @@ const cs = {
 			destinationsIntro: (labels: string) =>
 				`Aktuálně pokrýváme hlavně ${labels}. Další místa postupně přibývají podle toho, co jde opravdu dobře naplánovat.`,
 			browseDestinations: "Procházet destinace",
-			emptyDestinations: "Destinace se načtou po propojení se Strapi.",
+			emptyDestinations: "Destinace se načtou po propojení s CMS.",
 			usageKicker: "Jak web používat",
 			usageHeading: "Vyber si podle fáze plánování",
 			path1Title: "Chci sestavit trasu",
@@ -173,7 +173,7 @@ const cs = {
 			newsKicker: "Náhodně z archivu",
 			newsHeading: "Tři tipy, na které se vyplatí mrknout",
 			articleArchive: "Archiv článků",
-			emptyArticles: "Zatím tu nejsou žádné články ze Strapi.",
+			emptyArticles: "Zatím tu nejsou žádné články.",
 			sendChecklist: "Poslat checklist",
 		},
 		articlesIndex: {
@@ -182,7 +182,7 @@ const cs = {
 				"Praktické články a cestovatelské průvodce pro lowcost cestování.",
 			heading: "Články",
 			intro: "Průvodce, rozpočty a praktické tipy pro plánování cest.",
-			cmsEmpty: "Ve Strapi zatím nejsou žádné články.",
+			cmsEmpty: "V CMS zatím nejsou žádné články.",
 			search: "Hledat",
 			searchPlaceholder: "Destinace, téma nebo rozpočet",
 			continent: "Kontinent",
@@ -218,7 +218,7 @@ const cs = {
 				"Vyber si zemi nebo oblast a začni plánovat cestu podle reálných nákladů.",
 			filterLabel: "Filtrovat destinace podle kontinentu",
 			all: "Vše",
-			empty: "Ve Strapi zatím nejsou žádné destinace.",
+			empty: "V CMS zatím nejsou žádné destinace.",
 			shown: "Zobrazeno destinací",
 		},
 		destinationContinent: {
@@ -256,7 +256,7 @@ const cs = {
 			sendFree: "Poslat ebook zdarma",
 			freeNote: "Pošleme PDF na email a občas dáme vědět, když vyjde něco k tématu.",
 			freeUnavailable:
-				"Materiál zdarma zatím není dostupný. Jakmile bude připravený, zapneš ho ve Strapi site configu.",
+				"Materiál zdarma zatím není dostupný. Jakmile bude připravený, zapneme ho.",
 			wantMore: "Když chceš víc",
 			priceLabel: "Cena",
 			fullNameLabel: "Jméno a příjmení",
@@ -327,7 +327,7 @@ const cs = {
 			pickDestination: "Vybrat destinaci",
 			readArticles: "Číst články",
 			bankIncomplete:
-				"Bankovní údaje zatím nejsou kompletně nastavené ve Strapi site configu.",
+				"Bankovní údaje zatím nejsou kompletně nastavené.",
 			paymentInstructions: "Platební instrukce",
 			paymentNote:
 				"Pošli platbu převodem - po připísání ti automaticky pošleme ebook.",
