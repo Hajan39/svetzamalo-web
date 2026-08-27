@@ -1,0 +1,333 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import {
+	ADMIN_COOKIE,
+	isAdminConfigured,
+	isAuthenticated,
+	sessionToken,
+	verifyPassword,
+} from "@/lib/adminAuth";
+import { db, isDbConfigured, type LeadRow, type OrderRow } from "@/lib/db";
+import { isMailConfigured, sendPaidBookEmail } from "@/lib/mail";
+import { SHOP } from "@/lib/shopConfig";
+
+export const prerender = false;
+
+let notice = "";
+let noticeKind: "ok" | "error" = "ok";
+
+if (Astro.request.method === "POST") {
+	const form = await Astro.request.formData();
+	const action = String(form.get("action") || "");
+
+	if (action === "login") {
+		if (await verifyPassword(String(form.get("password") || ""))) {
+			Astro.cookies.set(ADMIN_COOKIE, await sessionToken(), {
+				httpOnly: true,
+				secure: true,
+				sameSite: "strict",
+				path: "/admin",
+				maxAge: 60 * 60 * 12,
+			});
+			return Astro.redirect("/admin", 303);
+		}
+		notice = "Nesprávné heslo.";
+		noticeKind = "error";
+	} else if (action === "logout") {
+		Astro.cookies.delete(ADMIN_COOKIE, { path: "/admin" });
+		return Astro.redirect("/admin", 303);
+	} else if (action === "mark-paid") {
+		// Guarded separately: a POST must never act on an unauthenticated session.
+		if (!(await isAuthenticated(Astro.cookies.get(ADMIN_COOKIE)?.value))) {
+			return Astro.redirect("/admin", 303);
+		}
+		const id = Number(form.get("orderId"));
+		if (Number.isFinite(id) && id > 0) {
+			const rows = (await db()`
+				SELECT * FROM orders WHERE id = ${id} LIMIT 1
+			`) as unknown as OrderRow[];
+			const order = rows[0];
+
+			if (!order) {
+				notice = `Objednávka ${id} nenalezena.`;
+				noticeKind = "error";
+			} else if (order.status === "paid") {
+				notice = `Objednávka ${order.variable_symbol} už je zaplacená.`;
+			} else {
+				const token = order.download_token || crypto.randomUUID();
+				await db()`
+					UPDATE orders
+					SET status = 'paid', paid_at = now(), download_token = ${token}
+					WHERE id = ${id}
+				`;
+				const sent = isMailConfigured()
+					? await sendPaidBookEmail(order.email, token)
+					: false;
+				notice = sent
+					? `Označeno jako zaplacené, odkaz odeslán na ${order.email}.`
+					: `Označeno jako zaplacené. E-mail se neodeslal — odkaz zkopíruj níže a pošli ručně.`;
+				if (!sent) noticeKind = "error";
+			}
+		}
+	}
+}
+
+const authed = await isAuthenticated(Astro.cookies.get(ADMIN_COOKIE)?.value);
+
+let orders: OrderRow[] = [];
+let leads: LeadRow[] = [];
+let leadCount = 0;
+let dbError = "";
+
+if (authed && isDbConfigured()) {
+	try {
+		orders = (await db()`
+			SELECT * FROM orders ORDER BY created_at DESC LIMIT 200
+		`) as unknown as OrderRow[];
+		leads = (await db()`
+			SELECT * FROM leads ORDER BY created_at DESC LIMIT 50
+		`) as unknown as LeadRow[];
+		const counted = (await db()`
+			SELECT count(*)::int AS total FROM leads
+		`) as unknown as { total: number }[];
+		leadCount = counted[0]?.total ?? 0;
+	} catch (error) {
+		dbError = error instanceof Error ? error.message : String(error);
+	}
+}
+
+const paidCount = orders.filter((order) => order.status === "paid").length;
+const pendingCount = orders.filter((order) => order.status === "pending").length;
+const revenue = orders
+	.filter((order) => order.status === "paid")
+	.reduce((sum, order) => sum + order.amount_minor, 0);
+
+function formatDate(value: string | null) {
+	if (!value) return "—";
+	return new Date(value).toLocaleString("cs-CZ", {
+		day: "numeric",
+		month: "numeric",
+		year: "numeric",
+		hour: "2-digit",
+		minute: "2-digit",
+	});
+}
+
+function money(minor: number) {
+	return `${(minor / 100).toLocaleString("cs-CZ")} Kč`;
+}
+
+const statusLabels: Record<string, string> = {
+	paid: "Zaplaceno",
+	pending: "Čeká",
+	cancelled: "Zrušeno",
+};
+---
+
+<Layout title="Administrace objednávek" noindex={true} alternateLocales={["cs"]}>
+  <section class="admin-wrap">
+    {!isAdminConfigured() ? (
+      <div class="admin-card admin-warn">
+        <h1>Administrace není nastavená</h1>
+        <p>Nastav ve Vercelu proměnnou <code>ADMIN_PASSWORD</code> a znovu nasaď web.</p>
+      </div>
+    ) : !authed ? (
+      <form class="admin-card admin-login" method="post">
+        <h1>Administrace</h1>
+        {notice && <p class:list={["admin-notice", noticeKind]}>{notice}</p>}
+        <input type="hidden" name="action" value="login" />
+        <label for="admin-password">Heslo</label>
+        <input id="admin-password" class="form-field" type="password" name="password" autocomplete="current-password" required />
+        <button class="btn-primary" type="submit">Přihlásit</button>
+      </form>
+    ) : (
+      <>
+        <header class="admin-head">
+          <div>
+            <h1>Objednávky</h1>
+            <p>{SHOP.sellerName} · IČO {SHOP.sellerIco}</p>
+          </div>
+          <form method="post">
+            <input type="hidden" name="action" value="logout" />
+            <button class="btn-secondary" type="submit">Odhlásit</button>
+          </form>
+        </header>
+
+        {notice && <p class:list={["admin-notice", noticeKind]}>{notice}</p>}
+        {!isDbConfigured() && (
+          <div class="admin-card admin-warn">
+            <strong>Databáze není připojená.</strong>
+            <p>Nastav ve Vercelu <code>DATABASE_URL</code> (Neon) a znovu nasaď web.</p>
+          </div>
+        )}
+        {dbError && (
+          <div class="admin-card admin-warn">
+            <strong>Databáze odpověděla chybou.</strong>
+            <p>{dbError}</p>
+            <p>Pokud tabulky ještě neexistují, spusť v Neonu obsah <code>db/schema.sql</code>.</p>
+          </div>
+        )}
+
+        <div class="admin-stats">
+          <div><span>{paidCount}</span><p>Zaplaceno</p></div>
+          <div><span>{pendingCount}</span><p>Čeká na platbu</p></div>
+          <div><span>{money(revenue)}</span><p>Přijato celkem</p></div>
+          <div><span>{leadCount}</span><p>E-mailů v seznamu</p></div>
+        </div>
+
+        <div class="admin-actions">
+          <a class="btn-secondary" href="/api/admin/export?type=orders">Objednávky CSV</a>
+          <a class="btn-secondary" href="/api/admin/export?type=leads">E-maily CSV</a>
+        </div>
+
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr><th>Vytvořeno</th><th>Zákazník</th><th>VS</th><th>Částka</th><th>Platba</th><th>Stav</th><th></th></tr>
+            </thead>
+            <tbody>
+              {orders.length === 0 ? (
+                <tr><td colspan="7" class="admin-empty">Zatím žádné objednávky.</td></tr>
+              ) : orders.map((order) => (
+                <tr>
+                  <td>{formatDate(order.created_at)}</td>
+                  <td>
+                    <strong>{order.full_name}</strong>
+                    <span class="admin-sub">{order.email}</span>
+                  </td>
+                  <td class="admin-mono">{order.variable_symbol}</td>
+                  <td class="admin-mono">{money(order.amount_minor)}</td>
+                  <td>{order.payment_method === "comgate" ? "Karta" : "Převod"}</td>
+                  <td>
+                    <span class:list={["admin-pill", order.status]}>{statusLabels[order.status] || order.status}</span>
+                    {order.status === "paid" && order.download_token && (
+                      <a class="admin-sub admin-link" href={`/api/ebook/download?token=${order.download_token}`}>odkaz ke stažení</a>
+                    )}
+                  </td>
+                  <td>
+                    {order.status !== "paid" && (
+                      <form method="post" class="admin-inline-form">
+                        <input type="hidden" name="action" value="mark-paid" />
+                        <input type="hidden" name="orderId" value={String(order.id)} />
+                        <button class="btn-primary admin-small-btn" type="submit">Zaplaceno</button>
+                      </form>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="admin-h2">Poslední e-maily</h2>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead><tr><th>Kdy</th><th>E-mail</th><th>Typ</th><th>Odkud</th></tr></thead>
+            <tbody>
+              {leads.length === 0 ? (
+                <tr><td colspan="4" class="admin-empty">Zatím žádné kontakty.</td></tr>
+              ) : leads.map((lead) => (
+                <tr>
+                  <td>{formatDate(lead.created_at)}</td>
+                  <td>{lead.email}</td>
+                  <td>{lead.lead_type}</td>
+                  <td>{lead.source || "—"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </>
+    )}
+  </section>
+</Layout>
+
+<style>
+  .admin-wrap {
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .admin-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .admin-head p { color: var(--foreground-muted); font-size: 0.9rem; }
+  .admin-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--background-secondary);
+    padding: 1.25rem;
+  }
+  .admin-warn { border-color: var(--primary); }
+  .admin-login {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    max-width: 22rem;
+  }
+  .admin-notice {
+    border-radius: var(--radius);
+    padding: 0.7rem 0.9rem;
+    font-size: 0.92rem;
+    background: var(--primary-light);
+    color: var(--primary);
+  }
+  .admin-notice.error { background: #fdecec; color: #9f1d1d; }
+  .admin-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+  .admin-stats > div {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--background-secondary);
+    padding: 0.9rem 1rem;
+  }
+  .admin-stats span { display: block; font-size: 1.5rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .admin-stats p { margin: 0.15rem 0 0; font-size: 0.8rem; color: var(--foreground-muted); }
+  .admin-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+  .admin-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); }
+  .admin-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  .admin-table th {
+    text-align: left;
+    padding: 0.7rem 0.8rem;
+    background: var(--background-secondary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--foreground-muted);
+    white-space: nowrap;
+  }
+  .admin-table td { padding: 0.7rem 0.8rem; border-top: 1px solid var(--border); vertical-align: top; }
+  .admin-mono { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .admin-sub { display: block; font-size: 0.8rem; color: var(--foreground-muted); }
+  .admin-link { color: var(--primary); }
+  .admin-empty { text-align: center; color: var(--foreground-muted); padding: 1.5rem; }
+  .admin-pill {
+    display: inline-block;
+    border-radius: 999px;
+    padding: 0.1rem 0.55rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: var(--border);
+    color: var(--foreground-secondary);
+    white-space: nowrap;
+  }
+  .admin-pill.paid { background: #dff3e6; color: #1f6b40; }
+  .admin-pill.cancelled { background: #fdecec; color: #9f1d1d; }
+  .admin-inline-form { margin: 0; }
+  .admin-small-btn { min-height: 2.1rem; padding: 0.3rem 0.75rem; font-size: 0.82rem; }
+  .admin-h2 { margin-top: 1rem; }
+
+  @media (max-width: 760px) {
+    .admin-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+</style>

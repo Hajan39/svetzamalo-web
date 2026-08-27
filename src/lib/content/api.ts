@@ -1,7 +1,7 @@
-import type { SupportedLocale } from "@/types";
+import type { PageCopy, SupportedLocale } from "@/types";
 import * as sanityApi from "@/lib/sanity/api";
 import * as sanitySiteConfig from "@/lib/sanity/siteConfig";
-import * as strapiApi from "@/lib/strapi/api";
+import { envSiteConfig } from "@/lib/envSiteConfig";
 
 export const fetchLatestArticles = sanityApi.fetchLatestArticles;
 export const fetchArticles = sanityApi.fetchArticles;
@@ -16,20 +16,27 @@ export const fetchDestinationsByContinent =
 	sanityApi.fetchDestinationsByContinent;
 export const fetchAffiliateLinkBySlug = sanityApi.fetchAffiliateLinkBySlug;
 
-// Site config is read on every page render, so it must not sit behind a
-// per-request-billed API. Sanity is the primary source; Strapi stays as a
-// fallback until the siteConfig document is filled in, after which Strapi is
-// no longer touched on the read path at all.
+/**
+ * Sanity wins when an editor has filled in the Site config document; otherwise
+ * the shop runs off environment variables. Either way there is no per-request
+ * call to a paid CMS on the render path, and no single service whose outage
+ * hides the shop.
+ */
 export async function fetchSiteConfig(locale: SupportedLocale = "cs") {
 	const fromSanity = await sanitySiteConfig.fetchSiteConfig(locale);
 	if (fromSanity) return fromSanity;
 
-	return strapiApi.fetchSiteConfig(locale);
+	return envSiteConfig();
 }
 
-export function fetchPageCopy(key: string, locale: SupportedLocale = "cs") {
-	return strapiApi.fetchPageCopy(key, locale);
+/**
+ * Editable page copy lived in Strapi, which has been decommissioned. Callers
+ * already fall back to the bundled translations via copyValue(), so returning
+ * null keeps them on those.
+ */
+export async function fetchPageCopy(
+	_key: string,
+	_locale: SupportedLocale = "cs",
+): Promise<PageCopy | null> {
+	return null;
 }
-
-export const createLead = strapiApi.createLead;
-export const createOrder = strapiApi.createOrder;
