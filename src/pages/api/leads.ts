@@ -1,7 +1,6 @@
 import type { APIRoute } from "astro";
 import { z } from "zod";
 import { db, isDbConfigured } from "@/lib/db";
-import { isEcomailConfigured, subscribeToEcomail } from "@/lib/ecomail";
 import { isMailConfigured, sendFreeEbookEmail } from "@/lib/mail";
 import { isFreeEbookLive } from "@/lib/shopConfig";
 import { isHoneypotTripped, isRateLimited } from "@/lib/spamGuard";
@@ -81,17 +80,8 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 		});
 	}
 
-	// Newsletter tooling is optional; a failure there must not cost us the lead
-	// we already stored, so it is fire-and-forget.
-	if (isEcomailConfigured()) {
-		subscribeToEcomail({ email, leadType, source }).catch((error) =>
-			console.warn("[leads] Ecomail subscribe failed:", error),
-		);
-	}
 
-	// With Ecomail connected its automation sends the ebook, so sending here too
-	// would deliver the same e-mail twice.
-	if (wantsEbook && !isEcomailConfigured() && isMailConfigured()) {
+	if (wantsEbook && isMailConfigured()) {
 		await sendFreeEbookEmail(email);
 	}
 

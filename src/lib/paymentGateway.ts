@@ -26,12 +26,3 @@ export function getGatewayReturnPath(
 	return siteConfig?.bookGatewayReturnPath?.trim() || "/book/success";
 }
 
-export function buildGatewayTestUrl(variableSymbol: string) {
-	const params = new URLSearchParams({
-		vs: variableSymbol,
-		provider: "comgate",
-		test: "1",
-	});
-
-	return `/book/payment-test?${params.toString()}`;
-}

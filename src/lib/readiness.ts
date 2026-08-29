@@ -3,7 +3,6 @@ import {
 	isPasswordLoginAvailable,
 } from "./adminAuth";
 import { db, isDbConfigured } from "./db";
-import { isEcomailConfigured } from "./ecomail";
 import { isMailConfigured } from "./mail";
 import {
 	isBankTransferLive,
@@ -191,13 +190,6 @@ export async function runReadinessChecks(): Promise<Check[]> {
 		checkComgateCredentials(),
 	];
 
-	if (isEcomailConfigured()) {
-		list.push({
-			label: "Ecomail",
-			state: "ok",
-			detail: "Kontakty se posílají i do Ecomailu; free ebook doručuje jeho automatizace.",
-		});
-	}
 
 	return list;
 }

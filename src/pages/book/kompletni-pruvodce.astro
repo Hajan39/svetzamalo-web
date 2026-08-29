@@ -11,7 +11,6 @@ import {
 } from "@/lib/bookConfig";
 import { fetchSiteConfig } from "@/lib/content/api";
 import { SHOP } from "@/lib/shopConfig";
-import { isBookTestModeRequested, isOrderTestModeEnabled } from "@/lib/orderTestMode";
 import { getGatewayButtonLabel, isBookGatewayEnabled } from "@/lib/paymentGateway";
 import { translations } from "@/i18n/translations";
 import { getLangFromUrl, withLocalePath } from "@/i18n/utils";
@@ -28,11 +27,8 @@ const paidBookTitle = getPaidBookTitle(siteConfig) || "Kompletní cestovatelský
 const paidBookDescription = getPaidBookDescription(siteConfig);
 const freeEbookTitle = getFreeEbookTitle(siteConfig);
 const freeEbookAvailable = isFreeEbookEnabled(siteConfig);
-const orderTestModeEnabled = isOrderTestModeEnabled();
-const urlTestModeEnabled = isBookTestModeRequested(Astro.url.searchParams);
-const bookTestModeEnabled = orderTestModeEnabled || urlTestModeEnabled;
-const gatewayEnabled = isBookGatewayEnabled(siteConfig) || urlTestModeEnabled;
-const bankVisible = isPaidEbookEnabled(siteConfig) || urlTestModeEnabled;
+const gatewayEnabled = isBookGatewayEnabled(siteConfig);
+const bankVisible = isPaidEbookEnabled(siteConfig);
 const text = translations[locale].pages.book;
 const gatewayButtonLabel = getGatewayButtonLabel(siteConfig, text.orderByGateway);
 
@@ -229,19 +225,18 @@ const faq = [
 					<a class="btn-primary w-full" href={externalBuyUrl} rel="noopener">{text.buyExternal}</a>
 					<p class="lead-note">{text.buyExternalNote}</p>
 				</div>
-			) : (bankVisible || gatewayEnabled || bookTestModeEnabled) ? (
+			) : (bankVisible || gatewayEnabled) ? (
 				<form class="book-guide-order-form" method="post" action="/api/orders">
 					<input type="hidden" name="productCode" value="ebook-paid-v1" />
 					<HoneypotField id="hp-guide-order" />
-					{urlTestModeEnabled && <input type="hidden" name="testMode" value="1" />}
 					<label class="sr-only" for="guide-book-name">{text.fullNameLabel}</label>
 					<input id="guide-book-name" class="form-field" type="text" name="fullName" placeholder={text.fullNamePlaceholder} required />
 					<label class="sr-only" for="guide-book-email">{text.deliveryEmailLabel}</label>
 					<input id="guide-book-email" class="form-field" type="email" name="email" placeholder={text.deliveryEmailPlaceholder} required />
-					{(gatewayEnabled || bookTestModeEnabled) && (
+					{gatewayEnabled && (
 						<button class="btn-primary w-full" type="submit" name="paymentMethod" value="comgate">{gatewayButtonLabel}</button>
 					)}
-					{(bankVisible || bookTestModeEnabled) && (
+					{bankVisible && (
 						<button class="btn-secondary w-full" type="submit" name="paymentMethod" value="bank_transfer">{text.orderByBank}</button>
 					)}
 				</form>

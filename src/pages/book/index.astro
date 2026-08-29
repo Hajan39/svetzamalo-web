@@ -12,10 +12,6 @@ import {
 } from "@/lib/bookConfig";
 import { fetchSiteConfig } from "@/lib/content/api";
 import {
-	isBookTestModeRequested,
-	isOrderTestModeEnabled,
-} from "@/lib/orderTestMode";
-import {
 	getGatewayButtonLabel,
 	isBookGatewayEnabled,
 } from "@/lib/paymentGateway";
@@ -32,17 +28,12 @@ if (locale === "en" && !siteConfig) {
 const price = siteConfig?.bookPrice || siteConfig?.bookBankAmount || "490 Kč";
 const externalBuyUrl = getExternalBuyUrl(siteConfig);
 const freeEbookAvailable = isFreeEbookEnabled(siteConfig);
-const bankEnabled = isPaidEbookEnabled(siteConfig);
 const freeEbookTitle = getFreeEbookTitle(siteConfig);
 const freeEbookDescription = getFreeEbookDescription(siteConfig);
 const paidBookTitle = getPaidBookTitle(siteConfig);
 const paidBookDescription = getPaidBookDescription(siteConfig);
-const orderTestModeEnabled = isOrderTestModeEnabled();
-const urlTestModeEnabled = isBookTestModeRequested(Astro.url.searchParams);
-const bookTestModeEnabled = orderTestModeEnabled || urlTestModeEnabled;
-const gatewayEnabled = isBookGatewayEnabled(siteConfig) || urlTestModeEnabled;
-const freeEbookVisible = freeEbookAvailable || urlTestModeEnabled;
-const bankVisible = bankEnabled || urlTestModeEnabled;
+const gatewayEnabled = isBookGatewayEnabled(siteConfig);
+const bankVisible = isPaidEbookEnabled(siteConfig);
 const text = translations[locale].pages.book;
 const gatewayButtonLabel = getGatewayButtonLabel(
 	siteConfig,
@@ -60,7 +51,7 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
         <h1>{freeEbookTitle}</h1>
         <p>{freeEbookDescription}</p>
         <div class="hero-actions">
-          {freeEbookVisible ? (
+          {freeEbookAvailable ? (
             <>
               <a href="#ebook-zdarma" class="btn-primary">{text.downloadFree}</a>
               <a href={withLocalePath('/articles', locale)} class="btn-secondary">{text.browseArticles}</a>
@@ -122,12 +113,11 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
         {siteConfig?.freeEbookCover && <img class="book-option-media" src={siteConfig.freeEbookCover.src} alt={siteConfig.freeEbookCover.alt || freeEbookTitle} loading="lazy" decoding="async" />}
         <h3>{freeEbookTitle}</h3>
         <p>{freeEbookDescription}</p>
-        {freeEbookVisible ? (
+        {freeEbookAvailable ? (
           <form class="space-y-3" method="post" action="/api/leads">
             <input type="hidden" name="leadType" value="ebook" />
             <input type="hidden" name="source" value="book" />
             <HoneypotField id="hp-book-lead" />
-            {urlTestModeEnabled && <input type="hidden" name="testMode" value="1" />}
             <label class="sr-only" for="free-ebook-email">{text.freeEmailLabel}</label>
             <input id="free-ebook-email" class="form-field" type="email" name="email" placeholder={text.freeEmailPlaceholder} required />
             <button class="btn-primary w-full" type="submit">{text.sendFree}</button>
@@ -158,19 +148,18 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
             <a class="btn-primary w-full" href={externalBuyUrl} rel="noopener">{text.buyExternal}</a>
             <p class="lead-note">{text.buyExternalNote}</p>
           </div>
-        ) : bankVisible || gatewayEnabled || bookTestModeEnabled ? (
+        ) : bankVisible || gatewayEnabled ? (
           <form class="space-y-3" method="post" action="/api/orders">
             <input type="hidden" name="productCode" value="ebook-paid-v1" />
             <HoneypotField id="hp-book-order" />
-            {urlTestModeEnabled && <input type="hidden" name="testMode" value="1" />}
             <label class="sr-only" for="paid-book-name">{text.fullNameLabel}</label>
             <input id="paid-book-name" class="form-field" type="text" name="fullName" placeholder={text.fullNamePlaceholder} required />
             <label class="sr-only" for="paid-book-email">{text.deliveryEmailLabel}</label>
             <input id="paid-book-email" class="form-field" type="email" name="email" placeholder={text.deliveryEmailPlaceholder} required />
-            {gatewayEnabled || bookTestModeEnabled ? (
+            {gatewayEnabled ? (
               <button class="btn-primary w-full" type="submit" name="paymentMethod" value="comgate">{gatewayButtonLabel}</button>
             ) : null}
-            {bankVisible || bookTestModeEnabled ? (
+            {bankVisible ? (
               <button class="btn-secondary w-full" type="submit" name="paymentMethod" value="bank_transfer">{text.orderByBank}</button>
             ) : null}
           </form>
