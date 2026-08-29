@@ -66,3 +66,21 @@ export async function logPaymentEvent(
 		console.warn("payment_events insert failed:", error);
 	}
 }
+
+/**
+ * Records one ebook download. Never throws: the reader getting the file
+ * matters more than the statistic, so a failure here is logged and swallowed.
+ */
+export async function recordDownload(
+	kind: "free" | "paid",
+	orderId: number | null = null,
+): Promise<void> {
+	try {
+		await db()`
+			INSERT INTO shop_downloads (kind, order_id) VALUES (${kind}, ${orderId})
+		`;
+	} catch (error) {
+		console.warn("shop_downloads insert failed:", error);
+	}
+}
+

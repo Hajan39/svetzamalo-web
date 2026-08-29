@@ -42,8 +42,10 @@ export const SHOP = {
 
 	freeEbookTitle: env("FREE_EBOOK_TITLE", "10 nejdražších cestovatelských chyb"),
 	freeEbookPath: FREE_EBOOK_PATH,
-	/** Ready to link straight from an e-mail, wherever the file lives. */
+	/** The file itself, wherever it lives. */
 	freeEbookUrl: absoluteFileUrl(FREE_EBOOK_PATH),
+	/** What e-mails and pages link to, so downloads can be counted. */
+	freeEbookDownloadUrl: `${SITE_URL}/api/ebook/free`,
 
 	paidBookTitle: env("PAID_BOOK_TITLE", "Kompletní cestovatelský průvodce"),
 	/** Where the paid PDF lives. Never exposed to the browser. */

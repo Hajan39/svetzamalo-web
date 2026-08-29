@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import { db, isDbConfigured, type OrderRow } from "@/lib/db";
+import { db, isDbConfigured, recordDownload, type OrderRow } from "@/lib/db";
 import { SHOP } from "@/lib/shopConfig";
 
 export const prerender = false;
@@ -32,6 +32,8 @@ export const GET: APIRoute = async ({ url }) => {
 	`) as unknown as OrderRow[];
 
 	if (!rows[0]) return jsonResponse({ error: "invalid_token" }, 404);
+
+	await recordDownload("paid", rows[0].id);
 
 	const upstream = await fetch(SHOP.paidBookFileUrl);
 	if (!upstream.ok || !upstream.body) {
