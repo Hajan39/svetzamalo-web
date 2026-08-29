@@ -6,8 +6,7 @@ import {
 	getFreeEbookTitle,
 	getPaidBookTitle,
 } from "@/lib/bookConfig";
-import { fetchPageCopy, fetchSiteConfig } from "@/lib/content/api";
-import { copyValue } from "@/lib/copy";
+import { fetchSiteConfig } from "@/lib/content/api";
 import { translations } from "@/i18n/translations";
 import { getLangFromUrl, withLocalePath } from "@/i18n/utils";
 
@@ -36,19 +35,10 @@ const isComgatePaid =
 	(paymentStatus === "paid" || paidFlag === "1" || paidFlag === "true");
 const freeEbookTitle = getFreeEbookTitle(siteConfig);
 const paidBookTitle = getPaidBookTitle(siteConfig);
-const copy = await fetchPageCopy(
-	isLeadSuccess ? "book-success-lead" : "book-success-order",
-	locale,
-);
-const copyVariables = { freeEbookTitle, paidBookTitle, email, variableSymbol };
 const text = translations[locale].pages.bookSuccess;
 
-const pageTitle = copyValue(copy?.metaTitle, text.pageTitle, copyVariables);
-const pageDescription = copyValue(
-	copy?.metaDescription,
-	text.pageDescription,
-	copyVariables,
-);
+const pageTitle = text.pageTitle;
+const pageDescription = text.pageDescription;
 const analyticsEnabled = siteConfig?.enableAnalytics === true;
 const analyticsEventName = isLeadSuccess
 	? text.analyticsLeadEvent
@@ -103,8 +93,8 @@ const qrUrl = spdString
       </div>
       {isLeadSuccess ? (
         <>
-          <h1 class="mb-2 text-2xl font-bold md:text-3xl">{copyValue(copy?.heading, text.leadHeading(freeEbookTitle), copyVariables)}</h1>
-          <p class="max-w-md text-foreground-secondary">{copyValue(copy?.intro, text.leadIntro, copyVariables)}</p>
+          <h1 class="mb-2 text-2xl font-bold md:text-3xl">{text.leadHeading(freeEbookTitle)}</h1>
+          <p class="max-w-md text-foreground-secondary">{text.leadIntro}</p>
         </>
       ) : (
         <>
@@ -115,7 +105,7 @@ const qrUrl = spdString
             </>
           ) : (
             <>
-              <h1 class="mb-2 text-2xl font-bold md:text-3xl">{copyValue(copy?.heading, text.orderHeading, copyVariables)}</h1>
+              <h1 class="mb-2 text-2xl font-bold md:text-3xl">{text.orderHeading}</h1>
               <p class="text-foreground-secondary">
                 {text.product}: <strong class="text-foreground">{paidBookTitle}</strong>
                 {email && <> · {text.confirmationTo} <strong class="text-foreground">{email}</strong></>}
@@ -129,8 +119,8 @@ const qrUrl = spdString
     {isLeadSuccess && (
       <div class="brand-card px-6 py-7 sm:px-8 sm:py-8">
         <div class="flex flex-wrap gap-3">
-          <a class="btn-primary" href={withLocalePath('/destinations', locale)}>{copyValue(copy?.primaryButtonLabel, text.pickDestination, copyVariables)}</a>
-          <a class="btn-secondary" href={withLocalePath('/articles', locale)}>{copyValue(copy?.secondaryButtonLabel, text.readArticles, copyVariables)}</a>
+          <a class="btn-primary" href={withLocalePath('/destinations', locale)}>{text.pickDestination}</a>
+          <a class="btn-secondary" href={withLocalePath('/articles', locale)}>{text.readArticles}</a>
         </div>
       </div>
     )}
@@ -208,7 +198,7 @@ const qrUrl = spdString
         </div>
 
         <div class="flex flex-wrap gap-3">
-          <a class="btn-primary" href={withLocalePath('/', locale)}>{copyValue(copy?.primaryButtonLabel, text.backWeb, copyVariables)}</a>
+          <a class="btn-primary" href={withLocalePath('/', locale)}>{text.backWeb}</a>
           <a class="btn-secondary" href={withLocalePath('/articles', locale)}>{text.readArticles}</a>
         </div>
       </div>

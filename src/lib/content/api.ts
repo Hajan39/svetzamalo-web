@@ -1,4 +1,4 @@
-import type { PageCopy, SupportedLocale } from "@/types";
+import type { SupportedLocale } from "@/types";
 import * as sanityApi from "@/lib/sanity/api";
 import * as sanitySiteConfig from "@/lib/sanity/siteConfig";
 import { envSiteConfig } from "@/lib/envSiteConfig";
@@ -29,14 +29,3 @@ export async function fetchSiteConfig(locale: SupportedLocale = "cs") {
 	return envSiteConfig();
 }
 
-/**
- * Editable page copy lived in Strapi, which has been decommissioned. Callers
- * already fall back to the bundled translations via copyValue(), so returning
- * null keeps them on those.
- */
-export async function fetchPageCopy(
-	_key: string,
-	_locale: SupportedLocale = "cs",
-): Promise<PageCopy | null> {
-	return null;
-}
