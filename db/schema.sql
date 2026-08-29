@@ -74,3 +74,16 @@ CREATE TABLE IF NOT EXISTS shop_admin_tokens (
 
 CREATE INDEX IF NOT EXISTS shop_admin_tokens_expiry_idx
   ON shop_admin_tokens (expires_at);
+
+-- Ebook downloads. Deliberately holds no IP or user agent: the question is how
+-- many downloads happened, and storing more than that would make this personal
+-- data for no analytical gain.
+CREATE TABLE IF NOT EXISTS shop_downloads (
+  id          BIGSERIAL   PRIMARY KEY,
+  kind        TEXT        NOT NULL,          -- free | paid
+  order_id    BIGINT      REFERENCES shop_orders (id) ON DELETE SET NULL,
+  created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS shop_downloads_created_idx
+  ON shop_downloads (kind, created_at DESC);

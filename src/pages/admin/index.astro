@@ -20,6 +20,7 @@ import {
 	sendPaidBookEmail,
 } from "@/lib/mail";
 import { runReadinessChecks, type Check } from "@/lib/readiness";
+import { conversionRate, loadShopStats, type ShopStats } from "@/lib/stats";
 import { isRateLimited } from "@/lib/spamGuard";
 import { isPaidBookFileExposed, SHOP } from "@/lib/shopConfig";
 
@@ -154,6 +155,7 @@ let orders: OrderRow[] = [];
 let leads: LeadRow[] = [];
 let leadCount = 0;
 let events: PaymentEventRow[] = [];
+let stats: ShopStats | null = null;
 let dbError = "";
 
 interface PaymentEventRow {
@@ -187,6 +189,7 @@ if (authed && isDbConfigured()) {
 			SELECT count(*)::int AS total FROM shop_leads
 		`) as unknown as { total: number }[];
 		leadCount = counted[0]?.total ?? 0;
+		stats = await loadShopStats();
 		// Raw gateway traffic. Without this the only way to answer "did the
 		// callback arrive, and what did it say?" is digging through platform logs.
 		events = (await db()`
@@ -200,11 +203,12 @@ if (authed && isDbConfigured()) {
 	}
 }
 
-const paidCount = orders.filter((order) => order.status === "paid").length;
-const pendingCount = orders.filter((order) => order.status === "pending").length;
-const revenue = orders
-	.filter((order) => order.status === "paid")
-	.reduce((sum, order) => sum + order.amount_minor, 0);
+// Derived from the aggregate query, not from the 200 rows the listing shows,
+// so the totals stay right once there are more orders than that.
+const paidCount = stats?.orders.paid ?? 0;
+const pendingCount = stats?.orders.pending ?? 0;
+const revenue = stats?.orders.revenueMinor ?? 0;
+const conversion = stats ? conversionRate(stats) : null;
 
 function formatDate(value: string | null) {
 	if (!value) return "—";
@@ -328,11 +332,66 @@ const statusLabels: Record<string, string> = {
         </section>
 
         <div class="admin-stats">
-          <div><span>{paidCount}</span><p>Zaplaceno</p></div>
-          <div><span>{pendingCount}</span><p>Čeká na platbu</p></div>
           <div><span>{money(revenue)}</span><p>Přijato celkem</p></div>
+          <div><span>{paidCount}</span><p>Zaplacených objednávek</p></div>
+          <div><span>{pendingCount}</span><p>Čeká na platbu</p></div>
           <div><span>{leadCount}</span><p>E-mailů v seznamu</p></div>
         </div>
+
+        {stats && (
+          <section class="admin-card admin-metrics">
+            <h2>Statistiky</h2>
+            <div class="admin-metric-grid">
+              <div class="admin-metric">
+                <h3>Sběr e-mailů</h3>
+                <p class="admin-metric-main">{stats.leads.total}<span> celkem</span></p>
+                <ul>
+                  <li>{stats.leads.last7} za 7 dní · {stats.leads.last30} za 30 dní</li>
+                  <li>{stats.leads.ebook} pro ebook · {stats.leads.newsletter} newsletter</li>
+                </ul>
+              </div>
+
+              <div class="admin-metric">
+                <h3>Stažení ebooku</h3>
+                <p class="admin-metric-main">{stats.downloads.free}<span> zdarma</span></p>
+                <ul>
+                  <li>{stats.downloads.freeLast7} za posledních 7 dní</li>
+                  <li>{stats.downloads.paid} stažení placené knihy ({stats.downloads.paidLast7} za 7 dní)</li>
+                </ul>
+              </div>
+
+              <div class="admin-metric">
+                <h3>Prodej</h3>
+                <p class="admin-metric-main">{money(stats.orders.revenueLast30Minor)}<span> za 30 dní</span></p>
+                <ul>
+                  <li>{stats.orders.paidLast30} objednávek za 30 dní</li>
+                  <li>
+                    {conversion === null
+                      ? "Konverze: zatím málo dat"
+                      : `Konverze z ebooku: ${conversion.toFixed(1)} %`}
+                  </li>
+                </ul>
+              </div>
+
+              <div class="admin-metric">
+                <h3>Odkud lidé přicházejí</h3>
+                {stats.leads.topSources.length === 0 ? (
+                  <p class="admin-sub">Zatím žádná data.</p>
+                ) : (
+                  <ul class="admin-sources">
+                    {stats.leads.topSources.map((row) => (
+                      <li><span>{row.source}</span><strong>{row.count}</strong></li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+            <p class="admin-sub admin-metric-note">
+              Stažení se počítají při každém kliknutí na odkaz, ne na unikátního
+              člověka — jeden zájemce si soubor může stáhnout víckrát.
+            </p>
+          </section>
+        )}
 
         <div class="admin-actions">
           <a class="btn-secondary" href="/api/admin/export?type=orders">Objednávky CSV</a>
@@ -487,6 +546,31 @@ const statusLabels: Record<string, string> = {
   .admin-stats span { display: block; font-size: 1.5rem; font-weight: 800; font-variant-numeric: tabular-nums; }
   .admin-stats p { margin: 0.15rem 0 0; font-size: 0.8rem; color: var(--foreground-muted); }
   .admin-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+  .admin-metrics h2 { font-size: 1.05rem; margin: 0 0 0.85rem; }
+  .admin-metric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    gap: 1.1rem;
+  }
+  .admin-metric h3 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--foreground-muted);
+    margin: 0 0 0.3rem;
+  }
+  .admin-metric-main {
+    margin: 0 0 0.35rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+  .admin-metric-main span { font-size: 0.8rem; font-weight: 500; color: var(--foreground-muted); }
+  .admin-metric ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.2rem; }
+  .admin-metric li { font-size: 0.85rem; color: var(--foreground-secondary); }
+  .admin-sources li { display: flex; justify-content: space-between; gap: 1rem; }
+  .admin-sources strong { font-variant-numeric: tabular-nums; }
+  .admin-metric-note { margin-top: 1rem; }
   .admin-checks h2 { font-size: 1.05rem; margin: 0; }
   .admin-checks-lead { margin: 0.25rem 0 0.85rem; font-size: 0.9rem; color: var(--foreground-muted); }
   .admin-checks ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.55rem; }
