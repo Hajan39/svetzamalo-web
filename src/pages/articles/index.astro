@@ -43,6 +43,7 @@ let [pageResult, filterMeta, allArticles, destinations] = await Promise.all([
 	fetchAllArticles(locale, sanityOptions),
 	fetchDestinations(locale, sanityOptions),
 ]);
+const hasLocaleContent = pageResult.total > 0 || filterMeta.length > 0;
 if (locale === "en" && pageResult.total === 0 && filterMeta.length === 0) {
 	[pageResult, filterMeta, allArticles, destinations] = await Promise.all([
 		fetchArticlesPage(requestedPage, "cs", undefined, sanityOptions),
@@ -51,6 +52,25 @@ if (locale === "en" && pageResult.total === 0 && filterMeta.length === 0) {
 		fetchDestinations("cs", sanityOptions),
 	]);
 }
+// Search Console reported 167 of these URLs as excluded, because every
+// paginated and filtered variant declared /articles as its canonical. Google
+// therefore dropped everything past page one.
+//
+// Pagination is real, indexable content and must point at itself. Filter
+// combinations are faceted navigation -- crawlable, but not worth indexing --
+// so they say noindex,follow rather than leaving Google to work it out.
+const usedEnglishFallback = locale === "en" && !hasLocaleContent;
+const listingNoindex = activeFilters || usedEnglishFallback;
+const listingCanonicalPath =
+	requestedPage > 1
+		? `${withLocalePath("/articles", locale)}?page=${requestedPage}`
+		: withLocalePath("/articles", locale);
+// An English page showing Czech articles is not an English version of
+// anything, so it must not be advertised as one.
+const listingAlternateLocales: ("cs" | "en")[] = usedEnglishFallback
+	? ["en"]
+	: ["cs", "en"];
+
 const destinationBySlug = new Map(
 	destinations.map((destination) => [destination.slug, destination]),
 );
@@ -229,7 +249,7 @@ function getArticlesPageHref(page: number) {
 }
 ---
 
-<Layout title={text.title} description={text.description} canonicalPath={withLocalePath('/articles', locale)}>
+<Layout title={text.title} description={text.description} canonicalPath={listingCanonicalPath} noindex={listingNoindex} alternateLocales={listingAlternateLocales}>
   <section class="container-wide py-10 md:py-16">
     <header class="mb-8 max-w-2xl">
       <h1 class="mb-4">{text.heading}</h1>
