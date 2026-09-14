@@ -26,6 +26,22 @@ CREATE TABLE IF NOT EXISTS shop_leads (
 CREATE UNIQUE INDEX IF NOT EXISTS shop_leads_email_type_idx
   ON shop_leads (lower(email), lead_type);
 
+-- Follow-up sequence after the free ebook (src/lib/leadSequence.ts, sent by
+-- /api/cron/lead-sequence). sequence_step counts mails already sent;
+-- next_send_at NULL means nothing more is scheduled.
+ALTER TABLE shop_leads ADD COLUMN IF NOT EXISTS sequence_step     INTEGER     NOT NULL DEFAULT 0;
+ALTER TABLE shop_leads ADD COLUMN IF NOT EXISTS next_send_at      TIMESTAMPTZ;
+ALTER TABLE shop_leads ADD COLUMN IF NOT EXISTS unsubscribed_at   TIMESTAMPTZ;
+ALTER TABLE shop_leads ADD COLUMN IF NOT EXISTS unsubscribe_token TEXT        NOT NULL UNIQUE DEFAULT gen_random_uuid()::text;
+
+CREATE INDEX IF NOT EXISTS shop_leads_due_idx
+  ON shop_leads (next_send_at) WHERE next_send_at IS NOT NULL AND unsubscribed_at IS NULL;
+
+-- Existing ebook leads join the sequence from tomorrow; the daily batch limit
+-- spreads them out.
+UPDATE shop_leads SET next_send_at = now() + interval '1 day'
+WHERE lead_type = 'ebook' AND sequence_step = 0 AND next_send_at IS NULL AND unsubscribed_at IS NULL;
+
 CREATE TABLE IF NOT EXISTS shop_orders (
   id               BIGSERIAL PRIMARY KEY,
   email            TEXT        NOT NULL,

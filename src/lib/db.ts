@@ -48,6 +48,10 @@ export interface LeadRow {
 	source: string | null;
 	locale: string;
 	created_at: string;
+	sequence_step: number;
+	next_send_at: string | null;
+	unsubscribed_at: string | null;
+	unsubscribe_token: string;
 }
 
 export async function logPaymentEvent(

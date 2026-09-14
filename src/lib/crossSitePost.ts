@@ -8,7 +8,9 @@
 // Server-to-server callers legitimately have no Origin header, so these paths
 // opt out. Each authenticates its caller by other means -- the Comgate callback
 // verifies the shop secret and re-checks the payment against the gateway.
-export const ORIGIN_CHECK_EXEMPT = ["/api/comgate/callback"];
+// One-click unsubscribe is a server-to-server POST from the mail provider,
+// exactly like the payment webhook: no Origin header, not a CSRF.
+export const ORIGIN_CHECK_EXEMPT = ["/api/comgate/callback", "/api/unsubscribe"];
 
 const FORM_CONTENT_TYPES = [
 	"application/x-www-form-urlencoded",

@@ -72,8 +72,8 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 
 	try {
 		await db()`
-			INSERT INTO shop_leads (email, lead_type, source, locale)
-			VALUES (${email}, ${leadType}, ${source ?? null}, 'cs')
+			INSERT INTO shop_leads (email, lead_type, source, locale, next_send_at)
+			VALUES (${email}, ${leadType}, ${source ?? null}, 'cs', CASE WHEN ${leadType} = 'ebook' THEN now() + interval '2 days' END)
 			ON CONFLICT (lower(email), lead_type) DO NOTHING
 		`;
 	} catch (error) {

@@ -32,7 +32,9 @@ Run `db/schema.sql` once in the Neon SQL editor before the first order.
   - `comgate` → redirect to the gateway → `POST /api/comgate/callback` marks the order paid and
     e-mails the download link (`/api/ebook/download?token=…`)
   - `bank_transfer` → `/book/success` with QR + variable symbol → marked paid manually in `/admin`
-- `LeadCapture` forms → `POST /api/leads` → free ebook e-mail
+- `LeadCapture` forms → `POST /api/leads` → free ebook e-mail, then a 4-mail follow-up
+  sequence (`src/lib/leadSequence.ts`) sent by the daily Vercel Cron `/api/cron/lead-sequence`
+  (needs `CRON_SECRET`); `/api/unsubscribe?token=…` opts an address out
 - `/admin` – orders, leads, gateway events, readiness checks. Login by e-mailed one-time link
   (`ADMIN_EMAILS`) or the fallback `ADMIN_PASSWORD`.
 

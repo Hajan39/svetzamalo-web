@@ -12,7 +12,13 @@ export function isMailConfigured(): boolean {
 	return Boolean(RESEND_API_KEY);
 }
 
-async function send(to: string, subject: string, html: string, text: string) {
+async function send(
+	to: string,
+	subject: string,
+	html: string,
+	text: string,
+	headers?: Record<string, string>,
+) {
 	if (!isMailConfigured()) {
 		console.warn(`[mail] RESEND_API_KEY not set — skipped "${subject}" to ${to}`);
 		return false;
@@ -25,6 +31,7 @@ async function send(to: string, subject: string, html: string, text: string) {
 			subject,
 			html,
 			text,
+			...(headers ? { headers } : {}),
 		});
 		if (error) {
 			console.warn("[mail] Resend rejected the message:", error);
@@ -136,3 +143,18 @@ export async function sendAdminLoginEmail(to: string, loginUrl: string) {
 	);
 }
 
+
+/** One mail of the free-ebook follow-up sequence (src/lib/leadSequence.ts). */
+export async function sendSequenceEmail(
+	to: string,
+	subject: string,
+	heading: string,
+	bodyHtml: string,
+	text: string,
+	unsubscribeUrl: string,
+) {
+	return send(to, subject, layout(heading, bodyHtml), `${text}\n\n${SHOP.sellerName}, IČO ${SHOP.sellerIco}`, {
+		"List-Unsubscribe": `<${unsubscribeUrl}>`,
+		"List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+	});
+}
