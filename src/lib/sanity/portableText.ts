@@ -1,4 +1,5 @@
 import { toHTML } from "@portabletext/to-html";
+import { cleanCmsCopy } from "@/lib/typography";
 
 interface SanityImageValue {
 	asset?: {
@@ -45,7 +46,8 @@ function escapeAttr(value: string): string {
 export function sanityPortableTextToHtml(value: unknown): string {
 	if (!Array.isArray(value) || value.length === 0) return "";
 
-	return toHTML(value, {
+	// Editors paste emoji and em dashes into Sanity; the site does not use them.
+	return cleanCmsCopy(toHTML(value, {
 		components: {
 			block: {
 				// The page already renders the title as <h1>; an h1 in the body would be a second one.
@@ -89,7 +91,7 @@ export function sanityPortableTextToHtml(value: unknown): string {
 				},
 			},
 		},
-	});
+	}));
 }
 
 export interface AffiliateLinkForReplacement {
@@ -113,7 +115,7 @@ export function replaceAffiliateKeywords(
 	const active = links.filter((l) => l.keywords.length > 0);
 	if (active.length === 0) return html;
 
-	// Build lowercase keyword → link map; first definition wins on duplicates
+	// Build a lowercase keyword-to-link map; first definition wins on duplicates
 	const keywordMap = new Map<string, { slug: string; relSponsored: boolean }>();
 	for (const link of active) {
 		for (const kw of link.keywords) {

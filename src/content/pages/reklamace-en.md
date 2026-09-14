@@ -24,7 +24,7 @@ If you placed an order via bank transfer and payment has not yet been credited, 
 
 If a product was not delivered due to a technical error or any fault on the operator's side, you are entitled to a full refund. Submit your request to info@svetzamalo.cz with your order number. Refunds are processed to the original payment method within 14 days of claim approval.
 
-## Complaints – Defective Product
+## Complaints: defective product
 
 If you receive a defective or unreadable file, notify us at info@svetzamalo.cz within 6 months of purchase. We will send a corrected or replacement file.
 

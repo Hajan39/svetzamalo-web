@@ -64,7 +64,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 	// Postgres is the record of truth for the mailing list. Without it we would
 	// hand out the ebook and lose the address, which is the whole point.
 	if (!isDbConfigured()) {
-		console.error("[leads] DATABASE_URL is not set — cannot store lead");
+		console.error("[leads] DATABASE_URL is not set, cannot store lead");
 		return new Response(JSON.stringify({ error: "storage_unavailable" }), {
 			status: 503,
 		});

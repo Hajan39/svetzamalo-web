@@ -5,6 +5,7 @@ import type {
 	SupportedLocale,
 } from "@/types";
 import { stegaClean } from "@sanity/client/stega";
+import { cleanCmsCopy } from "@/lib/typography";
 import { ARTICLE_COVER_FALLBACKS } from "../articleCoverFallbacks";
 import {
 	sanityPortableTextToHtml,
@@ -194,6 +195,15 @@ function cleanString(value?: string): string | undefined {
 	return value ? stegaClean(value) : value;
 }
 
+/**
+ * For headlines, summaries and meta text: the same emoji and dash cleanup the
+ * body copy gets in sanityPortableTextToHtml. Stega metadata is left in place,
+ * so this is still safe to hand to the visual editing overlay.
+ */
+function cleanCopy(value?: string): string | undefined {
+	return value ? cleanCmsCopy(value) : value;
+}
+
 function findFirstContentImage(content: unknown[] | undefined) {
 	if (!Array.isArray(content)) return undefined;
 
@@ -289,9 +299,9 @@ function normalizeDrivingSide(value?: string): string | undefined {
 function transformDestination(destination: SanityCountry): Destination {
 	const heroImage = normalizeMedia(destination.cover);
 	const introHtml = sanityPortableTextToHtml(destination.intro);
-	const name = cleanString(destination.name) || destination.name;
+	const name = cleanCopy(cleanString(destination.name)) || destination.name;
 	const metaDescription =
-		cleanString(destination.seoDescription) ||
+		cleanCopy(cleanString(destination.seoDescription)) ||
 		introHtml
 			.replace(/<[^>]+>/g, " ")
 			.replace(/\s+/g, " ")
@@ -320,7 +330,7 @@ function transformDestination(destination: SanityCountry): Destination {
 			(cleanString(destination.locale) as SupportedLocale | undefined) || "cs",
 		currency: parseCurrencyFromQuickFacts(destination.quickFacts?.currency),
 		seo: {
-			metaTitle: cleanString(destination.seoTitle) || `${name} | Svět za málo`,
+			metaTitle: cleanCopy(cleanString(destination.seoTitle)) || `${name} | Svět za málo`,
 			metaDescription,
 			keywords: [name, "levné cestování"],
 		},
@@ -328,12 +338,12 @@ function transformDestination(destination: SanityCountry): Destination {
 }
 
 function transformArticle(article: SanityArticle): Article {
-	const intro = article.excerpt || "";
+	const intro = cleanCmsCopy(article.excerpt || "");
 	const cover =
 		normalizeMedia(article.cover) ?? findFirstContentImage(article.content);
 	const slug = cleanString(article.slug) || article.slug;
-	const title = article.title;
-	const cleanTitle = cleanString(article.title) || article.title;
+	const title = cleanCmsCopy(article.title);
+	const cleanTitle = cleanCopy(cleanString(article.title)) || title;
 	const coverFallback = ARTICLE_COVER_FALLBACKS[slug];
 	const resolvedCover = shouldUseCoverFallback(cover)
 		? (coverFallback ?? cover)
@@ -349,7 +359,7 @@ function transformArticle(article: SanityArticle): Article {
 		destinationId: cleanString(article.country?.slug),
 		countryName: article.country?.name,
 		coverImage: resolvedCover
-			? { ...resolvedCover, alt: resolvedCover.alt || article.title }
+			? { ...resolvedCover, alt: resolvedCover.alt || title }
 			: undefined,
 		relatedArticles: article.relatedArticles
 			?.map(transformArticle)
@@ -361,9 +371,9 @@ function transformArticle(article: SanityArticle): Article {
 			(cleanString(article.locale) as SupportedLocale | undefined) || "cs",
 		seo: {
 			metaTitle:
-				cleanString(article.seoTitle) || `${cleanTitle} | Svět za málo`,
+				cleanCopy(cleanString(article.seoTitle)) || `${cleanTitle} | Svět za málo`,
 			metaDescription:
-				cleanString(article.seoDescription) ||
+				cleanCopy(cleanString(article.seoDescription)) ||
 				cleanString(intro)?.slice(0, 160) ||
 				"",
 			keywords: [cleanTitle, "levné cestování"],

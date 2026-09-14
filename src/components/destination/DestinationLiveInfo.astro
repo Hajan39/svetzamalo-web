@@ -1,6 +1,6 @@
 ---
 /**
- * Live destination info strip — always rendered, client-side JS reads structured
+ * Live destination info strip: always rendered, client-side JS reads structured
  * destination quick facts from data attributes (currency, timezone, driving side, sockets).
  *  - Exchange rate to the user's preferred header currency (Frankfurter, no auth)
  *  - Current local time (Intl.DateTimeFormat, IANA or UTC±H)
@@ -112,7 +112,7 @@ const shared = translations[locale].shared;
 
 <script>
 (function destLive() {
-  /* ── Socket SVG definitions (must be first — used in filter below) ── */
+  /* Socket SVG definitions (must be first, used in the filter below) */
   const BASE = `<rect x="3" y="3" width="54" height="74" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="2"/>`;
   const SOCKETS: Record<string, { label: string; svgInner: string }> = {
     A: { label: '', svgInner: BASE + `<rect x="18" y="20" width="9" height="27" rx="2.5" fill="#374151"/><rect x="33" y="20" width="9" height="27" rx="2.5" fill="#374151"/>` },
@@ -152,7 +152,7 @@ const shared = translations[locale].shared;
   bar.style.display = 'flex';
   bar.classList.remove('hidden');
 
-  /* ── 1. Exchange rate ──────────────────────────────── */
+  /* 1. Exchange rate */
   if (currencyCode) {
     const wrap     = document.getElementById('live-currency-wrap');
     const amountEl = document.getElementById('live-currency-amount');
@@ -253,7 +253,7 @@ const shared = translations[locale].shared;
     });
   }
 
-  /* ── 2. Live local time ────────────────────────────── */
+  /* 2. Live local time */
   if (timezoneRaw) {
     const iana = resolveIANA(timezoneRaw);
     const wrap    = document.getElementById('live-clock-wrap');
@@ -302,7 +302,7 @@ const shared = translations[locale].shared;
     }
   }
 
-  /* ── 3. Driving side ──────────────────────────────── */
+  /* 3. Driving side */
   if (drivingSide) {
     const drivingEl = document.getElementById('live-driving');
     const drivingSideEl = document.getElementById('live-driving-side');
@@ -317,7 +317,7 @@ const shared = translations[locale].shared;
     }
   }
 
-  /* ── 4. Socket type badges ─────────────────────────── */
+  /* 4. Socket type badges */
   if (socketTypes.length > 0) {
     const socketEl  = document.getElementById('live-socket');
     const sepSocket = document.getElementById('live-sep-socket');
@@ -343,7 +343,7 @@ const shared = translations[locale].shared;
     initSocketTooltip(tagsEl);
   }
 
-  /* ── Socket tooltip ────────────────────────────────── */
+  /* Socket tooltip */
   function initSocketTooltip(container: HTMLElement) {
     const tip      = document.getElementById('socket-tip') as HTMLElement | null;
     const tipSvg   = document.getElementById('socket-tip-svg') as SVGElement | null;
@@ -380,7 +380,7 @@ const shared = translations[locale].shared;
     });
   }
 
-  /* ── Helpers ───────────────────────────────────────── */
+  /* Helpers */
   function normalizeCurrencyCode(value?: string): string | null {
     const raw = (value || '').trim();
     if (!raw) return null;

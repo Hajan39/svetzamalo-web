@@ -27,7 +27,7 @@ async function checkDatabase(): Promise<Check> {
 		return {
 			label: "Databáze (Neon)",
 			state: "fail",
-			detail: "DATABASE_URL není nastavená — objednávky ani kontakty se neuloží.",
+			detail: "DATABASE_URL není nastavená, objednávky ani kontakty se neuloží.",
 		};
 	}
 	try {
@@ -71,14 +71,14 @@ async function checkPaidBookFile(): Promise<Check> {
 		return {
 			label,
 			state: "warn",
-			detail: "PAID_BOOK_FILE_URL není nastavená — kniha se neprodává.",
+			detail: "PAID_BOOK_FILE_URL není nastavená, kniha se neprodává.",
 		};
 	}
 	if (isPaidBookFileExposed()) {
 		return {
 			label,
 			state: "fail",
-			detail: "Soubor leží ve veřejné části webu — stáhne ho kdokoli bez zaplacení.",
+			detail: "Soubor leží ve veřejné části webu, stáhne ho kdokoli bez zaplacení.",
 		};
 	}
 
@@ -99,8 +99,8 @@ async function checkPaidBookFile(): Promise<Check> {
 				label,
 				state: "fail",
 				detail: auth
-					? `Úložiště vrátilo ${response.status} — vyžaduje token, který server neposílá. Nastav soubor jako veřejně čitelný.`
-					: `Úložiště vrátilo ${response.status} — soubor není dostupný.`,
+					? `Úložiště vrátilo ${response.status}, vyžaduje token, který server neposílá. Nastav soubor jako veřejně čitelný.`
+					: `Úložiště vrátilo ${response.status}, soubor není dostupný.`,
 			};
 		}
 		const size = Number(response.headers.get("content-range")?.split("/")[1] || response.headers.get("content-length") || 0);
@@ -129,7 +129,7 @@ export async function runReadinessChecks(): Promise<Check[]> {
 		: {
 				label: "E-maily (Resend)",
 				state: "fail",
-				detail: "RESEND_API_KEY není nastavený — zákazníkům nic nepřijde, odkaz musíš posílat ručně.",
+				detail: "RESEND_API_KEY není nastavený, zákazníkům nic nepřijde a odkaz musíš posílat ručně.",
 			};
 
 	const freeEbook: Check = isFreeEbookLive()
@@ -153,7 +153,7 @@ export async function runReadinessChecks(): Promise<Check[]> {
 				label: "Platba kartou (Comgate)",
 				state: SHOP.comgateTest ? "warn" : "ok",
 				detail: SHOP.comgateTest
-					? "Zapnuto v TESTOVACÍM režimu — skutečné platby neprojdou. Po otestování nastav COMGATE_TEST=false."
+					? "Zapnuto v TESTOVACÍM režimu, skutečné platby neprojdou. Po otestování nastav COMGATE_TEST=false."
 					: "Aktivní v produkčním režimu.",
 			}
 		: {
@@ -167,7 +167,7 @@ export async function runReadinessChecks(): Promise<Check[]> {
 				label: "Přihlášení do administrace",
 				state: "ok",
 				detail: isPasswordLoginAvailable()
-					? "Odkazem na e-mail. Heslo zůstává jako záloha — pokud ho nepotřebuješ, smaž ADMIN_PASSWORD."
+					? "Odkazem na e-mail. Heslo zůstává jako záloha. Pokud ho nepotřebuješ, smaž ADMIN_PASSWORD."
 					: "Odkazem na e-mail.",
 			}
 		: {
@@ -175,7 +175,7 @@ export async function runReadinessChecks(): Promise<Check[]> {
 				state: isPasswordLoginAvailable() ? "warn" : "fail",
 				detail: isPasswordLoginAvailable()
 					? "Jen heslem. Doplň ADMIN_EMAILS a přihlašování se přepne na odkaz do e-mailu, který nejde uhodnout ani vynést."
-					: "Není nastavené ani ADMIN_EMAILS, ani ADMIN_PASSWORD — administrace je nedostupná.",
+					: "Není nastavené ani ADMIN_EMAILS, ani ADMIN_PASSWORD, administrace je nedostupná.",
 			};
 
 	const list = [
@@ -210,7 +210,7 @@ function checkPublicUrl(): Check {
 		return {
 			label,
 			state: "fail",
-			detail: `SITE_URL je "${url}" — musí to být https adresa webu, jinak brána posílá potvrzení platby na špatné místo.`,
+			detail: `SITE_URL je "${url}". Musí to být https adresa webu, jinak brána posílá potvrzení platby na špatné místo.`,
 		};
 	}
 
@@ -255,6 +255,6 @@ function checkComgateCredentials(): Check {
 	return {
 		label,
 		state: "ok",
-		detail: `Merchant ${masked}, secret ${SHOP.comgateSecret.length} znaků. Testovací i produkční prostředí mají v Comgate vlastní údaje — zkontroluj, že sedí k režimu níže.`,
+		detail: `Merchant ${masked}, secret ${SHOP.comgateSecret.length} znaků. Testovací i produkční prostředí mají v Comgate vlastní údaje, zkontroluj, že sedí k režimu níže.`,
 	};
 }

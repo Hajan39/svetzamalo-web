@@ -16,8 +16,8 @@ Phone: +420 734 839 007
 
 ## Data We Collect
 
-- **Email address** – to send the ebook, newsletter, or order confirmation
-- **Full name** – to process a paid ebook order
+- **Email address**: to send the ebook, newsletter, or order confirmation
+- **Full name**: to process a paid ebook order
 
 ## Why We Process Data
 

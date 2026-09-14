@@ -1,4 +1,4 @@
-// Neon Postgres over HTTP — works inside Vercel serverless functions without
+// Neon Postgres over HTTP: works inside Vercel serverless functions without
 // connection pooling, which a long-lived pg pool cannot do reliably there.
 import { neon, type NeonQueryFunction } from "@neondatabase/serverless";
 
@@ -16,7 +16,7 @@ export function isDbConfigured(): boolean {
 export function db(): NeonQueryFunction<false, false> {
 	if (!DATABASE_URL) {
 		throw new Error(
-			"DATABASE_URL is not set — configure the Neon connection string in Vercel.",
+			"DATABASE_URL is not set. Configure the Neon connection string in Vercel.",
 		);
 	}
 	if (!client) client = neon(DATABASE_URL);

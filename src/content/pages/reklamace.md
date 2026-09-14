@@ -24,7 +24,7 @@ Pokud jste zadali objednávku s platbou převodem a platba dosud nebyla připsá
 
 Pokud produkt nebyl doručen z důvodu technické chyby nebo jiného pochybení na straně provozovatele, máte nárok na vrácení plné uhrazené ceny. Žádost zašlete na info@svetzamalo.cz s uvedením čísla objednávky. Peníze jsou vráceny na původní platební metodu do 14 dnů od uznání reklamace.
 
-## Reklamace – vady produktu
+## Reklamace: vady produktu
 
 Zjistíte-li vadu produktu (poškozený nebo nečitelný soubor), oznamte to na info@svetzamalo.cz do 6 měsíců od zakoupení. Zašleme nový nebo opravený soubor.
 

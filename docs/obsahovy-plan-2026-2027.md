@@ -30,12 +30,12 @@ struktura podle šablony v části 7. Pořadí podle sezóny (leden = plánován
 
 | # | Pracovní název (H1) | Hledaný dotaz | Kapitola knihy | Termín |
 |---|---|---|---|---|
-| 1 | ✅ Jak najít levné letenky (`/articles/jak-najit-levne-letenky`) | levné letenky jak hledat | Letenky | publikováno 14. 9. 2026 |
-| 2 | ✅ Karta do zahraničí bez poplatků (`/articles/karta-do-zahranici-bez-poplatku`) | karta do zahraničí bez poplatků | Peníze | publikováno 14. 9. 2026 |
-| 3 | ✅ Cestovní pojištění (`/articles/cestovni-pojisteni-co-musi-kryt`) | cestovní pojištění srovnání | Zdraví a pojištění | publikováno 14. 9. 2026 |
-| 4 | ✅ eSIM na cesty (`/articles/esim-na-cesty`) | esim cestování | Mobilní tarif | publikováno 14. 9. 2026 |
-| 5 | ✅ Chybné tarify (`/articles/chybne-tarify-letenky`) | error fare letenky | Letenky | publikováno 14. 9. 2026 |
-| 6 | ✅ Kolik stojí cestování (`/articles/kolik-stoji-cestovani-rozpocet-na-den`) | rozpočet na cestování na den | Plánování | publikováno 14. 9. 2026 |
+| 1 | Jak najít levné letenky (`/articles/jak-najit-levne-letenky`) | levné letenky jak hledat | Letenky | publikováno 14. 9. 2026 |
+| 2 | Karta do zahraničí bez poplatků (`/articles/karta-do-zahranici-bez-poplatku`) | karta do zahraničí bez poplatků | Peníze | publikováno 14. 9. 2026 |
+| 3 | Cestovní pojištění (`/articles/cestovni-pojisteni-co-musi-kryt`) | cestovní pojištění srovnání | Zdraví a pojištění | publikováno 14. 9. 2026 |
+| 4 | eSIM na cesty (`/articles/esim-na-cesty`) | esim cestování | Mobilní tarif | publikováno 14. 9. 2026 |
+| 5 | Chybné tarify (`/articles/chybne-tarify-letenky`) | error fare letenky | Letenky | publikováno 14. 9. 2026 |
+| 6 | Kolik stojí cestování (`/articles/kolik-stoji-cestovani-rozpocet-na-den`) | rozpočet na cestování na den | Plánování | publikováno 14. 9. 2026 |
 | 7 | Co sbalit na dlouhou cestu: seznam na 2 týdny až půl roku | co sbalit na dovolenou seznam | Balení | leden 2027 |
 | 8 | Víza a vstup do země: kde Čech vízum potřebuje a kde ne (2027) | víza pro Čechy seznam zemí | Dokumenty | leden 2027 |
 | 9 | Ubytování zdarma nebo skoro: housesitting, Couchsurfing, výměny | ubytování zdarma cestování | Ubytování | únor 2027 |
@@ -49,7 +49,7 @@ Ke každému:
 - Vlastní `country` reference není (obecný článek) → do schématu přidat `articleType: "guide"` a v šabloně
   článku zobrazit místo destinace štítek „Návod“. Sitemap a listing s tím počítají.
 - Interní odkazy: 3–5 destinačních článků, kde se téma projevuje (např. letenky → „Jak se dostat na Galapágy“).
-- Affiliate: Revolut/Wise (karta), Airalo/Nomad (eSIM), Skyscanner (letenky), TrustedHousesitters — všechny
+- Affiliate: Revolut/Wise (karta), Airalo/Nomad (eSIM), Skyscanner (letenky), TrustedHousesitters. Všechny
   už jsou v Sanity jako `affiliateLink`, stačí použít klíčová slova pro auto-náhradu.
 - CTA: `BookCta` inline po 2. sekci (už automaticky) + závěrečný odstavec „Tohle je jedna kapitola z 40“.
 

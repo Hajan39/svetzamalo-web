@@ -82,7 +82,7 @@ const cs = {
 		leadCapture: {
 			kicker: "Ebook zdarma",
 			title: "Chceš lowcost tipy do emailu?",
-			text: "Pošleme ti Lowcost startovní balíček — 10 nejčastějších chyb, které zbytečně prodražují cesty: letenky, ubytování, doprava, jídlo, směna peněz a turistické pasti.",
+			text: "Pošleme ti Lowcost startovní balíček s 10 nejčastějšími chybami, které zbytečně prodražují cesty: letenky, ubytování, doprava, jídlo, směna peněz a turistické pasti.",
 			buttonLabel: "Poslat zdarma",
 			note: "Odhlásit se můžeš jedním klikem kdykoliv.",
 			emailPlaceholder: "Tvůj email",
@@ -91,7 +91,7 @@ const cs = {
 		bookCta: {
 			kicker: "Kompletní průvodce",
 			heading: "Chceš to celé pohromadě?",
-			body: "Tenhle článek řeší jednu věc. Kniha řeší celou cestu — od dokumentů a letenek po ubytování, pojištění a peníze v zahraničí.",
+			body: "Tenhle článek řeší jednu věc. Kniha řeší celou cestu, od dokumentů a letenek po ubytování, pojištění a peníze v zahraničí.",
 			bullets: [
 				"235 stran, ověřeno na vlastních cestách",
 				"Konkrétní postupy, ne obecné rady",
@@ -296,7 +296,7 @@ const cs = {
 			mistakesHeading: "10 kapitol, 10 skutečných chyb na cestách",
 			mistakesBody: "Každá kapitola řeší jednu oblast, kde cestovatelé zbytečně přicházejí o peníze nebo čas.",
 			paidTopicsLabel: "Co v knize najdeš",
-			detailLink: "Celý přehled průvodce →",
+			detailLink: "Celý přehled průvodce",
 			freeMistakes: [
 				"Nejčastější chyby před odjezdem",
 				"Výběr destinace a správného termínu",
@@ -392,7 +392,7 @@ const cs = {
 			transId: "ID transakce",
 			tryAgain: "Zkusit znovu",
 			backWeb: "Zpět na web",
-			bankAlt: "Karta nefunguje? Objednávku jde zaplatit i převodem — pošleme částku a variabilní symbol e-mailem.",
+			bankAlt: "Karta nefunguje? Objednávku jde zaplatit i převodem. Částku a variabilní symbol pošleme e-mailem.",
 		},
 		bookPending: {
 			pageTitle: "Platba se zpracovává | Svět za málo",

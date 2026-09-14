@@ -122,7 +122,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 		);
 	}
 	if (!isDbConfigured()) {
-		console.error("[orders] DATABASE_URL is not set — refusing to take payment");
+		console.error("[orders] DATABASE_URL is not set, refusing to take payment");
 		return new Response(JSON.stringify({ error: "storage_unavailable" }), {
 			status: 503,
 		});

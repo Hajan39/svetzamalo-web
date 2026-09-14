@@ -6,7 +6,7 @@ Svět za málo (World for cheap) is a Czech-language travel website focused on b
 
 ## Main sections
 
-- [Destinace](https://svetzamalo.cz/destinations): Průvodci destinacemi po celém světě — informace o vízech, měnách, klimatu, dopravě a cenách
+- [Destinace](https://svetzamalo.cz/destinations): Průvodci destinacemi po celém světě: informace o vízech, měnách, klimatu, dopravě a cenách
 - [Články](https://svetzamalo.cz/articles): Cestovatelské tipy, co sbalit, jak levně cestovat, zkušenosti z cest
 - [Kniha / Ebook](https://svetzamalo.cz/book): Ucelený průvodce levným cestováním v knižní podobě
 

@@ -26,9 +26,9 @@ Objednávku lze zadat prostřednictvím objednávkového formuláře na stránce
 
 Aktuální cena produktu je uvedena na stránce objednávky v českých korunách (Kč). Platba je možná:
 
-- **Kartou online** – prostřednictvím platební brány **Comgate, a.s.**, IČO: 279 24 505 (platba proběhne bezprostředně)
-- **Platebním tlačítkem banky** – okamžitá platba přímo z internetového bankovnictví
-- **Bankovním převodem** – zákazník obdrží platební instrukce e-mailem a platbu provede do 5 pracovních dnů
+- **Kartou online**: prostřednictvím platební brány **Comgate, a.s.**, IČO: 279 24 505 (platba proběhne bezprostředně)
+- **Platebním tlačítkem banky**: okamžitá platba přímo z internetového bankovnictví
+- **Bankovním převodem**: zákazník obdrží platební instrukce e-mailem a platbu provede do 5 pracovních dnů
 
 ## Dodání
 
@@ -47,7 +47,7 @@ Zpracování osobních údajů je popsáno v dokumentu [Ochrana osobních údaj�
 
 ## Obsah webu
 
-Informace a obsah zveřejněné na webu svetzamalo.cz slouží jako cestovatelská inspirace. Ceny, dostupnost spojů, vízové podmínky a lokální pravidla se mohou měnit – před cestou si vždy ověřte aktuální informace z oficiálních zdrojů.
+Informace a obsah zveřejněné na webu svetzamalo.cz slouží jako cestovatelská inspirace. Ceny, dostupnost spojů, vízové podmínky a lokální pravidla se mohou měnit, proto si před cestou vždy ověřte aktuální informace z oficiálních zdrojů.
 
 ## Závěrečná ustanovení
 

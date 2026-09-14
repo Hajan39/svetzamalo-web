@@ -16,8 +16,8 @@ Tel: +420 734 839 007
 
 ## Jaké údaje shromažďujeme
 
-- **E-mailová adresa** – pro zasílání ebooku, newsletteru nebo potvrzení objednávky
-- **Jméno a příjmení** – pro zpracování objednávky placeného ebooku
+- **E-mailová adresa**: pro zasílání ebooku, newsletteru nebo potvrzení objednávky
+- **Jméno a příjmení**: pro zpracování objednávky placeného ebooku
 
 ## Proč údaje zpracováváme
 

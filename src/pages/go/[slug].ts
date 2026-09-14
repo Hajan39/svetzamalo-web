@@ -35,14 +35,14 @@ export const GET: APIRoute = async (context) => {
 		if (!["http:", "https:"].includes(destination.protocol)) {
 			return new Response("Invalid affiliate destination", { status: 502 });
 		}
-		// fire-and-forget — neblokuje redirect
+		// fire-and-forget, neblokuje redirect
 		track("affiliate_click", {
 			slug,
 			locale,
 			title: affiliateLink.title,
 		}).catch(() => {});
 		if (isDbConfigured() && !isLikelyBot(context.request)) {
-			// Only the path of the referring page on this site — no visitor data.
+			// Only the path of the referring page on this site, no visitor data.
 			const referer = context.request.headers.get("referer");
 			const path = referer ? new URL(referer).pathname.slice(0, 200) : null;
 			db()`INSERT INTO shop_affiliate_clicks (slug, locale, referer) VALUES (${slug}, ${locale}, ${path})`.catch(

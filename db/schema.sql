@@ -1,4 +1,4 @@
--- Svet za malo — application database (Neon Postgres)
+-- Svet za malo: application database (Neon Postgres)
 --
 -- Run this once in the Neon SQL editor. Safe to re-run: everything is
 -- IF NOT EXISTS.

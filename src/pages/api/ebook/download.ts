@@ -52,7 +52,7 @@ export const GET: APIRoute = async ({ url, request }) => {
 		// than leaving a generic 502 to be guessed at.
 		const hint =
 			upstream.status === 401 || upstream.status === 403
-				? " — the file store requires authentication; use a store this fetch can read without a token, or add token support here"
+				? ": the file store requires authentication; use a store this fetch can read without a token, or add token support here"
 				: "";
 		console.error(
 			`[download] upstream file fetch failed: ${upstream.status} ${SHOP.paidBookFileUrl}${hint}`,

@@ -26,9 +26,9 @@ Orders are placed via the order form at /book. The customer must provide accurat
 
 Current product prices are shown on the order page in Czech Koruna (CZK). Available payment methods:
 
-- **Online card payment** – via **Comgate, a.s.**, Company ID: 279 24 505 (immediate processing)
-- **Bank payment button** – instant payment directly from online banking
-- **Bank transfer** – customer receives payment instructions by email and completes the transfer within 5 business days
+- **Online card payment**: via **Comgate, a.s.**, Company ID: 279 24 505 (immediate processing)
+- **Bank payment button**: instant payment directly from online banking
+- **Bank transfer**: the customer receives payment instructions by email and completes the transfer within 5 business days
 
 ## Delivery
 
@@ -47,7 +47,7 @@ Personal data processing is described in the [Privacy Policy](/en/privacy).
 
 ## Website Content
 
-Content published on svetzamalo.cz is provided as travel inspiration. Prices, transport availability, visa conditions, and local rules may change – always verify current information from official sources before travelling.
+Content published on svetzamalo.cz is provided as travel inspiration. Prices, transport availability, visa conditions, and local rules may change, so always verify current information from official sources before travelling.
 
 ## Final Provisions
 

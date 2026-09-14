@@ -54,7 +54,7 @@ const en = {
 
 		"leadCapture.emailLabel": "Email",
 		"leadCapture.emailPlaceholder": "Your email",
-		"leadCapture.success": "Done. The ebook is on its way — check your spam folder too.",
+		"leadCapture.success": "Done. The ebook is on its way. Check your spam folder too.",
 
 		"articleCard.read": "Read article",
 	},
@@ -82,7 +82,7 @@ const en = {
 		leadCapture: {
 			kicker: "Free ebook",
 			title: "Want budget travel tips in your inbox?",
-			text: "We'll send you the Lowcost Starter Pack — 10 most common mistakes that make every trip more expensive: flights, accommodation, transport, food, currency exchange, and tourist traps.",
+			text: "We'll send you the Lowcost Starter Pack with the 10 most common mistakes that make every trip more expensive: flights, accommodation, transport, food, currency exchange, and tourist traps.",
 			buttonLabel: "Send for free",
 			note: "Unsubscribe anytime with one click.",
 			emailPlaceholder: "Your email",
@@ -91,7 +91,7 @@ const en = {
 		bookCta: {
 			kicker: "The complete guide",
 			heading: "Want the whole thing in one place?",
-			body: "This article covers one topic. The book covers the whole trip — documents, flights, accommodation, insurance and money abroad.",
+			body: "This article covers one topic. The book covers the whole trip: documents, flights, accommodation, insurance and money abroad.",
 			bullets: [
 				"235 pages, tested on our own trips",
 				"Concrete procedures, not general advice",
@@ -288,7 +288,7 @@ const en = {
 			sampleText: "The chapter “Money and cards” (7 pages) plus the full table of contents. We e-mail it to you, with a few tips from other chapters.",
 			sampleButton: "E-mail me the sample",
 			sampleNote: "No spam. One-click unsubscribe.",
-			sampleSuccess: "Done. The sample is on its way — check your spam folder too.",
+			sampleSuccess: "Done. The sample is on its way. Check your spam folder too.",
 			orderByBank: "Order by bank transfer",
 			ordersSoon: "Orders will be available soon.",
 			buyExternal: "Buy the book",
@@ -297,7 +297,7 @@ const en = {
 			mistakesHeading: "10 chapters, 10 real travel mistakes",
 			mistakesBody: "Each chapter covers one area where travelers regularly lose money or time.",
 			paidTopicsLabel: "What's inside the guide",
-			detailLink: "Full book overview →",
+			detailLink: "Full book overview",
 			freeMistakes: [
 				"Most common pre-trip mistakes",
 				"Choosing destination and timing",
@@ -393,7 +393,7 @@ const en = {
 			transId: "Transaction ID",
 			tryAgain: "Try again",
 			backWeb: "Back to website",
-			bankAlt: "Card not working? You can also pay by bank transfer — we e-mail the amount and reference.",
+			bankAlt: "Card not working? You can also pay by bank transfer. We e-mail the amount and reference.",
 		},
 		bookPending: {
 			pageTitle: "Payment processing | Svet za malo",

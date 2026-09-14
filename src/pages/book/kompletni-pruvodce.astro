@@ -33,14 +33,14 @@ const chapters: { title: string; page: number; topics?: string[] }[] = [
 	{ title: "Dokumenty a vstup do země", page: 24, topics: ["Cestovní pas", "Víza", "Povolená délka pobytu", "Co se stane, když v zemi zůstanu déle?"] },
 	{ title: "Zdraví a bezpečnost na cestách", page: 32, topics: ["Nemoci, zranění a drobné nehody", "Dostupnost zdravotní péče", "Léky a cestovní lékárnička", "Prevence a očkování", "Cestování se zdravotním omezením"] },
 	{ title: "Cestovní pojištění", page: 47, topics: ["Jak sjednat to správné pojištění?", "Pojistná událost (krádež, nemoc, zranění)", "Jak komunikovat s asistenční službou"] },
-	{ title: "Peníze a platební karty", page: 57, topics: ["Platební karty", "Výběr z bankomatu", "Směna peněz – jakou měnu vzít s sebou?"] },
+	{ title: "Peníze a platební karty", page: 57, topics: ["Platební karty", "Výběr z bankomatu", "Směna peněz: jakou měnu vzít s sebou?"] },
 	{ title: "Doprava", page: 64, topics: ["Letecká doprava a skryté triky", "Vyhledávače levných letenek", "Nízkonákladové společnosti", "Chybné tarify", "Zavazadla a letištní proces", "Jak zvládnout přestup", "Cestování autem, spaní v autě", "Autobus, vlak, stopování"] },
 	{ title: "Doprava v cílové destinaci", page: 119, topics: ["Vlaky, autobusy, taxi", "Pronájem a koupě auta", "Řidičský průkaz v zahraničí"] },
 	{ title: "Ubytování", page: 127, topics: ["Jak ušetřit na ubytování", "Jak za ubytování neplatit vůbec"] },
 	{ title: "Stravování", page: 133, topics: ["Evropa", "Tropické oblasti"] },
 	{ title: "Balit, či nebalit?", page: 143, topics: ["Odbavené a příruční zavazadlo", "Co nebalit a co se bude hodit", "Lepší kufr, nebo krosna?", "Ztráta zavazadel"] },
 	{ title: "Jazyková bariéra", page: 157, topics: ["Dá se cestovat bez znalosti jazyka?", "Jak se rychle naučit základy"] },
-	{ title: "Parťák na cestu – nebo raději sám?", page: 164, topics: ["Ve dvou, ve skupině, sólo", "5 otázek, než s někým vyrazíte"] },
+	{ title: "Parťák na cestu, nebo raději sám?", page: 164, topics: ["Ve dvou, ve skupině, sólo", "5 otázek, než s někým vyrazíte"] },
 	{ title: "Bezpečí na cestách", page: 172, topics: ["Bezpečné a rizikové země", "Jak se chovat v rizikových zemích", "Když se něco pokazí"] },
 	{ title: "Mobilní tarif na cestách", page: 183, topics: ["Roaming, lokální SIM, eSIM", "Jak vybrat ideální tarif"] },
 	{ title: "Komunikace ze zahraničí", page: 190 },
@@ -68,7 +68,7 @@ const topics = [
 	},
 	{
 		heading: "Peníze a platební karty",
-		body: "Karty bez poplatků, výběry z bankomatů v zahraničí a jak na směnu – jakou měnu vzít a kde.",
+		body: "Karty bez poplatků, výběry z bankomatů v zahraničí a jak na směnu: jakou měnu vzít a kde.",
 	},
 	{
 		heading: "Letecká doprava a letenky",
@@ -76,7 +76,7 @@ const topics = [
 	},
 	{
 		heading: "Ubytování a stravování",
-		body: "Jak ušetřit na ubytování – nebo jak za něj neplatit vůbec. Stravování v Evropě i tropech.",
+		body: "Jak ušetřit na ubytování, nebo jak za něj neplatit vůbec. Stravování v Evropě i tropech.",
 	},
 	{
 		heading: "Balení, jazyk a mobilní tarif",
@@ -88,9 +88,7 @@ const topics = [
 	},
 ];
 
-// Qualifying the reader is part of selling: someone who recognises themselves
-// buys, and someone who does not is spared a refund request. Both lists are
-// drawn from what the book actually covers above, not invented.
+// Both lists are drawn from what the book covers in the chapter list above.
 const forWho = [
 	"Chystáš první cestu mimo Evropu a nechceš platit cestovce za to, co zvládneš sám.",
 	"Cestuješ pravidelně, ale máš pocit, že za letenky a ubytování dáváš víc, než je nutné.",
@@ -99,7 +97,7 @@ const forWho = [
 ];
 
 const notForWho = [
-	"Hledáš konkrétní itinerář na jednu destinaci — na to jsou články a průvodci na tomhle webu, zdarma.",
+	"Hledáš konkrétní itinerář na jednu destinaci. Na to jsou články a průvodci na tomhle webu, zdarma.",
 	"Chceš all-inclusive dovolenou bez plánování. Průvodce je o tom, jak si cestu postavit sám.",
 ];
 
@@ -122,12 +120,11 @@ const outcomes = [
 	},
 ];
 
-// Answers are limited to what is actually true of this shop and this file —
-// no invented guarantees, no promises about future updates.
+// Answers cover only what this shop actually does: no guarantees beyond that.
 const faq = [
 	{
 		q: "Jak a kdy knihu dostanu?",
-		a: "Při platbě kartou přijde odkaz ke stažení e-mailem hned po zaplacení. Při platbě převodem ti pošleme e-mailem částku a variabilní symbol, a odkaz odejde, jakmile platba dorazí — obvykle do jednoho pracovního dne.",
+		a: "Při platbě kartou přijde odkaz ke stažení e-mailem hned po zaplacení. Při platbě převodem ti pošleme e-mailem částku a variabilní symbol, a odkaz odejde, jakmile platba dorazí, obvykle do jednoho pracovního dne.",
 	},
 	{
 		q: "V jakém formátu kniha je?",
@@ -135,15 +132,15 @@ const faq = [
 	},
 	{
 		q: "Je to pro začátečníky, nebo i pro zkušené cestovatele?",
-		a: "Pro obojí. Průvodce začíná plánováním a dokumenty, ale má i kapitoly o pokročilém cestování — luxusních destinacích za rozumné peníze a práci na cestách.",
+		a: "Pro obojí. Průvodce začíná plánováním a dokumenty, ale má i kapitoly o pokročilém cestování: luxusních destinacích za rozumné peníze a práci na cestách.",
 	},
 	{
 		q: "Čím se to liší od článků na webu, které jsou zdarma?",
-		a: "Články řeší jednotlivé destinace a dílčí témata. Průvodce je celý postup pohromadě a v pořadí, v jakém cestu opravdu plánuješ — od rozhodnutí kam až po návrat.",
+		a: "Články řeší jednotlivé destinace a dílčí témata. Průvodce je celý postup pohromadě a v pořadí, v jakém cestu opravdu plánuješ, od rozhodnutí kam až po návrat.",
 	},
 	{
 		q: "Jak zjistím, jestli mi průvodce sedne?",
-		a: "Nech si poslat ukázkovou kapitolu „Peníze a platební karty“ zdarma (formulář výše) — je to sedm stran přesně v tom stylu a hloubce, jakou má celá kniha. Obsah všech 22 kapitol je rozepsaný výše.",
+		a: "Nech si poslat ukázkovou kapitolu „Peníze a platební karty“ zdarma (formulář výše). Je to sedm stran přesně v tom stylu a hloubce, jakou má celá kniha. Obsah všech 22 kapitol je rozepsaný výše.",
 	},
 	{
 		q: "Co když mi kniha nepřijde?",
@@ -200,8 +197,8 @@ const jsonLd = {
 ---
 
 <Layout
-	title={`Kompletní cestovatelský průvodce – Levně a chytře do celého světa | Svět za málo`}
-	description="Průvodce cestováním na 235 stranách. Letenky, ubytování, dokumenty, zdraví, peníze a aplikace – vše pro cestování bez zbytečných chyb a výdajů."
+	title={`Kompletní cestovatelský průvodce: Levně a chytře do celého světa | Svět za málo`}
+	description="Průvodce cestováním na 235 stranách. Letenky, ubytování, dokumenty, zdraví, peníze a aplikace. Vše pro cestování bez zbytečných chyb a výdajů."
 	canonicalPath={pagePath}
 	image={siteConfig?.bookCover?.src}
 	siteConfig={siteConfig}
@@ -326,9 +323,9 @@ const jsonLd = {
 				<div>
 					<p class="section-kicker">Kdo to psal</p>
 					<h2>Jan a Kateřina Hančovi</h2>
-					<p>Český pár, který začal cestovat jako studenti s minimem peněz. Za deset let 46 zemí v Evropě, Asii, Africe, Americe i Pacifiku a skoro dva roky života v Austrálii a na Novém Zélandu. Cestou byli okradeni, podvedeni i v nemocnici — a z každé chyby zůstal zápis, který příště ušetřil peníze.</p>
+					<p>Český pár, který začal cestovat jako studenti s minimem peněz. Za deset let 46 zemí v Evropě, Asii, Africe, Americe i Pacifiku a skoro dva roky života v Austrálii a na Novém Zélandu. Cestou byli okradeni, podvedeni i v nemocnici. Z každé chyby zůstal zápis, který příště ušetřil peníze.</p>
 					<p>Tahle kniha je ten zápis pohromadě: to, co by si přáli mít na začátku. Od roku 2020 stojí za webem Svět za málo a o cestování přednáší pro školy, knihovny a cestovatelské kluby ({about.pastEvents.length} besed).</p>
-					<a href={withLocalePath('/about', locale)} class="text-link">Víc o projektu a přednáškách →</a>
+					<a href={withLocalePath('/about', locale)} class="text-link">Víc o projektu a přednáškách</a>
 				</div>
 			</div>
 			<div class="sales-guarantee">
@@ -416,7 +413,7 @@ const jsonLd = {
 
 	{freeEbookAvailable && (
 		<div class="container-wide book-guide-free-note">
-			<p>{text.goodStart}: <a href={withLocalePath('/book', locale)} class="text-link">{freeEbookTitle} — {text.downloadFree}</a></p>
+			<p>{text.goodStart}: <a href={withLocalePath('/book', locale)} class="text-link">{freeEbookTitle}</a></p>
 		</div>
 	)}
 </Layout>

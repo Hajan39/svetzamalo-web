@@ -56,7 +56,6 @@ const languageItems = [
 	{
 		label: languages.cs,
 		shortLabel: "CS",
-		flag: "🇨🇿",
 		href: switchLocalePath(currentPath, "cs"),
 		active: locale === "cs",
 		disabled: false,
@@ -64,7 +63,6 @@ const languageItems = [
 	{
 		label: languages.en,
 		shortLabel: "EN",
-		flag: "🇬🇧",
 		href: switchLocalePath(currentPath, "en"),
 		active: locale === "en",
 		disabled: false,
@@ -106,7 +104,6 @@ const languageItems = [
                     aria-label={language.label}
                     disabled
                   >
-                    <span class="text-base leading-none" aria-hidden="true">{language.flag}</span>
                     <span>{language.shortLabel}</span>
                   </button>
                 ) : (
@@ -119,7 +116,6 @@ const languageItems = [
                     aria-current={language.active ? 'true' : undefined}
                     aria-label={language.label}
                   >
-                    <span class="text-base leading-none" aria-hidden="true">{language.flag}</span>
                     <span>{language.shortLabel}</span>
                   </a>
                 )
@@ -170,7 +166,6 @@ const languageItems = [
                         aria-label={language.label}
                         disabled
                       >
-                        <span class="text-lg leading-none" aria-hidden="true">{language.flag}</span>
                         <span>{language.shortLabel}</span>
                       </button>
                     ) : (
@@ -183,7 +178,6 @@ const languageItems = [
                         aria-current={language.active ? 'true' : undefined}
                         aria-label={language.label}
                       >
-                        <span class="text-lg leading-none" aria-hidden="true">{language.flag}</span>
                         <span>{language.shortLabel}</span>
                       </a>
                     )

@@ -20,7 +20,7 @@ async function send(
 	headers?: Record<string, string>,
 ) {
 	if (!isMailConfigured()) {
-		console.warn(`[mail] RESEND_API_KEY not set — skipped "${subject}" to ${to}`);
+		console.warn(`[mail] RESEND_API_KEY not set, skipped "${subject}" to ${to}`);
 		return false;
 	}
 	try {
@@ -70,7 +70,7 @@ export async function sendFreeEbookEmail(to: string) {
 		layout(
 			"Díky! Tady je tvůj e-book",
 			`<p style="margin:0 0 12px;">Jak jsme slíbili, posíláme e-book <strong>${SHOP.freeEbookTitle}</strong>.</p>
-			 <p style="margin:0;">Najdeš v něm chyby, které zdražují každou cestu — letenky, ubytování, dopravu, jídlo i směnu peněz — a u každé i to, jak se jí vyhnout.</p>
+			 <p style="margin:0;">Najdeš v něm chyby, které zdražují každou cestu: letenky, ubytování, dopravu, jídlo i směnu peněz. U každé je i to, jak se jí vyhnout.</p>
 			 ${button(url, "Stáhnout e-book (PDF)")}
 			 <p style="margin:0;font-size:13px;color:#5a6b7b;">Odkaz nevyprší, stáhnout si ho můžeš kdykoli.</p>`,
 		),
@@ -118,7 +118,7 @@ export async function sendBankInstructionsEmail(order: {
 
 	return send(
 		order.email,
-		`Objednávka ${SHOP.paidBookTitle} — platební údaje`,
+		`Objednávka ${SHOP.paidBookTitle}: platební údaje`,
 		layout(
 			"Máme tvou objednávku",
 			`<p style="margin:0 0 14px;">Díky za objednávku <strong>${SHOP.paidBookTitle}</strong>. Zbývá jen zaplatit převodem:</p>
@@ -134,12 +134,12 @@ export async function sendPaidBookEmail(to: string, token: string) {
 	const url = `${SHOP.siteUrl}/api/ebook/download?token=${encodeURIComponent(token)}`;
 	return send(
 		to,
-		`${SHOP.paidBookTitle} je tvůj — odkaz ke stažení`,
+		`${SHOP.paidBookTitle} je tvůj, tady je odkaz ke stažení`,
 		layout(
 			"Platba přijata, děkujeme!",
 			`<p style="margin:0 0 12px;">Tady je <strong>${SHOP.paidBookTitle}</strong> ke stažení.</p>
 			 ${button(url, "Stáhnout knihu")}
-			 <p style="margin:0;font-size:13px;color:#5a6b7b;">Odkaz je osobní — ulož si soubor k sobě, ať ho máš po ruce i offline.</p>`,
+			 <p style="margin:0;font-size:13px;color:#5a6b7b;">Odkaz je osobní. Ulož si soubor k sobě, ať ho máš po ruce i offline.</p>`,
 		),
 		`Platba přijata. ${SHOP.paidBookTitle} ke stažení:\n${url}\n\n${SHOP.sellerName}, IČO ${SHOP.sellerIco}`,
 	);
@@ -153,7 +153,7 @@ export async function sendAdminLoginEmail(to: string, loginUrl: string) {
 			"Přihlášení do administrace",
 			`<p style="margin:0 0 12px;">Klikni na odkaz a budeš přihlášen. Platí 15 minut a jde použít jen jednou.</p>
 			 ${button(loginUrl, "Přihlásit se")}
-			 <p style="margin:0;font-size:13px;color:#5a6b7b;">Pokud jsi o přihlášení nežádal, tento e-mail ignoruj — bez kliknutí se nic nestane.</p>`,
+			 <p style="margin:0;font-size:13px;color:#5a6b7b;">Pokud jsi o přihlášení nežádal, tento e-mail ignoruj. Bez kliknutí se nic nestane.</p>`,
 		),
 		`Přihlášení do administrace Svět za málo\n\nOdkaz (platí 15 minut, jen jedno použití):\n${loginUrl}\n\nPokud jsi o přihlášení nežádal, e-mail ignoruj.`,
 	);

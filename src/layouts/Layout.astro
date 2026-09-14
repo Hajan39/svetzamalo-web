@@ -70,8 +70,8 @@ try {
 }
 const ogLocale = shared.ogLocale;
 // Travelpayouts affiliate tracking (partner marker 526521). Third-party revenue
-// script — flags itself in every security audit, but it is intentional: removed
-// as "malicious" and knowingly restored in commit 84f107d. emrldtp.com is
+// script. It flags itself in every security audit, but it is intentional:
+// removed as "malicious" and knowingly restored in commit 84f107d. emrldtp.com is
 // whitelisted for it in the CSP (vercel.json). Loaded at the end of <body> and
 // only where affiliate links can appear: not on checkout, admin or legal pages.
 const affiliateTracking = !/^\/(en\/)?(book|admin|ebook|privacy|terms|reklamace|dodaci-podminky)/.test(Astro.url.pathname);

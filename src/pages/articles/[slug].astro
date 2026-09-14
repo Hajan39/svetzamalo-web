@@ -94,8 +94,8 @@ const relatedArticles = relatedArticlesFromSchema.length
 	: relatedArticlesFromContent;
 const displayHtml = removeRelatedArticlesBlock(articleHtml);
 
-// The offer lands where readers actually are — after the second section — not
-// only at the very end. Split at a heading so the HTML stays valid.
+// The offer lands after the second section, not only at the very end.
+// Split at a heading so the HTML stays valid.
 function splitBeforeHeading(html: string, nth: number): [string, string] {
 	const cut = [...html.matchAll(/<h2\b/gi)][nth]?.index;
 	return cut ? [html.slice(0, cut), html.slice(cut)] : [html, ""];

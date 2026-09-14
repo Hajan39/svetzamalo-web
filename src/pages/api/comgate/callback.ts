@@ -47,7 +47,7 @@ async function readParams(request: Request): Promise<Record<string, string>> {
  * Delivering the book must not hold up the acknowledgement. The payment is
  * already recorded by this point, so a slow or failing mail provider would
  * otherwise push the function past its timeout and make Comgate believe the
- * shop failed — for a payment that actually succeeded.
+ * shop failed, for a payment that actually succeeded.
  */
 async function deliverWithoutBlockingAck(
 	orderId: number,
@@ -56,7 +56,7 @@ async function deliverWithoutBlockingAck(
 ) {
 	if (!isMailConfigured()) {
 		console.warn(
-			`[comgate] order ${orderId} paid but RESEND_API_KEY is not set — send the link from /admin`,
+			`[comgate] order ${orderId} paid but RESEND_API_KEY is not set, send the link from /admin`,
 		);
 		return;
 	}
@@ -67,7 +67,7 @@ async function deliverWithoutBlockingAck(
 		]);
 		if (!sent) {
 			console.warn(
-				`[comgate] order ${orderId} paid but the delivery e-mail did not go out — resend it from /admin`,
+				`[comgate] order ${orderId} paid but the delivery e-mail did not go out, resend it from /admin`,
 			);
 		}
 	} catch (error) {
