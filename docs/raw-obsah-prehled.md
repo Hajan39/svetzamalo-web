@@ -1,5 +1,11 @@
 # Přehled raw obsahu z původního webu a co z něj ještě vytěžit
 
+> **Stav 14. 9. 2026 večer:** část 2 realizována – 60 nových destinačních článků z raw podkladů je v Sanity
+> (Slovinsko 3, Švýcarsko 4, BVI 3, Gran Canaria 3, Francie 6, Itálie 7, Portoriko 2, Samoa 2, Fuerteventura 5,
+> Galapágy 3, Colombo 1, Vietnam 6, Ekvádor 6, Dominikánská republika 8, Mauricius 1, Bali 1, Lombok 1, USVI 1,
+> Norsko 1). Pipeline: `migration/content/ZADANI-NOVE-CLANKY.md` → `scripts/check-new-articles.mjs` →
+> `scripts/import-sanity.mjs <země> --only=…`. Zbývá část 3 (Mexiko: HEIC fotky + rozšíření) a část 4 (fotky pro 4 články).
+
 Zdroj: `C:/Trask_dev/Programs/HAJAN/migration/raw/` – 34 stránek stažených z lowcost-traveling.com
 (`content.json` = text po blocích, `images/` = fotky), plus `raw/mexico/` (jen fotky a seznam míst).
 Sanity dnes: 343 destinačních článků + 6 návodů. Stav k 14. 9. 2026.
