@@ -4,9 +4,10 @@ interface Props {
   title?: string;
   text?: string;
   source: string;
-  leadType?: 'ebook' | 'newsletter' | 'book_notify';
+  leadType?: 'ebook' | 'sample' | 'newsletter' | 'book_notify';
   buttonLabel?: string;
   note?: string;
+  successText?: string;
   compact?: boolean;
 }
 
@@ -26,6 +27,7 @@ const {
   leadType = 'ebook',
   buttonLabel = defaults.buttonLabel,
   note = defaults.note,
+  successText = t('leadCapture.success'),
   compact = false,
 } = Astro.props;
 ---
@@ -48,7 +50,7 @@ const {
     </button>
     <span class="lead-note">{note}</span>
   </form>
-  <p class="lead-success" hidden role="status" aria-live="polite">{t('leadCapture.success')}</p>
+  <p class="lead-success" hidden role="status" aria-live="polite">{successText}</p>
 </section>
 
 <style>

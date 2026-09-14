@@ -205,7 +205,7 @@ if (authed && isDbConfigured()) {
 		`) as unknown as PaymentEventRow[];
 		sequenceSteps = (await db()`
 			SELECT sequence_step, count(*)::int AS total FROM shop_leads
-			WHERE lead_type = 'ebook' AND unsubscribed_at IS NULL
+			WHERE lead_type IN ('ebook', 'sample') AND unsubscribed_at IS NULL
 			GROUP BY sequence_step ORDER BY sequence_step
 		`) as unknown as typeof sequenceSteps;
 		affiliateClicks = (await db()`

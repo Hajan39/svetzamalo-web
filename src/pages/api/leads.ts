@@ -1,13 +1,13 @@
 import type { APIRoute } from "astro";
 import { z } from "zod";
 import { db, isDbConfigured } from "@/lib/db";
-import { isMailConfigured, sendFreeEbookEmail } from "@/lib/mail";
+import { isMailConfigured, sendFreeEbookEmail, sendSampleChapterEmail } from "@/lib/mail";
 import { isFreeEbookLive } from "@/lib/shopConfig";
 import { isHoneypotTripped, isRateLimited } from "@/lib/spamGuard";
 
 const leadSchema = z.object({
 	email: z.email(),
-	leadType: z.enum(["ebook", "newsletter", "book_notify"]).default("ebook"),
+	leadType: z.enum(["ebook", "sample", "newsletter", "book_notify"]).default("ebook"),
 	source: z.string().max(80).optional(),
 });
 
@@ -73,7 +73,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 	try {
 		await db()`
 			INSERT INTO shop_leads (email, lead_type, source, locale, next_send_at)
-			VALUES (${email}, ${leadType}, ${source ?? null}, 'cs', CASE WHEN ${leadType} = 'ebook' THEN now() + interval '2 days' END)
+			VALUES (${email}, ${leadType}, ${source ?? null}, 'cs', CASE WHEN ${leadType} IN ('ebook', 'sample') THEN now() + interval '2 days' END)
 			ON CONFLICT (lower(email), lead_type) DO NOTHING
 		`;
 	} catch (error) {
@@ -86,6 +86,9 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 
 	if (wantsEbook && isMailConfigured()) {
 		await sendFreeEbookEmail(email);
+	}
+	if (leadType === "sample" && isMailConfigured()) {
+		await sendSampleChapterEmail(email);
 	}
 
 	if (wantsJson(request)) return Response.json({ status: "accepted" });

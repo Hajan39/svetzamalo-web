@@ -78,6 +78,22 @@ export async function sendFreeEbookEmail(to: string) {
 	);
 }
 
+export async function sendSampleChapterEmail(to: string) {
+	const url = `${SHOP.siteUrl}/downloads/ukazka-kompletni-cestovatelsky-pruvodce.pdf`;
+	return send(
+		to,
+		"Ukázková kapitola: Peníze a platební karty",
+		layout(
+			"Tady je ukázka z průvodce",
+			`<p style="margin:0 0 12px;">Posíláme kapitolu <strong>Peníze a platební karty</strong> z knihy <strong>${SHOP.paidBookTitle}</strong> a k ní obsah všech 22 kapitol.</p>
+			 <p style="margin:0;">Je to přesně ten styl a hloubka, jakou má zbytek knihy: konkrétní postupy, žádné obecné rady.</p>
+			 ${button(url, "Stáhnout ukázku (PDF)")}
+			 <p style="margin:0;font-size:13px;color:#5a6b7b;">Celý průvodce: <a href="${SHOP.siteUrl}/book/kompletni-pruvodce" style="color:#0f6cbd;">svetzamalo.cz/book/kompletni-pruvodce</a></p>`,
+		),
+		`Ukázková kapitola z knihy ${SHOP.paidBookTitle}: Peníze a platební karty\n\nStáhnout: ${url}\n\nCelý průvodce: ${SHOP.siteUrl}/book/kompletni-pruvodce\n\n${SHOP.sellerName}, IČO ${SHOP.sellerIco}`,
+	);
+}
+
 export async function sendBankInstructionsEmail(order: {
 	email: string;
 	full_name: string;

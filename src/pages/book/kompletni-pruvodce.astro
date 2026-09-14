@@ -1,5 +1,6 @@
 ---
 import BookOrderForm from "@/components/marketing/BookOrderForm.astro";
+import LeadCapture from "@/components/marketing/LeadCapture.astro";
 import Layout from "@/layouts/Layout.astro";
 import {
 	getFreeEbookTitle,
@@ -49,7 +50,8 @@ const chapters: { title: string; page: number; topics?: string[] }[] = [
 	{ title: "Šetřete i utrácejte moudře", page: 227, topics: ["Kdy má smysl šetřit", "Kdy naopak pustit korunu"] },
 	{ title: "Závěrem a epilog", page: 231 },
 ];
-const sampleUrl = "/downloads/ukazka-kompletni-cestovatelsky-pruvodce.pdf";
+// The sample chapter is sent by e-mail (lead magnet); every button points at the form.
+const sampleUrl = "#ukazka";
 
 const topics = [
 	{
@@ -141,7 +143,7 @@ const faq = [
 	},
 	{
 		q: "Jak zjistím, jestli mi průvodce sedne?",
-		a: "Stáhni si ukázkovou kapitolu „Peníze a platební karty“ zdarma — je to sedm stran přesně v tom stylu a hloubce, jakou má celá kniha. Obsah všech 22 kapitol je rozepsaný výše.",
+		a: "Nech si poslat ukázkovou kapitolu „Peníze a platební karty“ zdarma (formulář výše) — je to sedm stran přesně v tom stylu a hloubce, jakou má celá kniha. Obsah všech 22 kapitol je rozepsaný výše.",
 	},
 	{
 		q: "Co když mi kniha nepřijde?",
@@ -220,8 +222,8 @@ const jsonLd = {
 					{price && <li>{price}</li>}
 				</ul>
 				<div class="hero-actions">
-					<a class="btn-primary" href="#objednat">{text.orderByGateway}</a>
-					<a class="btn-secondary" href={sampleUrl} download>Stáhnout ukázku (PDF)</a>
+					<a class="btn-primary" href="#objednat">{text.buyGuide}</a>
+					<a class="btn-secondary" href={sampleUrl}>Chci ukázku zdarma</a>
 				</div>
 			</div>
 			{siteConfig?.bookCover && (
@@ -291,7 +293,7 @@ const jsonLd = {
 				<p class="section-kicker">Jak to vypadá uvnitř</p>
 				<h2>Tři strany z knihy</h2>
 			</div>
-			<a class="btn-secondary" href={sampleUrl} download>Ukázková kapitola: Peníze a platební karty (PDF)</a>
+			<a class="btn-secondary" href={sampleUrl}>Ukázková kapitola zdarma na e-mail</a>
 		</div>
 		<div class="sales-pages">
 			<figure><img src="/images/book/strana-obsah.jpg" alt="Strana s obsahem knihy" width="910" height="1287" loading="lazy" decoding="async" /><figcaption>Obsah</figcaption></figure>
@@ -332,10 +334,23 @@ const jsonLd = {
 			<div class="sales-guarantee">
 				<p class="section-kicker">Než koupíš</p>
 				<h3>Přečti si kapitolu zdarma</h3>
-				<p>Kapitola „Peníze a platební karty“ je ke stažení celá, i s obsahem knihy. Ať víš, co kupuješ.</p>
-				<a class="btn-secondary" href={sampleUrl} download>Stáhnout ukázku (PDF)</a>
+				<p>Kapitolu „Peníze a platební karty“ ti pošleme celou, i s obsahem knihy. Ať víš, co kupuješ.</p>
+				<a class="btn-secondary" href={sampleUrl}>Chci ukázku zdarma</a>
 			</div>
 		</div>
+	</section>
+
+	<section class="container-wide sales-block" id="ukazka">
+		<LeadCapture
+			source="book_sample"
+			leadType="sample"
+			kicker={text.sampleKicker}
+			title={text.sampleTitle}
+			text={text.sampleText}
+			buttonLabel={text.sampleButton}
+			note={text.sampleNote}
+			successText={text.sampleSuccess}
+		/>
 	</section>
 
 	<section class="container-wide book-guide-order" id="objednat">
@@ -386,7 +401,7 @@ const jsonLd = {
 				<p class="section-kicker">Připraveno?</p>
 				<h2>{paidBookTitle}</h2>
 				{price && <p class="book-guide-price">{text.priceLabel}: <strong>{price}</strong> · PDF hned po zaplacení</p>}
-				<p class="lead-note">Nejsi si jistý? <a href={sampleUrl} download>Stáhni si ukázkovou kapitolu zdarma</a>.</p>
+				<p class="lead-note">Nejsi si jistý? <a href={sampleUrl}>Nech si poslat ukázkovou kapitolu zdarma</a>.</p>
 			</div>
 			<BookOrderForm siteConfig={siteConfig} id="guide-order-2" class="book-guide-order-form" />
 		</div>

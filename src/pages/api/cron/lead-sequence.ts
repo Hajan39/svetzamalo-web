@@ -27,7 +27,7 @@ export const GET: APIRoute = async ({ request }) => {
 	const sql = db();
 	const due = (await sql`
 		SELECT l.* FROM shop_leads l
-		WHERE l.lead_type = 'ebook'
+		WHERE l.lead_type IN ('ebook', 'sample')
 		  AND l.unsubscribed_at IS NULL
 		  AND l.next_send_at IS NOT NULL
 		  AND l.next_send_at <= now()

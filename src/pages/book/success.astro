@@ -29,6 +29,8 @@ const paymentStatus = (
 const paidFlag = Astro.url.searchParams.get("paid");
 const transId = Astro.url.searchParams.get("transId") || "";
 const isLeadSuccess = Boolean(leadType);
+const isSampleLead = leadType === "sample";
+const sampleUrl = "/downloads/ukazka-kompletni-cestovatelsky-pruvodce.pdf";
 const isComgateReturn = paymentMethod === "comgate";
 const isComgatePaid =
 	isComgateReturn &&
@@ -85,8 +87,8 @@ const qrSvg = details?.spaydPayload
       </div>
       {isLeadSuccess ? (
         <>
-          <h1 class="mb-2 text-2xl font-bold md:text-3xl">{text.leadHeading(freeEbookTitle)}</h1>
-          <p class="max-w-md text-foreground-secondary">{text.leadIntro}</p>
+          <h1 class="mb-2 text-2xl font-bold md:text-3xl">{isSampleLead ? text.sampleHeading : text.leadHeading(freeEbookTitle)}</h1>
+          <p class="max-w-md text-foreground-secondary">{isSampleLead ? text.sampleIntro : text.leadIntro}</p>
         </>
       ) : (
         <>
@@ -111,7 +113,8 @@ const qrSvg = details?.spaydPayload
     {isLeadSuccess && (
       <div class="brand-card px-6 py-7 sm:px-8 sm:py-8">
         <div class="flex flex-wrap gap-3">
-          <a class="btn-primary" href={withLocalePath('/destinations', locale)}>{text.pickDestination}</a>
+          {isSampleLead && <a class="btn-primary" href={sampleUrl} download>{text.sampleDownload}</a>}
+          <a class={isSampleLead ? "btn-secondary" : "btn-primary"} href={withLocalePath('/destinations', locale)}>{text.pickDestination}</a>
           <a class="btn-secondary" href={withLocalePath('/articles', locale)}>{text.readArticles}</a>
         </div>
         <BookCta siteConfig={siteConfig} source="lead_success" heading={ctaText.leadSuccessHeading} body={ctaText.leadSuccessBody} />

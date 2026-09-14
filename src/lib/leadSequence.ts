@@ -99,7 +99,7 @@ export function daysUntilFollowing(stepIndex: number): number | null {
 export function unsubscribeFooter(lead: SequenceLead) {
 	const url = unsubscribeUrl(lead);
 	return {
-		html: `<p style="margin:16px 0 0;font-size:12px;color:#5a6b7b;">Tyhle maily chodí, protože sis vzal/a ebook zdarma. <a href="${url}" style="color:#5a6b7b;">Odhlásit se</a> jde jedním klikem.</p>`,
+		html: `<p style="margin:16px 0 0;font-size:12px;color:#5a6b7b;">Tyhle maily chodí, protože sis vzal/a materiál zdarma z webu Svět za málo. <a href="${url}" style="color:#5a6b7b;">Odhlásit se</a> jde jedním klikem.</p>`,
 		text: `\n\nOdhlásit se: ${url}`,
 		url,
 	};

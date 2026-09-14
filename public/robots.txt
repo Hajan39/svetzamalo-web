@@ -4,6 +4,7 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /go/
 Disallow: /ebook/
+Disallow: /downloads/ukazka-
 Disallow: /book/success
 Disallow: /book/pending
 Disallow: /book/cancelled

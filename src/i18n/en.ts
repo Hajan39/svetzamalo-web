@@ -282,6 +282,13 @@ const en = {
 			deliveryEmailLabel: "Delivery email",
 			deliveryEmailPlaceholder: "Delivery email",
 			orderByGateway: "Pay by card / online",
+			buyGuide: "Buy the guide",
+			sampleKicker: "Free sample",
+			sampleTitle: "Read a whole chapter before you decide",
+			sampleText: "The chapter “Money and cards” (7 pages) plus the full table of contents. We e-mail it to you, with a few tips from other chapters.",
+			sampleButton: "E-mail me the sample",
+			sampleNote: "No spam. One-click unsubscribe.",
+			sampleSuccess: "Done. The sample is on its way — check your spam folder too.",
 			orderByBank: "Order by bank transfer",
 			ordersSoon: "Orders will be available soon.",
 			buyExternal: "Buy the book",
@@ -328,6 +335,9 @@ const en = {
 			pageDescription: "Order confirmation or ebook lead registration.",
 			leadHeading: (freeEbookTitle: string) =>
 				`${freeEbookTitle} is on the way`,
+			sampleHeading: "The sample is yours",
+			sampleIntro: "We e-mailed it to you. You can also download it right here.",
+			sampleDownload: "Download the sample (PDF)",
 			leadIntro:
 				"Thanks. Check your inbox, and also Promotions or Spam folders.",
 			orderHeading: "Order received",
