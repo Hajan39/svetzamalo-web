@@ -158,6 +158,7 @@ let orders: OrderRow[] = [];
 let leads: LeadRow[] = [];
 let leadCount = 0;
 let events: PaymentEventRow[] = [];
+let affiliateClicks: { slug: string; referer: string | null; clicks: number }[] = [];
 let stats: ShopStats | null = null;
 let dbError = "";
 
@@ -201,6 +202,13 @@ if (authed && isDbConfigured()) {
 			LEFT JOIN shop_orders o ON o.id = e.order_id
 			ORDER BY e.created_at DESC LIMIT 25
 		`) as unknown as PaymentEventRow[];
+		affiliateClicks = (await db()`
+			SELECT slug, referer, count(*)::int AS clicks
+			FROM shop_affiliate_clicks
+			WHERE created_at > now() - interval '30 days'
+			GROUP BY slug, referer
+			ORDER BY clicks DESC LIMIT 25
+		`) as unknown as typeof affiliateClicks;
 	} catch (error) {
 		dbError = error instanceof Error ? error.message : String(error);
 	}
@@ -455,6 +463,24 @@ const statusLabels: Record<string, string> = {
                   <td class="admin-mono">{event.variable_symbol || "—"}</td>
                   <td class="admin-mono">{event.event}</td>
                   <td class="admin-sub">{summarizeEvent(event.payload)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="admin-h2">Affiliate kliky za 30 dní</h2>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead><tr><th>Partner</th><th>Ze stránky</th><th>Kliky</th></tr></thead>
+            <tbody>
+              {affiliateClicks.length === 0 ? (
+                <tr><td colspan="3" class="admin-empty">Zatím žádné kliky (tabulka shop_affiliate_clicks musí existovat — viz db/schema.sql).</td></tr>
+              ) : affiliateClicks.map((row) => (
+                <tr>
+                  <td class="admin-mono">{row.slug}</td>
+                  <td class="admin-sub">{row.referer || "—"}</td>
+                  <td>{row.clicks}</td>
                 </tr>
               ))}
             </tbody>

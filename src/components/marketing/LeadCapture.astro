@@ -48,6 +48,7 @@ const {
     </button>
     <span class="lead-note">{note}</span>
   </form>
+  <p class="lead-success" hidden role="status" aria-live="polite">{t('leadCapture.success')}</p>
 </section>
 
 <style>
@@ -80,12 +81,30 @@ const {
 </style>
 
 <script>
+  // Submits in place so the reader keeps their spot in the article. Without
+  // JS (or on any error) the form falls back to the normal POST + redirect.
   document.querySelectorAll('.lead-form').forEach((form) => {
-    form.addEventListener('submit', () => {
+    if (!(form instanceof HTMLFormElement)) return;
+    form.addEventListener('submit', async (event) => {
       const btn = form.querySelector('.lead-submit-btn');
-      if (btn instanceof HTMLButtonElement && !btn.disabled) {
+      if (btn instanceof HTMLButtonElement) {
+        if (btn.disabled) return;
         btn.disabled = true;
         btn.setAttribute('aria-busy', 'true');
+      }
+      event.preventDefault();
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(form))),
+        });
+        if (!res.ok) throw new Error(String(res.status));
+        form.hidden = true;
+        const success = form.parentElement?.querySelector('.lead-success');
+        if (success instanceof HTMLElement) success.hidden = false;
+      } catch {
+        form.submit();
       }
     });
   });

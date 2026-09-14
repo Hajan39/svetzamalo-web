@@ -16,9 +16,13 @@ import LeadCapture from "./LeadCapture.astro";
 interface Props {
 	siteConfig?: SiteConfig | null;
 	source?: string;
+	heading?: string;
+	body?: string;
+	/** "inline" is the compact form dropped into the middle of an article. */
+	variant?: "default" | "inline";
 }
 
-const { siteConfig, source = "article" } = Astro.props;
+const { siteConfig, source = "article", variant = "default" } = Astro.props;
 const locale = getLangFromUrl(Astro.url);
 const text = translations[locale].components.bookCta;
 const bookText = translations[locale].pages.book;
@@ -33,14 +37,14 @@ const freeHref = withLocalePath("/book", locale);
 ---
 
 {paidLive ? (
-	<aside class="book-cta">
+	<aside class:list={["book-cta", variant === "inline" && "book-cta-inline"]}>
 		{cover && (
 			<img class="book-cta-cover" src={cover.src} alt={cover.alt || bookTitle} width="150" height="212" loading="lazy" decoding="async" />
 		)}
 		<div class="book-cta-body">
 			<p class="book-cta-kicker">{text.kicker}</p>
-			<h2>{text.heading}</h2>
-			<p class="book-cta-lead">{text.body}</p>
+			<h2>{Astro.props.heading ?? text.heading}</h2>
+			<p class="book-cta-lead">{Astro.props.body ?? text.body}</p>
 			<ul class="book-cta-list">
 				{text.bullets.map((bullet) => <li>{bullet}</li>)}
 			</ul>
@@ -157,6 +161,16 @@ const freeHref = withLocalePath("/book", locale);
 		color: var(--primary);
 		font-weight: 600;
 	}
+
+	.book-cta-inline {
+		margin: 2rem 0;
+		padding: 1.1rem 1.25rem;
+	}
+
+	.book-cta-inline .book-cta-cover { width: 96px; }
+	.book-cta-inline h2 { font-size: 1.15rem; }
+	.book-cta-inline .book-cta-list,
+	.book-cta-inline .book-cta-alt { display: none; }
 
 	@media (max-width: 640px) {
 		.book-cta {

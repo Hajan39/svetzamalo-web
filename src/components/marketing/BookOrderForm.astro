@@ -1,0 +1,51 @@
+---
+// The one order form for the paid book. Lives in a component so the sales
+// page can show it twice (hero anchor and after the FAQ) and /book once without
+// three copies drifting apart.
+import HoneypotField from "@/components/forms/HoneypotField.astro";
+import type { SiteConfig } from "@/types";
+import { getExternalBuyUrl, isPaidEbookEnabled } from "@/lib/bookConfig";
+import { getGatewayButtonLabel, isBookGatewayEnabled } from "@/lib/paymentGateway";
+import { translations } from "@/i18n/translations";
+import { getLangFromUrl } from "@/i18n/utils";
+
+interface Props {
+	siteConfig?: SiteConfig | null;
+	/** Distinguishes field ids when the form appears twice on a page. */
+	id: string;
+	class?: string;
+}
+
+const { siteConfig, id, class: className = "" } = Astro.props;
+const locale = getLangFromUrl(Astro.url);
+const text = translations[locale].pages.book;
+
+const externalBuyUrl = getExternalBuyUrl(siteConfig);
+const gatewayEnabled = isBookGatewayEnabled(siteConfig);
+const bankVisible = isPaidEbookEnabled(siteConfig);
+const gatewayButtonLabel = getGatewayButtonLabel(siteConfig, text.orderByGateway);
+---
+
+{externalBuyUrl ? (
+	<div class:list={["space-y-3", className]}>
+		<a class="btn-primary w-full" href={externalBuyUrl} rel="noopener">{text.buyExternal}</a>
+		<p class="lead-note">{text.buyExternalNote}</p>
+	</div>
+) : bankVisible || gatewayEnabled ? (
+	<form class:list={["space-y-3", className]} method="post" action="/api/orders">
+		<input type="hidden" name="productCode" value="ebook-paid-v1" />
+		<HoneypotField id={`hp-${id}`} />
+		<label class="sr-only" for={`${id}-email`}>{text.deliveryEmailLabel}</label>
+		<input id={`${id}-email`} class="form-field" type="email" name="email" placeholder={text.deliveryEmailPlaceholder} autocomplete="email" required />
+		<label class="sr-only" for={`${id}-name`}>{text.fullNameLabel}</label>
+		<input id={`${id}-name`} class="form-field" type="text" name="fullName" placeholder={text.fullNamePlaceholder} autocomplete="name" />
+		{gatewayEnabled && (
+			<button class="btn-primary w-full" type="submit" name="paymentMethod" value="comgate">{gatewayButtonLabel}</button>
+		)}
+		{bankVisible && (
+			<button class="btn-secondary w-full" type="submit" name="paymentMethod" value="bank_transfer">{text.orderByBank}</button>
+		)}
+	</form>
+) : (
+	<p class="text-sm text-foreground-muted">{text.ordersSoon}</p>
+)}

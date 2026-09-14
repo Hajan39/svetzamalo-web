@@ -38,6 +38,7 @@ export const SHOP = {
 
 	sellerName: env("SELLER_NAME", "Jan Hanč"),
 	sellerIco: env("SELLER_ICO", "06328229"),
+	sellerPhone: env("SELLER_PHONE", "+420 734 839 007"),
 	contactEmail: env("CONTACT_EMAIL", "info@svetzamalo.cz"),
 
 	freeEbookTitle: env("FREE_EBOOK_TITLE", "10 nejdražších cestovatelských chyb"),

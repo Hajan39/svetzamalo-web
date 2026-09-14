@@ -54,6 +54,7 @@ const en = {
 
 		"leadCapture.emailLabel": "Email",
 		"leadCapture.emailPlaceholder": "Your email",
+		"leadCapture.success": "Done. The ebook is on its way — check your spam folder too.",
 
 		"articleCard.read": "Read article",
 	},
@@ -100,6 +101,8 @@ const en = {
 			cta: "See the book",
 			freeAlt: "Or start with the",
 			freeAltLink: "free sample",
+			leadSuccessHeading: "You have the 10 mistakes. The whole method is in the guide.",
+			leadSuccessBody: "The ebook shows where money leaks. The book goes further: picking a destination, flights, documents, insurance, money and apps on the road.",
 		},
 		interactiveChecklist: {
 			title: "Checklist",
@@ -380,6 +383,7 @@ const en = {
 			transId: "Transaction ID",
 			tryAgain: "Try again",
 			backWeb: "Back to website",
+			bankAlt: "Card not working? You can also pay by bank transfer — we e-mail the amount and reference.",
 		},
 		bookPending: {
 			pageTitle: "Payment processing | Svet za malo",

@@ -87,3 +87,16 @@ CREATE TABLE IF NOT EXISTS shop_downloads (
 
 CREATE INDEX IF NOT EXISTS shop_downloads_created_idx
   ON shop_downloads (kind, created_at DESC);
+
+-- Affiliate clicks per link, so revenue can be attributed to the article that
+-- sent the reader. Referer is the page on this site, never the visitor.
+CREATE TABLE IF NOT EXISTS shop_affiliate_clicks (
+  id          BIGSERIAL   PRIMARY KEY,
+  slug        TEXT        NOT NULL,
+  locale      TEXT        NOT NULL DEFAULT 'cs',
+  referer     TEXT,
+  created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS shop_affiliate_clicks_slug_idx
+  ON shop_affiliate_clicks (slug, created_at DESC);

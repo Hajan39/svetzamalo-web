@@ -13,7 +13,8 @@ import { isHoneypotTripped, isRateLimited } from "@/lib/spamGuard";
 
 const orderSchema = z.object({
 	email: z.email(),
-	fullName: z.string().min(2).max(120),
+	// Optional: a PDF needs an inbox, not a name. Kept for the invoice line.
+	fullName: z.string().max(120).default(""),
 	productCode: z.string().min(2).max(80).default("ebook-paid-v1"),
 	paymentMethod: z.enum(["bank_transfer", "comgate"]).default("bank_transfer"),
 });

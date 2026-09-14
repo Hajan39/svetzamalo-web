@@ -54,6 +54,7 @@ const cs = {
 
 		"leadCapture.emailLabel": "Email",
 		"leadCapture.emailPlaceholder": "Tvůj email",
+		"leadCapture.success": "Hotovo. Ebook je na cestě, zkontroluj i hromadnou poštu.",
 
 		"articleCard.read": "Číst článek",
 	},
@@ -100,6 +101,8 @@ const cs = {
 			cta: "Prohlédnout knihu",
 			freeAlt: "Nebo si nejdřív vezmi",
 			freeAltLink: "ukázku zdarma",
+			leadSuccessHeading: "Zatím máš 10 chyb. Celý postup je v průvodci.",
+			leadSuccessBody: "Ebook ukáže, kde se přeplácí. Kniha jde dál: od výběru destinace přes letenky, dokumenty a pojištění až po peníze a aplikace na cestě.",
 		},
 		interactiveChecklist: {
 			title: "Checklist",
@@ -379,6 +382,7 @@ const cs = {
 			transId: "ID transakce",
 			tryAgain: "Zkusit znovu",
 			backWeb: "Zpět na web",
+			bankAlt: "Karta nefunguje? Objednávku jde zaplatit i převodem — pošleme částku a variabilní symbol e-mailem.",
 		},
 		bookPending: {
 			pageTitle: "Platba se zpracovává | Svět za málo",

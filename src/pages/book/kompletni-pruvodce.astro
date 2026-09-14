@@ -1,17 +1,14 @@
 ---
-import HoneypotField from "@/components/forms/HoneypotField.astro";
+import BookOrderForm from "@/components/marketing/BookOrderForm.astro";
 import Layout from "@/layouts/Layout.astro";
 import {
-	getExternalBuyUrl,
 	getFreeEbookTitle,
 	getPaidBookDescription,
 	getPaidBookTitle,
 	isFreeEbookEnabled,
-	isPaidEbookEnabled,
 } from "@/lib/bookConfig";
 import { fetchSiteConfig } from "@/lib/content/api";
 import { SHOP } from "@/lib/shopConfig";
-import { getGatewayButtonLabel, isBookGatewayEnabled } from "@/lib/paymentGateway";
 import { translations } from "@/i18n/translations";
 import { getLangFromUrl, withLocalePath } from "@/i18n/utils";
 
@@ -20,15 +17,12 @@ let siteConfig = await fetchSiteConfig(locale);
 if (locale === "en" && !siteConfig) siteConfig = await fetchSiteConfig("cs");
 
 const price = siteConfig?.bookPrice || siteConfig?.bookBankAmount || null;
-const externalBuyUrl = getExternalBuyUrl(siteConfig);
 const paidBookTitle = getPaidBookTitle(siteConfig) || "Kompletní cestovatelský průvodce";
 const paidBookDescription = getPaidBookDescription(siteConfig);
 const freeEbookTitle = getFreeEbookTitle(siteConfig);
 const freeEbookAvailable = isFreeEbookEnabled(siteConfig);
-const gatewayEnabled = isBookGatewayEnabled(siteConfig);
-const bankVisible = isPaidEbookEnabled(siteConfig);
 const text = translations[locale].pages.book;
-const gatewayButtonLabel = getGatewayButtonLabel(siteConfig, text.orderByGateway);
+const about = translations[locale].pages.about;
 
 const topics = [
 	{
@@ -117,6 +111,10 @@ const faq = [
 	{
 		q: "Čím se to liší od článků na webu, které jsou zdarma?",
 		a: "Články řeší jednotlivé destinace a dílčí témata. Průvodce je celý postup pohromadě a v pořadí, v jakém cestu opravdu plánuješ — od rozhodnutí kam až po návrat.",
+	},
+	{
+		q: "Co když mi průvodce nesedne?",
+		a: "Napiš do 14 dnů od nákupu a peníze vrátíme. Bez dotazníku a bez dohadování — stačí e-mail nebo variabilní symbol z potvrzení.",
 	},
 	{
 		q: "Co když mi kniha nepřijde?",
@@ -262,6 +260,23 @@ const jsonLd = {
 		</div>
 	</section>
 
+	<section class="container-wide sales-block">
+		<div class="sales-author">
+			<div>
+				<p class="section-kicker">Kdo to psal</p>
+				<h2>{SHOP.sellerName}</h2>
+				<p>Za webem Svět za málo stojí od roku 2020. Cesty po vlastní ose po Evropě, Asii, Americe i Oceánii, a z každé zůstal seznam toho, co příště udělat levněji a chytřeji. Přesně ten seznam je tenhle průvodce.</p>
+				<p>O cestování přednáší pro školy, knihovny a cestovatelské kluby — {about.pastEvents.length} besed od roku 2020, témata od Nového Zélandu po Vietnam.</p>
+				<a href={withLocalePath('/about', locale)} class="text-link">Víc o projektu a přednáškách →</a>
+			</div>
+			<div class="sales-guarantee">
+				<p class="section-kicker">Garance</p>
+				<h3>14 dní na rozmyšlenou</h3>
+				<p>Pokud ti průvodce do 14 dnů od nákupu nepomůže, napiš a peníze vrátíme. Bez otázek.</p>
+			</div>
+		</div>
+	</section>
+
 	<section class="container-wide book-guide-order" id="objednat">
 		<div class="book-guide-order-inner">
 			<div class="book-guide-order-copy">
@@ -269,29 +284,7 @@ const jsonLd = {
 				<h2>{paidBookTitle}</h2>
 				{price && <p class="book-guide-price">{text.priceLabel}: <strong>{price}</strong></p>}
 			</div>
-			{externalBuyUrl ? (
-				<div class="book-guide-order-form">
-					<a class="btn-primary w-full" href={externalBuyUrl} rel="noopener">{text.buyExternal}</a>
-					<p class="lead-note">{text.buyExternalNote}</p>
-				</div>
-			) : (bankVisible || gatewayEnabled) ? (
-				<form class="book-guide-order-form" method="post" action="/api/orders">
-					<input type="hidden" name="productCode" value="ebook-paid-v1" />
-					<HoneypotField id="hp-guide-order" />
-					<label class="sr-only" for="guide-book-name">{text.fullNameLabel}</label>
-					<input id="guide-book-name" class="form-field" type="text" name="fullName" placeholder={text.fullNamePlaceholder} required />
-					<label class="sr-only" for="guide-book-email">{text.deliveryEmailLabel}</label>
-					<input id="guide-book-email" class="form-field" type="email" name="email" placeholder={text.deliveryEmailPlaceholder} required />
-					{gatewayEnabled && (
-						<button class="btn-primary w-full" type="submit" name="paymentMethod" value="comgate">{gatewayButtonLabel}</button>
-					)}
-					{bankVisible && (
-						<button class="btn-secondary w-full" type="submit" name="paymentMethod" value="bank_transfer">{text.orderByBank}</button>
-					)}
-				</form>
-			) : (
-				<p class="text-sm text-foreground-muted">{text.ordersSoon}</p>
-			)}
+			<BookOrderForm siteConfig={siteConfig} id="guide-order" class="book-guide-order-form" />
 		</div>
 	</section>
 
@@ -299,6 +292,7 @@ const jsonLd = {
 		<ul>
 			<li><strong>Doručení e-mailem</strong><span>Kartou hned po zaplacení, převodem po přijetí platby.</span></li>
 			<li><strong>Platba přes ComGate</strong><span>Kartou nebo bankovním převodem.</span></li>
+			<li><strong>Garance 14 dní</strong><span>Nesedne? Napiš a peníze vrátíme.</span></li>
 			<li><strong>Prodejce</strong><span>{SHOP.sellerName}, IČO {SHOP.sellerIco}</span></li>
 		</ul>
 		<p>
@@ -325,6 +319,22 @@ const jsonLd = {
 		</div>
 	</section>
 
+	<section class="container-wide book-guide-order" id="objednat-2">
+		<div class="book-guide-order-inner">
+			<div class="book-guide-order-copy">
+				<p class="section-kicker">Připraveno?</p>
+				<h2>{paidBookTitle}</h2>
+				{price && <p class="book-guide-price">{text.priceLabel}: <strong>{price}</strong> · PDF hned po zaplacení · garance 14 dní</p>}
+			</div>
+			<BookOrderForm siteConfig={siteConfig} id="guide-order-2" class="book-guide-order-form" />
+		</div>
+	</section>
+
+	<div class="buy-bar">
+		<span><strong>{price}</strong> · PDF, garance 14 dní</span>
+		<a class="btn-primary" href="#objednat">Koupit</a>
+	</div>
+
 	{freeEbookAvailable && (
 		<div class="container-wide book-guide-free-note">
 			<p>{text.goodStart}: <a href={withLocalePath('/book', locale)} class="text-link">{freeEbookTitle} — {text.downloadFree}</a></p>
@@ -334,6 +344,49 @@ const jsonLd = {
 
 <style>
 	.sales-block { padding-block: clamp(2.5rem, 6vw, 4rem); }
+
+	.sales-author {
+		display: grid;
+		grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+		gap: 2rem;
+		align-items: start;
+	}
+
+	.sales-author p { color: var(--foreground-secondary); }
+
+	.sales-guarantee {
+		border: 1px solid var(--border);
+		border-top: 4px solid var(--primary);
+		border-radius: var(--radius);
+		background: var(--background-secondary);
+		padding: 1.5rem 1.6rem;
+	}
+
+	.sales-guarantee h3 { margin: 0.2rem 0 0.5rem; }
+
+	/* Mobile-only sticky buy bar, parked above the bottom navigation. */
+	.buy-bar {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+		z-index: 30;
+		display: none;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		padding: 0.6rem 1rem;
+		border-top: 1px solid var(--border);
+		background: var(--background);
+		box-shadow: 0 -8px 24px rgb(0 0 0 / 0.08);
+		font-size: 0.9rem;
+	}
+
+	@media (max-width: 767px) {
+		.buy-bar { display: flex; }
+		.book-guide-free-note { padding-bottom: 4rem; }
+		.sales-author { grid-template-columns: 1fr; }
+	}
 
 	.sales-outcomes {
 		display: grid;

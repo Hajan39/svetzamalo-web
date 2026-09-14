@@ -27,6 +27,7 @@ const text = translations[locale].pages.bookCancelled;
           <div>
             <h2 class="text-base font-semibold">{text.nextTitle}</h2>
             <p class="mt-2 text-sm leading-6 text-foreground-secondary">{text.nextBody}</p>
+            <p class="mt-2 text-sm leading-6 text-foreground-secondary">{text.bankAlt}</p>
           </div>
           {(refId || transId) && (
             <div class="rounded-lg border border-border bg-background-secondary p-4">
@@ -51,7 +52,7 @@ const text = translations[locale].pages.bookCancelled;
       </div>
 
       <div class="flex flex-wrap gap-3">
-        <a class="btn-primary" href={withLocalePath('/book', locale)}>{text.tryAgain}</a>
+        <a class="btn-primary" href={withLocalePath('/book/kompletni-pruvodce#objednat', locale)}>{text.tryAgain}</a>
         <a class="btn-secondary" href={withLocalePath('/', locale)}>{text.backWeb}</a>
       </div>
     </div>

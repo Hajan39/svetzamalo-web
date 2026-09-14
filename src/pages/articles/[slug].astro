@@ -94,6 +94,16 @@ const relatedArticles = relatedArticlesFromSchema.length
 	: relatedArticlesFromContent;
 const displayHtml = removeRelatedArticlesBlock(articleHtml);
 
+// The offer lands where readers actually are — after the second section — not
+// only at the very end. Split at a heading so the HTML stays valid.
+function splitBeforeHeading(html: string, nth: number): [string, string] {
+	const cut = [...html.matchAll(/<h2\b/gi)][nth]?.index;
+	return cut ? [html.slice(0, cut), html.slice(cut)] : [html, ""];
+}
+const [htmlBeforeCta, htmlAfterCta] = isChecklistArticle
+	? [displayHtml, ""]
+	: splitBeforeHeading(displayHtml, 2);
+
 const siteUrl =
 	import.meta.env.SITE_URL ||
 	import.meta.env.PUBLIC_SITE_URL ||
@@ -152,7 +162,13 @@ const jsonLd = {
     </header>
     {article.coverImage && <Image src={article.coverImage.src} alt={article.coverImage.alt || article.title} width={900} height={506} class="mb-8 aspect-video w-full rounded-xl object-cover" loading="eager" />}
     <div class="brand-card px-6 py-7 sm:px-8 sm:py-8">
-      {isChecklistArticle ? <InteractiveChecklist slug={article.slug} htmlContent={displayHtml} /> : <div class="prose-content" set:html={displayHtml}></div>}
+      {isChecklistArticle ? <InteractiveChecklist slug={article.slug} htmlContent={displayHtml} /> : <div class="prose-content" set:html={htmlBeforeCta}></div>}
+      {htmlAfterCta && (
+        <>
+          <BookCta siteConfig={siteConfig} source="article_inline" variant="inline" />
+          <div class="prose-content" set:html={htmlAfterCta}></div>
+        </>
+      )}
     </div>
 
     <BookCta siteConfig={siteConfig} source="article" />

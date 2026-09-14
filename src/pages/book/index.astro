@@ -1,20 +1,15 @@
 ---
 import HoneypotField from "@/components/forms/HoneypotField.astro";
+import BookOrderForm from "@/components/marketing/BookOrderForm.astro";
 import Layout from "@/layouts/Layout.astro";
 import {
-	getExternalBuyUrl,
 	getFreeEbookDescription,
 	getFreeEbookTitle,
 	getPaidBookDescription,
 	getPaidBookTitle,
 	isFreeEbookEnabled,
-	isPaidEbookEnabled,
 } from "@/lib/bookConfig";
 import { fetchSiteConfig } from "@/lib/content/api";
-import {
-	getGatewayButtonLabel,
-	isBookGatewayEnabled,
-} from "@/lib/paymentGateway";
 import { translations } from "@/i18n/translations";
 import { getLangFromUrl, withLocalePath } from "@/i18n/utils";
 
@@ -24,19 +19,12 @@ if (locale === "en" && !siteConfig) {
 	siteConfig = await fetchSiteConfig("cs");
 }
 const price = siteConfig?.bookPrice || siteConfig?.bookBankAmount || "490 Kč";
-const externalBuyUrl = getExternalBuyUrl(siteConfig);
 const freeEbookAvailable = isFreeEbookEnabled(siteConfig);
 const freeEbookTitle = getFreeEbookTitle(siteConfig);
 const freeEbookDescription = getFreeEbookDescription(siteConfig);
 const paidBookTitle = getPaidBookTitle(siteConfig);
 const paidBookDescription = getPaidBookDescription(siteConfig);
-const gatewayEnabled = isBookGatewayEnabled(siteConfig);
-const bankVisible = isPaidEbookEnabled(siteConfig);
 const text = translations[locale].pages.book;
-const gatewayButtonLabel = getGatewayButtonLabel(
-	siteConfig,
-	text.orderByGateway,
-);
 
 const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${translations[locale].shared.brand}`;
 ---
@@ -107,6 +95,25 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
 
     <div class="grid gap-6 md:grid-cols-2">
       <section class="brand-card book-option book-option-primary">
+        <p class="section-kicker">{text.wantMore}</p>
+        {siteConfig?.bookCover && <img class="book-option-media" src={siteConfig.bookCover.src} alt={siteConfig.bookCover.alt || paidBookTitle} width={siteConfig.bookCover.width ?? 300} height={siteConfig.bookCover.height ?? 424} loading="lazy" decoding="async" />}
+        <h3>{paidBookTitle}</h3>
+        <p>{paidBookDescription}</p>
+        <p class="section-kicker book-paid-topics-label">{text.paidTopicsLabel}</p>
+        <ul class="book-paid-topics">
+          {text.paidHighlights.map((topic) => (
+            <li class="book-paid-topic">
+              <strong>{topic.heading}</strong>
+              <span>{topic.body}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="book-option-price">{text.priceLabel}: <strong>{price}</strong></p>
+        <BookOrderForm siteConfig={siteConfig} id="book-order" />
+        <a href={withLocalePath('/book/kompletni-pruvodce', locale)} class="book-option-detail-link">{text.detailLink}</a>
+      </section>
+
+      <section class="brand-card book-option">
         <p class="section-kicker">{text.goodStart}</p>
         {siteConfig?.freeEbookCover && <img class="book-option-media" src={siteConfig.freeEbookCover.src} alt={siteConfig.freeEbookCover.alt || freeEbookTitle} width={siteConfig.freeEbookCover.width ?? 300} height={siteConfig.freeEbookCover.height ?? 424} loading="lazy" decoding="async" />}
         <h3>{freeEbookTitle}</h3>
@@ -124,47 +131,6 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
         ) : (
           <p class="text-sm text-foreground-muted">{text.freeUnavailable}</p>
         )}
-      </section>
-
-      <section class="brand-card book-option">
-        <p class="section-kicker">{text.wantMore}</p>
-        {siteConfig?.bookCover && <img class="book-option-media" src={siteConfig.bookCover.src} alt={siteConfig.bookCover.alt || paidBookTitle} width={siteConfig.bookCover.width ?? 300} height={siteConfig.bookCover.height ?? 424} loading="lazy" decoding="async" />}
-        <h3>{paidBookTitle}</h3>
-        <p>{paidBookDescription}</p>
-        <p class="section-kicker book-paid-topics-label">{text.paidTopicsLabel}</p>
-        <ul class="book-paid-topics">
-          {text.paidHighlights.map((topic) => (
-            <li class="book-paid-topic">
-              <strong>{topic.heading}</strong>
-              <span>{topic.body}</span>
-            </li>
-          ))}
-        </ul>
-        <p class="book-option-price">{text.priceLabel}: <strong>{price}</strong></p>
-        {externalBuyUrl ? (
-          <div class="space-y-3">
-            <a class="btn-primary w-full" href={externalBuyUrl} rel="noopener">{text.buyExternal}</a>
-            <p class="lead-note">{text.buyExternalNote}</p>
-          </div>
-        ) : bankVisible || gatewayEnabled ? (
-          <form class="space-y-3" method="post" action="/api/orders">
-            <input type="hidden" name="productCode" value="ebook-paid-v1" />
-            <HoneypotField id="hp-book-order" />
-            <label class="sr-only" for="paid-book-name">{text.fullNameLabel}</label>
-            <input id="paid-book-name" class="form-field" type="text" name="fullName" placeholder={text.fullNamePlaceholder} required />
-            <label class="sr-only" for="paid-book-email">{text.deliveryEmailLabel}</label>
-            <input id="paid-book-email" class="form-field" type="email" name="email" placeholder={text.deliveryEmailPlaceholder} required />
-            {gatewayEnabled ? (
-              <button class="btn-primary w-full" type="submit" name="paymentMethod" value="comgate">{gatewayButtonLabel}</button>
-            ) : null}
-            {bankVisible ? (
-              <button class="btn-secondary w-full" type="submit" name="paymentMethod" value="bank_transfer">{text.orderByBank}</button>
-            ) : null}
-          </form>
-        ) : (
-          <p class="text-sm text-foreground-muted">{text.ordersSoon}</p>
-        )}
-        <a href={withLocalePath('/book/kompletni-pruvodce', locale)} class="book-option-detail-link">{text.detailLink}</a>
       </section>
     </div>
   </section>

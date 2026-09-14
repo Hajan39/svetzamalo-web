@@ -1,6 +1,7 @@
 ---
 import QRCode from "qrcode";
 import Layout from "@/layouts/Layout.astro";
+import BookCta from "@/components/marketing/BookCta.astro";
 import { buildBankTransferDetails } from "@/lib/bankTransfer";
 import {
 	getBookPaymentMessage,
@@ -35,6 +36,7 @@ const isComgatePaid =
 const freeEbookTitle = getFreeEbookTitle(siteConfig);
 const paidBookTitle = getPaidBookTitle(siteConfig);
 const text = translations[locale].pages.bookSuccess;
+const ctaText = translations[locale].components.bookCta;
 
 const pageTitle = text.pageTitle;
 const pageDescription = text.pageDescription;
@@ -112,6 +114,7 @@ const qrSvg = details?.spaydPayload
           <a class="btn-primary" href={withLocalePath('/destinations', locale)}>{text.pickDestination}</a>
           <a class="btn-secondary" href={withLocalePath('/articles', locale)}>{text.readArticles}</a>
         </div>
+        <BookCta siteConfig={siteConfig} source="lead_success" heading={ctaText.leadSuccessHeading} body={ctaText.leadSuccessBody} />
       </div>
     )}
 

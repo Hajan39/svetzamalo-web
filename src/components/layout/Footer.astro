@@ -2,6 +2,7 @@
 import BrandLogo from "./BrandLogo.astro";
 import HoneypotField from "@/components/forms/HoneypotField.astro";
 import type { SiteConfig } from "@/types";
+import { SHOP } from "@/lib/shopConfig";
 import { getLangFromUrl, useTranslations, withLocalePath } from "@/i18n/utils";
 
 interface Props {
@@ -38,7 +39,8 @@ const legalLinks = [
         </a>
         <p class="mb-6 max-w-sm text-sm leading-relaxed text-foreground-secondary">{t('footer.tagline')}</p>
         <p class="text-sm text-foreground-muted">{siteEmail}</p>
-        <p class="text-sm text-foreground-muted">+420 734 839 007</p>
+        <p class="text-sm text-foreground-muted">{SHOP.sellerPhone}</p>
+        <p class="mt-2 text-xs text-foreground-muted">{SHOP.sellerName}, IČO {SHOP.sellerIco}</p>
       </div>
 
       <div class="lg:col-span-3">
@@ -56,7 +58,8 @@ const legalLinks = [
           <input type="hidden" name="leadType" value="newsletter" />
           <input type="hidden" name="source" value="footer" />
           <HoneypotField id="hp-footer" />
-          <input class="form-field flex-1 text-sm" type="email" name="email" placeholder={t('footer.emailPlaceholder')} required />
+          <label class="sr-only" for="footer-email">{t('footer.emailPlaceholder')}</label>
+          <input id="footer-email" class="form-field flex-1 text-sm" type="email" name="email" placeholder={t('footer.emailPlaceholder')} autocomplete="email" required />
           <button class="btn-primary px-5 text-sm" type="submit">{t('footer.subscribe')}</button>
         </form>
         <p class="text-xs text-foreground-muted">{t('footer.noSpam')}</p>

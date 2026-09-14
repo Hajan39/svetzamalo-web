@@ -1,6 +1,7 @@
 import type { APIRoute } from "astro";
 import { track } from "@vercel/analytics/server";
 import { fetchAffiliateLinkBySlug } from "@/lib/content/api";
+import { db, isDbConfigured } from "@/lib/db";
 import { getLocaleFromAstro } from "@/lib/i18n";
 
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -39,6 +40,14 @@ export const GET: APIRoute = async (context) => {
 			locale,
 			title: affiliateLink.title,
 		}).catch(() => {});
+		if (isDbConfigured()) {
+			// Only the path of the referring page on this site — no visitor data.
+			const referer = context.request.headers.get("referer");
+			const path = referer ? new URL(referer).pathname.slice(0, 200) : null;
+			db()`INSERT INTO shop_affiliate_clicks (slug, locale, referer) VALUES (${slug}, ${locale}, ${path})`.catch(
+				(error: unknown) => console.warn("[go] click not recorded:", error),
+			);
+		}
 		return redirectResponse(destination.toString());
 	} catch {
 		return new Response("Invalid affiliate destination", { status: 502 });
