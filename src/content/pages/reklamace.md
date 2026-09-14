@@ -16,10 +16,6 @@ Tel: +420 734 839 007
 
 Předmětem obchodu jsou digitální produkty (e-knihy). Na digitální obsah se nevztahuje právo na odstoupení od smlouvy ve smyslu § 1837 písm. l) zákona č. 89/2012 Sb. (Občanský zákoník), pokud bylo plnění (doručení digitálního obsahu) zahájeno se souhlasem zákazníka před uplynutím lhůty pro odstoupení od smlouvy.
 
-## Garance spokojenosti (14 dní)
-
-Nad rámec zákona poskytujeme u e-knihy *Kompletní cestovatelský průvodce* dobrovolnou garanci vrácení peněz. Pokud vám kniha nevyhovuje, napište do 14 dnů od zaplacení na info@svetzamalo.cz s e-mailem objednávky nebo variabilním symbolem. Plnou cenu vrátíme na původní platební metodu do 14 dnů, bez udání důvodu.
-
 ## Storno objednávky (bankovní převod)
 
 Pokud jste zadali objednávku s platbou převodem a platba dosud nebyla připsána, můžete objednávku zrušit zasláním e-mailu na info@svetzamalo.cz. Uveďte číslo objednávky nebo variabilní symbol.

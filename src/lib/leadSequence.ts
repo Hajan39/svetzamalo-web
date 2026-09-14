@@ -56,7 +56,7 @@ export const LEAD_SEQUENCE: SequenceStep[] = [
 	{
 		daysAfterPrevious: 3,
 		subject: "Kompletní průvodce: co dostaneš a co když nesedne",
-		heading: "Za 490 Kč celý postup, 14 dní na rozmyšlenou",
+		heading: "Za 490 Kč celý postup — a kapitola zdarma, než se rozhodneš",
 		html: () =>
 			p("Krátce, co v průvodci je:") +
 			`<ul style="margin:0 0 12px;padding-left:20px;">
@@ -67,10 +67,10 @@ export const LEAD_SEQUENCE: SequenceStep[] = [
 <li>Balení, mobilní tarif, eSIM a offline aplikace</li>
 <li>Pokročilé: luxus za rozumné peníze, práce na cestách</li>
 </ul>` +
-			p("<strong>Garance:</strong> pokud ti do 14 dnů nepomůže, napiš a peníze vrátíme. Bez otázek.") +
+			p(`Nechceš kupovat naslepo? ${link(`${SHOP.siteUrl}/downloads/ukazka-kompletni-cestovatelsky-pruvodce.pdf`, "Stáhni si celou kapitolu o penězích zdarma")} — je to přesně ten styl a hloubka, jakou má zbytek knihy.`) +
 			p(`${link(bookUrl, "Koupit průvodce za 490 Kč →")} Platba kartou nebo převodem, PDF přijde e-mailem.`),
 		text: () =>
-			`Za 490 Kč celý postup, 14 dní na rozmyšlenou\n\nPlánování, dokumenty, zdraví a pojištění, letenky, peníze, ubytování, balení a aplikace, pokročilé cestování.\n\nGarance: do 14 dnů vrátíme peníze bez otázek.\n\nKoupit: ${bookUrl}`,
+			`Za 490 Kč celý postup\n\nPlánování, dokumenty, zdraví a pojištění, letenky, peníze, ubytování, balení a aplikace, pokročilé cestování.\n\nUkázková kapitola zdarma: ${SHOP.siteUrl}/downloads/ukazka-kompletni-cestovatelsky-pruvodce.pdf\n\nKoupit: ${bookUrl}`,
 	},
 	{
 		daysAfterPrevious: 6,
@@ -79,10 +79,10 @@ export const LEAD_SEQUENCE: SequenceStep[] = [
 		html: () =>
 			p("Slíbili jsme, že nebudeme otravovat, tak tohle je poslední zpráva k průvodci. Dál budou chodit jen nové články a tipy, a i ty jdou jedním klikem odhlásit.") +
 			p("Pokud plánuješ cestu na příští měsíce, dává smysl mít postup po ruce teď — letenky i pojištění se řeší dřív, než člověk čeká.") +
-			p(`${link(bookUrl, "Kompletní cestovatelský průvodce →")} 490 Kč, PDF, garance 14 dní.`) +
+			p(`${link(bookUrl, "Kompletní cestovatelský průvodce →")} 490 Kč, PDF hned po zaplacení.`) +
 			p("Díky, že čteš. Šťastnou cestu."),
 		text: () =>
-			`Tímhle to z naší strany končí\n\nPoslední mail k průvodci. Pokud plánuješ cestu na příští měsíce, postup se hodí mít po ruce teď.\n\n${bookUrl} — 490 Kč, PDF, garance 14 dní.\n\nDíky, že čteš.`,
+			`Tímhle to z naší strany končí\n\nPoslední mail k průvodci. Pokud plánuješ cestu na příští měsíce, postup se hodí mít po ruce teď.\n\n${bookUrl} — 490 Kč, PDF hned po zaplacení.\n\nDíky, že čteš.`,
 	},
 ];
 
