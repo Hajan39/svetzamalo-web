@@ -4,6 +4,7 @@ import * as sanitySiteConfig from "@/lib/sanity/siteConfig";
 import { envSiteConfig } from "@/lib/envSiteConfig";
 
 export const fetchLatestArticles = sanityApi.fetchLatestArticles;
+export const fetchGuides = sanityApi.fetchGuides;
 export const fetchArticles = sanityApi.fetchArticles;
 export const fetchArticlesPage = sanityApi.fetchArticlesPage;
 export const fetchAllArticles = sanityApi.fetchAllArticles;

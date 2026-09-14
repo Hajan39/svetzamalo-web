@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import InteractiveChecklist from "@/components/article/InteractiveChecklist.astro";
 import ArticleCard from "@/components/article/ArticleCard.astro";
 import BookCta from "@/components/marketing/BookCta.astro";
+import AuthorBox from "@/components/article/AuthorBox.astro";
 import Layout from "@/layouts/Layout.astro";
 import { getContinentLabel } from "@/lib/continentLabels";
 import {
@@ -172,6 +173,7 @@ const jsonLd = {
     </div>
 
     <BookCta siteConfig={siteConfig} source="article" />
+    <AuthorBox />
 
     {relatedArticles.length > 0 && (
       <section class="mt-10 md:mt-12">

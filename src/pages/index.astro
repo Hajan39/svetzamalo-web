@@ -17,9 +17,11 @@ import {
 	fetchArticleCount,
 	fetchArticlesPage,
 	fetchDestinations,
+	fetchGuides,
 	fetchLatestArticles,
 	fetchSiteConfig,
 } from "@/lib/content/api";
+import { SHOP } from "@/lib/shopConfig";
 import { translations } from "@/i18n/translations";
 import { getLocaleFromAstro, withLocalePath } from "@/lib/i18n";
 import { getDraftModeProps } from "@/lib/sanity/draftMode";
@@ -95,6 +97,8 @@ const text = translations[locale].pages.home;
 const bookText = translations[locale].pages.book;
 const shared = translations[locale].shared;
 const siteUrl = import.meta.env.SITE_URL || import.meta.env.PUBLIC_SITE_URL || "https://svetzamalo.cz";
+const guides = await fetchGuides(locale);
+const socialProfiles = Object.values(SHOP.social).filter(Boolean);
 
 const continentLabels = new Intl.ListFormat(shared.htmlLocale, {
 	style: "long",
@@ -126,6 +130,7 @@ const continentLabels = new Intl.ListFormat(shared.htmlLocale, {
         url: siteUrl,
         logo: `${siteUrl}/icons/icon-512.png`,
         description: text.description,
+        ...(socialProfiles.length ? { sameAs: socialProfiles } : {}),
       },
       {
         "@context": "https://schema.org",
@@ -235,6 +240,26 @@ const continentLabels = new Intl.ListFormat(shared.htmlLocale, {
 						</a>
 					))}
 				</div>
+			</div>
+		</section>
+	)}
+
+	{guides.length > 0 && (
+		<section class="container-wide guides-section">
+			<div class="section-heading-row">
+				<div>
+					<p class="section-kicker">{text.guidesKicker}</p>
+					<h2>{text.guidesHeading}</h2>
+					<p class="guides-intro">{text.guidesIntro}</p>
+				</div>
+			</div>
+			<div class="guides-grid">
+				{guides.slice(0, 6).map((guide) => (
+					<a href={withLocalePath(`/articles/${guide.slug}`, locale)} class="guide-card">
+						<strong>{guide.title}</strong>
+						<span>{guide.intro}</span>
+					</a>
+				))}
 			</div>
 		</section>
 	)}

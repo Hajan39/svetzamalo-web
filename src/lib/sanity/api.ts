@@ -447,6 +447,24 @@ function applyKeywordReplacement(
 	return articles;
 }
 
+/** The evergreen how-to guides (articleType "Návod"), newest first. */
+export async function fetchGuides(
+	locale: SupportedLocale = "cs",
+	options: SanityFetchOptions = {},
+): Promise<Article[]> {
+	try {
+		const { data } = await loadQuery<SanityArticle[]>({
+			query: `*[_type == "article" && locale == $locale && articleType == "Návod"] | order(_createdAt desc){${articleCardProjection}}`,
+			params: { locale },
+			...options,
+		});
+		return mapSafely(data, transformArticle, "guides");
+	} catch (error) {
+		console.warn("Sanity fetch guides failed:", error);
+		return [];
+	}
+}
+
 export async function fetchLatestArticles(
 	limit = 6,
 	locale: SupportedLocale = "cs",

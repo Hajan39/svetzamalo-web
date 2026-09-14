@@ -22,6 +22,11 @@ const mainLinks = [
 	{ label: t("footer.articles"), href: withLocalePath("/articles", locale) },
 	{ label: t("footer.about"), href: withLocalePath("/about", locale) },
 ];
+const socialLinks = [
+	{ label: "Instagram", href: SHOP.social.instagram },
+	{ label: "Facebook", href: SHOP.social.facebook },
+	{ label: "YouTube", href: SHOP.social.youtube },
+].filter((link) => link.href);
 const legalLinks = [
 	{ label: t("footer.privacy"), href: withLocalePath("/privacy", locale) },
 	{ label: t("footer.terms"), href: withLocalePath("/terms", locale) },
@@ -41,6 +46,17 @@ const legalLinks = [
         <p class="text-sm text-foreground-muted">{siteEmail}</p>
         <p class="text-sm text-foreground-muted">{SHOP.sellerPhone}</p>
         <p class="mt-2 text-xs text-foreground-muted">{SHOP.sellerName}, IČO {SHOP.sellerIco}</p>
+        {socialLinks.length > 0 && (
+          <div class="mt-5">
+            <h2 class="mb-2 text-sm font-semibold uppercase tracking-wider text-foreground">{t('footer.follow')}</h2>
+            <ul class="flex flex-wrap gap-4">
+              {socialLinks.map((link) => (
+                <li><a href={link.href} target="_blank" rel="noopener" class="text-sm text-foreground-secondary hover:text-primary">{link.label}</a></li>
+              ))}
+              <li><a href="/rss.xml" class="text-sm text-foreground-secondary hover:text-primary">{t('footer.rss')}</a></li>
+            </ul>
+          </div>
+        )}
       </div>
 
       <div class="lg:col-span-3">
