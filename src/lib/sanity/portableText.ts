@@ -133,7 +133,13 @@ export function replaceAffiliateKeywords(
 		.join("|");
 	const regex = new RegExp(`\\b(${pattern})\\b`, "gi");
 
-	// Walk tag-by-tag; only substitute inside text nodes outside no-replace tags
+	// Walk tag-by-tag; only substitute inside text nodes outside no-replace tags.
+	// Each partner is linked once per article: the first mention. Five "Uber"
+	// links in one text read as spam to readers and to Google alike.
+	const linked = new Set<string>(
+		// Partners the author already linked by hand count as mentioned.
+		Array.from(html.matchAll(/href="\/go\/([a-z0-9-]+)"/g), (m) => m[1]),
+	);
 	const tagStack: string[] = [];
 	const parts = html.split(/(<[^>]+>)/);
 	let result = "";
@@ -160,7 +166,8 @@ export function replaceAffiliateKeywords(
 		} else {
 			result += part.replace(regex, (match) => {
 				const info = keywordMap.get(match.toLowerCase());
-				if (!info) return match;
+				if (!info || linked.has(info.slug)) return match;
+				linked.add(info.slug);
 				const rel = info.relSponsored ? ' rel="sponsored nofollow"' : "";
 				return `<a href="/go/${info.slug}"${rel}>${match}</a>`;
 			});

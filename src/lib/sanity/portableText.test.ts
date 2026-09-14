@@ -6,16 +6,30 @@ const booking = [
 ];
 
 describe("replaceAffiliateKeywords", () => {
-	it("replaces every occurrence, not just the first", () => {
+	it("links only the first mention of a partner in an article", () => {
+		// Five identical affiliate links in one text read as spam to readers and
+		// to Google alike; the first mention is where the reader decides anyway.
 		const html = "<p>Booking je fajn. Na booking hledám vždy.</p>";
 		const out = replaceAffiliateKeywords(html, booking);
-		expect(out.match(/<a href="\/go\/booking"/g)).toHaveLength(2);
+		expect(out.match(/<a href="\/go\/booking"/g)).toHaveLength(1);
+		expect(out).toContain('<a href="/go/booking" rel="sponsored nofollow">Booking</a> je fajn. Na booking');
+	});
+
+	it("counts declined forms of the same partner as one mention", () => {
+		const links = [{ slug: "revolut", keywords: ["Revolut", "Revolutu"], relSponsored: true }];
+		const out = replaceAffiliateKeywords("<p>Revolut je karta. Na Revolutu směňte předem.</p>", links);
+		expect(out.match(/<a href="\/go\/revolut"/g)).toHaveLength(1);
 	});
 
 	it("matches case-insensitively but keeps the original casing", () => {
 		const out = replaceAffiliateKeywords("<p>BOOKING a booking</p>", booking);
 		expect(out).toContain(">BOOKING</a>");
-		expect(out).toContain(">booking</a>");
+		expect(out).toContain("</a> a booking</p>");
+	});
+
+	it("adds nothing when the article already links the partner by hand", () => {
+		const html = '<p>Viz <a href="/go/booking">Booking</a>. Jinak booking nepoužíváme.</p>';
+		expect(replaceAffiliateKeywords(html, booking)).toBe(html);
 	});
 
 	it("does not nest a link inside an existing link", () => {
