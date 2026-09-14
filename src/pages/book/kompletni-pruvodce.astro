@@ -164,7 +164,7 @@ const jsonLd = {
 			inLanguage: "cs-CZ",
 			bookFormat: "https://schema.org/EBook",
 			numberOfPages: 235,
-			...(siteConfig?.bookCover ? { image: siteConfig.bookCover.src } : {}),
+			...(siteConfig?.bookCover ? { image: new URL(siteConfig.bookCover.src, SHOP.siteUrl).toString() } : {}),
 			author: [
 				{ "@type": "Person", name: "Jan Hanč", url: `${SHOP.siteUrl}/about` },
 				{ "@type": "Person", name: "Kateřina Hančová", url: `${SHOP.siteUrl}/about` },

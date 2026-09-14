@@ -22,10 +22,23 @@ export function envSiteConfig(): SiteConfig {
 		freeEbookAvailable: isFreeEbookLive(),
 		freeEbookTitle: SHOP.freeEbookTitle,
 		ebookPdfUrl: SHOP.freeEbookDownloadUrl,
+		// Covers are the first page of each PDF, rendered to public/images/book/.
+		freeEbookCover: {
+			src: "/images/book/obalka-10-chyb.jpg",
+			alt: `Obálka ebooku ${SHOP.freeEbookTitle}`,
+			width: 910,
+			height: 1287,
+		},
 
 		bookAvailable: true,
 		bookTitle: SHOP.paidBookTitle,
 		bookPrice: `${SHOP.priceCzk} Kč`,
+		bookCover: {
+			src: "/images/book/obalka-pruvodce.jpg",
+			alt: `Obálka knihy ${SHOP.paidBookTitle}`,
+			width: 910,
+			height: 1287,
+		},
 		paidEbookPdfUrl: SHOP.paidBookFileUrl || undefined,
 
 		bookBankTransferEnabled: isBankTransferLive(),
