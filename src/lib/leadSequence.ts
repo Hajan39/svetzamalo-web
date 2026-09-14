@@ -46,12 +46,12 @@ export const LEAD_SEQUENCE: SequenceStep[] = [
 		subject: "Proč vznikl Kompletní cestovatelský průvodce",
 		heading: "Seznam, který zůstal po každé cestě",
 		html: () =>
-			p(`Za webem Svět za málo stojím od roku 2020. Po každé cestě mi zůstal seznam věcí, které bych příště udělal levněji a chytřeji — a ten seznam se pořád opakoval: dokumenty na poslední chvíli, letenka koupená ve špatný týden, pojištění vybrané podle ceny místo podle krytí.`) +
+			p(`Za webem Svět za málo stojíme s Katkou od roku 2020. Začínali jsme jako studenti s minimem peněz; za deset let z toho bylo 46 zemí a skoro dva roky v Austrálii a na Novém Zélandu. Po každé cestě zůstal seznam věcí, které bychom příště udělali levněji a chytřeji — a ten seznam se pořád opakoval: dokumenty na poslední chvíli, letenka koupená ve špatný týden, pojištění vybrané podle ceny místo podle krytí.`) +
 			p("Články na webu řeší jednotlivé destinace. Průvodce je ten seznam pohromadě, v pořadí, v jakém cestu opravdu plánuješ: kam, kdy, za kolik, s jakými dokumenty, pojištěním a kartou — a co dělat, když se něco pokazí.") +
-			p(`230+ stran, PDF, odkaz hned po zaplacení. ${link(bookUrl, "Co v něm přesně je →")}`) +
-			p(`O cestování taky přednáším pro školy a knihovny — přehled témat najdeš na ${link(`${SHOP.siteUrl}/about`, "stránce o projektu")}.`),
+			p(`235 stran, 22 kapitol, PDF hned po zaplacení. ${link(bookUrl, "Co v něm přesně je →")} Nebo si nejdřív ${link(`${SHOP.siteUrl}/downloads/ukazka-kompletni-cestovatelsky-pruvodce.pdf`, "stáhni ukázkovou kapitolu o penězích")}.`) +
+			p(`O cestování taky přednášíme pro školy a knihovny — přehled témat najdeš na ${link(`${SHOP.siteUrl}/about`, "stránce o projektu")}.`),
 		text: () =>
-			`Seznam, který zůstal po každé cestě\n\nZa webem Svět za málo stojím od roku 2020. Průvodce je seznam toho, co příště udělat levněji a chytřeji, v pořadí, v jakém cestu opravdu plánuješ.\n\n230+ stran, PDF, odkaz hned po zaplacení: ${bookUrl}`,
+			`Seznam, který zůstal po každé cestě\n\nZa webem Svět za málo stojíme s Katkou od roku 2020: 46 zemí, dva roky v Austrálii a na Novém Zélandu. Průvodce je seznam toho, co příště udělat levněji a chytřeji, v pořadí, v jakém cestu opravdu plánuješ.\n\n235 stran, PDF, odkaz hned po zaplacení: ${bookUrl}\nUkázková kapitola zdarma: ${SHOP.siteUrl}/downloads/ukazka-kompletni-cestovatelsky-pruvodce.pdf`,
 	},
 	{
 		daysAfterPrevious: 3,

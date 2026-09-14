@@ -6,7 +6,7 @@ export const DEFAULT_FREE_EBOOK_DESCRIPTION =
 	"10 nejčastějších chyb, které zdražují každou cestu: letenky, ubytování, doprava, jídlo, směna peněz, pozdní rezervace, aplikace, turistické pasti a drahá data.";
 export const DEFAULT_PAID_BOOK_TITLE = "Kompletní cestovatelský průvodce";
 export const DEFAULT_PAID_BOOK_DESCRIPTION =
-	"Průvodce na 230+ stranách: dokumenty, letenky, ubytování, zdraví, pojištění, peníze, mobilní tarify a aplikace. Levně a chytře do celého světa.";
+	"Průvodce na 235 stranách: dokumenty, letenky, ubytování, zdraví, pojištění, peníze, mobilní tarify a aplikace. Levně a chytře do celého světa.";
 
 function cleanValue(value: string | null | undefined, fallback: string) {
 	return value?.trim() || fallback;

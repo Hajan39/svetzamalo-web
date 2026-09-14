@@ -93,7 +93,7 @@ const en = {
 			heading: "Want the whole thing in one place?",
 			body: "This article covers one topic. The book covers the whole trip — documents, flights, accommodation, insurance and money abroad.",
 			bullets: [
-				"230+ pages, tested on our own trips",
+				"235 pages, tested on our own trips",
 				"Concrete procedures, not general advice",
 				"Download right after payment, yours forever",
 			],
@@ -267,7 +267,7 @@ const en = {
 			chooseByStage: "Start free, plan properly with the full guide",
 			valueFirst: "Free preview, complete guide in the paid edition",
 			valueBody:
-				"The free ebook quickly shows the most important mistakes and first savings. The complete guide covers 230+ pages: documents, flights, accommodation, health, insurance, money, mobile plans, and travel apps.",
+				"The free ebook quickly shows the most important mistakes and first savings. The complete guide covers 235 pages: documents, flights, accommodation, health, insurance, money, mobile plans, and travel apps.",
 			goodStart: "Good start",
 			freeEmailLabel: "Email for free ebook",
 			freeEmailPlaceholder: "Your email",

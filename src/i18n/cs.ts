@@ -93,7 +93,7 @@ const cs = {
 			heading: "Chceš to celé pohromadě?",
 			body: "Tenhle článek řeší jednu věc. Kniha řeší celou cestu — od dokumentů a letenek po ubytování, pojištění a peníze v zahraničí.",
 			bullets: [
-				"230+ stran, ověřeno na vlastních cestách",
+				"235 stran, ověřeno na vlastních cestách",
 				"Konkrétní postupy, ne obecné rady",
 				"Ke stažení hned po zaplacení, navždy tvoje",
 			],
@@ -266,7 +266,7 @@ const cs = {
 			chooseByStage: "Začni zdarma, plánuj naplno s průvodcem",
 			valueFirst: "Ukázka zdarma, kompletní průvodce v placeném vydání",
 			valueBody:
-				"Ebook zdarma ti rychle ukáže nejdůležitější chyby a první úspory. Kompletní průvodce na 230+ stránách jde výrazně dál: pokrývá dokumenty, letenky, ubytování, zdraví, pojištění, peníze, mobilní tarify i aplikace.",
+				"Ebook zdarma ti rychle ukáže nejdůležitější chyby a první úspory. Kompletní průvodce na 235 stranách jde výrazně dál: pokrývá dokumenty, letenky, ubytování, zdraví, pojištění, peníze, mobilní tarify i aplikace.",
 			goodStart: "Dobrý start",
 			freeEmailLabel: "Email pro ebook zdarma",
 			freeEmailPlaceholder: "Tvůj email",

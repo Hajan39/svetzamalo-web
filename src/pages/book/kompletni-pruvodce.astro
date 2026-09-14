@@ -24,6 +24,33 @@ const freeEbookAvailable = isFreeEbookEnabled(siteConfig);
 const text = translations[locale].pages.book;
 const about = translations[locale].pages.about;
 
+// Table of contents, lifted from the PDF itself (page numbers of the book).
+const chapters: { title: string; page: number; topics?: string[] }[] = [
+	{ title: "Úvod a Kdo jsme my?", page: 8 },
+	{ title: "Cestování versus dovolená", page: 12 },
+	{ title: "Jak naplánovat cestu bez cestovky", page: 15, topics: ["Výběr destinace", "Plánování cesty", "Jak naplánovat, co v zemi vidět?"] },
+	{ title: "Dokumenty a vstup do země", page: 24, topics: ["Cestovní pas", "Víza", "Povolená délka pobytu", "Co se stane, když v zemi zůstanu déle?"] },
+	{ title: "Zdraví a bezpečnost na cestách", page: 32, topics: ["Nemoci, zranění a drobné nehody", "Dostupnost zdravotní péče", "Léky a cestovní lékárnička", "Prevence a očkování", "Cestování se zdravotním omezením"] },
+	{ title: "Cestovní pojištění", page: 47, topics: ["Jak sjednat to správné pojištění?", "Pojistná událost (krádež, nemoc, zranění)", "Jak komunikovat s asistenční službou"] },
+	{ title: "Peníze a platební karty", page: 57, topics: ["Platební karty", "Výběr z bankomatu", "Směna peněz – jakou měnu vzít s sebou?"] },
+	{ title: "Doprava", page: 64, topics: ["Letecká doprava a skryté triky", "Vyhledávače levných letenek", "Nízkonákladové společnosti", "Chybné tarify", "Zavazadla a letištní proces", "Jak zvládnout přestup", "Cestování autem, spaní v autě", "Autobus, vlak, stopování"] },
+	{ title: "Doprava v cílové destinaci", page: 119, topics: ["Vlaky, autobusy, taxi", "Pronájem a koupě auta", "Řidičský průkaz v zahraničí"] },
+	{ title: "Ubytování", page: 127, topics: ["Jak ušetřit na ubytování", "Jak za ubytování neplatit vůbec"] },
+	{ title: "Stravování", page: 133, topics: ["Evropa", "Tropické oblasti"] },
+	{ title: "Balit, či nebalit?", page: 143, topics: ["Odbavené a příruční zavazadlo", "Co nebalit a co se bude hodit", "Lepší kufr, nebo krosna?", "Ztráta zavazadel"] },
+	{ title: "Jazyková bariéra", page: 157, topics: ["Dá se cestovat bez znalosti jazyka?", "Jak se rychle naučit základy"] },
+	{ title: "Parťák na cestu – nebo raději sám?", page: 164, topics: ["Ve dvou, ve skupině, sólo", "5 otázek, než s někým vyrazíte"] },
+	{ title: "Bezpečí na cestách", page: 172, topics: ["Bezpečné a rizikové země", "Jak se chovat v rizikových zemích", "Když se něco pokazí"] },
+	{ title: "Mobilní tarif na cestách", page: 183, topics: ["Roaming, lokální SIM, eSIM", "Jak vybrat ideální tarif"] },
+	{ title: "Komunikace ze zahraničí", page: 190 },
+	{ title: "Užitečné aplikace na cestách", page: 193, topics: ["Navigace, ubytování, lety, plánování", "Top 10 offline aplikací", "Jak se vyhnout závislosti na telefonu"] },
+	{ title: "Luxusní destinace bez luxusního rozpočtu", page: 205, topics: ["Tajemství načasování", "Skrytí žrouti peněz", "5 „nedostupných“ destinací, které se dají procestovat levně"] },
+	{ title: "Práce na cestách", page: 224 },
+	{ title: "Šetřete i utrácejte moudře", page: 227, topics: ["Kdy má smysl šetřit", "Kdy naopak pustit korunu"] },
+	{ title: "Závěrem a epilog", page: 231 },
+];
+const sampleUrl = "/downloads/ukazka-kompletni-cestovatelsky-pruvodce.pdf";
+
 const topics = [
 	{
 		heading: "Plánování bez cestovky",
@@ -134,9 +161,12 @@ const jsonLd = {
 			url: pageUrl,
 			inLanguage: "cs-CZ",
 			bookFormat: "https://schema.org/EBook",
-			numberOfPages: 230,
+			numberOfPages: 235,
 			...(siteConfig?.bookCover ? { image: siteConfig.bookCover.src } : {}),
-			author: { "@type": "Person", name: SHOP.sellerName, url: `${SHOP.siteUrl}/about` },
+			author: [
+				{ "@type": "Person", name: "Jan Hanč", url: `${SHOP.siteUrl}/about` },
+				{ "@type": "Person", name: "Kateřina Hančová", url: `${SHOP.siteUrl}/about` },
+			],
 			publisher: { "@type": "Organization", name: "Svět za málo", url: SHOP.siteUrl },
 			offers: {
 				"@type": "Offer",
@@ -169,7 +199,7 @@ const jsonLd = {
 
 <Layout
 	title={`Kompletní cestovatelský průvodce – Levně a chytře do celého světa | Svět za málo`}
-	description="Průvodce cestováním na 230+ stranách. Letenky, ubytování, dokumenty, zdraví, peníze a aplikace – vše pro cestování bez zbytečných chyb a výdajů."
+	description="Průvodce cestováním na 235 stranách. Letenky, ubytování, dokumenty, zdraví, peníze a aplikace – vše pro cestování bez zbytečných chyb a výdajů."
 	canonicalPath={pagePath}
 	image={siteConfig?.bookCover?.src}
 	siteConfig={siteConfig}
@@ -185,13 +215,13 @@ const jsonLd = {
 				<p class="book-guide-subtitle">Levně a chytře do celého světa</p>
 				{paidBookDescription && <p>{paidBookDescription}</p>}
 				<ul class="book-guide-stats">
-					<li>230+ stran</li>
-					<li>40+ kapitol</li>
+					<li>235 stran</li>
+					<li>22 kapitol, 70+ témat</li>
 					{price && <li>{price}</li>}
 				</ul>
 				<div class="hero-actions">
 					<a class="btn-primary" href="#objednat">{text.orderByGateway}</a>
-					<a class="btn-secondary" href={withLocalePath('/book', locale)}>{text.downloadFree}</a>
+					<a class="btn-secondary" href={sampleUrl} download>Stáhnout ukázku (PDF)</a>
 				</div>
 			</div>
 			{siteConfig?.bookCover && (
@@ -230,7 +260,7 @@ const jsonLd = {
 		<div class="section-heading-row">
 			<div>
 				<p class="section-kicker">Co v průvodci najdeš</p>
-				<h2>40+ kapitol, vše co potřebuješ vědět</h2>
+				<h2>22 kapitol, vše co potřebuješ vědět</h2>
 			</div>
 		</div>
 		<div class="book-guide-topics-grid">
@@ -240,6 +270,33 @@ const jsonLd = {
 					<p>{topic.body}</p>
 				</div>
 			))}
+		</div>
+		<details class="sales-toc">
+			<summary>Celý obsah knihy (22 kapitol, 235 stran)</summary>
+			<ol>
+				{chapters.map((chapter) => (
+					<li>
+						<span class="sales-toc-title">{chapter.title}</span>
+						<span class="sales-toc-page">str. {chapter.page}</span>
+						{chapter.topics && <p>{chapter.topics.join(" · ")}</p>}
+					</li>
+				))}
+			</ol>
+		</details>
+	</section>
+
+	<section class="container-wide sales-block">
+		<div class="section-heading-row">
+			<div>
+				<p class="section-kicker">Jak to vypadá uvnitř</p>
+				<h2>Tři strany z knihy</h2>
+			</div>
+			<a class="btn-secondary" href={sampleUrl} download>Ukázková kapitola: Peníze a platební karty (PDF)</a>
+		</div>
+		<div class="sales-pages">
+			<figure><img src="/images/book/strana-obsah.jpg" alt="Strana s obsahem knihy" width="910" height="1287" loading="lazy" decoding="async" /><figcaption>Obsah</figcaption></figure>
+			<figure><img src="/images/book/strana-letenky.jpg" alt="Strana z kapitoly o letenkách: kdy hledat a skryté triky" width="910" height="1287" loading="lazy" decoding="async" /><figcaption>Letenky: kdy hledat a skryté triky</figcaption></figure>
+			<figure><img src="/images/book/strana-aplikace.jpg" alt="Strana s top 10 offline aplikacemi" width="910" height="1287" loading="lazy" decoding="async" /><figcaption>Top 10 offline aplikací</figcaption></figure>
 		</div>
 	</section>
 
@@ -262,12 +319,15 @@ const jsonLd = {
 
 	<section class="container-wide sales-block">
 		<div class="sales-author">
-			<div>
-				<p class="section-kicker">Kdo to psal</p>
-				<h2>{SHOP.sellerName}</h2>
-				<p>Za webem Svět za málo stojí od roku 2020. Cesty po vlastní ose po Evropě, Asii, Americe i Oceánii, a z každé zůstal seznam toho, co příště udělat levněji a chytřeji. Přesně ten seznam je tenhle průvodce.</p>
-				<p>O cestování přednáší pro školy, knihovny a cestovatelské kluby — {about.pastEvents.length} besed od roku 2020, témata od Nového Zélandu po Vietnam.</p>
-				<a href={withLocalePath('/about', locale)} class="text-link">Víc o projektu a přednáškách →</a>
+			<div class="sales-author-copy">
+				<img class="sales-author-photo" src="/images/book/autori.jpg" alt="Jan a Kateřina Hančovi před Uluru v Austrálii" width="927" height="739" loading="lazy" decoding="async" />
+				<div>
+					<p class="section-kicker">Kdo to psal</p>
+					<h2>Jan a Kateřina Hančovi</h2>
+					<p>Český pár, který začal cestovat jako studenti s minimem peněz. Za deset let 46 zemí v Evropě, Asii, Africe, Americe i Pacifiku a skoro dva roky života v Austrálii a na Novém Zélandu. Cestou byli okradeni, podvedeni i v nemocnici — a z každé chyby zůstal zápis, který příště ušetřil peníze.</p>
+					<p>Tahle kniha je ten zápis pohromadě: to, co by si přáli mít na začátku. Od roku 2020 stojí za webem Svět za málo a o cestování přednáší pro školy, knihovny a cestovatelské kluby ({about.pastEvents.length} besed).</p>
+					<a href={withLocalePath('/about', locale)} class="text-link">Víc o projektu a přednáškách →</a>
+				</div>
 			</div>
 			<div class="sales-guarantee">
 				<p class="section-kicker">Garance</p>
@@ -325,6 +385,7 @@ const jsonLd = {
 				<p class="section-kicker">Připraveno?</p>
 				<h2>{paidBookTitle}</h2>
 				{price && <p class="book-guide-price">{text.priceLabel}: <strong>{price}</strong> · PDF hned po zaplacení · garance 14 dní</p>}
+				<p class="lead-note">Nejsi si jistý? <a href={sampleUrl} download>Stáhni si ukázkovou kapitolu zdarma</a>.</p>
 			</div>
 			<BookOrderForm siteConfig={siteConfig} id="guide-order-2" class="book-guide-order-form" />
 		</div>
@@ -353,6 +414,68 @@ const jsonLd = {
 	}
 
 	.sales-author p { color: var(--foreground-secondary); }
+
+	.sales-author-copy {
+		display: grid;
+		grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+		gap: 1.5rem;
+		align-items: start;
+	}
+
+	.sales-author-photo {
+		width: 100%;
+		height: auto;
+		border-radius: var(--radius);
+		box-shadow: 0 10px 24px rgb(0 0 0 / 0.14);
+	}
+
+	.sales-toc {
+		margin-top: 1.5rem;
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		background: var(--background-secondary);
+	}
+
+	.sales-toc summary {
+		cursor: pointer;
+		padding: 1rem 1.25rem;
+		font-weight: 700;
+	}
+
+	.sales-toc ol {
+		margin: 0;
+		padding: 0 1.25rem 1.25rem 2.5rem;
+		display: grid;
+		gap: 0.6rem;
+	}
+
+	.sales-toc li { color: var(--foreground-secondary); }
+	.sales-toc-title { font-weight: 600; color: var(--foreground); }
+	.sales-toc-page { margin-left: 0.5rem; font-size: 0.85rem; color: var(--foreground-muted); }
+	.sales-toc li p { margin: 0.15rem 0 0; font-size: 0.9rem; }
+
+	.sales-pages {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1.25rem;
+	}
+
+	.sales-pages figure { margin: 0; }
+
+	.sales-pages img {
+		width: 100%;
+		height: auto;
+		border: 1px solid var(--border);
+		border-radius: calc(var(--radius) * 0.6);
+		box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+	}
+
+	.sales-pages figcaption {
+		margin-top: 0.5rem;
+		font-size: 0.85rem;
+		color: var(--foreground-muted);
+		text-align: center;
+	}
 
 	.sales-guarantee {
 		border: 1px solid var(--border);
@@ -386,6 +509,9 @@ const jsonLd = {
 		.buy-bar { display: flex; }
 		.book-guide-free-note { padding-bottom: 4rem; }
 		.sales-author { grid-template-columns: 1fr; }
+		.sales-author-copy { grid-template-columns: 1fr; }
+		.sales-author-photo { max-width: 260px; }
+		.sales-pages { grid-template-columns: 1fr; }
 	}
 
 	.sales-outcomes {
