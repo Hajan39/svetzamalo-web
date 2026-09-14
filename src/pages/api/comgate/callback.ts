@@ -25,6 +25,12 @@ function retryLater(reason: string) {
 	});
 }
 
+/** The shop secret must never land in the events table that /admin prints. */
+function redact(payload: Record<string, string>): Record<string, string> {
+	if (!("secret" in payload)) return payload;
+	return { ...payload, secret: "[redacted]" };
+}
+
 async function readParams(request: Request): Promise<Record<string, string>> {
 	const raw = await request.text();
 	const params = Object.fromEntries(new URLSearchParams(raw)) as Record<
@@ -122,14 +128,14 @@ export const POST: APIRoute = async ({ request }) => {
 			console.warn(
 				`[comgate] no order matches transId=${transId} refId=${refId}`,
 			);
-			await logPaymentEvent(null, "comgate", "unmatched_callback", params);
+			await logPaymentEvent(null, "comgate", "unmatched_callback", redact(params));
 			// Acknowledged on purpose: redelivering will not conjure up an order,
 			// and the raw callback is now stored for manual reconciliation.
 			return ok();
 		}
 
 		if (order.status === "paid") {
-			await logPaymentEvent(order.id, "comgate", "callback_duplicate", params);
+			await logPaymentEvent(order.id, "comgate", "callback_duplicate", redact(params));
 			return ok();
 		}
 
@@ -141,10 +147,7 @@ export const POST: APIRoute = async ({ request }) => {
 		let verified: Record<string, string>;
 		if (isValidComgateSecret(params.secret)) {
 			verified = params;
-			await logPaymentEvent(order.id, "comgate", "callback_authenticated", {
-				...params,
-				secret: "[redacted]",
-			});
+			await logPaymentEvent(order.id, "comgate", "callback_authenticated", redact(params));
 		} else {
 			// No usable secret: the body is then just an unauthenticated nudge, and
 			// the gateway itself has to be asked what really happened.
@@ -162,19 +165,39 @@ export const POST: APIRoute = async ({ request }) => {
 				});
 				return retryLater("verification failed");
 			}
-			await logPaymentEvent(order.id, "comgate", "status", verified);
+			await logPaymentEvent(order.id, "comgate", "status", redact(verified));
 		}
 
 		const nextStatus = orderStatusFromComgate(verified.status);
 
 		if (nextStatus === "paid") {
+			// A valid secret proves the sender, not the amount: a payment created
+			// for a different price must not unlock the book.
+			const paidMinor = Number(verified.price);
+			const paidCurrency = (verified.curr || order.currency).toUpperCase();
+			if (
+				verified.price !== undefined &&
+				(paidMinor !== order.amount_minor || paidCurrency !== order.currency)
+			) {
+				console.warn(
+					`[comgate] amount mismatch for order ${order.id}: got ${verified.price} ${paidCurrency}, expected ${order.amount_minor} ${order.currency}`,
+				);
+				await logPaymentEvent(order.id, "comgate", "amount_mismatch", redact(verified));
+				return ok();
+			}
+
+			// COALESCE + status guard: two callbacks racing each other must not
+			// overwrite a token that the first one has already e-mailed.
 			const token = order.download_token || crypto.randomUUID();
-			await sql`
+			const updated = (await sql`
 				UPDATE shop_orders
-				SET status = 'paid', paid_at = now(), comgate_trans_id = COALESCE(comgate_trans_id, ${transId || null}), download_token = ${token}
-				WHERE id = ${order.id}
-			`;
-			await deliverWithoutBlockingAck(order.id, order.email, token);
+				SET status = 'paid', paid_at = now(), comgate_trans_id = COALESCE(comgate_trans_id, ${transId || null}), download_token = COALESCE(download_token, ${token})
+				WHERE id = ${order.id} AND status <> 'paid'
+				RETURNING download_token
+			`) as unknown as { download_token: string }[];
+			if (updated[0]) {
+				await deliverWithoutBlockingAck(order.id, order.email, updated[0].download_token);
+			}
 			return ok();
 		}
 

@@ -226,7 +226,7 @@ const cs = {
 		destinationsIndex: {
 			title: "Destinace | Svět za málo",
 			description:
-				"Lowcost průvodce destinacemi, zeměmi a m­sty pro samostatné cestování.",
+				"Lowcost průvodce destinacemi, zeměmi a městy pro samostatné cestování.",
 			heading: "Destinace",
 			intro:
 				"Vyber si zemi nebo oblast a začni plánovat cestu podle reálných nákladů.",
@@ -258,12 +258,12 @@ const cs = {
 			summaryLabel: "Co ebook řeší",
 			insideYouGet: "Uvnitř najdeš",
 			pickDestination: "nejčastější chyby u letenek, ubytování a dopravy",
-			avoidMistakes: "přeplatené jídlo, drахá směna peněz a turistické pasti",
+			avoidMistakes: "přeplatené jídlo, drahá směna peněz a turistické pasti",
 			checklist: "aplikace, datové tarify, pozdní rezervace a jak začít lowcost",
-			chooseByStage: "Začni zdarma, plánuj naplnó s průvodcem",
+			chooseByStage: "Začni zdarma, plánuj naplno s průvodcem",
 			valueFirst: "Ukázka zdarma, kompletní průvodce v placeném vydání",
 			valueBody:
-				"Ebook zdarma ti rychle ukáže nejdůležitější chyby a první úспоры. Kompletní průvodce na 230+ stránách jde výrazně dál: pokrývá dokumenty, letenky, ubytování, zdraví, pojištění, peníze, mobilní tarify i aplikace.",
+				"Ebook zdarma ti rychle ukáže nejdůležitější chyby a první úspory. Kompletní průvodce na 230+ stránách jde výrazně dál: pokrývá dokumenty, letenky, ubytování, zdraví, pojištění, peníze, mobilní tarify i aplikace.",
 			goodStart: "Dobrý start",
 			freeEmailLabel: "Email pro ebook zdarma",
 			freeEmailPlaceholder: "Tvůj email",
@@ -314,9 +314,9 @@ const cs = {
 				"Testovací stránka platební brány pro objednávku ebooku.",
 			heading: "Testovací platební brána",
 			intro:
-				"Tahle stránka simuluje krok platební brány. Nevytváří reálnou platbu a neposílá zákaznínský e-mail.",
+				"Tahle stránka simuluje krok platební brány. Nevytváří reálnou platbu a neposílá zákaznický e-mail.",
 			product: "Produkt",
-			variableSymbol: "Varia bilní symbol",
+			variableSymbol: "Variabilní symbol",
 			payButton: "Simulovat úspěšnou platbu",
 			cancelButton: "Zrušit test",
 		},
@@ -344,11 +344,11 @@ const cs = {
 				"Bankovní údaje zatím nejsou kompletně nastavené.",
 			paymentInstructions: "Platební instrukce",
 			paymentNote:
-				"Pošli platbu převodem - po připísání ti automaticky pošleme ebook.",
+				"Pošli platbu převodem - po připsání ti automaticky pošleme ebook.",
 			scanQr: "Naskenuj v mobilní bance",
 			qrAlt: "QR kód pro platbu",
 			amount: "Částka",
-			variableSymbol: "Varia bilní symbol",
+			variableSymbol: "Variabilní symbol",
 			transId: "ID transakce",
 			accountNumber: "Číslo účtu",
 			iban: "IBAN",
@@ -357,8 +357,8 @@ const cs = {
 			step1: "Pošli platbu",
 			step1Body: "QR kódem v mobilní bance nebo ručně podle údajů výše",
 			step2: "Potvrdíme příjem",
-			step2Body: "po připísání platby objednávku potvrdíme",
-			step3: "Dostačneš ebook emailem",
+			step2Body: "po připsání platby objednávku potvrdíme",
+			step3: "Dostaneš ebook emailem",
 			step3Body: "se zabezpečeným odkazem ke stažení",
 			emailTo: "na",
 			backWeb: "Zpět na web",
@@ -375,7 +375,7 @@ const cs = {
 			nextBody:
 				"Pokud šlo jen o zavřené okno, vypršený limit nebo chybu při ověření v bance, vrať se k objednávce a platbu spusť znovu. Nový pokus vytvoří novou bezpečnou platbu.",
 			referenceTitle: "Údaje k nedokončené platbě",
-			variableSymbol: "Varia bilní symbol",
+			variableSymbol: "Variabilní symbol",
 			transId: "ID transakce",
 			tryAgain: "Zkusit znovu",
 			backWeb: "Zpět na web",
@@ -391,7 +391,7 @@ const cs = {
 				"U některých plateb může potvrzení chvíli trvat. Stránku není potřeba obnovovat ani objednávku zadávat znovu. Jakmile Comgate potvrdí výsledek, doručení ebooku se spustí automaticky.",
 			referenceTitle: "Údaje k platbě",
 			readArticles: "Číst články",
-			variableSymbol: "Varia bilní symbol",
+			variableSymbol: "Variabilní symbol",
 			transId: "ID transakce",
 			backWeb: "Zpět na web",
 		},
@@ -444,7 +444,7 @@ const cs = {
 			approach: "Náš přístup",
 			approachHeading: "Průvodce, které řeší skutečné rozhodování před cestou",
 			approachP1:
-				"Nechceme tvōřit katalog míst, která vypadají dobře na fotce. Dobrý cestovatelský obsah má člověku ušetřit čas, nervy a peníze: kdy jet, kde spát, jak se přesouval, co vynechat a za co se naopak vyplatí připlatit.",
+				"Nechceme tvořit katalog míst, která vypadají dobře na fotce. Dobrý cestovatelský obsah má člověku ušetřit čas, nervy a peníze: kdy jet, kde spát, jak se přesouvat, co vynechat a za co se naopak vyplatí připlatit.",
 			approachP2:
 				"Proto u destinací propojujeme články, itineráře, rozpočty, checklisty a praktické poznámky. Web má fungovat jako plánovací knihovna, do které se člověk vrací před cestou i během ní.",
 			talks: "Přednášky",
@@ -486,9 +486,9 @@ const cs = {
 				{
 					value: "300+",
 					label:
-						"praktických článků, itinerářů, checkistů a rozpočtových tipů",
+						"praktických článků, itinerářů, checklistů a rozpočtových tipů",
 				},
-				{ value: "27+", label: "destinací a zemí v českých průvodcich" },
+				{ value: "27+", label: "destinací a zemí v českých průvodcích" },
 			],
 			talksList: [
 				"Přednášky pro školy, univerzity, knihovny, spolky a cestovatelské kluby",

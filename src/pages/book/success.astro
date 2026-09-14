@@ -1,4 +1,5 @@
 ---
+import QRCode from "qrcode";
 import Layout from "@/layouts/Layout.astro";
 import { buildBankTransferDetails } from "@/lib/bankTransfer";
 import {
@@ -66,19 +67,10 @@ const details = buildBankTransferDetails(
 	variableSymbol,
 );
 
-function buildSpdString(d: NonNullable<typeof details>): string | null {
-	if (!d.iban) return null;
-	const parts = [`SPD*1.0*ACC:${d.iban.replace(/\s/g, "")}`];
-	if (d.amount) parts.push(`AM:${d.amount}`);
-	if (d.currency) parts.push(`CC:${d.currency}`);
-	if (d.variableSymbol) parts.push(`X-VS:${d.variableSymbol}`);
-	if (d.message) parts.push(`MSG:${d.message.slice(0, 60)}`);
-	return parts.join("*");
-}
-
-const spdString = details ? buildSpdString(details) : null;
-const qrUrl = spdString
-	? `https://api.qrserver.com/v1/create-qr-code/?size=180x180&format=svg&margin=4&data=${encodeURIComponent(spdString)}`
+// Rendered locally: the IBAN and variable symbol stay off third-party servers,
+// and the CSP does not need another image host.
+const qrSvg = details?.spaydPayload
+	? await QRCode.toString(details.spaydPayload, { type: "svg", margin: 1, width: 180 })
 	: null;
 ---
 
@@ -140,9 +132,9 @@ const qrUrl = spdString
             <p class="mt-0.5 text-sm text-foreground-secondary">{text.paymentNote}</p>
           </div>
           <div class="flex flex-col sm:flex-row">
-            {qrUrl && (
+            {qrSvg && (
               <div class="flex flex-col items-center justify-center gap-2 border-b border-border p-6 sm:w-52 sm:shrink-0 sm:border-b-0 sm:border-r">
-                <img src={qrUrl} alt={text.qrAlt} width="180" height="180" class="rounded-lg" loading="eager" />
+                <div class="h-[180px] w-[180px] rounded-lg bg-white" role="img" aria-label={text.qrAlt} set:html={qrSvg} />
                 <p class="text-center text-xs text-foreground-secondary">{text.scanQr}</p>
               </div>
             )}

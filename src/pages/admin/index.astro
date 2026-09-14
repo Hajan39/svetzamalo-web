@@ -39,7 +39,7 @@ if (linkToken) {
 				httpOnly: true,
 				secure: true,
 				sameSite: "strict",
-				path: "/admin",
+				path: "/",
 				maxAge: 60 * 60 * 12,
 			});
 		return Astro.redirect("/admin", 303);
@@ -76,12 +76,15 @@ if (Astro.request.method === "POST") {
 				"Pokud adresa patří správci, poslali jsme na ni přihlašovací odkaz.";
 		}
 	} else if (action === "login") {
-		if (await verifyPassword(String(form.get("password") || ""))) {
+		if (isRateLimited(Astro.request, "admin-login")) {
+			notice = "Příliš mnoho pokusů. Zkus to za chvíli.";
+			noticeKind = "error";
+		} else if (await verifyPassword(String(form.get("password") || ""))) {
 			Astro.cookies.set(ADMIN_COOKIE, await passwordSessionValue(), {
 				httpOnly: true,
 				secure: true,
 				sameSite: "strict",
-				path: "/admin",
+				path: "/",
 				maxAge: 60 * 60 * 12,
 			});
 			return Astro.redirect("/admin", 303);
@@ -90,7 +93,7 @@ if (Astro.request.method === "POST") {
 		noticeKind = "error";
 	} else if (action === "logout") {
 		await revokeSession(Astro.cookies.get(ADMIN_COOKIE)?.value);
-		Astro.cookies.delete(ADMIN_COOKIE, { path: "/admin" });
+		Astro.cookies.delete(ADMIN_COOKIE, { path: "/" });
 		return Astro.redirect("/admin", 303);
 	} else if (action === "mark-paid" || action === "resend-link") {
 		// Guarded separately: a POST must never act on an unauthenticated session.
@@ -126,11 +129,13 @@ if (Astro.request.method === "POST") {
 			} else if (order.status === "paid") {
 				notice = `Objednávka ${order.variable_symbol} už je zaplacená.`;
 			} else {
+				// COALESCE + status guard: a gateway callback racing this click must
+				// not replace a token that has already been e-mailed.
 				const token = order.download_token || crypto.randomUUID();
 				await db()`
 					UPDATE shop_orders
-					SET status = 'paid', paid_at = now(), download_token = ${token}
-					WHERE id = ${id}
+					SET status = 'paid', paid_at = now(), download_token = COALESCE(download_token, ${token})
+					WHERE id = ${id} AND status <> 'paid'
 				`;
 				const sent = isMailConfigured()
 					? await sendPaidBookEmail(order.email, token)
@@ -171,7 +176,7 @@ function summarizeEvent(payload: Record<string, string> | null) {
 	const parts = [
 		payload.status ? `status=${payload.status}` : "",
 		payload.test ? `test=${payload.test}` : "",
-		payload.secret ? `secret=${payload.secret}` : "",
+		payload.secret ? "secret=✓" : "",
 		payload.message ? `chyba: ${payload.message}` : "",
 	].filter(Boolean);
 	return parts.length > 0 ? parts.join(" · ") : "—";

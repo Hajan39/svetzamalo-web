@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { orderStatusFromComgate } from "./comgate";
 
 describe("orderStatusFromComgate", () => {
@@ -22,5 +22,34 @@ describe("orderStatusFromComgate", () => {
 		expect(orderStatusFromComgate("SOMETHING_NEW")).toBe("pending");
 		expect(orderStatusFromComgate(undefined)).toBe("pending");
 		expect(orderStatusFromComgate("")).toBe("pending");
+	});
+});
+
+describe("isValidComgateSecret", () => {
+	afterEach(() => {
+		vi.unstubAllEnvs();
+		vi.resetModules();
+	});
+
+	async function loadWith(secret: string | undefined) {
+		vi.resetModules();
+		if (secret !== undefined) vi.stubEnv("COMGATE_SECRET", secret);
+		return import("./comgate");
+	}
+
+	it("accepts only the exact configured secret", async () => {
+		const { isValidComgateSecret } = await loadWith("s3cret");
+		expect(isValidComgateSecret("s3cret")).toBe(true);
+		expect(isValidComgateSecret("s3cret ")).toBe(false);
+		expect(isValidComgateSecret("S3CRET")).toBe(false);
+		expect(isValidComgateSecret("")).toBe(false);
+		expect(isValidComgateSecret(undefined)).toBe(false);
+	});
+
+	it("rejects everything when no secret is configured", async () => {
+		// Otherwise an unconfigured shop would accept an empty secret as valid.
+		const { isValidComgateSecret } = await loadWith("");
+		expect(isValidComgateSecret("")).toBe(false);
+		expect(isValidComgateSecret("anything")).toBe(false);
 	});
 });

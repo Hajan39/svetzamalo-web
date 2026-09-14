@@ -70,8 +70,9 @@ async function insertOrder(data: {
 			return rows[0];
 		} catch (error) {
 			lastError = error;
-			const message = error instanceof Error ? error.message : String(error);
-			if (!message.includes("variable_symbol")) throw error;
+			// 23505 = unique_violation; the only unique column a fresh insert can
+			// collide on is variable_symbol.
+			if ((error as { code?: string })?.code !== "23505") throw error;
 		}
 	}
 
@@ -81,7 +82,12 @@ async function insertOrder(data: {
 }
 
 export const POST: APIRoute = async ({ request, redirect }) => {
-	const body = await parseBody(request);
+	let body: unknown;
+	try {
+		body = await parseBody(request);
+	} catch {
+		return new Response(JSON.stringify({ error: "invalid_body" }), { status: 400 });
+	}
 
 	if (isHoneypotTripped(body)) {
 		// Fake success: the bot must not learn it was detected.

@@ -1,6 +1,7 @@
 import type { APIRoute } from "astro";
 import { db, isDbConfigured, recordDownload, type OrderRow } from "@/lib/db";
 import { SHOP } from "@/lib/shopConfig";
+import { isRateLimited } from "@/lib/spamGuard";
 
 export const prerender = false;
 
@@ -16,26 +17,37 @@ function jsonResponse(body: unknown, status = 200) {
  * is server-only, so the token is the only way to reach it and it exists only
  * for orders that are actually paid.
  */
-export const GET: APIRoute = async ({ url }) => {
+export const GET: APIRoute = async ({ url, request }) => {
 	const token = url.searchParams.get("token")?.trim();
 	if (!token) return jsonResponse({ error: "missing_token" }, 400);
+	// Tokens are unguessable UUIDs, but the limit keeps a leaked link from
+	// becoming a public mirror of the book.
+	if (isRateLimited(request, "download")) {
+		return jsonResponse({ error: "rate_limited" }, 429);
+	}
 	if (!isDbConfigured()) return jsonResponse({ error: "unavailable" }, 503);
 	if (!SHOP.paidBookFileUrl) {
 		console.error("[download] PAID_BOOK_FILE_URL is not set");
 		return jsonResponse({ error: "unavailable" }, 503);
 	}
 
-	const rows = (await db()`
-		SELECT * FROM shop_orders
-		WHERE download_token = ${token} AND status = 'paid'
-		LIMIT 1
-	`) as unknown as OrderRow[];
+	let order: OrderRow | undefined;
+	let upstream: Response;
+	try {
+		const rows = (await db()`
+			SELECT * FROM shop_orders
+			WHERE download_token = ${token} AND status = 'paid'
+			LIMIT 1
+		`) as unknown as OrderRow[];
+		order = rows[0];
+		if (!order) return jsonResponse({ error: "invalid_token" }, 404);
 
-	if (!rows[0]) return jsonResponse({ error: "invalid_token" }, 404);
+		upstream = await fetch(SHOP.paidBookFileUrl);
+	} catch (error) {
+		console.error("[download] lookup or file fetch failed:", error);
+		return jsonResponse({ error: "file_unavailable" }, 502);
+	}
 
-	await recordDownload("paid", rows[0].id);
-
-	const upstream = await fetch(SHOP.paidBookFileUrl);
 	if (!upstream.ok || !upstream.body) {
 		// 401/403 almost always means the file is in a private store that needs
 		// an access token, which this plain fetch does not send. Say so, rather
@@ -49,6 +61,9 @@ export const GET: APIRoute = async ({ url }) => {
 		);
 		return jsonResponse({ error: "file_unavailable" }, 502);
 	}
+
+	// Counted only once the file is actually being served.
+	await recordDownload("paid", order.id);
 
 	const headers = new Headers({
 		"Content-Type": upstream.headers.get("content-type") || "application/pdf",

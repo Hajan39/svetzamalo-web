@@ -27,7 +27,12 @@ function wantsJson(request: Request) {
 }
 
 export const POST: APIRoute = async ({ request, redirect }) => {
-	const body = await parseBody(request);
+	let body: unknown;
+	try {
+		body = await parseBody(request);
+	} catch {
+		return new Response(JSON.stringify({ error: "invalid_body" }), { status: 400 });
+	}
 
 	if (isHoneypotTripped(body)) {
 		// Fake success: the bot must not learn it was detected.
