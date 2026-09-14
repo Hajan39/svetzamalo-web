@@ -356,6 +356,7 @@ const jsonLd = {
 	<section class="container-wide book-guide-order" id="objednat">
 		<div class="book-guide-order-inner">
 			<div class="book-guide-order-copy">
+				{siteConfig?.bookCover && <img class="book-guide-order-cover" src={siteConfig.bookCover.src} alt={siteConfig.bookCover.alt || paidBookTitle} width={siteConfig.bookCover.width ?? 300} height={siteConfig.bookCover.height ?? 424} loading="lazy" decoding="async" />}
 				<p class="section-kicker">{text.wantMore}</p>
 				<h2>{paidBookTitle}</h2>
 				{price && <p class="book-guide-price">{text.priceLabel}: <strong>{price}</strong></p>}
@@ -398,6 +399,7 @@ const jsonLd = {
 	<section class="container-wide book-guide-order" id="objednat-2">
 		<div class="book-guide-order-inner">
 			<div class="book-guide-order-copy">
+				{siteConfig?.bookCover && <img class="book-guide-order-cover" src={siteConfig.bookCover.src} alt={siteConfig.bookCover.alt || paidBookTitle} width={siteConfig.bookCover.width ?? 300} height={siteConfig.bookCover.height ?? 424} loading="lazy" decoding="async" />}
 				<p class="section-kicker">Připraveno?</p>
 				<h2>{paidBookTitle}</h2>
 				{price && <p class="book-guide-price">{text.priceLabel}: <strong>{price}</strong> · PDF hned po zaplacení</p>}

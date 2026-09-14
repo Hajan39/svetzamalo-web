@@ -254,6 +254,7 @@ const continentLabels = new Intl.ListFormat(shared.htmlLocale, {
 	{paidEbookAvailable && (
 		<div class="container-wide soft-cta-wrap">
 			<div class="book-promo-cta">
+				{siteConfig?.bookCover && <img class="book-promo-cover" src={siteConfig.bookCover.src} alt={siteConfig.bookCover.alt || paidBookTitle} width={siteConfig.bookCover.width ?? 300} height={siteConfig.bookCover.height ?? 424} loading="lazy" decoding="async" />}
 				<div class="book-promo-copy">
 					<p class="section-kicker">{bookText.wantMore}</p>
 					<h2>{paidBookTitle}</h2>
