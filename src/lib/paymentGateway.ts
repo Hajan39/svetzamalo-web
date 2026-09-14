@@ -20,9 +20,4 @@ export function getGatewayButtonLabel(
 	return siteConfig?.bookGatewayButtonLabel?.trim() || fallback;
 }
 
-export function getGatewayReturnPath(
-	siteConfig: SiteConfig | null | undefined,
-) {
-	return siteConfig?.bookGatewayReturnPath?.trim() || "/book/success";
-}
 

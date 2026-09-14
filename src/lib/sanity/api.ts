@@ -315,6 +315,7 @@ function transformDestination(destination: SanityCountry): Destination {
 			? { ...heroImage, alt: heroImage.alt || name }
 			: undefined,
 		introHtml: introHtml || undefined,
+		updatedAt: destination._updatedAt,
 		locale:
 			(cleanString(destination.locale) as SupportedLocale | undefined) || "cs",
 		currency: parseCurrencyFromQuickFacts(destination.quickFacts?.currency),

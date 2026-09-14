@@ -3,8 +3,6 @@ import { db, isDbConfigured, recordDownload, type OrderRow } from "@/lib/db";
 import { SHOP } from "@/lib/shopConfig";
 import { isRateLimited } from "@/lib/spamGuard";
 
-export const prerender = false;
-
 function jsonResponse(body: unknown, status = 200) {
 	return new Response(JSON.stringify(body), {
 		status,

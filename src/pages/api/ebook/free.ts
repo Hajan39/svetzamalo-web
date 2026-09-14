@@ -2,8 +2,6 @@ import type { APIRoute } from "astro";
 import { isDbConfigured, recordDownload } from "@/lib/db";
 import { SHOP } from "@/lib/shopConfig";
 
-export const prerender = false;
-
 /**
  * Counts a free ebook download, then hands the visitor on to the file itself.
  *

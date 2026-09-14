@@ -22,7 +22,8 @@ const [article, allArticles, destinations, siteConfig] = await Promise.all([
 	fetchDestinations(locale),
 	fetchSiteConfig(locale),
 ]);
-if (!article) return Astro.redirect(withLocalePath("/articles", locale));
+// A real 404, not a redirect to the listing: Search Console counts those as soft 404s.
+if (!article) return Astro.rewrite("/404");
 
 const currentArticleSlug = article.slug;
 const articleDestination = article.destinationId
@@ -99,6 +100,9 @@ const siteUrl =
 	"https://svetzamalo.cz";
 const articleUrl = `${siteUrl}${withLocalePath(`/articles/${article.slug}`, locale)}`;
 const articlesPath = withLocalePath('/articles', locale);
+const ogImage = article.coverImage?.src.includes("cdn.sanity.io")
+	? `${article.coverImage.src.split("?")[0]}?w=1200&h=630&fit=crop&auto=format`
+	: article.coverImage?.src;
 const jsonLd = {
 	"@context": "https://schema.org",
 	"@graph": [
@@ -111,7 +115,7 @@ const jsonLd = {
 			...(article.coverImage ? { image: article.coverImage.src } : {}),
 			...(article.publishedAt ? { datePublished: article.publishedAt } : {}),
 			...(article.updatedAt ? { dateModified: article.updatedAt } : {}),
-			author: { "@type": "Organization", name: "Svět za málo", url: siteUrl },
+			author: { "@type": "Person", name: "Jan Hanč", url: `${siteUrl}/about` },
 			publisher: { "@type": "Organization", name: "Svět za málo", url: siteUrl },
 		},
 		{
@@ -126,7 +130,7 @@ const jsonLd = {
 };
 ---
 
-<Layout title={article.seo.metaTitle} description={article.seo.metaDescription} canonicalPath={withLocalePath(`/articles/${article.slug}`, locale)} ogType="article" alternateLocales={[locale]} siteConfig={siteConfig}>
+<Layout title={article.seo.metaTitle} description={article.seo.metaDescription} canonicalPath={withLocalePath(`/articles/${article.slug}`, locale)} image={ogImage} ogType="article" alternateLocales={[locale]} siteConfig={siteConfig}>
   <Fragment slot="head">
     <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
     {article.publishedAt && <meta property="article:published_time" content={article.publishedAt} />}

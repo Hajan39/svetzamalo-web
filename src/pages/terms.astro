@@ -4,8 +4,6 @@ import Layout from '@/layouts/Layout.astro';
 import { translations } from '@/i18n/translations';
 import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
 
-export const prerender = false;
-
 const locale = getLocaleFromAstro(Astro);
 const localizedId = locale === 'en' ? 'terms-en' : 'terms';
 const page = (await getEntry('pages', localizedId)) || (await getEntry('pages', 'terms'));

@@ -7,29 +7,16 @@ import { getLangFromUrl, withLocalePath } from "@/i18n/utils";
 const locale = getLangFromUrl(Astro.url);
 const token = Astro.url.searchParams.get("token") || "";
 const downloadType = Astro.url.searchParams.get("type") || "free";
-const downloadFormat = Astro.url.searchParams.get("format");
 const isPaidDownload = downloadType === "paid";
-const apiDownloadUrl = token
-  ? `/api/ebook/download?${new URLSearchParams({
-      token,
-      download: "1",
-      type: downloadType,
-      ...(downloadFormat ? { format: downloadFormat } : {}),
-    }).toString()}`
-  : "";
+const apiDownloadUrl = token ? `/api/ebook/download?token=${encodeURIComponent(token)}` : "";
 const text = translations[locale].pages.ebookDownload;
 
 const title = isPaidDownload ? text.titlePaid : text.titleFree;
 const description = isPaidDownload ? text.descriptionPaid : text.descriptionFree;
-const paidDownloadLabel =
-	downloadFormat === "epub"
-		? text.downloadPaidEpub
-		: downloadFormat === "pdf"
-			? text.downloadPaidPdf
-			: text.downloadPaid;
+const paidDownloadLabel = text.downloadPaid;
 ---
 
-<Layout title={title} description={description} canonicalPath={withLocalePath('/ebook/download', locale)}>
+<Layout title={title} description={description} canonicalPath={withLocalePath('/ebook/download', locale)} noindex={true} alternateLocales={[locale]}>
   <section class="container-narrow py-10 md:py-16">
     <div class="brand-card px-6 py-7 sm:px-8 sm:py-8">
       <h1 class="mb-4">{isPaidDownload ? text.headingPaid : text.headingFree}</h1>

@@ -4,8 +4,6 @@ import { fetchSiteConfig } from '@/lib/content/api';
 import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
 import { translations } from '@/i18n/translations';
 
-export const prerender = false;
-
 const locale = getLocaleFromAstro(Astro);
 const siteConfig = await fetchSiteConfig(locale);
 const siteEmail = siteConfig?.siteEmail || 'info@svetzamalo.cz';

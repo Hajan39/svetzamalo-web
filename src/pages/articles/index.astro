@@ -13,8 +13,6 @@ import { getLocaleFromAstro, withLocalePath } from "@/lib/i18n";
 import { getDraftModeProps } from "@/lib/sanity/draftMode";
 import type { Article, Destination } from "@/types";
 
-export const prerender = false;
-
 const searchQuery = (Astro.url.searchParams.get("q") || "").trim();
 const normalizedSearchQuery = normalizeSearchText(searchQuery);
 const selectedDestination = (
@@ -250,6 +248,10 @@ function getArticlesPageHref(page: number) {
 ---
 
 <Layout title={text.title} description={text.description} canonicalPath={listingCanonicalPath} noindex={listingNoindex} alternateLocales={listingAlternateLocales}>
+  <Fragment slot="head">
+    {hasPreviousPage && <link rel="prev" href={getArticlesPageHref(currentPage - 1)} />}
+    {hasNextPage && <link rel="next" href={getArticlesPageHref(currentPage + 1)} />}
+  </Fragment>
   <section class="container-wide py-10 md:py-16">
     <header class="mb-8 max-w-2xl">
       <h1 class="mb-4">{text.heading}</h1>

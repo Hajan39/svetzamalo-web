@@ -24,8 +24,6 @@ import { translations } from "@/i18n/translations";
 import { getLocaleFromAstro, withLocalePath } from "@/lib/i18n";
 import { getDraftModeProps } from "@/lib/sanity/draftMode";
 
-export const prerender = false;
-
 const locale = getLocaleFromAstro(Astro);
 const sanityOptions = getDraftModeProps(Astro.cookies);
 

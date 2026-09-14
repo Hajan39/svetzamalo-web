@@ -2,8 +2,6 @@ import type { APIRoute } from "astro";
 import { ADMIN_COOKIE, isAuthenticated } from "@/lib/adminAuth";
 import { db, isDbConfigured, type LeadRow, type OrderRow } from "@/lib/db";
 
-export const prerender = false;
-
 function csvCell(value: unknown): string {
 	const text = value === null || value === undefined ? "" : String(value);
 	// Excel and Sheets both need the quote-doubling form for embedded quotes.

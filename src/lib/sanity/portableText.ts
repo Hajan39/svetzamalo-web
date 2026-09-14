@@ -47,6 +47,10 @@ export function sanityPortableTextToHtml(value: unknown): string {
 
 	return toHTML(value, {
 		components: {
+			block: {
+				// The page already renders the title as <h1>; an h1 in the body would be a second one.
+				h1: ({ children }) => `<h2>${children}</h2>`,
+			},
 			types: {
 				articleImage: ({ value: imageValue }) => {
 					const image = imageValue as SanityImageValue;

@@ -18,8 +18,6 @@ import {
 import { translations } from "@/i18n/translations";
 import { getLangFromUrl, withLocalePath } from "@/i18n/utils";
 
-export const prerender = false;
-
 const locale = getLangFromUrl(Astro.url);
 let siteConfig = await fetchSiteConfig(locale);
 if (locale === "en" && !siteConfig) {
@@ -63,7 +61,7 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
       </div>
       <aside class="book-summary" aria-label={text.summaryLabel}>
         {siteConfig?.freeEbookCover ? (
-          <img src={siteConfig.freeEbookCover.src} alt={siteConfig.freeEbookCover.alt || freeEbookTitle} loading="eager" decoding="async" />
+          <img src={siteConfig.freeEbookCover.src} alt={siteConfig.freeEbookCover.alt || freeEbookTitle} width={siteConfig.freeEbookCover.width ?? 300} height={siteConfig.freeEbookCover.height ?? 424} loading="eager" decoding="async" />
         ) : (
           <>
             <span>{text.insideYouGet}</span>
@@ -110,7 +108,7 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
     <div class="grid gap-6 md:grid-cols-2">
       <section class="brand-card book-option book-option-primary">
         <p class="section-kicker">{text.goodStart}</p>
-        {siteConfig?.freeEbookCover && <img class="book-option-media" src={siteConfig.freeEbookCover.src} alt={siteConfig.freeEbookCover.alt || freeEbookTitle} loading="lazy" decoding="async" />}
+        {siteConfig?.freeEbookCover && <img class="book-option-media" src={siteConfig.freeEbookCover.src} alt={siteConfig.freeEbookCover.alt || freeEbookTitle} width={siteConfig.freeEbookCover.width ?? 300} height={siteConfig.freeEbookCover.height ?? 424} loading="lazy" decoding="async" />}
         <h3>{freeEbookTitle}</h3>
         <p>{freeEbookDescription}</p>
         {freeEbookAvailable ? (
@@ -130,7 +128,7 @@ const bookPageTitle = `${freeEbookTitle} ${text.titleJoin} ${paidBookTitle} | ${
 
       <section class="brand-card book-option">
         <p class="section-kicker">{text.wantMore}</p>
-        {siteConfig?.bookCover && <img class="book-option-media" src={siteConfig.bookCover.src} alt={siteConfig.bookCover.alt || paidBookTitle} loading="lazy" decoding="async" />}
+        {siteConfig?.bookCover && <img class="book-option-media" src={siteConfig.bookCover.src} alt={siteConfig.bookCover.alt || paidBookTitle} width={siteConfig.bookCover.width ?? 300} height={siteConfig.bookCover.height ?? 424} loading="lazy" decoding="async" />}
         <h3>{paidBookTitle}</h3>
         <p>{paidBookDescription}</p>
         <p class="section-kicker book-paid-topics-label">{text.paidTopicsLabel}</p>

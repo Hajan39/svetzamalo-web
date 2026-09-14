@@ -5,8 +5,6 @@ import { isMailConfigured, sendFreeEbookEmail } from "@/lib/mail";
 import { isFreeEbookLive } from "@/lib/shopConfig";
 import { isHoneypotTripped, isRateLimited } from "@/lib/spamGuard";
 
-export const prerender = false;
-
 const leadSchema = z.object({
 	email: z.email(),
 	leadType: z.enum(["ebook", "newsletter", "book_notify"]).default("ebook"),

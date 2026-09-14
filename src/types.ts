@@ -55,6 +55,7 @@ export interface Destination {
 	drivingSide?: string;
 	heroImage?: ImageAsset;
 	introHtml?: string;
+	updatedAt?: string;
 	seo: SeoMetadata;
 	locale: SupportedLocale;
 	currency?: {

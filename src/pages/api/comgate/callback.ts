@@ -7,8 +7,6 @@ import {
 import { db, isDbConfigured, logPaymentEvent, type OrderRow } from "@/lib/db";
 import { isMailConfigured, sendPaidBookEmail } from "@/lib/mail";
 
-export const prerender = false;
-
 /** Comgate treats anything else as "the shop did not process the payment". */
 function ok() {
 	return new Response("code=0&message=OK", {

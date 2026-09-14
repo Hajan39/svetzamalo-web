@@ -21,5 +21,5 @@ Svět za málo (World for cheap) is a Czech-language travel website focused on b
 ## Technical
 
 - Language: Czech (cs-CZ), partial English (en)
-- Sitemap: https://svetzamalo.cz/sitemap-index.xml
+- Sitemap: https://svetzamalo.cz/sitemap.xml
 - Updated: regularly with new articles and destination guides

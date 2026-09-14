@@ -3,8 +3,6 @@ import { track } from "@vercel/analytics/server";
 import { fetchAffiliateLinkBySlug } from "@/lib/content/api";
 import { getLocaleFromAstro } from "@/lib/i18n";
 
-export const prerender = false;
-
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 function redirectResponse(destinationUrl: string) {

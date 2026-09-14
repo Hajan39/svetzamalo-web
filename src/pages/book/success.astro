@@ -11,8 +11,6 @@ import { fetchSiteConfig } from "@/lib/content/api";
 import { translations } from "@/i18n/translations";
 import { getLangFromUrl, withLocalePath } from "@/i18n/utils";
 
-export const prerender = false;
-
 const locale = getLangFromUrl(Astro.url);
 let siteConfig = await fetchSiteConfig(locale);
 if (locale === "en" && !siteConfig) {
@@ -74,7 +72,7 @@ const qrSvg = details?.spaydPayload
 	: null;
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonicalPath={withLocalePath('/book/success', locale)} siteConfig={siteConfig}>
+<Layout title={pageTitle} description={pageDescription} canonicalPath={withLocalePath('/book/success', locale)} siteConfig={siteConfig} noindex={true} alternateLocales={[locale]}>
   <section class="container-narrow py-10 md:py-16">
 
     <div class="mb-8 flex flex-col items-center text-center">

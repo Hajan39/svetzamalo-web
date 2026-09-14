@@ -24,8 +24,6 @@ import { conversionRate, loadShopStats, type ShopStats } from "@/lib/stats";
 import { isRateLimited } from "@/lib/spamGuard";
 import { isPaidBookFileExposed, SHOP } from "@/lib/shopConfig";
 
-export const prerender = false;
-
 let notice = "";
 let noticeKind: "ok" | "error" = "ok";
 

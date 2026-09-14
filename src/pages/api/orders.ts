@@ -11,8 +11,6 @@ import {
 } from "@/lib/shopConfig";
 import { isHoneypotTripped, isRateLimited } from "@/lib/spamGuard";
 
-export const prerender = false;
-
 const orderSchema = z.object({
 	email: z.email(),
 	fullName: z.string().min(2).max(120),

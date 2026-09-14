@@ -47,7 +47,7 @@ const hreflangEn = new URL(
 	`/en${pathWithoutLocale || "/"}`,
 	siteUrl,
 ).toString();
-const image = Astro.props.image ?? "/images/hero/mauritius-home-hero.jpg";
+const image = Astro.props.image ?? "/images/og-default.jpg";
 const ogType = Astro.props.ogType ?? "website";
 const robots = Astro.props.noindex
 	? "noindex,follow"
@@ -55,7 +55,7 @@ const robots = Astro.props.noindex
 // hreflang only makes sense once more than one language version actually
 // exists. Advertising a URL that merely redirects makes Google queue it and
 // then discard it, so pages without a real translation pass a single locale.
-const alternateLocales = Astro.props.alternateLocales ?? ["cs", "en"];
+const alternateLocales = Astro.props.alternateLocales ?? [locale];
 const emitHreflang = alternateLocales.length > 1;
 const siteConfig =
 	Astro.props.siteConfig !== undefined
@@ -69,6 +69,12 @@ try {
 	/* not available on prerendered pages */
 }
 const ogLocale = shared.ogLocale;
+// Travelpayouts affiliate tracking (partner marker 526521). Third-party revenue
+// script — flags itself in every security audit, but it is intentional: removed
+// as "malicious" and knowingly restored in commit 84f107d. emrldtp.com is
+// whitelisted for it in the CSP (vercel.json). Loaded at the end of <body> and
+// only where affiliate links can appear: not on checkout, admin or legal pages.
+const affiliateTracking = !/^\/(en\/)?(book|admin|ebook|privacy|terms|reklamace|dodaci-podminky)/.test(Astro.url.pathname);
 ---
 
 <!doctype html>
@@ -100,7 +106,7 @@ const ogLocale = shared.ogLocale;
 		<link rel="manifest" href="/manifest.json" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playpen+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" />
 		<meta property="og:type" content={ogType} />
 		<meta property="og:site_name" content="Svet za malo" />
 		<meta property="og:locale" content={ogLocale} />
@@ -108,22 +114,13 @@ const ogLocale = shared.ogLocale;
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonicalUrl} />
 		<meta property="og:image" content={new URL(image, siteUrl).toString()} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content={title} />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={new URL(image, siteUrl).toString()} />
-		{/* Travelpayouts affiliate tracking (partner marker 526521). Third-party
-		    revenue script — flags itself in every security audit, but it is
-		    intentional: removed as "malicious" and knowingly restored in commit
-		    84f107d. emrldtp.com is whitelisted for it in the CSP (vercel.json). */}
-		<script is:inline data-nowprocket="1" data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1">
-			(function () {
-				var script = document.createElement("script");
-				script.async = 1;
-				script.src = 'https://emrldtp.com/NTI2NTIx.js?t=526521';
-				document.head.appendChild(script);
-			})();
-		</script>
 		{analyticsEnabled && <Analytics />}
 		<slot name="head" />
 	</head>
@@ -136,5 +133,15 @@ const ogLocale = shared.ogLocale;
 		{analyticsEnabled && <SpeedInsights />}
 		{draftMode && <SanityVisualEditing client:only="react" />}
 		{draftMode && <DisableDraftMode client:only="react" />}
+		{affiliateTracking && (
+			<script is:inline data-nowprocket="1" data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1">
+				(function () {
+					var script = document.createElement("script");
+					script.async = 1;
+					script.src = 'https://emrldtp.com/NTI2NTIx.js?t=526521';
+					document.head.appendChild(script);
+				})();
+			</script>
+		)}
 	</body>
 </html>

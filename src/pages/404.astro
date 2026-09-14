@@ -2,13 +2,11 @@
 import Layout from '@/layouts/Layout.astro';
 import { getLangFromUrl, useTranslations, withLocalePath } from '@/i18n/utils';
 
-export const prerender = false;
-
 const locale = getLangFromUrl(Astro.url);
 const t = useTranslations(locale);
 ---
 
-<Layout title={t('notFound.title')} description={t('notFound.description')} canonicalPath={withLocalePath('/404', locale)}>
+<Layout title={t('notFound.title')} description={t('notFound.description')} noindex={true} alternateLocales={[locale]}>
   <section class="container-narrow py-16 text-center">
     <div class="brand-card px-6 py-10 sm:px-8">
       <h1 class="mb-4">{t('notFound.heading')}</h1>

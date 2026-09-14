@@ -39,6 +39,8 @@ export async function loadQuery<QueryResponse>({
 		params ?? {},
 		{
 			filterResponse: false,
+			// Published content goes through Sanity's CDN; drafts must not be cached.
+			useCdn: !draftMode,
 			perspective,
 			resultSourceMap: draftMode ? "withKeyArraySelector" : false,
 			stega: draftMode,

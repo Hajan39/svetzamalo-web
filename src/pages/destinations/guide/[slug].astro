@@ -17,7 +17,7 @@ const [destination, allArticles, siteConfig] = await Promise.all([
   fetchAllArticles(locale),
   fetchSiteConfig(locale),
 ]);
-if (!destination) return Astro.redirect(withLocalePath('/destinations', locale));
+if (!destination) return Astro.rewrite('/404');
 const articles = (allArticles as Article[]).filter((article) => article.destinationId === destination.slug || article.countryName === destination.name);
 const relatedArticles = articles.map((article) => {
   if (article.coverImage || !destination.heroImage) return article;

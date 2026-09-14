@@ -15,8 +15,6 @@ import { getGatewayButtonLabel, isBookGatewayEnabled } from "@/lib/paymentGatewa
 import { translations } from "@/i18n/translations";
 import { getLangFromUrl, withLocalePath } from "@/i18n/utils";
 
-export const prerender = false;
-
 const locale = getLangFromUrl(Astro.url);
 let siteConfig = await fetchSiteConfig(locale);
 if (locale === "en" && !siteConfig) siteConfig = await fetchSiteConfig("cs");
@@ -125,13 +123,62 @@ const faq = [
 		a: "Napiš nám a odkaz pošleme znovu. Objednávku máme uloženou, takže stačí uvést e-mail nebo variabilní symbol z potvrzení.",
 	},
 ];
+
+const pagePath = withLocalePath("/book/kompletni-pruvodce", locale);
+const pageUrl = `${SHOP.siteUrl}${pagePath}`;
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "Book",
+			name: paidBookTitle,
+			description: paidBookDescription,
+			url: pageUrl,
+			inLanguage: "cs-CZ",
+			bookFormat: "https://schema.org/EBook",
+			numberOfPages: 230,
+			...(siteConfig?.bookCover ? { image: siteConfig.bookCover.src } : {}),
+			author: { "@type": "Person", name: SHOP.sellerName, url: `${SHOP.siteUrl}/about` },
+			publisher: { "@type": "Organization", name: "Svět za málo", url: SHOP.siteUrl },
+			offers: {
+				"@type": "Offer",
+				price: String(price || SHOP.priceCzk),
+				priceCurrency: "CZK",
+				availability: "https://schema.org/InStock",
+				url: `${pageUrl}#objednat`,
+				seller: { "@type": "Person", name: SHOP.sellerName },
+			},
+		},
+		{
+			"@type": "FAQPage",
+			mainEntity: faq.map((item) => ({
+				"@type": "Question",
+				name: item.q,
+				acceptedAnswer: { "@type": "Answer", text: item.a },
+			})),
+		},
+		{
+			"@type": "BreadcrumbList",
+			itemListElement: [
+				{ "@type": "ListItem", position: 1, name: "Svět za málo", item: SHOP.siteUrl },
+				{ "@type": "ListItem", position: 2, name: "Ebook", item: `${SHOP.siteUrl}${withLocalePath("/book", locale)}` },
+				{ "@type": "ListItem", position: 3, name: paidBookTitle, item: pageUrl },
+			],
+		},
+	],
+};
 ---
 
 <Layout
 	title={`Kompletní cestovatelský průvodce – Levně a chytře do celého světa | Svět za málo`}
 	description="Průvodce cestováním na 230+ stranách. Letenky, ubytování, dokumenty, zdraví, peníze a aplikace – vše pro cestování bez zbytečných chyb a výdajů."
+	canonicalPath={pagePath}
+	image={siteConfig?.bookCover?.src}
 	siteConfig={siteConfig}
 >
+	<Fragment slot="head">
+		<script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
+	</Fragment>
 	<section class="book-guide-hero">
 		<div class="container-wide book-guide-hero-inner">
 			<div class="book-guide-hero-copy">
@@ -154,6 +201,8 @@ const faq = [
 					<img
 						src={siteConfig.bookCover.src}
 						alt={siteConfig.bookCover.alt || paidBookTitle}
+						width={siteConfig.bookCover.width ?? 300}
+						height={siteConfig.bookCover.height ?? 424}
 						loading="eager"
 						decoding="async"
 					/>
