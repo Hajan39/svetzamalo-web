@@ -30,12 +30,12 @@ struktura podle šablony v části 7. Pořadí podle sezóny (leden = plánován
 
 | # | Pracovní název (H1) | Hledaný dotaz | Kapitola knihy | Termín |
 |---|---|---|---|---|
-| 1 | Jak najít levné letenky: postup, který funguje i v roce 2026 | levné letenky jak hledat | Letenky | říjen 2026 |
-| 2 | Karta do zahraničí bez poplatků: srovnání pro Čechy 2026 | karta do zahraničí bez poplatků | Peníze | říjen 2026 |
-| 3 | Cestovní pojištění: co musí krýt a na čem se šetřit nesmí | cestovní pojištění srovnání | Zdraví a pojištění | listopad 2026 |
-| 4 | eSIM na cesty: kdy se vyplatí a jak ji koupit za pár korun | esim cestování | Mobilní tarif | listopad 2026 |
-| 5 | Chybné tarify (error fares): jak je najít a kdy do nich jít | error fare letenky | Letenky | prosinec 2026 |
-| 6 | Kolik stojí cestování? Reálné rozpočty na den podle regionů | rozpočet na cestování na den | Plánování | prosinec 2026 |
+| 1 | ✅ Jak najít levné letenky (`/articles/jak-najit-levne-letenky`) | levné letenky jak hledat | Letenky | publikováno 14. 9. 2026 |
+| 2 | ✅ Karta do zahraničí bez poplatků (`/articles/karta-do-zahranici-bez-poplatku`) | karta do zahraničí bez poplatků | Peníze | publikováno 14. 9. 2026 |
+| 3 | ✅ Cestovní pojištění (`/articles/cestovni-pojisteni-co-musi-kryt`) | cestovní pojištění srovnání | Zdraví a pojištění | publikováno 14. 9. 2026 |
+| 4 | ✅ eSIM na cesty (`/articles/esim-na-cesty`) | esim cestování | Mobilní tarif | publikováno 14. 9. 2026 |
+| 5 | ✅ Chybné tarify (`/articles/chybne-tarify-letenky`) | error fare letenky | Letenky | publikováno 14. 9. 2026 |
+| 6 | ✅ Kolik stojí cestování (`/articles/kolik-stoji-cestovani-rozpocet-na-den`) | rozpočet na cestování na den | Plánování | publikováno 14. 9. 2026 |
 | 7 | Co sbalit na dlouhou cestu: seznam na 2 týdny až půl roku | co sbalit na dovolenou seznam | Balení | leden 2027 |
 | 8 | Víza a vstup do země: kde Čech vízum potřebuje a kde ne (2027) | víza pro Čechy seznam zemí | Dokumenty | leden 2027 |
 | 9 | Ubytování zdarma nebo skoro: housesitting, Couchsurfing, výměny | ubytování zdarma cestování | Ubytování | únor 2027 |
