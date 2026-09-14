@@ -1514,6 +1514,18 @@ p {
 }
 
 @media (max-width: 640px) {
+  .book-guide-order-copy {
+    gap: 1rem;
+  }
+
+  .book-guide-order-cover {
+    width: 96px;
+  }
+
+  .book-guide-order-card {
+    padding: 1.1rem;
+  }
+
   p {
     font-size: 1rem;
   }
