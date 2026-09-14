@@ -328,7 +328,7 @@ const jsonLd = {
 					<h2>Jan a Kateřina Hančovi</h2>
 					<p>Český pár, který začal cestovat jako studenti s minimem peněz. Za deset let 46 zemí v Evropě, Asii, Africe, Americe i Pacifiku a skoro dva roky života v Austrálii a na Novém Zélandu. Cestou byli okradeni, podvedeni i v nemocnici — a z každé chyby zůstal zápis, který příště ušetřil peníze.</p>
 					<p>Tahle kniha je ten zápis pohromadě: to, co by si přáli mít na začátku. Od roku 2020 stojí za webem Svět za málo a o cestování přednáší pro školy, knihovny a cestovatelské kluby ({about.pastEvents.length} besed).</p>
-					<a href={withLocalePath('/about', locale)} class="text-link">Víc o projektu a přednáškách →</a>
+					<a href={withLocalePath('/about', locale)} class="text-link">Víc o projektu a přednáškách</a>
 				</div>
 			</div>
 			<div class="sales-guarantee">
@@ -357,11 +357,20 @@ const jsonLd = {
 		<div class="book-guide-order-inner">
 			<div class="book-guide-order-copy">
 				{siteConfig?.bookCover && <img class="book-guide-order-cover" src={siteConfig.bookCover.src} alt={siteConfig.bookCover.alt || paidBookTitle} width={siteConfig.bookCover.width ?? 300} height={siteConfig.bookCover.height ?? 424} loading="lazy" decoding="async" />}
-				<p class="section-kicker">{text.wantMore}</p>
-				<h2>{paidBookTitle}</h2>
-				{price && <p class="book-guide-price">{text.priceLabel}: <strong>{price}</strong></p>}
+				<div class="book-guide-order-text">
+					<p class="section-kicker">{text.wantMore}</p>
+					<h2>{paidBookTitle}</h2>
+					{price && <p class="book-guide-price"><strong>{price}</strong></p>}
+					<ul class="book-guide-includes">
+						<li>PDF, 235 stran, 22 kapitol</li>
+						<li>Odkaz ke stažení e-mailem hned po zaplacení</li>
+						<li>Platba kartou nebo převodem</li>
+					</ul>
+				</div>
 			</div>
-			<BookOrderForm siteConfig={siteConfig} id="guide-order" class="book-guide-order-form" />
+			<div class="book-guide-order-card">
+				<BookOrderForm siteConfig={siteConfig} id="guide-order" class="book-guide-order-form" />
+			</div>
 		</div>
 	</section>
 
@@ -369,7 +378,7 @@ const jsonLd = {
 		<ul>
 			<li><strong>Doručení e-mailem</strong><span>Kartou hned po zaplacení, převodem po přijetí platby.</span></li>
 			<li><strong>Platba přes ComGate</strong><span>Kartou nebo bankovním převodem.</span></li>
-			<li><strong>Ukázka zdarma</strong><span>Celá kapitola ke stažení před nákupem.</span></li>
+			<li><strong>Ukázka zdarma</strong><span>Celá kapitola na e-mail před nákupem.</span></li>
 			<li><strong>Prodejce</strong><span>{SHOP.sellerName}, IČO {SHOP.sellerIco}</span></li>
 		</ul>
 		<p>
@@ -400,12 +409,21 @@ const jsonLd = {
 		<div class="book-guide-order-inner">
 			<div class="book-guide-order-copy">
 				{siteConfig?.bookCover && <img class="book-guide-order-cover" src={siteConfig.bookCover.src} alt={siteConfig.bookCover.alt || paidBookTitle} width={siteConfig.bookCover.width ?? 300} height={siteConfig.bookCover.height ?? 424} loading="lazy" decoding="async" />}
-				<p class="section-kicker">Připraveno?</p>
-				<h2>{paidBookTitle}</h2>
-				{price && <p class="book-guide-price">{text.priceLabel}: <strong>{price}</strong> · PDF hned po zaplacení</p>}
-				<p class="lead-note">Nejsi si jistý? <a href={sampleUrl}>Nech si poslat ukázkovou kapitolu zdarma</a>.</p>
+				<div class="book-guide-order-text">
+					<p class="section-kicker">Připraveno?</p>
+					<h2>{paidBookTitle}</h2>
+					{price && <p class="book-guide-price"><strong>{price}</strong></p>}
+					<ul class="book-guide-includes">
+						<li>PDF, 235 stran, 22 kapitol</li>
+						<li>Odkaz ke stažení e-mailem hned po zaplacení</li>
+						<li>Platba kartou nebo převodem</li>
+					</ul>
+					<p class="lead-note">Nejsi si jistý? <a href={sampleUrl}>Nech si poslat ukázkovou kapitolu zdarma</a>.</p>
+				</div>
 			</div>
-			<BookOrderForm siteConfig={siteConfig} id="guide-order-2" class="book-guide-order-form" />
+			<div class="book-guide-order-card">
+				<BookOrderForm siteConfig={siteConfig} id="guide-order-2" class="book-guide-order-form" />
+			</div>
 		</div>
 	</section>
 
