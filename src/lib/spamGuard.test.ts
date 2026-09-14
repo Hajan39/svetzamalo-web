@@ -53,3 +53,21 @@ describe("isRateLimited", () => {
 		expect(isRateLimited(requestFrom("203.0.113.13"), "per-ip")).toBe(false);
 	});
 });
+
+describe("isLikelyBot", () => {
+	const req = (ua?: string) =>
+		new Request("https://svetzamalo.cz/go/x", { headers: ua === undefined ? {} : { "user-agent": ua } });
+
+	it("flags crawlers, link scanners and empty agents", async () => {
+		const { isLikelyBot } = await import("./spamGuard");
+		expect(isLikelyBot(req("Mozilla/5.0 (compatible; Googlebot/2.1)"))).toBe(true);
+		expect(isLikelyBot(req("facebookexternalhit/1.1"))).toBe(true);
+		expect(isLikelyBot(req("curl/8.0"))).toBe(true);
+		expect(isLikelyBot(req())).toBe(true);
+	});
+
+	it("lets a normal browser through", async () => {
+		const { isLikelyBot } = await import("./spamGuard");
+		expect(isLikelyBot(req("Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 Safari/604.1"))).toBe(false);
+	});
+});

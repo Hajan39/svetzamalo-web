@@ -43,3 +43,18 @@ export function isHoneypotTripped(body: unknown): boolean {
 	const value = (body as Record<string, unknown>).website;
 	return typeof value === "string" && value.trim().length > 0;
 }
+
+/**
+ * Crawlers, link scanners in mail clients and preview fetchers hit the public
+ * redirect endpoints far more often than people do. Each hit used to wake the
+ * database for a counter nobody wants, and on Neon's free plan every wake-up
+ * costs compute hours. Heuristic on purpose: a miss only means one uncounted
+ * click.
+ */
+export function isLikelyBot(request: Request): boolean {
+	const ua = (request.headers.get("user-agent") || "").toLowerCase();
+	if (!ua) return true;
+	return /bot|crawl|spider|slurp|preview|fetch|scan|monitor|curl|wget|python|headless|facebookexternalhit|whatsapp|telegram|discord|skype|linkchecker|validator/.test(
+		ua,
+	);
+}

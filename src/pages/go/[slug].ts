@@ -3,6 +3,7 @@ import { track } from "@vercel/analytics/server";
 import { fetchAffiliateLinkBySlug } from "@/lib/content/api";
 import { db, isDbConfigured } from "@/lib/db";
 import { getLocaleFromAstro } from "@/lib/i18n";
+import { isLikelyBot } from "@/lib/spamGuard";
 
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
@@ -40,7 +41,7 @@ export const GET: APIRoute = async (context) => {
 			locale,
 			title: affiliateLink.title,
 		}).catch(() => {});
-		if (isDbConfigured()) {
+		if (isDbConfigured() && !isLikelyBot(context.request)) {
 			// Only the path of the referring page on this site — no visitor data.
 			const referer = context.request.headers.get("referer");
 			const path = referer ? new URL(referer).pathname.slice(0, 200) : null;
