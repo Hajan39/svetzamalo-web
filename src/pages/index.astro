@@ -122,6 +122,7 @@ const continentLabels = new Intl.ListFormat(shared.htmlLocale, {
 	alternateLocales={homeAlternateLocales}
 >
   <Fragment slot="head">
+    <link rel="preload" as="image" href="/images/hero/mauritius-home-hero.webp" fetchpriority="high" />
     <script type="application/ld+json" is:inline set:html={JSON.stringify([
       {
         "@context": "https://schema.org",

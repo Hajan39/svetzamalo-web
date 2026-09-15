@@ -10,4 +10,3 @@ Disallow: /book/pending
 Disallow: /book/cancelled
 
 Sitemap: https://svetzamalo.cz/sitemap.xml
-LLMs: https://svetzamalo.cz/llms.txt

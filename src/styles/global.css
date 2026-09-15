@@ -590,7 +590,7 @@ p {
 
 .home-hero-media {
   z-index: -2;
-  background-image: url('/images/hero/mauritius-home-hero.jpg');
+  background-image: url('/images/hero/mauritius-home-hero.webp');
   background-position: center;
   background-size: cover;
 }

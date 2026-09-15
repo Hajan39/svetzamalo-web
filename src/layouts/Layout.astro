@@ -107,7 +107,9 @@ const affiliateTracking = !/^\/(en\/)?(book|admin|ebook|privacy|terms|reklamace|
 		<link rel="manifest" href="/manifest.json" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" />
+		{/* Loaded async: the Google Fonts stylesheet blocked first paint for ~0.9 s on mobile. */}
+		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" /></noscript>
 		<meta property="og:type" content={ogType} />
 		<meta property="og:site_name" content="Svet za malo" />
 		<meta property="og:locale" content={ogLocale} />
@@ -137,10 +139,21 @@ const affiliateTracking = !/^\/(en\/)?(book|admin|ebook|privacy|terms|reklamace|
 		{affiliateTracking && (
 			<script is:inline data-nowprocket="1" data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1">
 				(function () {
-					var script = document.createElement("script");
-					script.async = 1;
-					script.src = 'https://emrldtp.com/NTI2NTIx.js?t=526521';
-					document.head.appendChild(script);
+					// ~1 s of main-thread work on a phone; nothing on the page depends on it,
+					// so it waits until the page is idle after load.
+					var inject = function () {
+						var script = document.createElement("script");
+						script.async = 1;
+						script.src = 'https://emrldtp.com/NTI2NTIx.js?t=526521';
+						document.head.appendChild(script);
+					};
+					var schedule = function () {
+						setTimeout(function () {
+							(window.requestIdleCallback || function (cb) { cb(); })(inject);
+						}, 4000);
+					};
+					if (document.readyState === "complete") schedule();
+					else window.addEventListener("load", schedule, { once: true });
 				})();
 			</script>
 		)}
