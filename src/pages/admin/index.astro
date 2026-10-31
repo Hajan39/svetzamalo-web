@@ -334,6 +334,10 @@ for (const item of orderItems) {
 	else itemsByOrder.set(item.order_id, [item]);
 }
 
+const toDispatch = shopOrders.filter(
+	(order) => order.status === "paid" && !order.shipped_at,
+).length;
+
 const shippingLabels: Record<string, string> = {
 	packeta_pickup: "Zásilkovna, výdejní místo",
 	packeta_address: "Zásilkovna, na adresu",
@@ -494,6 +498,33 @@ function deliveryAddress(order: OrderRow): string {
               </div>
 
               <div class="admin-metric">
+                <h3>Zboží</h3>
+                <p class="admin-metric-main">{money(stats.shop.revenueLast30Minor)}<span> za 30 dní</span></p>
+                <ul>
+                  <li>{stats.shop.paid} zaplacených objednávek, {money(stats.shop.revenueMinor)} celkem</li>
+                  <li>z toho poštovné {money(stats.shop.shippingMinor)}</li>
+                  <li>
+                    {stats.shop.awaitingDispatch === 0
+                      ? "Nic nečeká na odeslání"
+                      : `${stats.shop.awaitingDispatch} čeká na odeslání`}
+                  </li>
+                </ul>
+              </div>
+
+              <div class="admin-metric">
+                <h3>Nejprodávanější zboží</h3>
+                {stats.shop.topVariants.length === 0 ? (
+                  <p class="admin-sub">Zatím žádný prodej.</p>
+                ) : (
+                  <ul>
+                    {stats.shop.topVariants.map((variant) => (
+                      <li>{variant.sold}x {variant.title} <span class="admin-sub">{variant.variantLabel}</span></li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+
+              <div class="admin-metric">
                 <h3>Odkud lidé přicházejí</h3>
                 {stats.leads.topSources.length === 0 ? (
                   <p class="admin-sub">Zatím žádná data.</p>
@@ -516,6 +547,7 @@ function deliveryAddress(order: OrderRow): string {
         <div class="admin-actions">
           <a class="btn-secondary" href="/api/admin/export?type=orders">Objednávky CSV</a>
           <a class="btn-secondary" href="/api/admin/export?type=leads">E-maily CSV</a>
+          <a class="btn-secondary" href="/api/admin/export?type=shipping">Expedice CSV</a>
         </div>
 
         <div class="admin-table-wrap">
@@ -560,6 +592,11 @@ function deliveryAddress(order: OrderRow): string {
         </div>
 
         <h2 class="admin-h2">Expedice</h2>
+        <p class="admin-sub admin-h2-note">
+          {toDispatch === 0
+            ? "Nic nečeká na odeslání."
+            : `${toDispatch} zaplacen${toDispatch === 1 ? "á objednávka čeká" : "é objednávky čekají"} na odeslání.`}
+        </p>
         <div class="admin-table-wrap">
           <table class="admin-table">
             <thead>
@@ -569,7 +606,7 @@ function deliveryAddress(order: OrderRow): string {
               {shopOrders.length === 0 ? (
                 <tr><td colspan="8" class="admin-empty">Zatím žádné objednávky zboží.</td></tr>
               ) : shopOrders.map((order) => (
-                <tr>
+                <tr class:list={[order.status === "paid" && !order.shipped_at && "admin-row-due"]}>
                   <td>{formatDate(order.created_at)}</td>
                   <td>
                     <strong>{order.full_name}</strong>
@@ -585,6 +622,7 @@ function deliveryAddress(order: OrderRow): string {
                   <td>
                     <span class="admin-sub">{shippingLabels[order.shipping_method || ""] || order.shipping_method || "-"}</span>
                     <span class="admin-sub">{deliveryAddress(order)}</span>
+                    {order.note && <span class="admin-note">Poznámka: {order.note}</span>}
                   </td>
                   <td class="admin-mono">
                     {money(order.amount_minor)}
@@ -818,6 +856,9 @@ function deliveryAddress(order: OrderRow): string {
   .admin-pill.paid { background: #dff3e6; color: #1f6b40; }
   .admin-pill.cancelled { background: #fdecec; color: #9f1d1d; }
   .admin-inline-form { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin: 0; }
+  .admin-note { display: block; margin-top: 0.2rem; color: var(--foreground); font-size: 0.8rem; font-style: italic; }
+  .admin-h2-note { margin: -0.4rem 0 0.75rem; }
+  .admin-row-due { background: color-mix(in srgb, var(--primary) 7%, transparent); }
   .admin-input { min-width: 8rem; padding: 0.35rem 0.5rem; border: 1px solid var(--border); border-radius: 0.4rem; font-size: 0.82rem; }
   .admin-small-btn { min-height: 2.1rem; padding: 0.3rem 0.75rem; font-size: 0.82rem; }
   .admin-h2 { margin-top: 1rem; }

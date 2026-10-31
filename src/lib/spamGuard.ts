@@ -18,7 +18,16 @@ function clientKey(request: Request, bucket: string): string {
 	return `${bucket}:${ip}`;
 }
 
-export function isRateLimited(request: Request, bucket: string): boolean {
+/**
+ * `limit` defaults to the tight budget that suits a form submission. Pages a
+ * paying customer legitimately reloads need a looser one, or an office behind
+ * one NAT address locks itself out of its own order confirmation.
+ */
+export function isRateLimited(
+	request: Request,
+	bucket: string,
+	limit: number = MAX_HITS_PER_WINDOW,
+): boolean {
 	const key = clientKey(request, bucket);
 	const now = Date.now();
 	const recent = (hitLog.get(key) || []).filter(
@@ -32,7 +41,7 @@ export function isRateLimited(request: Request, bucket: string): boolean {
 	}
 	hitLog.set(key, recent);
 
-	return recent.length > MAX_HITS_PER_WINDOW;
+	return recent.length > limit;
 }
 
 // A filled-in "website" field means a bot tripped the honeypot

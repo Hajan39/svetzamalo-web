@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { fetchAllArticles, fetchDestinations } from '@/lib/content/api';
+import { fetchProducts } from '@/lib/sanity/products';
 import { translations } from '@/i18n/translations';
 
 function escapeXml(str: string): string {
@@ -22,9 +23,10 @@ const day = (iso?: string) => iso?.split('T')[0];
 export const GET: APIRoute = async () => {
   const siteUrl = (import.meta.env.SITE_URL || import.meta.env.PUBLIC_SITE_URL || 'https://svetzamalo.cz').replace(/\/$/, '');
 
-  const [articles, destinations] = await Promise.all([
+  const [articles, destinations, products] = await Promise.all([
     fetchAllArticles('cs'),
     fetchDestinations('cs'),
+    fetchProducts('cs'),
   ]);
 
   const staticEntries = [
@@ -34,6 +36,11 @@ export const GET: APIRoute = async () => {
     // The money pages. They were missing here while every article was listed.
     urlEntry(`${siteUrl}/book/kompletni-pruvodce`, undefined, '0.9', 'monthly'),
     urlEntry(`${siteUrl}/book`, undefined, '0.8', 'monthly'),
+    // The cart and the order confirmation stay out: both carry noindex and
+    // neither is a page anyone should arrive at from a search result.
+    ...(products.length > 0
+      ? [urlEntry(`${siteUrl}/obchod`, undefined, '0.8', 'weekly')]
+      : []),
     urlEntry(`${siteUrl}/about`, undefined, '0.5', 'monthly'),
     ...['privacy', 'terms', 'reklamace', 'dodaci-podminky'].map((slug) =>
       urlEntry(`${siteUrl}/${slug}`, undefined, '0.2', 'yearly'),
@@ -41,6 +48,10 @@ export const GET: APIRoute = async () => {
   ];
 
   // Only continents that actually have a destination, so no empty listing is advertised.
+  const productEntries = products.map((product) =>
+    urlEntry(`${siteUrl}/obchod/${product.slug}`, undefined, '0.7', 'weekly'),
+  );
+
   const continents = [...new Set(destinations.map((dest) => dest.continent))].filter(
     (continent) => continent in translations.cs.shared.continents,
   );
@@ -70,7 +81,7 @@ export const GET: APIRoute = async () => {
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${[...staticEntries, ...continentEntries, ...destinationEntries, ...articleEntries, ...pageEntries].join('\n')}
+${[...staticEntries, ...continentEntries, ...destinationEntries, ...productEntries, ...articleEntries, ...pageEntries].join('\n')}
 </urlset>`;
 
   return new Response(xml, {

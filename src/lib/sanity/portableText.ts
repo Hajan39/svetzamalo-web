@@ -43,6 +43,20 @@ function escapeAttr(value: string): string {
 	return escapeHtml(value).replace(/'/g, "&#39;");
 }
 
+// Escaping an href does nothing about its scheme: "javascript:alert(1)" has no
+// character an attribute escaper touches. Links come from the CMS, so the
+// scheme is checked rather than assumed, and anything that is not a plain web
+// link becomes an inert anchor instead of a script trigger.
+const SAFE_LINK = /^(?:https?:|mailto:|tel:|[/#?])/i;
+
+function safeHref(value: string | undefined): string | undefined {
+	if (!value) return undefined;
+	// Control characters and whitespace are stripped first: "java\tscript:" and
+	// a leading newline both survive into the browser's own URL parsing.
+	const cleaned = value.replace(/[\u0000-\u0020]/g, "");
+	return SAFE_LINK.test(cleaned) ? cleaned : undefined;
+}
+
 export function sanityPortableTextToHtml(value: unknown): string {
 	if (!Array.isArray(value) || value.length === 0) return "";
 
@@ -72,8 +86,9 @@ export function sanityPortableTextToHtml(value: unknown): string {
 			marks: {
 				link: ({ children, value }) => {
 					const link = value as ExternalLinkValue;
-					if (!link.href) return children;
-					return `<a href="${escapeAttr(link.href)}">${children}</a>`;
+					const href = safeHref(link.href);
+					if (!href) return children;
+					return `<a href="${escapeAttr(href)}">${children}</a>`;
 				},
 				internalArticleLink: ({ children, value }) => {
 					const link = value as InternalArticleLinkValue;

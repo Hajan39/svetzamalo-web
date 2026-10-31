@@ -72,6 +72,14 @@ export const SHOP = {
 	comgateTest: env("COMGATE_TEST", "true").toLowerCase() !== "false",
 
 	adminPassword: env("ADMIN_PASSWORD"),
+
+	/**
+	 * Packeta's pickup-point widget key. Public by design: the widget runs in
+	 * the browser and the key only identifies the shop to it. Without it the
+	 * pickup-point methods cannot be offered, because there is no way for the
+	 * customer to choose a point.
+	 */
+	packetaApiKey: env("PACKETA_API_KEY", env("PUBLIC_PACKETA_API_KEY")),
 } as const;
 
 export function priceMinor(): number {
@@ -90,6 +98,11 @@ export function isBankTransferLive(): boolean {
 			(SHOP.bankAccount || SHOP.bankIban) &&
 			priceMinor() > 0,
 	);
+}
+
+/** Pickup-point delivery needs the widget; address delivery does not. */
+export function isPickupPointAvailable(): boolean {
+	return Boolean(SHOP.packetaApiKey);
 }
 
 export function isComgateLive(): boolean {

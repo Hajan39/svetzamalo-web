@@ -1,5 +1,6 @@
 ---
 import BookOrderForm from "@/components/marketing/BookOrderForm.astro";
+import { jsonForScript } from "@/lib/htmlJson";
 import LeadCapture from "@/components/marketing/LeadCapture.astro";
 import Layout from "@/layouts/Layout.astro";
 import {
@@ -204,7 +205,7 @@ const jsonLd = {
 	siteConfig={siteConfig}
 >
 	<Fragment slot="head">
-		<script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
+		<script type="application/ld+json" is:inline set:html={jsonForScript(jsonLd)}></script>
 	</Fragment>
 	<section class="book-guide-hero">
 		<div class="container-wide book-guide-hero-inner">

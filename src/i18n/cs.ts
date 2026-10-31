@@ -280,6 +280,8 @@ const cs = {
 			pickedPoint: "Vybrané místo",
 			changePoint: "Změnit",
 			pointMissing: "Vyber prosím výdejní místo.",
+			pickerUnavailable:
+				"Výběr výdejního místa se nenačetl. Zvol jiný způsob doručení, nebo to zkus za chvíli.",
 			contactHeading: "Kontakt",
 			fullName: "Jméno a příjmení",
 			email: "E-mail",

@@ -3,6 +3,7 @@ import Layout from '@/layouts/Layout.astro';
 import { db, isDbConfigured, type OrderItemRow, type OrderRow } from '@/lib/db';
 import { formatCzk } from '@/lib/cart';
 import { SHOP } from '@/lib/shopConfig';
+import { isRateLimited } from '@/lib/spamGuard';
 import { translations } from '@/i18n/translations';
 import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
 
@@ -21,7 +22,12 @@ const status = Astro.url.searchParams.get('status')?.trim() || '';
 let order: OrderRow | undefined;
 let items: OrderItemRow[] = [];
 
-if (variableSymbol && isDbConfigured()) {
+// The variable symbol is ten random digits, so guessing one is not practical,
+// but a lookup per request still wakes the database. Throttled generously:
+// a customer reloading their own confirmation must never be the one blocked.
+const throttled = isRateLimited(Astro.request, 'shop-order-page', 30);
+
+if (variableSymbol && !throttled && isDbConfigured()) {
   try {
     const sql = db();
     const rows = (await sql`

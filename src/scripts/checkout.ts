@@ -41,6 +41,7 @@ interface Copy {
 	quantity: string;
 	free: string;
 	pointMissing: string;
+	pickerUnavailable: string;
 	errorGeneric: string;
 	errorStale: string;
 	submitting: string;
@@ -71,6 +72,7 @@ const copy = readJson<Copy>("[data-cart-copy]", {
 	quantity: "Počet",
 	free: "zdarma",
 	pointMissing: "Vyber výdejní místo.",
+	pickerUnavailable: "Výběr výdejního místa se nenačetl. Zvol jiný způsob doručení, nebo to zkus za chvíli.",
 	errorGeneric: "Objednávku se nepodařilo odeslat.",
 	errorStale: "Zkontroluj košík a zkus to znovu.",
 	submitting: "Odesílám...",
@@ -224,7 +226,10 @@ document
 		const apiKey = document.body.dataset.packetaKey;
 
 		if (!packeta || !apiKey) {
-			showError(copy.pointMissing);
+			// The widget script is only rendered when a key is configured, so
+			// reaching this means it failed to load. Saying "pick a point" here
+			// would blame the customer for a button that cannot work.
+			showError(copy.pickerUnavailable);
 			return;
 		}
 

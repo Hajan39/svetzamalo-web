@@ -4,6 +4,11 @@ import type { SiteConfig } from "@/types";
 const fetchVariantsBySku = vi.hoisted(() => vi.fn());
 vi.mock("./sanity/products", () => ({ fetchVariantsBySku }));
 
+const pickupAvailable = vi.hoisted(() => ({ value: true }));
+vi.mock("./shopConfig", () => ({
+	isPickupPointAvailable: () => pickupAvailable.value,
+}));
+
 const { priceOrder } = await import("./shopOrder");
 
 const config: SiteConfig = {
@@ -48,6 +53,7 @@ const pickup = { shippingMethod: "packeta_pickup", pickupPointId: "Z1234" };
 
 beforeEach(() => {
 	fetchVariantsBySku.mockReset();
+	pickupAvailable.value = true;
 });
 
 describe("priceOrder", () => {
@@ -167,6 +173,21 @@ describe("priceOrder", () => {
 			config,
 		);
 		expect(result).toEqual({ ok: false, reason: "pickup_point_required" });
+	});
+
+	it("refuses a pickup method when no widget key is configured", async () => {
+		// Offering a pickup point the shop cannot address is worse than not
+		// offering it: the order would look fine and be unshippable.
+		pickupAvailable.value = false;
+
+		const result = await priceOrder(
+			[{ sku: "obraz-30x40", quantity: 1 }],
+			pickup,
+			config,
+		);
+
+		expect(result).toEqual({ ok: false, reason: "pickup_point_required" });
+		expect(fetchVariantsBySku).not.toHaveBeenCalled();
 	});
 
 	it("insists on a full address for a delivery method", async () => {

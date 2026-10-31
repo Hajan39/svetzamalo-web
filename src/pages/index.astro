@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { jsonForScript } from "@/lib/htmlJson";
 import ArticleCard from "@/components/article/ArticleCard.astro";
 import DestinationCard from "@/components/destination/DestinationCard.astro";
 import LeadCapture from "@/components/marketing/LeadCapture.astro";
@@ -123,7 +124,7 @@ const continentLabels = new Intl.ListFormat(shared.htmlLocale, {
 >
   <Fragment slot="head">
     <link rel="preload" as="image" href="/images/hero/mauritius-home-hero.webp" fetchpriority="high" />
-    <script type="application/ld+json" is:inline set:html={JSON.stringify([
+    <script type="application/ld+json" is:inline set:html={jsonForScript([
       {
         "@context": "https://schema.org",
         "@type": "Organization",

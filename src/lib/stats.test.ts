@@ -19,6 +19,14 @@ function stats(ebookLeads: number, paidOrders: number): ShopStats {
 			paidLast30: 0,
 			revenueLast30Minor: 0,
 		},
+		shop: {
+			paid: 0,
+			awaitingDispatch: 0,
+			revenueMinor: 0,
+			shippingMinor: 0,
+			revenueLast30Minor: 0,
+			topVariants: [],
+		},
 		downloads: { free: 0, freeLast7: 0, paid: 0, paidLast7: 0 },
 	};
 }

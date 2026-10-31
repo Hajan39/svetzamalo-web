@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import { jsonForScript } from '@/lib/htmlJson';
 import ArticleCard from '@/components/article/ArticleCard.astro';
 import BookCta from '@/components/marketing/BookCta.astro';
 import DestinationLiveInfo from '@/components/destination/DestinationLiveInfo.astro';
@@ -75,7 +76,7 @@ const jsonLd = {
 
 <Layout title={destination.seo.metaTitle} description={destination.seo.metaDescription} canonicalPath={withLocalePath(`/destinations/guide/${destination.slug}`, locale)} alternateLocales={[locale]} siteConfig={siteConfig}>
   <Fragment slot="head">
-    <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
+    <script type="application/ld+json" is:inline set:html={jsonForScript(jsonLd)}></script>
   </Fragment>
   <section class="container-narrow py-10 md:py-16">
     <a href={withLocalePath('/destinations', locale)} class="mb-6 inline-flex text-sm font-semibold">{text.back}</a>

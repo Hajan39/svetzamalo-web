@@ -11,6 +11,7 @@ import {
 	type PricedLine,
 } from "./cart";
 import { fetchVariantsBySku } from "./sanity/products";
+import { isPickupPointAvailable } from "./shopConfig";
 
 export type PricingFailure =
 	| "empty_cart"
@@ -61,8 +62,13 @@ export async function priceOrder(
 	const method = findShippingMethod(siteConfig, delivery.shippingMethod);
 	if (!method) return { ok: false, reason: "unknown_shipping_method" };
 
-	if (requiresPickupPoint(method.code) && !delivery.pickupPointId?.trim()) {
-		return { ok: false, reason: "pickup_point_required" };
+	if (requiresPickupPoint(method.code)) {
+		// The cart hides these methods when the widget key is missing. Checked
+		// again here so a hand-made request cannot order delivery to a pickup
+		// point the shop has no way to actually address.
+		if (!isPickupPointAvailable() || !delivery.pickupPointId?.trim()) {
+			return { ok: false, reason: "pickup_point_required" };
+		}
 	}
 	if (
 		requiresPostalAddress(method.code) &&

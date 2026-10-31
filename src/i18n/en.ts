@@ -282,6 +282,8 @@ const en = {
 			pickedPoint: "Chosen point",
 			changePoint: "Change",
 			pointMissing: "Please choose a pickup point.",
+			pickerUnavailable:
+				"The pickup point picker did not load. Choose another delivery method, or try again in a moment.",
 			contactHeading: "Contact",
 			fullName: "Full name",
 			email: "E-mail",

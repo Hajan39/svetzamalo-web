@@ -1,5 +1,6 @@
 ---
 import HoneypotField from '@/components/forms/HoneypotField.astro';
+import { jsonForScript } from '@/lib/htmlJson';
 import Layout from '@/layouts/Layout.astro';
 import { fetchSiteConfig } from '@/lib/content/api';
 import { fetchProducts } from '@/lib/sanity/products';
@@ -12,6 +13,7 @@ import {
   requiresPostalAddress,
 } from '@/lib/cart';
 import { isBookGatewayEnabled } from '@/lib/paymentGateway';
+import { isPickupPointAvailable, SHOP } from '@/lib/shopConfig';
 import { translations } from '@/i18n/translations';
 import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
 
@@ -28,7 +30,12 @@ let products = await fetchProducts(locale);
 if (locale === 'en' && products.length === 0) products = await fetchProducts('cs');
 
 const open = isShopOpen(siteConfig);
-const methods = enabledShippingMethods(siteConfig);
+// A pickup method with no widget key is an option the customer cannot
+// complete, so it is withheld rather than offered and then refused.
+const pickupUsable = isPickupPointAvailable();
+const methods = enabledShippingMethods(siteConfig).filter(
+  (method) => pickupUsable || !requiresPickupPoint(method.code),
+);
 const gatewayEnabled = isBookGatewayEnabled(siteConfig);
 const freeOver = siteConfig?.shippingFreeOverCzk;
 
@@ -168,9 +175,9 @@ const shippingData = methods.map((method) => ({
     </form>
   </section>
 
-  <script is:inline type="application/json" data-catalogue set:html={JSON.stringify(catalogue)}></script>
-  <script is:inline type="application/json" data-shipping set:html={JSON.stringify(shippingData)}></script>
-  <script is:inline type="application/json" data-cart-copy set:html={JSON.stringify({
+  <script is:inline type="application/json" data-catalogue set:html={jsonForScript(catalogue)}></script>
+  <script is:inline type="application/json" data-shipping set:html={jsonForScript(shippingData)}></script>
+  <script is:inline type="application/json" data-cart-copy set:html={jsonForScript({
     locale,
     numberLocale,
     shopOpen: open,
@@ -178,12 +185,22 @@ const shippingData = methods.map((method) => ({
     quantity: text.quantity,
     free: text.shippingFree,
     pointMissing: text.pointMissing,
+    pickerUnavailable: text.pickerUnavailable,
     errorGeneric: text.errorGeneric,
     errorStale: text.errorStale,
     submitting: text.submitting,
     closed: text.closed,
   })} />
 </Layout>
+
+{pickupUsable && (
+  <script is:inline define:vars={{ packetaKey: SHOP.packetaApiKey }}>
+    document.body.dataset.packetaKey = packetaKey;
+  </script>
+)}
+{pickupUsable && (
+  <script is:inline async src="https://widget.packeta.com/v6/www/js/library.js"></script>
+)}
 
 <script>
   import '@/scripts/checkout';

@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { replaceAffiliateKeywords } from "./portableText";
+import {
+	replaceAffiliateKeywords,
+	sanityPortableTextToHtml,
+} from "./portableText";
 
 const booking = [
 	{ slug: "booking", keywords: ["booking"], relSponsored: true },
@@ -82,5 +85,68 @@ describe("replaceAffiliateKeywords", () => {
 			{ slug: "plus", keywords: ["a+b"], relSponsored: true },
 		]);
 		expect(out).toContain('href="/go/plus"');
+	});
+});
+
+describe("link safety", () => {
+	const paragraph = (markDef: Record<string, unknown>, text: string) => [
+		{
+			_type: "block",
+			_key: "b1",
+			style: "normal",
+			markDefs: [markDef],
+			children: [{ _type: "span", _key: "s1", text, marks: [markDef._key] }],
+		},
+	];
+
+	it("renders an ordinary web link", () => {
+		const html = sanityPortableTextToHtml(
+			paragraph({ _key: "m1", _type: "link", href: "https://svetzamalo.cz" }, "web"),
+		);
+		expect(html).toContain('href="https://svetzamalo.cz"');
+	});
+
+	it("keeps a javascript: URL out of the href", () => {
+		const html = sanityPortableTextToHtml(
+			paragraph({ _key: "m1", _type: "link", href: "javascript:alert(1)" }, "klik"),
+		);
+		expect(html).not.toContain("javascript:");
+		expect(html).not.toContain("<a ");
+		expect(html).toContain("klik");
+	});
+
+	it("is not fooled by control characters inside the scheme", () => {
+		const html = sanityPortableTextToHtml(
+			paragraph(
+				{ _key: "m1", _type: "link", href: "java\u0009script:alert(1)" },
+				"klik",
+			),
+		);
+		expect(html).not.toContain("script:");
+		expect(html).not.toContain("<a ");
+	});
+
+	it("rejects data: URLs", () => {
+		const html = sanityPortableTextToHtml(
+			paragraph(
+				{ _key: "m1", _type: "link", href: "data:text/html,<script>alert(1)</script>" },
+				"klik",
+			),
+		);
+		expect(html).not.toContain("data:");
+		expect(html).not.toContain("<a ");
+	});
+
+	it("allows mailto and relative links", () => {
+		expect(
+			sanityPortableTextToHtml(
+				paragraph({ _key: "m1", _type: "link", href: "mailto:info@svetzamalo.cz" }, "mail"),
+			),
+		).toContain('href="mailto:info@svetzamalo.cz"');
+		expect(
+			sanityPortableTextToHtml(
+				paragraph({ _key: "m1", _type: "link", href: "/obchod" }, "obchod"),
+			),
+		).toContain('href="/obchod"');
 	});
 });

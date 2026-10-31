@@ -36,7 +36,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com https://vitals.vercel-insights.com https://emrldtp.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://cdn.sanity.io; connect-src 'self' https://api.frankfurter.dev https://*.sanity.io https://vitals.vercel-insights.com https://emrldtp.com; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com https://vitals.vercel-insights.com https://emrldtp.com https://widget.packeta.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://cdn.sanity.io https://widget.packeta.com; connect-src 'self' https://api.frankfurter.dev https://*.sanity.io https://vitals.vercel-insights.com https://emrldtp.com https://widget.packeta.com; font-src 'self' https://fonts.gstatic.com; frame-src https://widget.packeta.com; form-action 'self' https://payments.comgate.cz; base-uri 'self'; object-src 'none'; frame-ancestors 'none'"
         }
       ]
     },

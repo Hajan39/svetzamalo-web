@@ -9,8 +9,16 @@ import {
 	isComgateLive,
 	isFreeEbookLive,
 	isPaidBookFileExposed,
+	isPickupPointAvailable,
 	SHOP,
 } from "./shopConfig";
+import {
+	enabledShippingMethods,
+	isShopOpen,
+	requiresPickupPoint,
+} from "./cart";
+import { fetchSiteConfig } from "./content/api";
+import type { SiteConfig } from "@/types";
 
 export type CheckState = "ok" | "warn" | "fail";
 
@@ -20,7 +28,12 @@ export interface Check {
 	detail: string;
 }
 
-const REQUIRED_TABLES = ["shop_orders", "shop_leads", "shop_payment_events"];
+const REQUIRED_TABLES = [
+	"shop_orders",
+	"shop_leads",
+	"shop_payment_events",
+	"shop_order_items",
+];
 
 async function checkDatabase(): Promise<Check> {
 	if (!isDbConfigured()) {
@@ -118,6 +131,66 @@ async function checkPaidBookFile(): Promise<Check> {
 	}
 }
 
+/**
+ * The shop's own prerequisites. Reported separately from the ebook's, because
+ * one can be perfectly live while the other is not configured at all.
+ */
+async function checkShop(): Promise<Check[]> {
+	let siteConfig: SiteConfig | null = null;
+	try {
+		siteConfig = await fetchSiteConfig("cs");
+	} catch {
+		return [
+			{
+				label: "Obchod se zbožím",
+				state: "warn",
+				detail: "Nastavení se nepodařilo načíst ze Sanity.",
+			},
+		];
+	}
+
+	const methods = enabledShippingMethods(siteConfig);
+	const open = isShopOpen(siteConfig);
+
+	const shop: Check = open
+		? {
+				label: "Obchod se zbožím",
+				state: "ok",
+				detail: `Otevřeno, ${methods.length} způsob(ů) doručení.`,
+			}
+		: {
+				label: "Obchod se zbožím",
+				state: "warn",
+				detail:
+					siteConfig?.shopEnabled !== true
+						? "Vypnuto v Sanity (Site config, Shipping, Shop open). Katalog je vidět, objednat nejde."
+						: "Není zapnutý žádný způsob doručení, takže objednávky neprojdou.",
+			};
+
+	const wantsPickup = methods.some((method) => requiresPickupPoint(method.code));
+	const pickup: Check =
+		!wantsPickup
+			? {
+					label: "Výdejní místa (Zásilkovna)",
+					state: "ok",
+					detail: "Nenabízí se, klíč není potřeba.",
+				}
+			: isPickupPointAvailable()
+				? {
+						label: "Výdejní místa (Zásilkovna)",
+						state: "ok",
+						detail: "PACKETA_API_KEY je nastavený, výběr místa funguje.",
+					}
+				: {
+						label: "Výdejní místa (Zásilkovna)",
+						state: "fail",
+						detail:
+							"V Sanity je zapnuté doručení na výdejní místo, ale chybí PACKETA_API_KEY. Zákazník si místo nevybere, takže se ta metoda vůbec nenabízí.",
+					};
+
+	return [shop, pickup];
+}
+
 export async function runReadinessChecks(): Promise<Check[]> {
 	const [database, paidBookFile] = await Promise.all([
 		checkDatabase(),
@@ -188,6 +261,7 @@ export async function runReadinessChecks(): Promise<Check[]> {
 		bank,
 		comgate,
 		checkComgateCredentials(),
+		...(await checkShop()),
 	];
 
 
