@@ -35,6 +35,8 @@ const en = {
 		"footer.tagline":
 			"Practical guides, budgets, and tips for travel that still makes sense without a big budget.",
 		"footer.explore": "Explore",
+		"footer.follow": "Follow us",
+		"footer.rss": "RSS articles",
 		"footer.tipsToEmail": "Travel tips to your inbox",
 		"footer.emailPlaceholder": "Your email",
 		"footer.subscribe": "Subscribe",
@@ -87,6 +89,12 @@ const en = {
 			note: "Unsubscribe anytime with one click.",
 			emailPlaceholder: "Your email",
 			emailLabel: "Email",
+		},
+		authorBox: {
+			kicker: "Who wrote this",
+			alt: "Jan and Kateřina Hančovi",
+			body: "A Czech couple, 46 countries in ten years, two years in Australia and New Zealand. We write from our own trips and from the mistakes that cost us.",
+			link: "More about us and our talks",
 		},
 		bookCta: {
 			kicker: "The complete guide",
@@ -163,6 +171,9 @@ const en = {
 				"transport, accommodation, food, itineraries, and seasonality.",
 			proof3Title: "Gentle email follow-up",
 			proof3Text: "a free ebook and new tips for readers who want more.",
+			guidesKicker: "Before you go",
+			guidesHeading: "How to travel cheaply",
+			guidesIntro: "Flights, cards, insurance, data, budget. Methods that work in any country.",
 			featuredKicker: "Featured reading",
 			featuredHeading: "Recommended practical guides",
 			allArticles: "All articles",

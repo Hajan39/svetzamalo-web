@@ -24,20 +24,20 @@ export function envSiteConfig(): SiteConfig {
 		ebookPdfUrl: SHOP.freeEbookDownloadUrl,
 		// Covers are the first page of each PDF, rendered to public/images/book/.
 		freeEbookCover: {
-			src: "/images/book/obalka-10-chyb.jpg",
+			src: "/images/book/obalka-10-chyb.webp",
 			alt: `Obálka ebooku ${SHOP.freeEbookTitle}`,
-			width: 910,
-			height: 1287,
+			width: 600,
+			height: 849,
 		},
 
 		bookAvailable: true,
 		bookTitle: SHOP.paidBookTitle,
 		bookPrice: `${SHOP.priceCzk} Kč`,
 		bookCover: {
-			src: "/images/book/obalka-pruvodce.jpg",
+			src: "/images/book/obalka-pruvodce.webp",
 			alt: `Obálka knihy ${SHOP.paidBookTitle}`,
-			width: 910,
-			height: 1287,
+			width: 600,
+			height: 849,
 		},
 		paidEbookPdfUrl: SHOP.paidBookFileUrl || undefined,
 

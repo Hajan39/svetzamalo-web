@@ -35,6 +35,8 @@ const cs = {
 		"footer.tagline":
 			"Praktické průvodce, rozpočty a tipy pro cestování, které dává smysl i bez velkého rozpočtu.",
 		"footer.explore": "Prozkoumat",
+		"footer.follow": "Sledujte nás",
+		"footer.rss": "RSS články",
 		"footer.tipsToEmail": "Tipy na cesty do emailu",
 		"footer.emailPlaceholder": "Tvůj email",
 		"footer.subscribe": "Odebírat",
@@ -87,6 +89,12 @@ const cs = {
 			note: "Odhlásit se můžeš jedním klikem kdykoliv.",
 			emailPlaceholder: "Tvůj email",
 			emailLabel: "Email",
+		},
+		authorBox: {
+			kicker: "Kdo to psal",
+			alt: "Jan a Kateřina Hančovi",
+			body: "Český pár, 46 zemí za deset let, dva roky v Austrálii a na Novém Zélandu. Píšeme z vlastních cest a z chyb, které nás něco stály.",
+			link: "Víc o nás a o přednáškách",
 		},
 		bookCta: {
 			kicker: "Kompletní průvodce",
@@ -161,6 +169,9 @@ const cs = {
 			proof2Text: "doprava, ubytování, jídlo, itineráře a sezóna.",
 			proof3Title: "Jemný email follow-up",
 			proof3Text: "ebook zdarma a nové tipy pro lidi, kteří chtějí víc.",
+			guidesKicker: "Než vyrazíte",
+			guidesHeading: "Návody, jak cestovat levně",
+			guidesIntro: "Letenky, karty, pojištění, data, rozpočet. Postupy, které platí pro každou zemi.",
 			featuredKicker: "Doporučené čtení",
 			featuredHeading: "Doporučené praktické průvodce",
 			allArticles: "Všechny články",
