@@ -1,0 +1,82 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import ProductCard from '@/components/shop/ProductCard.astro';
+import { fetchSiteConfig } from '@/lib/content/api';
+import { fetchProducts } from '@/lib/sanity/products';
+import { isShopOpen } from '@/lib/cart';
+import { translations } from '@/i18n/translations';
+import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
+
+const locale = getLocaleFromAstro(Astro);
+const text = translations[locale].pages.shop;
+
+let products = await fetchProducts(locale);
+if (locale === 'en' && products.length === 0) products = await fetchProducts('cs');
+
+let siteConfig = await fetchSiteConfig(locale);
+if (locale === 'en' && !siteConfig) siteConfig = await fetchSiteConfig('cs');
+
+const open = isShopOpen(siteConfig);
+
+// Only offer a filter for the kinds actually on sale: a "Merch" chip that
+// filters to nothing is worse than no chip.
+const typeLabels: Record<string, string> = {
+  print: text.typePrint,
+  merch: text.typeMerch,
+  book: text.typeBook,
+};
+const presentTypes = ['print', 'merch', 'book'].filter((type) =>
+  products.some((product) => product.productType === type),
+);
+---
+
+<Layout title={text.title} description={text.description} canonicalPath={withLocalePath('/obchod', locale)}>
+  <section class="container-wide py-10 md:py-16">
+    <header class="mb-8 max-w-2xl">
+      <h1 class="mb-4">{text.heading}</h1>
+      <p>{text.intro}</p>
+    </header>
+
+    {!open && products.length > 0 && (
+      <p class="shop-notice" role="status">{text.closed}</p>
+    )}
+
+    {presentTypes.length > 1 && (
+      <nav class="destination-filter-chips" aria-label={text.allTypes}>
+        <button type="button" class="filter-chip is-active" data-type-filter="all" aria-pressed="true">{text.allTypes}</button>
+        {presentTypes.map((type) => (
+          <button type="button" class="filter-chip" data-type-filter={type} aria-pressed="false">{typeLabels[type]}</button>
+        ))}
+      </nav>
+    )}
+
+    {products.length === 0 ? (
+      <div class="brand-card p-8 text-center text-foreground-secondary">{text.empty}</div>
+    ) : (
+      <div class="shop-grid" data-product-grid>
+        {products.map((product) => <ProductCard product={product} />)}
+      </div>
+    )}
+  </section>
+</Layout>
+
+<script>
+  const chips = document.querySelectorAll<HTMLButtonElement>('[data-type-filter]');
+  const cards = document.querySelectorAll<HTMLElement>('[data-product-grid] [data-product-type]');
+
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const wanted = chip.dataset.typeFilter;
+
+      chips.forEach((other) => {
+        const active = other === chip;
+        other.classList.toggle('is-active', active);
+        other.setAttribute('aria-pressed', String(active));
+      });
+
+      cards.forEach((card) => {
+        card.hidden = wanted !== 'all' && card.dataset.productType !== wanted;
+      });
+    });
+  });
+</script>

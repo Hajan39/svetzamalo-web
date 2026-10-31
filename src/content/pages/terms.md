@@ -1,6 +1,6 @@
 ---
 title: Všeobecné obchodní podmínky
-description: Obchodní podmínky e-shopu Svět za málo pro nákup digitálních produktů.
+description: Obchodní podmínky e-shopu Svět za málo pro nákup ebooků a fyzického zboží.
 ---
 
 ## Provozovatel
@@ -16,11 +16,15 @@ Provozovatel není plátcem DPH.
 
 ## Předmět smlouvy
 
-Tyto všeobecné obchodní podmínky (VOP) upravují nákup digitálních produktů (e-knih) prostřednictvím e-shopu na webu svetzamalo.cz a vztahy mezi provozovatelem a zákazníkem.
+Tyto všeobecné obchodní podmínky (VOP) upravují nákup digitálních produktů (e-knih) a fyzického zboží (obrazy z fotografií, doplňky a tištěná kniha) prostřednictvím e-shopu na webu svetzamalo.cz a vztahy mezi provozovatelem a zákazníkem.
 
 ## Objednávka a uzavření smlouvy
 
-Objednávku lze zadat prostřednictvím objednávkového formuláře na stránce /book. Zákazník je povinen vyplnit pravdivé a úplné údaje. Smlouva je uzavřena okamžikem, kdy zákazník odešle objednávku a provozovatel ji potvrdí e-mailem.
+Objednávku ebooku lze zadat prostřednictvím objednávkového formuláře na stránce /book, objednávku fyzického zboží prostřednictvím košíku na stránce /obchod. Zákazník je povinen vyplnit pravdivé a úplné údaje. Smlouva je uzavřena okamžikem, kdy zákazník odešle objednávku a provozovatel ji potvrdí e-mailem.
+
+Před odesláním objednávky zákazník vidí v košíku její obsah, cenu zboží, cenu zvoleného způsobu doručení a celkovou částku. Odesláním objednávky zákazník potvrzuje, že se seznámil s těmito VOP.
+
+Fotografie zboží jsou ilustrativní. U obrazů se barevnost tisku může od zobrazení na displeji mírně lišit; nejde o vadu zboží.
 
 ## Cena a platba
 
@@ -37,9 +41,11 @@ Digitální produkt (ebook) je doručen elektronicky na e-mailovou adresu zadano
 - Při platbě kartou nebo platebním tlačítkem: bezprostředně po potvrzení platby
 - Při bankovním převodu: do 3 pracovních dnů od připsání platby na účet
 
+Fyzické zboží odesíláme po připsání platby, zpravidla do 3 pracovních dnů. Způsoby doručení, poštovné a lhůty jsou popsány v dokumentu [Dodací a platební podmínky](/dodaci-podminky). Vlastnické právo ke zboží přechází na kupujícího jeho převzetím, nebezpečí škody na věci přechází převzetím zboží kupujícím nebo dopravcem určeným kupujícím.
+
 ## Reklamace a vrácení
 
-Podmínky reklamace, vrácení peněz a storno objednávky jsou popsány v dokumentu [Reklamační podmínky](/reklamace).
+Podmínky reklamace, vrácení peněz a storno objednávky jsou popsány v dokumentu [Reklamační podmínky](/reklamace). U fyzického zboží má spotřebitel právo odstoupit od smlouvy do 14 dnů od převzetí a vytknout vadu do dvou let od převzetí; podrobnosti včetně výjimek jsou v témže dokumentu.
 
 ## Ochrana osobních údajů
 

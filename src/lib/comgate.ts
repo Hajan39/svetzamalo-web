@@ -46,6 +46,14 @@ export interface CreatePaymentInput {
 	amountMinor: number;
 	currency: string;
 	locale: string;
+	/**
+	 * Comgate wants to know whether a parcel is coming. The ebook defaults to
+	 * electronic; the shop passes PHYSICAL_DELIVERY, which is what the gateway
+	 * reports to the card schemes and uses in dispute handling.
+	 */
+	delivery?: "ELECTRONIC_DELIVERY" | "PHYSICAL_DELIVERY";
+	/** Which set of result pages the payer comes back to. */
+	returnPathBase?: string;
 }
 
 export async function createComgatePayment(input: CreatePaymentInput): Promise<{
@@ -60,9 +68,16 @@ export async function createComgatePayment(input: CreatePaymentInput): Promise<{
 	// page with a status parameter reads as "thanks for your purchase" for a
 	// purchase that did not happen.
 	const vs = encodeURIComponent(input.variableSymbol);
-	const paidUrl = `${SHOP.siteUrl}/book/success?payment=comgate&status=paid&vs=${vs}`;
-	const cancelledUrl = `${SHOP.siteUrl}/book/cancelled?vs=${vs}`;
-	const pendingUrl = `${SHOP.siteUrl}/book/pending?vs=${vs}`;
+	const base = input.returnPathBase;
+	const paidUrl = base
+		? `${SHOP.siteUrl}${base}?payment=comgate&status=paid&vs=${vs}`
+		: `${SHOP.siteUrl}/book/success?payment=comgate&status=paid&vs=${vs}`;
+	const cancelledUrl = base
+		? `${SHOP.siteUrl}${base}?status=cancelled&vs=${vs}`
+		: `${SHOP.siteUrl}/book/cancelled?vs=${vs}`;
+	const pendingUrl = base
+		? `${SHOP.siteUrl}${base}?status=pending&vs=${vs}`
+		: `${SHOP.siteUrl}/book/pending?vs=${vs}`;
 
 	const payload = await post("/create", {
 		merchant: SHOP.comgateMerchant,
@@ -71,12 +86,12 @@ export async function createComgatePayment(input: CreatePaymentInput): Promise<{
 		price: String(input.amountMinor),
 		curr: input.currency || "CZK",
 		// Comgate caps label at 16 characters.
-		label: "Ebook",
+		label: input.productCode === "Zbozi" ? "Zbozi" : "Ebook",
 		refId: input.variableSymbol,
 		method: "ALL",
 		email: input.email,
 		fullName: input.fullName,
-		delivery: "ELECTRONIC_DELIVERY",
+		delivery: input.delivery || "ELECTRONIC_DELIVERY",
 		category: "OTHER",
 		name: input.productCode,
 		lang: input.locale === "en" ? "en" : "cs",

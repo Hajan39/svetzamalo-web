@@ -45,6 +45,11 @@ const navItems = [
 			]
 		: []),
 	{
+		label: t("header.shop"),
+		href: withLocalePath("/obchod", locale),
+		description: t("header.navDescShop"),
+	},
+	{
 		label: t("header.about"),
 		href: withLocalePath("/about", locale),
 		description: t("header.navDescAbout"),
@@ -84,6 +89,14 @@ const languageItems = [
       </nav>
 
       <div class="flex items-center gap-2 rounded-full border border-border bg-background px-2 py-1 shadow-sm">
+        <a href={withLocalePath('/obchod/kosik', locale)} class="header-cart" data-cart-link aria-label={t('header.cart')} hidden>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 8H6"></path>
+            <circle cx="10" cy="20" r="1.2"></circle>
+            <circle cx="17.5" cy="20" r="1.2"></circle>
+          </svg>
+          <span class="header-cart-count" data-cart-count>0</span>
+        </a>
         <div class="hidden items-center gap-2 md:flex">
           <div class="header-currency-picker" data-currency-picker>
             <button type="button" class="currency-picker-trigger" data-currency-trigger aria-label={t('header.currencyLabel')} aria-haspopup="listbox" aria-expanded="false">
@@ -389,4 +402,24 @@ const languageItems = [
       requestAnimationFrame(() => input?.focus());
     });
   });
+</script>
+
+<script>
+  import { cartCount, CART_CHANGED_EVENT } from '@/scripts/cartStore';
+
+  const link = document.querySelector<HTMLElement>('.header-cart');
+  const badge = document.querySelector<HTMLElement>('[data-cart-count]');
+
+  function render() {
+    const count = cartCount();
+    if (badge) badge.textContent = String(count);
+    // Hidden at zero rather than shown empty: an always-visible cart on a site
+    // that is mostly articles reads as a shop the reader did not come for.
+    if (link) link.hidden = count === 0;
+  }
+
+  render();
+  window.addEventListener(CART_CHANGED_EVENT, render);
+  // Another tab may have emptied it.
+  window.addEventListener('storage', render);
 </script>

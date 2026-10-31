@@ -1,6 +1,6 @@
 ---
 title: Terms and Conditions
-description: Terms and conditions for purchasing digital products in the Svět za málo e-shop.
+description: Terms and conditions for purchasing ebooks and physical goods in the Svět za málo e-shop.
 ---
 
 ## Operator
@@ -16,11 +16,15 @@ The operator is not a VAT payer.
 
 ## Subject of Contract
 
-These Terms and Conditions govern the purchase of digital products (ebooks) via the e-shop at svetzamalo.cz and the relationship between the operator and the customer.
+These Terms and Conditions govern the purchase of digital products (ebooks) and physical goods (prints made from photographs, accessories and the printed book) via the e-shop at svetzamalo.cz, and the relationship between the operator and the customer.
 
 ## Order and Contract Formation
 
-Orders are placed via the order form at /book. The customer must provide accurate and complete information. A contract is formed when the customer submits the order and the operator confirms it by email.
+Ebooks are ordered through the form at /book, physical goods through the cart at /obchod. The customer must provide accurate and complete information. A contract is formed when the customer submits the order and the operator confirms it by email.
+
+Before submitting the order the customer sees its contents in the cart, the price of the goods, the price of the chosen delivery method and the total. Submitting the order confirms that the customer has read these Terms.
+
+Product photographs are illustrative. The colours of a printed picture may differ slightly from what a screen shows; that is not a defect.
 
 ## Price and Payment
 
@@ -37,9 +41,11 @@ Digital products (ebooks) are delivered electronically to the email address prov
 - Card or bank button payment: immediately after payment confirmation
 - Bank transfer: within 3 business days of payment being credited
 
+Physical goods are dispatched once payment is credited, usually within 3 business days. Delivery methods, postage and timings are described in the [Delivery & Payment Terms](/en/dodaci-podminky). Title passes to the buyer on taking delivery; the risk of damage passes when the goods are taken over by the buyer or by a carrier the buyer appointed.
+
 ## Returns and Complaints
 
-Returns, refund conditions, and order cancellation are described in the [Returns Policy](/en/reklamace).
+Returns, refund conditions, and order cancellation are described in the [Returns Policy](/en/reklamace). For physical goods a consumer may withdraw from the contract within 14 days of delivery and report a defect within two years of delivery; the details and the exceptions are in that same document.
 
 ## Privacy
 

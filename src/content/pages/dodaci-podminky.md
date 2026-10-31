@@ -14,12 +14,37 @@ Tel: +420 734 839 007
 
 ## Způsob dodání
 
-Veškeré produkty v tomto e-shopu jsou **digitální** (ebook ve formátu PDF nebo EPUB). Fyzické zboží se nedoručuje.
+V e-shopu prodáváme dva druhy zboží: **digitální produkty** (ebook ve formátu PDF nebo EPUB) a **fyzické zboží** (obrazy z fotografií, doplňky a tištěná kniha). Způsob dodání se pro každý druh liší.
+
+### Digitální produkty
 
 Ebook je odeslán elektronicky na e-mailovou adresu zadanou při objednávce:
 
 - **Platba kartou nebo platebním tlačítkem:** automaticky po potvrzení platby, zpravidla do několika minut
 - **Bankovní převod:** do 3 pracovních dnů od připsání platby na účet
+
+### Fyzické zboží
+
+Zboží odesíláme po připsání platby, zpravidla do 3 pracovních dnů. O předání zásilky dopravci vás informujeme e-mailem, součástí je i číslo zásilky, pokud ho dopravce přiděluje.
+
+Doručujeme na území České republiky. Doručení mimo ČR řešíme individuálně, napište nám na info@svetzamalo.cz.
+
+Nabízené způsoby doručení a jejich aktuální cenu vidíte vždy v košíku před odesláním objednávky. Podle nastavení e-shopu jde o některé z těchto možností:
+
+- **Zásilkovna, výdejní místo:** doručení na zvolené výdejní místo
+- **Zásilkovna, na adresu:** doručení na zadanou adresu
+- **Česká pošta:** doručení na zadanou adresu
+- **Osobní odběr:** po domluvě, zdarma
+
+Dodací lhůta dopravce běží od předání zásilky a obvykle činí 1 až 2 pracovní dny. Tuto lhůtu negarantujeme, protože ji neovlivňujeme.
+
+### Poštovné
+
+Cena poštovného je uvedena u každého způsobu doručení v košíku a je součástí celkové ceny objednávky. Při překročení částky uvedené v košíku je poštovné zdarma; rozhoduje cena zboží bez poštovného.
+
+### Nepřevzatá zásilka
+
+Pokud zásilku nepřevezmete a vrátí se nám, ozveme se na e-mail uvedený v objednávce a domluvíme se na opětovném odeslání nebo vrácení peněz. Opětovné odeslání hradí kupující ve výši poštovného.
 
 ## Platební metody
 
@@ -55,4 +80,4 @@ Ceny jsou uvedeny v českých korunách (Kč). Provozovatel není plátcem DPH.
 
 ## Technické požadavky
 
-K otevření ebooku ve formátu PDF je potřeba Adobe Acrobat Reader nebo jiný PDF prohlížeč. Formát EPUB je čitelný v běžných čtečkách elektronických knih (Kindle, Kobo, Apple Books aj.).
+K otevření ebooku ve formátu PDF je potřeba Adobe Acrobat Reader nebo jiný PDF prohlížeč. Formát EPUB je čitelný v běžných čtečkách elektronických knih (Kindle, Kobo, Apple Books aj.). Pro fyzické zboží žádné technické požadavky neplatí.

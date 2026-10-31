@@ -108,6 +108,44 @@ export interface SiteConfig {
 	bookGatewayButtonLabel?: string;
 	enableAnalytics?: boolean;
 	enableAds?: boolean;
+	shopEnabled?: boolean;
+	shippingFreeOverCzk?: number;
+	shippingMethods?: ShippingMethod[];
+}
+
+/** A shipping option as offered at checkout. Price is in whole crowns. */
+export interface ShippingMethod {
+	code: string;
+	label: string;
+	priceCzk: number;
+	note?: string;
+	enabled?: boolean;
+}
+
+/** One buyable row of a product: a size, a colour, an edition. */
+export interface ProductVariant {
+	label: string;
+	sku: string;
+	priceCzk: number;
+	available?: boolean;
+}
+
+export interface Product {
+	id: string;
+	slug: string;
+	title: string;
+	locale: SupportedLocale;
+	productType: "print" | "merch" | "book";
+	available?: boolean;
+	summary?: string;
+	descriptionHtml?: string;
+	sortOrder?: number;
+	images: ImageAsset[];
+	variants: ProductVariant[];
+	seo: {
+		metaTitle: string;
+		metaDescription: string;
+	};
 }
 
 export interface PageCopy {

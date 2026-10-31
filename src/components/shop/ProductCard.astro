@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+import type { Product } from '@/types';
+import { formatCzk, czkToMinor } from '@/lib/cart';
+import { isProductBuyable } from '@/lib/sanity/products';
+import { translations } from '@/i18n/translations';
+import { getLangFromUrl, withLocalePath } from '@/i18n/utils';
+
+interface Props {
+  product: Product;
+}
+
+const { product } = Astro.props;
+const locale = getLangFromUrl(Astro.url);
+const text = translations[locale].pages.shop;
+const numberLocale = translations[locale].shared.numberLocale;
+const cover = product.images[0];
+const buyable = isProductBuyable(product);
+
+// "od 890 Kč" only makes sense when the sizes differ in price; with one price
+// the "od" is noise.
+const prices = product.variants.map((variant) => variant.priceCzk);
+const lowest = prices.length > 0 ? Math.min(...prices) : 0;
+const singlePrice = new Set(prices).size <= 1;
+---
+
+<a
+  href={withLocalePath(`/obchod/${product.slug}`, locale)}
+  class="shop-card group"
+  data-product-type={product.productType}
+>
+  <div class="shop-card-media">
+    {cover ? (
+      <Image src={cover.src} alt={cover.alt || product.title} width={600} height={600} class="shop-card-image" loading="lazy" />
+    ) : (
+      <div class="shop-card-placeholder">{product.title}</div>
+    )}
+    {!buyable && <span class="shop-card-badge">{text.soldOut}</span>}
+  </div>
+  <div class="shop-card-body">
+    <h3 class="shop-card-title">{product.title}</h3>
+    {product.summary && <p class="shop-card-summary">{product.summary}</p>}
+    {lowest > 0 && (
+      <p class="shop-card-price">
+        {!singlePrice && <span class="shop-card-from">{text.from} </span>}
+        <strong>{formatCzk(czkToMinor(lowest), numberLocale)}</strong>
+      </p>
+    )}
+  </div>
+</a>

@@ -1,0 +1,147 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { db, isDbConfigured, type OrderItemRow, type OrderRow } from '@/lib/db';
+import { formatCzk } from '@/lib/cart';
+import { SHOP } from '@/lib/shopConfig';
+import { translations } from '@/i18n/translations';
+import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
+
+export const prerender = false;
+
+const locale = getLocaleFromAstro(Astro);
+const text = translations[locale].pages.shop;
+const bookText = translations[locale].pages.bookSuccess;
+const numberLocale = translations[locale].shared.numberLocale;
+
+const variableSymbol = Astro.url.searchParams.get('vs')?.trim() || '';
+const status = Astro.url.searchParams.get('status')?.trim() || '';
+
+// Looked up by variable symbol alone, so the page shows only what a confirmation
+// e-mail already contains: never the address, the phone or the e-mail.
+let order: OrderRow | undefined;
+let items: OrderItemRow[] = [];
+
+if (variableSymbol && isDbConfigured()) {
+  try {
+    const sql = db();
+    const rows = (await sql`
+      SELECT * FROM shop_orders
+      WHERE variable_symbol = ${variableSymbol} AND order_kind = 'physical'
+      LIMIT 1
+    `) as unknown as OrderRow[];
+    order = rows[0];
+    if (order) {
+      items = (await sql`
+        SELECT * FROM shop_order_items WHERE order_id = ${order.id} ORDER BY id
+      `) as unknown as OrderItemRow[];
+    }
+  } catch (error) {
+    console.warn('[shop] order lookup failed:', error);
+  }
+}
+
+const cancelled = status === 'cancelled';
+const pending = status === 'pending';
+const awaitingTransfer = order?.payment_method === 'bank_transfer' && order?.status === 'pending';
+const itemsMinor = order ? order.amount_minor - order.shipping_minor : 0;
+---
+
+<Layout title={text.successTitle} description={text.cartDescription} noindex>
+  <section class="container-narrow py-12 md:py-20">
+    {cancelled ? (
+      <>
+        <h1 class="mb-4">{translations[locale].pages.bookCancelled.heading}</h1>
+        <p class="mb-6">{translations[locale].pages.bookCancelled.intro}</p>
+      </>
+    ) : pending ? (
+      <>
+        <h1 class="mb-4">{translations[locale].pages.bookPending.heading}</h1>
+        <p class="mb-6">{translations[locale].pages.bookPending.intro}</p>
+      </>
+    ) : (
+      <>
+        <h1 class="mb-4">{text.successHeading}</h1>
+        <p class="mb-6">{text.successBody}</p>
+      </>
+    )}
+
+    {order && (
+      <div class="brand-card p-6">
+        <h2 class="mb-4 text-lg font-semibold">{text.orderSummary}</h2>
+
+        {items.length > 0 && (
+          <div class="mb-4">
+            {items.map((item) => (
+              <div class="cart-line">
+                <div class="cart-line-body">
+                  <p class="cart-line-title">{item.quantity}x {item.title}</p>
+                  <p class="cart-line-variant">{item.variant_label}</p>
+                </div>
+                <span class="cart-line-price">
+                  {formatCzk(item.unit_minor * item.quantity, numberLocale)}
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <div class="cart-totals">
+          <div class="cart-total-row">
+            <span>{text.itemsTotal}</span>
+            <span>{formatCzk(itemsMinor, numberLocale)}</span>
+          </div>
+          <div class="cart-total-row">
+            <span>{text.shipping}</span>
+            <span>{order.shipping_minor === 0 ? text.shippingFree : formatCzk(order.shipping_minor, numberLocale)}</span>
+          </div>
+          <div class="cart-total-row is-grand">
+            <span>{text.total}</span>
+            <span>{formatCzk(order.amount_minor, numberLocale)}</span>
+          </div>
+        </div>
+
+        <dl class="mt-5 grid gap-2 text-sm">
+          <div class="flex justify-between gap-4">
+            <dt class="text-foreground-muted">{bookText.variableSymbol}</dt>
+            <dd class="admin-mono font-semibold">{order.variable_symbol}</dd>
+          </div>
+          {order.shipping_point_name && (
+            <div class="flex justify-between gap-4">
+              <dt class="text-foreground-muted">{text.pickedPoint}</dt>
+              <dd class="font-semibold">{order.shipping_point_name}</dd>
+            </div>
+          )}
+        </dl>
+
+        {awaitingTransfer && (
+          <div class="mt-5 border-t border-border pt-4">
+            <p class="mb-3 font-semibold">{bookText.paymentInstructions}</p>
+            <dl class="grid gap-2 text-sm">
+              <div class="flex justify-between gap-4">
+                <dt class="text-foreground-muted">{bookText.amount}</dt>
+                <dd class="font-semibold">{formatCzk(order.amount_minor, numberLocale)}</dd>
+              </div>
+              {SHOP.bankAccountDisplay && (
+                <div class="flex justify-between gap-4">
+                  <dt class="text-foreground-muted">{bookText.accountNumber}</dt>
+                  <dd class="admin-mono font-semibold">{SHOP.bankAccountDisplay}</dd>
+                </div>
+              )}
+              {SHOP.bankIban && (
+                <div class="flex justify-between gap-4">
+                  <dt class="text-foreground-muted">{bookText.iban}</dt>
+                  <dd class="admin-mono font-semibold">{SHOP.bankIban}</dd>
+                </div>
+              )}
+            </dl>
+          </div>
+        )}
+      </div>
+    )}
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href={withLocalePath('/obchod', locale)} class="btn-primary">{text.continueShopping}</a>
+      <a href={withLocalePath('/', locale)} class="btn-secondary">{bookText.backWeb}</a>
+    </div>
+  </section>
+</Layout>

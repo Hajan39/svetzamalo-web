@@ -39,6 +39,32 @@ export interface OrderRow {
 	note: string | null;
 	created_at: string;
 	paid_at: string | null;
+	/** digital | physical. Digital orders carry none of the shipping columns. */
+	order_kind: string;
+	/** How much of amount_minor was postage. */
+	shipping_minor: number;
+	shipping_method: string | null;
+	shipping_point_id: string | null;
+	shipping_point_name: string | null;
+	address_street: string | null;
+	address_city: string | null;
+	address_zip: string | null;
+	address_country: string;
+	phone: string | null;
+	shipped_at: string | null;
+	tracking_number: string | null;
+}
+
+export interface OrderItemRow {
+	id: number;
+	order_id: number;
+	product_slug: string;
+	variant_sku: string;
+	title: string;
+	variant_label: string;
+	unit_minor: number;
+	quantity: number;
+	created_at: string;
 }
 
 export interface LeadRow {

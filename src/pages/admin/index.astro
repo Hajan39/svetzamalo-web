@@ -13,11 +13,19 @@ import {
 	revokeSession,
 	verifyPassword,
 } from "@/lib/adminAuth";
-import { db, isDbConfigured, type LeadRow, type OrderRow } from "@/lib/db";
+import {
+	db,
+	isDbConfigured,
+	type LeadRow,
+	type OrderItemRow,
+	type OrderRow,
+} from "@/lib/db";
 import {
 	isMailConfigured,
 	sendAdminLoginEmail,
 	sendPaidBookEmail,
+	sendShopOrderEmail,
+	sendShopShippedEmail,
 } from "@/lib/mail";
 import { runReadinessChecks, type Check } from "@/lib/readiness";
 import { conversionRate, loadShopStats, type ShopStats } from "@/lib/stats";
@@ -93,7 +101,11 @@ if (Astro.request.method === "POST") {
 		await revokeSession(Astro.cookies.get(ADMIN_COOKIE)?.value);
 		Astro.cookies.delete(ADMIN_COOKIE, { path: "/" });
 		return Astro.redirect("/admin", 303);
-	} else if (action === "mark-paid" || action === "resend-link") {
+	} else if (
+		action === "mark-paid" ||
+		action === "resend-link" ||
+		action === "mark-shipped"
+	) {
 		// Guarded separately: a POST must never act on an unauthenticated session.
 		if (!(await isAuthenticated(Astro.cookies.get(ADMIN_COOKIE)?.value))) {
 			return Astro.redirect("/admin", 303);
@@ -108,6 +120,30 @@ if (Astro.request.method === "POST") {
 			if (!order) {
 				notice = `Objednávka ${id} nenalezena.`;
 				noticeKind = "error";
+			} else if (action === "mark-shipped") {
+				// Physical orders only: the button does not exist for an ebook, but
+				// a replayed POST must not invent a parcel for one either.
+				if (order.order_kind !== "physical") {
+					notice = "Expedici lze potvrdit jen u fyzické objednávky.";
+					noticeKind = "error";
+				} else if (order.status !== "paid") {
+					notice = "Zásilku lze odeslat až po zaplacení.";
+					noticeKind = "error";
+				} else {
+					const tracking = String(form.get("trackingNumber") || "").trim().slice(0, 60);
+					await db()`
+						UPDATE shop_orders
+						SET shipped_at = now(), tracking_number = ${tracking || null}
+						WHERE id = ${id}
+					`;
+					const sent = isMailConfigured()
+						? await sendShopShippedEmail(order, tracking)
+						: false;
+					notice = sent
+						? `Označeno jako odeslané, zákazník dostal e-mail.`
+						: `Označeno jako odeslané. E-mail se neodeslal, dej prosím vědět ručně.`;
+					if (!sent) noticeKind = "error";
+				}
 			} else if (action === "resend-link") {
 				// The callback and the mark-paid path both warn "resend from /admin"
 				// when delivery fails, so that has to be an action you can take here.
@@ -126,6 +162,32 @@ if (Astro.request.method === "POST") {
 				}
 			} else if (order.status === "paid") {
 				notice = `Objednávka ${order.variable_symbol} už je zaplacená.`;
+			} else if (order.order_kind === "physical") {
+				// No download token: a parcel is confirmed, not delivered by e-mail.
+				await db()`
+					UPDATE shop_orders
+					SET status = 'paid', paid_at = now()
+					WHERE id = ${id} AND status <> 'paid'
+				`;
+				const lines = (await db()`
+					SELECT * FROM shop_order_items WHERE order_id = ${id} ORDER BY id
+				`) as unknown as OrderItemRow[];
+				const sent = isMailConfigured()
+					? await sendShopOrderEmail(
+							order,
+							lines.map((item) => ({
+								title: item.title,
+								variantLabel: item.variant_label,
+								unitMinor: item.unit_minor,
+								quantity: item.quantity,
+							})),
+							{ paymentPending: false },
+						)
+					: false;
+				notice = sent
+					? `Označeno jako zaplacené, potvrzení odesláno na ${order.email}.`
+					: `Označeno jako zaplacené. Potvrzení se neodeslalo, dej prosím vědět ručně.`;
+				if (!sent) noticeKind = "error";
 			} else {
 				// COALESCE + status guard: a gateway callback racing this click must
 				// not replace a token that has already been e-mailed.
@@ -154,7 +216,12 @@ const authed = await isAuthenticated(Astro.cookies.get(ADMIN_COOKIE)?.value);
 const checks: Check[] = authed ? await runReadinessChecks() : [];
 const blocking = checks.filter((check) => check.state === "fail").length;
 
+// The two kinds need different columns and a different action, so they get
+// their own tables rather than one with half the cells blank.
+
+
 let orders: OrderRow[] = [];
+let orderItems: OrderItemRow[] = [];
 let leads: LeadRow[] = [];
 let leadCount = 0;
 let events: PaymentEventRow[] = [];
@@ -187,6 +254,16 @@ if (authed && isDbConfigured()) {
 		orders = (await db()`
 			SELECT * FROM shop_orders ORDER BY created_at DESC LIMIT 200
 		`) as unknown as OrderRow[];
+		// Items for the orders on screen, in one query rather than one per row.
+		const shopOrderIds = orders
+			.filter((order) => order.order_kind === "physical")
+			.map((order) => order.id);
+		if (shopOrderIds.length > 0) {
+			orderItems = (await db()`
+				SELECT * FROM shop_order_items
+				WHERE order_id = ANY(${shopOrderIds}) ORDER BY order_id, id
+			`) as unknown as OrderItemRow[];
+		}
 		leads = (await db()`
 			SELECT * FROM shop_leads ORDER BY created_at DESC LIMIT 50
 		`) as unknown as LeadRow[];
@@ -248,6 +325,32 @@ const statusLabels: Record<string, string> = {
 	pending: "Čeká",
 	cancelled: "Zrušeno",
 };
+const ebookOrders = orders.filter((order) => order.order_kind !== "physical");
+const shopOrders = orders.filter((order) => order.order_kind === "physical");
+const itemsByOrder = new Map<number, OrderItemRow[]>();
+for (const item of orderItems) {
+	const list = itemsByOrder.get(item.order_id);
+	if (list) list.push(item);
+	else itemsByOrder.set(item.order_id, [item]);
+}
+
+const shippingLabels: Record<string, string> = {
+	packeta_pickup: "Zásilkovna, výdejní místo",
+	packeta_address: "Zásilkovna, na adresu",
+	cpost_address: "Česká pošta",
+	personal: "Osobní odběr",
+};
+
+function deliveryAddress(order: OrderRow): string {
+	if (order.shipping_point_name) return order.shipping_point_name;
+	return [
+		order.address_street,
+		[order.address_zip, order.address_city].filter(Boolean).join(" "),
+	]
+		.filter(Boolean)
+		.join(", ");
+}
+
 ---
 
 <Layout title="Administrace objednávek" noindex={true} alternateLocales={["cs"]}>
@@ -421,9 +524,9 @@ const statusLabels: Record<string, string> = {
               <tr><th>Vytvořeno</th><th>Zákazník</th><th>VS</th><th>Částka</th><th>Platba</th><th>Stav</th><th></th></tr>
             </thead>
             <tbody>
-              {orders.length === 0 ? (
+              {ebookOrders.length === 0 ? (
                 <tr><td colspan="7" class="admin-empty">Zatím žádné objednávky.</td></tr>
-              ) : orders.map((order) => (
+              ) : ebookOrders.map((order) => (
                 <tr>
                   <td>{formatDate(order.created_at)}</td>
                   <td>
@@ -449,6 +552,65 @@ const statusLabels: Record<string, string> = {
                         <button class="btn-primary admin-small-btn" type="submit">Zaplaceno</button>
                       )}
                     </form>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="admin-h2">Expedice</h2>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr><th>Vytvořeno</th><th>Zákazník</th><th>VS</th><th>Obsah</th><th>Doručení</th><th>Částka</th><th>Stav</th><th></th></tr>
+            </thead>
+            <tbody>
+              {shopOrders.length === 0 ? (
+                <tr><td colspan="8" class="admin-empty">Zatím žádné objednávky zboží.</td></tr>
+              ) : shopOrders.map((order) => (
+                <tr>
+                  <td>{formatDate(order.created_at)}</td>
+                  <td>
+                    <strong>{order.full_name}</strong>
+                    <span class="admin-sub">{order.email}</span>
+                    {order.phone && <span class="admin-sub">{order.phone}</span>}
+                  </td>
+                  <td class="admin-mono">{order.variable_symbol}</td>
+                  <td>
+                    {(itemsByOrder.get(order.id) ?? []).map((item) => (
+                      <span class="admin-sub">{item.quantity}x {item.title} ({item.variant_label})</span>
+                    ))}
+                  </td>
+                  <td>
+                    <span class="admin-sub">{shippingLabels[order.shipping_method || ""] || order.shipping_method || "-"}</span>
+                    <span class="admin-sub">{deliveryAddress(order)}</span>
+                  </td>
+                  <td class="admin-mono">
+                    {money(order.amount_minor)}
+                    {order.shipping_minor > 0 && <span class="admin-sub">z toho doprava {money(order.shipping_minor)}</span>}
+                  </td>
+                  <td>
+                    <span class:list={["admin-pill", order.status]}>{statusLabels[order.status] || order.status}</span>
+                    {order.shipped_at && (
+                      <span class="admin-sub">odesláno {formatDate(order.shipped_at)}{order.tracking_number ? `, ${order.tracking_number}` : ""}</span>
+                    )}
+                  </td>
+                  <td>
+                    {order.status !== "paid" ? (
+                      <form method="post" class="admin-inline-form">
+                        <input type="hidden" name="action" value="mark-paid" />
+                        <input type="hidden" name="orderId" value={String(order.id)} />
+                        <button class="btn-primary admin-small-btn" type="submit">Zaplaceno</button>
+                      </form>
+                    ) : !order.shipped_at ? (
+                      <form method="post" class="admin-inline-form">
+                        <input type="hidden" name="action" value="mark-shipped" />
+                        <input type="hidden" name="orderId" value={String(order.id)} />
+                        <input class="admin-input" type="text" name="trackingNumber" placeholder="Číslo zásilky" maxlength="60" />
+                        <button class="btn-primary admin-small-btn" type="submit">Odesláno</button>
+                      </form>
+                    ) : null}
                   </td>
                 </tr>
               ))}
@@ -655,7 +817,8 @@ const statusLabels: Record<string, string> = {
   }
   .admin-pill.paid { background: #dff3e6; color: #1f6b40; }
   .admin-pill.cancelled { background: #fdecec; color: #9f1d1d; }
-  .admin-inline-form { margin: 0; }
+  .admin-inline-form { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin: 0; }
+  .admin-input { min-width: 8rem; padding: 0.35rem 0.5rem; border: 1px solid var(--border); border-radius: 0.4rem; font-size: 0.82rem; }
   .admin-small-btn { min-height: 2.1rem; padding: 0.3rem 0.75rem; font-size: 0.82rem; }
   .admin-h2 { margin-top: 1rem; }
 

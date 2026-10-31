@@ -1,6 +1,7 @@
 import type { ImageAsset, SiteConfig, SupportedLocale } from "@/types";
 import { stegaClean } from "@sanity/client/stega";
 import { loadQuery } from "./loadQuery";
+import { cleanCmsCopy } from "@/lib/typography";
 
 interface SanityImage {
 	asset?: {
@@ -60,11 +61,18 @@ const siteConfigProjection = `
   bookGatewayReturnPath,
   bookGatewayCancelPath,
   bookGatewayCallbackPath,
-  bookGatewayButtonLabel
+  bookGatewayButtonLabel,
+  shopEnabled,
+  shippingFreeOverCzk,
+  shippingMethods[]{code, label, priceCzk, note, enabled}
 `;
 
 function cleanString(value?: string): string | undefined {
 	return value ? stegaClean(value) : value;
+}
+
+function cleanCopy(value?: string): string | undefined {
+	return value ? cleanCmsCopy(value) : value;
 }
 
 function normalizeMedia(
@@ -130,6 +138,18 @@ function transformSiteConfig(config: SanitySiteConfig): SiteConfig {
 		bookGatewayCancelPath: cleanString(config.bookGatewayCancelPath),
 		bookGatewayCallbackPath: cleanString(config.bookGatewayCallbackPath),
 		bookGatewayButtonLabel: cleanString(config.bookGatewayButtonLabel),
+
+		shopEnabled: config.shopEnabled,
+		shippingFreeOverCzk: config.shippingFreeOverCzk,
+		shippingMethods: (config.shippingMethods ?? [])
+			.map((method) => ({
+				code: cleanString(method.code) || "",
+				label: cleanCmsCopy(cleanString(method.label) || ""),
+				priceCzk: Number(method.priceCzk) || 0,
+				note: cleanCopy(cleanString(method.note)),
+				enabled: method.enabled,
+			}))
+			.filter((method) => method.code && method.label),
 	};
 }
 

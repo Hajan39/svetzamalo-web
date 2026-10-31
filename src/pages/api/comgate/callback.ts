@@ -4,8 +4,18 @@ import {
 	isValidComgateSecret,
 	orderStatusFromComgate,
 } from "@/lib/comgate";
-import { db, isDbConfigured, logPaymentEvent, type OrderRow } from "@/lib/db";
-import { isMailConfigured, sendPaidBookEmail } from "@/lib/mail";
+import {
+	db,
+	isDbConfigured,
+	logPaymentEvent,
+	type OrderItemRow,
+	type OrderRow,
+} from "@/lib/db";
+import {
+	isMailConfigured,
+	sendPaidBookEmail,
+	sendShopOrderEmail,
+} from "@/lib/mail";
 
 /** Comgate treats anything else as "the shop did not process the payment". */
 function ok() {
@@ -72,6 +82,46 @@ async function deliverWithoutBlockingAck(
 		}
 	} catch (error) {
 		console.warn(`[comgate] delivery e-mail failed for order ${orderId}:`, error);
+	}
+}
+
+/** Same timeout discipline as the book delivery, for the same reason. */
+async function confirmShopOrderWithoutBlockingAck(orderId: number) {
+	if (!isMailConfigured()) {
+		console.warn(
+			`[comgate] shop order ${orderId} paid but RESEND_API_KEY is not set, confirm it from /admin`,
+		);
+		return;
+	}
+	try {
+		const sql = db();
+		const orders = (await sql`
+			SELECT * FROM shop_orders WHERE id = ${orderId} LIMIT 1
+		`) as unknown as OrderRow[];
+		const items = (await sql`
+			SELECT * FROM shop_order_items WHERE order_id = ${orderId} ORDER BY id
+		`) as unknown as OrderItemRow[];
+		if (!orders[0]) return;
+
+		const sent = await Promise.race([
+			sendShopOrderEmail(
+				orders[0],
+				items.map((item) => ({
+					title: item.title,
+					variantLabel: item.variant_label,
+					unitMinor: item.unit_minor,
+					quantity: item.quantity,
+				})),
+			),
+			new Promise<false>((resolve) => setTimeout(() => resolve(false), 8000)),
+		]);
+		if (!sent) {
+			console.warn(
+				`[comgate] shop order ${orderId} paid but the confirmation did not go out`,
+			);
+		}
+	} catch (error) {
+		console.warn(`[comgate] shop confirmation failed for order ${orderId}:`, error);
 	}
 }
 
@@ -181,6 +231,20 @@ export const POST: APIRoute = async ({ request }) => {
 					`[comgate] amount mismatch for order ${order.id}: got ${verified.price} ${paidCurrency}, expected ${order.amount_minor} ${order.currency}`,
 				);
 				await logPaymentEvent(order.id, "comgate", "amount_mismatch", redact(verified));
+				return ok();
+			}
+
+			// A parcel has nothing to download: mark it paid, confirm it, and leave
+			// download_token null so /api/ebook/download can never serve the book
+			// to someone who bought a mug.
+			if (order.order_kind === "physical") {
+				const shipped = (await sql`
+					UPDATE shop_orders
+					SET status = 'paid', paid_at = now(), comgate_trans_id = COALESCE(comgate_trans_id, ${transId || null})
+					WHERE id = ${order.id} AND status <> 'paid'
+					RETURNING id
+				`) as unknown as { id: number }[];
+				if (shipped[0]) await confirmShopOrderWithoutBlockingAck(order.id);
 				return ok();
 			}
 

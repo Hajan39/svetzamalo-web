@@ -9,6 +9,7 @@ const state = vi.hoisted(() => ({
 	updates: [] as string[],
 	events: [] as { event: string; payload: Record<string, string> }[],
 	delivered: [] as string[],
+	confirmed: [] as string[],
 	validSecret: "good",
 }));
 
@@ -23,6 +24,12 @@ vi.mock("@/lib/db", () => ({
 			const token = (state.order?.download_token as string) || (values.at(-1) as string);
 			return Promise.resolve([{ download_token: token }]);
 		}
+		// The physical path updates with RETURNING id; an empty result there would
+		// read as "already paid" and silently skip the confirmation.
+		if (text.includes("RETURNING id")) {
+			if (state.order?.status === "paid") return Promise.resolve([]);
+			return Promise.resolve([{ id: state.order?.id }]);
+		}
 		return Promise.resolve([]);
 	},
 	logPaymentEvent: async (_id: unknown, _p: string, event: string, payload: Record<string, string>) => {
@@ -34,6 +41,10 @@ vi.mock("@/lib/mail", () => ({
 	isMailConfigured: () => true,
 	sendPaidBookEmail: async (_email: string, token: string) => {
 		state.delivered.push(token);
+		return true;
+	},
+	sendShopOrderEmail: async () => {
+		state.confirmed.push("shop");
 		return true;
 	},
 }));
@@ -70,6 +81,7 @@ beforeEach(() => {
 	state.updates = [];
 	state.events = [];
 	state.delivered = [];
+	state.confirmed = [];
 });
 
 describe("comgate callback", () => {
@@ -78,6 +90,20 @@ describe("comgate callback", () => {
 		expect(res.status).toBe(200);
 		expect(state.updates.some((u) => u.includes("status = 'paid'") && u.includes("status <> 'paid'"))).toBe(true);
 		expect(state.delivered).toHaveLength(1);
+	});
+
+	it("never issues a download token for a parcel", async () => {
+		// A physical order unlocking the ebook would hand the book to anyone who
+		// bought a mug, so the token must stay null and /api/ebook/download,
+		// which matches on it, can then never serve them the file.
+		state.order = { ...state.order, order_kind: "physical" };
+
+		const res = await post({ transId: "T1", status: "PAID", price: "49000", curr: "CZK", secret: "good" });
+
+		expect(res.status).toBe(200);
+		expect(state.delivered).toHaveLength(0);
+		expect(state.confirmed).toEqual(["shop"]);
+		expect(state.updates.some((u) => u.includes("download_token"))).toBe(false);
 	});
 
 	it("never stores the shop secret in the events table", async () => {

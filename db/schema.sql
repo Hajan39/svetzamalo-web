@@ -116,3 +116,43 @@ CREATE TABLE IF NOT EXISTS shop_affiliate_clicks (
 
 CREATE INDEX IF NOT EXISTS shop_affiliate_clicks_slug_idx
   ON shop_affiliate_clicks (slug, created_at DESC);
+
+-- Physical goods (prints, merch, the printed book). The digital shop kept one
+-- product per order and delivered a token; a parcel needs an address, several
+-- line items and a carrier, so orders carry a kind and the items live in their
+-- own table.
+--
+-- amount_minor on shop_orders stays the grand total the customer pays, items
+-- plus shipping. shipping_minor records how much of it was postage, so a
+-- refund can tell the two apart.
+ALTER TABLE shop_orders ADD COLUMN IF NOT EXISTS order_kind     TEXT    NOT NULL DEFAULT 'digital'; -- digital | physical
+ALTER TABLE shop_orders ADD COLUMN IF NOT EXISTS shipping_minor INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE shop_orders ADD COLUMN IF NOT EXISTS shipping_method TEXT;
+ALTER TABLE shop_orders ADD COLUMN IF NOT EXISTS shipping_point_id   TEXT;
+ALTER TABLE shop_orders ADD COLUMN IF NOT EXISTS shipping_point_name TEXT;
+ALTER TABLE shop_orders ADD COLUMN IF NOT EXISTS address_street  TEXT;
+ALTER TABLE shop_orders ADD COLUMN IF NOT EXISTS address_city    TEXT;
+ALTER TABLE shop_orders ADD COLUMN IF NOT EXISTS address_zip     TEXT;
+ALTER TABLE shop_orders ADD COLUMN IF NOT EXISTS address_country TEXT NOT NULL DEFAULT 'CZ';
+ALTER TABLE shop_orders ADD COLUMN IF NOT EXISTS phone           TEXT;
+ALTER TABLE shop_orders ADD COLUMN IF NOT EXISTS shipped_at      TIMESTAMPTZ;
+ALTER TABLE shop_orders ADD COLUMN IF NOT EXISTS tracking_number TEXT;
+
+CREATE INDEX IF NOT EXISTS shop_orders_kind_idx ON shop_orders (order_kind, status, created_at DESC);
+
+-- Title, variant and unit price are copied in rather than referenced: the
+-- catalogue lives in Sanity and will be re-priced and re-worded, and an order
+-- from last year has to still say what was bought and for how much.
+CREATE TABLE IF NOT EXISTS shop_order_items (
+  id            BIGSERIAL   PRIMARY KEY,
+  order_id      BIGINT      NOT NULL REFERENCES shop_orders (id) ON DELETE CASCADE,
+  product_slug  TEXT        NOT NULL,
+  variant_sku   TEXT        NOT NULL,
+  title         TEXT        NOT NULL,
+  variant_label TEXT        NOT NULL,
+  unit_minor    INTEGER     NOT NULL,
+  quantity      INTEGER     NOT NULL CHECK (quantity > 0),
+  created_at    TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS shop_order_items_order_idx ON shop_order_items (order_id);

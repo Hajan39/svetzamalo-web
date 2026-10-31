@@ -1,0 +1,133 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '@/layouts/Layout.astro';
+import { fetchSiteConfig } from '@/lib/content/api';
+import { fetchProductBySlug, isProductBuyable } from '@/lib/sanity/products';
+import { czkToMinor, formatCzk, isShopOpen } from '@/lib/cart';
+import { translations } from '@/i18n/translations';
+import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
+
+export const prerender = false;
+
+const locale = getLocaleFromAstro(Astro);
+const text = translations[locale].pages.shop;
+const numberLocale = translations[locale].shared.numberLocale;
+const { slug = '' } = Astro.params;
+
+let product = await fetchProductBySlug(slug, locale);
+if (!product && locale === 'en') product = await fetchProductBySlug(slug, 'cs');
+if (!product) return Astro.rewrite('/404');
+
+let siteConfig = await fetchSiteConfig(locale);
+if (locale === 'en' && !siteConfig) siteConfig = await fetchSiteConfig('cs');
+
+const open = isShopOpen(siteConfig);
+const buyable = isProductBuyable(product);
+const inStock = product.variants.filter((variant) => variant.available !== false);
+// Pre-select when there is nothing to choose, so one-variant products are a
+// single click rather than a pointless dropdown.
+const onlyVariant = inStock.length === 1 ? inStock[0] : undefined;
+const cover = product.images[0];
+---
+
+<Layout
+  title={product.seo.metaTitle}
+  description={product.seo.metaDescription}
+  canonicalPath={withLocalePath(`/obchod/${product.slug}`, locale)}
+>
+  <article class="container-wide py-10 md:py-16">
+    <a href={withLocalePath('/obchod', locale)} class="text-link mb-6 inline-flex">{text.backToShop}</a>
+
+    <div class="shop-detail">
+      <div class="shop-detail-media">
+        {cover ? (
+          <Image src={cover.src} alt={cover.alt || product.title} width={900} height={900} class="shop-detail-image" loading="eager" />
+        ) : (
+          <div class="shop-card-placeholder">{product.title}</div>
+        )}
+        {product.images.length > 1 && (
+          <div class="shop-detail-thumbs">
+            {product.images.slice(1).map((image) => (
+              <Image src={image.src} alt={image.alt || product.title} width={200} height={200} class="shop-detail-thumb" loading="lazy" />
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div class="shop-detail-info">
+        <h1 class="mb-3">{product.title}</h1>
+        {product.summary && <p class="shop-detail-summary">{product.summary}</p>}
+
+        {!buyable ? (
+          <p class="shop-notice" role="status">{text.soldOut}</p>
+        ) : !open ? (
+          <p class="shop-notice" role="status">{text.closed}</p>
+        ) : (
+          <form class="shop-buy" data-buy-form data-added-label={text.added}>
+            <fieldset class="shop-variant-field">
+              <legend>{text.chooseVariant}</legend>
+              {product.variants.map((variant) => (
+                <label class="shop-variant" data-disabled={variant.available === false ? 'true' : undefined}>
+                  <input
+                    type="radio"
+                    name="sku"
+                    value={variant.sku}
+                    disabled={variant.available === false}
+                    checked={onlyVariant?.sku === variant.sku}
+                    required
+                  />
+                  <span class="shop-variant-label">{variant.label}</span>
+                  <span class="shop-variant-price">
+                    {variant.available === false
+                      ? text.soldOut
+                      : formatCzk(czkToMinor(variant.priceCzk), numberLocale)}
+                  </span>
+                </label>
+              ))}
+            </fieldset>
+
+            <div class="shop-buy-actions">
+              <label class="shop-qty">
+                <span>{text.quantity}</span>
+                <input type="number" name="quantity" value="1" min="1" max="20" inputmode="numeric" />
+              </label>
+              <button type="submit" class="btn-primary">{text.addToCart}</button>
+            </div>
+
+            <p class="shop-buy-status" data-buy-status role="status" aria-live="polite" hidden></p>
+            <a href={withLocalePath('/obchod/kosik', locale)} class="text-link" data-cart-link hidden>{text.cart}</a>
+          </form>
+        )}
+
+        {product.descriptionHtml && (
+          <div class="article-content shop-detail-description" set:html={product.descriptionHtml} />
+        )}
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<script>
+  import { addToCart } from '@/scripts/cartStore';
+
+  const form = document.querySelector<HTMLFormElement>('[data-buy-form]');
+  const status = document.querySelector<HTMLElement>('[data-buy-status]');
+  const cartLink = document.querySelector<HTMLElement>('[data-cart-link]');
+  const addedLabel = form?.dataset.addedLabel || '';
+
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const sku = String(data.get('sku') || '');
+    const quantity = Number(data.get('quantity') || 1);
+    if (!sku) return;
+
+    addToCart(sku, Number.isFinite(quantity) && quantity > 0 ? quantity : 1);
+
+    if (status) {
+      status.textContent = addedLabel;
+      status.hidden = false;
+    }
+    if (cartLink) cartLink.hidden = false;
+  });
+</script>

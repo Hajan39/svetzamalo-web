@@ -154,7 +154,7 @@ console.log('done')
 
 - [ ] **Step 1:** Text kapitoly z knihy (str. 24–31) do scratchpadu, napsat návod, publikovat.
 - [ ] **Step 2:** 2 subagenti (Indonésie 7, Andorra 6), kontrola, publikace 3 denně, ověření.
-- [ ] **Step 3:** Aktualizovat `docs/obsahovy-plan-2026-2027.md` (✅ u hotových položek) a `docs/raw-obsah-prehled.md`. Commit + push.
+- [ ] **Step 3:** Aktualizovat `docs/obsahovy-plan-2026-2027.md` (označit hotové položky) a `docs/raw-obsah-prehled.md`. Commit + push.
 
 ---
 

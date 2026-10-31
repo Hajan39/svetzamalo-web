@@ -1,0 +1,190 @@
+---
+import HoneypotField from '@/components/forms/HoneypotField.astro';
+import Layout from '@/layouts/Layout.astro';
+import { fetchSiteConfig } from '@/lib/content/api';
+import { fetchProducts } from '@/lib/sanity/products';
+import {
+  czkToMinor,
+  enabledShippingMethods,
+  formatCzk,
+  isShopOpen,
+  requiresPickupPoint,
+  requiresPostalAddress,
+} from '@/lib/cart';
+import { isBookGatewayEnabled } from '@/lib/paymentGateway';
+import { translations } from '@/i18n/translations';
+import { getLocaleFromAstro, withLocalePath } from '@/lib/i18n';
+
+export const prerender = false;
+
+const locale = getLocaleFromAstro(Astro);
+const text = translations[locale].pages.shop;
+const numberLocale = translations[locale].shared.numberLocale;
+
+let siteConfig = await fetchSiteConfig(locale);
+if (locale === 'en' && !siteConfig) siteConfig = await fetchSiteConfig('cs');
+
+let products = await fetchProducts(locale);
+if (locale === 'en' && products.length === 0) products = await fetchProducts('cs');
+
+const open = isShopOpen(siteConfig);
+const methods = enabledShippingMethods(siteConfig);
+const gatewayEnabled = isBookGatewayEnabled(siteConfig);
+const freeOver = siteConfig?.shippingFreeOverCzk;
+
+// The catalogue the cart script prices against. Server-rendered so the page
+// needs no extra request, and re-checked by /api/shop/orders anyway, so a
+// stale copy can only mislead the display, never the charge.
+const catalogue = products.flatMap((product) =>
+  product.variants.map((variant) => ({
+    sku: variant.sku,
+    title: product.title,
+    slug: product.slug,
+    variantLabel: variant.label,
+    unitMinor: czkToMinor(variant.priceCzk),
+    available: variant.available !== false && product.available !== false,
+    image: product.images[0]?.src ?? '',
+  })),
+);
+
+const shippingData = methods.map((method) => ({
+  code: method.code,
+  priceMinor: czkToMinor(method.priceCzk),
+  needsPoint: requiresPickupPoint(method.code),
+  needsAddress: requiresPostalAddress(method.code),
+}));
+---
+
+<Layout title={text.cartTitle} description={text.cartDescription} noindex>
+  <section class="container-wide py-10 md:py-16">
+    <h1 class="mb-6">{text.cartHeading}</h1>
+
+    <p class="brand-card p-8 text-center text-foreground-secondary" data-cart-empty>
+      {text.cartEmpty}
+      <a href={withLocalePath('/obchod', locale)} class="text-link ml-2">{text.continueShopping}</a>
+    </p>
+
+    <form class="cart-layout" data-checkout-form hidden>
+      <div>
+        <div data-cart-lines></div>
+
+        <div class="cart-totals">
+          <div class="cart-total-row">
+            <span>{text.itemsTotal}</span>
+            <span data-items-total></span>
+          </div>
+          <div class="cart-total-row">
+            <span>{text.shipping}</span>
+            <span data-shipping-total></span>
+          </div>
+          <div class="cart-total-row is-grand">
+            <span>{text.total}</span>
+            <span data-grand-total></span>
+          </div>
+          {typeof freeOver === 'number' && freeOver > 0 && (
+            <p class="text-sm text-foreground-muted">
+              {text.freeOver(formatCzk(czkToMinor(freeOver), numberLocale))}
+            </p>
+          )}
+        </div>
+
+        <a href={withLocalePath('/obchod', locale)} class="text-link mt-4 inline-flex">{text.continueShopping}</a>
+      </div>
+
+      <div class="brand-card p-6">
+        <h2 class="mb-4 text-lg font-semibold">{text.contactHeading}</h2>
+        <label class="checkout-field">
+          <span>{text.fullName}</span>
+          <input type="text" name="fullName" autocomplete="name" required minlength="2" maxlength="120" />
+        </label>
+        <label class="checkout-field">
+          <span>{text.email}</span>
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+        <label class="checkout-field">
+          <span>{text.phone}</span>
+          <input type="tel" name="phone" autocomplete="tel" maxlength="40" />
+        </label>
+
+        <h2 class="mb-4 mt-6 text-lg font-semibold">{text.deliveryHeading}</h2>
+        <fieldset class="border-0 p-0">
+          <legend class="sr-only">{text.shippingMethod}</legend>
+          {methods.map((method, index) => (
+            <label class="checkout-method">
+              <input type="radio" name="shippingMethod" value={method.code} checked={index === 0} required />
+              <span class="checkout-method-body">
+                <span class="checkout-method-label">{method.label}</span>
+                {method.note && <span class="checkout-method-note">{method.note}</span>}
+              </span>
+              <span class="checkout-method-price">
+                {method.priceCzk === 0 ? text.shippingFree : formatCzk(czkToMinor(method.priceCzk), numberLocale)}
+              </span>
+            </label>
+          ))}
+        </fieldset>
+
+        <div data-pickup-block hidden>
+          <label class="checkout-field">
+            <span>{text.pickPoint}</span>
+            <input type="text" name="pickupPointName" data-pickup-name readonly placeholder={text.pickPoint} />
+          </label>
+          <input type="hidden" name="pickupPointId" data-pickup-id />
+          <button type="button" class="btn-secondary" data-pickup-open>{text.pickPoint}</button>
+        </div>
+
+        <div data-address-block hidden>
+          <label class="checkout-field">
+            <span>{text.street}</span>
+            <input type="text" name="street" autocomplete="address-line1" maxlength="160" />
+          </label>
+          <div class="checkout-row">
+            <label class="checkout-field">
+              <span>{text.city}</span>
+              <input type="text" name="city" autocomplete="address-level2" maxlength="120" />
+            </label>
+            <label class="checkout-field">
+              <span>{text.zip}</span>
+              <input type="text" name="zip" autocomplete="postal-code" maxlength="20" />
+            </label>
+          </div>
+        </div>
+
+        <label class="checkout-field">
+          <span>{text.note} <span class="text-foreground-muted">({text.noteOptional})</span></span>
+          <textarea name="note" rows="2" maxlength="500"></textarea>
+        </label>
+
+        <HoneypotField id="shop-website" />
+
+        <p class="checkout-error" data-checkout-error role="alert" hidden></p>
+
+        <div class="checkout-actions">
+          {gatewayEnabled && (
+            <button type="submit" class="btn-primary" data-pay="comgate">{text.payByCard}</button>
+          )}
+          <button type="submit" class="btn-secondary" data-pay="bank_transfer">{text.payByTransfer}</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <script is:inline type="application/json" data-catalogue set:html={JSON.stringify(catalogue)}></script>
+  <script is:inline type="application/json" data-shipping set:html={JSON.stringify(shippingData)}></script>
+  <script is:inline type="application/json" data-cart-copy set:html={JSON.stringify({
+    locale,
+    numberLocale,
+    shopOpen: open,
+    remove: text.remove,
+    quantity: text.quantity,
+    free: text.shippingFree,
+    pointMissing: text.pointMissing,
+    errorGeneric: text.errorGeneric,
+    errorStale: text.errorStale,
+    submitting: text.submitting,
+    closed: text.closed,
+  })} />
+</Layout>
+
+<script>
+  import '@/scripts/checkout';
+</script>

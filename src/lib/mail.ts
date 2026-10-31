@@ -174,3 +174,131 @@ export async function sendSequenceEmail(
 		"List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
 	});
 }
+
+/** Shared shape for the shop mails: a fresh order has priced lines, a stored one has rows. */
+interface ShopMailLine {
+	title: string;
+	variantLabel: string;
+	unitMinor: number;
+	quantity: number;
+}
+
+interface ShopMailOrder {
+	email: string;
+	full_name: string;
+	variable_symbol: string;
+	amount_minor: number;
+	shipping_minor: number;
+	currency: string;
+	payment_method: string;
+	shipping_method: string | null;
+	shipping_point_name: string | null;
+	address_street: string | null;
+	address_city: string | null;
+	address_zip: string | null;
+}
+
+function czk(minor: number): string {
+	return `${Math.round(minor / 100)} Kč`;
+}
+
+function itemRowsHtml(lines: ShopMailLine[]): string {
+	return lines
+		.map(
+			(line) =>
+				`<tr><td style="padding:6px 12px 6px 0;">${line.quantity}x ${line.title}<br><span style="color:#5a6b7b;font-size:13px;">${line.variantLabel}</span></td><td style="padding:6px 0;font-weight:700;text-align:right;white-space:nowrap;">${czk(line.unitMinor * line.quantity)}</td></tr>`,
+		)
+		.join("");
+}
+
+function itemRowsText(lines: ShopMailLine[]): string {
+	return lines
+		.map(
+			(line) =>
+				`${line.quantity}x ${line.title} (${line.variantLabel}): ${czk(line.unitMinor * line.quantity)}`,
+		)
+		.join("\n");
+}
+
+function deliveryLine(order: ShopMailOrder): string {
+	if (order.shipping_point_name) return order.shipping_point_name;
+	const parts = [
+		order.address_street,
+		[order.address_zip, order.address_city].filter(Boolean).join(" "),
+	].filter(Boolean);
+	return parts.join(", ");
+}
+
+/**
+ * Sent the moment the order exists, before the money has moved. A bank transfer
+ * needs the payment details here; a card payment is already on its way, so this
+ * is only the receipt.
+ */
+export async function sendShopOrderEmail(
+	order: ShopMailOrder,
+	lines: ShopMailLine[],
+	options: { paymentPending?: boolean } = {},
+) {
+	// Defaults to the payment method, but /admin marking a transfer as received
+	// sends the same receipt without repeating instructions already paid.
+	const byTransfer =
+		options.paymentPending ?? order.payment_method === "bank_transfer";
+	const itemsMinor = order.amount_minor - order.shipping_minor;
+	const delivery = deliveryLine(order);
+
+	const payment = byTransfer
+		? `<p style="margin:18px 0 8px;font-weight:700;">Platební údaje</p>
+			 <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="font-size:16px;margin:0 0 16px;">
+			 <tr><td style="padding:4px 12px 4px 0;color:#5a6b7b;">Částka</td><td style="padding:4px 0;font-weight:700;">${czk(order.amount_minor)}</td></tr>
+			 <tr><td style="padding:4px 12px 4px 0;color:#5a6b7b;">Variabilní symbol</td><td style="padding:4px 0;font-weight:700;">${order.variable_symbol}</td></tr>
+			 ${SHOP.bankAccount ? `<tr><td style="padding:4px 12px 4px 0;color:#5a6b7b;">Číslo účtu</td><td style="padding:4px 0;font-weight:700;">${SHOP.bankAccountDisplay}</td></tr>` : ""}
+			 ${SHOP.bankIban ? `<tr><td style="padding:4px 12px 4px 0;color:#5a6b7b;">IBAN</td><td style="padding:4px 0;font-weight:700;">${SHOP.bankIban}</td></tr>` : ""}
+			 </table>
+			 <p style="margin:0;">Zásilku odešleme, jakmile platba dorazí. Nezapomeň prosím uvést variabilní symbol, ať ji poznáme.</p>`
+		: `<p style="margin:18px 0 0;">Jakmile zásilku předáme dopravci, dáme ti vědět dalším e-mailem.</p>`;
+
+	return send(
+		order.email,
+		byTransfer
+			? `Objednávka ${order.variable_symbol}: platební údaje`
+			: `Objednávka ${order.variable_symbol}: potvrzení`,
+		layout(
+			"Máme tvou objednávku",
+			`<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size:16px;margin:0 0 14px;">
+			 ${itemRowsHtml(lines)}
+			 <tr><td style="padding:10px 12px 4px 0;border-top:1px solid #dde5ec;color:#5a6b7b;">Zboží</td><td style="padding:10px 0 4px;text-align:right;border-top:1px solid #dde5ec;">${czk(itemsMinor)}</td></tr>
+			 <tr><td style="padding:4px 12px 4px 0;color:#5a6b7b;">Doprava</td><td style="padding:4px 0;text-align:right;">${order.shipping_minor === 0 ? "zdarma" : czk(order.shipping_minor)}</td></tr>
+			 <tr><td style="padding:8px 12px 0 0;font-weight:700;font-size:18px;">Celkem</td><td style="padding:8px 0 0;font-weight:700;font-size:18px;text-align:right;">${czk(order.amount_minor)}</td></tr>
+			 </table>
+			 ${delivery ? `<p style="margin:0 0 4px;font-weight:700;">Doručení</p><p style="margin:0 0 8px;">${delivery}</p>` : ""}
+			 ${payment}`,
+		),
+		`Máme tvou objednávku ${order.variable_symbol}\n\n${itemRowsText(lines)}\n\nZboží: ${czk(itemsMinor)}\nDoprava: ${order.shipping_minor === 0 ? "zdarma" : czk(order.shipping_minor)}\nCelkem: ${czk(order.amount_minor)}\n${delivery ? `\nDoručení: ${delivery}\n` : ""}${
+			byTransfer
+				? `\nPlatební údaje\nČástka: ${czk(order.amount_minor)}\nVariabilní symbol: ${order.variable_symbol}\n${SHOP.bankAccount ? `Účet: ${SHOP.bankAccountDisplay}\n` : ""}${SHOP.bankIban ? `IBAN: ${SHOP.bankIban}\n` : ""}\nZásilku odešleme, jakmile platba dorazí.`
+				: "\nJakmile zásilku předáme dopravci, dáme ti vědět."
+		}\n\n${SHOP.sellerName}, IČO ${SHOP.sellerIco}`,
+	);
+}
+
+/** Sent from /admin when the parcel is handed over. */
+export async function sendShopShippedEmail(
+	order: ShopMailOrder,
+	trackingNumber: string | null,
+) {
+	const delivery = deliveryLine(order);
+	const tracking = trackingNumber?.trim();
+
+	return send(
+		order.email,
+		`Objednávka ${order.variable_symbol} je na cestě`,
+		layout(
+			"Zásilka je na cestě",
+			`<p style="margin:0 0 12px;">Objednávku <strong>${order.variable_symbol}</strong> jsme právě předali dopravci.</p>
+			 ${delivery ? `<p style="margin:0 0 12px;">Doručení: <strong>${delivery}</strong></p>` : ""}
+			 ${tracking ? `<p style="margin:0;">Číslo zásilky: <strong>${tracking}</strong></p>` : ""}
+			 <p style="margin:14px 0 0;font-size:13px;color:#5a6b7b;">Kdyby cokoli nesedělo, stačí odpovědět na tenhle e-mail.</p>`,
+		),
+		`Zásilka je na cestě\n\nObjednávku ${order.variable_symbol} jsme předali dopravci.\n${delivery ? `Doručení: ${delivery}\n` : ""}${tracking ? `Číslo zásilky: ${tracking}\n` : ""}\nKdyby cokoli nesedělo, odpověz na tenhle e-mail.\n\n${SHOP.sellerName}, IČO ${SHOP.sellerIco}`,
+	);
+}
