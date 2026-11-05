@@ -11,6 +11,8 @@ import {
 	isPaidBookFileExposed,
 	SHOP,
 } from "./shopConfig";
+import { isFreeEbookEnabled } from "./bookConfig";
+import { fetchSiteConfig } from "./content/api";
 
 export type CheckState = "ok" | "warn" | "fail";
 
@@ -20,7 +22,15 @@ export interface Check {
 	detail: string;
 }
 
-const REQUIRED_TABLES = ["shop_orders", "shop_leads", "shop_payment_events"];
+const REQUIRED_TABLES = [
+	"shop_orders",
+	"shop_leads",
+	"shop_payment_events",
+	// Downloads are recorded best-effort and the insert is swallowed on
+	// failure, so without this check a missing table reads as "nobody
+	// downloaded anything" rather than as a broken counter.
+	"shop_downloads",
+];
 
 async function checkDatabase(): Promise<Check> {
 	if (!isDbConfigured()) {
@@ -118,6 +128,54 @@ async function checkPaidBookFile(): Promise<Check> {
 	}
 }
 
+/**
+ * Whether the free ebook is actually on offer, not just whether the file is
+ * configured.
+ *
+ * These are two different things and only the first one matters to a visitor.
+ * FREE_EBOOK_PATH has a hardcoded default, so the env side is always satisfied
+ * and the old check could never fail. What really decides is the Sanity switch
+ * read by isFreeEbookEnabled: it gates every lead-capture form on the site, and
+ * its schema default is off. A site with that switch off serves the file
+ * perfectly well to anyone holding the link while showing nobody a way to ask
+ * for it, which looks exactly like "nobody wants the ebook".
+ */
+async function checkFreeEbook(): Promise<Check> {
+	if (!isFreeEbookLive()) {
+		return {
+			label: "Free ebook",
+			state: "warn",
+			detail: "FREE_EBOOK_PATH není nastavená.",
+		};
+	}
+
+	let siteConfig = null;
+	try {
+		siteConfig = await fetchSiteConfig("cs");
+	} catch {
+		return {
+			label: "Free ebook",
+			state: "warn",
+			detail: `Soubor je na ${SHOP.freeEbookPath}, ale nastavení se nepodařilo načíst ze Sanity, takže nevím, jestli se formulář zobrazuje.`,
+		};
+	}
+
+	if (!isFreeEbookEnabled(siteConfig)) {
+		return {
+			label: "Free ebook",
+			state: "fail",
+			detail:
+				"Soubor je nahraný, ale v Sanity je vypnutý přepínač Free ebook available (Site config, Free ebook). Formuláře na odběr se nikde nezobrazují, takže o ebook nejde ani požádat.",
+		};
+	}
+
+	return {
+		label: "Free ebook",
+		state: "ok",
+		detail: `Nabízí se a servíruje z ${SHOP.freeEbookPath}.`,
+	};
+}
+
 export async function runReadinessChecks(): Promise<Check[]> {
 	const [database, paidBookFile] = await Promise.all([
 		checkDatabase(),
@@ -132,9 +190,7 @@ export async function runReadinessChecks(): Promise<Check[]> {
 				detail: "RESEND_API_KEY není nastavený — zákazníkům nic nepřijde, odkaz musíš posílat ručně.",
 			};
 
-	const freeEbook: Check = isFreeEbookLive()
-		? { label: "Free ebook", state: "ok", detail: `Servíruje se z ${SHOP.freeEbookPath}.` }
-		: { label: "Free ebook", state: "warn", detail: "FREE_EBOOK_PATH není nastavená." };
+	const freeEbook = await checkFreeEbook();
 
 	const bank: Check = isBankTransferLive()
 		? {
